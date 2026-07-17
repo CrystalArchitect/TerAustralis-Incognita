@@ -3,6 +3,11 @@
 **Tagline:** Collective intelligence with individual sovereignty.  
 **Mainnet / deploy:** **PROHIBITED** until audit. Economic modules are design + simulation only.
 
+**🔭 Crystal universe — which repo is this?**  
+This is **TerAustralis Incognita** — narrative + full-stack monorepo + CrystalBridge MCP consent gate.  
+Siblings: **crystalcore** = Crystal Core (protocol pack) · **the-crystal-vision** = The Crystal Vision (codex site + Clementine sovereign companion app) · **crystal-vision** = Crystal Vision Interface (static demo shell).  
+**License:** Apache-2.0 — see `LICENSE`
+
 ```
 TerAustralis Incognita  →  frontier
 Crystal Vision          →  lens
@@ -131,4 +136,4 @@ Mesh MVP + twin POC + token simulation **in repo** · **no mainnet until audit**
 
 ## License
 
-MIT — see `LICENSE`. Token/mainnet rights not granted by default.
+Apache-2.0 — see `LICENSE`. Token/mainnet rights not granted by default.
