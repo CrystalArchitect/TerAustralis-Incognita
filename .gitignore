@@ -1,0 +1,23 @@
+# Secrets — never commit
+.env
+.envrc
+*.pem
+*.key
+credentials*
+auth.json
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Generated corpus is build output (see AGENTS.md: do not hand-edit)
+corpus/
