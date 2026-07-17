@@ -6,7 +6,7 @@
 **🔭 Crystal universe — which repo is this?**  
 This is **TerAustralis Incognita** — narrative + full-stack monorepo + CrystalBridge MCP consent gate.  
 Siblings: **crystalcore** = Crystal Core (protocol pack) · **the-crystal-vision** = The Crystal Vision (codex site + Clementine sovereign companion app) · **crystal-vision** = Crystal Vision Interface (static demo shell).  
-**License:** Apache-2.0 — see `LICENSE`
+**License:** Code Apache-2.0 (`LICENSE`) · Content CC BY-NC-ND 4.0 (`LICENSE-CONTENT.md`)
 
 ```
 TerAustralis Incognita  →  frontier
@@ -136,4 +136,8 @@ Mesh MVP + twin POC + token simulation **in repo** · **no mainnet until audit**
 
 ## License
 
-Apache-2.0 — see `LICENSE`. Token/mainnet rights not granted by default.
+**Code**: Apache-2.0 — see `LICENSE`. Token/mainnet rights not granted by default.
+
+**Content** (TerAustralis lore, CrystalVision suite, universe/brand docs, imagery):
+[CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/) — see
+`LICENSE-CONTENT.md`. Share with credit; no commercial use, no derivatives.
