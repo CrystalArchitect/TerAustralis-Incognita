@@ -50,6 +50,23 @@ CrystalBridge           →  consent meeting-house (MCP)
 | `courts/` | Dispute docket templates | ✅ |
 | `docs/FULL-STACK-v0.3.md` | Operable company skeleton | ✅ |
 
+## Consolidated tree (2026-07)
+
+The scattered Crystal universe repos now live here as one canonical source
+(spelling standardized to **TerAustralis Incognita**):
+
+| Path | Origin | Contents |
+|------|--------|----------|
+| `apps/clementine/` | the-crystal-vision `clementine/` | Clementine sovereign companion — CrystalCore framework pkg, terminal + Flask API + Svelte webapp |
+| `site/` | the-crystal-vision root | SvelteKit site for teraustralis.com.au |
+| `mythos/` | the-crystal-vision `content/` | Codex, Apocryphon, Vision, Architecture, Governance, Strategy docs |
+| `crystal-core/` | crystalcore repo | Protocol pack — Seven Sisters Songline, Songline Bus (multi-AI), Decode→Ingest→Twin pipeline, specs, interface demo |
+| `apps/crystal-vision/` | crystal-vision repo | Static demo shell (simulated data, Authority HOLD) |
+| `_archive/` | the-crystal-vision | Legacy copies kept for provenance: `crystalcore-app/` (old standalone app), `local-snapshot-2026-07-17/` |
+
+Note: root `crystalcore/` remains the **CrystalBridge MCP consent gate**;
+the companion framework package of the same name lives inside `apps/clementine/`.
+
 ## Quick start (full stack v0.5)
 
 ```powershell
