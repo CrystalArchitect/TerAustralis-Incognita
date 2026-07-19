@@ -1,5 +1,7 @@
 <script>
   /** Streaming chat with the local model via the Flask API. */
+  import { voiceSupported, listVoices, onVoicesChanged, speak, stopSpeaking } from './voice.js';
+
   let { name = 'Clementine', onStateChange = () => {} } = $props();
 
   let messages = $state([]);
@@ -8,12 +10,49 @@
   let logEl;
   let controller = null;
 
+  let voiceOn = $state(localStorage.getItem('clementine.voice') === 'on');
+  let voiceName = $state(localStorage.getItem('clementine.voiceName') || '');
+  let voices = $state(listVoices());
+  onVoicesChanged(() => (voices = listVoices()));
+  let spoken = 0; // chars of the current reply already sent to speech
+
+  function toggleVoice() {
+    voiceOn = !voiceOn;
+    localStorage.setItem('clementine.voice', voiceOn ? 'on' : 'off');
+    if (!voiceOn) stopSpeaking();
+  }
+
+  function pickVoice(e) {
+    voiceName = e.target.value;
+    localStorage.setItem('clementine.voiceName', voiceName);
+  }
+
+  // Speak complete sentences as they stream in; on final, speak the remainder.
+  function speakNew(text, final = false) {
+    if (!voiceOn) return;
+    const pending = text.slice(spoken);
+    if (final) {
+      if (pending.trim()) speak(pending, voiceName);
+      spoken = text.length;
+      return;
+    }
+    const re = /[.!?…]+["')”]?(\s|$)/g;
+    let end = -1;
+    let m;
+    while ((m = re.exec(pending))) end = m.index + m[0].length;
+    if (end > 0) {
+      speak(pending.slice(0, end), voiceName);
+      spoken += end;
+    }
+  }
+
   function scrollLog() {
     if (logEl) logEl.scrollTop = logEl.scrollHeight;
   }
 
   function stop() {
     if (controller) controller.abort();
+    stopSpeaking();
   }
 
   async function send(event) {
@@ -27,6 +66,8 @@
     busy = true;
     onStateChange('thinking');
     controller = new AbortController();
+    stopSpeaking();
+    spoken = 0;
     setTimeout(scrollLog, 0);
     try {
       const res = await fetch('/api/chat/stream', {
@@ -47,8 +88,10 @@
           onStateChange('speaking');
         }
         reply.text += dec.decode(value, { stream: true });
+        speakNew(reply.text);
         scrollLog();
       }
+      speakNew(reply.text, true);
     } catch (err) {
       if (err.name === 'AbortError') {
         reply.text += reply.text ? ' — [stopped]' : '[stopped]';
@@ -89,6 +132,29 @@
       </div>
     {/each}
   </div>
+
+  {#if voiceSupported()}
+    <div class="voicebar">
+      <button
+        type="button"
+        class="voice"
+        class:on={voiceOn}
+        onclick={toggleVoice}
+        aria-pressed={voiceOn}
+      >voice {voiceOn ? 'on' : 'off'}</button>
+      {#if voiceOn && voices.length > 0}
+        <select value={voiceName} onchange={pickVoice} aria-label="Her voice">
+          <option value="">default voice</option>
+          {#each voices as v (v.name)}
+            <option value={v.name}>{v.name}</option>
+          {/each}
+        </select>
+      {/if}
+      {#if voiceOn}
+        <span class="voicehint">spoken by this browser — nothing leaves the machine</span>
+      {/if}
+    </div>
+  {/if}
 
   <form class="composer" onsubmit={send}>
     <textarea
@@ -217,6 +283,42 @@
     color: var(--muted);
     border: 1px solid var(--line);
     font-weight: 400;
+  }
+
+  .voicebar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 20px 0;
+  }
+  button.voice {
+    background: transparent;
+    color: var(--muted);
+    border: 1px solid var(--line);
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    font-weight: 400;
+    padding: 4px 10px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  button.voice.on {
+    color: var(--green);
+    border-color: var(--green);
+  }
+  .voicebar select {
+    background: #0d0d18;
+    color: var(--muted);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    padding: 4px 6px;
+    max-width: 40%;
+  }
+  .voicehint {
+    color: var(--muted);
+    font-size: 0.72rem;
   }
 
   @media (prefers-reduced-motion: reduce) {
