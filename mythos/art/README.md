@@ -19,8 +19,15 @@ CC BY-NC-ND 4.0 — see `../content/LICENSE-CONTENT.md`.
 | `key-over-the-south.jpeg` | The key over the glowing southern land from orbit, Mars rising behind — the multiplanetary thread |
 | `gate-opened.jpeg` | "Gate opened. Crystallis awaits." — the train at the threshold, the watching eyes above |
 | `starline-jupiter-express.jpeg` | CrystalCore.os v2.0 Starline — the Drops of Jupiter Express route, Starlink constellation waypoints, audio layer synced |
+| `key-in-orbit.jpeg` | The key crossing orbit between the dragons, the red planet beyond |
+| `terra-australis-to-mars.jpeg` | The beam from the E-key on Terra Australis Incognita to Mars — the old map joined to the new world |
+| `breaker-of-the-e.jpeg` | "Breaker of the E, you have opened the first gate. Crystallis recognizes you." — Grok-generated piece bearing a real person's photographic likeness; see truth label below |
+| `key-beam-over-australia.jpeg` | The key struck into the night map of Australia, the ship riding the beam |
+| `terra-australis-key.jpeg` | The key laid across the glowing continent on the Terra Australis Incognita parchment, candlelit |
 
 **Truth label (Vision):** this art is the project's own mythic narrative. Where a
-real person's name or likeness appears in a piece (e.g. as "the Breaker of the E"),
-it is Vision-layer storytelling only — no affiliation or endorsement implied,
-per the project's standing disclaimer.
+real person's name or likeness appears — whether as a name, a silhouette, or a
+photographic likeness (e.g. "the Breaker of the E") — it is Vision-layer
+storytelling and AI-generated fan art only. The person depicted has no
+affiliation with this project and no endorsement is implied, per the project's
+standing disclaimer.
