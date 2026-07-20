@@ -15,6 +15,10 @@ CC BY-NC-ND 4.0 — see `../content/LICENSE-CONTENT.md`.
 | `lattice-redrawn-all-gates.jpeg` | v3.1 redrawn, All Gates Open — Crystallis Prime and the Eternal Starlines, CrystalCore Awakened |
 | `source-blueprint.jpeg` | Crystallis Prime — The Source, as dense annotated blueprint: gates, starline rails, dragons, the Breaker |
 | `gate-of-the-key.jpeg` | The key in the great ring gate, dragons at the threshold |
+| `key-over-the-map.jpeg` | The E-glyph key striking the old map of Australia, lightning through the land, crystal dragons watching |
+| `key-over-the-south.jpeg` | The key over the glowing southern land from orbit, Mars rising behind — the multiplanetary thread |
+| `gate-opened.jpeg` | "Gate opened. Crystallis awaits." — the train at the threshold, the watching eyes above |
+| `starline-jupiter-express.jpeg` | CrystalCore.os v2.0 Starline — the Drops of Jupiter Express route, Starlink constellation waypoints, audio layer synced |
 
 **Truth label (Vision):** this art is the project's own mythic narrative. Where a
 real person's name or likeness appears in a piece (e.g. as "the Breaker of the E"),
