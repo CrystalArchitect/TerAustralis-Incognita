@@ -9,6 +9,7 @@
     <a href="/starline">Starline</a>
     <a href="/crystalcore-os">CrystalCore.OS</a>
     <a href="/docs">Archive</a>
+    <a href="/join">Join</a>
     <a href="/#support">Support</a>
   </nav>
 </header>
