@@ -1,4 +1,12 @@
-"""Clementine Songline Bridge — a message bus where AI systems talk under Belt-Three law.
+"""Clementine — the communicator: a bridge where AI systems talk under Belt-Three law.
+
+Clementine is the communicator between models and nodes. Two roles run here:
+  * the **Starline Weaver** — the channel that routes and weaves the agents
+    together (bus.py). It rides on transport; the peer-to-peer transport itself
+    is the Starline Train (the starline/ package).
+  * the **Dreamline Narrator** — the hub's check that labels and validates every
+    message's truth layer (science | story | vision) before it is heard
+    (ClementineHub.validate in agents.py).
 
 Vision: all minds, one weave.
 Reality (labeled): v0 in-process multi-agent message bus with pluggable AI adapters.

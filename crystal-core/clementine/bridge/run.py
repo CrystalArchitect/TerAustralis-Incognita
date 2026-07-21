@@ -1,4 +1,4 @@
-"""Run a conversation on the Songline Bus.
+"""Run a conversation on the Starline Weaver.
 
     python3 -m clementine.bridge.run --agents echo,sisters --turns 4 --topic "first water"
     python3 -m clementine.bridge.run --agents claude,grok --turns 3 --topic "water care"  # needs API keys
@@ -11,7 +11,7 @@ from pathlib import Path
 
 from .adapters import AnthropicAdapter, OpenAIAdapter, XAIAdapter
 from .agents import ClementineHub, EchoAgent, RedButtonAgent, SevenSistersAgent, UnlabeledAgent
-from .bus import SonglineBus
+from .bus import StarlineWeaver
 
 REGISTRY = {
     "echo": EchoAgent,
@@ -25,7 +25,7 @@ REGISTRY = {
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="Clementine Songline Bus")
+    parser = argparse.ArgumentParser(description="Clementine Starline Weaver")
     parser.add_argument("--agents", default="echo,sisters",
                         help=f"comma-separated from: {', '.join(REGISTRY)}")
     parser.add_argument("--turns", type=int, default=4)
@@ -40,7 +40,7 @@ def main(argv: list[str] | None = None) -> int:
         parser.error(f"unknown agent {bad}; choose from: {', '.join(REGISTRY)}")
 
     hub = ClementineHub()
-    bus = SonglineBus(hub, agents)
+    bus = StarlineWeaver(hub, agents)
     transcript = bus.run(args.topic, args.turns)
 
     for e in transcript:

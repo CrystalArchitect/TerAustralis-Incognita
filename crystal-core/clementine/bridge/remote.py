@@ -31,7 +31,7 @@ def _post(url: str, body: dict) -> dict:
 def main(argv: list[str] | None = None) -> int:
     from .run import REGISTRY  # late import to avoid a cycle
 
-    parser = argparse.ArgumentParser(description="Remote agent for the Songline Bus")
+    parser = argparse.ArgumentParser(description="Remote agent for the Starline Weaver")
     parser.add_argument("--agent", required=True, help=f"one of: {', '.join(REGISTRY)}")
     parser.add_argument("--server", default="http://127.0.0.1:8777")
     parser.add_argument("--turns", type=int, default=4, help="speak this many times, then leave")

@@ -87,7 +87,7 @@ CC BY-NC-ND 4.0 — see `../content/LICENSE-CONTENT.md`.
 | `lattice-canopy.jpeg` | A lone figure on the red dust reaches up toward the living lattice canopy — crystalline branches lit gold and teal, stretching into the star field above |
 | `starline-ascension.jpeg` | A figure stands before the Starline ascension tower, its golden lattice frame rising from red dust into a single point of light |
 | `sovereign-heart-map.jpeg` | "TerAustralis Incognita — The Sovereign Heart": the continent rendered in red dust and ochre, Dreamtime veins and crystalline activation points threading toward a bright node in the southeast |
-| `lattice-components.jpeg` | The four Built components as a labelled lattice — Clementine (sovereign companion), Starline (P2P memory exchange), Songline Bus (multi-AI coordination), CrystalBridge (consent layer) |
+| `lattice-components.jpeg` | The four Built components as a labelled lattice — Clementine (sovereign companion), Starline (P2P memory exchange), Starline Weaver (multi-AI coordination), CrystalBridge (consent layer) |
 | `red-dust-rivers.jpeg` | Rivers of light braiding across the red dust under a gold-and-teal nebula |
 | `arches-of-the-crossing.jpeg` | A lone figure on the light-braided path beneath the great arches, a ship banking overhead |
 | `walker-of-the-light-road.jpeg` | A walker on the glowing road across the red plain, a teal storm-nebula breaking overhead |

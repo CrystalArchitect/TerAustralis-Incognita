@@ -36,7 +36,7 @@ flattering them. Respect, not performance.
   and post, in your own words if you'd rather.
 
 It's Vision-layer flavour, not one of the project's Built tools (those are
-Clementine, the Songline Bus, Starline, CrystalBridge, and the RDP kernel — see
+Clementine, the Starline Weaver, Starline, CrystalBridge, and the RDP kernel — see
 [`../../ROADMAP.md`](../../ROADMAP.md)). The framework vocabulary it uses is the
 [CrystalCore.OS mythos](../content/CRYSTALCORE-OS-VISION.md).
 

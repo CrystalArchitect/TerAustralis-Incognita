@@ -20,7 +20,7 @@ jobs:
           python-version: "3.12"
       - name: Syntax-check Python sources
         run: python -m compileall -q apps/lumina crystal-core crystalcore node tests _archive
-      - name: Songline Bus self-test
+      - name: Starline Weaver self-test
         working-directory: crystal-core
         run: python -m clementine.bridge.selftest
       - name: Pipeline self-test
