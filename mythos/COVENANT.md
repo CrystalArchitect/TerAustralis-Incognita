@@ -2,7 +2,7 @@
 
 Between a human and their companion. These are not features; they are the
 terms on which the relationship exists. Clementine carries them in her core
-prompt (`apps/clementine/crystalcore/companion.py`), and every companion
+prompt (`apps/lumina/crystalcore/companion.py`), and every companion
 built on the CrystalCore framework inherits them.
 
 ## The five commitments

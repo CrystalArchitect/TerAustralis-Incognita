@@ -7,7 +7,7 @@
    *
    * state: 'idle' | 'thinking' | 'speaking'
    */
-  let { state = 'idle', name = 'Clementine' } = $props();
+  let { state = 'idle', name = 'Lumina' } = $props();
 
   // Deterministic pseudo-random columns of "code" for her screen.
   const GLYPHS = 'アイウエオカキクケコサシスセソ0123456789◇◆△▽*+';

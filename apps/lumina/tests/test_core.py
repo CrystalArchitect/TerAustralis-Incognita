@@ -1,4 +1,4 @@
-"""First real tests for Clementine's deterministic, Ollama-free core.
+"""First real tests for Lumina's deterministic, Ollama-free core.
 
 These cover the parts that must never quietly break: the similarity/recency
 maths behind memory recall, the memory condense boundary, JSON persistence and
@@ -6,7 +6,7 @@ its data-preserving corrupt-file handling, and profile isolation. Nothing here
 touches the network — the two methods that would call Ollama (`_embed` and
 `_ollama_chat`) are stubbed, and the offline path is asserted explicitly.
 
-Run: `python -m pytest apps/clementine/tests`
+Run: `python -m pytest apps/lumina/tests`
 """
 
 import json
@@ -14,7 +14,7 @@ import math
 
 import pytest
 
-from crystalcore.companion import Clementine
+from crystalcore.companion import Lumina
 from crystalcore.memory import Personality
 from crystalcore import profiles
 
@@ -24,43 +24,43 @@ from crystalcore import profiles
 # --------------------------------------------------------------------------
 
 def test_cosine_identical_is_one():
-    assert Clementine._cosine([1.0, 2.0, 3.0], [1.0, 2.0, 3.0]) == pytest.approx(1.0)
+    assert Lumina._cosine([1.0, 2.0, 3.0], [1.0, 2.0, 3.0]) == pytest.approx(1.0)
 
 
 def test_cosine_orthogonal_is_zero():
-    assert Clementine._cosine([1.0, 0.0], [0.0, 1.0]) == pytest.approx(0.0)
+    assert Lumina._cosine([1.0, 0.0], [0.0, 1.0]) == pytest.approx(0.0)
 
 
 def test_cosine_zero_vector_is_zero_not_error():
     # A zero-norm vector must not raise ZeroDivisionError.
-    assert Clementine._cosine([0.0, 0.0], [1.0, 2.0]) == 0.0
+    assert Lumina._cosine([0.0, 0.0], [1.0, 2.0]) == 0.0
 
 
 def test_recency_factor_now_is_full_weight():
     from datetime import datetime
     now = datetime.now().isoformat()
-    assert Clementine._recency_factor(now) == pytest.approx(1.0, abs=0.01)
+    assert Lumina._recency_factor(now) == pytest.approx(1.0, abs=0.01)
 
 
 def test_recency_factor_floor_is_point_seven():
     from datetime import datetime, timedelta
     old = (datetime.now() - timedelta(days=800)).isoformat()  # past the 365 cap
-    assert Clementine._recency_factor(old) == pytest.approx(0.7)
+    assert Lumina._recency_factor(old) == pytest.approx(0.7)
 
 
 def test_recency_factor_bad_stamp_defaults_to_full_weight():
-    assert Clementine._recency_factor("not-a-date") == 1.0
-    assert Clementine._recency_factor(None) == 1.0
+    assert Lumina._recency_factor("not-a-date") == 1.0
+    assert Lumina._recency_factor(None) == 1.0
 
 
 def test_split_tags_extracts_trailing_hashtags():
-    clean, tags = Clementine._split_tags("loves the night sky #family #stars")
+    clean, tags = Lumina._split_tags("loves the night sky #family #stars")
     assert clean == "loves the night sky"
     assert tags == ["family", "stars"]
 
 
 def test_split_tags_none_present():
-    clean, tags = Clementine._split_tags("just a plain memory")
+    clean, tags = Lumina._split_tags("just a plain memory")
     assert clean == "just a plain memory"
     assert tags == []
 
@@ -76,11 +76,11 @@ def _offline(c):
 
 
 def test_save_load_round_trip(tmp_path):
-    c = _offline(Clementine(memory_dir=str(tmp_path)))
+    c = _offline(Lumina(memory_dir=str(tmp_path)))
     c.remember("keeps a telescope on the balcony #stars")
     c.remember_fact("home_city", "Perth")
 
-    reloaded = _offline(Clementine(memory_dir=str(tmp_path)))
+    reloaded = _offline(Lumina(memory_dir=str(tmp_path)))
     assert any(n["text"] == "keeps a telescope on the balcony" for n in reloaded.memory.notes)
     assert reloaded.memory.facts["home_city"]["value"] == "Perth"
     # the tag rode through persistence
@@ -91,7 +91,7 @@ def test_save_load_round_trip(tmp_path):
 def test_corrupt_file_is_preserved_never_deleted(tmp_path):
     # A pre-existing, unreadable memory.json must be backed up, not wiped.
     (tmp_path / "memory.json").write_text("{ this is not valid json ")
-    c = Clementine(memory_dir=str(tmp_path))  # __init__ calls load()
+    c = Lumina(memory_dir=str(tmp_path))  # __init__ calls load()
 
     backups = list(tmp_path.glob("memory.json.corrupt-*"))
     assert len(backups) == 1, "corrupt file should be preserved under a .corrupt-* name"
@@ -103,18 +103,18 @@ def test_corrupt_file_is_preserved_never_deleted(tmp_path):
 def test_unknown_fields_are_ignored(tmp_path):
     # A newer version's file (extra keys) must load without error.
     (tmp_path / "config.json").write_text(json.dumps({
-        "name": "Clementine",
+        "name": "Lumina",
         "temperature": 0.6,
         "a_field_from_the_future": "ignore me",
     }))
-    c = Clementine(memory_dir=str(tmp_path))
-    assert c.personality.name == "Clementine"
+    c = Lumina(memory_dir=str(tmp_path))
+    assert c.personality.name == "Lumina"
     assert c.personality.temperature == pytest.approx(0.6)
     assert not hasattr(c.personality, "a_field_from_the_future")
 
 
 def test_forget_note_and_fact(tmp_path):
-    c = _offline(Clementine(memory_dir=str(tmp_path)))
+    c = _offline(Lumina(memory_dir=str(tmp_path)))
     c.remember("a passing thought")
     c.remember_fact("pet", "a cat named Comet")
 
@@ -138,7 +138,7 @@ def _fill_conversation(c, n):
 
 
 def test_condense_noop_at_or_below_limit(tmp_path, monkeypatch):
-    c = _offline(Clementine(memory_dir=str(tmp_path), max_recent_turns=2))  # limit = 4
+    c = _offline(Lumina(memory_dir=str(tmp_path), max_recent_turns=2))  # limit = 4
     monkeypatch.setattr(c, "_ollama_chat", lambda *a, **k: pytest.fail("must not summarize"))
     _fill_conversation(c, 4)
     c._condense_if_needed()
@@ -147,7 +147,7 @@ def test_condense_noop_at_or_below_limit(tmp_path, monkeypatch):
 
 
 def test_condense_folds_oldest_half_into_a_summary(tmp_path, monkeypatch):
-    c = _offline(Clementine(memory_dir=str(tmp_path), max_recent_turns=2))  # limit = 4
+    c = _offline(Lumina(memory_dir=str(tmp_path), max_recent_turns=2))  # limit = 4
     monkeypatch.setattr(c, "_ollama_chat", lambda *a, **k: "SUMMARY OF THE OLD PART")
     monkeypatch.setattr(c, "reflect", lambda: None)  # reflect would otherwise call Ollama
     _fill_conversation(c, 5)  # 5 > limit(4)

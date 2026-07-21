@@ -1,9 +1,9 @@
 {
-  "name": "clementine-webapp",
+  "name": "lumina-webapp",
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "description": "Local web interface for the Clementine sovereign companion. Runs on your machine only.",
+  "description": "Local web interface for the Lumina sovereign companion. Runs on your machine only.",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

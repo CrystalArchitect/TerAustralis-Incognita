@@ -1,9 +1,9 @@
 """
-Clementine — local API server.
+Lumina — local API server.
 
 The JSON backend for the Svelte web interface in webapp/. Runs only on
 your own machine (bound to 127.0.0.1, never exposed). Shares the same
-brain and memory folder as the terminal version (clementine.py), so you
+brain and memory folder as the terminal version (lumina.py), so you
 can switch between them freely. Nothing leaves your device.
 
     pip install -r requirements.txt
@@ -19,17 +19,17 @@ from pathlib import Path
 
 from flask import Flask, Response, jsonify, request
 
-from crystalcore import (Clementine, delete_profile, list_profiles,
+from crystalcore import (Lumina, delete_profile, list_profiles,
                          profile_dir, profile_meta)
 from crystalcore import profiles as _profiles
 
 
-def _profile_of(companion: Clementine) -> str:
+def _profile_of(companion: Lumina) -> str:
     p = Path(companion.memory_dir)
     return p.name if p.parent == Path(_profiles.PROFILES_DIR) else "default"
 
 
-def create_app(companion: Clementine) -> Flask:
+def create_app(companion: Lumina) -> Flask:
     app = Flask(__name__)
     holder = {"c": companion}  # swapped in place when the profile changes
 
@@ -52,7 +52,7 @@ def create_app(companion: Clementine) -> Flask:
     def status():
         c = holder["c"]
         return jsonify({
-            "name": c.personality.name or "Clementine",
+            "name": c.personality.name or "Lumina",
             "avatar": c.personality.avatar,
             "model": c.model,
             "profile": _profile_of(c),
@@ -164,21 +164,21 @@ def create_app(companion: Clementine) -> Flask:
         except ValueError:
             return jsonify({"ok": False, "error": "invalid name"}), 400
         old = holder["c"]
-        holder["c"] = Clementine(model=old.model, memory_dir=target,
+        holder["c"] = Lumina(model=old.model, memory_dir=target,
                                  embed_model=old.embed_model)
         c = holder["c"]
         return jsonify({"ok": True, "profile": _profile_of(c),
-                        "name": c.personality.name or "Clementine"})
+                        "name": c.personality.name or "Lumina"})
 
     return app
 
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Clementine's local API server (127.0.0.1 only).")
+        description="Lumina's local API server (127.0.0.1 only).")
     parser.add_argument("--model", default="llama3.1:8b",
                         help="Ollama model tag (same choices as the CLI).")
-    parser.add_argument("--memory-dir", default="clementine_memory",
+    parser.add_argument("--memory-dir", default="lumina_memory",
                         help="Her memory folder (shared with the CLI).")
     parser.add_argument("--profile", default="",
                         help="Named profile (separate person, separate memory).")
@@ -187,9 +187,9 @@ def main():
     if args.profile:
         args.memory_dir = profile_dir(args.profile)
 
-    companion = Clementine(model=args.model, memory_dir=args.memory_dir)
+    companion = Lumina(model=args.model, memory_dir=args.memory_dir)
     app = create_app(companion)
-    name = companion.personality.name or "Clementine"
+    name = companion.personality.name or "Lumina"
     print(f"{name}'s API is at http://127.0.0.1:{args.port}")
     print("Start the web interface with: cd webapp && npm run dev")
     print("Local only — nothing leaves this device. Ctrl+C to say goodnight.")
