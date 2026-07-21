@@ -77,3 +77,54 @@ def record_gate_decision(chain: list[dict[str, Any]], **fields: Any) -> dict[str
     ``gate_event``.
     """
     return append(chain, gate_event(**fields))
+
+
+def _utc_now_iso() -> str:
+    """Default clock — a UTC ISO-8601 timestamp. Injectable so tests stay
+    deterministic (the canonical form must not depend on wall-clock)."""
+    import datetime
+
+    return datetime.datetime.now(datetime.timezone.utc).isoformat()
+
+
+class recording_gate:
+    """Wrap any consent gate so each decision is written to an RDP chain.
+
+    This is the thin glue that keeps RDP a *ledger, not a lock*:
+
+      * It does not import ConsentGate — it wraps any object whose ``check()``
+        returns a result with ``.decision``, ``.allowed`` and ``.reason`` (the
+        shape of CrystalBridge's ``GateResult``). Duck-typed on purpose.
+      * On each call it lets the wrapped gate decide *first* (enforcement,
+        unchanged), then records the outcome *after* the result exists. RDP never
+        sits between the gate and its verdict — if the gate raises, nothing is
+        recorded; if recording somehow failed, the allow/deny already stands.
+
+    Timestamps come from *clock* (default: real UTC ISO-8601), injectable so the
+    canonical record stays reproducible under test.
+
+        gate = ConsentGate(config)                 # enforcement (CrystalBridge)
+        chain = new_chain()
+        gate = recording_gate(gate, chain)         # + witnessing (RDP)
+        result = gate.check("hub-a", "recall", {"query": "x"})
+        verify(chain)                              # (True, -1)
+    """
+
+    def __init__(self, gate: Any, chain: list[dict[str, Any]], *, clock: Any = _utc_now_iso):
+        self._gate = gate
+        self._chain = chain
+        self._clock = clock
+
+    def check(self, guest: str, tool: str, arguments: dict[str, Any] | None = None, **kw: Any) -> Any:
+        result = self._gate.check(guest, tool, arguments, **kw)   # decide first
+        record_gate_decision(                                     # then witness
+            self._chain,
+            guest=guest,
+            tool=tool,
+            decision=result.decision,
+            allowed=result.allowed,
+            reason=result.reason,
+            arguments=arguments,
+            ts=self._clock(),
+        )
+        return result
