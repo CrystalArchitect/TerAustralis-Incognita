@@ -41,6 +41,9 @@ cd crystal-core && python3 -m clementine.bridge.selftest
 cd crystal-core && pip install -r requirements-starline.txt && python3 -m starline.selftest
 python3 -m starline.run demo   # watch it: pair, deny, grant, exchange, revoke, deny
 
+# RDP — tamper-evident record kernel: canonical JSON + a self-checking hash chain
+cd crystal-core && python3 -m rdp.selftest
+
 # CrystalCore.OS — the mythos as a terminal you can fly
 python3 mythos/crystalcore_os.py
 ```
@@ -59,7 +62,7 @@ CrystalCore.OS terminal — its commands, nodes, and keys — see
 | `apps/clementine/` | The companion — CrystalCore framework package, terminal, Flask API, Svelte webapp, browser voice |
 | `apps/voicebox/` | Local MCP server giving Claude Code a spoken voice on your machine |
 | `apps/crystal-vision/`, `apps/crystal-interface/`, `apps/vision-web/` | Demo shells (simulated data, Authority HOLD — not production) |
-| `crystal-core/` | The protocol pack — Songline Bus (`clementine/bridge/`), Decode→Ingest→Twin pipeline (`services/`), Starline (`starline/`) |
+| `crystal-core/` | The protocol pack — Songline Bus (`clementine/bridge/`), Decode→Ingest→Twin pipeline (`services/`), Starline (`starline/`), RDP record kernel (`rdp/`) |
 | `crystalcore/` | CrystalBridge — the MCP consent gate (fail-closed by design) |
 | `mythos/` | The Crystal universe canon — Codex, Apocryphon, the Book of the Sovereign Key, the Starline Transmissions, 88 pieces of art, `crystalcore_os.py` |
 | `site/` | The SvelteKit site for teraustralis.com.au |
