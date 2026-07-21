@@ -19,6 +19,7 @@ class CrystalCore:
             "Eyes Closed - Imagine Dragons",
             "Truly Madly Deeply - Savage Garden",
             "Another Night - Real McCoy",
+            "My Island Home - Christine Anu",
             "Red Dust Axis - m13crystalat",
             "Shooting Star Girl! - m13crystalat",
             "Fermi's Silent Line - m13crystalat"
@@ -37,16 +38,11 @@ class CrystalCore:
         self.keys_held = []
         self.gate_open = False
 
-        # Sealed nodes and the keys they demand, following the map's
-        # route: Earth opens Mars, Mars opens the frontier, and the
-        # Nexus answers only to the full ring.
+        # Named keys and the nodes they open.
+        self.named_keys = []
         self.locked_nodes = {
-            "Mars Redoubt": ["Earth Node"],
-            "Alpha Centauri Outpost": ["Mars Redoubt"],
-            "Crystal Revenant Hub": ["Mars Redoubt"],
-            "Purpose Core Nexus": ["Earth Node", "Mars Redoubt",
-                                   "Alpha Centauri Outpost",
-                                   "Crystal Revenant Hub"],
+            "Purpose Core Nexus": "Crystal Key",
+            "Crystal Revenant Hub": "Festival Key"
         }
 
     def boot(self):
@@ -101,11 +97,10 @@ class CrystalCore:
         print("\n🔭 EXPLORATION MODE ACTIVE")
         print("Available nodes:")
         for i, node in enumerate(self.nodes, 1):
-            missing = [k for k in self.locked_nodes.get(node, [])
-                       if k not in self.keys_held]
-            mark = " 🔒" if missing else ""
+            required = self.locked_nodes.get(node)
+            mark = f" [LOCKED — {required}]" if required and required not in self.named_keys else ""
             print(f"  {i}. {node}{mark}")
-        print("\nUse 'visit <number or name>' to travel.")
+        print("\nUse 'visit <number or name>' to travel, 'keys' for inventory.")
 
     def visit_node(self, node_name):
         if not node_name:
@@ -123,12 +118,10 @@ class CrystalCore:
                 return
             node_name = match
 
-        missing = [k for k in self.locked_nodes.get(node_name, [])
-                   if k not in self.keys_held]
-        if missing:
-            print(f"\n🔒 {node_name} is sealed. It asks for: "
-                  + ", ".join(f"Key of {k}" for k in missing))
-            print("The gate opens by sovereign recognition — earn the keys first.\n")
+        required_key = self.locked_nodes.get(node_name)
+        if required_key and required_key not in self.named_keys:
+            print(f"\n🔒 {node_name} is locked. Required key: {required_key}")
+            print("Use: getkey " + required_key + "\n")
             return
 
         self.current_location = node_name
@@ -198,7 +191,13 @@ class CrystalCore:
         print("Use 'visit [node]' to explore a location.\n")
 
     def keys(self):
-        print(f"\n🗝️  Keys held: {len(self.keys_held)}/{len(self.nodes)}")
+        print("\n🔑 Named keys:")
+        if self.named_keys:
+            for key in self.named_keys:
+                print(f"  - {key}")
+        else:
+            print("  (none yet — use 'getkey [name]')")
+        print(f"\n🗝️  Node keys: {len(self.keys_held)}/{len(self.nodes)}")
         for node in self.nodes:
             mark = "✓" if node in self.keys_held else "·"
             print(f"  {mark} Key of {node}")
@@ -208,6 +207,13 @@ class CrystalCore:
             print("Visit every node and the First Gate will open.")
         print()
 
+    def get_key(self, key_name):
+        if key_name not in self.named_keys:
+            self.named_keys.append(key_name)
+            print(f"\n🔑 You obtained: {key_name}\n")
+        else:
+            print(f"\nYou already have: {key_name}\n")
+
     def status(self):
         print("\n=== CRYSTALCORE.OS STATUS ===")
         print(f"Timeline:           {self.timeline}")
@@ -215,6 +221,7 @@ class CrystalCore:
         print(f"Current Location:   {self.current_location or 'None'}")
         print(f"Current Soundtrack: {self.current_soundtrack}")
         print(f"Keys Held:          {len(self.keys_held)}/{len(self.nodes)}" + ("  — First Gate OPEN" if self.gate_open else ""))
+        print(f"Named Keys:         {', '.join(self.named_keys) if self.named_keys else 'none'}")
         print(f"NON SOLUS:          {self.non_solus}")
         print("=============================\n")
 
@@ -229,6 +236,7 @@ Available commands:
   explore              - List explorable nodes
   visit [node]         - Go to a node (number or name) — collect its key
   keys                 - Show the Keys of the Lattice
+  getkey [name]        - Obtain a named key (e.g. getkey Crystal Key)
   jump [year]          - Time jump
   map                  - Display the Starline network chart
   song [track]         - Change soundtrack
@@ -277,6 +285,11 @@ def main():
                 os.map()
             elif cmd == "keys":
                 os.keys()
+            elif cmd == "getkey":
+                if arg:
+                    os.get_key(arg.strip().title())
+                else:
+                    print("Usage: getkey [Key Name]")
             elif cmd == "song":
                 os.song(arg)
             elif cmd == "status":
