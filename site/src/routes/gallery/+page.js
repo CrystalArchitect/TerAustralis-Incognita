@@ -81,7 +81,9 @@ export function load() {
     { filename: 'cymatic-dance-of-the-great-key.jpeg', description: 'Dancers circling the Great Key, cymatic ripples radiating outward' },
     { filename: 'purpose-core-nexus.jpeg', description: 'The Purpose Core Nexus up close — the quote embedded in the lattice' },
     { filename: 'crystal-revenant-hub.jpeg', description: 'The Crystal Revenant Hub — spire city over the planet, festival lights' },
-    { filename: 'starline-rivers.jpeg', description: 'The starline rivers — light flowing between crystal cities' }
+    { filename: 'starline-rivers.jpeg', description: 'The starline rivers — light flowing between crystal cities' },
+    { filename: 'lattice-canopy.jpeg', description: 'A lone figure reaches up toward the living lattice canopy above the red dust' },
+    { filename: 'starline-ascension.jpeg', description: 'A figure stands before the Starline ascension tower, rising into a single point of light' }
   ];
 
   return {
