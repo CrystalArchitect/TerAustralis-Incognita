@@ -10,6 +10,16 @@ User-facing demo surface for the Crystal stack.
 
 **Not production.** Credits, capabilities, and receipts are client-side demo only. Authority **HOLD**. Cultural metaphors (Seven Sisters / Songline) are collaborative framing only — not ownership claims.
 
+**Honest scope of the simulation.** So the words match the code: "credits" is a
+single in-memory balance — the **dual-currency (AUD-C / EUR-C) framing is
+illustrative**, not implemented. Receipts are marked `confirmed` locally; there
+is **no real dual-attestation**. Capability grants and GDPR export/erase are
+client-side stubs. Nothing here calls a server.
+
+**Not a copy of `crystal-interface`.** This is a *separate, slimmer* citizen
+surface. The operator shell (`crystal-interface`) and its byte-identical deploy
+snapshot (`crystal-vision`) are a different codebase.
+
 ## Open
 
 ```powershell
@@ -31,8 +41,9 @@ python -m http.server 8090
 
 ## Related
 
-- Journeys: `docs/journeys/README.md`
-- GDPR: `compliance/GDPR_ROPA.md`
 - Operator UI: `apps/crystal-interface/`
 - Mesh stub: `node/mesh/`
 - Roadmap: `docs/FULL-STACK-v0.5.md`
+
+*(Earlier drafts linked `docs/journeys/README.md` and `compliance/GDPR_ROPA.md`;
+those don't exist in the repo, so they've been removed rather than left dead.)*
