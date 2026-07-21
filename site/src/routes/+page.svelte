@@ -30,7 +30,7 @@
       price: '$25 / month',
       title: '🕸️ Weaver',
       color: 'var(--purple)',
-      body: 'For those who want to go deeper. Early access to Clementine development, priority feedback, and insight into the mythic and technical layers.'
+      body: 'For those who want to go deeper. Early access to Lumina development, priority feedback, and insight into the mythic and technical layers.'
     },
     {
       price: '$50 / month',
@@ -68,20 +68,20 @@
       lc: 'var(--pink)'
     },
     {
-      href: '/clementine',
-      title: 'Clementine',
+      href: '/lumina',
+      title: 'Lumina',
       sub: 'The sovereign companion — working software you can run tonight',
-      cta: '→ Meet Clementine',
+      cta: '→ Meet Lumina',
       lc: 'var(--green)'
     }
   ];
 
   const builtCards = [
     {
-      href: '/clementine',
-      title: 'Clementine',
+      href: '/lumina',
+      title: 'Lumina',
       body: 'The sovereign companion. Local-first AI, layered memory, terminal and web UI — running software you can install and use tonight.',
-      cta: '→ Meet Clementine',
+      cta: '→ Meet Lumina',
       status: 'Built · working software',
       st: 'var(--green)'
     }
@@ -155,7 +155,7 @@
   </p>
   <div class="ctas">
     <a class="btn btn-primary" href="/codex">Read the Codex</a>
-    <a class="btn btn-ghost" href="/clementine">Meet Clementine</a>
+    <a class="btn btn-ghost" href="/lumina">Meet Lumina</a>
   </div>
 </section>
 

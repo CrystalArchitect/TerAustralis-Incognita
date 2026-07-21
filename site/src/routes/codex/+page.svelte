@@ -88,7 +88,7 @@
 
   <nav class="pagenav" aria-label="Continue">
     <a href="/apocryphon">Read the Apocryphon →</a>
-    <a href="/clementine">Meet Clementine →</a>
+    <a href="/lumina">Meet Lumina →</a>
     <a href="/">← Home</a>
   </nav>
 </article>

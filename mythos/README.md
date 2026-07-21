@@ -45,7 +45,7 @@ All documents live in [`content/`](content/) and are rendered in-app by the ligh
 
 - [content/VISION.md](content/VISION.md) — The plain-language project summary
 - [content/ARCHITECTURE.md](content/ARCHITECTURE.md) — The system design overview and implementation status
-- [content/CLEMENTINE.md](content/CLEMENTINE.md) — The sovereign AI companion: overview, build status, and how to run her
+- [content/LUMINA.md](content/LUMINA.md) — The sovereign AI companion: overview, build status, and how to run her
 - [content/CRYSTALMATRIX.md](content/CRYSTALMATRIX.md) — Design for how sovereign companions could connect (concept)
 - [content/STRATEGY.md](content/STRATEGY.md) — The accelerated roadmap toward external readiness
 - [content/MILESTONES.md](content/MILESTONES.md) — The 6-month build plan with weekly milestones
