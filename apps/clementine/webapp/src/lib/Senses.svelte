@@ -1,18 +1,20 @@
 <script>
   /**
-   * Her future senses. Voice and sight are on the roadmap — these
-   * controls hint at what's coming without pretending it works today.
+   * Her future senses. Note: her *speaking* voice already works today — toggle
+   * "voice" in the chat (on-device speech synthesis). What's still on the roadmap
+   * is the other direction: her *hearing* you (microphone) and *seeing* you
+   * (webcam). These controls hint at what's coming without pretending it works.
    */
 </script>
 
 <div class="senses" aria-label="Upcoming senses">
-  <button type="button" disabled title="Soon: speak with her out loud — your voice stays on this device">
+  <button type="button" disabled title="Soon: speak to her and she'll hear you — microphone stays on this device. (She can already speak back today: turn on 'voice' in the chat.)">
     <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
       <rect x="7" y="2.5" width="6" height="10" rx="3" />
       <path d="M4 10 a6 6 0 0 0 12 0" />
       <path d="M10 16 v2" />
     </svg>
-    <span>Voice</span>
+    <span>Hearing</span>
     <em>soon</em>
   </button>
   <button type="button" disabled title="Soon: she'll see you through your webcam — sight that never leaves this machine">
@@ -24,8 +26,8 @@
     <em>soon</em>
   </button>
   <p class="whisper">
-    One day she&apos;ll hear your voice and see your face — and like everything here,
-    those senses will live on this machine alone.
+    She can already speak to you — turn on <strong>voice</strong> in the chat. Still
+    to come: hearing your voice and seeing your face, both living on this machine alone.
   </p>
 </div>
 
