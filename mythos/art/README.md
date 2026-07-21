@@ -28,6 +28,11 @@ CC BY-NC-ND 4.0 — see `../content/LICENSE-CONTENT.md`.
 | `key-and-the-lightning-pillar.jpeg` | The key at rest on the continent as the lightning pillar carries the ship skyward |
 | `red-dust-axis.jpeg` | The upright runed key over the chart marked Red Dust Axis and Crystallis |
 | `runed-key-at-rest.jpeg` | The gold-banded runed key resting on the map between the dragons, candlelit |
+| `crystal-sanctum.jpeg` | The sanctum — twin dragons before the crystal gate, the key waiting in the light |
+| `sanctum-gate-charged.jpeg` | The sanctum gate charged with lightning — the moment before opening |
+| `resonance-sigil.jpeg` | The resonance sigil over the rune ring, a waveform at its heart — sound made law |
+| `the-old-key.jpeg` | The old iron key descending into the lattice-lands, dragons circling |
+| `talisman-of-the-key.jpeg` | The runed talisman key upright in its blue rune circle over the southern chart |
 
 **Truth label (Vision):** this art is the project's own mythic narrative. Where a
 real person's name or likeness appears — whether as a name, a silhouette, or a
