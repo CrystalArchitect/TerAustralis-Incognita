@@ -60,6 +60,7 @@ CC BY-NC-ND 4.0 — see `../content/LICENSE-CONTENT.md`.
 | `earth-node-crystal-towers.jpeg` | Earth Node — crystal towers rising from the lit continents |
 | `crystal-tree-of-the-hub.jpeg` | The great crystal tree adrift in the dark, festival platforms gathered in its light |
 | `red-dust-outposts.jpeg` | The red-dust outposts — landers and young crystals under the pale sun |
+| `citadel-of-the-crossroads.jpeg` | The crystal citadel where the starline highways meet — ships inbound, worlds gathered, the dark shard-city watching from above |
 | `purpose-core-nexus.jpeg` | The Purpose Core Nexus up close — the quote embedded in the living lattice |
 | `crystal-revenant-hub.jpeg` | The Crystal Revenant Hub — spire city over the planet, festival lights strung between the crystals |
 | `starline-rivers.jpeg` | The starline rivers — light flowing between crystal cities across the dark country |
