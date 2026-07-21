@@ -18,9 +18,12 @@ class CrystalCore:
             "I Am Australian - The Seekers",
             "Eyes Closed - Imagine Dragons",
             "Truly Madly Deeply - Savage Garden",
+            "Another Night - Real McCoy",
+            "My Island Home - Christine Anu",
             "Red Dust Axis - m13crystalat",
             "Shooting Star Girl! - m13crystalat",
-            "Fermi's Silent Line - m13crystalat"
+            "Fermi's Silent Line - m13crystalat",
+            "We Own the Night - Disney Zombies"
         ]
 
         self.nodes = [
@@ -30,6 +33,18 @@ class CrystalCore:
             "Crystal Revenant Hub",
             "Purpose Core Nexus"
         ]
+
+        # Keys of the Lattice — one waits at every node. Hold all five
+        # and the First Gate opens by sovereign recognition.
+        self.keys_held = []
+        self.gate_open = False
+
+        # Named keys and the nodes they open.
+        self.named_keys = []
+        self.locked_nodes = {
+            "Purpose Core Nexus": "Crystal Key",
+            "Crystal Revenant Hub": "Festival Key"
+        }
 
     def boot(self):
         print("\n[CRYSTALCORE.OS v∞ — BOOT SEQUENCE]")
@@ -83,8 +98,10 @@ class CrystalCore:
         print("\n🔭 EXPLORATION MODE ACTIVE")
         print("Available nodes:")
         for i, node in enumerate(self.nodes, 1):
-            print(f"  {i}. {node}")
-        print("\nUse 'visit <number or name>' to travel.")
+            required = self.locked_nodes.get(node)
+            mark = f" [LOCKED — {required}]" if required and required not in self.named_keys else ""
+            print(f"  {i}. {node}{mark}")
+        print("\nUse 'visit <number or name>' to travel, 'keys' for inventory.")
 
     def visit_node(self, node_name):
         if not node_name:
@@ -102,6 +119,12 @@ class CrystalCore:
                 return
             node_name = match
 
+        required_key = self.locked_nodes.get(node_name)
+        if required_key and required_key not in self.named_keys:
+            print(f"\n🔒 {node_name} is locked. Required key: {required_key}")
+            print("Use: getkey " + required_key + "\n")
+            return
+
         self.current_location = node_name
         print(f"\n🌌 Arriving at: {node_name}")
         if node_name == "Purpose Core Nexus":
@@ -110,6 +133,14 @@ class CrystalCore:
             print("Zero-g music festivals are happening across the platforms.")
         else:
             print("The lattice pulses with new resonance here.")
+        if node_name not in self.keys_held:
+            self.keys_held.append(node_name)
+            print(f"🗝️  A key rises from the node. Keys held: {len(self.keys_held)}/{len(self.nodes)}")
+            if len(self.keys_held) == len(self.nodes) and not self.gate_open:
+                self.gate_open = True
+                print("\n✨ ALL KEYS HELD — THE FIRST GATE OPENS ✨")
+                print("Not by force. By sovereign recognition.")
+                print("Crystallis recognizes you. NON SOLUS.")
         print(f"Current soundtrack: {self.current_soundtrack}\n")
 
     def jump(self, year=3000):
@@ -137,28 +168,60 @@ class CrystalCore:
         else:
             print(f"Current soundtrack: {self.current_soundtrack}")
 
+    def _lock_tag(self, node_name):
+        """Live lock status for the map — reflects named keys actually held."""
+        required = self.locked_nodes.get(node_name)
+        if not required:
+            return ""
+        return "  [UNLOCKED]" if required in self.named_keys else f"  [LOCKED — {required}]"
+
     def map(self):
-        print("""
-╔══════════════════════════════════════════════════════════════╗
-║              STARLINE NETWORK - YEAR 3000                    ║
-╠══════════════════════════════════════════════════════════════╣
-║                                                              ║
-║          [EARTH NODE]                                        ║
-║               │                                              ║
-║               ▼                                              ║
-║          [MARS REDOUBT]  ────────▶  [ALPHA CENTAURI]         ║
-║               │                                              ║
-║               ▼                                              ║
-║          [CRYSTAL REVENANT HUB]                              ║
-║               │                                              ║
-║               ▼                                              ║
-║          [PURPOSE CORE NEXUS]                                ║
-║   "Expand to the stars and thereby understand the Universe"  ║
-║                                                              ║
-╚══════════════════════════════════════════════════════════════╝
-   Chart: mythos/art/starline-network-year-3000.jpeg
-""")
+        inner = 62  # characters between the ║ borders
+        hub_line = f"          [CRYSTAL REVENANT HUB]{self._lock_tag('Crystal Revenant Hub')}".ljust(inner)
+        nexus_line = f"          [PURPOSE CORE NEXUS]{self._lock_tag('Purpose Core Nexus')}".ljust(inner)
+        print("╔" + "═" * inner + "╗")
+        print("║" + "STARLINE NETWORK - YEAR 3000".center(inner) + "║")
+        print("╠" + "═" * inner + "╣")
+        print("║" + " " * inner + "║")
+        print("║" + "          [EARTH NODE]".ljust(inner) + "║")
+        print("║" + "               │".ljust(inner) + "║")
+        print("║" + "               ▼".ljust(inner) + "║")
+        print("║" + "          [MARS REDOUBT]  ────────▶  [ALPHA CENTAURI]".ljust(inner) + "║")
+        print("║" + "               │".ljust(inner) + "║")
+        print("║" + "               ▼".ljust(inner) + "║")
+        print("║" + hub_line + "║")
+        print("║" + "│".rjust(16).ljust(inner) + "║")
+        print("║" + "▼".rjust(16).ljust(inner) + "║")
+        print("║" + nexus_line + "║")
+        print("║" + '"Expand to the stars and thereby understand the Universe"'.center(inner) + "║")
+        print("║" + " " * inner + "║")
+        print("╚" + "═" * inner + "╝")
+        print("   Chart: mythos/art/starline-network-year-3000.jpeg\n")
         print("Use 'visit [node]' to explore a location.\n")
+
+    def keys(self):
+        print("\n🔑 Named keys:")
+        if self.named_keys:
+            for key in self.named_keys:
+                print(f"  - {key}")
+        else:
+            print("  (none yet — use 'getkey [name]')")
+        print(f"\n🗝️  Node keys: {len(self.keys_held)}/{len(self.nodes)}")
+        for node in self.nodes:
+            mark = "✓" if node in self.keys_held else "·"
+            print(f"  {mark} Key of {node}")
+        if self.gate_open:
+            print("The First Gate stands open.")
+        else:
+            print("Visit every node and the First Gate will open.")
+        print()
+
+    def get_key(self, key_name):
+        if key_name not in self.named_keys:
+            self.named_keys.append(key_name)
+            print(f"\n🔑 You obtained: {key_name}\n")
+        else:
+            print(f"\nYou already have: {key_name}\n")
 
     def status(self):
         print("\n=== CRYSTALCORE.OS STATUS ===")
@@ -166,6 +229,8 @@ class CrystalCore:
         print(f"Starline Status:    {self.starline_status}")
         print(f"Current Location:   {self.current_location or 'None'}")
         print(f"Current Soundtrack: {self.current_soundtrack}")
+        print(f"Keys Held:          {len(self.keys_held)}/{len(self.nodes)}" + ("  — First Gate OPEN" if self.gate_open else ""))
+        print(f"Named Keys:         {', '.join(self.named_keys) if self.named_keys else 'none'}")
         print(f"NON SOLUS:          {self.non_solus}")
         print("=============================\n")
 
@@ -178,7 +243,9 @@ Available commands:
   burn                 - Escape burn
   network              - Enter full Starline network
   explore              - List explorable nodes
-  visit [node]         - Go to a node (number or name)
+  visit [node]         - Go to a node (number or name) — collect its key
+  keys                 - Show the Keys of the Lattice
+  getkey [name]        - Obtain a named key (e.g. getkey Crystal Key)
   jump [year]          - Time jump
   map                  - Display the Starline network chart
   song [track]         - Change soundtrack
@@ -225,6 +292,13 @@ def main():
                 os.jump(year)
             elif cmd == "map":
                 os.map()
+            elif cmd == "keys":
+                os.keys()
+            elif cmd == "getkey":
+                if arg:
+                    os.get_key(arg.strip().title())
+                else:
+                    print("Usage: getkey [Key Name]")
             elif cmd == "song":
                 os.song(arg)
             elif cmd == "status":
