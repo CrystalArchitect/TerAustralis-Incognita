@@ -151,4 +151,6 @@ and radiates memory as living architecture.
 
 *Companion pieces: [The Book of the Sovereign Key](THE-SOVEREIGN-KEY.md) ·
 [The Starline Transmissions](STARLINE-TRANSMISSIONS.md). The playable terminal
-this vision sits behind is documented at [`../CRYSTALCORE-OS.md`](../CRYSTALCORE-OS.md).*
+this vision sits behind is documented at [`../CRYSTALCORE-OS.md`](../CRYSTALCORE-OS.md).
+A reflection prompt in this vocabulary lives at
+[`../tools/signal-scanner.md`](../tools/signal-scanner.md).*
