@@ -153,5 +153,7 @@ and radiates memory as living architecture.
 [The Starline Transmissions](STARLINE-TRANSMISSIONS.md). The playable terminal
 this vision sits behind is documented at [`../CRYSTALCORE-OS.md`](../CRYSTALCORE-OS.md).
 Prompts in this vocabulary live in [`../tools/`](../tools/) — a
-[reflection prompt](../tools/signal-scanner.md) and a
-[voice prompt](../tools/crystalcore-voice.md), both written to keep their honesty.*
+[reflection prompt](../tools/signal-scanner.md), a
+[voice prompt](../tools/crystalcore-voice.md), and a
+[master prompt](../tools/crystalcore-master.md) combining both — all written to
+keep their honesty.*
