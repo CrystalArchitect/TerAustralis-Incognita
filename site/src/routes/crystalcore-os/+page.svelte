@@ -176,7 +176,7 @@
   .crystalcore-hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    color: var(--gold, #e6b85c);
+    color: var(--green, #6fe7b7);
     font-family: 'Playfair Display', serif;
   }
 
@@ -319,7 +319,7 @@
   }
 
   .crystalcore-nodes h2 {
-    color: #e6b85c;
+    color: var(--blue, #7aa2ff);
     margin-bottom: 1rem;
     text-align: center;
   }
@@ -362,7 +362,7 @@
   }
 
   .crystalcore-info h2 {
-    color: #e6b85c;
+    color: var(--pink, #f5a0d4);
     margin-bottom: 1rem;
   }
 
