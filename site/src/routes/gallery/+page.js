@@ -83,7 +83,8 @@ export function load() {
     { filename: 'crystal-revenant-hub.jpeg', description: 'The Crystal Revenant Hub — spire city over the planet, festival lights' },
     { filename: 'starline-rivers.jpeg', description: 'The starline rivers — light flowing between crystal cities' },
     { filename: 'lattice-canopy.jpeg', description: 'A lone figure reaches up toward the living lattice canopy above the red dust' },
-    { filename: 'starline-ascension.jpeg', description: 'A figure stands before the Starline ascension tower, rising into a single point of light' }
+    { filename: 'starline-ascension.jpeg', description: 'A figure stands before the Starline ascension tower, rising into a single point of light' },
+    { filename: 'sovereign-heart-map.jpeg', description: 'The Sovereign Heart: the continent in red dust and ochre, Dreamtime veins threading toward a crystalline node in the southeast' }
   ];
 
   return {

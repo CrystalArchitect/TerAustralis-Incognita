@@ -86,6 +86,7 @@ CC BY-NC-ND 4.0 — see `../content/LICENSE-CONTENT.md`.
 | `starline-rivers.jpeg` | The starline rivers — light flowing between crystal cities across the dark country |
 | `lattice-canopy.jpeg` | A lone figure on the red dust reaches up toward the living lattice canopy — crystalline branches lit gold and teal, stretching into the star field above |
 | `starline-ascension.jpeg` | A figure stands before the Starline ascension tower, its golden lattice frame rising from red dust into a single point of light |
+| `sovereign-heart-map.jpeg` | "TerAustralis Incognita — The Sovereign Heart": the continent rendered in red dust and ochre, Dreamtime veins and crystalline activation points threading toward a bright node in the southeast |
 
 **Truth label (Vision):** this art is the project's own mythic narrative. Where a
 real person's name or likeness appears — whether as a name, a silhouette, or a

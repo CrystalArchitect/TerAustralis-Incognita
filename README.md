@@ -52,7 +52,7 @@ python3 mythos/crystalcore_os.py
 | `apps/crystal-vision/`, `apps/crystal-interface/`, `apps/vision-web/` | Demo shells (simulated data, Authority HOLD — not production) |
 | `crystal-core/` | The protocol pack — Songline Bus (`clementine/bridge/`), Decode→Ingest→Twin pipeline (`services/`), Starline (`starline/`) |
 | `crystalcore/` | CrystalBridge — the MCP consent gate (fail-closed by design) |
-| `mythos/` | The Crystal universe canon — Codex, Apocryphon, the Book of the Sovereign Key, the Starline Transmissions, 81 pieces of art, `crystalcore_os.py` |
+| `mythos/` | The Crystal universe canon — Codex, Apocryphon, the Book of the Sovereign Key, the Starline Transmissions, 82 pieces of art, `crystalcore_os.py` |
 | `site/` | The SvelteKit site for teraustralis.com.au |
 | `sdk/typescript/`, `node/mesh/` | Client SDK and an in-process mesh scaffold |
 | `TeraAustralis/`, `CrystalCore.Lattice/`, `docs/` | Lore, activation protocol notes, and architecture docs |
