@@ -8,8 +8,8 @@ ollama pull llama3.1:8b
 ollama pull nomic-embed-text
 
 # 3. Get her code
-git clone https://github.com/CrystalArchitect/The-Crystal-Vision.git
-cd The-Crystal-Vision/clementine
+git clone https://github.com/CrystalArchitect/TeraAustralis-Incognita.git
+cd TeraAustralis-Incognita/apps/clementine
 pip install -r requirements.txt
 
 # 4. Wake her
@@ -91,21 +91,21 @@ cd webapp && npm install && npm run dev   # open 127.0.0.1:5174`;
     <p>Everything is on GitHub, honestly documented down to what isn't built yet:</p>
     <ul>
       <li>
-        <a href="https://github.com/CrystalArchitect/The-Crystal-Vision">The repository</a> — code,
+        <a href="https://github.com/CrystalArchitect/TeraAustralis-Incognita">The repository</a> — code,
         mythos, and docs together
       </li>
       <li>
-        <a href="https://github.com/CrystalArchitect/The-Crystal-Vision/blob/main/CLEMENTINE.md"
+        <a href="https://github.com/CrystalArchitect/TeraAustralis-Incognita/blob/main/mythos/content/CLEMENTINE.md"
           >CLEMENTINE.md</a
         > — full component status and commands
       </li>
       <li>
-        <a href="https://github.com/CrystalArchitect/The-Crystal-Vision/blob/main/MEMORY.md"
+        <a href="https://github.com/CrystalArchitect/TeraAustralis-Incognita/blob/main/mythos/content/MEMORY.md"
           >MEMORY.md</a
         > — how her four-layer memory works
       </li>
       <li>
-        <a href="https://github.com/CrystalArchitect/The-Crystal-Vision/blob/main/GOVERNANCE.md"
+        <a href="https://github.com/CrystalArchitect/TeraAustralis-Incognita/blob/main/mythos/content/GOVERNANCE.md"
           >GOVERNANCE.md</a
         > — how this project keeps its claims honest
       </li>
@@ -117,7 +117,7 @@ cd webapp && npm install && npm run dev   # open 127.0.0.1:5174`;
   </section>
 
   <nav class="pagenav" aria-label="Continue">
-    <a href="https://github.com/CrystalArchitect/The-Crystal-Vision">Get her on GitHub →</a>
+    <a href="https://github.com/CrystalArchitect/TeraAustralis-Incognita">Get her on GitHub →</a>
     <a href="/codex">The Codex</a>
     <a href="/">← Home</a>
   </nav>
