@@ -28,6 +28,11 @@ clementine_memory/
 clementine_profiles/
 memory/config.json
 
+# CrystalBridge audit trail and guest messages — real conversation content,
+# never go in git (bridge_config.json itself is fine to commit)
+profiles/*/audit.jsonl
+profiles/*/messages.jsonl
+
 # Starline identity/peers/consent — this device's private key and address
 # book, never go in git, wherever an agent happens to run from
 starline_identity.json
