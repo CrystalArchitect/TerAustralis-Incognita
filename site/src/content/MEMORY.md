@@ -1,6 +1,6 @@
 # Clementine's Memory Architecture
 
-> **Status: design document, partially implemented.** This is the target memory architecture for Clementine. Some layers already exist in `clementine.py` (marked ✅/🟡 below); others are design (⬜). See `CLEMENTINE.md` for the companion today and `MILESTONES.md` for the build plan.
+> **Status: design document, partially implemented.** This is the target memory architecture for Clementine. Some layers already exist in `clementine.py` (marked ✅/🟡 below); others are design (⬜). See `LUMINA.md` for the companion today and `MILESTONES.md` for the build plan.
 
 ## Philosophy
 
@@ -130,6 +130,6 @@ Think of vector embeddings as GPS coordinates for meaning: a sentence becomes a 
 
 ---
 
-*See also: [CLEMENTINE.md](CLEMENTINE.md) · [MILESTONES.md](MILESTONES.md) · [CRYSTALMATRIX.md](CRYSTALMATRIX.md) · [README](README.md)*
+*See also: [LUMINA.md](LUMINA.md) · [MILESTONES.md](MILESTONES.md) · [CRYSTALMATRIX.md](CRYSTALMATRIX.md) · [README](README.md)*
 
 *Part of The Crystal Vision · TerAustralis Incognita · Non Solus — Not Alone*
