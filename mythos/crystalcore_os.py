@@ -21,7 +21,7 @@ class CrystalCore:
         self.current_soundtrack = None
         self.current_location = None
 
-        self.songline_bus = [
+        self.soundtrack = [
             "Shotgun - George Ezra",
             "Year 3000 - Busted",
             "I Am Australian - The Seekers",
@@ -56,7 +56,7 @@ class CrystalCore:
         }
 
         # Fields that survive between sessions. The constants above (nodes,
-        # songline_bus, purpose_core, locked_nodes) are rebuilt fresh each run
+        # soundtrack, purpose_core, locked_nodes) are rebuilt fresh each run
         # and are never saved.
         self._persist = ("lattice_integrity", "starline_status", "timeline",
                          "current_soundtrack", "current_location",
@@ -129,7 +129,7 @@ class CrystalCore:
             print("Please run 'launch' first.")
             return
         if soundtrack:
-            for song in self.songline_bus:
+            for song in self.soundtrack:
                 if soundtrack.lower() in song.lower():
                     self.current_soundtrack = song
                     break
@@ -219,7 +219,7 @@ class CrystalCore:
         if track:
             # Match flexibly: any part of a title or artist finds the song.
             matched = None
-            for song in self.songline_bus:
+            for song in self.soundtrack:
                 if track.lower() in song.lower():
                     matched = song
                     break
@@ -229,7 +229,7 @@ class CrystalCore:
                 self.save()
             else:
                 print("Track not found. Available tracks:")
-                for t in self.songline_bus:
+                for t in self.soundtrack:
                     print(f"  - {t}")
         else:
             print(f"Current soundtrack: {self.current_soundtrack}")

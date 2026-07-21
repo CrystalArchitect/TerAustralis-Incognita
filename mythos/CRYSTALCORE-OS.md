@@ -114,7 +114,7 @@ Purpose Core Nexus, with the Purpose Core line burning at the centre:
 The full-resolution version of that chart is the artwork at
 [`art/starline-network-year-3000.jpeg`](art/README.md).
 
-`song` and `starline` cycle a soundtrack — the "Songline Bus" — defined at the
+`song` and `starline` cycle a soundtrack — defined at the
 top of `crystalcore_os.py`. It mixes the CrystalArchitect's own tracks
 (@m13crystalat) with a handful of popular songs. `song` on its own tells you
 what's playing; `song <part of a title or artist>` switches to a match.
