@@ -1,6 +1,7 @@
 <script>
   import { onMount } from 'svelte';
   import Footer from '$lib/components/Footer.svelte';
+  import Motifs from '$lib/components/Motifs.svelte';
 
   let { data } = $props();
   let terminalContent = $state([
@@ -160,6 +161,8 @@
       The purpose core burns in the Nexus: <em>"Expand to the stars and thereby understand the Universe."</em>
     </p>
   </section>
+
+  <Motifs />
 </div>
 
 <Footer />
