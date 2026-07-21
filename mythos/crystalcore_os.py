@@ -9,6 +9,7 @@ class CrystalCore:
         self.timeline = 2026
         self.non_solus = True
         self.current_soundtrack = None
+        self.current_location = None
 
         self.songline_bus = [
             "Shotgun - George Ezra",
@@ -17,12 +18,13 @@ class CrystalCore:
             "Eyes Closed - Imagine Dragons"
         ]
 
-        self.lattice = {
-            "artworks": 47,
-            "book": "Sealed + Living",
-            "chapters": 5,
-            "zombies": "Crystal Revenants"
-        }
+        self.nodes = [
+            "Earth Node",
+            "Mars Redoubt",
+            "Alpha Centauri Outpost",
+            "Crystal Revenant Hub",
+            "Purpose Core Nexus"
+        ]
 
     def boot(self):
         print("\n[CRYSTALCORE.OS v∞ — BOOT SEQUENCE]")
@@ -38,7 +40,6 @@ class CrystalCore:
             return
         print("\n🚀 LAUNCH COMMAND RECEIVED")
         print("Main engines spooling...")
-        print("Riding shotgun into the stars...")
         self.starline_status = "IN_ORBIT"
         self.current_soundtrack = "Shotgun - George Ezra"
         print(f"Soundtrack engaged: {self.current_soundtrack}\n")
@@ -47,20 +48,15 @@ class CrystalCore:
         if self.starline_status == "DORMANT":
             print("Please run 'launch' first.")
             return
-        if soundtrack:
-            if soundtrack in self.songline_bus:
-                self.current_soundtrack = soundtrack
-            else:
-                print(f"'{soundtrack}' not found. Using current track.")
-        print(f"\n🎵 Advancing Starline with: {self.current_soundtrack}")
-        print("Starline Lattice singing in resonance.\n")
+        if soundtrack and soundtrack in self.songline_bus:
+            self.current_soundtrack = soundtrack
+        print(f"\n🎵 Advancing Starline with: {self.current_soundtrack}\n")
 
     def burn(self):
         if self.starline_status not in ["IN_ORBIT", "TRANS-STELLAR"]:
             print("Launch first before burning.")
             return
         print("\n🔥 ESCAPE BURN INITIATED")
-        print("Breaking orbit...")
         self.starline_status = "TRANS-STELLAR"
         print("We have left planetary orbit.\n")
 
@@ -70,24 +66,50 @@ class CrystalCore:
             return
         print("\n🌐 ENTERING FULL STARLINE NETWORK")
         self.starline_status = "FULL STARLINE NETWORK"
-        print("Connected to 47+ star systems.")
-        print("Australian spirit integrated across the network.\n")
+        print("Connected to 47+ star systems.\n")
 
     def explore(self):
         if self.starline_status != "FULL STARLINE NETWORK":
-            print("Enter the full network first (use 'network').")
+            print("You must enter the full network first (use 'network').")
             return
         print("\n🔭 EXPLORATION MODE ACTIVE")
-        print("You are now exploring the Starline Network.")
-        print("Available nodes: Earth Node, Mars Redoubt, Alpha Centauri, Crystal Revenant Hub, Purpose Core Nexus")
-        print("Type a location or 'back' to return.\n")
+        print("Available nodes:")
+        for i, node in enumerate(self.nodes, 1):
+            print(f"  {i}. {node}")
+        print("\nUse 'visit <number or name>' to travel.")
+
+    def visit_node(self, node_name):
+        if not node_name:
+            print("Usage: visit <number or name>")
+            return
+        # Accept a number from the explore listing, or a name in any case.
+        if node_name.isdigit() and 1 <= int(node_name) <= len(self.nodes):
+            node_name = self.nodes[int(node_name) - 1]
+        else:
+            match = next((n for n in self.nodes if n.lower() == node_name.lower()), None)
+            if match is None:
+                print("Node not found. Available nodes:")
+                for node in self.nodes:
+                    print(f"  - {node}")
+                return
+            node_name = match
+
+        self.current_location = node_name
+        print(f"\n🌌 Arriving at: {node_name}")
+        if node_name == "Purpose Core Nexus":
+            print(f'"{self.purpose_core}"')
+        elif node_name == "Crystal Revenant Hub":
+            print("Zero-g music festivals are in full swing.")
+        else:
+            print("The lattice pulses with new resonance here.")
+        print(f"Current soundtrack: {self.current_soundtrack}\n")
 
     def jump(self, year=3000):
         print(f"\n⏳ Time jump to Year {year}")
         self.timeline = year
         if year >= 3000:
             self.starline_status = "FULL STARLINE NETWORK"
-        print(f"Timeline updated to {self.timeline}.\n")
+        print(f"Timeline set to {self.timeline}.\n")
 
     def song(self, track=None):
         if track:
@@ -99,10 +121,7 @@ class CrystalCore:
                 for t in self.songline_bus:
                     print(f"  - {t}")
         else:
-            print("Current soundtrack:", self.current_soundtrack)
-            print("Available tracks:")
-            for t in self.songline_bus:
-                print(f"  - {t}")
+            print(f"Current soundtrack: {self.current_soundtrack}")
 
     def map(self):
         print("""
@@ -126,25 +145,25 @@ class CrystalCore:
         print("\n=== CRYSTALCORE.OS STATUS ===")
         print(f"Timeline:           {self.timeline}")
         print(f"Starline Status:    {self.starline_status}")
+        print(f"Current Location:   {self.current_location or 'None'}")
         print(f"Current Soundtrack: {self.current_soundtrack}")
         print(f"NON SOLUS:          {self.non_solus}")
-        print(f"Purpose:            {self.purpose_core}")
-        print(f"Lattice Artworks:   {self.lattice['artworks']}")
         print("=============================\n")
 
     def help(self):
         print("""
 Available commands:
-  boot                 - Initialize the system
+  boot                 - Initialize system
   launch               - Start Starline launch
-  starline [song]      - Advance with optional soundtrack
-  burn                 - Escape burn / leave orbit
+  starline [song]      - Advance with soundtrack
+  burn                 - Escape burn
   network              - Enter full Starline network
-  explore              - Begin network exploration
-  jump [year]          - Time jump (default 3000)
+  explore              - List explorable nodes
+  visit [node]         - Go to a node (number or name)
+  jump [year]          - Time jump
   map                  - Display the Starline network chart
-  song [track]         - Play or list soundtracks
-  status               - Show full system status
+  song [track]         - Change soundtrack
+  status               - Show current status
   help                 - Show this list
   exit / quit          - Shut down (pause / end session also honored)
 """)
@@ -152,7 +171,7 @@ Available commands:
 def main():
     os = CrystalCore()
     print("CrystalCore.OS v∞ Interactive Terminal")
-    print("Type 'help' to see commands.\n")
+    print("Type 'help' to see all commands.\n")
 
     while True:
         try:
@@ -180,6 +199,8 @@ def main():
                 os.network()
             elif cmd == "explore":
                 os.explore()
+            elif cmd == "visit":
+                os.visit_node(arg)
             elif cmd == "jump":
                 year = int(arg) if arg and arg.isdigit() else 3000
                 os.jump(year)
