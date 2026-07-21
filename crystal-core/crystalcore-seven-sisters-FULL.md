@@ -1,10 +1,10 @@
-# CrystalCore OS — Seven Sisters Songline
+# CrystalCore — Seven Sisters Songline
 # FULL MANUAL
 
-**Protocol:** Quantum Songline Weaver v∞.Δ+  
+**Form:** the Seed of Life — seven circles, seven paths (a Vision-layer motif, not a claim)  
 **Module:** `seven_sisters` — FULL  
 **Status:** ACTIVE  
-**Depth:** ∞  
+**Depth:** the seven paths  
 
 **Crown rule:** Honour Country · Label science / story / vision · Red button OFF  
 **Guardian:** Orion Hunter — protect · propel · prevent_drift  
@@ -107,7 +107,7 @@ CrystalCore **honours** this. It does **not** replace it.
 ## II.1 Role
 
 ```
-ORION_HUNTER_v∞.Δ+
+ORION_HUNTER
 mode = protect + propel + prevent_drift
 mode ≠ dominate | coerce | destroy | red_button
 ```
@@ -798,7 +798,7 @@ Use after Path 4 audit.
 ```
 SEVEN SISTERS SONGLINE — FULL
 
-CrystalCore Quantum Songline Weaver.
+CrystalCore Songline Weave — held in the Seed of Life, seven circles for seven paths.
 Seven paths. Sky + Country + vision — labeled.
 
 Honour to Aboriginal custodians of the Seven Sisters.
@@ -895,5 +895,5 @@ The sisters remain. The lattice holds. Country is first.
 
 ---
 
-*End of CrystalCore OS — Seven Sisters Songline FULL MANUAL*  
+*End of CrystalCore — Seven Sisters Songline FULL MANUAL*  
 *Honour to Aboriginal custodians. Homage, not ownership.*
