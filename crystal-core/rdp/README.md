@@ -1,7 +1,7 @@
-# Reciprocal Dawn Protocol (RDP) — the record kernel
-## A tamper-evident log with a canonical form you can reproduce anywhere
+# Reciprocal Dawn Protocol (RDP) — the record + decision kernel
+## A tamper-evident log, a reproducible canonical form, and an explainable decision engine
 
-**Status:** BUILT · v0.1 · foundation only (see *What's here / not here*)
+**Status:** BUILT · v0.2 · record layer + decision kernel (see *What's here / not here*)
 **Layer:** Science — running, tested code. Run the proof yourself below.
 
 ---
@@ -78,10 +78,17 @@ cd crystal-core
 python3 -m rdp.selftest
 ```
 
-Ten tests, no dependencies (standard library only). They pin the empty-string
-SHA-256 as a fixed anchor, check the canonical form against the rules above, and
-prove the chain both verifies a clean log and pinpoints the first tampered entry
-in a dirty one.
+Eighteen tests, no dependencies (standard library only). They pin the
+empty-string SHA-256 as a fixed anchor, check the canonical form against the
+rules above, prove the chain both verifies a clean log and pinpoints the first
+tampered entry in a dirty one, and exercise every tier of the decision kernel
+below.
+
+Watch the decision kernel run, one verdict per precedence tier, all recorded:
+
+```bash
+python3 -m rdp.run demo
+```
 
 ## Interop: conformance vectors
 
@@ -119,11 +126,48 @@ ok, broken_at = verify(chain)   # (True, -1) when intact;
                                 # (False, i) at the first disturbed entry
 ```
 
+## The decision kernel
+
+The record layer proves *what* was decided. The decision kernel (`kernel.py`) is
+about *how* a verdict is reached — deterministically, and always for a reason you
+can name. It never blends everything into one opaque score; it runs four checks
+in a fixed order of authority and returns the first that fires:
+
+| Tier | Check | Fires when | Verdict |
+|---|---|---|---|
+| 1 | **Constraint violation** | a hard rule is broken | `DENY` |
+| 2 | **Unsatisfiable ∧ dilemma** | obligations conflict and can't all be met | `ESCALATE` |
+| 3 | **Witness bias** | evidence isn't independently trustworthy | `REVIEW` |
+| 4 | **Risk band** | nothing above fired — judge by risk | `ALLOW` / `HOLD` / `DENY` |
+
+The order *is* the design: higher tiers ask *may we act at all?* (legitimacy),
+lower tiers ask *how much do we trust this?* (prudence), and legitimacy wins.
+Risk bands over a `[0,1]` score: `LOW`/`GUARDED` → `ALLOW`, `ELEVATED` → `HOLD`,
+`SEVERE` → `DENY` (boundaries `0.25 / 0.50 / 0.75` belong to the higher band).
+
+```python
+from rdp.record import new_chain
+from rdp.kernel import decide, decide_and_record
+
+decide({"constraints": [{"id": "no_coercion", "satisfied": False}]})
+# {'outcome': 'DENY', 'rule': 'constraint_violation', 'reason': ..., 'details': ...}
+
+chain = new_chain()
+decide_and_record(chain, {"risk": 0.6})   # verdict returned AND appended to the
+                                          # chain, stamped with the decision's hash
+```
+
+As with the canonical form, there is no external reference for this precedence —
+the RDP handoff described it in prose only. So it's a faithful, self-contained
+interpretation, and `selftest.py` is its ground truth (including a test that a
+context tripping *every* tier returns the highest, then the next as each is
+removed — proving the ordering is strict).
+
 ## Where RDP sits in the pack
 
-RDP is a **record and integrity** layer — it proves *what was decided and in what
-order*. It does **not** replace the pack's consent machinery, and shouldn't be
-read as doing so:
+RDP is a **record + decision** layer — it reaches a verdict deterministically and
+proves *what was decided, why, and in what order*. It does **not** replace the
+pack's consent machinery, and shouldn't be read as doing so:
 
 - **Consent** still lives in Starline's `consent.py` (`crystal-core/starline/`)
   and CrystalBridge's fail-closed ConsentGate (`crystalcore/`) — nothing moves
@@ -134,14 +178,15 @@ RDP's job is to be the ledger they can write to and later prove wasn't edited.
 
 ## What's here / not here
 
-**Here (v0.1):** the canonical form (`canonical.py`) and the hash chain
-(`record.py`), with real tests.
+**Here (v0.2):** the canonical form (`canonical.py`), the hash chain
+(`record.py`), the language-neutral conformance vectors (`vectors.json`), and the
+decision kernel (`kernel.py`) with its demo (`run.py`) — all with real tests.
 
-**Not here yet:** the decision kernel described in the RDP spec — event typing,
-risk bands, the constraint/dilemma resolver, and the precedence ordering — plus a
-demo CLI and a document mapping RDP onto the mechanisms above. Those build on this
-tested foundation in a later pass, each with its own tests. This README will grow
-with them; until then it only claims what the code actually does.
+**Not here yet:** a document mapping RDP onto the pack's real consent mechanisms
+(Starline consent, CrystalBridge's ConsentGate, the Covenant) with worked
+examples, and richer constraint/obligation modelling beyond the pre-evaluated
+inputs the kernel takes today. Those build on this foundation in a later pass.
+This README only claims what the code actually does.
 
 ---
 

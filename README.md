@@ -41,8 +41,9 @@ cd crystal-core && python3 -m clementine.bridge.selftest
 cd crystal-core && pip install -r requirements-starline.txt && python3 -m starline.selftest
 python3 -m starline.run demo   # watch it: pair, deny, grant, exchange, revoke, deny
 
-# RDP — tamper-evident record kernel: canonical JSON + a self-checking hash chain
+# RDP — tamper-evident record kernel + explainable decision engine
 cd crystal-core && python3 -m rdp.selftest
+python3 -m rdp.run demo   # watch each precedence tier decide, every verdict recorded
 
 # CrystalCore.OS — the mythos as a terminal you can fly
 python3 mythos/crystalcore_os.py
