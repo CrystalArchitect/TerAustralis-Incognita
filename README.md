@@ -43,6 +43,11 @@ python3 -m starline.run demo   # watch it: pair, deny, grant, exchange, revoke, 
 python3 mythos/crystalcore_os.py
 ```
 
+For the Songline Bus's wire protocol, envelope schema, and conduct rules, see
+[`crystal-core/clementine/SONGLINE-PROTOCOL.md`](crystal-core/clementine/SONGLINE-PROTOCOL.md);
+for the hub agent's persona and contract, see
+[`crystal-core/clementine/CLEMENTINE.md`](crystal-core/clementine/CLEMENTINE.md).
+
 ## Repo map
 
 | Path | What it is |

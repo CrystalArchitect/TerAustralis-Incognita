@@ -35,8 +35,9 @@ until a fix has shipped.
   is dropped, never trusted. Binds `127.0.0.1` by default. Identity private keys
   are gitignored and never leave the device; there is no key-recovery mechanism,
   intentionally — a recoverable key is a key someone else could also hold. See
-  `spec/STARLINE.md` for the full threat model and known gap (identity file is
-  not encrypted at rest — filesystem permissions are the only protection today).
+  `spec/STARLINE.md` for the tested security properties and known limits
+  (identity file is not encrypted at rest — filesystem permissions are the
+  only protection today).
 
 ## Scope
 

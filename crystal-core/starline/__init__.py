@@ -9,7 +9,7 @@ Group/mesh sharing is deliberately out of scope — see the spec's open
 questions for why.
 
 Needs the `cryptography` package (X25519, Ed25519, ChaCha20-Poly1305) —
-the one dependency in an otherwise stdlib-only repo. See requirements.txt.
+the one dependency in an otherwise stdlib-only repo. See requirements-starline.txt.
 """
 
 __version__ = "0.1.0"
