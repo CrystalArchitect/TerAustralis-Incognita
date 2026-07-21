@@ -5,10 +5,21 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 const config = {
   preprocess: vitePreprocess(),
   kit: {
-    adapter: adapter(),
+    adapter: adapter({ strict: false }),
     prerender: {
       crawl: true,
-      entries: ['*']
+      entries: ['*'],
+      handleHttpError: ({ status, path }) => {
+        if (status === 404) {
+          if (/\.(jpg|jpeg|png|gif|webp|svg)$/i.test(path)) {
+            return;
+          }
+          if (/^\/crystal-core\/|^\/[a-z-]*\/$/.test(path)) {
+            return;
+          }
+        }
+        throw new Error(`${status} ${path}`);
+      }
     }
   }
 };

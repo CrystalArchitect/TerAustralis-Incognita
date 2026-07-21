@@ -70,12 +70,6 @@
       title: 'Clementine',
       sub: 'The sovereign companion — working software you can run tonight',
       cta: '→ Meet Clementine'
-    },
-    {
-      href: '/docs/architecture',
-      title: 'Architecture',
-      sub: 'The conceptual system design and path forward',
-      cta: '→ Read the Architecture'
     }
   ];
 </script>

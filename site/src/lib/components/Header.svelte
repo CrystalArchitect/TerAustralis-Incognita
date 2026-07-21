@@ -5,6 +5,9 @@
     <a href="/codex">Codex</a>
     <a href="/apocryphon">Apocryphon</a>
     <a href="/clementine">Clementine</a>
+    <a href="/gallery">Gallery</a>
+    <a href="/starline">Starline</a>
+    <a href="/crystalcore-os">CrystalCore.OS</a>
     <a href="/docs">Archive</a>
     <a href="/#support">Support</a>
   </nav>

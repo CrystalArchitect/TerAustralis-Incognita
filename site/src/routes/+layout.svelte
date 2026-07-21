@@ -1,13 +1,13 @@
 <script>
   import '../app.css';
   import Header from '$lib/components/Header.svelte';
-  import { Analytics } from '@vercel/analytics/sveltekit';
+  import { inject } from '@vercel/analytics';
+
+  inject();
 
   /** @type {{ children: import('svelte').Snippet }} */
   let { children } = $props();
 </script>
-
-<Analytics />
 
 <div class="stars" aria-hidden="true"></div>
 
