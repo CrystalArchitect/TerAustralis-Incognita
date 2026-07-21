@@ -19,7 +19,8 @@ class CrystalCore:
             "Eyes Closed - Imagine Dragons",
             "Truly Madly Deeply - Savage Garden",
             "Red Dust Axis - m13crystalat",
-            "Shooting Star Girl! - m13crystalat"
+            "Shooting Star Girl! - m13crystalat",
+            "Fermi's Silent Line - m13crystalat"
         ]
 
         self.nodes = [
@@ -52,8 +53,11 @@ class CrystalCore:
         if self.starline_status == "DORMANT":
             print("Please run 'launch' first.")
             return
-        if soundtrack and soundtrack in self.songline_bus:
-            self.current_soundtrack = soundtrack
+        if soundtrack:
+            for song in self.songline_bus:
+                if soundtrack.lower() in song.lower():
+                    self.current_soundtrack = song
+                    break
         print(f"\n🎵 Advancing Starline with: {self.current_soundtrack}\n")
 
     def burn(self):
