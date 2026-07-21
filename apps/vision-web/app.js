@@ -160,7 +160,7 @@ function spend() {
   };
   state.receipts.unshift(r);
   renderReceipts();
-  toast("Receipt " + r.id + " · dual-attest demo");
+  toast("Receipt " + r.id + " · confirmed (demo, not attested)");
   renderCap();
 }
 
