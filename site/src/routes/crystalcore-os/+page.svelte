@@ -176,8 +176,12 @@
   .crystalcore-hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    color: var(--green, #6fe7b7);
     font-family: 'Playfair Display', serif;
+    background: var(--title-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--gold);
   }
 
   .crystalcore-hero p {
@@ -319,9 +323,13 @@
   }
 
   .crystalcore-nodes h2 {
-    color: var(--blue, #7aa2ff);
     margin-bottom: 1rem;
     text-align: center;
+    background: var(--title-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--gold);
   }
 
   .nodes-grid {
@@ -362,8 +370,12 @@
   }
 
   .crystalcore-info h2 {
-    color: var(--pink, #f5a0d4);
     margin-bottom: 1rem;
+    background: var(--title-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--gold);
   }
 
   .crystalcore-info pre {
@@ -396,8 +408,12 @@
   }
 
   .crystalcore-vision h2 {
-    color: #e6b85c;
     margin-bottom: 1.5rem;
+    background: var(--title-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--gold);
   }
 
   .crystalcore-vision p {
