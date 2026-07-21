@@ -68,6 +68,9 @@ CC BY-NC-ND 4.0 — see `../content/LICENSE-CONTENT.md`.
 | `lock-of-many-keys.jpeg` | The great spiked lock at the center, dozens of keys converging in the dark |
 | `keys-of-the-nexus.jpeg` | Keys rooted in stone, light-veins running to the Purpose Core Nexus sphere |
 | `keyfield-of-the-network.jpeg` | A field of crystal keys planted across the network, one at every crossing point |
+| `key-strikes-the-ring-station.jpeg` | The great key striking the crystal ring-station's blazing core |
+| `festival-key-crystal.jpeg` | The Festival Key over the lantern-lit floating city |
+| `gold-keys-between-the-cities.jpeg` | A field of gold keys strung between two spired crystal cities |
 | `purpose-core-nexus.jpeg` | The Purpose Core Nexus up close — the quote embedded in the living lattice |
 | `crystal-revenant-hub.jpeg` | The Crystal Revenant Hub — spire city over the planet, festival lights strung between the crystals |
 | `starline-rivers.jpeg` | The starline rivers — light flowing between crystal cities across the dark country |
