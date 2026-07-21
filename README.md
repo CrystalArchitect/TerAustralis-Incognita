@@ -75,6 +75,17 @@ Start with [`mythos/content/THE-SOVEREIGN-KEY.md`](mythos/content/THE-SOVEREIGN-
 and [`mythos/content/STARLINE-TRANSMISSIONS.md`](mythos/content/STARLINE-TRANSMISSIONS.md).
 The full visual canon is in [`mythos/art/`](mythos/art/README.md).
 
+## How to contribute
+
+Useful places to start, roughly in order of how load-bearing they are:
+
+- **Code** — Clementine, the Songline Bus, Starline, CrystalBridge: fixes,
+  features, tests.
+- **Docs** — architecture notes, clearer guides, filling gaps in what's here.
+- **Mythos** — the Codex, the Apocryphon, the Starline Transmissions, and the
+  art that goes with them.
+- **Design** — diagrams, interface concepts, visual storytelling.
+
 ## Contributing, security, license
 
 - **Contributing:** [`CONTRIBUTING.md`](CONTRIBUTING.md) — branch rules, the
@@ -87,6 +98,13 @@ The full visual canon is in [`mythos/art/`](mythos/art/README.md).
 - **License:** code is Apache-2.0 (`LICENSE`); mythos content — lore, art,
   the Codex, the Apocryphon — is CC BY-NC-ND 4.0 (`LICENSE-CONTENT.md`):
   share with credit, no commercial use, no derivatives.
+
+## Links
+
+- **Website:** [teraustralis.com.au](https://www.teraustralis.com.au)
+- **Music:** [Suno](https://suno.com/@m13crystalat)
+- **Support:** [Patreon](https://patreon.com/CrystalCore91)
+- **Contact:** [@M13CrystalAT on X](https://x.com/m13crystalat)
 
 ---
 
