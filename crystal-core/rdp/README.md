@@ -175,6 +175,9 @@ pack's consent machinery, and shouldn't be read as doing so:
 - **The Covenant** (`mythos/COVENANT.md`) is still the law those gates enforce.
 
 RDP's job is to be the ledger they can write to and later prove wasn't edited.
+For how the kernel's precedence lines up with those gates — with worked examples,
+and an honest note that they are separate modules today — see
+[`RDP-INTEGRATION.md`](RDP-INTEGRATION.md).
 
 ## What's here / not here
 
