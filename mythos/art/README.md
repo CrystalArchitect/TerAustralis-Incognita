@@ -56,6 +56,10 @@ CC BY-NC-ND 4.0 — see `../content/LICENSE-CONTENT.md`.
 | `fleet-of-the-starlines.jpeg` | The fleet riding the starline rings out from the bright hub, worlds on either side |
 | `network-web.jpeg` | The network as living web — every node named, the three original songs written across the sky (Red Dust Axis · Shooting Star Girl · Fermi's Silent Line) |
 | `red-dust-launches.jpeg` | Rockets rising from the red dust into the lattice-veined sky |
+| `quote-over-the-lattice-world.jpeg` | The Purpose quote written across the lattice-world's living surface |
+| `earth-node-crystal-towers.jpeg` | Earth Node — crystal towers rising from the lit continents |
+| `crystal-tree-of-the-hub.jpeg` | The great crystal tree adrift in the dark, festival platforms gathered in its light |
+| `red-dust-outposts.jpeg` | The red-dust outposts — landers and young crystals under the pale sun |
 | `purpose-core-nexus.jpeg` | The Purpose Core Nexus up close — the quote embedded in the living lattice |
 | `crystal-revenant-hub.jpeg` | The Crystal Revenant Hub — spire city over the planet, festival lights strung between the crystals |
 | `starline-rivers.jpeg` | The starline rivers — light flowing between crystal cities across the dark country |

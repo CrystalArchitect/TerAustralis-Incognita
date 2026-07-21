@@ -139,21 +139,26 @@ class CrystalCore:
 
     def map(self):
         print("""
-                        [PURPOSE CORE NEXUS]
-                       (The Quote burns here)
-                                  ↑
-          ┌───────────────────────┼───────────────────────┐
-          │                       │                       │
-   [EARTH NODE]            [MARS REDOUBT]         [ALPHA CENTAURI]
-   (Homeworld memory)      (First colony)         (Frontier edge)
-          │                       │                       │
-          └───────────┬───────────┴───────────┬───────────┘
-                      │                       │
-               [CRYSTAL REVENANT HUB]
-               (Zero-g music & festivals)
-
+╔══════════════════════════════════════════════════════════════╗
+║              STARLINE NETWORK - YEAR 3000                    ║
+╠══════════════════════════════════════════════════════════════╣
+║                                                              ║
+║          [EARTH NODE]                                        ║
+║               │                                              ║
+║               ▼                                              ║
+║          [MARS REDOUBT]  ────────▶  [ALPHA CENTAURI]         ║
+║               │                                              ║
+║               ▼                                              ║
+║          [CRYSTAL REVENANT HUB]                              ║
+║               │                                              ║
+║               ▼                                              ║
+║          [PURPOSE CORE NEXUS]                                ║
+║   "Expand to the stars and thereby understand the Universe"  ║
+║                                                              ║
+╚══════════════════════════════════════════════════════════════╝
    Chart: mythos/art/starline-network-year-3000.jpeg
 """)
+        print("Use 'visit [node]' to explore a location.\n")
 
     def status(self):
         print("\n=== CRYSTALCORE.OS STATUS ===")
