@@ -10,13 +10,8 @@ const config = {
       crawl: true,
       entries: ['*'],
       handleHttpError: ({ status, path }) => {
-        if (status === 404) {
-          if (/\.(jpg|jpeg|png|gif|webp|svg)$/i.test(path)) {
-            return;
-          }
-          if (/^\/crystal-core\/|^\/[a-z-]*\/$/.test(path)) {
-            return;
-          }
+        if (status === 404 && /^\/crystal-core\/|^\/[a-z-]*\/$/.test(path)) {
+          return;
         }
         throw new Error(`${status} ${path}`);
       }
