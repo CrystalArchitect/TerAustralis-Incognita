@@ -22,7 +22,8 @@ class CrystalCore:
             "My Island Home - Christine Anu",
             "Red Dust Axis - m13crystalat",
             "Shooting Star Girl! - m13crystalat",
-            "Fermi's Silent Line - m13crystalat"
+            "Fermi's Silent Line - m13crystalat",
+            "We Own the Night - Disney Zombies"
         ]
 
         self.nodes = [
@@ -167,27 +168,35 @@ class CrystalCore:
         else:
             print(f"Current soundtrack: {self.current_soundtrack}")
 
+    def _lock_tag(self, node_name):
+        """Live lock status for the map — reflects named keys actually held."""
+        required = self.locked_nodes.get(node_name)
+        if not required:
+            return ""
+        return "  [UNLOCKED]" if required in self.named_keys else f"  [LOCKED — {required}]"
+
     def map(self):
-        print("""
-╔══════════════════════════════════════════════════════════════╗
-║              STARLINE NETWORK - YEAR 3000                    ║
-╠══════════════════════════════════════════════════════════════╣
-║                                                              ║
-║          [EARTH NODE]                                        ║
-║               │                                              ║
-║               ▼                                              ║
-║          [MARS REDOUBT]  ────────▶  [ALPHA CENTAURI]         ║
-║               │                                              ║
-║               ▼                                              ║
-║          [CRYSTAL REVENANT HUB]                              ║
-║               │                                              ║
-║               ▼                                              ║
-║          [PURPOSE CORE NEXUS]                                ║
-║   "Expand to the stars and thereby understand the Universe"  ║
-║                                                              ║
-╚══════════════════════════════════════════════════════════════╝
-   Chart: mythos/art/starline-network-year-3000.jpeg
-""")
+        inner = 62  # characters between the ║ borders
+        hub_line = f"          [CRYSTAL REVENANT HUB]{self._lock_tag('Crystal Revenant Hub')}".ljust(inner)
+        nexus_line = f"          [PURPOSE CORE NEXUS]{self._lock_tag('Purpose Core Nexus')}".ljust(inner)
+        print("╔" + "═" * inner + "╗")
+        print("║" + "STARLINE NETWORK - YEAR 3000".center(inner) + "║")
+        print("╠" + "═" * inner + "╣")
+        print("║" + " " * inner + "║")
+        print("║" + "          [EARTH NODE]".ljust(inner) + "║")
+        print("║" + "               │".ljust(inner) + "║")
+        print("║" + "               ▼".ljust(inner) + "║")
+        print("║" + "          [MARS REDOUBT]  ────────▶  [ALPHA CENTAURI]".ljust(inner) + "║")
+        print("║" + "               │".ljust(inner) + "║")
+        print("║" + "               ▼".ljust(inner) + "║")
+        print("║" + hub_line + "║")
+        print("║" + "│".rjust(16).ljust(inner) + "║")
+        print("║" + "▼".rjust(16).ljust(inner) + "║")
+        print("║" + nexus_line + "║")
+        print("║" + '"Expand to the stars and thereby understand the Universe"'.center(inner) + "║")
+        print("║" + " " * inner + "║")
+        print("╚" + "═" * inner + "╝")
+        print("   Chart: mythos/art/starline-network-year-3000.jpeg\n")
         print("Use 'visit [node]' to explore a location.\n")
 
     def keys(self):
