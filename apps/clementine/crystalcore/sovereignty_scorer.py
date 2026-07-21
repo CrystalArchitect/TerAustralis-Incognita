@@ -1,5 +1,5 @@
 """
-CrystalCore.OS - Automated Sovereignty Scoring Module
+CrystalCore - Automated Sovereignty Scoring Module
 Version: 0.1-alpha
 Purpose: Monitor and score sovereignty health in human-AI interactions
 """
@@ -23,7 +23,7 @@ class SovereigntyScore:
 
 class SovereigntyScorer:
     """
-    Automated Sovereignty Scoring System for CrystalCore.OS
+    Automated Sovereignty Scoring System for CrystalCore
     
     Evaluates human-AI interaction sessions against 8 core sovereignty metrics.
     Can be used after each session or periodically for trend tracking.
@@ -184,7 +184,7 @@ class SovereigntyScorer:
     def print_score_report(self, score: SovereigntyScore):
         """Print a formatted sovereignty score report"""
         print("\n" + "="*60)
-        print("CRYSTALCORE.OS — SOVEREIGNTY SCORE REPORT")
+        print("CRYSTALCORE — SOVEREIGNTY SCORE REPORT")
         print("="*60)
         print(f"Timestamp: {score.timestamp}")
         print(f"Overall Health: {score.health_level} ({score.total_score}/{score.max_possible})")

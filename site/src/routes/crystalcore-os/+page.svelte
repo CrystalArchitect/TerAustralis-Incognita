@@ -4,7 +4,7 @@
 
   let { data } = $props();
   let terminalContent = $state([
-    { type: 'boot', text: 'CrystalCore.OS v∞ Interactive Terminal' },
+    { type: 'boot', text: 'CrystalCore.OS Interactive Terminal' },
     { type: 'boot', text: 'Type \'help\' to see all commands.\n' }
   ]);
   let inputValue = $state('');
@@ -74,7 +74,7 @@
   <section class="crystalcore-interactive">
     <div class="terminal-window">
       <div class="terminal-header">
-        <span>CrystalCore.OS v∞ — Terminal</span>
+        <span>CrystalCore.OS — Terminal</span>
         <span>NON SOLUS</span>
       </div>
       <div class="terminal-output" bind:this={terminalEl}>

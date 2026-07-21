@@ -1,4 +1,4 @@
-# CrystalCore.OS v∞ - Complete Edition
+# CrystalCore.OS - Complete Edition
 # NON SOLUS | Starline Protocol | Year 3000 Build
 # Includes: All Starline launches + @m13crystalat Crystalcore songs
 
@@ -106,7 +106,7 @@ class CrystalCore:
         print("\n♻️  Progress reset. The lattice returns to dormant. NON SOLUS.\n")
 
     def boot(self):
-        print("\n[CRYSTALCORE.OS v∞ — BOOT SEQUENCE]")
+        print("\n[CRYSTALCORE.OS — BOOT SEQUENCE]")
         print(f"Lattice integrity ........ {self.lattice_integrity}%")
         print(f"Purpose Core ............. {self.purpose_core}")
         print("NON SOLUS ................ Confirmed")
@@ -326,7 +326,7 @@ Progress saves automatically to ~/.crystalcore/state.json and resumes on next la
 
 def main():
     os = CrystalCore()
-    print("CrystalCore.OS v∞ Interactive Terminal")
+    print("CrystalCore.OS Interactive Terminal")
     if os.resumed:
         gate = "  — First Gate OPEN" if os.gate_open else ""
         print(f"Session resumed — {len(os.keys_held)}/{len(os.nodes)} keys held{gate}.")
