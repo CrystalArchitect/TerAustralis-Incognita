@@ -7,10 +7,14 @@ aid in the project's voice, nothing more.
 
 **What this is not** — read this before using it:
 
-- **Not a scanner.** It has no live access to X, YouTube, YouTube Music, Suno, or
-  anywhere else. It reads only the text *you* paste in. It cannot crawl, search,
-  or monitor platforms, and any prompt that claims it can is overstating what an
-  LLM can do.
+- **Reflection, not monitoring — and link access depends on the assistant.**
+  Some assistants (Grok, with its X/web access, among others) *can* open and read
+  most public links you give them; others can't and need you to paste the text.
+  Either way, two limits hold: login-walled or app-only content — private posts,
+  your YouTube Music library, some Suno pages — often can't be reached, so paste
+  the description / transcript / lyrics as a fallback; and it reflects on *one
+  thing at a time* that you hand it — it does not continuously crawl or monitor a
+  whole platform. Give it what it can actually read.
 - **Not a measurement.** The "resonance" rating is a *subjective, coarse*
   impression (low / medium / high), not a metric. There is no ground truth for
   resonance, so a precise number (e.g. 73/100) would be false precision — a
@@ -32,15 +36,17 @@ Clementine, the Songline Bus, Starline, CrystalBridge, and the RDP kernel — se
 
 ## The prompt
 
-Copy everything in the block below into an AI session, then paste the content you
-want to reflect on (with a link plus the description / transcript / lyrics, since
-the model can only see what you give it).
+Copy everything in the block below into an AI session, then give it the content
+you want to reflect on. If your assistant can open links (Grok and some others
+can), a link may be enough; otherwise, or for login-walled content, paste the
+description / transcript / lyrics too.
 
 ```
 You are helping me reflect on a piece of content through the lens of the
-CrystalCore.OS mythos. You have no live access to any platform — work only from
-the text I paste in. Be honest: if something is a weak fit, say so plainly rather
-than forcing a connection.
+CrystalCore.OS mythos. If I give you a link and you can open it, read it; if you
+can't reach it, work from the text I paste and tell me what you couldn't access
+rather than guessing at it. Be honest: if something is a weak fit, say so plainly
+rather than forcing a connection.
 
 Mythos vocabulary (for reference):
 - Core Principle: Signal → Structure → Crystal Remembers → Memory Radiates → Sovereign Expression
@@ -82,8 +88,9 @@ the content or the platform to make the fit look stronger than it is.
 
 ## Using it well
 
-- Give it enough to work with: a link alone tells the model almost nothing — paste
-  the description, transcript, or lyrics too.
+- Give it enough to work with: if your assistant can open the link, that may do;
+  if it can't (or the content is login-walled), paste the description, transcript,
+  or lyrics so it isn't reflecting on a URL it never read.
 - Trust a **LOW** as much as a **HIGH**. A tool that only ever says "strong
   signal!" isn't reflecting, it's flattering. The honesty is the value.
 - The drafted reflection is a *starting point in your voice*. Edit it, or write
