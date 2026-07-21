@@ -1,11 +1,12 @@
-"""Self-test for the RDP record kernel — canonical JSON + the hash chain.
+"""Self-test for RDP — canonical JSON, the hash chain, and the decision kernel.
 
     python3 -m rdp.selftest
 
 These tests *are* the specification. There is no external conformance suite for
 RDP — the handoff that described one referred to reference files that never
 existed — so correctness here means: the canonical form is deterministic and
-matches the profile's stated rules, and the hash chain detects any tampering.
+matches the profile's stated rules, the hash chain detects any tampering, and
+the decision kernel resolves every context through its fixed precedence order.
 The empty-string SHA-256 is pinned as a fixed anchor so the hash primitive
 itself can't drift underneath us.
 """
@@ -30,6 +31,23 @@ from .record import (
     new_chain,
     tip_bytes,
     verify,
+)
+from .kernel import (
+    ALLOW,
+    DENY,
+    ESCALATE,
+    HOLD,
+    REVIEW,
+    RULE_BIAS,
+    RULE_CONSTRAINT,
+    RULE_DILEMMA,
+    RULE_RISK,
+    decide,
+    decide_and_record,
+    risk_band,
+    risk_score,
+    satisfiability,
+    witness_bias,
 )
 
 # SHA-256 of the empty string — a value anyone can look up. If this ever fails,
@@ -152,6 +170,126 @@ def test_conformance_vectors():
         assert sha256_hex(got) == v["sha256"], (v["note"], sha256_hex(got))
 
 
+# --- decision kernel -------------------------------------------------------
+
+def test_risk_bands_and_boundaries():
+    assert risk_band(0.0) == "LOW"
+    assert risk_band(0.24) == "LOW"
+    assert risk_band(0.25) == "GUARDED"      # boundary belongs to the higher band
+    assert risk_band(0.5) == "ELEVATED"
+    assert risk_band(0.75) == "SEVERE"
+    assert risk_band(1.0) == "SEVERE"
+    assert _raises(ValueError, risk_band, -0.1)
+    assert _raises(ValueError, risk_band, 1.1)
+
+
+def test_risk_score_normalization():
+    assert risk_score(0.4) == 0.4
+    assert risk_score([0.2, 0.3, 0.1]) == 0.6      # factors sum
+    assert risk_score([0.9, 0.9]) == 1.0           # clamped to 1
+    assert risk_score(-5) == 0.0                    # clamped to 0
+    assert _raises(TypeError, risk_score, True)     # bool is not a risk number
+    assert _raises(TypeError, risk_score, "high")
+
+
+def test_satisfiability_and_dilemma():
+    # a true dilemma: each obligation is met by some option, none by both
+    sat, dil = satisfiability(["a", "b"], [
+        {"id": "keep_promise", "satisfied_by": ["a"]},
+        {"id": "prevent_harm", "satisfied_by": ["b"]},
+    ])
+    assert sat is False and dil is True
+    # satisfiable: option 'a' meets both
+    sat, dil = satisfiability(["a", "b"], [
+        {"id": "x", "satisfied_by": ["a"]},
+        {"id": "y", "satisfied_by": ["a", "b"]},
+    ])
+    assert sat is True and dil is False
+    # an impossible single obligation is unsatisfiable but NOT a dilemma
+    sat, dil = satisfiability(["a"], [{"id": "z", "satisfied_by": ["nonexistent"]}])
+    assert sat is False and dil is False
+    # no obligations at all is trivially satisfiable
+    assert satisfiability(["a"], []) == (True, False)
+
+
+def test_witness_bias_detection():
+    assert witness_bias([]) == []
+    assert witness_bias([{"id": "w1", "source": "a"}]) == []      # lone witness, no flag
+    assert witness_bias([{"id": "w1", "source": "a", "biased": True}]) == ["flagged:w1"]
+    # two witnesses, one source = monoculture
+    reasons = witness_bias([{"id": "w1", "source": "a"}, {"id": "w2", "source": "a"}])
+    assert reasons == ["single_source:a"]
+    # independent sources = clean
+    assert witness_bias([{"id": "w1", "source": "a"}, {"id": "w2", "source": "b"}]) == []
+
+
+def test_decide_each_tier_in_isolation():
+    # tier 1 — constraint violation
+    v = decide({"constraints": [{"id": "no_coercion", "satisfied": False}]})
+    assert v["outcome"] == DENY and v["rule"] == RULE_CONSTRAINT
+
+    # tier 2 — unsatisfiable dilemma
+    v = decide({"options": ["a", "b"], "obligations": [
+        {"id": "p", "satisfied_by": ["a"]},
+        {"id": "q", "satisfied_by": ["b"]},
+    ]})
+    assert v["outcome"] == ESCALATE and v["rule"] == RULE_DILEMMA
+
+    # tier 3 — witness bias
+    v = decide({"witnesses": [
+        {"id": "w1", "source": "a"}, {"id": "w2", "source": "a"},
+    ]})
+    assert v["outcome"] == REVIEW and v["rule"] == RULE_BIAS
+
+    # tier 4 — risk band, low and severe
+    assert decide({"risk": 0.1})["outcome"] == ALLOW
+    assert decide({"risk": 0.6})["outcome"] == HOLD
+    assert decide({"risk": 0.9})["outcome"] == DENY
+    assert decide({})["outcome"] == ALLOW              # empty context = zero-risk allow
+
+
+def test_decide_precedence_is_strict():
+    """A context that trips every tier must return the highest one, and peeling
+    off each top tier reveals the next in exact order."""
+    ctx = {
+        "constraints": [{"id": "no_coercion", "satisfied": False}],
+        "options": ["a", "b"],
+        "obligations": [
+            {"id": "p", "satisfied_by": ["a"]},
+            {"id": "q", "satisfied_by": ["b"]},
+        ],
+        "witnesses": [{"id": "w1", "source": "a"}, {"id": "w2", "source": "a"}],
+        "risk": 0.9,
+    }
+    assert decide(ctx)["rule"] == RULE_CONSTRAINT          # constraint wins over all
+    ctx = {**ctx, "constraints": []}
+    assert decide(ctx)["rule"] == RULE_DILEMMA             # then the dilemma
+    ctx = {**ctx, "obligations": []}
+    assert decide(ctx)["rule"] == RULE_BIAS                # then witness bias
+    ctx = {**ctx, "witnesses": []}
+    assert decide(ctx)["rule"] == RULE_RISK                # finally risk
+    assert decide(ctx)["outcome"] == DENY                 # risk 0.9 → SEVERE → DENY
+
+
+def test_decide_and_record_is_tamper_evident():
+    chain = new_chain()
+    decision = {"risk": 0.1, "constraints": [{"id": "ok", "satisfied": True}]}
+    verdict = decide_and_record(chain, decision)
+    assert verdict["outcome"] == ALLOW
+    assert len(chain) == 1
+    event = chain[0]
+    assert event["kind"] == "rdp.verdict"
+    # the recorded decision hash matches the canonical hash of the exact input
+    assert event["decision_sha256"] == sha256_hex(decision)
+    ok, broken = verify(chain)
+    assert ok and broken == -1
+    # editing the recorded reason breaks the chain
+    tampered = [dict(e) for e in chain]
+    tampered[0]["reason"] = "something else"
+    ok, broken = verify(tampered)
+    assert not ok and broken == 0
+
+
 def test_determinism_across_independent_chains():
     events = [
         {"kind": "grant", "subject": "did:crystal:a", "amount": 12.5},
@@ -179,6 +317,13 @@ def main() -> int:
         test_append_does_not_mutate_caller_and_ignores_incoming_hash,
         test_chain_verifies_and_detects_tampering,
         test_conformance_vectors,
+        test_risk_bands_and_boundaries,
+        test_risk_score_normalization,
+        test_satisfiability_and_dilemma,
+        test_witness_bias_detection,
+        test_decide_each_tier_in_isolation,
+        test_decide_precedence_is_strict,
+        test_decide_and_record_is_tamper_evident,
         test_determinism_across_independent_chains,
     ]
     for t in tests:

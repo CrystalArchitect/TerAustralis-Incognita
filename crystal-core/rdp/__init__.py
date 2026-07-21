@@ -10,8 +10,11 @@ tested implementation of the protocol as specified.
 Modules:
   canonical  — RDP-JCS Profile v1: lexical decimal handling + canonical JSON.
   record     — append-only, SHA-256 hash-chained audit record.
+  kernel     — deterministic decision engine: fixed-precedence verdicts.
+  run        — a narrated demo (python3 -m rdp.run demo).
 
 Run the tests:  cd crystal-core && python3 -m rdp.selftest
+Watch it run:   cd crystal-core && python3 -m rdp.run demo
 """
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
