@@ -8,8 +8,11 @@ Living vision stack: **TeraAustralis Incognita** · **CrystalVision** · **Cryst
 
 1. Read `CONSTITUTION.md` before large changes.  
 2. Disk is canon > chat.  
-3. Substantial work → Lattice delta in `CrystalCore.Lattice/memory/deltas/`.  
-4. New AI tool used → add to `CrystalCore.Lattice/WEAVE_MAP.md`.  
+3. Substantial work → commit it, honestly labeled (Built/Vision). The
+   `CrystalCore.Lattice/memory/deltas/` convention this used to point to was
+   never built — see `CONSTITUTION.md`'s implementation note.  
+4. New AI tool used → note it in your PR description for now; `WEAVE_MAP.md`
+   doesn't exist yet.  
 5. Cultural respect: no false sacred; fire-circle ethic.  
 
 ## Layout
@@ -21,6 +24,9 @@ Living vision stack: **TeraAustralis Incognita** · **CrystalVision** · **Cryst
 - `corpus/` — generated; do not hand-edit as source of truth  
 
 ## Commands
+
+Design intent, not live tooling — `scripts/` doesn't exist in this repo yet,
+so none of these run today:
 
 ```powershell
 .\scripts\converge.ps1
