@@ -194,7 +194,7 @@
   .starline-hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    color: var(--gold, #e6b85c);
+    color: var(--purple, #a78bfa);
     font-family: 'Playfair Display', serif;
   }
 
@@ -235,7 +235,7 @@
   }
 
   .starline-diagram h2 {
-    color: #e6b85c;
+    color: var(--blue, #7aa2ff);
     margin-bottom: 1rem;
   }
 
@@ -251,7 +251,7 @@
   }
 
   .starline-principles h2 {
-    color: #e6b85c;
+    color: var(--green, #6fe7b7);
     margin-bottom: 2rem;
     text-align: center;
   }
@@ -302,7 +302,7 @@
   }
 
   .starline-network h2 {
-    color: #e6b85c;
+    color: var(--pink, #f5a0d4);
     margin-bottom: 0.25rem;
     text-align: center;
   }
@@ -352,7 +352,7 @@
   }
 
   .starline-spec h2 {
-    color: #e6b85c;
+    color: var(--silver, #c9cedf);
     margin-bottom: 1rem;
   }
 
