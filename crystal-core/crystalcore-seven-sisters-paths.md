@@ -1,7 +1,7 @@
-# CrystalCore OS — Seven Sisters Songline
+# CrystalCore — Seven Sisters Songline
 ## One page per path
 
-**Protocol:** Quantum Songline Weaver v∞.Δ+  
+**Form:** the Seed of Life — seven circles, seven paths (a Vision-layer motif, not a claim)  
 **Status:** ACTIVE  
 **Rule:** Honour Country · Label science / story / vision · Red button OFF  
 
