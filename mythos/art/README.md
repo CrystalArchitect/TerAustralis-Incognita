@@ -60,6 +60,17 @@ CC BY-NC-ND 4.0 — see `../content/LICENSE-CONTENT.md`.
 | `earth-node-crystal-towers.jpeg` | Earth Node — crystal towers rising from the lit continents |
 | `crystal-tree-of-the-hub.jpeg` | The great crystal tree adrift in the dark, festival platforms gathered in its light |
 | `red-dust-outposts.jpeg` | The red-dust outposts — landers and young crystals under the pale sun |
+| `citadel-of-the-crossroads.jpeg` | The crystal citadel where the starline highways meet — ships inbound, worlds gathered, the dark shard-city watching from above |
+| `keys-of-the-lattice.jpeg` | Keys hung along the lattice web, one at every crossing |
+| `keys-converge.jpeg` | The great keys of crystal and gold converging over the world grid |
+| `rain-of-keys.jpeg` | The rain of keys over the network — one for every node that chooses sovereignty |
+| `the-vault-of-locks.jpeg` | The vault — locks and keys gathered around the burning engine |
+| `lock-of-many-keys.jpeg` | The great spiked lock at the center, dozens of keys converging in the dark |
+| `keys-of-the-nexus.jpeg` | Keys rooted in stone, light-veins running to the Purpose Core Nexus sphere |
+| `keyfield-of-the-network.jpeg` | A field of crystal keys planted across the network, one at every crossing point |
+| `key-strikes-the-ring-station.jpeg` | The great key striking the crystal ring-station's blazing core |
+| `festival-key-crystal.jpeg` | The Festival Key over the lantern-lit floating city |
+| `gold-keys-between-the-cities.jpeg` | A field of gold keys strung between two spired crystal cities |
 | `purpose-core-nexus.jpeg` | The Purpose Core Nexus up close — the quote embedded in the living lattice |
 | `crystal-revenant-hub.jpeg` | The Crystal Revenant Hub — spire city over the planet, festival lights strung between the crystals |
 | `starline-rivers.jpeg` | The starline rivers — light flowing between crystal cities across the dark country |
