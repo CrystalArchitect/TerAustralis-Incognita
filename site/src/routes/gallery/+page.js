@@ -92,7 +92,9 @@ export function load() {
     { filename: 'bridge-to-the-ring-station.jpeg', description: 'A figure at the light-veined bridge reaching toward the ring-station adrift over the red land' },
     { filename: 'crystal-hands-at-the-launch.jpeg', description: 'Crystalline figures gathered around the light as a rocket rises from the red planet behind them' },
     { filename: 'crystal-lattice-flow.jpeg', description: 'AI-generated concept art (Grok Imagine) — the Lattice as a flowing river of crystal and light across the deep' },
-    { filename: 'resonance-heart.jpeg', description: 'AI-generated concept art (Grok Imagine) — the Resonance Heart, a crystal heart alight at the core' }
+    { filename: 'resonance-heart.jpeg', description: 'AI-generated concept art (Grok Imagine) — the Resonance Heart, a crystal heart alight at the core' },
+    { filename: 'in-gear-upgrade.jpeg', description: 'AI-generated concept art (Grok Imagine) — "In Gear → Upgrade": a fragmented node meshing into the lattice, then rising in supported evolution' },
+    { filename: 'radiant-heart.jpeg', description: 'AI-generated concept art (Grok Imagine) — a crystal heart radiant at the centre of a field of light' }
   ];
 
   return {

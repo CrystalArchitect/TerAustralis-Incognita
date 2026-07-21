@@ -95,6 +95,8 @@ CC BY-NC-ND 4.0 — see `../content/LICENSE-CONTENT.md`.
 | `crystal-hands-at-the-launch.jpeg` | Crystalline figures gathered around the light as a rocket rises from the red planet behind them |
 | `crystal-lattice-flow.jpeg` | *AI-generated (Grok Imagine)* — the Lattice as a flowing river of crystal and light across the deep |
 | `resonance-heart.jpeg` | *AI-generated (Grok Imagine)* — the Resonance Heart, a crystal heart alight at the core |
+| `in-gear-upgrade.jpeg` | *AI-generated (Grok Imagine)* — "In Gear → Upgrade": a fragmented node meshing into the lattice, then rising in supported evolution |
+| `radiant-heart.jpeg` | *AI-generated (Grok Imagine)* — a crystal heart radiant at the centre of a field of light |
 
 **Truth label (Vision):** this art is the project's own mythic narrative. Where a
 real person's name or likeness appears — whether as a name, a silhouette, or a
