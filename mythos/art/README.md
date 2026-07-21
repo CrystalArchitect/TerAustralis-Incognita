@@ -79,6 +79,8 @@ CC BY-NC-ND 4.0 — see `../content/LICENSE-CONTENT.md`.
 | `companions-and-the-guardians.jpeg` | Two figures reaching toward small light-spirits between them, flanked by towering guardian companions, keys at the corners — Vision-layer speculation on embodied companionship, not a depiction of any real product |
 | `dancers-of-the-great-key.jpeg` | Small luminous dancers on floating platforms circling the Great Key, its glyph burning at the center |
 | `wave-field-of-the-network.jpeg` | The network as a wave-field landscape, keys standing like grass among the labeled nodes |
+| `waveform-of-the-keys.jpeg` | A field of keys standing along a single resonant waveform, cymatic pattern rendered in light |
+| `cymatic-dance-of-the-great-key.jpeg` | Dancers on floating platforms circling the Great Key, cymatic ripples radiating outward through the dark |
 | `purpose-core-nexus.jpeg` | The Purpose Core Nexus up close — the quote embedded in the living lattice |
 | `crystal-revenant-hub.jpeg` | The Crystal Revenant Hub — spire city over the planet, festival lights strung between the crystals |
 | `starline-rivers.jpeg` | The starline rivers — light flowing between crystal cities across the dark country |
