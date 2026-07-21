@@ -37,6 +37,18 @@ class CrystalCore:
         self.keys_held = []
         self.gate_open = False
 
+        # Sealed nodes and the keys they demand, following the map's
+        # route: Earth opens Mars, Mars opens the frontier, and the
+        # Nexus answers only to the full ring.
+        self.locked_nodes = {
+            "Mars Redoubt": ["Earth Node"],
+            "Alpha Centauri Outpost": ["Mars Redoubt"],
+            "Crystal Revenant Hub": ["Mars Redoubt"],
+            "Purpose Core Nexus": ["Earth Node", "Mars Redoubt",
+                                   "Alpha Centauri Outpost",
+                                   "Crystal Revenant Hub"],
+        }
+
     def boot(self):
         print("\n[CRYSTALCORE.OS v∞ — BOOT SEQUENCE]")
         print("Lattice integrity ........ 100%")
@@ -89,7 +101,10 @@ class CrystalCore:
         print("\n🔭 EXPLORATION MODE ACTIVE")
         print("Available nodes:")
         for i, node in enumerate(self.nodes, 1):
-            print(f"  {i}. {node}")
+            missing = [k for k in self.locked_nodes.get(node, [])
+                       if k not in self.keys_held]
+            mark = " 🔒" if missing else ""
+            print(f"  {i}. {node}{mark}")
         print("\nUse 'visit <number or name>' to travel.")
 
     def visit_node(self, node_name):
@@ -107,6 +122,14 @@ class CrystalCore:
                     print(f"  - {node}")
                 return
             node_name = match
+
+        missing = [k for k in self.locked_nodes.get(node_name, [])
+                   if k not in self.keys_held]
+        if missing:
+            print(f"\n🔒 {node_name} is sealed. It asks for: "
+                  + ", ".join(f"Key of {k}" for k in missing))
+            print("The gate opens by sovereign recognition — earn the keys first.\n")
+            return
 
         self.current_location = node_name
         print(f"\n🌌 Arriving at: {node_name}")
