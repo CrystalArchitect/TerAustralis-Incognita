@@ -194,8 +194,12 @@
   .starline-hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    color: var(--purple, #a78bfa);
     font-family: 'Playfair Display', serif;
+    background: var(--title-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--gold);
   }
 
   .starline-hero p {
@@ -213,8 +217,12 @@
   }
 
   .intro-text h2 {
-    color: #e6b85c;
     margin-bottom: 1rem;
+    background: var(--title-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--gold);
   }
 
   .intro-text p {
@@ -235,8 +243,12 @@
   }
 
   .starline-diagram h2 {
-    color: var(--blue, #7aa2ff);
     margin-bottom: 1rem;
+    background: var(--title-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--gold);
   }
 
   .diagram {
@@ -251,9 +263,13 @@
   }
 
   .starline-principles h2 {
-    color: var(--green, #6fe7b7);
     margin-bottom: 2rem;
     text-align: center;
+    background: var(--title-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--gold);
   }
 
   .principles-grid {
@@ -302,9 +318,13 @@
   }
 
   .starline-network h2 {
-    color: var(--pink, #f5a0d4);
     margin-bottom: 0.25rem;
     text-align: center;
+    background: var(--title-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--gold);
   }
 
   .transmission-label {
@@ -352,7 +372,11 @@
   }
 
   .starline-spec h2 {
-    color: var(--silver, #c9cedf);
+    background: var(--title-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--gold);
     margin-bottom: 1rem;
   }
 
@@ -390,8 +414,12 @@
   }
 
   .starline-vision h2 {
-    color: #e6b85c;
     margin-bottom: 1.5rem;
+    background: var(--title-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--gold);
   }
 
   .starline-vision p {

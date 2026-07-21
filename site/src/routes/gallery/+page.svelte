@@ -85,8 +85,12 @@
   .gallery-hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    color: var(--gold, #e6b85c);
     font-family: 'Playfair Display', serif;
+    background: var(--title-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--gold);
   }
 
   .gallery-hero p {
