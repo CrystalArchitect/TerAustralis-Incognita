@@ -400,6 +400,22 @@ a.wordmark{color:var(--purple)}
   color:var(--node,var(--gold));
 }
 
+/* richer cards: each carries a whisper of its own accent, and the hover glow
+   matches that accent instead of a flat gold. Falls back gracefully where
+   color-mix isn't supported (the plain --card background stays). */
+.card{--ac:var(--st,var(--gold))}
+.tier{--ac:var(--tc,var(--gold))}
+.codexlink{--ac:var(--lc,var(--gold))}
+.card,.tier,.codexlink{
+  background:
+    radial-gradient(130% 100% at 0% 0%, color-mix(in srgb, var(--ac) 9%, transparent), transparent 60%),
+    var(--card);
+}
+.card:hover,.tier:hover,.codexlink:hover{
+  border-color:color-mix(in srgb, var(--ac) 50%, var(--line));
+  box-shadow:0 10px 30px rgba(2,2,8,.45), 0 0 22px color-mix(in srgb, var(--ac) 20%, transparent);
+}
+
 /* cards and links lift toward you on hover */
 .card,.tier,.codexlink,.node-card{
   transition:transform .22s cubic-bezier(.2,.7,.2,1),border-color .18s ease,box-shadow .18s ease;
