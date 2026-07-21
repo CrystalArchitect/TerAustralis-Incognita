@@ -31,5 +31,10 @@
     059. © 2026 TerAustralis Incognita.
   </p>
 
+  <p>
+    Listen to the mythos soundtrack on
+    <a href="https://suno.com/@m13crystalat">Suno</a>.
+  </p>
+
   <p class="nonsolus">Non Solus — Not Alone</p>
 </footer>

@@ -1,4 +1,6 @@
 <script>
+  import Footer from '$lib/components/Footer.svelte';
+
   let { data } = $props();
 </script>
 
@@ -178,6 +180,8 @@
     </p>
   </section>
 </div>
+
+<Footer />
 
 <style>
   .starline-container {
