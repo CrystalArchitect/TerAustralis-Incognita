@@ -33,6 +33,15 @@ CC BY-NC-ND 4.0 — see `../content/LICENSE-CONTENT.md`.
 | `resonance-sigil.jpeg` | The resonance sigil over the rune ring, a waveform at its heart — sound made law |
 | `the-old-key.jpeg` | The old iron key descending into the lattice-lands, dragons circling |
 | `talisman-of-the-key.jpeg` | The runed talisman key upright in its blue rune circle over the southern chart |
+| `storm-key-and-the-watcher.jpeg` | The sigil-key wreathed in lightning, the armored watcher behind |
+| `flame-of-the-runes.jpeg` | The rune-wreathed flame rising from the crystal on the chart, candlelit |
+| `meeting-at-the-arch.jpeg` | The lantern-bearer and the voyager meeting beneath the infinity arch, dragons at either hand |
+| `storm-dragons-of-the-key.jpeg` | Two storm dragons flanking the rune key as it strikes the world map |
+| `key-of-the-storm-circle.jpeg` | The key erupting at the center of the rune disc, four dragons riding the storm |
+| `key-between-the-guardians.jpeg` | The gold-banded crystal key held level between the two guardians |
+| `crest-of-the-guardians.jpeg` | The heraldic crest — dragon-armored sentinel, twin serpents, the compass crystal, the ouroboros ring |
+| `anchor-of-the-south.jpeg` | The crystal anchor-compass on the parchment beneath the pillar of light — the Anchor Node made visible |
+| `key-of-the-charter.jpeg` | The ringed rune key upright on the old charters, lightning fanned above |
 
 **Truth label (Vision):** this art is the project's own mythic narrative. Where a
 real person's name or likeness appears — whether as a name, a silhouette, or a
