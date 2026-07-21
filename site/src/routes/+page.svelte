@@ -72,6 +72,63 @@
       cta: '→ Meet Clementine'
     }
   ];
+
+  const builtCards = [
+    {
+      href: '/clementine',
+      title: 'Clementine',
+      body: 'The sovereign companion. Local-first AI, layered memory, terminal and web UI — running software you can install and use tonight.',
+      cta: '→ Meet Clementine',
+      status: 'Built · working software',
+      st: 'var(--green)'
+    }
+  ];
+
+  const mixedCards = [
+    {
+      href: '/starline',
+      title: 'Starline',
+      body: 'A real peer-to-peer protocol — Noise IK handshake, consent-gated exchange — presented alongside its mythic framing as the Starline Transmissions.',
+      cta: '→ Explore Starline',
+      status: 'Built + Vision · protocol with mythic framing',
+      st: 'var(--blue)'
+    }
+  ];
+
+  const visionCards = [
+    {
+      href: '/codex',
+      title: 'The Codex',
+      body: 'The canonical mythic work — Chapters I through V of the Crystal universe story.',
+      cta: '→ Read the Codex',
+      status: 'Vision · narrative',
+      st: 'var(--gold)'
+    },
+    {
+      href: '/apocryphon',
+      title: 'The Apocryphon',
+      body: 'A personal and philosophical companion text to the Codex.',
+      cta: '→ Read the Apocryphon',
+      status: 'Vision · narrative',
+      st: 'var(--gold)'
+    },
+    {
+      href: '/gallery',
+      title: 'The Gallery',
+      body: 'Original art from the Crystal universe.',
+      cta: '→ View the Gallery',
+      status: 'Vision · art',
+      st: 'var(--gold)'
+    },
+    {
+      href: '/crystalcore-os',
+      title: 'CrystalCore.OS',
+      body: 'The mythos rendered as an interactive terminal you can fly through.',
+      cta: '→ Fly CrystalCore.OS',
+      status: 'Vision · interactive mythos',
+      st: 'var(--gold)'
+    }
+  ];
 </script>
 
 <svelte:head>
@@ -96,6 +153,48 @@
   <div class="ctas">
     <a class="btn btn-primary" href="/codex">Read the Codex</a>
     <a class="btn btn-ghost" href="/clementine">Meet Clementine</a>
+  </div>
+</section>
+
+<section class="section node" id="built-vs-vision" style="--node:var(--green)">
+  <h2>What's Built, What's Vision</h2>
+  <p>
+    This project is two things at once, kept honestly separate. Some of it is working software with
+    tests you can run yourself. Some of it is narrative, art, and speculative framing — labeled as
+    such. Where the two meet, the code is the source of truth and the story says so.
+  </p>
+
+  <p class="subhead">Built — working software</p>
+  <div class="cards">
+    {#each builtCards as card (card.href)}
+      <a class="card" href={card.href} style="--st:{card.st}">
+        <h3>{card.title}</h3>
+        <p>{card.body}</p>
+        <span class="status">{card.status}</span>
+      </a>
+    {/each}
+  </div>
+
+  <p class="subhead">Built + Vision — real protocol, mythic framing</p>
+  <div class="cards">
+    {#each mixedCards as card (card.href)}
+      <a class="card" href={card.href} style="--st:{card.st}">
+        <h3>{card.title}</h3>
+        <p>{card.body}</p>
+        <span class="status">{card.status}</span>
+      </a>
+    {/each}
+  </div>
+
+  <p class="subhead">Vision — mythos, narrative, and art</p>
+  <div class="cards">
+    {#each visionCards as card (card.href)}
+      <a class="card" href={card.href} style="--st:{card.st}">
+        <h3>{card.title}</h3>
+        <p>{card.body}</p>
+        <span class="status">{card.status}</span>
+      </a>
+    {/each}
   </div>
 </section>
 

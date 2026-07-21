@@ -287,11 +287,15 @@
 
   .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:34px}
   .card{
+    display:block;
     background:var(--card);
     border:1px solid var(--line);border-radius:16px;padding:24px;
+    color:var(--ink);
+    transition:border-color .18s ease, box-shadow .18s ease;
   }
+  .card:hover{border-color:var(--st,var(--gold));box-shadow:0 0 18px rgba(233,187,95,.12);text-decoration:none}
   .card h3{font-family:'Playfair Display',serif;font-weight:600;font-size:1.18rem;margin-bottom:9px}
-  .card p{font-size:.92rem;max-width:none}
+  .card p{font-size:.92rem;max-width:none;color:var(--muted)}
   .card .status{display:block;margin-top:14px;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--st,var(--gold))}
 
   .codexlink{
