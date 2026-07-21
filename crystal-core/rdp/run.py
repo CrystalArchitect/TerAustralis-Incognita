@@ -139,14 +139,59 @@ def gate_demo() -> None:
     print("Non Solus.")
 
 
+def chain_inspect(path: str | None) -> int:
+    """Load a hash-chained record (JSON list of events) from *path* or stdin,
+    verify it, and print each event with a verdict. Read-only — a way to audit a
+    chain someone hands you without trusting anything but the math.
+
+        python3 -m rdp.run chain-inspect record.json
+        cat record.json | python3 -m rdp.run chain-inspect
+    """
+    import json
+    import sys
+
+    raw = open(path, encoding="utf-8").read() if path else sys.stdin.read()
+    chain = json.loads(raw)
+    if not isinstance(chain, list):
+        print("error: expected a JSON list of events (a chain)", file=sys.stderr)
+        return 2
+
+    source = path or "stdin"
+    print(f"Loaded {len(chain)} event(s) from {source}\n")
+    for i, event in enumerate(chain):
+        if not isinstance(event, dict):
+            print(f"  [{i}] (not an object — {type(event).__name__})")
+            continue
+        kind = event.get("kind", "?")
+        digest = str(event.get("event_hash", ""))[:16]
+        fields = ", ".join(
+            f"{k}={event[k]!r}" for k in event if k not in ("kind", "event_hash")
+        )
+        print(f"  [{i}] {kind}  hash={digest}…")
+        if fields:
+            print(f"        {fields}")
+
+    ok, broken = verify(chain)
+    print(f"\nverify() → intact={ok}" + ("" if ok else f", first break at index {broken}"))
+    return 0 if ok else 1
+
+
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="RDP decision kernel demo")
-    parser.add_argument("command", choices=["demo", "gate-demo"], nargs="?", default="demo")
+    parser = argparse.ArgumentParser(description="RDP decision kernel demo + tools")
+    parser.add_argument(
+        "command", choices=["demo", "gate-demo", "chain-inspect"], nargs="?", default="demo"
+    )
+    parser.add_argument(
+        "path", nargs="?", default=None,
+        help="chain-inspect: path to a chain JSON file (default: read stdin)",
+    )
     args = parser.parse_args(argv)
     if args.command == "gate-demo":
         gate_demo()
-    else:
-        demo()
+        return 0
+    if args.command == "chain-inspect":
+        return chain_inspect(args.path)
+    demo()
     return 0
 
 
