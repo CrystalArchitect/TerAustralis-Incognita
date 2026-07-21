@@ -157,7 +157,22 @@ guarantee you want —
   failure is logged, not fatal. The gate stays independent.
 - *Mandatory witness* ("no action without a recorded decision"): append first and
   treat an append failure as a refuse. Stronger, but it couples the two — a
-  deliberate choice, not the default.
+  deliberate choice, not the default. This is now real too: `witnessing_gate`
+  (sibling of `recording_gate`) lets the gate decide, records the decision, and if
+  that record **fails**, downgrades the verdict to a fail-closed refusal — so no
+  allow ever stands unwitnessed. The ledger is deliberately in the critical path;
+  use it only when you want that trade-off.
+
+**Recording Starline consent, not just gate decisions.** A signed
+`ConsentReceipt` (grant *or* revoke) records the same way, via
+`record_consent_receipt(chain, receipt)`. It is duck-typed (no Starline import),
+the signature rides canonicalization untouched, and the chain then holds a
+tamper-evident, ordered proof of the exact grant→revoke history for a peer.
+
+**Auditing a chain someone hands you.** `python3 -m rdp.run chain-inspect
+record.json` (or piped via stdin) loads a chain, prints each event, and runs
+`verify()` — exiting non-zero and pointing at the first broken index if the
+record was disturbed. Read-only; it trusts nothing but the hashes.
 
 **Edge cases that matter once real consent events flow:**
 

@@ -27,12 +27,14 @@ not the lock.
 
 from __future__ import annotations
 
+from collections import namedtuple
 from typing import Any
 
 from .canonical import sha256_hex
 from .record import append
 
 EVENT_KIND = "consent.gate.decision"
+RECEIPT_KIND = "consent.starline.receipt"
 
 
 def gate_event(
@@ -128,3 +130,88 @@ class recording_gate:
             ts=self._clock(),
         )
         return result
+
+
+# A minimal GateResult-shaped stand-in (.allowed/.reason/.decision) for the
+# fail-closed refusal witnessing_gate returns when it cannot record — so callers
+# read it exactly like a real gate result, without RDP importing GateResult.
+_WitnessRefusal = namedtuple("_WitnessRefusal", ["allowed", "reason", "decision"])
+
+
+class witnessing_gate:
+    """Mandatory-witness wrapper: *no allow stands unless it was recorded.*
+
+    This is the stronger, deliberately-coupled sibling of ``recording_gate``, the
+    "mandatory witness" policy described in RDP-INTEGRATION.md. Where
+    ``recording_gate`` records best-effort *after* the gate and never affects the
+    verdict, this one makes the record **load-bearing**:
+
+      1. the wrapped gate decides (enforcement, unchanged);
+      2. the decision is appended to the chain;
+      3. if that append raises, the verdict is **downgraded to a refusal** — the
+         action must not proceed on a decision we could not witness. Fail closed.
+
+    An allow that *was* recorded is returned untouched; a refusal is returned as
+    is (and still recorded when possible). Use this only when you want "no action
+    without a durable record" and accept that the ledger is now in the critical
+    path — the opposite trade-off from the default.
+    """
+
+    def __init__(self, gate: Any, chain: list[dict[str, Any]], *, clock: Any = _utc_now_iso):
+        self._gate = gate
+        self._chain = chain
+        self._clock = clock
+
+    def check(self, guest: str, tool: str, arguments: dict[str, Any] | None = None, **kw: Any) -> Any:
+        result = self._gate.check(guest, tool, arguments, **kw)   # decide first
+        try:
+            record_gate_decision(
+                self._chain,
+                guest=guest,
+                tool=tool,
+                decision=result.decision,
+                allowed=result.allowed,
+                reason=result.reason,
+                arguments=arguments,
+                ts=self._clock(),
+            )
+        except Exception as exc:  # could not witness → cannot allow
+            return _WitnessRefusal(
+                allowed=False,
+                reason=f"refused: decision could not be witnessed ({exc})",
+                decision="refuse",
+            )
+        return result
+
+
+def consent_receipt_event(receipt: Any, *, ts: Any = None) -> dict[str, Any]:
+    """Build a canonical event from a Starline ``ConsentReceipt`` (does not append).
+
+    Duck-typed on purpose — this reads ``peer_fingerprint``, ``granted``, ``ts``
+    and ``signature`` off the receipt and does **not** import Starline, keeping the
+    zero-coupling rule of this module. The signature is a string and rides
+    canonicalization untouched, so the chain proves the exact grant→revoke
+    sequence a peer's consent went through.
+
+    By default the event's timestamp is the receipt's own ``ts``; pass ``ts`` to
+    override (e.g. for a deterministic test) — as everywhere in RDP, timestamps
+    are caller-supplied data, never generated here.
+    """
+    return {
+        "kind": RECEIPT_KIND,
+        "peer_fingerprint": receipt.peer_fingerprint,
+        "granted": bool(receipt.granted),
+        "decision": "grant" if receipt.granted else "revoke",
+        "signature": getattr(receipt, "signature", "") or "",
+        "ts": receipt.ts if ts is None else ts,
+    }
+
+
+def record_consent_receipt(chain: list[dict[str, Any]], receipt: Any, *, ts: Any = None) -> dict[str, Any]:
+    """Append a Starline consent grant/revoke to *chain* and return the event.
+
+    Call it whenever a ``ConsentReceipt`` is issued (grant *or* revoke); the chain
+    then holds a tamper-evident, ordered proof of the consent history. Takes the
+    same duck-typed receipt as ``consent_receipt_event``.
+    """
+    return append(chain, consent_receipt_event(receipt, ts=ts))

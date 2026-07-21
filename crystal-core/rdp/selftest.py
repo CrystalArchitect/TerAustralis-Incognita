@@ -501,6 +501,89 @@ def test_recording_gate_wrapper():
     assert not ok and broken == 1
 
 
+def test_witnessing_gate_downgrades_allow_when_recording_fails():
+    """Mandatory-witness mode: an allow that cannot be recorded becomes a refusal
+    (fail closed), while a normal allow is recorded and passed through untouched."""
+    from .adapters import witnessing_gate
+
+    class _Result:
+        def __init__(self, decision, allowed, reason):
+            self.decision, self.allowed, self.reason = decision, allowed, reason
+
+    class _AllowGate:
+        def check(self, guest, tool, arguments=None, **kw):
+            return _Result("allow", True, "ok")
+
+    # happy path: the allow stands and is recorded
+    chain = new_chain()
+    gate = witnessing_gate(_AllowGate(), chain, clock=lambda: "2026-07-21T00:00:00Z")
+    r = gate.check("hub-a", "recall", {"q": "x"})
+    assert (r.decision, r.allowed) == ("allow", True)
+    assert len(chain) == 1 and verify(chain) == (True, -1)
+
+    # failure path: a chain that raises on append forces a fail-closed refusal,
+    # and nothing is left recorded
+    class _BrokenChain(list):
+        def append(self, _):
+            raise RuntimeError("disk full")
+
+    broken = _BrokenChain()
+    gate = witnessing_gate(_AllowGate(), broken, clock=lambda: "2026-07-21T00:00:01Z")
+    r = gate.check("hub-a", "recall", {"q": "x"})
+    assert (r.decision, r.allowed) == ("refuse", False)
+    assert "could not be witnessed" in r.reason
+    assert len(broken) == 0
+
+
+def test_record_consent_receipt_proves_grant_then_revoke():
+    """A Starline ConsentReceipt (duck-typed) records as a canonical event; the
+    chain proves the exact grant→revoke order and catches a forged flag."""
+    from .adapters import record_consent_receipt
+
+    class _Receipt:  # the shape of starline.consent.ConsentReceipt, duck-typed
+        def __init__(self, peer_fingerprint, granted, ts, signature=""):
+            self.peer_fingerprint = peer_fingerprint
+            self.granted = granted
+            self.ts = ts
+            self.signature = signature
+
+    chain = new_chain()
+    record_consent_receipt(chain, _Receipt("peer-abc", True, 1000.0, "sig-grant"))
+    record_consent_receipt(chain, _Receipt("peer-abc", False, 1001.0, "sig-revoke"))
+
+    assert [e["decision"] for e in chain] == ["grant", "revoke"]
+    assert [e["granted"] for e in chain] == [True, False]
+    assert chain[0]["signature"] == "sig-grant" and chain[0]["kind"] == "consent.starline.receipt"
+    ok, broken = verify(chain)
+    assert ok and broken == -1
+    # forging the grant flag on the first receipt is caught at index 0
+    tampered = [dict(e) for e in chain]
+    tampered[0] = {**tampered[0], "granted": False, "decision": "revoke"}
+    ok, broken = verify(tampered)
+    assert not ok and broken == 0
+
+
+def test_chain_inspect_reports_intact_and_tampered():
+    """The chain-inspect CLI returns 0 on an intact chain and 1 on a broken one."""
+    from . import run as run_mod
+
+    chain = new_chain()
+    append(chain, {"kind": "note", "text": "one"})
+    append(chain, {"kind": "note", "text": "two"})
+
+    inspect_path = Path(__file__).resolve().parent / "_selftest_chain.json"
+    try:
+        inspect_path.write_text(json.dumps(chain), encoding="utf-8")
+        assert run_mod.chain_inspect(str(inspect_path)) == 0
+
+        tampered = [dict(e) for e in chain]
+        tampered[1]["text"] = "forged"
+        inspect_path.write_text(json.dumps(tampered), encoding="utf-8")
+        assert run_mod.chain_inspect(str(inspect_path)) == 1
+    finally:
+        inspect_path.unlink(missing_ok=True)
+
+
 def test_determinism_across_independent_chains():
     events = [
         {"kind": "grant", "subject": "did:crystal:a", "amount": 12.5},
@@ -544,6 +627,9 @@ def main() -> int:
         test_property_chain_catches_any_single_mutation,
         test_adapter_records_gate_decisions_and_hides_raw_args,
         test_recording_gate_wrapper,
+        test_witnessing_gate_downgrades_allow_when_recording_fails,
+        test_record_consent_receipt_proves_grant_then_revoke,
+        test_chain_inspect_reports_intact_and_tampered,
         test_determinism_across_independent_chains,
     ]
     for t in tests:
