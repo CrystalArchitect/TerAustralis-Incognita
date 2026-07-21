@@ -22,6 +22,11 @@ jobs:
       - name: Build
         run: cd site && npm run build
 
+      - name: Add static demo shells to the Pages artifact
+        run: |
+          cp -r apps/crystal-interface site/build/crystal-interface
+          cp -r apps/vision-web site/build/vision-web
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
