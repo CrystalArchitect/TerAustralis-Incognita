@@ -29,7 +29,7 @@ All four have tests you can run yourself — see the Quick Start in
 
 ## Demo shells (simulated data, not production)
 
-`apps/crystal-vision/` and `apps/vision-web/` run,
+`apps/crystal-interface/` and `apps/vision-web/` run,
 but on simulated data with Authority held. They're interface concepts, not
 production surfaces, and aren't on a path to becoming one without a separate
 decision to build the real data layer underneath them.

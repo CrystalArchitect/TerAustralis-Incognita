@@ -1,10 +1,9 @@
-# Crystal Vision — the operator shell
+# Crystal Interface — the operator shell
 
-The operator-facing **demo shell** for Crystal Vision / Core / Starline Budapest,
-and the Vercel deploy package (`vercel.json`, `BUILD_MANIFEST.json`). This is the
-single canonical copy — a byte-identical duplicate (`crystal-interface`) used to
-live beside it and has been removed. The citizen-facing surface is the separate,
-slimmer [`../vision-web`](../vision-web).
+The operator-facing **demo shell** for Crystal Vision / Core / Starline Budapest.
+A single static copy — open it locally or serve it as static files (no build
+step). The citizen-facing surface is the separate, slimmer
+[`../vision-web`](../vision-web).
 
 **🔭 Crystal universe — which repo is this?**  
 Siblings: **crystalcore** = Crystal Core (protocol pack) · **the-crystal-vision** = The Crystal Vision (codex site + Lumina sovereign companion app) · **teraaustralis-incognita** = TeraAustralis Incognita (narrative + CrystalBridge).  
@@ -16,7 +15,7 @@ this shell makes **no backend calls**. Authority **HOLD**.
 ## Open
 
 ```bash
-cd apps/crystal-vision
+cd apps/crystal-interface
 # any static server, or:
 python -m http.server 8090
 # → http://127.0.0.1:8090
