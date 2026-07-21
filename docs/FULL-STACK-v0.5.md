@@ -2,7 +2,7 @@
 
 **Version:** 0.5.0  
 **Status:** Demo surfaces + mesh stub + TS client — **not mainnet**  
-**Builds on:** v0.3 full-stack gap-fill · v0.4 OpenAPI / Budapest seed · crystal-interface UI
+**Builds on:** v0.3 full-stack gap-fill · v0.4 OpenAPI / Budapest seed · crystal-vision UI
 
 ---
 
@@ -12,7 +12,7 @@ v0.3–0.4 closed the **architecture skeleton**. v0.5 ships **touchable surfaces
 
 | Artifact | Path | Role |
 |----------|------|------|
-| Operator shell | `apps/crystal-interface/` | Twin, mesh, pipeline, econ, receipts |
+| Operator shell | `apps/crystal-vision/` | Twin, mesh, pipeline, econ, receipts |
 | Citizen shell | `apps/vision-web/` | Credits, capability, personal twin, privacy stubs |
 | Mesh stub | `node/mesh/` | libp2p-shaped in-process fabric |
 | TS SDK | `sdk/typescript/` | Client for local agent `:8787` |
@@ -25,7 +25,7 @@ v0.3–0.4 closed the **architecture skeleton**. v0.5 ships **touchable surfaces
 | Brand | Facing |
 |-------|--------|
 | **Crystal Vision** | Users / citizens → `vision-web` |
-| **Crystal Core** | Operators / builders → `crystal-interface` + node agent |
+| **Crystal Core** | Operators / builders → `crystal-vision` + node agent |
 | **TerAustralis + Starline** | Investor / pilot narrative |
 
 Cultural firewall: Seven Sisters / Songline = collaborative metaphor only.
@@ -88,7 +88,7 @@ Authority remains **NONE/HOLD** until audit + governance vote.
 cd apps
 python -m http.server 8090
 # Vision:  http://127.0.0.1:8090/vision-web/
-# Core UI: http://127.0.0.1:8090/crystal-interface/
+# Core UI: http://127.0.0.1:8090/crystal-vision/
 
 # Node agent
 python -m node.agent.server --port 8787

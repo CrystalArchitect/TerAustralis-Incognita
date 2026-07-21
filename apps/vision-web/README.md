@@ -5,7 +5,7 @@ User-facing demo surface for the Crystal stack.
 | Surface | Audience |
 |---------|----------|
 | **This app** (`apps/vision-web`) | Citizens / end users |
-| `apps/crystal-interface` | Operators / builders |
+| `apps/crystal-vision` | Operators / builders |
 | TerAustralis + Starline | Investor / pilot narrative |
 
 **Not production.** Credits, capabilities, and receipts are client-side demo only. Authority **HOLD**. Cultural metaphors (Seven Sisters / Songline) are collaborative framing only — not ownership claims.
@@ -16,9 +16,8 @@ illustrative**, not implemented. Receipts are marked `confirmed` locally; there
 is **no real dual-attestation**. Capability grants and GDPR export/erase are
 client-side stubs. Nothing here calls a server.
 
-**Not a copy of `crystal-interface`.** This is a *separate, slimmer* citizen
-surface. The operator shell (`crystal-interface`) and its byte-identical deploy
-snapshot (`crystal-vision`) are a different codebase.
+**Not a copy of `crystal-vision`.** This is a *separate, slimmer* citizen
+surface. The operator shell (`crystal-vision`) is a different codebase.
 
 ## Open
 
@@ -28,7 +27,7 @@ cd apps/vision-web
 cd ..
 python -m http.server 8090
 # → http://127.0.0.1:8090/vision-web/
-# → http://127.0.0.1:8090/crystal-interface/
+# → http://127.0.0.1:8090/crystal-vision/
 ```
 
 ## Panels
@@ -41,7 +40,7 @@ python -m http.server 8090
 
 ## Related
 
-- Operator UI: `apps/crystal-interface/`
+- Operator UI: `apps/crystal-vision/`
 - Mesh stub: `node/mesh/`
 - Roadmap: `docs/FULL-STACK-v0.5.md`
 
