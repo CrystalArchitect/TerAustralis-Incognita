@@ -432,6 +432,32 @@ def test_property_chain_catches_any_single_mutation():
         assert not ok and broken == i, (i, broken)
 
 
+def test_adapter_records_gate_decisions_and_hides_raw_args():
+    from .adapters import record_gate_decision, EVENT_KIND
+    chain = new_chain()
+    record_gate_decision(
+        chain, guest="hub-a", tool="recall", decision="allow", allowed=True,
+        reason="ok", ts="2026-07-21T00:00:00Z", arguments={"query": "secret-value"},
+    )
+    record_gate_decision(
+        chain, guest="hub-b", tool="teach", decision="refuse", allowed=False,
+        reason="guest not approved", ts="2026-07-21T00:00:01Z", arguments={"text": "hidden"},
+    )
+    assert len(chain) == 2
+    assert chain[0]["kind"] == EVENT_KIND
+    # arguments are recorded as a canonical fingerprint, not the raw payload
+    assert chain[0]["args_fingerprint"] == sha256_hex({"query": "secret-value"})
+    blob = json.dumps(chain)
+    assert "secret-value" not in blob and "hidden" not in blob, "raw args must not be stored"
+    ok, broken = verify(chain)
+    assert ok and broken == -1
+    # flipping a recorded refuse into an allow is caught at that index
+    tampered = [dict(e) for e in chain]
+    tampered[1] = {**tampered[1], "decision": "allow", "allowed": True}
+    ok, broken = verify(tampered)
+    assert not ok and broken == 1
+
+
 def test_determinism_across_independent_chains():
     events = [
         {"kind": "grant", "subject": "did:crystal:a", "amount": 12.5},
@@ -473,6 +499,7 @@ def main() -> int:
         test_property_decide_is_pure_and_deterministic,
         test_property_canonical_is_key_order_independent,
         test_property_chain_catches_any_single_mutation,
+        test_adapter_records_gate_decisions_and_hides_raw_args,
         test_determinism_across_independent_chains,
     ]
     for t in tests:
