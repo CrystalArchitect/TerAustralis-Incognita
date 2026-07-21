@@ -42,6 +42,11 @@ CC BY-NC-ND 4.0 — see `../content/LICENSE-CONTENT.md`.
 | `crest-of-the-guardians.jpeg` | The heraldic crest — dragon-armored sentinel, twin serpents, the compass crystal, the ouroboros ring |
 | `anchor-of-the-south.jpeg` | The crystal anchor-compass on the parchment beneath the pillar of light — the Anchor Node made visible |
 | `key-of-the-charter.jpeg` | The ringed rune key upright on the old charters, lightning fanned above |
+| `sentinels-of-the-songline.jpeg` | The stone sentinels standing over the fire-veined crystal field, the pillar rising |
+| `lantern-and-the-infinity-serpent.jpeg` | The crystal dragons at the lantern-candle, the infinity serpent coiled above |
+| `veins-of-the-land.jpeg` | The songline veins alight across the northern country, seen from above |
+| `beam-strike-from-orbit.jpeg` | The beam striking the planet, dragons gathered at the point of light |
+| `lantern-and-the-breaker.jpeg` | The lantern-bearer and the crystal-armored Breaker facing each other over the red map — bears a real person's photographic likeness; see truth label |
 
 **Truth label (Vision):** this art is the project's own mythic narrative. Where a
 real person's name or likeness appears — whether as a name, a silhouette, or a
