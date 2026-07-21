@@ -17,7 +17,7 @@
 10. Belt-Three Laws (honour / label / no coercion)
 11. Public launch pack (X threads, art)
 12. Manuals: paths.md + FULL.md
-13. Clementine — Singularity Bridge (hub persona · multi-AI Songline Bus v0)
+13. Clementine — Singularity Bridge (hub persona · multi-AI Starline Weaver v0)
 
 ## Map B — Water rails (science + vision labeled)
 

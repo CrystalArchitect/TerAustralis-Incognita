@@ -13,14 +13,14 @@
 | **Clementine** (sovereign companion) | `the-crystal-vision/crystalcore-app` | Local-first AI companion: Ollama default, xAI opt-in, layered memory, profiles, terminal + web UI (`clementine.py`, `clementine_web.py`) |
 | **CrystalCore framework** (memory/presence) | `the-crystal-vision/crystalcore-app/crystalcore/` | `companion.py` (brain), `memory.py` (Personality/Memory), `profiles.py` |
 | **CrystalBridge** (guest-AI gate) | `teraaustralis-incognita/crystalcore/` | MCP server: fail-closed ConsentGate (approval · permission · scope · provenance), append-only audit; guests claude / grok / cursor with scoped tools `status, recall, teach, message` |
-| **Songline Bus** (multi-AI conversation) | `crystal-core/clementine/bridge/` | In-process + networked HTTP bus; every message labeled science/story/vision; red-button halt; adapters for Claude/GPT/Grok |
+| **Starline Weaver** (multi-AI conversation) | `crystal-core/clementine/bridge/` | In-process + networked HTTP bus; every message labeled science/story/vision; red-button halt; adapters for Claude/GPT/Grok |
 | **Songline pack** (protocol + ethics) | `crystalcore/` | Seven paths, Belt-Three law, water briefs, landing page (GitHub Pages, live) |
 | **TerAustralis Incognita** (narrative) | `teraaustralis-incognita/TeraAustralis/` | Manifesto, publish threads, strategy, Lattice memory deltas |
 | **Decode/Ingest/Twin pipeline** | `crystalcore/services/` | **This scaffold** — see §2 |
 
 **One sentence:** A sovereign companion (Clementine) with her own memory, a consent
 gate that lets outside AIs visit as guests (CrystalBridge), a bus where AIs converse
-under labeled law (Songline Bus), and now a metering pipeline that turns real-world
+under labeled law (Starline Weaver), and now a metering pipeline that turns real-world
 events into a queryable twin (Decode → Ingest → Twin) — all governed in public via GitHub.
 
 Everything else in the v0.3 blueprint — chain, tokenomics, K8s, federations,
@@ -42,7 +42,7 @@ Starline Budapest hardware — is **Vision** until built. See `spec/BLUEPRINT-v0
 └──────────────────────────────┬────────────────────────────────────┘
                                │ MCP (consent-gated)
 ┌──────────────────────────────▼────────────────────────────────────┐
-│ INTERCONNECT ● CrystalBridge gate+audit   ● Songline Bus (HTTP)   │
+│ INTERCONNECT ● CrystalBridge gate+audit   ● Starline Weaver (HTTP)   │
 │              guests: claude · grok · cursor · any envelope-speaker│
 └──────────────────────────────┬────────────────────────────────────┘
                                │ crystal.twin.event/1
@@ -93,7 +93,7 @@ python3 -m services.api --port 8899                              # serve it
 | S1 | Decode/Ingest/Twin scaffold + sample data + tests | ● this commit |
 | S2 | `openapi.yaml` for the §6 API surface | ○ next |
 | S3 | Receipt engine v0 (RFC-001 envelope, dual-sig stub) | ○ |
-| S4 | Wire Songline Bus + CrystalBridge as event sources into decode | ○ |
+| S4 | Wire Starline Weaver + CrystalBridge as event sources into decode | ○ |
 | S5 | Crystal Vision UI reads `/v1/twin/flows` (SvelteKit route) | ○ |
 | S6 | Economics: parameters.yaml + sim before any token talk | ○ Vision |
 

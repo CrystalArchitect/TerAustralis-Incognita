@@ -14,7 +14,7 @@ that detail, it points to it.
 - **Lumina** (`apps/lumina/`) — local-first AI companion, Ollama-backed.
   Terminal, Flask API, Svelte webapp, browser voice. Run it: `cd apps/lumina
   && python3 lumina.py`.
-- **The Songline Bus** (`crystal-core/clementine/bridge/`) — multi-AI message
+- **The Starline Weaver** (`crystal-core/clementine/bridge/`) — multi-AI message
   bus with the Belt-Three law enforced in code, not just convention. Self-test:
   `python3 -m clementine.bridge.selftest`.
 - **Starline** (`crystal-core/starline/`) — peer-to-peer consent-gated memory
@@ -80,7 +80,7 @@ always in `git log`.
   a vulnerability.
 - [mythos/content/MILESTONES.md](mythos/content/MILESTONES.md) — Lumina's
   detailed weekly build plan.
-- `crystal-core/spec/` — architecture and protocol specs for the Songline Bus
+- `crystal-core/spec/` — architecture and protocol specs for the Starline Weaver
   and Starline.
 
 *Non Solus.*

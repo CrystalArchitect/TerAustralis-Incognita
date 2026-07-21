@@ -1,4 +1,4 @@
-"""Boot Clementine — the Songline Bus as a live service.
+"""Boot Clementine — the Starline Weaver as a live service.
 
     python3 -m clementine.bridge.server --port 8777 --topic "first water"
 
@@ -101,7 +101,7 @@ class BusState:
 
     def markdown(self) -> str:
         lines = [
-            "# Songline Bus transcript (networked)",
+            "# Starline Weaver transcript (networked)",
             "",
             f"**Topic:** {self.topic}  ",
             f"**Agents:** {', '.join(self.agents) or '(none joined)'}  ",
@@ -179,7 +179,7 @@ def make_handler(state: BusState):
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="Boot Clementine (Songline Bus server)")
+    parser = argparse.ArgumentParser(description="Boot Clementine (Starline Weaver server)")
     parser.add_argument("--port", type=int, default=8777)
     parser.add_argument("--host", default="127.0.0.1")
     parser.add_argument("--topic", default="first water")

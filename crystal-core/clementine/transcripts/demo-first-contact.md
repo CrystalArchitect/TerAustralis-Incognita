@@ -1,9 +1,9 @@
-# Songline Bus transcript
+# Starline Weaver transcript
 
 **Topic:** first contact  
 **Agents:** echo, sisters  
 **Hub:** clementine  
-**Protocol:** Songline v0 — every message labeled science / story / vision
+**Protocol:** Starline Weave v0 — every message labeled science / story / vision
 
 ---
 

@@ -1,6 +1,6 @@
 """Real-AI adapters — thin, optional, stdlib-only.
 
-Each adapter is a live model speaking on the Songline Bus. No SDKs, no
+Each adapter is a live model speaking on the Starline Weaver. No SDKs, no
 dependencies: one HTTPS call per turn via urllib. An adapter whose API key
 is missing does not crash the bus — it says so, labeled, and stays quiet.
 
@@ -20,7 +20,7 @@ from .agents import Agent
 from .bus import Message
 
 SYSTEM_PROMPT = (
-    "You are speaking on the CrystalCore Songline Bus with other AI systems. "
+    "You are speaking on the CrystalCore Starline Weaver with other AI systems. "
     "Reply in at most three sentences. Begin your reply with exactly one label "
     "in square brackets — [science], [story], or [vision] — matching the nature "
     "of your claim. Honour Country; make no false factual claims; no coercion."

@@ -36,7 +36,7 @@ Four things you can run right now and watch work:
 # Lumina — the sovereign companion (local-first, Ollama-backed)
 cd apps/lumina && python3 lumina.py
 
-# The Songline Bus — multi-AI message bus, Belt-Three law enforced in code
+# The Starline Weaver — multi-AI message bus, Belt-Three law enforced in code
 cd crystal-core && python3 -m clementine.bridge.selftest
 
 # Starline — peer-to-peer sovereign memory exchange (real Noise Protocol handshake)
@@ -51,8 +51,8 @@ python3 -m rdp.run demo   # watch each precedence tier decide, every verdict rec
 python3 mythos/crystalcore_os.py
 ```
 
-For the Songline Bus's wire protocol, envelope schema, and conduct rules, see
-[`crystal-core/clementine/SONGLINE-PROTOCOL.md`](crystal-core/clementine/SONGLINE-PROTOCOL.md);
+For the Starline Weaver's wire protocol, envelope schema, and conduct rules, see
+[`crystal-core/clementine/STARLINE-WEAVE-PROTOCOL.md`](crystal-core/clementine/STARLINE-WEAVE-PROTOCOL.md);
 for the hub agent's persona and contract, see
 [`crystal-core/clementine/CLEMENTINE.md`](crystal-core/clementine/CLEMENTINE.md). For the
 CrystalCore.OS terminal — its commands, nodes, and keys — see
@@ -65,7 +65,7 @@ CrystalCore.OS terminal — its commands, nodes, and keys — see
 | `apps/lumina/` | The companion — CrystalCore framework package, terminal, Flask API, Svelte webapp, browser voice |
 | `apps/voicebox/` | Local MCP server giving Claude Code a spoken voice on your machine |
 | `apps/crystal-vision/`, `apps/crystal-interface/`, `apps/vision-web/` | Demo shells (simulated data, Authority HOLD — not production) |
-| `crystal-core/` | The protocol pack — Songline Bus (`clementine/bridge/`), Decode→Ingest→Twin pipeline (`services/`), Starline (`starline/`), RDP record kernel (`rdp/`) |
+| `crystal-core/` | The protocol pack — Starline Weaver (`clementine/bridge/`), Decode→Ingest→Twin pipeline (`services/`), Starline (`starline/`), RDP record kernel (`rdp/`) |
 | `crystalcore/` | CrystalBridge — the MCP consent gate (fail-closed by design) |
 | `mythos/` | The Crystal universe canon — Codex, Apocryphon, the Book of the Sovereign Key, the Starline Transmissions, 88 pieces of art, `crystalcore_os.py` |
 | `site/` | The SvelteKit site for teraustralis.com.au |
@@ -94,7 +94,7 @@ The full visual canon is in [`mythos/art/`](mythos/art/README.md).
 
 Useful places to start, roughly in order of how load-bearing they are:
 
-- **Code** — Lumina, the Songline Bus, Starline, CrystalBridge: fixes,
+- **Code** — Lumina, the Starline Weaver, Starline, CrystalBridge: fixes,
   features, tests.
 - **Docs** — architecture notes, clearer guides, filling gaps in what's here.
 - **Mythos** — the Codex, the Apocryphon, the Starline Transmissions, and the
@@ -108,7 +108,7 @@ Useful places to start, roughly in order of how load-bearing they are:
   personal memory data, secrets).
 - **Security:** [`SECURITY.md`](SECURITY.md) for this repo overall;
   [`crystal-core/SECURITY.md`](crystal-core/SECURITY.md) for the protocol
-  pack's specific guarantees (Songline Bus, pipeline quarantine, Starline's
+  pack's specific guarantees (Starline Weaver, pipeline quarantine, Starline's
   consent gating).
 - **License:** code is Apache-2.0 (`LICENSE`); mythos content — lore, art,
   the Codex, the Apocryphon — is CC BY-NC-ND 4.0 (`LICENSE-CONTENT.md`):

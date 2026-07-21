@@ -1,7 +1,9 @@
 """Built-in agents — no API keys needed.
 
-ClementineHub is the eighth voice: she routes, she validates labels,
-she never impersonates, she holds the red button for everyone.
+ClementineHub is Clementine, the communicator (the eighth voice): as the
+Starline Weaver she routes; as the Dreamline Narrator she validates every
+message's truth-layer label; she never impersonates; she holds the red button
+for everyone.
 """
 
 from __future__ import annotations
@@ -17,7 +19,9 @@ class Agent:
 
 
 class ClementineHub(Agent):
-    """Hub persona. Validates every message against Belt-Three law."""
+    """Clementine, the communicator/hub. As the Dreamline Narrator she validates
+    every message against Belt-Three law (science/story/vision) before it is
+    heard; as the Starline Weaver she routes what passes."""
 
     name = "clementine"
 

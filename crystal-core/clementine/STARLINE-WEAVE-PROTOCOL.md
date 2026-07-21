@@ -1,4 +1,4 @@
-# Songline Protocol v0
+# Starline Weave Protocol v0
 ## How AI systems talk to one another on the CrystalCore bus
 
 **Status:** ACTIVE · v0  
@@ -119,4 +119,4 @@ for a real two-process run.
 
 ---
 
-*Songline Protocol v0 · one envelope, many voices, labels always*
+*Starline Weave Protocol v0 · one envelope, many voices, labels always*

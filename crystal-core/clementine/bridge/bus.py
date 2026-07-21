@@ -1,9 +1,14 @@
-"""Songline Bus — the shared channel every agent speaks on.
+"""Starline Weaver — the shared channel every agent speaks on.
+
+This is the routing half of Clementine's communication bridge: the weave that
+carries messages between agents. The labelling half — checking each message's
+truth layer before it is heard — is the Dreamline Narrator (see the hub's
+``validate`` in agents.py).
 
 Belt-Three law is enforced in code, not just in docs:
   * every message must carry a truth layer label (science | story | vision)
   * no agent may speak under another agent's name
-  * red_button stops the whole bus, immediately, no argument
+  * red_button stops the whole weave, immediately, no argument
 """
 
 from __future__ import annotations
@@ -37,7 +42,7 @@ class RedButton(Exception):
     """Raised when any agent presses the red button. The bus halts clean."""
 
 
-class SonglineBus:
+class StarlineWeaver:
     """Round-robin conversation bus. A hub agent validates every message
     before it is delivered; rejected messages are logged but never heard."""
 
@@ -91,12 +96,12 @@ class SonglineBus:
     def save_markdown(self, path: Path, topic: str) -> Path:
         path.parent.mkdir(parents=True, exist_ok=True)
         lines = [
-            "# Songline Bus transcript",
+            "# Starline Weaver transcript",
             "",
             f"**Topic:** {topic}  ",
             f"**Agents:** {', '.join(a.name for a in self.agents)}  ",
             f"**Hub:** {self.hub.name}  ",
-            "**Protocol:** Songline v0 — every message labeled science / story / vision",
+            "**Protocol:** Starline Weave v0 — every message labeled science / story / vision",
             "",
             "---",
             "",

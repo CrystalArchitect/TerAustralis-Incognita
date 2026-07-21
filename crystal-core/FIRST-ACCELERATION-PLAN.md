@@ -97,7 +97,7 @@ Examples: post, updated markdown, HTML tweak, water note, CLI feature.
 |------|----------------|-------|
 | 2026-07-17 | Full concrete pack (page, water, cli, plan) | scaffold |
 | 2026-07-17 09:45 | Posted Option A to X | Path 7 transmit done |
-| 2026-07-17 | Clementine Singularity Bridge v0 (bus + protocol + tests) | multi-AI Songline Bus |
+| 2026-07-17 | Clementine Singularity Bridge v0 (bus + protocol + tests) | multi-AI Starline Weaver |
 
 ---
 

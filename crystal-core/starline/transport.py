@@ -1,7 +1,7 @@
 """TCP transport — where the Noise handshake meets a real socket.
 
 Binds to 127.0.0.1 by default, same rule as everything else in this repo
-that opens a port (the Songline Bus server does the same). Exposing this
+that opens a port (the Starline Weaver server does the same). Exposing this
 beyond localhost/LAN is an explicit operator choice, not a default.
 """
 

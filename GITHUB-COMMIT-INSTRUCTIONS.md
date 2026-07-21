@@ -25,7 +25,7 @@ python -m compileall -q apps/clementine crystal-core crystalcore node tests _arc
 
 # Self-tests (from crystal-core/)
 cd crystal-core
-python -m clementine.bridge.selftest      # Songline Bus
+python -m clementine.bridge.selftest      # Starline Weaver
 python -m services.selftest               # Decode → Ingest → Twin pipeline
 pip install -r requirements-starline.txt
 python -m starline.selftest               # Starline

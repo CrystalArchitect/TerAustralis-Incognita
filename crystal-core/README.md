@@ -3,7 +3,7 @@
 Creative vision lattice and protocol pack: **Seven Sisters Songline**, water care rails, sky anchors, and local tools.
 
 **🔭 Crystal universe — which repo is this?**  
-This is **Crystal Core** — the protocol pack: Seven Sisters Songline, Songline Bus (multi-AI), Decode→Ingest→Twin pipeline, specs.  
+This is **Crystal Core** — the protocol pack: Seven Sisters Songline, Starline Weaver (multi-AI), Decode→Ingest→Twin pipeline, specs.  
 Siblings: **the-crystal-vision** = The Crystal Vision (codex site + Clementine sovereign companion app) · **crystal-vision** = Crystal Vision Interface (static demo shell, Vercel) · **teraaustralis-incognita** = TeraAustralis Incognita (narrative + CrystalBridge MCP consent gate).  
 **License:** Apache-2.0 — see `LICENSE`
 
@@ -66,7 +66,7 @@ python3 -m clementine.bridge.server --port 8777 --topic "first water"
 python3 -m clementine.bridge.remote --agent sisters --server http://127.0.0.1:8777
 ```
 
-See `clementine/SONGLINE-PROTOCOL.md` (the envelope + law) and `clementine/CLEMENTINE.md`
+See `clementine/STARLINE-WEAVE-PROTOCOL.md` (the envelope + law) and `clementine/CLEMENTINE.md`
 (the hub persona). Live models join via env keys: `ANTHROPIC_API_KEY`, `OPENAI_API_KEY`, `XAI_API_KEY`.
 
 ## Crystal Core stack — Decode → Ingest → Twin

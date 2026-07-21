@@ -1,4 +1,4 @@
-"""Self-test for the Songline Bus — proves the law is real, not decorative.
+"""Self-test for the Starline Weaver — proves the law is real, not decorative.
 
     python3 -m clementine.bridge.selftest
 """
@@ -6,11 +6,11 @@
 from __future__ import annotations
 
 from .agents import ClementineHub, EchoAgent, RedButtonAgent, SevenSistersAgent, UnlabeledAgent
-from .bus import SonglineBus
+from .bus import StarlineWeaver
 
 
 def test_conversation_flows():
-    bus = SonglineBus(ClementineHub(), [EchoAgent(), SevenSistersAgent()])
+    bus = StarlineWeaver(ClementineHub(), [EchoAgent(), SevenSistersAgent()])
     transcript = bus.run("first water", 4)
     delivered = [e for e in transcript if e["delivered"]]
     assert len(delivered) == 1 + 4 * 2, "opening + 2 agents x 4 turns should all deliver"
@@ -18,7 +18,7 @@ def test_conversation_flows():
 
 
 def test_unlabeled_speech_is_rejected():
-    bus = SonglineBus(ClementineHub(), [UnlabeledAgent()])
+    bus = StarlineWeaver(ClementineHub(), [UnlabeledAgent()])
     transcript = bus.run("drift check", 3)
     rejected = [e for e in transcript if not e["delivered"]]
     assert len(rejected) == 3, "every unlabeled message must be rejected"
@@ -26,7 +26,7 @@ def test_unlabeled_speech_is_rejected():
 
 
 def test_red_button_halts_bus():
-    bus = SonglineBus(ClementineHub(), [RedButtonAgent(after=2), SevenSistersAgent()])
+    bus = StarlineWeaver(ClementineHub(), [RedButtonAgent(after=2), SevenSistersAgent()])
     transcript = bus.run("halt check", 10)
     assert transcript[-1]["content"].startswith("RED BUTTON"), "bus must close with a halt notice"
     cycles = [e["cycle"] for e in transcript if e["cycle"] > 0]
