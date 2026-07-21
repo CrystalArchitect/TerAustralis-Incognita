@@ -12,7 +12,9 @@ itself can't drift underneath us.
 
 from __future__ import annotations
 
+import json
 from decimal import Decimal
+from pathlib import Path
 
 from .canonical import (
     MAX_MAGNITUDE,
@@ -136,6 +138,20 @@ def test_chain_verifies_and_detects_tampering():
     assert not ok and broken == 0
 
 
+def test_conformance_vectors():
+    """vectors.json is the language-neutral interop contract — every entry must
+    match the code exactly, so the published file can never drift from it."""
+    path = Path(__file__).with_name("vectors.json")
+    doc = json.loads(path.read_text(encoding="utf-8"))
+    vectors = doc["vectors"]
+    assert vectors, "vectors.json must not be empty"
+    for v in vectors:
+        obj = json.loads(v["input_json"], parse_float=Decimal, parse_int=int)
+        got = canonical_serialize(obj)
+        assert got == v["canonical"], (v["note"], got, v["canonical"])
+        assert sha256_hex(got) == v["sha256"], (v["note"], sha256_hex(got))
+
+
 def test_determinism_across_independent_chains():
     events = [
         {"kind": "grant", "subject": "did:crystal:a", "amount": 12.5},
@@ -162,6 +178,7 @@ def main() -> int:
         test_genesis_link,
         test_append_does_not_mutate_caller_and_ignores_incoming_hash,
         test_chain_verifies_and_detects_tampering,
+        test_conformance_vectors,
         test_determinism_across_independent_chains,
     ]
     for t in tests:
