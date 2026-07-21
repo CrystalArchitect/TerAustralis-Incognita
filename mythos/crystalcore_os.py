@@ -107,16 +107,19 @@ class CrystalCore:
     def map(self):
         print("""
                         [PURPOSE CORE NEXUS]
-                                   ↑
-          ┌────────────────────────┼────────────────────────┐
-          │                        │                        │
-   [EARTH NODE]              [MARS REDOUBT]           [ALPHA CENTAURI]
-          │                        │                        │
-          └──────────┬─────────────┴─────────────┬──────────┘
-                     │                           │
-              [CRYSTAL REVENANT HUB]      [OUTER STARLINE ROUTES]
-                     │
-              (Zero-g festivals & lattice music)
+                       (The Quote burns here)
+                                  ↑
+          ┌───────────────────────┼───────────────────────┐
+          │                       │                       │
+   [EARTH NODE]            [MARS REDOUBT]         [ALPHA CENTAURI]
+   (Homeworld memory)      (First colony)         (Frontier edge)
+          │                       │                       │
+          └───────────┬───────────┴───────────┬───────────┘
+                      │                       │
+               [CRYSTAL REVENANT HUB]
+               (Zero-g music & festivals)
+
+   Chart: mythos/art/starline-network-year-3000.jpeg
 """)
 
     def status(self):

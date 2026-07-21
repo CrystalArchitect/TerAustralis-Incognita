@@ -52,6 +52,7 @@ CC BY-NC-ND 4.0 — see `../content/LICENSE-CONTENT.md`.
 | `light-bearer-over-the-mesh.jpeg` | The star-woven light-bearer above the world, the mesh of hands reaching up to meet her |
 | `song-of-the-lattice.jpeg` | The lattice singing — staves of light pouring from her voice into the weave |
 | `dawn-of-the-settlement.jpeg` | Dawn over the red-dirt settlement — desks and their workers, solar fields, rockets rising, crystal coins in the sky (Vision-layer imagery; the project holds no token) |
+| `starline-network-year-3000.jpeg` | The Starline Network, Year 3000 — Earth Node, Mars Redoubt, Alpha Centauri Outpost, Crystal Revenant Hub, the Purpose quote burning at the Nexus (rendered by the `map` command in `../crystalcore_os.py`) |
 
 **Truth label (Vision):** this art is the project's own mythic narrative. Where a
 real person's name or likeness appears — whether as a name, a silhouette, or a
