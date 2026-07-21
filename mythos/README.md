@@ -43,6 +43,7 @@ This is the beginning of **TerAustralis Incognita** — Australia's contribution
 
 All documents live in [`content/`](content/) and are rendered in-app by the lightweight markdown viewer at `/docs`.
 
+- [NAMES.md](NAMES.md) — The names and the map/traveller principle: what Lumina, Clementine, the Starline Weaver, the Truthline Narrator, and the Dreamline Train are, and the code each points at
 - [content/VISION.md](content/VISION.md) — The plain-language project summary
 - [content/ARCHITECTURE.md](content/ARCHITECTURE.md) — The system design overview and implementation status
 - [content/LUMINA.md](content/LUMINA.md) — The sovereign AI companion: overview, build status, and how to run her
