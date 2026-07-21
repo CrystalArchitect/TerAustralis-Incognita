@@ -47,6 +47,11 @@ CC BY-NC-ND 4.0 — see `../content/LICENSE-CONTENT.md`.
 | `veins-of-the-land.jpeg` | The songline veins alight across the northern country, seen from above |
 | `beam-strike-from-orbit.jpeg` | The beam striking the planet, dragons gathered at the point of light |
 | `lantern-and-the-breaker.jpeg` | The lantern-bearer and the crystal-armored Breaker facing each other over the red map — bears a real person's photographic likeness; see truth label |
+| `crystalcore-os-upgrade.jpeg` | The CrystalCore.OS crystal tablet — Decoding Core Protocols, Ingesting User Directives, System Upgrade v13.0 |
+| `crystalcore-os-upgrade-tilt.jpeg` | The upgrade tablet, angled render |
+| `light-bearer-over-the-mesh.jpeg` | The star-woven light-bearer above the world, the mesh of hands reaching up to meet her |
+| `song-of-the-lattice.jpeg` | The lattice singing — staves of light pouring from her voice into the weave |
+| `dawn-of-the-settlement.jpeg` | Dawn over the red-dirt settlement — desks and their workers, solar fields, rockets rising, crystal coins in the sky (Vision-layer imagery; the project holds no token) |
 
 **Truth label (Vision):** this art is the project's own mythic narrative. Where a
 real person's name or likeness appears — whether as a name, a silhouette, or a
