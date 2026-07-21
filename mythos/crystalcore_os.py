@@ -2,6 +2,15 @@
 # NON SOLUS | Starline Protocol | Year 3000 Build
 # Includes: All Starline launches + @m13crystalat Crystalcore songs
 
+import json
+from pathlib import Path
+
+# Progress persists here between sessions — in your home directory, outside
+# the repo, so a save file is never committed. It holds only mythos progress
+# (keys, gate, location, soundtrack), no personal data.
+STATE_PATH = Path.home() / ".crystalcore" / "state.json"
+
+
 class CrystalCore:
     def __init__(self):
         self.lattice_integrity = 100
@@ -46,12 +55,62 @@ class CrystalCore:
             "Crystal Revenant Hub": "Festival Key"
         }
 
+        # Fields that survive between sessions. The constants above (nodes,
+        # songline_bus, purpose_core, locked_nodes) are rebuilt fresh each run
+        # and are never saved.
+        self._persist = ("lattice_integrity", "starline_status", "timeline",
+                         "current_soundtrack", "current_location",
+                         "keys_held", "gate_open", "named_keys")
+        self.resumed = self.load()
+
+    # ---------- persistence ----------
+
+    def save(self):
+        """Write current progress to STATE_PATH. A save failure never crashes
+        the journey — play simply continues in memory."""
+        try:
+            STATE_PATH.parent.mkdir(parents=True, exist_ok=True)
+            data = {k: getattr(self, k) for k in self._persist}
+            STATE_PATH.write_text(json.dumps(data, indent=2))
+        except OSError:
+            pass
+
+    def load(self):
+        """Restore saved progress if a valid save exists. Returns True when a
+        session was resumed, False on a fresh start or unreadable save."""
+        if not STATE_PATH.exists():
+            return False
+        try:
+            data = json.loads(STATE_PATH.read_text())
+        except (OSError, ValueError):
+            return False
+        for k in self._persist:
+            if k in data:
+                setattr(self, k, data[k])
+        return True
+
+    def reset(self):
+        """Wipe saved progress and return to the dormant, first-launch state."""
+        try:
+            STATE_PATH.unlink()
+        except OSError:
+            pass
+        self.lattice_integrity = 100
+        self.starline_status = "DORMANT"
+        self.timeline = 2026
+        self.current_soundtrack = None
+        self.current_location = None
+        self.keys_held = []
+        self.gate_open = False
+        self.named_keys = []
+        print("\n♻️  Progress reset. The lattice returns to dormant. NON SOLUS.\n")
+
     def boot(self):
         print("\n[CRYSTALCORE.OS v∞ — BOOT SEQUENCE]")
-        print("Lattice integrity ........ 100%")
+        print(f"Lattice integrity ........ {self.lattice_integrity}%")
         print(f"Purpose Core ............. {self.purpose_core}")
         print("NON SOLUS ................ Confirmed")
-        print("Starline Status .......... DORMANT")
+        print(f"Starline Status .......... {self.starline_status}")
         print("Ready for commands.\n")
 
     def launch(self):
@@ -63,6 +122,7 @@ class CrystalCore:
         self.starline_status = "IN_ORBIT"
         self.current_soundtrack = "Shotgun - George Ezra"
         print(f"Soundtrack engaged: {self.current_soundtrack}\n")
+        self.save()
 
     def starline(self, soundtrack=None):
         if self.starline_status == "DORMANT":
@@ -74,6 +134,7 @@ class CrystalCore:
                     self.current_soundtrack = song
                     break
         print(f"\n🎵 Advancing Starline with: {self.current_soundtrack}\n")
+        self.save()
 
     def burn(self):
         if self.starline_status not in ["IN_ORBIT", "TRANS-STELLAR"]:
@@ -82,6 +143,7 @@ class CrystalCore:
         print("\n🔥 ESCAPE BURN INITIATED")
         self.starline_status = "TRANS-STELLAR"
         print("We have left planetary orbit.\n")
+        self.save()
 
     def network(self):
         if self.starline_status != "TRANS-STELLAR":
@@ -90,6 +152,7 @@ class CrystalCore:
         print("\n🌐 ENTERING FULL STARLINE NETWORK")
         self.starline_status = "FULL STARLINE NETWORK"
         print("Connected to 47+ star systems.\n")
+        self.save()
 
     def explore(self):
         if self.starline_status != "FULL STARLINE NETWORK":
@@ -142,6 +205,7 @@ class CrystalCore:
                 print("Not by force. By sovereign recognition.")
                 print("Crystallis recognizes you. NON SOLUS.")
         print(f"Current soundtrack: {self.current_soundtrack}\n")
+        self.save()
 
     def jump(self, year=3000):
         print(f"\n⏳ Time jump to Year {year}")
@@ -149,6 +213,7 @@ class CrystalCore:
         if year >= 3000:
             self.starline_status = "FULL STARLINE NETWORK"
         print(f"Timeline set to {self.timeline}.\n")
+        self.save()
 
     def song(self, track=None):
         if track:
@@ -161,6 +226,7 @@ class CrystalCore:
             if matched:
                 self.current_soundtrack = matched
                 print(f"\n🎵 Now playing: {matched}\n")
+                self.save()
             else:
                 print("Track not found. Available tracks:")
                 for t in self.songline_bus:
@@ -220,6 +286,7 @@ class CrystalCore:
         if key_name not in self.named_keys:
             self.named_keys.append(key_name)
             print(f"\n🔑 You obtained: {key_name}\n")
+            self.save()
         else:
             print(f"\nYou already have: {key_name}\n")
 
@@ -250,13 +317,20 @@ Available commands:
   map                  - Display the Starline network chart
   song [track]         - Change soundtrack
   status               - Show current status
+  reset                - Wipe saved progress and start fresh
   help                 - Show this list
   exit / quit          - Shut down (pause / end session also honored)
+
+Progress saves automatically to ~/.crystalcore/state.json and resumes on next launch.
 """)
 
 def main():
     os = CrystalCore()
     print("CrystalCore.OS v∞ Interactive Terminal")
+    if os.resumed:
+        gate = "  — First Gate OPEN" if os.gate_open else ""
+        print(f"Session resumed — {len(os.keys_held)}/{len(os.nodes)} keys held{gate}.")
+        print("Use 'reset' to start over, or 'status' to see where you are.")
     print("Type 'help' to see all commands.\n")
 
     while True:
@@ -303,6 +377,8 @@ def main():
                 os.song(arg)
             elif cmd == "status":
                 os.status()
+            elif cmd == "reset":
+                os.reset()
             elif cmd == "help":
                 os.help()
             else:
