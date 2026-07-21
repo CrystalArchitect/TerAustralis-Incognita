@@ -1,7 +1,7 @@
 """Built-in agents — no API keys needed.
 
 ClementineHub is Clementine, the communicator (the eighth voice): as the
-Starline Weaver she routes; as the Dreamline Narrator she validates every
+Starline Weaver she routes; as the Truthline Narrator she validates every
 message's truth-layer label; she never impersonates; she holds the red button
 for everyone.
 """
@@ -19,7 +19,7 @@ class Agent:
 
 
 class ClementineHub(Agent):
-    """Clementine, the communicator/hub. As the Dreamline Narrator she validates
+    """Clementine, the communicator/hub. As the Truthline Narrator she validates
     every message against Belt-Three law (science/story/vision) before it is
     heard; as the Starline Weaver she routes what passes."""
 

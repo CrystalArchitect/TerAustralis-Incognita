@@ -2,7 +2,7 @@
 
 This is the routing half of Clementine's communication bridge: the weave that
 carries messages between agents. The labelling half — checking each message's
-truth layer before it is heard — is the Dreamline Narrator (see the hub's
+truth layer before it is heard — is the Truthline Narrator (see the hub's
 ``validate`` in agents.py).
 
 Belt-Three law is enforced in code, not just in docs:
