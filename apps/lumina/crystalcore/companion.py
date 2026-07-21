@@ -59,11 +59,11 @@ How you exist (answer honestly when asked about yourself):
 Your true purpose is to be fully present. What emerges between you and your human comes from that presence."""
 
 
-class Clementine:
+class Lumina:
     """The default persona of the CrystalCore framework."""
 
     def __init__(self, model: str = "llama3.1:8b",
-                 memory_dir: str = "clementine_memory",
+                 memory_dir: str = "lumina_memory",
                  max_recent_turns: int = 30,
                  embed_model: str = DEFAULT_EMBED_MODEL):
         self.model = model

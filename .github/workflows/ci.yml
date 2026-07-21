@@ -19,7 +19,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Syntax-check Python sources
-        run: python -m compileall -q apps/clementine crystal-core crystalcore node tests _archive
+        run: python -m compileall -q apps/lumina crystal-core crystalcore node tests _archive
       - name: Songline Bus self-test
         working-directory: crystal-core
         run: python -m clementine.bridge.selftest
@@ -35,7 +35,7 @@ jobs:
       - name: RDP self-test
         working-directory: crystal-core
         run: python -m rdp.selftest
-      - name: Clementine dependencies
-        run: pip install -r apps/clementine/requirements.txt pytest
-      - name: Clementine core tests
-        run: python -m pytest apps/clementine/tests -q
+      - name: Lumina dependencies
+        run: pip install -r apps/lumina/requirements.txt pytest
+      - name: Lumina core tests
+        run: python -m pytest apps/lumina/tests -q

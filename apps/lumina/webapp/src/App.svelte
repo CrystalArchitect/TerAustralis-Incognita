@@ -4,7 +4,7 @@
   import Senses from './lib/Senses.svelte';
 
   let presence = $state('idle'); // idle | thinking | speaking
-  let name = $state('Clementine');
+  let name = $state('Lumina');
   let model = $state('');
   let profile = $state('');
   let online = $state(null); // null=checking, true, false
@@ -14,7 +14,7 @@
       const res = await fetch('/api/status');
       if (!res.ok) throw new Error();
       const data = await res.json();
-      name = data.name || 'Clementine';
+      name = data.name || 'Lumina';
       model = data.model || '';
       profile = data.profile || '';
       online = true;

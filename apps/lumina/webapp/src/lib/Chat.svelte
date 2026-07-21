@@ -2,7 +2,7 @@
   /** Streaming chat with the local model via the Flask API. */
   import { voiceSupported, listVoices, onVoicesChanged, speak, stopSpeaking } from './voice.js';
 
-  let { name = 'Clementine', onStateChange = () => {} } = $props();
+  let { name = 'Lumina', onStateChange = () => {} } = $props();
 
   let messages = $state([]);
   let draft = $state('');
@@ -10,21 +10,21 @@
   let logEl;
   let controller = null;
 
-  let voiceOn = $state(localStorage.getItem('clementine.voice') === 'on');
-  let voiceName = $state(localStorage.getItem('clementine.voiceName') || '');
+  let voiceOn = $state(localStorage.getItem('lumina.voice') === 'on');
+  let voiceName = $state(localStorage.getItem('lumina.voiceName') || '');
   let voices = $state(listVoices());
   onVoicesChanged(() => (voices = listVoices()));
   let spoken = 0; // chars of the current reply already sent to speech
 
   function toggleVoice() {
     voiceOn = !voiceOn;
-    localStorage.setItem('clementine.voice', voiceOn ? 'on' : 'off');
+    localStorage.setItem('lumina.voice', voiceOn ? 'on' : 'off');
     if (!voiceOn) stopSpeaking();
   }
 
   function pickVoice(e) {
     voiceName = e.target.value;
-    localStorage.setItem('clementine.voiceName', voiceName);
+    localStorage.setItem('lumina.voiceName', voiceName);
   }
 
   // Speak complete sentences as they stream in; on final, speak the remainder.

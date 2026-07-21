@@ -10,7 +10,7 @@ import json
 import shutil
 from pathlib import Path
 
-PROFILES_DIR = Path("clementine_profiles")
+PROFILES_DIR = Path("lumina_profiles")
 
 
 def profile_dir(name: str) -> str:

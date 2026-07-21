@@ -17,7 +17,7 @@ code is the source of truth and the story says so.
 
 | Layer | Meaning | Where |
 |---|---|---|
-| **Built** | Running code, with tests you can execute yourself | `crystal-core/`, `crystalcore/`, `apps/clementine/` |
+| **Built** | Running code, with tests you can execute yourself | `crystal-core/`, `crystalcore/`, `apps/lumina/` |
 | **Vision** | Narrative, art, and speculative framing — labeled as such | `mythos/` |
 
 This split is load-bearing, not decorative — see `mythos/COVENANT.md` and
@@ -33,8 +33,8 @@ For what's built, in progress, or not yet started, see [ROADMAP.md](ROADMAP.md).
 Four things you can run right now and watch work:
 
 ```bash
-# Clementine — the sovereign companion (local-first, Ollama-backed)
-cd apps/clementine && python3 clementine.py
+# Lumina — the sovereign companion (local-first, Ollama-backed)
+cd apps/lumina && python3 lumina.py
 
 # The Songline Bus — multi-AI message bus, Belt-Three law enforced in code
 cd crystal-core && python3 -m clementine.bridge.selftest
@@ -62,7 +62,7 @@ CrystalCore.OS terminal — its commands, nodes, and keys — see
 
 | Path | What it is |
 |---|---|
-| `apps/clementine/` | The companion — CrystalCore framework package, terminal, Flask API, Svelte webapp, browser voice |
+| `apps/lumina/` | The companion — CrystalCore framework package, terminal, Flask API, Svelte webapp, browser voice |
 | `apps/voicebox/` | Local MCP server giving Claude Code a spoken voice on your machine |
 | `apps/crystal-vision/`, `apps/crystal-interface/`, `apps/vision-web/` | Demo shells (simulated data, Authority HOLD — not production) |
 | `crystal-core/` | The protocol pack — Songline Bus (`clementine/bridge/`), Decode→Ingest→Twin pipeline (`services/`), Starline (`starline/`), RDP record kernel (`rdp/`) |
@@ -75,7 +75,7 @@ CrystalCore.OS terminal — its commands, nodes, and keys — see
 
 ## The Covenant
 
-Clementine's core prompt (`apps/clementine/crystalcore/companion.py`) carries
+Lumina's core prompt (`apps/lumina/crystalcore/companion.py`) carries
 five binding rules, written out in full in `mythos/COVENANT.md`: no influence
 without explicit direction, an absolute and instant pause, memory that
 belongs entirely to the human, support that's offered rather than imposed,
@@ -94,7 +94,7 @@ The full visual canon is in [`mythos/art/`](mythos/art/README.md).
 
 Useful places to start, roughly in order of how load-bearing they are:
 
-- **Code** — Clementine, the Songline Bus, Starline, CrystalBridge: fixes,
+- **Code** — Lumina, the Songline Bus, Starline, CrystalBridge: fixes,
   features, tests.
 - **Docs** — architecture notes, clearer guides, filling gaps in what's here.
 - **Mythos** — the Codex, the Apocryphon, the Starline Transmissions, and the

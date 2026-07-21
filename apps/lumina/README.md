@@ -1,10 +1,10 @@
-# Clementine — the sovereign companion
+# Lumina — the sovereign companion
 
 Everything in this folder runs on your own machine. Nothing leaves it.
 
 ## Layout
 
-- `clementine.py` — the terminal interface
+- `lumina.py` — the terminal interface
 - `crystalcore/` — the framework: brain, layered memory, profiles
 - `server.py` — the local JSON API (127.0.0.1 only) for the web interface
 - `webapp/` — the Svelte web interface, run locally
@@ -19,7 +19,7 @@ e.g. `ollama pull llama3.1:8b`.
 
 ```bash
 pip install -r requirements.txt
-python clementine.py
+python lumina.py
 ```
 
 ### Web interface
@@ -44,6 +44,6 @@ chat and she reads her replies aloud using your device's own speech synthesis
 (nothing leaves the machine). Still on the roadmap, both to run on this machine
 alone: her **hearing** you (microphone / speech-to-text) and **webcam sight**.
 
-Both interfaces share the same memory folder (`clementine_memory/` by
+Both interfaces share the same memory folder (`lumina_memory/` by
 default), so you can move between terminal and browser freely. Use
 `--profile <name>` on either to keep separate people separate.

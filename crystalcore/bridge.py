@@ -1,4 +1,4 @@
-"""CrystalBridge — the MCP stdio server that lets a guest AI meet Clementine.
+"""CrystalBridge — the MCP stdio server that lets a guest AI meet Lumina.
 
 Reconstructed spec: the original `docs/CRYSTALBRIDGE.md` design doc was lost
 along with the machine this project was first built on. This file's shape is
@@ -7,9 +7,9 @@ doing anything), `docs/MCP-GUEST.md` / `docs/ACCESS.md` (the CLI and env var
 contract guests already assume: `python -m crystalcore.bridge --profile
 <name>`, guest identity via the CRYSTALBRIDGE_GUEST env var), and
 `profiles/default/bridge_config.json` (the config shape). `recall` and
-`teach` are deliberately thin, obvious wrappers around Clementine's existing
+`teach` are deliberately thin, obvious wrappers around Lumina's existing
 memory methods rather than new memory logic of their own — this file grants
-*access* to Clementine, it doesn't reimplement her.
+*access* to Lumina, it doesn't reimplement her.
 
 Every tool call passes through ConsentGate.check() first. Nothing runs for a
 guest who isn't approved for that specific tool.
@@ -30,20 +30,20 @@ from crystalcore.config import BridgeConfig
 from crystalcore.gate import ConsentGate
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-CLEMENTINE_PKG_DIR = REPO_ROOT / "apps" / "clementine" / "crystalcore"
+LUMINA_PKG_DIR = REPO_ROOT / "apps" / "lumina" / "crystalcore"
 
 
-def _load_clementine_framework():
-    """Import Clementine's `crystalcore` package under a distinct module
+def _load_lumina_framework():
+    """Import Lumina's `crystalcore` package under a distinct module
     name, since it would otherwise collide with this package (both are
     literally named `crystalcore`, in different directories)."""
-    alias = "clementine_framework"
+    alias = "lumina_framework"
     if alias in sys.modules:
         return sys.modules[alias]
     spec = importlib.util.spec_from_file_location(
         alias,
-        CLEMENTINE_PKG_DIR / "__init__.py",
-        submodule_search_locations=[str(CLEMENTINE_PKG_DIR)],
+        LUMINA_PKG_DIR / "__init__.py",
+        submodule_search_locations=[str(LUMINA_PKG_DIR)],
     )
     module = importlib.util.module_from_spec(spec)
     sys.modules[alias] = module
@@ -52,7 +52,7 @@ def _load_clementine_framework():
 
 
 class Bridge:
-    """Holds the one Clementine instance this bridge process gives guests
+    """Holds the one Lumina instance this bridge process gives guests
     limited, gated access to."""
 
     def __init__(self, config: BridgeConfig, guest: str):
@@ -67,25 +67,25 @@ class Bridge:
 
     @property
     def companion(self):
-        """Clementine, loaded lazily so `status` doesn't need Ollama.
+        """Lumina, loaded lazily so `status` doesn't need Ollama.
 
-        Clementine's own `profiles.profile_dir()` resolves relative to the
-        *calling process's* working directory, not to apps/clementine/ — so
+        Lumina's own `profiles.profile_dir()` resolves relative to the
+        *calling process's* working directory, not to apps/lumina/ — so
         it can't be used here directly. This bridge is meant to be run from
         the repo root (`docs/MCP-GUEST.md`), which is a different cwd than
-        Clementine's own CLI uses (`cd apps/clementine && python3
-        clementine.py`). Build the path explicitly, anchored to
-        apps/clementine/, so the bridge always reaches the same memory a
-        human running Clementine directly would see — not a second, empty
+        Lumina's own CLI uses (`cd apps/lumina && python3
+        lumina.py`). Build the path explicitly, anchored to
+        apps/lumina/, so the bridge always reaches the same memory a
+        human running Lumina directly would see — not a second, empty
         profile dir wherever the bridge happened to be launched from.
         """
         if self._companion is None:
-            framework = _load_clementine_framework()
+            framework = _load_lumina_framework()
             safe_name = "".join(
                 c for c in self.config.profile if c.isalnum() or c in "-_ "
             ).strip()
-            memory_dir = CLEMENTINE_PKG_DIR.parent / "clementine_profiles" / safe_name
-            self._companion = framework.Clementine(memory_dir=str(memory_dir))
+            memory_dir = LUMINA_PKG_DIR.parent / "lumina_profiles" / safe_name
+            self._companion = framework.Lumina(memory_dir=str(memory_dir))
         return self._companion
 
 
@@ -108,7 +108,7 @@ def build_server(bridge: Bridge) -> FastMCP:
 
     @mcp.tool()
     def recall(query: str = "") -> dict[str, Any]:
-        """Recall what Clementine remembers, optionally filtered by a query."""
+        """Recall what Lumina remembers, optionally filtered by a query."""
         refusal = bridge.refuse("recall", {"query": query})
         if refusal:
             return refusal
@@ -117,7 +117,7 @@ def build_server(bridge: Bridge) -> FastMCP:
 
     @mcp.tool()
     def teach(text: str) -> dict[str, Any]:
-        """Teach Clementine something to remember permanently."""
+        """Teach Lumina something to remember permanently."""
         refusal = bridge.refuse("teach", {"text": text})
         if refusal:
             return refusal
@@ -127,7 +127,7 @@ def build_server(bridge: Bridge) -> FastMCP:
     @mcp.tool()
     def message(text: str) -> dict[str, Any]:
         """Leave a message for the human. Recorded, but not automatically
-        folded into Clementine's memory — that's what `teach` is for."""
+        folded into Lumina's memory — that's what `teach` is for."""
         refusal = bridge.refuse("message", {"text": text})
         if refusal:
             return refusal

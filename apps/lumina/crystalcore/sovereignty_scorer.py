@@ -4,9 +4,9 @@ Version: 0.1-alpha
 Purpose: Monitor and score sovereignty health in human-AI interactions
 
 ======================================================================
-UNWIRED EXPERIMENT — NOT part of the running Clementine companion.
+UNWIRED EXPERIMENT — NOT part of the running Lumina companion.
 ----------------------------------------------------------------------
-Nothing imports this module: not clementine.py, not server.py, not the
+Nothing imports this module: not lumina.py, not server.py, not the
 crystalcore package __init__. It is a standalone 0.1-alpha sketch that
 scores text with simple keyword heuristics, runnable only via its own
 `__main__` demo below. It is kept here as an experiment, but it is NOT a

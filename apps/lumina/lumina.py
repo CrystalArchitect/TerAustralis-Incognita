@@ -1,12 +1,12 @@
 """
-Clementine — terminal interface for the CrystalCore sovereign companion.
+Lumina — terminal interface for the CrystalCore sovereign companion.
 
 The framework lives in the crystalcore/ package (memory, profiles, brain).
 This file is her doorway from the command line:
 
-    python clementine.py                    # default memory
-    python clementine.py --profile Crystal  # a named profile
-    python clementine.py --model llama3.2:3b
+    python lumina.py                    # default memory
+    python lumina.py --profile Crystal  # a named profile
+    python lumina.py --model llama3.2:3b
 
 Everything runs on your own device. Nothing leaves it.
 """
@@ -14,8 +14,8 @@ Everything runs on your own device. Nothing leaves it.
 import argparse
 import sys
 
-# Re-exported so `from clementine import ...` keeps working everywhere.
-from crystalcore import (BASE_PROMPT, Clementine, Memory, Personality,  # noqa: F401
+# Re-exported so `from lumina import ...` keeps working everywhere.
+from crystalcore import (BASE_PROMPT, Lumina, Memory, Personality,  # noqa: F401
                          delete_profile, list_profiles, profile_dir,
                          profile_meta)
 
@@ -41,7 +41,7 @@ HELP = """Commands:
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Clementine — a sovereign, locally-run AI companion.")
+        description="Lumina — a sovereign, locally-run AI companion.")
     parser.add_argument(
         "--model", default="llama3.1:8b",
         help="Ollama model tag. Pick one that fits your hardware, e.g. "
@@ -49,22 +49,22 @@ def main():
              "llama3.1:8b-instruct-q5_K_M (higher quality), or "
              "llama3.2:3b (lighter machines).")
     parser.add_argument(
-        "--memory-dir", default="clementine_memory",
+        "--memory-dir", default="lumina_memory",
         help="Where her memory is stored on this device.")
     parser.add_argument(
         "--profile", default="",
         help="Named profile (separate person, separate memory), e.g. "
-             "--profile Crystal. Profiles live in clementine_profiles/.")
+             "--profile Crystal. Profiles live in lumina_profiles/.")
     args = parser.parse_args()
     if args.profile:
         args.memory_dir = profile_dir(args.profile)
 
-    print("Starting Clementine (local mode)...")
+    print("Starting Lumina (local mode)...")
     print("Make sure Ollama is running with a model loaded.\n")
 
-    companion = Clementine(model=args.model, memory_dir=args.memory_dir)
+    companion = Lumina(model=args.model, memory_dir=args.memory_dir)
 
-    name = companion.personality.name or "Clementine"
+    name = companion.personality.name or "Lumina"
     returning = bool(companion.memory.conversation or companion.memory.summaries)
     gap = companion.time_since_last()
     greeting = f"{name} is {'back with you' if returning else 'ready'}"

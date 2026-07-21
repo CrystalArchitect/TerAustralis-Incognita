@@ -5,15 +5,15 @@ A plain status page, not a pitch deck. It tracks the **Built** layer — see
 split. Vision-layer work (the mythos) doesn't move on a software roadmap; see
 [CONSTITUTION.md](CONSTITUTION.md) for how that content evolves instead.
 
-For Clementine specifically, [mythos/content/MILESTONES.md](mythos/content/MILESTONES.md)
+For Lumina specifically, [mythos/content/MILESTONES.md](mythos/content/MILESTONES.md)
 already tracks a detailed week-by-week build plan — this page doesn't repeat
 that detail, it points to it.
 
 ## Built and working today
 
-- **Clementine** (`apps/clementine/`) — local-first AI companion, Ollama-backed.
-  Terminal, Flask API, Svelte webapp, browser voice. Run it: `cd apps/clementine
-  && python3 clementine.py`.
+- **Lumina** (`apps/lumina/`) — local-first AI companion, Ollama-backed.
+  Terminal, Flask API, Svelte webapp, browser voice. Run it: `cd apps/lumina
+  && python3 lumina.py`.
 - **The Songline Bus** (`crystal-core/clementine/bridge/`) — multi-AI message
   bus with the Belt-Three law enforced in code, not just convention. Self-test:
   `python3 -m clementine.bridge.selftest`.
@@ -36,7 +36,7 @@ decision to build the real data layer underneath them.
 
 ## In progress
 
-- **Clementine's reliability and control layer** (MILESTONES.md Month 4) —
+- **Lumina's reliability and control layer** (MILESTONES.md Month 4) —
   error recovery, full memory export, selective memory deletion, and a
   settings/config file are partially built; hallucination-reduction /
   fact-check-against-memory hasn't started yet.
@@ -49,7 +49,7 @@ decision to build the real data layer underneath them.
   stub with the API shape a future libp2p host would need. gossipsub, Noise,
   yamux, and bootstrap/mDNS discovery are all planned but not built; a mainnet
   mesh is explicitly on hold. See `node/mesh/README.md`'s own status table.
-- **Multi-instance Clementine** — two companions communicating with each
+- **Multi-instance Lumina** — two companions communicating with each
   other. Design thinking hasn't started (MILESTONES.md Week 19).
 - **Phase 2 ("Private Communication")** — named as a future phase in
   MILESTONES.md, shape not yet decided.
@@ -78,7 +78,7 @@ always in `git log`.
   a problem.
 - [SECURITY.md](SECURITY.md) — this repo's safety measures and how to report
   a vulnerability.
-- [mythos/content/MILESTONES.md](mythos/content/MILESTONES.md) — Clementine's
+- [mythos/content/MILESTONES.md](mythos/content/MILESTONES.md) — Lumina's
   detailed weekly build plan.
 - `crystal-core/spec/` — architecture and protocol specs for the Songline Bus
   and Starline.
