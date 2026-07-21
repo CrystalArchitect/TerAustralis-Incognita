@@ -35,3 +35,7 @@ jobs:
       - name: RDP self-test
         working-directory: crystal-core
         run: python -m rdp.selftest
+      - name: Clementine dependencies
+        run: pip install -r apps/clementine/requirements.txt pytest
+      - name: Clementine core tests
+        run: python -m pytest apps/clementine/tests -q

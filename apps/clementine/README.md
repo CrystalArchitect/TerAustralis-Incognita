@@ -39,8 +39,10 @@ npm run dev          # open http://127.0.0.1:5174
 ```
 
 The web interface streams her replies while an operator figure works at
-her terminal. Voice conversation and webcam sight are on the roadmap —
-both will run on this machine alone, like everything else here.
+her terminal. Her **speaking voice already works** — turn on `voice` in the
+chat and she reads her replies aloud using your device's own speech synthesis
+(nothing leaves the machine). Still on the roadmap, both to run on this machine
+alone: her **hearing** you (microphone / speech-to-text) and **webcam sight**.
 
 Both interfaces share the same memory folder (`clementine_memory/` by
 default), so you can move between terminal and browser freely. Use
