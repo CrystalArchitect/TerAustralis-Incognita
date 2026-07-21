@@ -69,7 +69,7 @@ This repo is dual-licensed:
 |------|-----------|
 | `apps/clementine/` | The sovereign companion (CrystalCore framework, Flask API, Svelte webapp) |
 | `apps/voicebox/` | Local MCP text-to-speech server |
-| `apps/crystal-vision/`, `apps/vision-web/` | Demo shells (simulated data, Authority HOLD) |
+| `apps/crystal-interface/`, `apps/vision-web/` | Demo shells (simulated data, Authority HOLD) |
 | `crystal-core/` | Protocol pack — Starline Weaver, Decode→Ingest→Twin pipeline, specs |
 | `crystalcore/` | CrystalBridge MCP consent gate (fail-closed) |
 | `mythos/` | The canon — Codex, Apocryphon, Covenant, the Book of the Sovereign Key, art |

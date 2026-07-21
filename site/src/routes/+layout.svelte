@@ -1,11 +1,8 @@
 <script>
   import '../app.css';
   import Header from '$lib/components/Header.svelte';
-  import { inject } from '@vercel/analytics';
   import { onMount } from 'svelte';
   import { afterNavigate } from '$app/navigation';
-
-  inject();
 
   /** @type {{ children: import('svelte').Snippet }} */
   let { children } = $props();

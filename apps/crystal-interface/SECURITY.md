@@ -2,7 +2,7 @@
 
 ## Supported versions
 
-Rolling: the latest `main` (deployed to Vercel) is the supported version.
+Rolling: the latest `main` is the supported version.
 
 ## Reporting a vulnerability
 
