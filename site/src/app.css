@@ -379,6 +379,32 @@ pre{background:var(--card);border:1px solid var(--line);border-radius:12px;
 }
 @keyframes shimmer{to{background-position:220% center}}
 
+/* Titles carry the crystal gradient, not flat white — matches the section
+   headings. Applies to the wordmark, eyebrow, hero, sub-labels, and every
+   card / doc title. */
+.wordmark,
+.eyebrow,
+.hero h1,
+.subhead,
+.card h3,
+.tier h3,
+.codexlink strong{
+  background:var(--title-gradient);
+  background-size:220% auto;
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;
+  color:var(--gold);
+}
+/* keep "We are early." its own warm gold within the gradient hero line */
+.hero h1 .early{-webkit-text-fill-color:var(--gold);color:var(--gold)}
+/* the card call-to-action links are coloured too, not muted white */
+.codexlink .cta{color:var(--purple);font-weight:500;margin-top:12px}
+@media (prefers-reduced-motion: no-preference){
+  .wordmark,.eyebrow,.hero h1,.subhead,.card h3,.tier h3,.codexlink strong{
+    animation:shimmer 9s linear infinite;
+  }
+}
+
 /* cards and links lift toward you on hover */
 .card,.tier,.codexlink,.node-card{
   transition:transform .22s cubic-bezier(.2,.7,.2,1),border-color .18s ease,box-shadow .18s ease;

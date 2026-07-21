@@ -212,7 +212,7 @@
     <a class="codexlink" href={link.href}>
       <strong>{link.title}</strong>
       <span>{link.sub}</span>
-      <span>{link.cta}</span>
+      <span class="cta">{link.cta}</span>
     </a>
   {/each}
 </section>
