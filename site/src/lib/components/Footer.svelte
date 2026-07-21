@@ -36,5 +36,11 @@
     <a href="https://suno.com/@m13crystalat">Suno</a>.
   </p>
 
+  <p>
+    Interactive demos (simulated data, Authority HOLD): the
+    <a href="/crystal-interface/" data-sveltekit-reload>operator shell</a>
+    and the <a href="/vision-web/" data-sveltekit-reload>citizen shell</a>.
+  </p>
+
   <p class="nonsolus">Non Solus — Not Alone</p>
 </footer>
