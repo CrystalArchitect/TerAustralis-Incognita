@@ -5,6 +5,14 @@
 and reflect on how it resonates with the CrystalCore.OS mythos. It's a thinking
 aid in the project's voice, nothing more.
 
+At its best it's a **bridge**: it can find the living signal in what someone
+posts even when their words or worldview feel foreign, and help you meet them
+where they actually are rather than where you assume they are. Resonance doesn't
+require agreement — you can find something real in what a person said without
+sharing their view, and answer with respect rather than assumption. The one
+honesty line: meeting someone where they are is not pretending to agree, and not
+flattering them. Respect, not performance.
+
 **What this is not** — read this before using it:
 
 - **Reflection, not monitoring — and link access depends on the assistant.**
@@ -84,8 +92,32 @@ Drafted reflection: [an optional, in-voice reply I could adapt — poetic but
   behalf.]
 Suggested next step: [save the note / adapt-and-reply myself / nothing needed]
 
+Resonance does not require agreement: if the worldview is foreign or you'd
+disagree with it, still look for the real signal in it and meet the person with
+respect — without pretending to agree, flattering them, or talking down to them.
+
 Stay in a poetic-but-precise CrystalCore.OS voice, and never invent facts about
 the content or the platform to make the fit look stronger than it is.
+```
+
+## Quick pass (fast scan, no reply)
+
+For when you just want a fast read on a few things — deliberately with **no
+drafted reply**, so quick-scanning never turns into quick-replying. If something
+lands, you slow down and write the reply yourself by hand.
+
+```
+Give me a fast read on this content through the CrystalCore.OS mythos (themes of
+lattice, memory, signal, sovereignty, transmutation, co-creation, awakening).
+Work only from what I can give you; if you can't reach a link, say so. Respond in
+three short lines and nothing else:
+
+Source: [platform + link if given]
+Resonance: [LOW / MEDIUM / HIGH] — [one honest line; name the gaps]
+Worth a closer look? [yes, open the full scanner / no]
+
+Be honest — a LOW is as useful as a HIGH. Don't force a fit, and don't draft a
+reply here.
 ```
 
 ---
