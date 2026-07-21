@@ -1,7 +1,7 @@
 import { marked } from 'marked';
 
-// Read every markdown file in /content as raw text at build time.
-const files = import.meta.glob('/content/*.md', {
+// Read every markdown file in src/content as raw text at build time.
+const files = import.meta.glob('../content/*.md', {
   query: '?raw',
   import: 'default',
   eager: true
