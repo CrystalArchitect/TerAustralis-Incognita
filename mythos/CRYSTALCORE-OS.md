@@ -57,8 +57,24 @@ setting the timeline to the year 3000.)
 | `jump <year>` | Time-jump (defaults to 3000) |
 | `map` | Print the Starline network chart |
 | `status` | Show timeline, Starline status, location, keys |
+| `reset` | Wipe saved progress and start fresh |
 | `help` | List all commands |
 | `exit` / `quit` / `pause` | Shut down (`end session` also works) |
+
+## Saving and resuming
+
+Your progress persists between sessions — the keys you hold, the named keys,
+the open Gate, your location, and the current soundtrack. It saves
+automatically as you play to `~/.crystalcore/state.json` (in your home
+directory, not the repo, so a save is never committed), and the next launch
+picks up where you left off:
+
+```
+Session resumed — 3/5 keys held.
+```
+
+`reset` wipes the save and returns the lattice to its dormant, first-launch
+state. Only mythos progress is stored — no personal data.
 
 ## The five nodes
 
