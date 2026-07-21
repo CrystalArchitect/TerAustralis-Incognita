@@ -17,7 +17,7 @@ clone / check / commit / push commands, see
    `node_modules/`, and `__pycache__/` are all ignored — if `git status`
    shows hundreds of files after running a dev server, stop and check
    `.gitignore` before staging.
-3. **Never commit personal data.** Clementine's memory and profiles
+3. **Never commit personal data.** Lumina's memory and profiles
    (`clementine_memory*`, `clementine_profiles/`) are the user's private
    property and must never enter git — the `.gitignore` enforces this;
    don't work around it.
@@ -81,7 +81,7 @@ started across these paths.
 
 ## The Covenant applies to code too
 
-Clementine's Sovereignty Covenant (`mythos/COVENANT.md`) is not just
+Lumina's Sovereignty Covenant (`mythos/COVENANT.md`) is not just
 lore — it's the product spec. Changes to the companion must preserve:
 local-first operation, opt-in cloud, absolute pause, full memory
 ownership, and support that is offered, never imposed.

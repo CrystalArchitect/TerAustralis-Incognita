@@ -9,7 +9,7 @@
 Static **demo shell** for Crystal Vision / Core / Starline Budapest.
 
 **🔭 Crystal universe — which repo is this?**  
-Siblings: **crystalcore** = Crystal Core (protocol pack) · **the-crystal-vision** = The Crystal Vision (codex site + Clementine sovereign companion app) · **teraaustralis-incognita** = TeraAustralis Incognita (narrative + CrystalBridge).  
+Siblings: **crystalcore** = Crystal Core (protocol pack) · **the-crystal-vision** = The Crystal Vision (codex site + Lumina sovereign companion app) · **teraaustralis-incognita** = TeraAustralis Incognita (narrative + CrystalBridge).  
 **License:** Apache-2.0 — see `LICENSE`
 
 **Not production.** Every number is illustrative and **simulated in the browser**;

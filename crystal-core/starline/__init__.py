@@ -1,4 +1,4 @@
-"""Starline — the sovereign communication layer between Clementine agents.
+"""Starline — the sovereign communication layer between Lumina agents.
 
 Two locally-running companions exchange consented memory fragments directly,
 peer to peer, with no server in the middle. See spec/STARLINE.md.

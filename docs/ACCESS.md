@@ -68,5 +68,5 @@ Approve them in `profiles/default/bridge_config.json`.
 
 - Design: `docs/CRYSTALBRIDGE.md`
 - Guest wiring: `docs/MCP-GUEST.md`
-- Clementine core: `Clementine/`
+- Lumina core: `Lumina/`
 - Boot Lattice: `.\scripts\boot-lattice.ps1`

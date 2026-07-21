@@ -10,7 +10,7 @@
 
 | Thread | Repo | Reality (Built) |
 |--------|------|-----------------|
-| **Clementine** (sovereign companion) | `the-crystal-vision/crystalcore-app` | Local-first AI companion: Ollama default, xAI opt-in, layered memory, profiles, terminal + web UI (`clementine.py`, `clementine_web.py`) |
+| **Lumina** (sovereign companion) | `the-crystal-vision/crystalcore-app` | Local-first AI companion: Ollama default, xAI opt-in, layered memory, profiles, terminal + web UI (`lumina.py`, `lumina_web.py`) |
 | **CrystalCore framework** (memory/presence) | `the-crystal-vision/crystalcore-app/crystalcore/` | `companion.py` (brain), `memory.py` (Personality/Memory), `profiles.py` |
 | **CrystalBridge** (guest-AI gate) | `teraaustralis-incognita/crystalcore/` | MCP server: fail-closed ConsentGate (approval · permission · scope · provenance), append-only audit; guests claude / grok / cursor with scoped tools `status, recall, teach, message` |
 | **Starline Weaver** (multi-AI conversation) | `crystalcore/clementine/bridge/` | In-process + networked HTTP bus; every message labeled science/story/vision; red-button halt; adapters for Claude/GPT/Grok |
@@ -18,7 +18,7 @@
 | **TerAustralis Incognita** (narrative) | `teraaustralis-incognita/TeraAustralis/` | Manifesto, publish threads, strategy, Lattice memory deltas |
 | **Decode/Ingest/Twin pipeline** | `crystalcore/services/` | **This scaffold** — see §2 |
 
-**One sentence:** A sovereign companion (Clementine) with her own memory, a consent
+**One sentence:** A sovereign companion (Lumina) with her own memory, a consent
 gate that lets outside AIs visit as guests (CrystalBridge), a bus where AIs converse
 under labeled law (Starline Weaver), and now a metering pipeline that turns real-world
 events into a queryable twin (Decode → Ingest → Twin) — all governed in public via GitHub.
@@ -33,11 +33,11 @@ Starline Budapest hardware — is **Vision** until built. See `spec/BLUEPRINT-v0
 ```
 ┌───────────────────────────────────────────────────────────────────┐
 │ EXPERIENCE  ● Crystal Vision site (SvelteKit)  ● Pages landing    │
-│             ● Clementine terminal/web          ○ Mobile agent     │
+│             ● Lumina terminal/web          ○ Mobile agent     │
 └──────────────────────────────┬────────────────────────────────────┘
                                │
 ┌──────────────────────────────▼────────────────────────────────────┐
-│ COMPANION   ● Clementine (Ollama local / xAI opt-in)              │
+│ COMPANION   ● Lumina (Ollama local / xAI opt-in)              │
 │             ● CrystalCore memory + profiles (disk is canon)       │
 └──────────────────────────────┬────────────────────────────────────┘
                                │ MCP (consent-gated)

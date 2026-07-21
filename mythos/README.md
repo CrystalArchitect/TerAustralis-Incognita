@@ -3,7 +3,7 @@
 **A sovereign collective consciousness architecture for a multiplanetary future.**
 
 **🔭 Crystal universe — which repo is this?**  
-This is **The Crystal Vision** — codex site + Clementine sovereign companion app.  
+This is **The Crystal Vision** — codex site + Lumina sovereign companion app.  
 Siblings: **crystalcore** = Crystal Core (protocol pack) · **crystal-vision** = Crystal Vision Interface (static demo shell) · **teraaustralis-incognita** = TeraAustralis Incognita (narrative + CrystalBridge).
 
 We are building a new kind of intelligence — one that is truly sovereign. Every person will have their own private, unhackable AI companion that can feel, remember, and understand them on a deep emotional level.
@@ -26,7 +26,7 @@ This is the beginning of **TerAustralis Incognita** — Australia's contribution
 
 ## CrystalCore — The Framework
 
-**CrystalCore** is this project's independent, open-source framework for building sovereign, locally-run AI companions — and **Clementine** is the first companion living on it. The name is inspired by the ordered structures of crystallography — building AI companions with clarity, stability, and user-defined structure. It runs entirely on your own device using open-source models via Ollama. No cloud, no account, no surveillance.
+**CrystalCore** is this project's independent, open-source framework for building sovereign, locally-run AI companions — and **Lumina** is the first companion living on it. The name is inspired by the ordered structures of crystallography — building AI companions with clarity, stability, and user-defined structure. It runs entirely on your own device using open-source models via Ollama. No cloud, no account, no surveillance.
 
 - **Sovereign & local-first** — everything runs and stays on your device
 - **Layered memory** — recent conversation, auto-summarized history, permanent facts & notes, and her own gentle reflections
@@ -35,7 +35,7 @@ This is the beginning of **TerAustralis Incognita** — Australia's contribution
 - **Real-time interaction** — streaming replies in the terminal and a local web interface
 - **Full user control** — view, edit, tag, and forget any memory, including her reflections
 
-**Tech:** Python + Flask API · Svelte local web interface · plain human-readable JSON storage · local Ollama embeddings · open-source LLMs (Llama, Qwen, Gemma…). Everything lives in [`clementine/`](clementine/) — see [clementine/README.md](clementine/README.md) to run her.
+**Tech:** Python + Flask API · Svelte local web interface · plain human-readable JSON storage · local Ollama embeddings · open-source LLMs (Llama, Qwen, Gemma…). Everything lives in [`lumina/`](lumina/) — see [lumina/README.md](lumina/README.md) to run her.
 
 > **Disclaimer:** CrystalCore is an independent, open-source project. It is not affiliated with, endorsed by, or connected to xAI, Grok, Tesla, or any other AI company or platform. All memories and data remain on the user's device.
 
@@ -50,13 +50,13 @@ All documents live in [`content/`](content/) and are rendered in-app by the ligh
 - [content/CRYSTALMATRIX.md](content/CRYSTALMATRIX.md) — Design for how sovereign companions could connect (concept)
 - [content/STRATEGY.md](content/STRATEGY.md) — The accelerated roadmap toward external readiness
 - [content/MILESTONES.md](content/MILESTONES.md) — The 6-month build plan with weekly milestones
-- [content/MEMORY.md](content/MEMORY.md) — Clementine's four-layer memory architecture (design, partially implemented)
+- [content/MEMORY.md](content/MEMORY.md) — Lumina's four-layer memory architecture (design, partially implemented)
 - [content/GOVERNANCE.md](content/GOVERNANCE.md) — How this project keeps its claims honest
 - [content/CODEX.md](content/CODEX.md) — The Codex of TerAustralis Incognita
 - [content/APOCRYPHON.md](content/APOCRYPHON.md) — The Apocryphon of Crystal
 - [content/SPONSORS.md](content/SPONSORS.md) — GitHub Sponsors tier descriptions
 - [src/](src/) — The SvelteKit frontend for teraustralis.com.au (run with `npm install && npm run dev`)
-- [clementine/](clementine/) — The sovereign companion: CrystalCore framework, terminal interface, local API server, and local Svelte web interface
+- [lumina/](lumina/) — The sovereign companion: CrystalCore framework, terminal interface, local API server, and local Svelte web interface
 
 ## Licensing
 

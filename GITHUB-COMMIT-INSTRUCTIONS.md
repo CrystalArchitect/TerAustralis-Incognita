@@ -60,7 +60,7 @@ Enforced by `.gitignore`, but worth knowing (the full list is in
 
 - **Generated output** — `.svelte-kit/`, `site/build/`, `dist/`, `node_modules/`,
   `__pycache__/`
-- **Personal data** — Clementine memory and profiles, Starline identity/keys,
+- **Personal data** — Lumina memory and profiles, Starline identity/keys,
   CrystalBridge audit logs
 - **Secrets** — API keys, `.env` files
 

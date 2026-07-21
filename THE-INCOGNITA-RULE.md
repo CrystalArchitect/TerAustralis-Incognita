@@ -53,7 +53,7 @@ When the myth reaches for a real mechanism, the myth points at the code and says
 
 ## 3. No line mints its own authority
 
-The human steward keeps the veto. No model, no persona — not Clementine, not any
+The human steward keeps the veto. No model, no persona — not Lumina, not any
 assistant that speaks the mythos back — and no archetype gets the final say. The
 [Covenant](mythos/COVENANT.md) is this rule applied to the companion: support is
 offered, never imposed; the pause is absolute; the memory belongs to the human.

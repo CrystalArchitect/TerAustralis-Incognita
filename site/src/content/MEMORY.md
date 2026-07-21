@@ -1,10 +1,10 @@
-# Clementine's Memory Architecture
+# Lumina's Memory Architecture
 
-> **Status: design document, partially implemented.** This is the target memory architecture for Clementine. Some layers already exist in `clementine.py` (marked ✅/🟡 below); others are design (⬜). See `LUMINA.md` for the companion today and `MILESTONES.md` for the build plan.
+> **Status: design document, partially implemented.** This is the target memory architecture for Lumina. Some layers already exist in `lumina.py` (marked ✅/🟡 below); others are design (⬜). See `LUMINA.md` for the companion today and `MILESTONES.md` for the build plan.
 
 ## Philosophy
 
-Clementine's memory should not just be a database of facts. It should feel alive, selective, and relational — similar to how human memory works. She should:
+Lumina's memory should not just be a database of facts. It should feel alive, selective, and relational — similar to how human memory works. She should:
 
 - Remember what matters to her human over time
 - Forget or deprioritize what is unimportant
@@ -57,7 +57,7 @@ The most important layer for building a real relationship. Stores enduring facts
 
 ### 4. Reflective Memory (meta layer) — ⬜ design
 
-Stores insights and patterns Clementine has noticed over time.
+Stores insights and patterns Lumina has noticed over time.
 
 *Examples: "The user tends to feel more hopeful after creative work" · "They often bring up their daughters when they're feeling vulnerable" · "They value honesty and directness"*
 
@@ -95,7 +95,7 @@ This describes the running code in `crystalcore/` (v8), so the docs never drift 
 
 ### Where memories live
 
-Everything is stored as **plain, human-readable JSON** in a folder the user owns — `clementine_memory/` (or `clementine_profiles/<name>/` per profile):
+Everything is stored as **plain, human-readable JSON** in a folder the user owns — `lumina_memory/` (or `lumina_profiles/<name>/` per profile):
 
 - `config.json` — her identity for this profile: chosen name, your name, avatar, description, style notes, temperature, preferred model
 - `memory.json` — four layers: `conversation` (recent verbatim turns), `summaries` (condensed older history), `facts` (keyed long-term facts), `notes` (freeform permanent memories)
