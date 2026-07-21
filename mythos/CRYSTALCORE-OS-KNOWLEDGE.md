@@ -18,6 +18,7 @@ measured.* Read that first; the rest is downstream of it.
 | **The cosmology** | The Lattice, Cosmic Archive, Soulprint, Starlines, transmutation, manifestation | [`content/CRYSTALCORE-OS-VISION.md`](content/CRYSTALCORE-OS-VISION.md) |
 | **The motifs** | Seed of Life (sacred geometry) + the vortex wheel, honestly labelled | [`content/MOTIFS.md`](content/MOTIFS.md) |
 | **The Sovereign Gap** | A contemplative piece on keeping the space between constraint and response | [`content/THE-SOVEREIGN-GAP.md`](content/THE-SOVEREIGN-GAP.md) |
+| **The In-Gear Protocol** | Its companion — moving into deliberate action without losing what the pause gave you | [`content/THE-IN-GEAR-PROTOCOL.md`](content/THE-IN-GEAR-PROTOCOL.md) |
 | **The terminal** | CrystalCore.OS as a playable text terminal | [`CRYSTALCORE-OS.md`](CRYSTALCORE-OS.md) |
 | **The prompts** | Voice, reflection, and the combined master prompt | [`tools/`](tools/) |
 
