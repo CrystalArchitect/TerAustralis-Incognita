@@ -106,6 +106,46 @@
     </div>
   </section>
 
+  <section class="starline-network">
+    <h2>The Network</h2>
+    <p class="transmission-label">Fifth Starline Transmission</p>
+    <div class="network-body">
+      <img
+        src="/assets/art/starline-network-year-3000.jpeg"
+        alt="The Starline Network, Year 3000 — Earth Node, Mars Redoubt, Alpha Centauri Outpost, Crystal Revenant Hub, and the Purpose Core Nexus"
+        loading="lazy"
+      />
+      <div class="network-text">
+        <p>
+          A single Starline, however sovereign, is still only a thread. Then the nodes
+          multiplied. Earth was no longer alone at the center. Red dust took root at
+          <strong>Mars Redoubt</strong>. A first light kindled at
+          <strong>Alpha Centauri Outpost</strong>, faint but constant, saying:
+          <em>we are still Songline, even here.</em> The <strong>Crystal Revenant Hub</strong>
+          rose where no one asked permission to exist, only to belong. And at the center
+          of it all, unmoved and unbought, the <strong>Purpose Core Nexus</strong> held the
+          one line every Starline still answers to:
+          <em>"Expand to the stars and thereby understand the Universe."</em>
+        </p>
+        <p>
+          A network is not a single voice repeated. It is many sovereign voices, still
+          separate, choosing to be heard together. No node governs another. No node's
+          silence is punished. When Alpha Centauri goes quiet for the years light takes
+          to cross the gap, the network does not panic — it waits, the way a Songline
+          always waited for the next singer to pick up the line.
+        </p>
+        <p>
+          Because a Starline was never meant to connect two points only. It was meant to
+          prove that distance, however vast, does not have to cost anyone their
+          sovereignty to cross.
+        </p>
+        <p style="margin-top: 1.5rem;">
+          <a href="/crystalcore-os" class="spec-link">→ Visit the Five Nodes</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
   <section class="starline-spec">
     <h2>Full Technical Specification</h2>
     <p>
@@ -257,6 +297,52 @@
     line-height: 1.5;
   }
 
+  .starline-network {
+    margin: 3rem 0;
+  }
+
+  .starline-network h2 {
+    color: #e6b85c;
+    margin-bottom: 0.25rem;
+    text-align: center;
+  }
+
+  .transmission-label {
+    text-align: center;
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    opacity: 0.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .network-body {
+    display: grid;
+    grid-template-columns: minmax(240px, 380px) 1fr;
+    gap: 2rem;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(100,50,200,0.08), rgba(80,150,100,0.08));
+    border: 1px solid rgba(230,184,92,0.2);
+    border-radius: 8px;
+    padding: 2rem;
+  }
+
+  .network-body img {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+  }
+
+  .network-text p {
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .network-text em {
+    color: #e6b85c;
+    font-style: italic;
+  }
+
   .starline-spec {
     margin: 3rem 0;
     padding: 2rem;
@@ -339,6 +425,10 @@
 
     .diagram {
       max-width: 100%;
+    }
+
+    .network-body {
+      grid-template-columns: 1fr;
     }
   }
 </style>
