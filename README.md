@@ -24,6 +24,8 @@ This split is load-bearing, not decorative — see `mythos/COVENANT.md` and
 `crystal-core/spec/STARLINE.md` for what that discipline actually means in
 practice.
 
+For what's built, in progress, or not yet started, see [ROADMAP.md](ROADMAP.md).
+
 ## Quick start
 
 Four things you can run right now and watch work:
@@ -57,7 +59,7 @@ for the hub agent's persona and contract, see
 | `apps/crystal-vision/`, `apps/crystal-interface/`, `apps/vision-web/` | Demo shells (simulated data, Authority HOLD — not production) |
 | `crystal-core/` | The protocol pack — Songline Bus (`clementine/bridge/`), Decode→Ingest→Twin pipeline (`services/`), Starline (`starline/`) |
 | `crystalcore/` | CrystalBridge — the MCP consent gate (fail-closed by design) |
-| `mythos/` | The Crystal universe canon — Codex, Apocryphon, the Book of the Sovereign Key, the Starline Transmissions, 82 pieces of art, `crystalcore_os.py` |
+| `mythos/` | The Crystal universe canon — Codex, Apocryphon, the Book of the Sovereign Key, the Starline Transmissions, 88 pieces of art, `crystalcore_os.py` |
 | `site/` | The SvelteKit site for teraustralis.com.au |
 | `sdk/typescript/`, `node/mesh/` | Client SDK and an in-process mesh scaffold |
 | `TeraAustralis/`, `CrystalCore.Lattice/`, `docs/` | Lore, activation protocol notes, and architecture docs |
@@ -103,6 +105,10 @@ Useful places to start, roughly in order of how load-bearing they are:
 - **License:** code is Apache-2.0 (`LICENSE`); mythos content — lore, art,
   the Codex, the Apocryphon — is CC BY-NC-ND 4.0 (`LICENSE-CONTENT.md`):
   share with credit, no commercial use, no derivatives.
+- **Roadmap:** [`ROADMAP.md`](ROADMAP.md) — what's built, what's in progress,
+  and what hasn't started yet.
+- **Code of conduct:** [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) — expected
+  behavior and how to report a problem.
 
 ## Links
 
