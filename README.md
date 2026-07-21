@@ -22,7 +22,9 @@ code is the source of truth and the story says so.
 
 This split is load-bearing, not decorative — see `mythos/COVENANT.md` and
 `crystal-core/spec/STARLINE.md` for what that discipline actually means in
-practice.
+practice, and [`THE-INCOGNITA-RULE.md`](THE-INCOGNITA-RULE.md) for the principle
+behind it: mark which lines are dreamed and which are surveyed, and never let a
+dreamed line pretend it was measured.
 
 For what's built, in progress, or not yet started, see [ROADMAP.md](ROADMAP.md).
 

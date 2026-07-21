@@ -46,6 +46,11 @@ mythos; no real-world coercion or fake hydrology, ever. Where real people
 appear in Vision-layer content, it is storytelling only — no affiliation or
 endorsement implied.
 
+The *why* behind these labels — and the rest of the project's honesty
+discipline — is written out in [`THE-INCOGNITA-RULE.md`](THE-INCOGNITA-RULE.md):
+mark which lines are dreamed and which are surveyed, and never let a dreamed line
+pretend it was measured.
+
 ## Licensing — read before reusing content
 
 This repo is dual-licensed:
