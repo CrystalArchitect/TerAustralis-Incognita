@@ -1,12 +1,10 @@
-# Crystal Vision — deploy package of `crystal-interface`
+# Crystal Vision — the operator shell
 
-> **This is not a separate app.** The `app.js`, `index.html` and `styles.css`
-> here are a **byte-identical snapshot** of [`../crystal-interface`](../crystal-interface),
-> the canonical operator shell. This directory exists only to add deploy
-> packaging (`vercel.json`, `BUILD_MANIFEST.json`, license/notice). **Edit the
-> shell in `crystal-interface`; re-snapshot here.** Do not hand-edit the copy.
-
-Static **demo shell** for Crystal Vision / Core / Starline Budapest.
+The operator-facing **demo shell** for Crystal Vision / Core / Starline Budapest,
+and the Vercel deploy package (`vercel.json`, `BUILD_MANIFEST.json`). This is the
+single canonical copy — a byte-identical duplicate (`crystal-interface`) used to
+live beside it and has been removed. The citizen-facing surface is the separate,
+slimmer [`../vision-web`](../vision-web).
 
 **🔭 Crystal universe — which repo is this?**  
 Siblings: **crystalcore** = Crystal Core (protocol pack) · **the-crystal-vision** = The Crystal Vision (codex site + Lumina sovereign companion app) · **teraaustralis-incognita** = TeraAustralis Incognita (narrative + CrystalBridge).  

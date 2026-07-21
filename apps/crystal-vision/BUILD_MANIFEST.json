@@ -1,5 +1,5 @@
 {
-  "name": "crystal-interface",
+  "name": "crystal-vision",
   "product": "Crystal Vision / Crystal Core operator shell",
   "version": "0.5.1",
   "authority": "HOLD",
@@ -17,11 +17,11 @@
   ],
   "github": "https://github.com/CrystalArchitect/crystal-vision",
   "monorepo": "https://github.com/CrystalArchitect/TeraAustralis-Incognita",
-  "monorepo_path": "apps/crystal-interface",
+  "monorepo_path": "apps/crystal-vision",
   "vercel": {
     "project": "crystal-vision",
     "preview_url": "https://crystal-vision-ter-australis-incognita.vercel.app",
-    "note": "Redeploy full 8-file tree from crystal-interface/ after each Grok Build session"
+    "note": "Redeploy full 8-file tree from crystal-vision/ after each Grok Build session"
   },
   "grok_build_sync_phrase": "Sync Crystal Vision from GROK_BUILD.md and BUILD_MANIFEST.json \u2014 bump version, update CHANGELOG, redeploy Vercel full UI",
   "updated_utc": "2026-07-17T14:54:50.419339Z"

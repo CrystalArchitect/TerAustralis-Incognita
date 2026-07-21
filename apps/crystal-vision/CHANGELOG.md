@@ -1,4 +1,4 @@
-# Changelog — crystal-interface
+# Changelog — crystal-vision
 
 ## 0.5.1 — 2026-07-17
 

@@ -22,7 +22,7 @@ Operator-facing demo shell (and Vision-linked brand surface):
 ## Local serve
 
 ```powershell
-cd apps/crystal-interface
+cd apps/crystal-vision
 python -m http.server 8090
 # http://127.0.0.1:8090
 ```
@@ -44,4 +44,4 @@ Citizen shell (sibling): `../vision-web/`
 
 ### Redeploy command for Grok
 
-> Deploy all files in `crystal-interface/` to Vercel project `crystal-vision` (preview).
+> Deploy all files in `crystal-vision/` to Vercel project `crystal-vision` (preview).

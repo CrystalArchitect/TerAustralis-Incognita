@@ -64,7 +64,7 @@ CrystalCore.OS terminal — its commands, nodes, and keys — see
 |---|---|
 | `apps/lumina/` | The companion — CrystalCore framework package, terminal, Flask API, Svelte webapp, browser voice |
 | `apps/voicebox/` | Local MCP server giving Claude Code a spoken voice on your machine |
-| `apps/crystal-vision/`, `apps/crystal-interface/`, `apps/vision-web/` | Demo shells (simulated data, Authority HOLD — not production) |
+| `apps/crystal-vision/`, `apps/vision-web/` | Demo shells (simulated data, Authority HOLD — not production) |
 | `crystal-core/` | The protocol pack — Starline Weaver (`clementine/bridge/`), Decode→Ingest→Twin pipeline (`services/`), Starline (`starline/`), RDP record kernel (`rdp/`) |
 | `crystalcore/` | CrystalBridge — the MCP consent gate (fail-closed by design) |
 | `mythos/` | The Crystal universe canon — Codex, Apocryphon, the Book of the Sovereign Key, the Starline Transmissions, 88 pieces of art, `crystalcore_os.py` |
