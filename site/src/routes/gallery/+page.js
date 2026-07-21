@@ -90,7 +90,9 @@ export function load() {
     { filename: 'arches-of-the-crossing.jpeg', description: 'A lone figure on the light-braided path beneath the great arches, a ship banking overhead' },
     { filename: 'walker-of-the-light-road.jpeg', description: 'A walker on the glowing road across the red plain, a teal storm-nebula breaking overhead' },
     { filename: 'bridge-to-the-ring-station.jpeg', description: 'A figure at the light-veined bridge reaching toward the ring-station adrift over the red land' },
-    { filename: 'crystal-hands-at-the-launch.jpeg', description: 'Crystalline figures gathered around the light as a rocket rises from the red planet behind them' }
+    { filename: 'crystal-hands-at-the-launch.jpeg', description: 'Crystalline figures gathered around the light as a rocket rises from the red planet behind them' },
+    { filename: 'crystal-lattice-flow.jpeg', description: 'AI-generated concept art (Grok Imagine) — the Lattice as a flowing river of crystal and light across the deep' },
+    { filename: 'resonance-heart.jpeg', description: 'AI-generated concept art (Grok Imagine) — the Resonance Heart, a crystal heart alight at the core' }
   ];
 
   return {
