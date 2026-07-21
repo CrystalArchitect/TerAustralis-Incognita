@@ -1,160 +1,93 @@
-# TerAustralis Incognita · Crystal Core — Full Stack
+# TerAustralis Incognita
 
-**Tagline:** Collective intelligence with individual sovereignty.  
-**Mainnet / deploy:** **PROHIBITED** until audit. Economic modules are design + simulation only.
+**Collective intelligence with individual sovereignty.**
 
-**🔭 Crystal universe — which repo is this?**  
-This is **TerAustralis Incognita** — narrative + full-stack monorepo + CrystalBridge MCP consent gate.  
-Siblings: **crystalcore** = Crystal Core (protocol pack) · **the-crystal-vision** = The Crystal Vision (codex site + Clementine sovereign companion app) · **crystal-vision** = Crystal Vision Interface (static demo shell).  
-**License:** Code Apache-2.0 (`LICENSE`) · Content CC BY-NC-ND 4.0 (`LICENSE-CONTENT.md`)
+This repository is two things at once, kept honestly separate:
 
-```
-TerAustralis Incognita  →  frontier
-Crystal Vision          →  lens
-CrystalCore             →  reactor
-Clementine              →  local core mind
-CrystalBridge           →  consent meeting-house (MCP)
-```
+1. **Working software** — a local-first AI companion, a multi-AI message bus,
+   a peer-to-peer sovereign networking protocol, and the tests that prove
+   each one does what it claims.
+2. **A mythos** — the Crystal universe: a story, told in text and art, about
+   why any of this is worth building.
 
-## Monorepo map
+Nothing here pretends to be more built than it is. Where the two meet, the
+code is the source of truth and the story says so.
 
-| Path | Role | Status |
-|------|------|--------|
-| `docs/` | Architecture, universe brand, exec summary, images | ✅ |
-| `spec/` | ARCHITECTURE + RFCs + fixtures | ✅ draft |
-| `sim/` | Burn-mint Monte Carlo (5 scenarios) | ✅ |
-| `packages/crypto` | DID + sign helpers | ✅ scaffold |
-| `packages/receipts` | Receipt validate + hash | ✅ |
-| `services/decode` | DECODE raw → twin candidate | ✅ v0.2 |
-| `services/ingest` | INGEST policy → twin store | ✅ v0.2 |
-| `services/receipt_engine` | Twin → ServiceReceipt | ✅ v0.2 |
-| `services/upgrade` | Evidence → HOLD/LOCAL_READY report | ✅ v0.2 |
-| `hubs/starline_budapest` | Reference physical hub | ✅ template |
-| `node/agent` | HTTP node: identity, receipts, CRDT, twin | ✅ MVP |
-| `node/mesh` | libp2p-shaped mesh stub (in-process) | ✅ v0.5 |
-| `apps/crystal-interface` | Operator demo UI (twin/mesh/pipeline/econ) | ✅ |
-| `apps/vision-web` | Citizen Vision shell (credits/capability) | ✅ v0.5 |
-| `sdk/typescript` | TS client for local agent | ✅ v0.5 |
-| `docs/FULL-STACK-v0.5.md` | Surfaces + mesh roadmap | ✅ |
-| `twin/` | Energy kWh layered control POC | ✅ |
-| `contracts/` | ReceiptAnchor.sol | ⬜ no deploy |
-| `crystalcore/` | CrystalBridge MCP consent gate | ✅ tested |
-| `Clementine/` | Core identity + Ollama Modelfile | ✅ |
-| `CrystalVision/` | Visual suite | ✅ |
-| `TeraAustralis/` | Lore + publish | ✅ |
-| `profiles/` | Bridge gate config | ✅ |
-| `security/` | Threat model Z0–Z4 | ✅ v0.3 |
-| `compliance/` | GDPR outline, licensing checklist | ✅ draft |
-| `integrations/` | Energy/mobility adapters → decode | ✅ scaffold |
-| `deploy/` | Helm region chart + Budapest charter | ✅ scaffold |
-| `courts/` | Dispute docket templates | ✅ |
-| `docs/FULL-STACK-v0.3.md` | Operable company skeleton | ✅ |
+## What's real vs. what's vision
 
-## Consolidated tree (2026-07)
+| Layer | Meaning | Where |
+|---|---|---|
+| **Built** | Running code, with tests you can execute yourself | `crystal-core/`, `crystalcore/`, `apps/clementine/` |
+| **Vision** | Narrative, art, and speculative framing — labeled as such | `mythos/` |
 
-The scattered Crystal universe repos now live here as one canonical source
-(spelling standardized to **TerAustralis Incognita**):
+This split is load-bearing, not decorative — see `mythos/COVENANT.md` and
+`crystal-core/spec/STARLINE.md` for what that discipline actually means in
+practice.
 
-| Path | Origin | Contents |
-|------|--------|----------|
-| `apps/clementine/` | the-crystal-vision `clementine/` | Clementine sovereign companion — CrystalCore framework pkg, terminal + Flask API + Svelte webapp |
-| `site/` | the-crystal-vision root | SvelteKit site for teraustralis.com.au |
-| `mythos/` | the-crystal-vision `content/` | Codex, Apocryphon, Vision, Architecture, Governance, Strategy docs |
-| `crystal-core/` | crystalcore repo | Protocol pack — Seven Sisters Songline, Songline Bus (multi-AI), Decode→Ingest→Twin pipeline, specs, interface demo |
-| `apps/crystal-vision/` | crystal-vision repo | Static demo shell (simulated data, Authority HOLD) |
-| `_archive/` | the-crystal-vision | Legacy copies kept for provenance: `crystalcore-app/` (old standalone app), `local-snapshot-2026-07-17/` |
+## Quick start
 
-Note: root `crystalcore/` remains the **CrystalBridge MCP consent gate**;
-the companion framework package of the same name lives inside `apps/clementine/`.
+Four things you can run right now and watch work:
 
-## Quick start (full stack v0.5)
+```bash
+# Clementine — the sovereign companion (local-first, Ollama-backed)
+cd apps/clementine && python3 clementine.py
 
-```powershell
-cd C:\Users\cryst\.grok\downloads\TeraAustralis-Incognita
-$env:PYTHONPATH = (Get-Location).Path
+# The Songline Bus — multi-AI message bus, Belt-Three law enforced in code
+cd crystal-core && python3 -m clementine.bridge.selftest
 
-# Decode → Ingest → Twin → Receipt → Upgrade (Starline Budapest sample)
-python -m services.pipeline_demo
+# Starline — peer-to-peer sovereign memory exchange (real Noise Protocol handshake)
+cd crystal-core && pip install -r requirements-starline.txt && python3 -m starline.selftest
+python3 -m starline.run demo   # watch it: pair, deny, grant, exchange, revoke, deny
 
-# All tests + sim + demo
-.\scripts\run-full-stack.ps1
-
-# Node agent (HTTP)
-python -m node.agent.server --port 8787
-
-# Demo UIs (Vision + Core)
-cd apps
-python -m http.server 8090
-# Vision:  http://127.0.0.1:8090/vision-web/
-# Core UI: http://127.0.0.1:8090/crystal-interface/
-
-# Happy paths over HTTP
-curl -X POST http://127.0.0.1:8787/demo/pipeline -H "Content-Type: application/json" -d "{}"
-curl -X POST http://127.0.0.1:8787/demo/flow -H "Content-Type: application/json" -d "{}"
-curl http://127.0.0.1:8787/layers
-curl http://127.0.0.1:8787/health
+# CrystalCore.OS — the mythos as a terminal you can fly
+python3 mythos/crystalcore_os.py
 ```
 
-**Pipeline doc:** [`docs/pipelines/DECODE-INGEST-UPGRADE.md`](docs/pipelines/DECODE-INGEST-UPGRADE.md)
+## Repo map
 
-### Clementine + Bridge
+| Path | What it is |
+|---|---|
+| `apps/clementine/` | The companion — CrystalCore framework package, terminal, Flask API, Svelte webapp, browser voice |
+| `apps/voicebox/` | Local MCP server giving Claude Code a spoken voice on your machine |
+| `apps/crystal-vision/`, `apps/crystal-interface/`, `apps/vision-web/` | Demo shells (simulated data, Authority HOLD — not production) |
+| `crystal-core/` | The protocol pack — Songline Bus (`clementine/bridge/`), Decode→Ingest→Twin pipeline (`services/`), Starline (`starline/`) |
+| `crystalcore/` | CrystalBridge — the MCP consent gate (fail-closed by design) |
+| `mythos/` | The Crystal universe canon — Codex, Apocryphon, the Book of the Sovereign Key, the Starline Transmissions, 79 pieces of art, `crystalcore_os.py` |
+| `site/` | The SvelteKit site for teraustralis.com.au |
+| `sdk/typescript/`, `node/mesh/` | Client SDK and an in-process mesh scaffold |
+| `TeraAustralis/`, `CrystalCore.Lattice/`, `docs/` | Lore, activation protocol notes, and architecture docs |
+| `_archive/` | Superseded code kept for provenance — not maintained, do not build on it |
 
-```powershell
-ollama run clementine
-.\scripts\run-bridge.ps1 -Guest grok
-python -m pytest tests -q
-```
+## The Covenant
 
-### Token simulation
+Clementine's core prompt (`apps/clementine/crystalcore/companion.py`) carries
+five binding rules, written out in full in `mythos/COVENANT.md`: no influence
+without explicit direction, an absolute and instant pause, memory that
+belongs entirely to the human, support that's offered rather than imposed,
+and restraint as its own form of respect. Starline's consent model
+(`crystal-core/starline/consent.py`) is the same law applied to data instead
+of conversation — nothing moves without a grant, and revocation takes effect
+on the very next request.
 
-```powershell
-python sim/model_cadcad.py --all
-# reports: sim/outputs/full_report.md
-```
+## Mythos
 
-## Architecture phases
+Start with [`mythos/content/THE-SOVEREIGN-KEY.md`](mythos/content/THE-SOVEREIGN-KEY.md)
+and [`mythos/content/STARLINE-TRANSMISSIONS.md`](mythos/content/STARLINE-TRANSMISSIONS.md).
+The full visual canon is in [`mythos/art/`](mythos/art/README.md).
 
-| Phase | Scope |
-|-------|--------|
-| 0 | Spec, sim, RFCs — **here** |
-| 1 | Mesh MVP (local node agent + CRDT) — **scaffold live** |
-| 2 | Twin & metering (energy POC) — **scaffold live** |
-| 3 | On-chain economics — **contracts stub only** |
-| 4 | HSM, formal verify, audit — **not started** |
+## Contributing, security, license
 
-## Key docs
+- **Contributing:** [`CONTRIBUTING.md`](CONTRIBUTING.md) — branch rules, the
+  Belt-Three truth labels, and what never gets committed (generated files,
+  personal memory data, secrets).
+- **Security:** [`SECURITY.md`](SECURITY.md) for this repo overall;
+  [`crystal-core/SECURITY.md`](crystal-core/SECURITY.md) for the protocol
+  pack's specific guarantees (Songline Bus, pipeline quarantine, Starline's
+  consent gating).
+- **License:** code is Apache-2.0 (`LICENSE`); mythos content — lore, art,
+  the Codex, the Apocryphon — is CC BY-NC-ND 4.0 (`LICENSE-CONTENT.md`):
+  share with credit, no commercial use, no derivatives.
 
-- [`docs/FULL-STACK-v0.3.md`](docs/FULL-STACK-v0.3.md) — gap fill (security, payments, journeys, SRE)  
-- [`docs/pipelines/DECODE-INGEST-UPGRADE.md`](docs/pipelines/DECODE-INGEST-UPGRADE.md)  
-- [`docs/CRYSTAL-CORE-ARCHITECTURE.md`](docs/CRYSTAL-CORE-ARCHITECTURE.md)  
-- [`docs/CRYSTAL-UNIVERSE.md`](docs/CRYSTAL-UNIVERSE.md)  
-- [`docs/EXEC-SUMMARY.md`](docs/EXEC-SUMMARY.md)  
-- [`docs/CULTURAL_PROTOCOL.md`](docs/CULTURAL_PROTOCOL.md)  
-- [`security/THREAT_MODEL.md`](security/THREAT_MODEL.md)  
-- [`spec/rfc/RFC-001-identity-receipts.md`](spec/rfc/RFC-001-identity-receipts.md)  
-- [`spec/rfc/RFC-003-federation-dispute.md`](spec/rfc/RFC-003-federation-dispute.md)  
-- [`deploy/regions/budapest-starline/charter.yaml`](deploy/regions/budapest-starline/charter.yaml)  
-- [`docs/CRYSTALBRIDGE.md`](docs/CRYSTALBRIDGE.md)  
-- [`docs/ACCESS.md`](docs/ACCESS.md)  
+---
 
-```text
-make test | make sim | make pipeline | make agent
-```  
-
-## Diagrams
-
-- `docs/images/four-layers.jpg`  
-- `docs/images/token-flow.jpg`  
-- `docs/images/sovereign-mesh.jpg`  
-
-## 90-day milestone
-
-Mesh MVP + twin POC + token simulation **in repo** · **no mainnet until audit**.
-
-## License
-
-**Code**: Apache-2.0 — see `LICENSE`. Token/mainnet rights not granted by default.
-
-**Content** (TerAustralis lore, CrystalVision suite, universe/brand docs, imagery):
-[CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/) — see
-`LICENSE-CONTENT.md`. Share with credit; no commercial use, no derivatives.
+*Non Solus.*
