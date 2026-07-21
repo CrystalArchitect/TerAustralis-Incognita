@@ -32,3 +32,6 @@ jobs:
       - name: Starline self-test
         working-directory: crystal-core
         run: python -m starline.selftest
+      - name: RDP self-test
+        working-directory: crystal-core
+        run: python -m rdp.selftest

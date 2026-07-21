@@ -25,10 +25,10 @@ clone / check / commit / push commands, see
    files are ignored and stay that way.
 5. **CI must pass.** Every PR runs a Python syntax check and the
    crystal-core self-tests (`clementine.bridge.selftest`,
-   `services.selftest`). Run them locally first:
+   `services.selftest`, `rdp.selftest`). Run them locally first:
    ```bash
    python -m compileall -q apps/clementine crystal-core crystalcore node tests
-   cd crystal-core && python -m clementine.bridge.selftest && python -m services.selftest
+   cd crystal-core && python -m clementine.bridge.selftest && python -m services.selftest && python -m rdp.selftest
    ```
 
 ## The Belt-Three law (labels)
