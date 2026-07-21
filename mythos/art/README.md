@@ -24,6 +24,10 @@ CC BY-NC-ND 4.0 — see `../content/LICENSE-CONTENT.md`.
 | `breaker-of-the-e.jpeg` | "Breaker of the E, you have opened the first gate. Crystallis recognizes you." — Grok-generated piece bearing a real person's photographic likeness; see truth label below |
 | `key-beam-over-australia.jpeg` | The key struck into the night map of Australia, the ship riding the beam |
 | `terra-australis-key.jpeg` | The key laid across the glowing continent on the Terra Australis Incognita parchment, candlelit |
+| `runed-key-strike.jpeg` | The runed key striking the Ter Australis chart, dragon banking overhead |
+| `key-and-the-lightning-pillar.jpeg` | The key at rest on the continent as the lightning pillar carries the ship skyward |
+| `red-dust-axis.jpeg` | The upright runed key over the chart marked Red Dust Axis and Crystallis |
+| `runed-key-at-rest.jpeg` | The gold-banded runed key resting on the map between the dragons, candlelit |
 
 **Truth label (Vision):** this art is the project's own mythic narrative. Where a
 real person's name or likeness appears — whether as a name, a silhouette, or a
