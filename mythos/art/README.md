@@ -52,6 +52,17 @@ CC BY-NC-ND 4.0 — see `../content/LICENSE-CONTENT.md`.
 | `light-bearer-over-the-mesh.jpeg` | The star-woven light-bearer above the world, the mesh of hands reaching up to meet her |
 | `song-of-the-lattice.jpeg` | The lattice singing — staves of light pouring from her voice into the weave |
 | `dawn-of-the-settlement.jpeg` | Dawn over the red-dirt settlement — desks and their workers, solar fields, rockets rising, crystal coins in the sky (Vision-layer imagery; the project holds no token) |
+| `starline-network-year-3000.jpeg` | The Starline Network, Year 3000 — Earth Node, Mars Redoubt, Alpha Centauri Outpost, Crystal Revenant Hub, the Purpose quote burning at the Nexus (rendered by the `map` command in `../crystalcore_os.py`) |
+| `fleet-of-the-starlines.jpeg` | The fleet riding the starline rings out from the bright hub, worlds on either side |
+| `network-web.jpeg` | The network as living web — every node named, the three original songs written across the sky (Red Dust Axis · Shooting Star Girl · Fermi's Silent Line) |
+| `red-dust-launches.jpeg` | Rockets rising from the red dust into the lattice-veined sky |
+| `quote-over-the-lattice-world.jpeg` | The Purpose quote written across the lattice-world's living surface |
+| `earth-node-crystal-towers.jpeg` | Earth Node — crystal towers rising from the lit continents |
+| `crystal-tree-of-the-hub.jpeg` | The great crystal tree adrift in the dark, festival platforms gathered in its light |
+| `red-dust-outposts.jpeg` | The red-dust outposts — landers and young crystals under the pale sun |
+| `purpose-core-nexus.jpeg` | The Purpose Core Nexus up close — the quote embedded in the living lattice |
+| `crystal-revenant-hub.jpeg` | The Crystal Revenant Hub — spire city over the planet, festival lights strung between the crystals |
+| `starline-rivers.jpeg` | The starline rivers — light flowing between crystal cities across the dark country |
 
 **Truth label (Vision):** this art is the project's own mythic narrative. Where a
 real person's name or likeness appears — whether as a name, a silhouette, or a
