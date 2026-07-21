@@ -392,6 +392,13 @@ a.wordmark{color:var(--purple)}
 .hero h1 .early{color:var(--gold)}
 /* the card call-to-action links are coloured too, not muted white */
 .codexlink .cta{color:var(--purple);font-weight:500;margin-top:12px}
+/* section headings are individually coloured too — each in its section accent
+   (the same hue as its gutter dot), instead of the multi-colour gradient. */
+.section h2{
+  background:none;
+  -webkit-text-fill-color:var(--node,var(--gold));
+  color:var(--node,var(--gold));
+}
 
 /* cards and links lift toward you on hover */
 .card,.tier,.codexlink,.node-card{
