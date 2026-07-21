@@ -57,19 +57,22 @@
       href: '/codex',
       title: 'The Codex',
       sub: 'The canonical mythic work — Chapters I through V',
-      cta: '→ Read the Codex'
+      cta: '→ Read the Codex',
+      lc: 'var(--gold)'
     },
     {
       href: '/apocryphon',
       title: 'The Apocryphon of Crystal',
       sub: 'A personal and philosophical companion text',
-      cta: '→ Read the Apocryphon'
+      cta: '→ Read the Apocryphon',
+      lc: 'var(--pink)'
     },
     {
       href: '/clementine',
       title: 'Clementine',
       sub: 'The sovereign companion — working software you can run tonight',
-      cta: '→ Meet Clementine'
+      cta: '→ Meet Clementine',
+      lc: 'var(--green)'
     }
   ];
 
@@ -164,7 +167,7 @@
     such. Where the two meet, the code is the source of truth and the story says so.
   </p>
 
-  <p class="subhead">Built — working software</p>
+  <p class="subhead" style="--sh:var(--green)">Built — working software</p>
   <div class="cards">
     {#each builtCards as card (card.href)}
       <a class="card" href={card.href} style="--st:{card.st}">
@@ -175,7 +178,7 @@
     {/each}
   </div>
 
-  <p class="subhead">Built + Vision — real protocol, mythic framing</p>
+  <p class="subhead" style="--sh:var(--blue)">Built + Vision — real protocol, mythic framing</p>
   <div class="cards">
     {#each mixedCards as card (card.href)}
       <a class="card" href={card.href} style="--st:{card.st}">
@@ -186,7 +189,7 @@
     {/each}
   </div>
 
-  <p class="subhead">Vision — mythos, narrative, and art</p>
+  <p class="subhead" style="--sh:var(--gold)">Vision — mythos, narrative, and art</p>
   <div class="cards">
     {#each visionCards as card (card.href)}
       <a class="card" href={card.href} style="--st:{card.st}">
@@ -209,7 +212,7 @@
 
 <section class="section node" id="codex" style="--node:var(--gold)">
   {#each codexLinks as link (link.href)}
-    <a class="codexlink" href={link.href}>
+    <a class="codexlink" href={link.href} style={`--lc:${link.lc}`}>
       <strong>{link.title}</strong>
       <span>{link.sub}</span>
       <span class="cta">{link.cta}</span>

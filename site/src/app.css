@@ -379,31 +379,19 @@ pre{background:var(--card);border:1px solid var(--line);border-radius:12px;
 }
 @keyframes shimmer{to{background-position:220% center}}
 
-/* Titles carry the crystal gradient, not flat white — matches the section
-   headings. Applies to the wordmark, eyebrow, hero, sub-labels, and every
-   card / doc title. */
-.wordmark,
-.eyebrow,
-.hero h1,
-.subhead,
-.card h3,
-.tier h3,
-.codexlink strong{
-  background:var(--title-gradient);
-  background-size:220% auto;
-  -webkit-background-clip:text;background-clip:text;
-  -webkit-text-fill-color:transparent;
-  color:var(--gold);
-}
-/* keep "We are early." its own warm gold within the gradient hero line */
-.hero h1 .early{-webkit-text-fill-color:var(--gold);color:var(--gold)}
+/* Titles are coloured individually — one hue each, not a gradient sweep.
+   Cards and tiers use their existing per-item accent (--st / --tc); codex
+   links and sub-labels take an accent passed in from the markup (--lc / --sh). */
+.card h3{color:var(--st,var(--gold))}
+.tier h3{color:var(--tc,var(--gold))}
+.codexlink strong{color:var(--lc,var(--gold))}
+.subhead{color:var(--sh,var(--silver))}
+.eyebrow{color:var(--blue)}
+a.wordmark{color:var(--purple)}
+.hero h1{color:var(--purple)}
+.hero h1 .early{color:var(--gold)}
 /* the card call-to-action links are coloured too, not muted white */
 .codexlink .cta{color:var(--purple);font-weight:500;margin-top:12px}
-@media (prefers-reduced-motion: no-preference){
-  .wordmark,.eyebrow,.hero h1,.subhead,.card h3,.tier h3,.codexlink strong{
-    animation:shimmer 9s linear infinite;
-  }
-}
 
 /* cards and links lift toward you on hover */
 .card,.tier,.codexlink,.node-card{
