@@ -78,11 +78,16 @@ cd crystal-core
 python3 -m rdp.selftest
 ```
 
-Eighteen tests, no dependencies (standard library only). They pin the
+Twenty-five tests, no dependencies (standard library only). They pin the
 empty-string SHA-256 as a fixed anchor, check the canonical form against the
 rules above, prove the chain both verifies a clean log and pinpoints the first
 tampered entry in a dirty one, and exercise every tier of the decision kernel
-below.
+below. That total includes seven **property checks** — seeded generation
+(stdlib `random`, no external dependency) that runs each invariant over hundreds
+of random inputs: precedence dominance, risk monotonicity, `decide` purity,
+canonical key-order independence, and single-mutation chain detection. Fixed
+seeds keep them reproducible; it's broad invariant coverage, not full
+shrinking-search.
 
 Watch the decision kernel run, one verdict per precedence tier, all recorded:
 

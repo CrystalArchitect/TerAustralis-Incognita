@@ -14,6 +14,7 @@ itself can't drift underneath us.
 from __future__ import annotations
 
 import json
+import random
 from decimal import Decimal
 from pathlib import Path
 
@@ -290,6 +291,147 @@ def test_decide_and_record_is_tamper_evident():
     assert not ok and broken == 0
 
 
+# --- property checks -------------------------------------------------------
+# Seeded generation over the real code — no Hypothesis dependency, so RDP stays
+# standard-library-only. Fixed seeds keep these reproducible, never flaky. This
+# is invariant coverage over many generated inputs, not full shrinking search.
+
+_ITER = 300
+
+
+def _rand_scalar(rng: random.Random):
+    return rng.choice([
+        rng.randint(-10000, 10000),
+        round(rng.uniform(-1000, 1000), rng.randint(0, 6)),
+        rng.choice([True, False]),
+        None,
+        rng.choice(["", "a", "hi", "did:crystal:x", "spark é"]),
+    ])
+
+
+def _rand_json(rng: random.Random, depth: int = 0):
+    if depth >= 3 or rng.random() < 0.5:
+        return _rand_scalar(rng)
+    if rng.random() < 0.5:
+        return [_rand_json(rng, depth + 1) for _ in range(rng.randint(0, 4))]
+    keys = rng.sample(["a", "b", "c", "d", "e", "f", "g"], rng.randint(0, 5))
+    return {k: _rand_json(rng, depth + 1) for k in keys}
+
+
+def _shuffle_keys(rng: random.Random, obj):
+    """A structurally-identical copy with every dict's key order randomized."""
+    if isinstance(obj, dict):
+        items = list(obj.items())
+        rng.shuffle(items)
+        return {k: _shuffle_keys(rng, v) for k, v in items}
+    if isinstance(obj, list):
+        return [_shuffle_keys(rng, v) for v in obj]
+    return obj
+
+
+def _rand_ctx(rng: random.Random) -> dict:
+    ctx: dict = {}
+    if rng.random() < 0.5:
+        ctx["constraints"] = [
+            {"id": f"c{k}", "satisfied": rng.choice([True, False])}
+            for k in range(rng.randint(0, 3))
+        ]
+    if rng.random() < 0.5:
+        ctx["options"] = ["a", "b"]
+        ctx["obligations"] = [
+            {"id": f"o{k}", "satisfied_by": rng.choice([["a"], ["b"], ["a", "b"], []])}
+            for k in range(rng.randint(0, 3))
+        ]
+    if rng.random() < 0.5:
+        ctx["witnesses"] = [
+            {"id": f"w{k}", "source": rng.choice(["a", "b"]), "biased": rng.choice([True, False])}
+            for k in range(rng.randint(0, 3))
+        ]
+    if rng.random() < 0.5:
+        ctx["risk"] = round(rng.uniform(0, 1), 6)
+    return ctx
+
+
+def test_property_constraint_violation_always_dominates():
+    rng = random.Random(1)
+    for _ in range(_ITER):
+        ctx = _rand_ctx(rng)
+        ctx = {**ctx, "constraints": ctx.get("constraints", []) + [{"id": "hard", "satisfied": False}]}
+        v = decide(ctx)
+        assert v["outcome"] == DENY and v["rule"] == RULE_CONSTRAINT, ctx
+
+
+def test_property_dilemma_dominates_when_no_constraint():
+    rng = random.Random(2)
+    for _ in range(_ITER):
+        ctx = _rand_ctx(rng)
+        ctx = {**ctx, "constraints": [], "options": ["a", "b"], "obligations": [
+            {"id": "p", "satisfied_by": ["a"]},
+            {"id": "q", "satisfied_by": ["b"]},
+        ]}
+        v = decide(ctx)
+        assert v["outcome"] == ESCALATE and v["rule"] == RULE_DILEMMA, ctx
+
+
+def test_property_bias_dominates_when_no_constraint_or_dilemma():
+    rng = random.Random(3)
+    for _ in range(_ITER):
+        ctx = _rand_ctx(rng)
+        ctx = {**ctx, "constraints": [], "options": [], "obligations": [], "witnesses": [
+            {"id": "w1", "source": "a"}, {"id": "w2", "source": "a"},
+        ]}
+        v = decide(ctx)
+        assert v["outcome"] == REVIEW and v["rule"] == RULE_BIAS, ctx
+
+
+def test_property_risk_is_monotonic_in_clean_context():
+    rng = random.Random(4)
+    severity = {ALLOW: 0, HOLD: 1, DENY: 2}
+    for _ in range(_ITER):
+        s1, s2 = sorted([round(rng.uniform(0, 1), 6), round(rng.uniform(0, 1), 6)])
+        o1 = decide({"risk": s1})["outcome"]
+        o2 = decide({"risk": s2})["outcome"]
+        assert severity[o1] <= severity[o2], (s1, s2, o1, o2)
+
+
+def test_property_decide_is_pure_and_deterministic():
+    rng = random.Random(5)
+    for _ in range(_ITER):
+        ctx = _rand_ctx(rng)
+        snapshot = json.dumps(ctx, sort_keys=True)
+        v1 = decide(ctx)
+        v2 = decide(ctx)
+        assert v1 == v2, ctx
+        assert json.dumps(ctx, sort_keys=True) == snapshot, "decide mutated its input"
+
+
+def test_property_canonical_is_key_order_independent():
+    rng = random.Random(6)
+    for _ in range(_ITER):
+        obj = _rand_json(rng)
+        shuffled = _shuffle_keys(rng, obj)
+        a = canonical_serialize(obj)
+        b = canonical_serialize(shuffled)
+        assert a == b, (obj, shuffled)
+        assert sha256_hex(a) == sha256_hex(b)
+
+
+def test_property_chain_catches_any_single_mutation():
+    rng = random.Random(7)
+    for _ in range(_ITER):
+        n = rng.randint(1, 6)
+        chain = new_chain()
+        for k in range(n):
+            append(chain, {"kind": "e", "i": k, "payload": _rand_json(rng)})
+        ok, broken = verify(chain)
+        assert ok and broken == -1
+        i = rng.randrange(n)
+        tampered = [dict(e) for e in chain]
+        tampered[i] = {**tampered[i], "i": tampered[i]["i"] + 100000}  # guaranteed change
+        ok, broken = verify(tampered)
+        assert not ok and broken == i, (i, broken)
+
+
 def test_determinism_across_independent_chains():
     events = [
         {"kind": "grant", "subject": "did:crystal:a", "amount": 12.5},
@@ -324,6 +466,13 @@ def main() -> int:
         test_decide_each_tier_in_isolation,
         test_decide_precedence_is_strict,
         test_decide_and_record_is_tamper_evident,
+        test_property_constraint_violation_always_dominates,
+        test_property_dilemma_dominates_when_no_constraint,
+        test_property_bias_dominates_when_no_constraint_or_dilemma,
+        test_property_risk_is_monotonic_in_clean_context,
+        test_property_decide_is_pure_and_deterministic,
+        test_property_canonical_is_key_order_independent,
+        test_property_chain_catches_any_single_mutation,
         test_determinism_across_independent_chains,
     ]
     for t in tests:
