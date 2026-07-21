@@ -130,6 +130,23 @@ arguments), never the raw payload — so a consent input that carries sensitive
 data doesn't leak into the ledger, while anyone holding the original arguments
 can still prove they match.
 
+**A wrapper, and a runnable demo with the real gate.** For the common case there's
+[`recording_gate`](adapters.py) — a thin, duck-typed wrapper around *any* gate
+whose `check()` returns a `GateResult`-shaped object. It calls the wrapped gate
+first (enforcement, unchanged), then records the outcome *after* the result
+exists; if the gate raises, nothing is recorded. Timestamps come from an injected
+`clock` so the canonical record stays reproducible. To watch it drive the **real**
+CrystalBridge `ConsentGate` — an approved allow, an unapproved refuse, a
+no-permission refuse, then a verified chain and a caught tamper:
+
+```
+python3 -m rdp.run gate-demo
+```
+
+That subcommand imports `crystalcore.gate.ConsentGate` for real (lazily, so
+`rdp.run demo` stays dependency-free); it is *not* a stub. The one-line reminder
+it prints is the whole point: **the gate decided; RDP only remembered.**
+
 **Keeping the separation clean.** The adapter is called *after* the gate decides
 and can never sit between the gate and its verdict. If recording failed
 entirely, the allow/deny would stand unchanged — RDP is the ledger, not the lock.

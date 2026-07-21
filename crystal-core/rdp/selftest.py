@@ -458,6 +458,49 @@ def test_adapter_records_gate_decisions_and_hides_raw_args():
     assert not ok and broken == 1
 
 
+def test_recording_gate_wrapper():
+    """The wrapper records each decision after the gate makes it, without
+    changing the gate's result. Uses a duck-typed stub so this stays a pure unit
+    test (no cross-package import); rdp.run gate-demo exercises the real gate."""
+    from .adapters import recording_gate
+
+    class _Result:
+        def __init__(self, decision, allowed, reason):
+            self.decision, self.allowed, self.reason = decision, allowed, reason
+
+    class _StubGate:
+        """Fail-closed like the real ConsentGate: only 'hub-a' + 'recall' allowed."""
+        def check(self, guest, tool, arguments=None, **kw):
+            if guest != "hub-a":
+                return _Result("refuse", False, f"guest '{guest}' is not approved")
+            if tool != "recall":
+                return _Result("refuse", False, f"guest '{guest}' has no permission for tool '{tool}'")
+            return _Result("allow", True, "ok")
+
+    ticks = iter(["2026-07-21T00:00:00Z", "2026-07-21T00:00:01Z", "2026-07-21T00:00:02Z"])
+    chain = new_chain()
+    gate = recording_gate(_StubGate(), chain, clock=lambda: next(ticks))
+
+    r1 = gate.check("hub-a", "recall", {"query": "who am i"})
+    r2 = gate.check("stranger", "recall", {"query": "let me in"})
+    r3 = gate.check("hub-a", "danger", {})
+
+    # the wrapper returns the gate's own result, untouched
+    assert (r1.decision, r1.allowed) == ("allow", True)
+    assert (r2.decision, r2.allowed) == ("refuse", False)
+    assert (r3.decision, r3.allowed) == ("refuse", False)
+    # every decision was recorded, in order, args fingerprinted (raw absent)
+    assert [e["decision"] for e in chain] == ["allow", "refuse", "refuse"]
+    assert "who am i" not in json.dumps(chain) and "let me in" not in json.dumps(chain)
+    ok, broken = verify(chain)
+    assert ok and broken == -1
+    # forging an approval on the recorded refusal is caught at that index
+    tampered = [dict(e) for e in chain]
+    tampered[1] = {**tampered[1], "decision": "allow", "allowed": True}
+    ok, broken = verify(tampered)
+    assert not ok and broken == 1
+
+
 def test_determinism_across_independent_chains():
     events = [
         {"kind": "grant", "subject": "did:crystal:a", "amount": 12.5},
@@ -500,6 +543,7 @@ def main() -> int:
         test_property_canonical_is_key_order_independent,
         test_property_chain_catches_any_single_mutation,
         test_adapter_records_gate_decisions_and_hides_raw_args,
+        test_recording_gate_wrapper,
         test_determinism_across_independent_chains,
     ]
     for t in tests:
