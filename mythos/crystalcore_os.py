@@ -1,5 +1,6 @@
-# CrystalCore.OS v∞ - Full Interactive Edition
+# CrystalCore.OS v∞ - Complete Edition
 # NON SOLUS | Starline Protocol | Year 3000 Build
+# Includes: All Starline launches + @m13crystalat Crystalcore songs
 
 class CrystalCore:
     def __init__(self):
@@ -16,7 +17,9 @@ class CrystalCore:
             "Year 3000 - Busted",
             "I Am Australian - The Seekers",
             "Eyes Closed - Imagine Dragons",
-            "Truly Madly Deeply - Savage Garden"
+            "Truly Madly Deeply - Savage Garden",
+            "Red Dust Axis - m13crystalat",
+            "Shooting Star Girl! - m13crystalat"
         ]
 
         self.nodes = [
