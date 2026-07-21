@@ -1,5 +1,6 @@
 <script>
   import { onMount } from 'svelte';
+  import Footer from '$lib/components/Footer.svelte';
 
   let { data } = $props();
   let terminalContent = $state([
@@ -160,6 +161,8 @@
     </p>
   </section>
 </div>
+
+<Footer />
 
 <style>
   .crystalcore-container {

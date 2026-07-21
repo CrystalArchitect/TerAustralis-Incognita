@@ -137,6 +137,16 @@
   <p><a class="btn btn-ghost" href="/docs">Open the full Archive →</a></p>
 </section>
 
+<section class="section node" id="music" style="--node:var(--pink)">
+  <h2>The Songlines</h2>
+  <p>
+    Threads of memory and belonging carried in sound as much as story. The mythos has an original
+    soundtrack — Starline Transmissions, Songlines, and themes from the Crystal universe, written
+    and produced alongside the Codex itself.
+  </p>
+  <p><a class="btn btn-ghost" href="https://suno.com/@m13crystalat">Listen on Suno →</a></p>
+</section>
+
 <section class="section node" id="support" style="--node:var(--gold)">
   <h2>Support the Vision</h2>
   <p>
@@ -166,6 +176,7 @@
   <p class="subhead">Other Ways to Contribute</p>
   <ul class="support-list">
     <li>Star this <a href="https://github.com/CrystalArchitect/The-Crystal-Vision">repository on GitHub</a></li>
+    <li>Listen to and share the soundtrack on <a href="https://suno.com/@m13crystalat">Suno</a></li>
     <li>Share the project with people who might resonate</li>
     <li>Offer your skills as a storyteller, singer, musician, writer, artist, or developer</li>
     <li>Reach out if you feel called to collaborate</li>
@@ -179,7 +190,8 @@
   <h2>Contact</h2>
   <p>
     Stewarded by the CrystalArchitect<br />
-    <a href="https://x.com/m13crystalat"><strong>@M13CrystalAT on X</strong></a>
+    <a href="https://x.com/m13crystalat"><strong>@M13CrystalAT on X</strong></a><br />
+    <a href="https://suno.com/@m13crystalat"><strong>@m13crystalat on Suno</strong></a>
   </p>
 </section>
 
