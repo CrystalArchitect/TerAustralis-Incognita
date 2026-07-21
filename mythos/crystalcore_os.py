@@ -104,6 +104,21 @@ class CrystalCore:
             for t in self.songline_bus:
                 print(f"  - {t}")
 
+    def map(self):
+        print("""
+                        [PURPOSE CORE NEXUS]
+                                   ↑
+          ┌────────────────────────┼────────────────────────┐
+          │                        │                        │
+   [EARTH NODE]              [MARS REDOUBT]           [ALPHA CENTAURI]
+          │                        │                        │
+          └──────────┬─────────────┴─────────────┬──────────┘
+                     │                           │
+              [CRYSTAL REVENANT HUB]      [OUTER STARLINE ROUTES]
+                     │
+              (Zero-g festivals & lattice music)
+""")
+
     def status(self):
         print("\n=== CRYSTALCORE.OS STATUS ===")
         print(f"Timeline:           {self.timeline}")
@@ -124,6 +139,7 @@ Available commands:
   network              - Enter full Starline network
   explore              - Begin network exploration
   jump [year]          - Time jump (default 3000)
+  map                  - Display the Starline network chart
   song [track]         - Play or list soundtracks
   status               - Show full system status
   help                 - Show this list
@@ -164,6 +180,8 @@ def main():
             elif cmd == "jump":
                 year = int(arg) if arg and arg.isdigit() else 3000
                 os.jump(year)
+            elif cmd == "map":
+                os.map()
             elif cmd == "song":
                 os.song(arg)
             elif cmd == "status":
