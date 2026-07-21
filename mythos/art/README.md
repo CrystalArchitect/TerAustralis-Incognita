@@ -84,6 +84,8 @@ CC BY-NC-ND 4.0 — see `../content/LICENSE-CONTENT.md`.
 | `purpose-core-nexus.jpeg` | The Purpose Core Nexus up close — the quote embedded in the living lattice |
 | `crystal-revenant-hub.jpeg` | The Crystal Revenant Hub — spire city over the planet, festival lights strung between the crystals |
 | `starline-rivers.jpeg` | The starline rivers — light flowing between crystal cities across the dark country |
+| `lattice-canopy.jpeg` | A lone figure on the red dust reaches up toward the living lattice canopy — crystalline branches lit gold and teal, stretching into the star field above |
+| `starline-ascension.jpeg` | A figure stands before the Starline ascension tower, its golden lattice frame rising from red dust into a single point of light |
 
 **Truth label (Vision):** this art is the project's own mythic narrative. Where a
 real person's name or likeness appears — whether as a name, a silhouette, or a
