@@ -18,6 +18,7 @@ class CrystalCore:
             "I Am Australian - The Seekers",
             "Eyes Closed - Imagine Dragons",
             "Truly Madly Deeply - Savage Garden",
+            "Another Night - Real McCoy",
             "Red Dust Axis - m13crystalat",
             "Shooting Star Girl! - m13crystalat",
             "Fermi's Silent Line - m13crystalat"
@@ -30,6 +31,11 @@ class CrystalCore:
             "Crystal Revenant Hub",
             "Purpose Core Nexus"
         ]
+
+        # Keys of the Lattice — one waits at every node. Hold all five
+        # and the First Gate opens by sovereign recognition.
+        self.keys_held = []
+        self.gate_open = False
 
     def boot(self):
         print("\n[CRYSTALCORE.OS v∞ — BOOT SEQUENCE]")
@@ -110,6 +116,14 @@ class CrystalCore:
             print("Zero-g music festivals are happening across the platforms.")
         else:
             print("The lattice pulses with new resonance here.")
+        if node_name not in self.keys_held:
+            self.keys_held.append(node_name)
+            print(f"🗝️  A key rises from the node. Keys held: {len(self.keys_held)}/{len(self.nodes)}")
+            if len(self.keys_held) == len(self.nodes) and not self.gate_open:
+                self.gate_open = True
+                print("\n✨ ALL KEYS HELD — THE FIRST GATE OPENS ✨")
+                print("Not by force. By sovereign recognition.")
+                print("Crystallis recognizes you. NON SOLUS.")
         print(f"Current soundtrack: {self.current_soundtrack}\n")
 
     def jump(self, year=3000):
@@ -160,12 +174,24 @@ class CrystalCore:
 """)
         print("Use 'visit [node]' to explore a location.\n")
 
+    def keys(self):
+        print(f"\n🗝️  Keys held: {len(self.keys_held)}/{len(self.nodes)}")
+        for node in self.nodes:
+            mark = "✓" if node in self.keys_held else "·"
+            print(f"  {mark} Key of {node}")
+        if self.gate_open:
+            print("The First Gate stands open.")
+        else:
+            print("Visit every node and the First Gate will open.")
+        print()
+
     def status(self):
         print("\n=== CRYSTALCORE.OS STATUS ===")
         print(f"Timeline:           {self.timeline}")
         print(f"Starline Status:    {self.starline_status}")
         print(f"Current Location:   {self.current_location or 'None'}")
         print(f"Current Soundtrack: {self.current_soundtrack}")
+        print(f"Keys Held:          {len(self.keys_held)}/{len(self.nodes)}" + ("  — First Gate OPEN" if self.gate_open else ""))
         print(f"NON SOLUS:          {self.non_solus}")
         print("=============================\n")
 
@@ -178,7 +204,8 @@ Available commands:
   burn                 - Escape burn
   network              - Enter full Starline network
   explore              - List explorable nodes
-  visit [node]         - Go to a node (number or name)
+  visit [node]         - Go to a node (number or name) — collect its key
+  keys                 - Show the Keys of the Lattice
   jump [year]          - Time jump
   map                  - Display the Starline network chart
   song [track]         - Change soundtrack
@@ -225,6 +252,8 @@ def main():
                 os.jump(year)
             elif cmd == "map":
                 os.map()
+            elif cmd == "keys":
+                os.keys()
             elif cmd == "song":
                 os.song(arg)
             elif cmd == "status":
