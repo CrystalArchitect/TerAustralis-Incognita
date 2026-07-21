@@ -1,4 +1,4 @@
-# GitHub Sponsors Tiers — The Crystal Vision
+# Patreon Tiers — The Crystal Vision
 
 The tiers below support the ongoing work of TerAustralis Incognita — the Codex, the Apocryphon, and the development of Clementine. Thank you for helping the vision move forward.
 
@@ -30,4 +30,4 @@ For those who want to become a true partner in this vision. This tier is for ser
 
 ---
 
-*Support: [GitHub Sponsors](https://github.com/sponsors/M13CrystalAT) · Stewarded by the CrystalArchitect · Non Solus — Not Alone*
+*Support: [Patreon](https://patreon.com/CrystalCore91) · Stewarded by the CrystalArchitect · Non Solus — Not Alone*
