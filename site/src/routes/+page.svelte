@@ -175,7 +175,7 @@
 
   <p class="subhead">Other Ways to Contribute</p>
   <ul class="support-list">
-    <li>Star this <a href="https://github.com/CrystalArchitect/The-Crystal-Vision">repository on GitHub</a></li>
+    <li>Star this <a href="https://github.com/CrystalArchitect/TeraAustralis-Incognita">repository on GitHub</a></li>
     <li>Listen to and share the soundtrack on <a href="https://suno.com/@m13crystalat">Suno</a></li>
     <li>Share the project with people who might resonate</li>
     <li>Offer your skills as a storyteller, singer, musician, writer, artist, or developer</li>
