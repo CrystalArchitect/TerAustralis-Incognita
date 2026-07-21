@@ -93,6 +93,8 @@ CC BY-NC-ND 4.0 — see `../content/LICENSE-CONTENT.md`.
 | `walker-of-the-light-road.jpeg` | A walker on the glowing road across the red plain, a teal storm-nebula breaking overhead |
 | `bridge-to-the-ring-station.jpeg` | A figure at the light-veined bridge reaching toward the ring-station adrift over the red land |
 | `crystal-hands-at-the-launch.jpeg` | Crystalline figures gathered around the light as a rocket rises from the red planet behind them |
+| `crystal-lattice-flow.jpeg` | *AI-generated (Grok Imagine)* — the Lattice as a flowing river of crystal and light across the deep |
+| `resonance-heart.jpeg` | *AI-generated (Grok Imagine)* — the Resonance Heart, a crystal heart alight at the core |
 
 **Truth label (Vision):** this art is the project's own mythic narrative. Where a
 real person's name or likeness appears — whether as a name, a silhouette, or a
