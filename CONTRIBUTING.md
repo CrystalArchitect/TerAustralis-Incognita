@@ -4,6 +4,9 @@ Welcome. This is the canonical monorepo of the Crystal universe — the
 narrative, the companion, the protocol, and the bridge all live here.
 Contributions are welcome; here's what to know before you open a PR.
 
+Before opening a PR, also read [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) —
+short, and specific to how this project actually works.
+
 ## Ground rules
 
 1. **Work on a branch, propose via pull request.** Direct pushes to `main`
@@ -65,6 +68,9 @@ This repo is dual-licensed:
 | `mythos/` | The canon — Codex, Apocryphon, Covenant, the Book of the Sovereign Key, art |
 | `site/` | SvelteKit site for teraustralis.com.au |
 | `_archive/` | Legacy copies kept for provenance — do not build on these |
+
+See [`ROADMAP.md`](ROADMAP.md) for what's built, in progress, or not yet
+started across these paths.
 
 ## The Covenant applies to code too
 
