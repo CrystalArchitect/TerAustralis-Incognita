@@ -83,6 +83,29 @@ SHA-256 as a fixed anchor, check the canonical form against the rules above, and
 prove the chain both verifies a clean log and pinpoints the first tampered entry
 in a dirty one.
 
+## Interop: conformance vectors
+
+If a second implementation (another language, another codebase) is going to
+share a chain with this one, the two must agree on the canonical bytes exactly —
+otherwise their hashes diverge and neither can verify the other's record.
+
+[`vectors.json`](vectors.json) is the **authoritative, language-neutral
+definition** of the canonical form. Each entry gives a raw-JSON input, the exact
+canonical string it must serialize to, and that string's SHA-256:
+
+| input | canonical | sha256 |
+|---|---|---|
+| `1` | `1.000000` | `b42a73…` |
+| `{"b":1,"a":2,"c":3}` | `{"a":2.000000,"b":1.000000,"c":3.000000}` | `7deaf8…` |
+| `{"kind":"grant","subject":"did:crystal:a","amount":12.5}` | `{"amount":12.500000,"kind":"grant","subject":"did:crystal:a"}` | `96aef8…` |
+
+An implementation is conformant **iff** it reproduces every `canonical` string
+and `sha256` in that file. Note the consequence of the fixed-6-dp, unquoted rule:
+a renderer that strips trailing zeros (`12.5` → `12.5` instead of `12.500000`)
+fails these vectors *by design* — that's the point of pinning them. `vectors.json`
+is checked against the code on every CI run (see `selftest.py`), so it can never
+quietly drift from the implementation.
+
 ## Using it
 
 ```python
