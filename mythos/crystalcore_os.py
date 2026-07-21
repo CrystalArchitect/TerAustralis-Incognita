@@ -15,7 +15,8 @@ class CrystalCore:
             "Shotgun - George Ezra",
             "Year 3000 - Busted",
             "I Am Australian - The Seekers",
-            "Eyes Closed - Imagine Dragons"
+            "Eyes Closed - Imagine Dragons",
+            "Truly Madly Deeply - Savage Garden"
         ]
 
         self.nodes = [
@@ -99,7 +100,7 @@ class CrystalCore:
         if node_name == "Purpose Core Nexus":
             print(f'"{self.purpose_core}"')
         elif node_name == "Crystal Revenant Hub":
-            print("Zero-g music festivals are in full swing.")
+            print("Zero-g music festivals are happening across the platforms.")
         else:
             print("The lattice pulses with new resonance here.")
         print(f"Current soundtrack: {self.current_soundtrack}\n")
@@ -113,9 +114,15 @@ class CrystalCore:
 
     def song(self, track=None):
         if track:
-            if track in self.songline_bus:
-                self.current_soundtrack = track
-                print(f"\n🎵 Now playing: {track}\n")
+            # Match flexibly: any part of a title or artist finds the song.
+            matched = None
+            for song in self.songline_bus:
+                if track.lower() in song.lower():
+                    matched = song
+                    break
+            if matched:
+                self.current_soundtrack = matched
+                print(f"\n🎵 Now playing: {matched}\n")
             else:
                 print("Track not found. Available tracks:")
                 for t in self.songline_bus:
