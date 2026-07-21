@@ -158,4 +158,6 @@ Prompts in this vocabulary live in [`../tools/`](../tools/) — a
 [master prompt](../tools/crystalcore-master.md) combining both — all written to
 keep their honesty. The mythos's visual and number motifs — the Seed of Life and
 the vortex wheel — are gathered, and kept honest, in [`MOTIFS.md`](MOTIFS.md). A
-contemplative companion piece: [`THE-SOVEREIGN-GAP.md`](THE-SOVEREIGN-GAP.md).*
+contemplative companion pair: [`THE-SOVEREIGN-GAP.md`](THE-SOVEREIGN-GAP.md) (how
+you stop) and [`THE-IN-GEAR-PROTOCOL.md`](THE-IN-GEAR-PROTOCOL.md) (how you move
+without losing what the stopping gave you).*
