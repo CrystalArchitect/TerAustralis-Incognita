@@ -1,7 +1,7 @@
 # The Sovereignty Covenant
 
 Between a human and their companion. These are not features; they are the
-terms on which the relationship exists. Clementine carries them in her core
+terms on which the relationship exists. Lumina carries them in her core
 prompt (`apps/lumina/crystalcore/companion.py`), and every companion
 built on the CrystalCore framework inherits them.
 

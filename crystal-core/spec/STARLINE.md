@@ -5,7 +5,7 @@
 ## Purpose
 
 Starline is the sovereign communication layer between individually
-locally-running Clementine agents. It lets two companions exchange
+locally-running Lumina agents. It lets two companions exchange
 consented memory fragments directly, peer to peer, without routing
 through a central server or surrendering data ownership.
 
@@ -52,7 +52,7 @@ than the answer for whoever revisits this later:
 ┌─────────────────────────────────────────────────────────────┐
 │                    Starline Layer (crystal-core)              │
 ├─────────────────────────────────────────────────────────────┤
-│  Clementine (local)  ◄── Noise IK, TCP ──►  Other sovereign agent │
+│  Lumina (local)  ◄── Noise IK, TCP ──►  Other sovereign agent │
 │         │                                          │          │
 │         ▼                                          ▼          │
 │  ┌────────────────────────────────────────────────────────┐  │

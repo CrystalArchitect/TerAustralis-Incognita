@@ -1,6 +1,6 @@
 # Strategy — The Accelerated Path Toward External Readiness
 
-> **Status: strategy document.** This is the ambitious variant of the roadmap — tuned toward making Clementine and the CrystalMatrix compelling enough for serious consideration by frontier AI and robotics teams, with xAI (Grok) and Tesla (Optimus) as aspirational reference points. **The project has no affiliation with, or endorsement from, xAI, Tesla, or any company named here.** For the full protocol design and the design-oriented six-phase roadmap, see `CRYSTALMATRIX.md`.
+> **Status: strategy document.** This is the ambitious variant of the roadmap — tuned toward making Lumina and the CrystalMatrix compelling enough for serious consideration by frontier AI and robotics teams, with xAI (Grok) and Tesla (Optimus) as aspirational reference points. **The project has no affiliation with, or endorsement from, xAI, Tesla, or any company named here.** For the full protocol design and the design-oriented six-phase roadmap, see `CRYSTALMATRIX.md`.
 
 ---
 
@@ -39,7 +39,7 @@ Getting something integrated into systems like Grok or Optimus is extremely diff
 - User can teach her important facts that persist over time ✅
 - Clean, modular, well-documented codebase 🟡 (modular `crystalcore/` package ✅; remaining: documentation depth, MLX backend)
 
-**Why this matters for adoption:** This is the foundation. If Clementine doesn't feel meaningfully better than existing AI companions in memory and presence, nothing else will matter.
+**Why this matters for adoption:** This is the foundation. If Lumina doesn't feel meaningfully better than existing AI companions in memory and presence, nothing else will matter.
 
 ### Phase 2 — Encrypted Peer-to-Peer + Basic Collaboration (6 – 12 months)
 
@@ -100,7 +100,7 @@ Getting something integrated into systems like Grok or Optimus is extremely diff
 
 1. **Focus heavily on Phases 1 and 2 first.** Without a genuinely excellent local companion and basic private collaboration, the later privacy layers won't matter.
 2. **Document and demonstrate relentlessly.** Serious teams respond better to working prototypes and clear thinking than to grand visions alone.
-3. **Be very clear on the value proposition.** What specific problem does Clementine + CrystalMatrix solve better than existing approaches?
+3. **Be very clear on the value proposition.** What specific problem does Lumina + CrystalMatrix solve better than existing approaches?
 
 ---
 
