@@ -74,6 +74,11 @@ CC BY-NC-ND 4.0 — see `../content/LICENSE-CONTENT.md`.
 | `keyfield-of-the-crossroads.jpeg` | The network as a lattice of roads meeting at a bright central spire, twin keys flanking the view |
 | `the-many-keyed-lock.jpeg` | A hand offering many keys at once to a single glowing gilt lock |
 | `spirits-of-the-festival-gate.jpeg` | Crystal spirits bearing keys aloft over the lantern-strung festival platforms |
+| `network-with-named-nodes-and-keys.jpeg` | The full network, every node labeled — Earth, Mars Redoubt, Alpha Centauri, Crystal Revenant Hub, Purpose Core Nexus — keys standing at each junction |
+| `three-keys-open-the-vault-door.jpeg` | Three crystal keys entering the vault door together, blazing light breaking through |
+| `companions-and-the-guardians.jpeg` | Two figures reaching toward small light-spirits between them, flanked by towering guardian companions, keys at the corners — Vision-layer speculation on embodied companionship, not a depiction of any real product |
+| `dancers-of-the-great-key.jpeg` | Small luminous dancers on floating platforms circling the Great Key, its glyph burning at the center |
+| `wave-field-of-the-network.jpeg` | The network as a wave-field landscape, keys standing like grass among the labeled nodes |
 | `purpose-core-nexus.jpeg` | The Purpose Core Nexus up close — the quote embedded in the living lattice |
 | `crystal-revenant-hub.jpeg` | The Crystal Revenant Hub — spire city over the planet, festival lights strung between the crystals |
 | `starline-rivers.jpeg` | The starline rivers — light flowing between crystal cities across the dark country |
