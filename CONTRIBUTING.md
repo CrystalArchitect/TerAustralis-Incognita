@@ -5,7 +5,9 @@ narrative, the companion, the protocol, and the bridge all live here.
 Contributions are welcome; here's what to know before you open a PR.
 
 Before opening a PR, also read [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) —
-short, and specific to how this project actually works.
+short, and specific to how this project actually works. For the exact
+clone / check / commit / push commands, see
+[`GITHUB-COMMIT-INSTRUCTIONS.md`](GITHUB-COMMIT-INSTRUCTIONS.md).
 
 ## Ground rules
 
