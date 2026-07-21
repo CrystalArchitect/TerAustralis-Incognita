@@ -146,15 +146,14 @@
 
   <p class="subhead">Financial Support Options</p>
   <ul class="support-list">
-    <li><a href="https://github.com/sponsors/M13CrystalAT"><strong>GitHub Sponsors</strong></a></li>
     <li><a href="https://patreon.com/CrystalCore91"><strong>Patreon</strong></a></li>
   </ul>
-  <p style="color:var(--muted)">GitHub Sponsors tiers:</p>
+  <p style="color:var(--muted)">Patreon tiers:</p>
   <div class="tiers">
     {#each tiers as tier (tier.title)}
       <a
         class="tier"
-        href="https://github.com/sponsors/M13CrystalAT"
+        href="https://patreon.com/CrystalCore91"
         style="--tc:{tier.color}"
       >
         <span class="price">{tier.price}</span>
