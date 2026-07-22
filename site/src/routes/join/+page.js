@@ -19,7 +19,7 @@ export function load() {
       st: 'var(--blue)'
     },
     {
-      title: 'Add to the Songlines',
+      title: 'Add to the Starline Transmissions',
       body: 'The soundtrack is a living thing. New voices and tracks are welcome.',
       href: 'https://suno.com/@m13crystalat',
       cta: '→ On Suno',
@@ -47,7 +47,7 @@ export function load() {
     {
       handle: '@m13crystalat',
       href: 'https://suno.com/@m13crystalat',
-      work: 'Original music — the Songlines soundtrack.',
+      work: 'Original music — the Starline Transmissions soundtrack.',
       st: 'var(--pink)'
     }
   ];

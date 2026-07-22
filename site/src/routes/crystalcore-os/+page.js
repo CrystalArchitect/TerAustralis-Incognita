@@ -9,7 +9,7 @@ export function load() {
     { cmd: 'explore', desc: 'List explorable nodes across the network', output: '🔭 EXPLORATION MODE ACTIVE\nAvailable nodes:\n  1. Earth Node\n  2. Mars Redoubt\n  3. Alpha Centauri Outpost\n  4. Crystal Revenant Hub\n  5. Purpose Core Nexus' },
     { cmd: 'visit [node]', desc: 'Travel to a node and claim its key', output: '🌌 Arriving at: Purpose Core Nexus\n🗝️  A key rises from the node.' },
     { cmd: 'map', desc: 'Display the Starline network as a chart', output: '╔════════ STARLINE NETWORK - YEAR 3000 ════════╗\n║          [EARTH NODE]\n║               │\n║               ▼\n║          [MARS REDOUBT] → [ALPHA CENTAURI]' },
-    { cmd: 'song [track]', desc: 'Change the Songline soundtrack', output: '🎵 Now playing: Shooting Star Girl! - m13crystalat' }
+    { cmd: 'song [track]', desc: 'Change the Starline soundtrack', output: '🎵 Now playing: Shooting Star Girl! - m13crystalat' }
   ];
 
   const nodes = [
