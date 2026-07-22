@@ -2,6 +2,10 @@
 
     python3 -m clementine.bridge.run --agents echo,sisters --turns 4 --topic "first water"
     python3 -m clementine.bridge.run --agents claude,grok --turns 3 --topic "water care"  # needs API keys
+
+Or fan one question out to every agent independently and cross-compare:
+
+    python3 -m clementine.bridge.run --mode matrix --agents claude,gpt,grok --topic "what is the Starline Weaver?"
 """
 
 from __future__ import annotations
@@ -26,10 +30,13 @@ REGISTRY = {
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Clementine Starline Weaver")
+    parser.add_argument("--mode", choices=["conversation", "matrix"], default="conversation",
+                        help="conversation: round-robin turns. matrix: same question to every "
+                             "agent independently, once each, then cross-compare.")
     parser.add_argument("--agents", default="echo,sisters",
                         help=f"comma-separated from: {', '.join(REGISTRY)}")
-    parser.add_argument("--turns", type=int, default=4)
-    parser.add_argument("--topic", default="first water")
+    parser.add_argument("--turns", type=int, default=4, help="conversation mode only")
+    parser.add_argument("--topic", default="first water", help="topic (conversation) or question (matrix)")
     parser.add_argument("--out", default="",
                         help="transcript path (default: clementine/transcripts/<slug>.md)")
     args = parser.parse_args(argv)
@@ -41,18 +48,24 @@ def main(argv: list[str] | None = None) -> int:
 
     hub = ClementineHub()
     bus = StarlineWeaver(hub, agents)
-    transcript = bus.run(args.topic, args.turns)
+    matrix = args.mode == "matrix"
+    transcript = bus.run_matrix(args.topic) if matrix else bus.run(args.topic, args.turns)
 
     for e in transcript:
         status = "" if e["delivered"] else f"  [REJECTED: {e.get('rejected_because', '')}]"
         print(f"{e['from']:>10} → {e['to']:<4} [{e['layer'] or '-'}] {e['content']}{status}")
+
+    if matrix:
+        compare = bus.cross_compare()
+        print(f"\nCross-compare: {compare['agents_delivered']}/{compare['agents_asked']} delivered, "
+              f"layers={compare['layer_counts']}, unanimous={compare['layer_unanimous']}")
 
     if args.out:
         out = Path(args.out)
     else:
         slug = "-".join(args.topic.lower().split())[:40] or "run"
         out = Path(__file__).resolve().parent.parent / "transcripts" / f"{slug}.md"
-    saved = bus.save_markdown(out, args.topic)
+    saved = bus.save_matrix_markdown(out, args.topic) if matrix else bus.save_markdown(out, args.topic)
     print(f"\nTranscript saved: {saved}")
     return 0
 

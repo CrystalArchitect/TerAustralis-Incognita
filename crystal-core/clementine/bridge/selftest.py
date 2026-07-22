@@ -33,8 +33,48 @@ def test_red_button_halts_bus():
     assert max(cycles) < 10, "bus must stop early, not run all requested turns"
 
 
+def test_matrix_gives_independent_answers():
+    bus = StarlineWeaver(ClementineHub(), [EchoAgent(), EchoAgent()])
+    transcript = bus.run_matrix("what is water")
+    replies = [e for e in transcript if e["cycle"] == 1]
+    assert len(replies) == 2, "every agent should be asked exactly once"
+    expected = "Echo of clementine: Matrix question: what is water"
+    assert all(e["content"] == expected for e in replies), \
+        "each agent must answer the hub's question, not another agent's reply"
+
+
+def test_matrix_rejects_unlabeled_without_blocking_others():
+    bus = StarlineWeaver(ClementineHub(), [UnlabeledAgent(), EchoAgent()])
+    transcript = bus.run_matrix("drift check")
+    replies = [e for e in transcript if e["cycle"] == 1]
+    assert replies[0]["delivered"] is False, "unlabeled speech is still rejected in matrix mode"
+    assert replies[1]["delivered"] is True, "one agent's rejection must not silence the next"
+
+
+def test_matrix_cross_compare_counts_not_judges():
+    bus = StarlineWeaver(ClementineHub(), [EchoAgent(), EchoAgent()])
+    bus.run_matrix("what is water")
+    compare = bus.cross_compare()
+    assert compare == {
+        "agents_asked": 2, "agents_delivered": 2, "agents_rejected": 0,
+        "layer_counts": {"vision": 2}, "layer_unanimous": True,
+    }
+
+
+def test_matrix_red_button_stops_remaining_agents():
+    bus = StarlineWeaver(ClementineHub(), [RedButtonAgent(after=1), EchoAgent()])
+    transcript = bus.run_matrix("halt check")
+    assert transcript[-1]["content"].startswith("RED BUTTON")
+    replies = [e for e in transcript if e["cycle"] == 1]
+    assert len(replies) == 1, "the agent after the one that pressed the button must never be asked"
+
+
 def main() -> int:
-    tests = [test_conversation_flows, test_unlabeled_speech_is_rejected, test_red_button_halts_bus]
+    tests = [
+        test_conversation_flows, test_unlabeled_speech_is_rejected, test_red_button_halts_bus,
+        test_matrix_gives_independent_answers, test_matrix_rejects_unlabeled_without_blocking_others,
+        test_matrix_cross_compare_counts_not_judges, test_matrix_red_button_stops_remaining_agents,
+    ]
     for t in tests:
         t()
         print(f"PASS {t.__name__}")
