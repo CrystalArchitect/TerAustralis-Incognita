@@ -104,6 +104,11 @@ into one. That reading stays with whoever reads the transcript. A majority
 label is not evidence any more than a single model's is; see
 [`../../THE-INCOGNITA-RULE.md`](../../THE-INCOGNITA-RULE.md).
 
+A matrix result can also be witnessed onto RDP's tamper-evident chain instead
+of (or alongside) the markdown transcript — see ["Recording a Starline Weaver
+matrix result"](../rdp/RDP-INTEGRATION.md) in the RDP integration doc, and run
+`python3 -m rdp.run matrix-demo` to watch it happen for real.
+
 ## Booting Clementine (networked bus)
 
 Clementine also runs as a **live service** any system can join over plain HTTP —

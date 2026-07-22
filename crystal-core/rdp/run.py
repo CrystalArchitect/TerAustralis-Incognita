@@ -1,7 +1,8 @@
 """Watch the RDP decision kernel work — every precedence tier, recorded.
 
-    python3 -m rdp.run demo         # the decision kernel, all five tiers
-    python3 -m rdp.run gate-demo    # the REAL ConsentGate, wrapped + witnessed
+    python3 -m rdp.run demo          # the decision kernel, all five tiers
+    python3 -m rdp.run gate-demo     # the REAL ConsentGate, wrapped + witnessed
+    python3 -m rdp.run matrix-demo   # the REAL Starline Weaver matrix mode, witnessed
 
 `demo` runs five decisions, one per precedence tier plus a clean allow, printing
 the verdict and which rule decided it. Each decision is written to a single
@@ -12,6 +13,11 @@ it calls the same `decide` and `record` code the tests cover.
 `gate-demo` wires the *actual* CrystalBridge `ConsentGate` (not a stub) through
 the `recording_gate` wrapper: the gate enforces, the wrapper witnesses. See
 `gate_demo()` below.
+
+`matrix-demo` wires the *actual* Starline Weaver (not a stub) in matrix mode —
+one question, three built-in agents, independent answers — through
+`record_matrix_result`: the Weaver asks and compares, RDP only witnesses. See
+`matrix_demo()` below.
 """
 
 from __future__ import annotations
@@ -139,6 +145,64 @@ def gate_demo() -> None:
     print("Non Solus.")
 
 
+def matrix_demo() -> None:
+    """Run the *real* Starline Weaver matrix mode, recorded onto a real RDP chain.
+
+    Unlike `demo()` (synthetic decision contexts) this imports and drives the
+    actual `clementine.bridge` package — proof the wiring is real, not a mock.
+    The import is lazy (inside this function, with the repo root added to
+    sys.path) so `rdp.run demo` never has to touch clementine, and this
+    subcommand works whether run from `crystal-core` or the repo root.
+    """
+    import sys
+    from pathlib import Path
+
+    repo_root = Path(__file__).resolve().parents[2]
+    if str(repo_root) not in sys.path:
+        sys.path.insert(0, str(repo_root))
+
+    from clementine.bridge.agents import ClementineHub, EchoAgent, SevenSistersAgent, UnlabeledAgent
+    from clementine.bridge.bus import StarlineWeaver
+
+    from .adapters import record_matrix_result
+
+    print("Starline Weaver matrix mode — witnessed by RDP\n")
+
+    bus = StarlineWeaver(ClementineHub(), [EchoAgent(), SevenSistersAgent(), UnlabeledAgent()])
+    question = "what is the Starline Weaver?"
+    transcript = bus.run_matrix(question)
+    compare = bus.cross_compare()
+
+    for e in transcript:
+        if e["cycle"] != 1:
+            continue
+        mark = "✓" if e["delivered"] else "✗"
+        print(f"  {mark} {e['from']:>10} [{e['layer'] or '-'}] {e['content']}")
+
+    print(f"\n  cross-compare: {compare['agents_delivered']}/{compare['agents_asked']} delivered, "
+          f"layers={compare['layer_counts']}, unanimous={compare['layer_unanimous']}")
+
+    chain = new_chain()
+    responses = [e for e in transcript if e["cycle"] == 1]
+    record_matrix_result(chain, question=question, responses=responses, compare=compare,
+                          ts="2026-07-22T09:00:00Z")
+
+    print(f"\nRecorded 1 matrix result ({len(responses)} responses) to a hash-chained log.")
+    ok, broken = verify(chain)
+    print(f"verify() → intact={ok}" + ("" if ok else f", first break at {broken}"))
+
+    print("\nNow forge the rejected reply into a delivered one...")
+    tampered = [dict(e) for e in chain]
+    tampered[0] = {**tampered[0], "responses": [
+        {**r, "delivered": True} if not r["delivered"] else r for r in responses
+    ]}
+    ok, broken = verify(tampered)
+    print(f"verify() → intact={ok}, first break at index {broken}")
+
+    print("\nThe Weaver asked and compared; RDP only remembered. The record is a ledger, not a lock.")
+    print("Non Solus.")
+
+
 def chain_inspect(path: str | None) -> int:
     """Load a hash-chained record (JSON list of events) from *path* or stdin,
     verify it, and print each event with a verdict. Read-only — a way to audit a
@@ -179,7 +243,7 @@ def chain_inspect(path: str | None) -> int:
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="RDP decision kernel demo + tools")
     parser.add_argument(
-        "command", choices=["demo", "gate-demo", "chain-inspect"], nargs="?", default="demo"
+        "command", choices=["demo", "gate-demo", "matrix-demo", "chain-inspect"], nargs="?", default="demo"
     )
     parser.add_argument(
         "path", nargs="?", default=None,
@@ -188,6 +252,9 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
     if args.command == "gate-demo":
         gate_demo()
+        return 0
+    if args.command == "matrix-demo":
+        matrix_demo()
         return 0
     if args.command == "chain-inspect":
         return chain_inspect(args.path)

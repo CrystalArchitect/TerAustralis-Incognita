@@ -174,6 +174,32 @@ record.json` (or piped via stdin) loads a chain, prints each event, and runs
 `verify()` — exiting non-zero and pointing at the first broken index if the
 record was disturbed. Read-only; it trusts nothing but the hashes.
 
+**Recording a Starline Weaver matrix result.** The Weaver's matrix mode
+(`clementine.bridge.bus.StarlineWeaver.run_matrix()` — one question, every
+agent independently, no agent sees another's reply) produces a transcript and
+a `cross_compare()` summary that are exactly the kind of thing RDP exists to
+witness: a permanent, tamper-evident record of what was asked, what each
+independent voice said, and whether they agreed. `record_matrix_result(chain,
+question=..., responses=..., compare=...)` records the same way the gate
+decisions do — after the fact, one canonical event, nothing here decides
+anything. Unlike gate arguments, response *content* is stored in full, not
+fingerprinted: the whole point of witnessing a matrix run is being able to
+read back what each agent actually said, and a hash alone can't do that. To
+watch it drive the **real** Starline Weaver — three built-in agents answering
+independently, a delivered/rejected/delivered mix, a cross-compare, a verified
+chain, and a caught tamper:
+
+```
+python3 -m rdp.run matrix-demo
+```
+
+That subcommand imports `clementine.bridge` for real (lazily, so `rdp.run
+demo` stays dependency-free); it is *not* a stub. Same reminder as the gate
+demo, same reason: **the Weaver asked and compared; RDP only remembered.**
+Nothing here — not RDP, not the adapter — judges which agent's answer was
+right. `cross_compare()`'s layer-agreement count already refuses to do that;
+recording it doesn't change that refusal into a verdict.
+
 **Edge cases that matter once real consent events flow:**
 
 - **Numeric precision.** The RDP-JCS profile quantizes numbers to 6 decimals, so

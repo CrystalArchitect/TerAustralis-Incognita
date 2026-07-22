@@ -458,6 +458,36 @@ def test_adapter_records_gate_decisions_and_hides_raw_args():
     assert not ok and broken == 1
 
 
+def test_adapter_records_matrix_result_in_full():
+    from .adapters import record_matrix_result, MATRIX_EVENT_KIND
+
+    chain = new_chain()
+    responses = [
+        {"agent": "claude", "layer": "vision", "content": "the Weaver is a bus", "delivered": True},
+        {"agent": "gpt", "layer": "", "content": "unlabeled", "delivered": False, "rejected_because": "unlabeled or unknown layer"},
+    ]
+    compare = {"agents_asked": 2, "agents_delivered": 1, "agents_rejected": 1,
+               "layer_counts": {"vision": 1}, "layer_unanimous": False}
+    record_matrix_result(
+        chain, question="what is the Starline Weaver?",
+        responses=responses, compare=compare, ts="2026-07-22T00:00:00Z",
+    )
+    assert len(chain) == 1
+    event = chain[0]
+    assert event["kind"] == MATRIX_EVENT_KIND
+    assert event["question"] == "what is the Starline Weaver?"
+    # unlike gate arguments, response content is stored in full, not fingerprinted
+    assert event["responses"] == responses
+    assert event["compare"] == compare
+    ok, broken = verify(chain)
+    assert ok and broken == -1
+    # forging a rejected reply into a delivered one is caught at that index
+    tampered = [dict(e) for e in chain]
+    tampered[0] = {**tampered[0], "responses": [responses[0], {**responses[1], "delivered": True}]}
+    ok, broken = verify(tampered)
+    assert not ok and broken == 0
+
+
 def test_recording_gate_wrapper():
     """The wrapper records each decision after the gate makes it, without
     changing the gate's result. Uses a duck-typed stub so this stays a pure unit
@@ -626,6 +656,7 @@ def main() -> int:
         test_property_canonical_is_key_order_independent,
         test_property_chain_catches_any_single_mutation,
         test_adapter_records_gate_decisions_and_hides_raw_args,
+        test_adapter_records_matrix_result_in_full,
         test_recording_gate_wrapper,
         test_witnessing_gate_downgrades_allow_when_recording_fails,
         test_record_consent_receipt_proves_grant_then_revoke,

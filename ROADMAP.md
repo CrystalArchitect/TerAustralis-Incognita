@@ -62,6 +62,12 @@ Dated so this section ages honestly — newest first, and it's fine to trim
 older entries once they're no longer useful context; the full history is
 always in `git log`.
 
+- **2026-07-22** — Wired the Starline Weaver's matrix mode to RDP:
+  `record_matrix_result()` (`crystal-core/rdp/adapters.py`) witnesses a matrix
+  run's responses and cross-compare onto the tamper-evident chain, same
+  one-way rule as the ConsentGate adapter — the Weaver decides, RDP only
+  records. `python3 -m rdp.run matrix-demo` drives the real Weaver through the
+  real chain. 1 new self-test, 31/31 passing.
 - **2026-07-22** — Added matrix mode to the Starline Weaver
   (`crystal-core/clementine/bridge/`): `run_matrix()` fans one question out
   to every agent independently (none sees another's reply) and
