@@ -46,50 +46,50 @@
     </p>
     <svg viewBox="0 0 800 500" class="diagram">
       <!-- Agents -->
-      <rect x="50" y="20" width="150" height="50" fill="rgba(100,50,200,0.2)" stroke="#6432c8" stroke-width="2" rx="4" />
-      <text x="125" y="55" text-anchor="middle" fill="#e6b85c" font-size="16" font-weight="bold">Initiator</text>
+      <rect x="50" y="20" width="150" height="50" fill="rgba(167,139,250,0.2)" stroke="#A78BFA" stroke-width="2" rx="4" />
+      <text x="125" y="55" text-anchor="middle" fill="#E9BB5F" font-size="16" font-weight="bold">Initiator</text>
 
-      <rect x="600" y="20" width="150" height="50" fill="rgba(100,50,200,0.2)" stroke="#6432c8" stroke-width="2" rx="4" />
-      <text x="675" y="55" text-anchor="middle" fill="#e6b85c" font-size="16" font-weight="bold">Responder</text>
+      <rect x="600" y="20" width="150" height="50" fill="rgba(167,139,250,0.2)" stroke="#A78BFA" stroke-width="2" rx="4" />
+      <text x="675" y="55" text-anchor="middle" fill="#E9BB5F" font-size="16" font-weight="bold">Responder</text>
 
       <!-- Message arrows -->
       <!-- Message 1 -->
-      <line x1="200" y1="120" x2="600" y2="170" stroke="#5a8f50" stroke-width="3" marker-end="url(#arrowhead)" />
-      <text x="400" y="140" text-anchor="middle" fill="#5a8f50" font-size="14">
+      <line x1="200" y1="120" x2="600" y2="170" stroke="#6FE7B7" stroke-width="3" marker-end="url(#arrowhead)" />
+      <text x="400" y="140" text-anchor="middle" fill="#6FE7B7" font-size="14">
         Message 1: e, es, s, ss
       </text>
-      <text x="400" y="160" text-anchor="middle" fill="#ccc" font-size="12" opacity="0.7">
+      <text x="400" y="160" text-anchor="middle" fill="#A6ACC4" font-size="12" opacity="0.7">
         Ephemeral key + encrypted identity
       </text>
 
       <!-- Message 2 -->
-      <line x1="600" y1="220" x2="200" y2="270" stroke="#5a8f50" stroke-width="3" marker-end="url(#arrowhead2)" />
-      <text x="400" y="240" text-anchor="middle" fill="#5a8f50" font-size="14">
+      <line x1="600" y1="220" x2="200" y2="270" stroke="#6FE7B7" stroke-width="3" marker-end="url(#arrowhead2)" />
+      <text x="400" y="240" text-anchor="middle" fill="#6FE7B7" font-size="14">
         Message 2: e, ee, se
       </text>
-      <text x="400" y="260" text-anchor="middle" fill="#ccc" font-size="12" opacity="0.7">
+      <text x="400" y="260" text-anchor="middle" fill="#A6ACC4" font-size="12" opacity="0.7">
         Responder ephemeral + mutual authentication
       </text>
 
       <!-- Split keys -->
-      <rect x="80" y="340" width="140" height="60" fill="rgba(80,150,100,0.15)" stroke="#50d68c" stroke-width="2" rx="4" />
-      <text x="150" y="360" text-anchor="middle" fill="#50d68c" font-size="13" font-weight="bold">Cipher State 1</text>
-      <text x="150" y="378" text-anchor="middle" fill="#ccc" font-size="11">Initiator → Responder</text>
+      <rect x="80" y="340" width="140" height="60" fill="rgba(111,231,183,0.15)" stroke="#6FE7B7" stroke-width="2" rx="4" />
+      <text x="150" y="360" text-anchor="middle" fill="#6FE7B7" font-size="13" font-weight="bold">Cipher State 1</text>
+      <text x="150" y="378" text-anchor="middle" fill="#A6ACC4" font-size="11">Initiator → Responder</text>
 
-      <rect x="580" y="340" width="140" height="60" fill="rgba(80,150,100,0.15)" stroke="#50d68c" stroke-width="2" rx="4" />
-      <text x="650" y="360" text-anchor="middle" fill="#50d68c" font-size="13" font-weight="bold">Cipher State 2</text>
-      <text x="650" y="378" text-anchor="middle" fill="#ccc" font-size="11">Responder → Initiator</text>
+      <rect x="580" y="340" width="140" height="60" fill="rgba(111,231,183,0.15)" stroke="#6FE7B7" stroke-width="2" rx="4" />
+      <text x="650" y="360" text-anchor="middle" fill="#6FE7B7" font-size="13" font-weight="bold">Cipher State 2</text>
+      <text x="650" y="378" text-anchor="middle" fill="#A6ACC4" font-size="11">Responder → Initiator</text>
 
-      <text x="400" y="460" text-anchor="middle" fill="#e6b85c" font-size="13">
+      <text x="400" y="460" text-anchor="middle" fill="#E9BB5F" font-size="13">
         Both directions: ChaCha20-Poly1305 with independent nonce counters
       </text>
 
       <defs>
         <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-          <polygon points="0 0, 10 5, 0 10" fill="#5a8f50" />
+          <polygon points="0 0, 10 5, 0 10" fill="#6FE7B7" />
         </marker>
         <marker id="arrowhead2" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-          <polygon points="0 0, 10 5, 0 10" fill="#5a8f50" />
+          <polygon points="0 0, 10 5, 0 10" fill="#6FE7B7" />
         </marker>
       </defs>
     </svg>
@@ -213,8 +213,8 @@
   }
 
   .starline-intro {
-    background: linear-gradient(135deg, rgba(100,50,200,0.1), rgba(50,100,200,0.1));
-    border-left: 4px solid #6432c8;
+    background: linear-gradient(135deg, rgba(167,139,250,0.1), rgba(122,162,255,0.1));
+    border-left: 4px solid var(--purple);
     padding: 2rem;
     border-radius: 8px;
     margin-bottom: 3rem;
@@ -235,14 +235,14 @@
   }
 
   .intro-text em {
-    color: #e6b85c;
+    color: var(--gold);
     font-style: italic;
   }
 
   .starline-diagram {
     margin: 3rem 0;
     padding: 2rem;
-    background: linear-gradient(135deg, rgba(80,150,100,0.05), rgba(100,50,200,0.05));
+    background: linear-gradient(135deg, rgba(111,231,183,0.05), rgba(167,139,250,0.05));
     border-radius: 8px;
   }
 
@@ -285,28 +285,28 @@
   .principle-card {
     position: relative;
     padding: 1.5rem;
-    background: rgba(100,50,200,0.08);
-    border: 1px solid rgba(230,184,92,0.2);
+    background: rgba(167,139,250,0.08);
+    border: 1px solid rgba(233,187,95,0.2);
     border-radius: 8px;
     transition: all 0.3s ease;
   }
 
   .principle-card:hover {
-    background: rgba(100,50,200,0.15);
-    border-color: rgba(230,184,92,0.5);
+    background: rgba(167,139,250,0.15);
+    border-color: rgba(233,187,95,0.5);
     transform: translateY(-4px);
   }
 
   .principle-node {
     width: 12px;
     height: 12px;
-    background: #5a8f50;
+    background: var(--green);
     border-radius: 50%;
     margin-bottom: 1rem;
   }
 
   .principle-card h3 {
-    color: #e6b85c;
+    color: var(--gold);
     margin-bottom: 0.5rem;
     font-size: 1.1rem;
   }
@@ -345,8 +345,8 @@
     grid-template-columns: minmax(240px, 380px) 1fr;
     gap: 2rem;
     align-items: center;
-    background: linear-gradient(135deg, rgba(100,50,200,0.08), rgba(80,150,100,0.08));
-    border: 1px solid rgba(230,184,92,0.2);
+    background: linear-gradient(135deg, rgba(167,139,250,0.08), rgba(111,231,183,0.08));
+    border: 1px solid rgba(233,187,95,0.2);
     border-radius: 8px;
     padding: 2rem;
   }
@@ -363,15 +363,15 @@
   }
 
   .network-text em {
-    color: #e6b85c;
+    color: var(--gold);
     font-style: italic;
   }
 
   .starline-spec {
     margin: 3rem 0;
     padding: 2rem;
-    background: rgba(80,150,100,0.08);
-    border-left: 4px solid #50d68c;
+    background: rgba(111,231,183,0.08);
+    border-left: 4px solid var(--green);
     border-radius: 8px;
   }
 
@@ -396,19 +396,19 @@
 
   .spec-link {
     display: inline-block;
-    color: #5a8f50;
+    color: var(--green);
     text-decoration: none;
     font-weight: 600;
     padding: 0.75rem 1.5rem;
-    background: rgba(90,143,80,0.15);
-    border: 1px solid rgba(90,143,80,0.4);
+    background: rgba(111,231,183,0.15);
+    border: 1px solid rgba(111,231,183,0.4);
     border-radius: 4px;
     transition: all 0.2s;
   }
 
   .spec-link:hover {
-    background: rgba(90,143,80,0.3);
-    border-color: #5a8f50;
+    background: rgba(111,231,183,0.3);
+    border-color: var(--green);
   }
 
   .starline-vision {
@@ -433,16 +433,16 @@
   }
 
   .starline-vision em {
-    color: #e6b85c;
+    color: var(--gold);
     font-style: italic;
   }
 
   blockquote {
     font-style: italic;
-    border-left: 4px solid #6432c8;
+    border-left: 4px solid var(--purple);
     padding-left: 1.5rem;
     margin: 2rem 0;
-    color: #ccc;
+    color: var(--muted);
     line-height: 1.8;
   }
 

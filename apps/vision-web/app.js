@@ -36,12 +36,12 @@ function drawTwin() {
   const w = c.width;
   const h = c.height;
   ctx.clearRect(0, 0, w, h);
-  ctx.fillStyle = "#0a1220";
+  ctx.fillStyle = "#000000";
   ctx.fillRect(0, 0, w, h);
 
   // Danube-ish curve
   if (state.layers.water) {
-    ctx.strokeStyle = "rgba(56, 189, 248, 0.55)";
+    ctx.strokeStyle = "rgba(122, 162, 255, 0.55)";
     ctx.lineWidth = 10;
     ctx.beginPath();
     ctx.moveTo(0, h * 0.55);
@@ -59,7 +59,7 @@ function drawTwin() {
       [0.7, 0.32],
       [0.55, 0.65],
     ];
-    ctx.fillStyle = "rgba(251, 191, 36, 0.85)";
+    ctx.fillStyle = "rgba(167, 139, 250, 0.85)";
     nodes.forEach(([nx, ny], i) => {
       const x = nx * w;
       const y = ny * h;
@@ -68,7 +68,7 @@ function drawTwin() {
       ctx.fill();
       if (i > 0) {
         const [px, py] = nodes[i - 1];
-        ctx.strokeStyle = "rgba(251, 191, 36, 0.25)";
+        ctx.strokeStyle = "rgba(167, 139, 250, 0.25)";
         ctx.lineWidth = 1.5;
         ctx.beginPath();
         ctx.moveTo(px * w, py * h);
@@ -80,7 +80,7 @@ function drawTwin() {
 
   // Mobility corridors
   if (state.layers.mobility) {
-    ctx.strokeStyle = "rgba(167, 139, 250, 0.5)";
+    ctx.strokeStyle = "rgba(233, 187, 95, 0.5)";
     ctx.lineWidth = 3;
     ctx.setLineDash([8, 6]);
     ctx.beginPath();
@@ -92,7 +92,7 @@ function drawTwin() {
     ctx.setLineDash([]);
   }
 
-  ctx.fillStyle = "#94a3b8";
+  ctx.fillStyle = "#A6ACC4";
   ctx.font = "12px system-ui";
   ctx.fillText("Starline Budapest · personal slice (demo)", 16, 24);
 }

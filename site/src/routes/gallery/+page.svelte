@@ -115,8 +115,8 @@
     border-radius: 8px;
     cursor: pointer;
     aspect-ratio: 1;
-    background: linear-gradient(135deg, rgba(100, 50, 200, 0.1), rgba(50, 100, 200, 0.1));
-    border: 1px solid rgba(230, 184, 92, 0.2);
+    background: linear-gradient(135deg, rgba(167, 139, 250, 0.1), rgba(122, 162, 255, 0.1));
+    border: 1px solid rgba(233, 187, 95, 0.2);
     transition: all 0.3s ease;
     padding: 0;
     font: inherit;
@@ -124,8 +124,8 @@
 
   .gallery-item:hover {
     transform: scale(1.02);
-    border-color: rgba(230, 184, 92, 0.6);
-    box-shadow: 0 0 20px rgba(230, 184, 92, 0.3);
+    border-color: rgba(233, 187, 95, 0.6);
+    box-shadow: 0 0 20px rgba(233, 187, 95, 0.3);
   }
 
   .gallery-item img {
@@ -145,7 +145,7 @@
     left: 0;
     right: 0;
     padding: 1rem;
-    background: linear-gradient(to top, rgba(0, 0, 4, 0.9), transparent);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
     opacity: 0;
     transition: opacity 0.3s ease;
   }
@@ -155,7 +155,7 @@
   }
 
   .gallery-overlay p {
-    color: #e6b85c;
+    color: var(--gold);
     font-size: 0.9rem;
     margin: 0;
     line-height: 1.4;
@@ -197,7 +197,7 @@
     right: 1rem;
     background: none;
     border: none;
-    color: #e6b85c;
+    color: var(--gold);
     font-size: 2rem;
     cursor: pointer;
     z-index: 10;
@@ -205,7 +205,7 @@
   }
 
   .lightbox-close:hover {
-    color: #f0d085;
+    color: var(--ink);
   }
 
   .lightbox-prev,
@@ -213,9 +213,9 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(100, 50, 200, 0.3);
-    border: 1px solid rgba(230, 184, 92, 0.4);
-    color: #e6b85c;
+    background: rgba(167, 139, 250, 0.3);
+    border: 1px solid rgba(233, 187, 95, 0.4);
+    color: var(--gold);
     font-size: 2rem;
     cursor: pointer;
     padding: 0.5rem 1rem;
@@ -225,8 +225,8 @@
 
   .lightbox-prev:hover,
   .lightbox-next:hover {
-    background: rgba(100, 50, 200, 0.6);
-    border-color: #e6b85c;
+    background: rgba(167, 139, 250, 0.6);
+    border-color: var(--gold);
   }
 
   .lightbox-prev {
@@ -242,8 +242,8 @@
     bottom: 1rem;
     left: 1rem;
     right: 1rem;
-    background: rgba(0, 0, 4, 0.9);
-    color: #e6b85c;
+    background: rgba(0, 0, 0, 0.9);
+    color: var(--gold);
     padding: 1rem;
     border-radius: 4px;
     font-size: 0.9rem;
