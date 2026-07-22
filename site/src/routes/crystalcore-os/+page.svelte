@@ -204,24 +204,24 @@
   }
 
   .terminal-window {
-    background: #000004;
-    border: 2px solid #6432c8;
+    background: var(--bg);
+    border: 2px solid var(--purple);
     border-radius: 8px;
     overflow: hidden;
-    font-family: 'Courier New', monospace;
+    font-family: var(--font-mono);
     display: flex;
     flex-direction: column;
   }
 
   .terminal-header {
-    background: rgba(100, 50, 200, 0.3);
-    border-bottom: 1px solid #6432c8;
+    background: rgba(167, 139, 250, 0.3);
+    border-bottom: 1px solid var(--purple);
     padding: 0.75rem 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 0.9rem;
-    color: #5a8f50;
+    color: var(--green);
   }
 
   .terminal-output {
@@ -240,16 +240,16 @@
   }
 
   .terminal-line.boot {
-    color: #5a8f50;
+    color: var(--green);
   }
 
   .terminal-line.user {
-    color: #e6b85c;
+    color: var(--gold);
     margin-top: 0.5rem;
   }
 
   .terminal-line.output {
-    color: #ccc;
+    color: var(--ink);
     margin-top: 0.5rem;
   }
 
@@ -257,12 +257,12 @@
     display: flex;
     align-items: center;
     padding: 0.75rem 1rem;
-    border-top: 1px solid #6432c8;
-    background: rgba(100, 50, 200, 0.1);
+    border-top: 1px solid var(--purple);
+    background: rgba(167, 139, 250, 0.1);
   }
 
   .prompt {
-    color: #5a8f50;
+    color: var(--green);
     margin-right: 0.5rem;
     font-weight: bold;
     white-space: nowrap;
@@ -272,26 +272,26 @@
     flex: 1;
     background: transparent;
     border: none;
-    color: #e6b85c;
-    font-family: 'Courier New', monospace;
+    color: var(--gold);
+    font-family: var(--font-mono);
     font-size: 0.9rem;
     outline: none;
   }
 
   .terminal-input input::placeholder {
-    color: rgba(230, 184, 92, 0.5);
+    color: rgba(233, 187, 95, 0.5);
   }
 
   .command-reference {
-    background: rgba(100, 50, 200, 0.1);
-    border: 1px solid rgba(230, 184, 92, 0.2);
+    background: rgba(167, 139, 250, 0.1);
+    border: 1px solid rgba(233, 187, 95, 0.2);
     border-radius: 8px;
     padding: 1rem;
     font-size: 0.85rem;
   }
 
   .command-reference h3 {
-    color: #e6b85c;
+    color: var(--gold);
     margin-bottom: 1rem;
   }
 
@@ -303,18 +303,18 @@
 
   .command-item {
     padding: 0.75rem;
-    background: rgba(100, 50, 200, 0.2);
+    background: rgba(167, 139, 250, 0.2);
     border-radius: 4px;
     cursor: pointer;
     transition: all 0.2s;
   }
 
   .command-item:hover {
-    background: rgba(100, 50, 200, 0.4);
+    background: rgba(167, 139, 250, 0.4);
   }
 
   .command-item code {
-    color: #5a8f50;
+    color: var(--green);
     font-weight: bold;
   }
 
@@ -346,8 +346,8 @@
 
   .node-card {
     padding: 1.5rem;
-    background: rgba(80, 150, 100, 0.1);
-    border: 1px solid rgba(80, 150, 100, 0.3);
+    background: rgba(111, 231, 183, 0.1);
+    border: 1px solid rgba(111, 231, 183, 0.3);
     border-radius: 8px;
     text-align: center;
   }
@@ -358,7 +358,7 @@
   }
 
   .node-card h3 {
-    color: #e6b85c;
+    color: var(--gold);
     margin-bottom: 0.5rem;
   }
 
@@ -370,8 +370,8 @@
   .crystalcore-info {
     margin: 3rem 0;
     padding: 2rem;
-    background: rgba(100, 50, 200, 0.08);
-    border-left: 4px solid #6432c8;
+    background: rgba(167, 139, 250, 0.08);
+    border-left: 4px solid var(--purple);
     border-radius: 8px;
   }
 
@@ -385,8 +385,8 @@
   }
 
   .crystalcore-info pre {
-    background: #000004;
-    border: 1px solid #6432c8;
+    background: var(--bg);
+    border: 1px solid var(--purple);
     padding: 1rem;
     border-radius: 4px;
     overflow-x: auto;
@@ -394,8 +394,8 @@
   }
 
   .crystalcore-info code {
-    color: #5a8f50;
-    font-family: 'Courier New', monospace;
+    color: var(--green);
+    font-family: var(--font-mono);
   }
 
   .crystalcore-info ul {
@@ -429,7 +429,7 @@
   }
 
   .crystalcore-vision em {
-    color: #e6b85c;
+    color: var(--gold);
     font-style: italic;
   }
 

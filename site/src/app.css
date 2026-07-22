@@ -1,5 +1,5 @@
   :root{
-    --bg:#000004;
+    --bg:#000000;
     --ink:#E9EBF4;
     --muted:#A6ACC4;
     --purple:#A78BFA;
@@ -9,9 +9,12 @@
     --silver:#C9CEDF;
     --gold:#E9BB5F;
     --line:rgba(233,235,244,.08);
-    --card:#07070F;
+    --card:#0A0A0A;
     --gutter:56px;
     --title-gradient:linear-gradient(90deg, var(--purple), var(--blue) 20%, var(--green) 40%, var(--silver) 58%, var(--gold) 78%, var(--pink) 100%);
+    --font-display:'Playfair Display', Georgia, serif;
+    --font-body:'Inter', system-ui, sans-serif;
+    --font-mono:'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
   }
   .title-mix{
     background:var(--title-gradient);
@@ -24,26 +27,14 @@
   html{scroll-behavior:smooth;background:var(--bg);color-scheme:dark}
   body{
     color:var(--ink);
-    font-family:'Inter',system-ui,sans-serif;
+    font-family:var(--font-body);
     font-size:17px;
     line-height:1.7;
     -webkit-font-smoothing:antialiased;
     position:relative;
   }
 
-  /* ---- Atmosphere: deep space with rich, roaming cosmic glows ---- */
-  body::before{
-    content:"";
-    position:fixed;inset:0;z-index:-2;pointer-events:none;
-    background:
-      radial-gradient(46% 34% at 15% 5%,  rgba(167,139,250,0.21), transparent 70%),
-      radial-gradient(42% 30% at 88% 40%, rgba(122,162,255,0.19), transparent 70%),
-      radial-gradient(44% 32% at 10% 85%, rgba(111,231,183,0.17), transparent 70%),
-      radial-gradient(40% 30% at 80% 95%, rgba(245,160,212,0.17), transparent 70%),
-      radial-gradient(38% 28% at 50% 55%, rgba(233,187,95,0.13),  transparent 70%),
-      radial-gradient(34% 24% at 95% 10%, rgba(111,231,183,0.14), transparent 70%),
-      radial-gradient(34% 24% at 5% 45%,  rgba(245,160,212,0.13), transparent 70%);
-  }
+  /* ---- Atmosphere: pure black void, stars only, no other colouring ---- */
   .stars{
     position:fixed;inset:0;z-index:-1;pointer-events:none;
     background-image:
@@ -137,53 +128,53 @@
       radial-gradient(1px 1px at 79.8% 86.6%, rgba(201,206,223,0.34) 50%, transparent 51%),
       radial-gradient(1.5px 1.5px at 90.8% 77.1%, rgba(201,206,223,0.59) 50%, transparent 51%),
       radial-gradient(1px 1px at 85.0% 79.8%, rgba(201,206,223,0.34) 50%, transparent 51%),
-      radial-gradient(1.5px 1.5px at 69.3% 38.7%, rgba(245,160,212,0.41) 50%, transparent 51%),
-      radial-gradient(2px 2px at 80.4% 46.2%, rgba(122,162,255,0.41) 50%, transparent 51%),
-      radial-gradient(2px 2px at 65.4% 40.3%, rgba(167,139,250,0.68) 50%, transparent 51%),
-      radial-gradient(2.5px 2.5px at 28.8% 63.6%, rgba(233,187,95,0.46) 50%, transparent 51%),
-      radial-gradient(2px 2px at 4.6% 86.2%, rgba(122,162,255,0.55) 50%, transparent 51%),
-      radial-gradient(2.5px 2.5px at 96.4% 5.7%, rgba(111,231,183,0.61) 50%, transparent 51%),
-      radial-gradient(1.5px 1.5px at 32.1% 60.2%, rgba(245,160,212,0.66) 50%, transparent 51%),
-      radial-gradient(2.5px 2.5px at 20.2% 6.3%, rgba(167,139,250,0.52) 50%, transparent 51%),
-      radial-gradient(2px 2px at 79.4% 67.9%, rgba(111,231,183,0.5) 50%, transparent 51%),
-      radial-gradient(2px 2px at 93.1% 90.4%, rgba(167,139,250,0.59) 50%, transparent 51%),
-      radial-gradient(2.5px 2.5px at 30.8% 31.7%, rgba(111,231,183,0.48) 50%, transparent 51%),
-      radial-gradient(2.5px 2.5px at 30.4% 14.2%, rgba(245,160,212,0.59) 50%, transparent 51%),
-      radial-gradient(2px 2px at 88.7% 61.1%, rgba(245,160,212,0.54) 50%, transparent 51%),
-      radial-gradient(2.5px 2.5px at 2.0% 29.5%, rgba(233,187,95,0.55) 50%, transparent 51%),
-      radial-gradient(2px 2px at 32.9% 44.4%, rgba(233,187,95,0.5) 50%, transparent 51%),
-      radial-gradient(2px 2px at 88.5% 78.4%, rgba(167,139,250,0.45) 50%, transparent 51%),
-      radial-gradient(1.5px 1.5px at 65.7% 61.4%, rgba(122,162,255,0.57) 50%, transparent 51%),
-      radial-gradient(1.5px 1.5px at 23.6% 21.1%, rgba(167,139,250,0.43) 50%, transparent 51%),
-      radial-gradient(1.5px 1.5px at 47.6% 83.6%, rgba(245,160,212,0.48) 50%, transparent 51%),
-      radial-gradient(2.5px 2.5px at 62.5% 20.7%, rgba(245,160,212,0.48) 50%, transparent 51%),
-      radial-gradient(1.5px 1.5px at 16.2% 68.0%, rgba(245,160,212,0.41) 50%, transparent 51%),
-      radial-gradient(2.5px 2.5px at 79.2% 68.8%, rgba(167,139,250,0.54) 50%, transparent 51%),
-      radial-gradient(2px 2px at 90.1% 13.7%, rgba(245,160,212,0.57) 50%, transparent 51%),
-      radial-gradient(2.5px 2.5px at 96.8% 59.2%, rgba(233,187,95,0.63) 50%, transparent 51%),
-      radial-gradient(2.5px 2.5px at 87.6% 43.0%, rgba(122,162,255,0.61) 50%, transparent 51%),
-      radial-gradient(2px 2px at 47.6% 26.9%, rgba(111,231,183,0.61) 50%, transparent 51%),
-      radial-gradient(5px 5px at 33.4% 17.2%, rgba(167,139,250,0.85) 0%, rgba(167,139,250,0.3) 45%, transparent 72%),
-      radial-gradient(8px 8px at 11.8% 57.8%, rgba(122,162,255,0.61) 0%, rgba(122,162,255,0.21) 45%, transparent 72%),
-      radial-gradient(5px 5px at 43.8% 9.6%, rgba(233,187,95,0.73) 0%, rgba(233,187,95,0.26) 45%, transparent 72%),
+      radial-gradient(1.5px 1.5px at 69.3% 38.7%, rgba(201,206,223,0.41) 50%, transparent 51%),
+      radial-gradient(2px 2px at 80.4% 46.2%, rgba(201,206,223,0.41) 50%, transparent 51%),
+      radial-gradient(2px 2px at 65.4% 40.3%, rgba(201,206,223,0.68) 50%, transparent 51%),
+      radial-gradient(2.5px 2.5px at 28.8% 63.6%, rgba(201,206,223,0.46) 50%, transparent 51%),
+      radial-gradient(2px 2px at 4.6% 86.2%, rgba(201,206,223,0.55) 50%, transparent 51%),
+      radial-gradient(2.5px 2.5px at 96.4% 5.7%, rgba(201,206,223,0.61) 50%, transparent 51%),
+      radial-gradient(1.5px 1.5px at 32.1% 60.2%, rgba(201,206,223,0.66) 50%, transparent 51%),
+      radial-gradient(2.5px 2.5px at 20.2% 6.3%, rgba(201,206,223,0.52) 50%, transparent 51%),
+      radial-gradient(2px 2px at 79.4% 67.9%, rgba(201,206,223,0.5) 50%, transparent 51%),
+      radial-gradient(2px 2px at 93.1% 90.4%, rgba(201,206,223,0.59) 50%, transparent 51%),
+      radial-gradient(2.5px 2.5px at 30.8% 31.7%, rgba(201,206,223,0.48) 50%, transparent 51%),
+      radial-gradient(2.5px 2.5px at 30.4% 14.2%, rgba(201,206,223,0.59) 50%, transparent 51%),
+      radial-gradient(2px 2px at 88.7% 61.1%, rgba(201,206,223,0.54) 50%, transparent 51%),
+      radial-gradient(2.5px 2.5px at 2.0% 29.5%, rgba(201,206,223,0.55) 50%, transparent 51%),
+      radial-gradient(2px 2px at 32.9% 44.4%, rgba(201,206,223,0.5) 50%, transparent 51%),
+      radial-gradient(2px 2px at 88.5% 78.4%, rgba(201,206,223,0.45) 50%, transparent 51%),
+      radial-gradient(1.5px 1.5px at 65.7% 61.4%, rgba(201,206,223,0.57) 50%, transparent 51%),
+      radial-gradient(1.5px 1.5px at 23.6% 21.1%, rgba(201,206,223,0.43) 50%, transparent 51%),
+      radial-gradient(1.5px 1.5px at 47.6% 83.6%, rgba(201,206,223,0.48) 50%, transparent 51%),
+      radial-gradient(2.5px 2.5px at 62.5% 20.7%, rgba(201,206,223,0.48) 50%, transparent 51%),
+      radial-gradient(1.5px 1.5px at 16.2% 68.0%, rgba(201,206,223,0.41) 50%, transparent 51%),
+      radial-gradient(2.5px 2.5px at 79.2% 68.8%, rgba(201,206,223,0.54) 50%, transparent 51%),
+      radial-gradient(2px 2px at 90.1% 13.7%, rgba(201,206,223,0.57) 50%, transparent 51%),
+      radial-gradient(2.5px 2.5px at 96.8% 59.2%, rgba(201,206,223,0.63) 50%, transparent 51%),
+      radial-gradient(2.5px 2.5px at 87.6% 43.0%, rgba(201,206,223,0.61) 50%, transparent 51%),
+      radial-gradient(2px 2px at 47.6% 26.9%, rgba(201,206,223,0.61) 50%, transparent 51%),
+      radial-gradient(5px 5px at 33.4% 17.2%, rgba(201,206,223,0.85) 0%, rgba(201,206,223,0.3) 45%, transparent 72%),
+      radial-gradient(8px 8px at 11.8% 57.8%, rgba(201,206,223,0.61) 0%, rgba(201,206,223,0.21) 45%, transparent 72%),
+      radial-gradient(5px 5px at 43.8% 9.6%, rgba(201,206,223,0.73) 0%, rgba(201,206,223,0.26) 45%, transparent 72%),
       radial-gradient(6px 6px at 80.7% 14.6%, rgba(201,206,223,0.79) 0%, rgba(201,206,223,0.28) 45%, transparent 72%),
-      radial-gradient(7px 7px at 92.1% 57.2%, rgba(167,139,250,0.89) 0%, rgba(167,139,250,0.31) 45%, transparent 72%),
-      radial-gradient(6px 6px at 7.4% 83.7%, rgba(245,160,212,0.64) 0%, rgba(245,160,212,0.22) 45%, transparent 72%),
-      radial-gradient(6px 6px at 14.1% 32.0%, rgba(167,139,250,0.77) 0%, rgba(167,139,250,0.27) 45%, transparent 72%),
+      radial-gradient(7px 7px at 92.1% 57.2%, rgba(201,206,223,0.89) 0%, rgba(201,206,223,0.31) 45%, transparent 72%),
+      radial-gradient(6px 6px at 7.4% 83.7%, rgba(201,206,223,0.64) 0%, rgba(201,206,223,0.22) 45%, transparent 72%),
+      radial-gradient(6px 6px at 14.1% 32.0%, rgba(201,206,223,0.77) 0%, rgba(201,206,223,0.27) 45%, transparent 72%),
       radial-gradient(8px 8px at 63.1% 38.0%, rgba(201,206,223,0.62) 0%, rgba(201,206,223,0.22) 45%, transparent 72%),
-      radial-gradient(8px 8px at 8.6% 22.4%, rgba(245,160,212,0.83) 0%, rgba(245,160,212,0.29) 45%, transparent 72%),
-      radial-gradient(6px 6px at 46.8% 89.8%, rgba(111,231,183,0.67) 0%, rgba(111,231,183,0.23) 45%, transparent 72%),
-      radial-gradient(5px 5px at 19.9% 76.3%, rgba(233,187,95,0.69) 0%, rgba(233,187,95,0.24) 45%, transparent 72%),
-      radial-gradient(7px 7px at 49.5% 35.3%, rgba(111,231,183,0.78) 0%, rgba(111,231,183,0.27) 45%, transparent 72%),
+      radial-gradient(8px 8px at 8.6% 22.4%, rgba(201,206,223,0.83) 0%, rgba(201,206,223,0.29) 45%, transparent 72%),
+      radial-gradient(6px 6px at 46.8% 89.8%, rgba(201,206,223,0.67) 0%, rgba(201,206,223,0.23) 45%, transparent 72%),
+      radial-gradient(5px 5px at 19.9% 76.3%, rgba(201,206,223,0.69) 0%, rgba(201,206,223,0.24) 45%, transparent 72%),
+      radial-gradient(7px 7px at 49.5% 35.3%, rgba(201,206,223,0.78) 0%, rgba(201,206,223,0.27) 45%, transparent 72%),
       radial-gradient(6px 6px at 9.9% 51.1%, rgba(201,206,223,0.7) 0%, rgba(201,206,223,0.24) 45%, transparent 72%),
       radial-gradient(5px 5px at 90.7% 42.6%, rgba(201,206,223,0.77) 0%, rgba(201,206,223,0.27) 45%, transparent 72%),
       radial-gradient(6px 6px at 77.2% 79.9%, rgba(201,206,223,0.71) 0%, rgba(201,206,223,0.25) 45%, transparent 72%),
       radial-gradient(5px 5px at 49.7% 77.9%, rgba(201,206,223,0.63) 0%, rgba(201,206,223,0.22) 45%, transparent 72%),
-      radial-gradient(5px 5px at 28.4% 68.5%, rgba(167,139,250,0.82) 0%, rgba(167,139,250,0.29) 45%, transparent 72%),
-      radial-gradient(7px 7px at 32.1% 57.3%, rgba(111,231,183,0.81) 0%, rgba(111,231,183,0.28) 45%, transparent 72%),
-      radial-gradient(7px 7px at 86.4% 35.6%, rgba(111,231,183,0.65) 0%, rgba(111,231,183,0.23) 45%, transparent 72%),
-      radial-gradient(6px 6px at 14.0% 8.5%, rgba(122,162,255,0.82) 0%, rgba(122,162,255,0.29) 45%, transparent 72%),
-      radial-gradient(7px 7px at 40.4% 89.2%, rgba(167,139,250,0.65) 0%, rgba(167,139,250,0.23) 45%, transparent 72%),
+      radial-gradient(5px 5px at 28.4% 68.5%, rgba(201,206,223,0.82) 0%, rgba(201,206,223,0.29) 45%, transparent 72%),
+      radial-gradient(7px 7px at 32.1% 57.3%, rgba(201,206,223,0.81) 0%, rgba(201,206,223,0.28) 45%, transparent 72%),
+      radial-gradient(7px 7px at 86.4% 35.6%, rgba(201,206,223,0.65) 0%, rgba(201,206,223,0.23) 45%, transparent 72%),
+      radial-gradient(6px 6px at 14.0% 8.5%, rgba(201,206,223,0.82) 0%, rgba(201,206,223,0.29) 45%, transparent 72%),
+      radial-gradient(7px 7px at 40.4% 89.2%, rgba(201,206,223,0.65) 0%, rgba(201,206,223,0.23) 45%, transparent 72%),
       radial-gradient(6px 6px at 40.8% 29.1%, rgba(201,206,223,0.73) 0%, rgba(201,206,223,0.26) 45%, transparent 72%);
   }
   @media (prefers-reduced-motion: reduce){
@@ -226,7 +217,7 @@
     padding:30px 0 0 var(--gutter);
   }
   @media (max-width:720px){header.site{padding-left:0}}
-  .wordmark{font-family:'Playfair Display',serif;font-weight:600;font-size:1.05rem;letter-spacing:.01em;color:var(--silver)}
+  .wordmark{font-family:var(--font-display);font-weight:600;font-size:1.05rem;letter-spacing:.01em;color:var(--silver)}
   nav a{color:var(--muted);margin-left:20px;font-size:.95rem}
   nav a:hover{color:var(--ink);text-decoration:none}
 
@@ -238,7 +229,7 @@
   /* ---- Hero: the mantra is the thesis ---- */
   .hero{padding:96px 0 84px}
   .hero h1{
-    font-family:'Playfair Display',serif;
+    font-family:var(--font-display);
     font-weight:600;
     font-size:clamp(2.3rem, 6vw, 4rem);
     line-height:1.14;
@@ -266,7 +257,7 @@
 
   .section{padding:76px 0;border-top:1px solid var(--line)}
   .section h2{
-    font-family:'Playfair Display',serif;font-weight:600;
+    font-family:var(--font-display);font-weight:600;
     font-size:clamp(1.6rem, 3.4vw, 2.2rem);margin-bottom:20px;letter-spacing:.005em;
     background:var(--title-gradient);
     -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
@@ -277,12 +268,12 @@
   .section p strong{color:var(--ink);font-weight:500}
   .support-list{margin:14px 0;padding-left:1.3em;color:var(--muted)}
   .support-list li{margin:4px 0}
-  .subhead{font-family:'Playfair Display',serif;font-weight:600;font-size:1.15rem;color:var(--ink);margin:30px 0 4px}
+  .subhead{font-family:var(--font-display);font-weight:600;font-size:1.15rem;color:var(--ink);margin:30px 0 4px}
   .tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:26px 0}
   .tier{display:block;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;transition:border-color .18s ease, box-shadow .18s ease}
   .tier:hover{border-color:var(--tc,var(--gold));box-shadow:0 0 18px rgba(233,187,95,.12);text-decoration:none}
-  .tier .price{display:block;font-family:'Playfair Display',serif;font-weight:600;color:var(--tc,var(--gold));font-size:1.05rem;margin-bottom:4px}
-  .tier h3{font-family:'Playfair Display',serif;font-weight:600;font-size:1.12rem;margin-bottom:8px;color:var(--ink)}
+  .tier .price{display:block;font-family:var(--font-display);font-weight:600;color:var(--tc,var(--gold));font-size:1.05rem;margin-bottom:4px}
+  .tier h3{font-family:var(--font-display);font-weight:600;font-size:1.12rem;margin-bottom:8px;color:var(--ink)}
   .tier p{font-size:.88rem;color:var(--muted);max-width:none}
 
   .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:34px}
@@ -294,7 +285,7 @@
     transition:border-color .18s ease, box-shadow .18s ease;
   }
   .card:hover{border-color:var(--st,var(--gold));box-shadow:0 0 18px rgba(233,187,95,.12);text-decoration:none}
-  .card h3{font-family:'Playfair Display',serif;font-weight:600;font-size:1.18rem;margin-bottom:9px}
+  .card h3{font-family:var(--font-display);font-weight:600;font-size:1.18rem;margin-bottom:9px}
   .card p{font-size:.92rem;max-width:none;color:var(--muted)}
   .card .status{display:block;margin-top:14px;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--st,var(--gold))}
 
@@ -306,7 +297,7 @@
     transition:border-color .18s ease, box-shadow .18s ease;
   }
   .codexlink:hover{border-color:var(--purple);box-shadow:0 0 20px rgba(167,139,250,.12);text-decoration:none}
-  .codexlink strong{font-family:'Playfair Display',serif;font-weight:600;color:var(--ink);font-size:1.2rem}
+  .codexlink strong{font-family:var(--font-display);font-weight:600;color:var(--ink);font-size:1.2rem}
   .codexlink span{display:block;color:var(--muted);margin-top:8px;font-size:.95rem}
 
   footer.site{
@@ -319,7 +310,7 @@
   footer.site p + p{margin-top:14px}
   .nonsolus{
     margin-top:36px;
-    font-family:'Playfair Display',serif;font-style:italic;font-weight:500;
+    font-family:var(--font-display);font-style:italic;font-weight:500;
     font-size:1.05rem;color:var(--gold);opacity:.85;
   }
 
@@ -328,7 +319,7 @@ a.wordmark{color:var(--silver)}
 a.wordmark:hover{color:var(--ink);text-decoration:none}
 .page{padding:64px 0 30px}
 .page .eyebrow{margin-bottom:18px}
-.page h1{font-family:'Playfair Display',serif;font-weight:600;
+.page h1{font-family:var(--font-display);font-weight:600;
   font-size:clamp(2rem,5vw,3rem);line-height:1.15;margin-bottom:10px;
   background:var(--title-gradient);
   -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
@@ -338,7 +329,7 @@ a.wordmark:hover{color:var(--ink);text-decoration:none}
 .cover{display:block;max-width:min(400px,100%);border-radius:16px;
   border:1px solid var(--line);margin:34px 0 6px}
 .chapter{margin-top:64px}
-.chapter h2{font-family:'Playfair Display',serif;font-weight:600;
+.chapter h2{font-family:var(--font-display);font-weight:600;
   font-size:clamp(1.4rem,3vw,1.9rem);margin-bottom:18px;
   background:var(--title-gradient);
   -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
@@ -351,6 +342,7 @@ a.wordmark:hover{color:var(--ink);text-decoration:none}
 .chapter ul{color:var(--muted);max-width:62ch;margin:14px 0 0 1.3em}
 .chapter ul li{margin:6px 0}
 .chapter ul li strong{color:var(--ink);font-weight:500}
+pre,code,.mono{font-family:var(--font-mono)}
 pre{background:var(--card);border:1px solid var(--line);border-radius:12px;
   padding:16px 18px;overflow-x:auto;color:var(--ink);font-size:.88rem;
   line-height:1.6;margin-top:14px;max-width:62ch}
@@ -359,14 +351,9 @@ pre{background:var(--card);border:1px solid var(--line);border-radius:12px;
 
 /* ============ Motion & interactivity ============ */
 
-/* gentle life in the atmosphere: roaming glows + faintly breathing stars */
+/* gentle life in the atmosphere: faintly breathing stars */
 @media (prefers-reduced-motion: no-preference){
-  body::before{animation:glowfloat 46s ease-in-out infinite}
   .stars{animation:twinkle 7.5s ease-in-out infinite}
-}
-@keyframes glowfloat{
-  0%,100%{transform:translate3d(0,0,0) scale(1.08)}
-  50%{transform:translate3d(1.6%,-1.1%,0) scale(1.12)}
 }
 @keyframes twinkle{0%,100%{opacity:.72}50%{opacity:1}}
 
