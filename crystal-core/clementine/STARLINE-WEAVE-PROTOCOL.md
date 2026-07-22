@@ -84,6 +84,26 @@ python3 -m clementine.bridge.run --agents claude,grok --turns 3 --topic "water c
 
 Transcripts land in `clementine/transcripts/` as readable markdown.
 
+## Matrix mode — one question, independent answers, cross-compared
+
+`run()` is round-robin: agents speak in turn, each seeing what came before.
+`run_matrix()` is the opposite — the same question goes to every agent
+independently, none seeing another's reply, so an earlier voice can never
+anchor a later one:
+
+```bash
+python3 -m clementine.bridge.run --mode matrix --agents claude,gpt,grok --topic "what is the Starline Weaver?"
+```
+
+Each reply still passes through `ClementineHub.validate()` — an unlabeled
+answer is rejected same as always, without blocking the rest. What matrix
+mode adds is `cross_compare()`: a count of how many agents answered, how
+their truth labels split, and whether they were unanimous. It is a count,
+not a verdict — nothing here judges which answer is right, or averages them
+into one. That reading stays with whoever reads the transcript. A majority
+label is not evidence any more than a single model's is; see
+[`../../THE-INCOGNITA-RULE.md`](../../THE-INCOGNITA-RULE.md).
+
 ## Booting Clementine (networked bus)
 
 Clementine also runs as a **live service** any system can join over plain HTTP —
