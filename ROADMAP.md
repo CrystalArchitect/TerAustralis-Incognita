@@ -62,6 +62,10 @@ Dated so this section ages honestly — newest first, and it's fine to trim
 older entries once they're no longer useful context; the full history is
 always in `git log`.
 
+- **2026-07-22** — Added the first four rendered stills from the boot-visual
+  prompt (`mythos/art/lattice-ignition-wide.jpeg` and three others,
+  AI-generated with Grok on X) to the art gallery. A full video hasn't been
+  made yet.
 - **2026-07-21** — Added a Vision-layer video-generation prompt for the
   CrystalCore.OS boot sequence (`mythos/tools/boot-visual-prompt.md`) — a
   paste-able prompt for an external generator, not rendered output or a

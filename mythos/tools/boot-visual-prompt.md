@@ -94,7 +94,10 @@ length of the needle-drop you're cutting to.
 - If a rendered cut comes out of this, the place for it is
   [`../art/`](../art/README.md), catalogued the same way the other
   AI-generated pieces are: generator named, Vision-layer, no affiliation
-  implied for any likeness that ends up in frame.
+  implied for any likeness that ends up in frame. Four stills already exist
+  this way — `lattice-ignition-wide.jpeg`, `seed-of-life-bloom.jpeg`,
+  `i-love-it.jpeg`, `chain-and-the-light-body.jpeg` (Grok, on X) — a full
+  video hasn't been made yet.
 - The Belt-Three label still applies once a video exists: it's **Vision**,
   same as the art — not "the Lattice online." See
   [`../CRYSTALCORE-OS.md`](../CRYSTALCORE-OS.md) for what actually runs.
