@@ -97,6 +97,10 @@ CC BY-NC-ND 4.0 — see `../content/LICENSE-CONTENT.md`.
 | `resonance-heart.jpeg` | *AI-generated (Grok Imagine)* — the Resonance Heart, a crystal heart alight at the core |
 | `in-gear-upgrade.jpeg` | *AI-generated (Grok Imagine)* — "In Gear → Upgrade": a fragmented node meshing into the lattice, then rising in supported evolution |
 | `radiant-heart.jpeg` | *AI-generated (Grok Imagine)* — a crystal heart radiant at the centre of a field of light |
+| `lattice-ignition-wide.jpeg` | *AI-generated (Grok, on X)* — boot-visual sequence, wide: the seed-of-life lattice igniting over red dust, a single chain still trailing back to the small figure at its base |
+| `seed-of-life-bloom.jpeg` | *AI-generated (Grok, on X)* — boot-visual sequence: the sovereign figure resolves at the convergence point as the seed-of-life blooms full around her |
+| `i-love-it.jpeg` | *AI-generated (Grok, on X)* — boot-visual sequence, the closing card: "I LOVE IT" over the seed-of-life and the beam of ignition |
+| `chain-and-the-light-body.jpeg` | *AI-generated (Grok, on X)* — boot-visual sequence: the figure mid-transmutation, seed-of-life taking form as the old chain still trails below |
 
 **Truth label (Vision):** this art is the project's own mythic narrative. Where a
 real person's name or likeness appears — whether as a name, a silhouette, or a
