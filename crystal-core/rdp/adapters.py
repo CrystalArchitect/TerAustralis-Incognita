@@ -1,11 +1,12 @@
-"""Adapters that record decisions from the pack's real consent gates onto an RDP
-chain — the honest wiring sketched in RDP-INTEGRATION.md, made concrete.
+"""Adapters that record outcomes from the pack's real gates and buses onto an
+RDP chain — the honest wiring sketched in RDP-INTEGRATION.md, made concrete.
 
 The whole point is *clean separation*, so note what this module does NOT do:
 
-  * It does not import ConsentGate, Starline, or any enforcement code.
-  * It never decides anything. It accepts the *fields of a decision that has
-    already been made* and turns them into a canonical, hash-chained record.
+  * It does not import ConsentGate, Starline, the Starline Weaver, or any
+    enforcement/routing code.
+  * It never decides anything. It accepts the *fields of an outcome that has
+    already happened* and turns them into a canonical, hash-chained record.
 
 So the direction is strictly one-way and the coupling is zero: the gate enforces,
 then (afterwards) hands the outcome here to be witnessed. If this recording
@@ -35,6 +36,7 @@ from .record import append
 
 EVENT_KIND = "consent.gate.decision"
 RECEIPT_KIND = "consent.starline.receipt"
+MATRIX_EVENT_KIND = "starline.matrix.result"
 
 
 def gate_event(
@@ -215,3 +217,51 @@ def record_consent_receipt(chain: list[dict[str, Any]], receipt: Any, *, ts: Any
     same duck-typed receipt as ``consent_receipt_event``.
     """
     return append(chain, consent_receipt_event(receipt, ts=ts))
+
+
+def matrix_result_event(
+    *,
+    question: str,
+    responses: list[dict[str, Any]],
+    compare: dict[str, Any],
+    ts: Any,
+) -> dict[str, Any]:
+    """Build the canonical event for a Starline Weaver matrix run (does not
+    append). *responses* and *compare* are plain dicts — the shape
+    ``StarlineWeaver.run_matrix()``'s transcript entries and ``cross_compare()``
+    already produce, filtered to the reply cycle by the caller. No import of
+    ``clementine`` here; the caller does the extracting, this module only records.
+
+    Unlike gate arguments, response content is stored in full, not fingerprinted
+    — the whole point of witnessing a matrix run is being able to read back what
+    each agent actually said. There is nothing here to treat as a secret.
+    """
+    return {
+        "kind": MATRIX_EVENT_KIND,
+        "question": question,
+        "responses": responses,
+        "compare": compare,
+        "ts": ts,
+    }
+
+
+def record_matrix_result(
+    chain: list[dict[str, Any]],
+    *,
+    question: str,
+    responses: list[dict[str, Any]],
+    compare: dict[str, Any],
+    ts: Any = None,
+) -> dict[str, Any]:
+    """Append a Starline Weaver matrix result to *chain* and return the event.
+
+    Call it *after* ``run_matrix()`` has already produced its transcript and
+    ``cross_compare()`` its summary — same one-way rule as the gate adapters:
+    the Weaver runs the matrix, RDP only remembers it. Nothing here judges the
+    responses or the comparison; that reading was already made (or deliberately
+    not made) before this is called.
+    """
+    return append(chain, matrix_result_event(
+        question=question, responses=responses, compare=compare,
+        ts=_utc_now_iso() if ts is None else ts,
+    ))
