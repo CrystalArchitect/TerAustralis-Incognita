@@ -62,6 +62,9 @@ Dated so this section ages honestly — newest first, and it's fine to trim
 older entries once they're no longer useful context; the full history is
 always in `git log`.
 
+- **2026-07-22** — Fixed `CODEX.md`'s dead `assets/codex-cover.jpeg` link (the
+  `assets/` folder didn't exist) and added a matching cover to
+  `APOCRYPHON.md`, which had none. Both AI-generated with Grok on X.
 - **2026-07-22** — Added the first four rendered stills from the boot-visual
   prompt (`mythos/art/lattice-ignition-wide.jpeg` and three others,
   AI-generated with Grok on X) to the art gallery. A full video hasn't been
