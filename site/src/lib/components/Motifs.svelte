@@ -10,7 +10,7 @@
   <div class="motif-grid">
     <figure>
       <svg viewBox="0 0 200 200" role="img" aria-label="Seed of Life — seven overlapping circles" class="spin">
-        <g fill="none" stroke="var(--amber)" stroke-width="1.2">
+        <g fill="none" stroke="var(--gold)" stroke-width="1.2">
           <circle cx="100" cy="100" r="60" opacity="0.25" />
           <circle cx="100" cy="100" r="30" />
           <circle cx="130" cy="100" r="30" />
@@ -26,10 +26,10 @@
 
     <figure>
       <svg viewBox="0 0 200 200" role="img" aria-label="Vortex wheel — the 1 2 4 8 7 5 doubling cycle and the 3 6 9 triangle">
-        <circle cx="100" cy="100" r="70" fill="none" stroke="var(--violet)" stroke-width="1" opacity="0.3" />
+        <circle cx="100" cy="100" r="70" fill="none" stroke="var(--purple)" stroke-width="1" opacity="0.3" />
         <!-- doubling cycle 1 -> 2 -> 4 -> 8 -> 7 -> 5 -> 1 -->
         <path d="M145,46.4 L168.9,87.8 L123.9,165.8 L55,46.4 L31,87.8 L76.1,165.8 Z"
-              fill="none" stroke="var(--amber)" stroke-width="1.6" stroke-linejoin="round" />
+              fill="none" stroke="var(--gold)" stroke-width="1.6" stroke-linejoin="round" />
         <!-- the 3 - 6 - 9 triangle -->
         <path d="M160.6,135 L39.4,135 L100,30 Z"
               fill="none" stroke="var(--green)" stroke-width="1.4" stroke-linejoin="round" opacity="0.9" />
@@ -59,16 +59,14 @@
 
 <style>
   .motifs {
-    --amber: #e6b85c;
-    --violet: #9a6bff;
-    --green: #6fae63;
-    --ink: rgba(236, 230, 216, 0.85);
     max-width: 900px;
     margin: 0 auto;
     padding: 3rem 1.5rem 1rem;
     text-align: center;
   }
   .motifs h2 {
+    font-family: var(--font-display);
+    font-weight: 600;
     margin-bottom: 2rem;
   }
   .motif-grid {
@@ -87,7 +85,7 @@
     width: 100%;
     height: auto;
     max-width: 260px;
-    filter: drop-shadow(0 0 14px rgba(154, 107, 255, 0.18));
+    filter: drop-shadow(0 0 14px rgba(167, 139, 250, 0.18));
   }
   figcaption {
     margin-top: 0.85rem;
@@ -95,8 +93,8 @@
     opacity: 0.75;
   }
   .mono {
-    font-family: 'Courier New', monospace;
-    color: var(--amber);
+    font-family: var(--font-mono);
+    color: var(--gold);
   }
   .note {
     max-width: 620px;
