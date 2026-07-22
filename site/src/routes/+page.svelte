@@ -240,10 +240,10 @@
 </section>
 
 <section class="section node" id="music" style="--node:var(--pink)">
-  <h2>The Songlines</h2>
+  <h2>The Starline Transmissions</h2>
   <p>
     Threads of memory and belonging carried in sound as much as story. The mythos has an original
-    soundtrack — Starline Transmissions, Songlines, and themes from the Crystal universe, written
+    soundtrack — the Starline Transmissions and themes from the Crystal universe, written
     and produced alongside the Codex itself.
   </p>
   <p><a class="btn btn-ghost" href="https://suno.com/@m13crystalat">Listen on Suno →</a></p>

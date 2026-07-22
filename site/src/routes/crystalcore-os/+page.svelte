@@ -141,7 +141,7 @@
       <li><code>launch</code> — Start the Starline launch sequence</li>
       <li><code>burn</code> → <code>network</code> → <code>explore</code> → <code>visit [node]</code> — Complete the journey</li>
       <li><code>map</code> — See the entire Starline network</li>
-      <li><code>song [track]</code> — Change the Songline soundtrack</li>
+      <li><code>song [track]</code> — Change the Starline soundtrack</li>
       <li><code>status</code> — Check system status and keys collected</li>
       <li><code>help</code> — Show all available commands</li>
     </ul>
