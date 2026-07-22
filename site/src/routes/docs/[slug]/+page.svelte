@@ -31,7 +31,7 @@
 
 <style>
   .markdown {
-    color: var(--ink, #e9e6ff);
+    color: var(--ink);
     line-height: 1.7;
     font-size: 1.02rem;
   }
@@ -40,10 +40,10 @@
   .markdown :global(h2),
   .markdown :global(h3),
   .markdown :global(h4) {
-    font-family: var(--font-display, Georgia, serif);
+    font-family: var(--font-display);
     line-height: 1.25;
     margin: 2rem 0 0.75rem;
-    color: var(--ink, #fff);
+    color: var(--ink);
     text-wrap: balance;
   }
 
@@ -69,7 +69,7 @@
   }
 
   .markdown :global(a) {
-    color: var(--gold, #ffd479);
+    color: var(--gold);
     text-decoration: underline;
     text-underline-offset: 2px;
   }
@@ -79,27 +79,27 @@
     height: auto;
     border-radius: 12px;
     margin: 1rem 0;
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid var(--line);
   }
 
   .markdown :global(blockquote) {
-    border-left: 3px solid var(--purple, #9b8cff);
+    border-left: 3px solid var(--purple);
     padding: 0.25rem 0 0.25rem 1rem;
-    color: var(--muted, #b9b4d8);
+    color: var(--muted);
     font-style: italic;
   }
 
   .markdown :global(code) {
-    font-family: var(--font-mono, ui-monospace, monospace);
+    font-family: var(--font-mono);
     font-size: 0.9em;
-    background: rgba(255, 255, 255, 0.08);
+    background: var(--card);
     padding: 0.15em 0.4em;
     border-radius: 6px;
   }
 
   .markdown :global(pre) {
-    background: rgba(10, 8, 24, 0.7);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: var(--card);
+    border: 1px solid var(--line);
     border-radius: 12px;
     padding: 1rem 1.1rem;
     overflow-x: auto;
@@ -120,18 +120,18 @@
 
   .markdown :global(th),
   .markdown :global(td) {
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 1px solid var(--line);
     padding: 0.5rem 0.75rem;
     text-align: left;
   }
 
   .markdown :global(th) {
-    background: rgba(255, 255, 255, 0.06);
+    background: var(--card);
   }
 
   .markdown :global(hr) {
     border: none;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-top: 1px solid var(--line);
     margin: 2rem 0;
   }
 

@@ -164,10 +164,10 @@ function drawTwin() {
   }
   const ctx = c.getContext("2d");
   ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-  ctx.fillStyle = "#050810";
+  ctx.fillStyle = "#000000";
   ctx.fillRect(0, 0, W, H);
 
-  ctx.strokeStyle = "rgba(34, 211, 238, 0.06)";
+  ctx.strokeStyle = "rgba(122, 162, 255, 0.06)";
   for (let x = 0; x < W; x += 40) {
     ctx.beginPath();
     ctx.moveTo(x, 0);
@@ -176,7 +176,7 @@ function drawTwin() {
   }
 
   if (state.layers.water) {
-    ctx.strokeStyle = "rgba(34, 211, 238, 0.55)";
+    ctx.strokeStyle = "rgba(122, 162, 255, 0.55)";
     ctx.lineWidth = 3;
     ctx.beginPath();
     for (let x = 0; x <= W; x += 6) {
@@ -185,7 +185,7 @@ function drawTwin() {
       else ctx.lineTo(x, y);
     }
     ctx.stroke();
-    ctx.fillStyle = "rgba(34, 211, 238, 0.7)";
+    ctx.fillStyle = "rgba(122, 162, 255, 0.7)";
     ctx.font = "11px system-ui";
     ctx.fillText("Danube flow layer", 16, H * 0.55 - 28);
   }
@@ -194,13 +194,13 @@ function drawTwin() {
     const hx = W * 0.5;
     const hy = H * 0.42;
     const g = ctx.createRadialGradient(hx, hy, 0, hx, hy, 90);
-    g.addColorStop(0, "rgba(251, 191, 36, 0.4)");
+    g.addColorStop(0, "rgba(233, 187, 95, 0.4)");
     g.addColorStop(1, "transparent");
     ctx.fillStyle = g;
     ctx.beginPath();
     ctx.arc(hx, hy, 90, 0, Math.PI * 2);
     ctx.fill();
-    ctx.fillStyle = "#fbbf24";
+    ctx.fillStyle = "#E9BB5F";
     ctx.font = "bold 12px system-ui";
     ctx.fillText("Starline Budapest", hx - 52, hy - 98);
     [
@@ -208,7 +208,7 @@ function drawTwin() {
       [0.42, 0.5],
       [0.65, 0.35],
     ].forEach(([x, y]) => {
-      ctx.strokeStyle = "rgba(251, 191, 36, 0.35)";
+      ctx.strokeStyle = "rgba(233, 187, 95, 0.35)";
       ctx.beginPath();
       ctx.moveTo(hx, hy);
       ctx.lineTo(W * x, H * y);
@@ -234,10 +234,10 @@ function drawTwin() {
     if (p.y < 0 || p.y > 1) p.vy *= -1;
     if (!state.layers[p.layer]) return;
     const colors = {
-      water: "rgba(34, 211, 238, 0.85)",
+      water: "rgba(122, 162, 255, 0.85)",
       energy: "rgba(167, 139, 250, 0.85)",
-      data: "rgba(52, 211, 153, 0.85)",
-      mobility: "rgba(251, 191, 36, 0.85)",
+      data: "rgba(111, 231, 183, 0.85)",
+      mobility: "rgba(233, 187, 95, 0.85)",
     };
     ctx.fillStyle = colors[p.layer] || "#fff";
     ctx.beginPath();
@@ -434,15 +434,15 @@ function drawMesh() {
   links.forEach(([a, b]) => {
     const n1 = NODES[a];
     const n2 = NODES[b];
-    html += `<line x1="${n1.x * w}" y1="${n1.y * h}" x2="${n2.x * w}" y2="${n2.y * h}" stroke="rgba(34,211,238,0.25)" stroke-width="1.5"/>`;
+    html += `<line x1="${n1.x * w}" y1="${n1.y * h}" x2="${n2.x * w}" y2="${n2.y * h}" stroke="rgba(122,162,255,0.25)" stroke-width="1.5"/>`;
   });
   NODES.forEach((n) => {
     const sel =
       state.selectedNode === n.id
-        ? ' stroke="#fbbf24" stroke-width="3"'
-        : ' stroke="#22d3ee" stroke-width="1.5"';
-    html += `<circle class="node-circle" data-id="${n.id}" cx="${n.x * w}" cy="${n.y * h}" r="14" fill="#1a2540"${sel} style="cursor:pointer"/>`;
-    html += `<text x="${n.x * w}" y="${n.y * h + 28}" fill="#94a3b8" font-size="10" text-anchor="middle">${n.name}</text>`;
+        ? ' stroke="#E9BB5F" stroke-width="3"'
+        : ' stroke="#7AA2FF" stroke-width="1.5"';
+    html += `<circle class="node-circle" data-id="${n.id}" cx="${n.x * w}" cy="${n.y * h}" r="14" fill="#101014"${sel} style="cursor:pointer"/>`;
+    html += `<text x="${n.x * w}" y="${n.y * h + 28}" fill="#A6ACC4" font-size="10" text-anchor="middle">${n.name}</text>`;
   });
   svg.innerHTML = html;
   svg.querySelectorAll(".node-circle").forEach((c) => {
