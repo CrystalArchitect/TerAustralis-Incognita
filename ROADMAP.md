@@ -62,6 +62,12 @@ Dated so this section ages honestly — newest first, and it's fine to trim
 older entries once they're no longer useful context; the full history is
 always in `git log`.
 
+- **2026-07-22** — Added matrix mode to the Starline Weaver
+  (`crystal-core/clementine/bridge/`): `run_matrix()` fans one question out
+  to every agent independently (none sees another's reply) and
+  `cross_compare()` counts delivery and truth-label agreement — a count, not
+  a verdict. `--mode matrix` on the existing CLI. 4 new self-tests, 7/7
+  passing.
 - **2026-07-22** — Fixed `CODEX.md`'s dead `assets/codex-cover.jpeg` link (the
   `assets/` folder didn't exist) and added a matching cover to
   `APOCRYPHON.md`, which had none. Both AI-generated with Grok on X.
