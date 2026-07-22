@@ -31,7 +31,10 @@ intended path is:
 boot  →  launch  →  burn  →  network  →  explore  →  visit <node>
 ```
 
-- `boot` — bring the system up; prints the Purpose Core and confirms NON SOLUS.
+- `boot` — bring the system up; prints the Purpose Core and confirms NON
+  SOLUS. A cinematic take on this moment — a video-generation prompt, not
+  rendered output — lives in
+  [`tools/boot-visual-prompt.md`](tools/boot-visual-prompt.md).
 - `launch` — spool the engines; the Starline goes from DORMANT to IN ORBIT and
   the first soundtrack cues.
 - `burn` — the escape burn; you leave planetary orbit (TRANS-STELLAR).
