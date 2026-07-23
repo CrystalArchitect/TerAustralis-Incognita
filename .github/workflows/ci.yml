@@ -19,23 +19,25 @@ jobs:
         with:
           python-version: "3.12"
       - name: Syntax-check Python sources
-        run: python -m compileall -q apps/lumina crystal-core crystalcore node tests _archive
+        run: python -m compileall -q src tests archive
       - name: Starline Weaver self-test
-        working-directory: crystal-core
+        working-directory: src/crystal-core
         run: python -m clementine.bridge.selftest
       - name: Pipeline self-test
-        working-directory: crystal-core
+        working-directory: src/crystal-core
         run: python -m services.selftest
-      - name: Install Consent Transport dependencies
-        working-directory: crystal-core
-        run: pip install -r requirements-consenttransport.txt
-      - name: Consent Transport self-test
-        working-directory: crystal-core
-        run: python -m consent_transport.selftest
+      - name: Install Starline dependencies
+        working-directory: src/crystal-core
+        run: pip install -r requirements-starline.txt
+      - name: Starline self-test
+        working-directory: src/crystal-core
+        run: python -m starline.selftest
       - name: RDP self-test
-        working-directory: crystal-core
+        working-directory: src/crystal-core
         run: python -m rdp.selftest
       - name: Lumina dependencies
-        run: pip install -r apps/lumina/requirements.txt pytest
+        run: pip install -r src/apps/lumina/requirements.txt pytest
       - name: Lumina core tests
-        run: python -m pytest apps/lumina/tests -q
+        run: python -m pytest src/apps/lumina/tests -q
+      - name: Mesh stub tests
+        run: python -m pytest tests -q
