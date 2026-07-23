@@ -81,6 +81,14 @@ The repository follows the **CrystalCore OS v1.0 architecture** (adopted
 | `mythos/` | The Crystal universe canon — Codex, Apocryphon, the Book of the Sovereign Key, the Starline Transmissions, 88 pieces of art, the outer-world lore (`teraaustralis/`) |
 | `archive/` | Superseded code kept for provenance — not maintained, do not build on it |
 
+**Why `mythos/` sits at the top level instead of under `docs/`:** it's under
+a different license than everything else in the tree — CC BY-NC-ND 4.0
+(`LICENSE-CONTENT.md`) versus the code's Apache-2.0 (`LICENSE`) — and folding
+canon into `docs/` would blur that boundary. Keeping it a peer of `src/` and
+`docs/` makes the license split visible from the directory listing alone,
+with no need to open a file to find out which rule applies. Full reasoning:
+[`ADR-0002`](docs/adr/ADR-0002.md).
+
 ## The Covenant
 
 Lumina's core prompt (`src/apps/lumina/crystalcore/companion.py`) carries
