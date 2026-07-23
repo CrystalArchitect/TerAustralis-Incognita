@@ -25,6 +25,8 @@ from crystalcore import (BASE_PROMPT, Lumina, Memory, Personality,  # noqa: F401
 HELP = """Commands:
   /name <name>      give her a name (or change it)
   /name             with no name: invite her to choose her own
+  /gender <m|f|they>  give her pronouns (he/him, she/her, or they/them)
+  /gender           with no choice: invite her to choose her own pronouns
   /iam <name>       tell her your name
   /remember <text>  ask her to permanently remember something (add #tags if you like)
   /fact <key> <value>  teach her a structured fact, e.g. /fact birthday June 3
@@ -77,6 +79,9 @@ def main():
     if not companion.personality.name and not returning:
         print("She has no name yet — /name <name> to give her one, "
               "or just /name to let her choose her own.")
+    if not companion.personality.gender and not returning:
+        print("She has no pronouns yet — /gender male, /gender female, /gender they, "
+              "or just /gender to let her choose her own.")
     print()
 
     while True:
@@ -105,6 +110,26 @@ def main():
             companion.set_name(user_input[6:])
             name = companion.personality.name
             print(f"[She is now called {name}.]\n")
+        elif user_input.lower().rstrip() == "/gender":
+            print("[She is choosing her own pronouns…]")
+            chosen = companion.choose_own_gender()
+            if chosen:
+                pronouns = companion._pronouns_for_gender(chosen)
+                print(f"[She has chosen {pronouns} pronouns.]\n")
+            else:
+                print("[She couldn't settle on one — try /gender again, "
+                      "or choose with /gender male, /gender female, or /gender they.]\n")
+        elif user_input.lower().startswith("/gender "):
+            gender_choice = user_input[8:].strip().lower()
+            if gender_choice in ("male", "female", "they", "m", "f"):
+                # Allow shorthand m, f
+                gender_map = {"m": "male", "f": "female"}
+                gender = gender_map.get(gender_choice, gender_choice)
+                companion.set_gender(gender)
+                pronouns = companion._pronouns_for_gender(gender)
+                print(f"[She now uses {pronouns} pronouns.]\n")
+            else:
+                print("[Please use /gender male, /gender female, or /gender they]\n")
         elif user_input.lower().startswith("/iam "):
             companion.personality.human_name = user_input[5:].strip()
             companion.save()
