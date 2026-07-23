@@ -1,2 +1,3 @@
-"""TeraAustralis lumina package"""
-__version__ = "1.0.0"
+"""CrystalBridge — local meeting-house for Lumina (MCP, consent-first)."""
+
+__version__ = "0.1.0"
