@@ -34,6 +34,16 @@ class HealthStatus:
 class RuntimeAPI:
     """HTTP/REST interface to the runtime."""
 
+    # Allowlist of configuration keys that can be overridden at runtime
+    OVERRIDEABLE_CONFIG_KEYS = {
+        "api.rate_limit_per_minute": int,
+        "coordinator.default_timeout_seconds": (int, float),
+        "coordinator.retry_count": int,
+        "eventbus.handler_timeout_seconds": (int, float),
+        "eventbus.max_queue_size": int,
+        "logging.log_level": str,
+    }
+
     def __init__(
         self,
         coordinator: Coordinator,
@@ -304,6 +314,45 @@ class RuntimeAPI:
             key = body["key"]
             value = body["value"]
 
+            # SECURITY: Only admins can override configuration
+            if caller_identity not in ["system_admin", "admin", "internal"]:
+                self.logging.audit(
+                    event_type="config_override_denied",
+                    actor=caller_identity,
+                    action="override_config",
+                    resource=key,
+                    result="failure:unauthorized",
+                    context={"reason": "non-admin user"},
+                )
+                return APIResponse(
+                    status_code=403,
+                    body={"error": "Only administrators can override configuration"}
+                )
+
+            # SECURITY: Only allow overriding whitelisted keys
+            if key not in self.OVERRIDEABLE_CONFIG_KEYS:
+                self.logging.audit(
+                    event_type="config_override_denied",
+                    actor=caller_identity,
+                    action="override_config",
+                    resource=key,
+                    result="failure:not_allowed",
+                    context={"reason": "key not in allowlist"},
+                )
+                return APIResponse(
+                    status_code=400,
+                    body={"error": f"Configuration key '{key}' cannot be overridden"}
+                )
+
+            # Validate value type
+            allowed_types = self.OVERRIDEABLE_CONFIG_KEYS[key]
+            if not isinstance(value, allowed_types):
+                expected = allowed_types if isinstance(allowed_types, tuple) else (allowed_types,)
+                return APIResponse(
+                    status_code=400,
+                    body={"error": f"Invalid type for '{key}': expected {[t.__name__ for t in expected]}"}
+                )
+
             # Log override
             self.logging.audit(
                 event_type="config_override",
@@ -323,6 +372,9 @@ class RuntimeAPI:
             )
 
         except Exception as e:
+            self.logging.operational("error", f"Config override error", {
+                "error": str(e),
+            })
             return APIResponse(
                 status_code=400,
                 body={"error": str(e)}
