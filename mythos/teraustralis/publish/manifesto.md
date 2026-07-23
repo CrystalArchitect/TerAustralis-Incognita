@@ -1,4 +1,4 @@
-# Manifesto — TeraAustralis Incognita
+# Manifesto — TerAustralis Incognita
 
 1. **The south is not secondary.** It is a pillar.  
 2. **The red heart is a launchpad**, not a void.  
