@@ -1,3 +1,6 @@
+# Copyright 2026 Crystal Arena-Turner (TerAustralis Incognita)
+# SPDX-License-Identifier: Apache-2.0
+
 """TWIN — flow queries over the twin store.
 
 The twin only ever reports what passed decode. That is the whole point.

@@ -1,3 +1,6 @@
+<!-- Copyright 2026 Crystal Arena-Turner (TerAustralis Incognita) -->
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+
 <script>
   /**
    * Her presence: a figure at a terminal, seen from behind — the operator

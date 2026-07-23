@@ -1,3 +1,6 @@
+# Copyright 2026 Crystal Arena-Turner (TerAustralis Incognita)
+# SPDX-License-Identifier: Apache-2.0
+
 """Boot Clementine — the Starline Weaver as a live service.
 
     python3 -m clementine.bridge.server --port 8777 --topic "first water"

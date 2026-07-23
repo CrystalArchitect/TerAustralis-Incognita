@@ -1,3 +1,6 @@
+<!-- Copyright 2026 Crystal Arena-Turner (TerAustralis Incognita) -->
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+
 <script>
   /** Streaming chat with the local model via the Flask API. */
   import { voiceSupported, listVoices, onVoicesChanged, speak, stopSpeaking } from './voice.js';

@@ -1,3 +1,6 @@
+# Copyright 2026 Crystal Arena-Turner (TerAustralis Incognita)
+# SPDX-License-Identifier: Apache-2.0
+
 """TCP transport — where the Noise handshake meets a real socket.
 
 Binds to 127.0.0.1 by default, same rule as everything else in this repo

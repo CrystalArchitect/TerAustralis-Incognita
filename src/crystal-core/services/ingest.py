@@ -1,3 +1,6 @@
+# Copyright 2026 Crystal Arena-Turner (TerAustralis Incognita)
+# SPDX-License-Identifier: Apache-2.0
+
 """INGEST — write decoded events into the twin store (SQLite).
 
 Partitioned by (h3, class); idempotent on event_id, so replays at the

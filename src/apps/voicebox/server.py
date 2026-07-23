@@ -1,3 +1,6 @@
+# Copyright 2026 Crystal Arena-Turner (TerAustralis Incognita)
+# SPDX-License-Identifier: Apache-2.0
+
 """Voicebox — a tiny local MCP server that gives Claude Code a voice.
 
 Runs on YOUR machine and speaks through the operating system's own

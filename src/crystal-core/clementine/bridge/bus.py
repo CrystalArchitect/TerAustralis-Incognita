@@ -1,3 +1,6 @@
+# Copyright 2026 Crystal Arena-Turner (TerAustralis Incognita)
+# SPDX-License-Identifier: Apache-2.0
+
 """Starline Weaver — the shared channel every agent speaks on.
 
 This is the routing half of Clementine's communication bridge: the weave that

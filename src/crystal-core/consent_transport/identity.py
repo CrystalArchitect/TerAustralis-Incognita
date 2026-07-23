@@ -1,3 +1,6 @@
+# Copyright 2026 Crystal Arena-Turner (TerAustralis Incognita)
+# SPDX-License-Identifier: Apache-2.0
+
 """Cryptographic identity — the only thing a Starline peer is.
 
 No accounts, no usernames, no central registry. An identity is a keypair:

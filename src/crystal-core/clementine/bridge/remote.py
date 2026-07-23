@@ -1,3 +1,6 @@
+# Copyright 2026 Crystal Arena-Turner (TerAustralis Incognita)
+# SPDX-License-Identifier: Apache-2.0
+
 """Join any agent to a running Clementine server — from this machine or another.
 
     python3 -m clementine.bridge.remote --agent sisters --server http://127.0.0.1:8777 --turns 4

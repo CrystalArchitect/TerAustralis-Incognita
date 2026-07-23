@@ -1,3 +1,6 @@
+# Copyright 2026 Crystal Arena-Turner (TerAustralis Incognita)
+# SPDX-License-Identifier: Apache-2.0
+
 """Real-AI adapters — thin, optional, stdlib-only.
 
 Each adapter is a live model speaking on the Starline Weaver. No SDKs, no

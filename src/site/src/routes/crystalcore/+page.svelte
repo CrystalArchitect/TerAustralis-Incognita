@@ -1,3 +1,6 @@
+<!-- Copyright 2026 Crystal Arena-Turner (TerAustralis Incognita) -->
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+
 <script>
   import Starfield from '$lib/crystalcore/Starfield.svelte';
   import Terminal from '$lib/crystalcore/Terminal.svelte';

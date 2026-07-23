@@ -1,3 +1,6 @@
+# Copyright 2026 Crystal Arena-Turner (TerAustralis Incognita)
+# SPDX-License-Identifier: Apache-2.0
+
 """Consent Transport — the sovereign communication layer between Lumina agents.
 
 Formerly published as "Starline"; renamed so the built layer carries a plain

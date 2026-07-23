@@ -1,3 +1,6 @@
+<!-- Copyright 2026 Crystal Arena-Turner (TerAustralis Incognita) -->
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+
 <!--
   The Crystal motifs, drawn in pure inline SVG (no external assets):
   the Seed of Life (sacred geometry) and the vortex wheel (the 1-2-4-8-7-5

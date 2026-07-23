@@ -1,3 +1,6 @@
+<!-- Copyright 2026 Crystal Arena-Turner (TerAustralis Incognita) -->
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+
 <script>
   import Footer from '$lib/components/Footer.svelte';
 
@@ -161,7 +164,7 @@
       <li><strong>Transport</strong> — TCP + Noise, length-prefixed frames, connection per request</li>
     </ul>
     <p style="margin-top: 2rem;">
-      <a href="/docs/starline" class="spec-link">→ Read the Full Spec</a>
+      <a href="/docs/consent-transport" class="spec-link">→ Read the Full Spec</a>
     </p>
   </section>
 

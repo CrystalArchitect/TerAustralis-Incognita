@@ -1,3 +1,6 @@
+# Copyright 2026 Crystal Arena-Turner (TerAustralis Incognita)
+# SPDX-License-Identifier: Apache-2.0
+
 """Self-test for Consent Transport — proves the sovereignty guarantees are real.
 
     python3 -m consent_transport.selftest

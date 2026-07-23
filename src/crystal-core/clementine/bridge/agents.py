@@ -1,3 +1,6 @@
+# Copyright 2026 Crystal Arena-Turner (TerAustralis Incognita)
+# SPDX-License-Identifier: Apache-2.0
+
 """Built-in agents — no API keys needed.
 
 ClementineHub is Clementine, the communicator (the eighth voice): as the

@@ -1,3 +1,6 @@
+# Copyright 2026 Crystal Arena-Turner (TerAustralis Incognita)
+# SPDX-License-Identifier: Apache-2.0
+
 """Make the local `crystalcore` package importable and unambiguous.
 
 The repo root has a *different* package also named `crystalcore` (the

@@ -1,3 +1,6 @@
+// Copyright 2026 Crystal Arena-Turner (TerAustralis Incognita)
+// SPDX-License-Identifier: Apache-2.0
+
 import { marked } from 'marked';
 
 // Read every markdown file in src/content as raw text at build time.
