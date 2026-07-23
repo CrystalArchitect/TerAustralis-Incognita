@@ -103,8 +103,9 @@ class Logger:
                             "context": context,
                         }
                         f.write(json.dumps(record) + "\n")
-                except Exception as e:
-                    self.python_logger.error(f"Failed to write operational log: {e}")
+                except IOError as e:
+                    self.python_logger.error("Failed to write operational log to '{}': {}".format(
+                        self.operational_file, str(e)), exc_info=True)
 
     def diagnostic(self, level: str, message: str, context: Optional[Dict[str, Any]] = None) -> None:
         """
@@ -185,8 +186,9 @@ class Logger:
                             "context": record.context,
                         }
                         f.write(json.dumps(audit_dict) + "\n")
-                except Exception as e:
-                    self.python_logger.error(f"Failed to write audit log: {e}")
+                except IOError as e:
+                    self.python_logger.error("Failed to write audit log to '{}': {}".format(
+                        self.audit_file, str(e)), exc_info=True)
 
         return record
 

@@ -147,20 +147,27 @@ class Registry:
         with self._lock:
             # Validate inputs
             if not service_id or not isinstance(service_id, str):
-                raise ValueError(f"Invalid service_id: {service_id}")
+                raise ValueError("service_id must be non-empty string, got: {}".format(type(service_id).__name__))
 
             if service_id in self._services:
                 raise DuplicateServiceError(service_id)
 
             if len(self._services) >= self.max_services:
-                raise ValueError(f"Registry at capacity: {self.max_services} services")
+                raise ValueError("Registry at capacity: cannot register service '{}', max {} services allowed, currently have {} services".format(
+                    service_id, self.max_services, len(self._services)))
 
             if not capabilities:
-                raise ValueError("Service must provide at least one capability")
+                raise ValueError("Service '{}' must provide at least one capability".format(service_id))
+
+            # Validate capability names
+            capability_names = []
+            for i, cap in enumerate(capabilities):
+                if not cap.name or not isinstance(cap.name, str):
+                    raise ValueError("Capability at index {} has invalid name: {}".format(i, cap.name))
+                capability_names.append(cap.name)
 
             # Register service
             now = time.time()
-            capability_names = [cap.name for cap in capabilities]
 
             self._services[service_id] = {
                 "metadata": metadata,
@@ -485,7 +492,30 @@ class Registry:
                 if now - last_heartbeat > self.heartbeat_timeout:
                     status = self._status.get(service_id, ComponentStatus.OFFLINE.value)
                     if status != ComponentStatus.OFFLINE.value:
-                        self.mark_offline(service_id, f"Heartbeat timeout after {self.heartbeat_timeout}s")
+                        # Mark offline directly (avoid recursive lock with mark_offline call)
+                        old_status = status
+                        self._status[service_id] = ComponentStatus.OFFLINE.value
+                        reason = "Heartbeat timeout after {}s".format(self.heartbeat_timeout)
+                        self._degraded_reason[service_id] = reason
+
+                        # Publish event
+                        self.events.publish(
+                            event_type="registry.service_offline",
+                            event_data={
+                                "service_id": service_id,
+                                "reason": reason,
+                                "previous_status": old_status,
+                            },
+                            source="registry"
+                        )
+
+                        self.logging.operational("warn", "Service '{}' marked offline: timeout".format(service_id), {
+                            "service_id": service_id,
+                            "reason": reason,
+                            "last_heartbeat": last_heartbeat,
+                            "current_time": now,
+                        })
+
                         timed_out.append(service_id)
 
             return timed_out

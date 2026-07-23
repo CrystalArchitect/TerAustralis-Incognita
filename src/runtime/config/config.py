@@ -77,9 +77,14 @@ class Config:
                 except ImportError:
                     raise ValueError("YAML support requires 'pyyaml' package")
             else:
-                raise ValueError(f"Unsupported config file format: {config_file}")
+                raise ValueError("Unsupported config file format '{}': expected .json or .yaml/.yml".format(config_file))
+        except json.JSONDecodeError as e:
+            raise ValueError("Failed to parse JSON config file '{}': {} at line {}".format(
+                config_file, e.msg, e.lineno)) from e
+        except IOError as e:
+            raise ValueError("Failed to read config file '{}': {}".format(config_file, type(e).__name__)) from e
         except Exception as e:
-            raise ValueError(f"Failed to load config file {config_file}: {e}")
+            raise ValueError("Failed to load config file '{}': {}".format(config_file, type(e).__name__)) from e
 
     def _load_from_environment(self) -> None:
         """Load configuration from environment variables."""
@@ -110,12 +115,14 @@ class Config:
         parts = key.split(".")
         current = self._config
 
-        for part in parts[:-1]:
+        for i, part in enumerate(parts[:-1]):
             if part not in current:
                 current[part] = {}
             elif not isinstance(current[part], dict):
-                # Can't traverse further
-                return
+                # Path component is non-dict, can't traverse further
+                path_so_far = ".".join(parts[:i+1])
+                raise ValueError("Cannot set '{}': path component '{}' exists but is not a dict (type: {})".format(
+                    key, path_so_far, type(current[part]).__name__))
 
             current = current[part]
 

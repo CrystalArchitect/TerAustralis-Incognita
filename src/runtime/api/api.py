@@ -71,6 +71,7 @@ class RuntimeAPI:
             self.port = config.get("api.port", 8000)
             self.rate_limit_per_minute = config.get("api.rate_limit_per_minute", 1000)
             self.log_level = config.get("api.log_level", "info")
+            self.admin_roles = config.get("security.admin_roles", ["system_admin", "admin", "internal"])
         except Exception as e:
             raise ValueError(f"Failed to load API configuration: {e}")
 
@@ -108,7 +109,8 @@ class RuntimeAPI:
             APIResponse with status, headers, body
         """
         headers = headers or {}
-        self._request_count += 1
+        with self._rate_limit_lock:
+            self._request_count += 1
 
         try:
             # Log request
@@ -120,9 +122,13 @@ class RuntimeAPI:
 
             # Check rate limit
             if not self._check_rate_limit(caller_identity):
+                self.logging.operational("warn", "Rate limit exceeded for caller '{}'".format(caller_identity), {
+                    "caller": caller_identity,
+                    "limit": self.rate_limit_per_minute,
+                })
                 return APIResponse(
                     status_code=429,
-                    body={"error": "Rate limit exceeded"}
+                    body={"error": "Rate limit exceeded: {} requests per minute".format(self.rate_limit_per_minute)}
                 )
 
             # Route request
@@ -220,16 +226,28 @@ class RuntimeAPI:
             )
 
             # Use caller identity and provided context
+            request_id = context_data.get("request_id", "").strip() if context_data else ""
+            if not request_id:
+                import uuid as uuid_module
+                request_id = str(uuid_module.uuid4())
+
             context = ExecutionContext(
-                request_id=context_data.get("request_id", ""),
+                request_id=request_id,
                 caller_identity=caller_identity,
-                approved_scope=context_data.get("approved_scope", []),
-                approval_level=context_data.get("approval_level", "read"),
+                approved_scope=context_data.get("approved_scope", []) if context_data else [],
+                approval_level=context_data.get("approval_level", "read") if context_data else "read",
                 provenance="api",
             )
 
             # Execute workflow
             result = self.coordinator.execute_workflow(task, context)
+
+            error_details_dict = None
+            if result.error_details:
+                error_details_dict = {
+                    "error_code": result.error_details.error_code,
+                    "message": result.error_details.message,
+                }
 
             return APIResponse(
                 status_code=200,
@@ -237,22 +255,27 @@ class RuntimeAPI:
                     "task_id": result.task_id,
                     "status": result.status,
                     "outputs": result.outputs,
-                    "error_details": {
-                        "error_code": result.error_details.error_code,
-                        "message": result.error_details.message,
-                    } if result.error_details else None,
+                    "error_details": error_details_dict,
                     "components_executed": result.components_executed,
                     "duration_ms": result.duration_ms,
                 }
             )
 
         except Exception as e:
-            self.logging.operational("error", f"Task execution error", {
+            request_id = context_data.get("request_id", "") if context_data else ""
+            if not request_id:
+                import uuid as uuid_module
+                request_id = str(uuid_module.uuid4())
+
+            self.logging.operational("error", "Task execution error: {}".format(type(e).__name__), {
                 "error": str(e),
+                "error_type": type(e).__name__,
+                "caller": caller_identity,
+                "request_id": request_id,
             })
             return APIResponse(
                 status_code=500,
-                body={"error": str(e)}
+                body={"error": "Task execution failed", "request_id": request_id}
             )
 
     def _handle_health_check(self) -> APIResponse:
@@ -315,14 +338,14 @@ class RuntimeAPI:
             value = body["value"]
 
             # SECURITY: Only admins can override configuration
-            if caller_identity not in ["system_admin", "admin", "internal"]:
+            if caller_identity not in self.admin_roles:
                 self.logging.audit(
                     event_type="config_override_denied",
                     actor=caller_identity,
                     action="override_config",
                     resource=key,
                     result="failure:unauthorized",
-                    context={"reason": "non-admin user"},
+                    context={"reason": "non-admin user", "admin_roles": self.admin_roles},
                 )
                 return APIResponse(
                     status_code=403,
@@ -348,9 +371,11 @@ class RuntimeAPI:
             allowed_types = self.OVERRIDEABLE_CONFIG_KEYS[key]
             if not isinstance(value, allowed_types):
                 expected = allowed_types if isinstance(allowed_types, tuple) else (allowed_types,)
+                type_names = [t.__name__ for t in expected]
                 return APIResponse(
                     status_code=400,
-                    body={"error": f"Invalid type for '{key}': expected {[t.__name__ for t in expected]}"}
+                    body={"error": "Invalid type for '{}': expected [{}], got {}".format(
+                        key, ", ".join(type_names), type(value).__name__)}
                 )
 
             # Log override
@@ -372,20 +397,23 @@ class RuntimeAPI:
             )
 
         except Exception as e:
-            self.logging.operational("error", f"Config override error", {
+            self.logging.operational("error", "Config override error: {}".format(type(e).__name__), {
                 "error": str(e),
+                "error_type": type(e).__name__,
+                "key": key,
+                "caller": caller_identity,
             })
             return APIResponse(
                 status_code=400,
-                body={"error": str(e)}
+                body={"error": "Config override failed"}
             )
 
     def _handle_get_audit_logs(self, caller_identity: str) -> APIResponse:
         """Handle get audit logs request."""
         try:
-            # SECURITY: Only allow system_admin or internal callers to see audit logs
+            # SECURITY: Only allow admin callers to see audit logs
             # Other users can only see logs related to their own activities
-            is_admin = caller_identity in ["system_admin", "admin", "internal"]
+            is_admin = caller_identity in self.admin_roles
 
             # Get audit records
             records = self.logging.get_audit_records(limit=100)

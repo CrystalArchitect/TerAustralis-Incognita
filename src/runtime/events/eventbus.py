@@ -28,7 +28,7 @@ class Subscription:
     event_type_pattern: str  # e.g., "task.*" or "task.started"
     handler: Callable
     filter_func: Optional[Callable] = None
-    created_at: float = field(default_factory=time.time)
+    created_at: float = field(default_factory=lambda: time.time())
 
 
 class EventBus:
@@ -100,7 +100,8 @@ class EventBus:
         with self._lock:
             # Check backpressure
             if len(self._events) >= self.max_queue_size:
-                raise RuntimeError(f"Event queue full: {self.max_queue_size} events")
+                raise RuntimeError("Event queue full: cannot publish event '{}' type '{}', max {} events allowed, currently have {} events".format(
+                    source, event_type, self.max_queue_size, len(self._events)))
 
             # Create event
             now = time.time()
@@ -226,10 +227,13 @@ class EventBus:
                         if event.event_id in self._pending_events[subscription.subscription_id]:
                             self._pending_events[subscription.subscription_id].remove(event.event_id)
             except Exception as e:
-                self.logging.operational("warn", f"Delivery failed for subscription", {
+                self.logging.operational("warn", "Delivery failed for subscription '{}': {}".format(
+                    subscription.subscription_id, type(e).__name__), {
                     "subscription_id": subscription.subscription_id,
                     "event_id": event.event_id,
+                    "event_type": event.event_type,
                     "error": str(e),
+                    "error_type": type(e).__name__,
                 })
 
         # Run handler in thread with timeout to prevent blocking
