@@ -16,7 +16,7 @@ overrides it.
   hold until consent and safety questions are settled.
 - **Multi-instance Lumina** — two sovereign companions exchanging consented
   memory over Starline rails. Design not started; the consent law it would
-  run under already exists in code (`src/crystal-core/starline/consent.py`).
+  run under already exists in code (`src/crystal-core/consent_transport/consent.py`).
 - **A consumer for the SDK** — `src/sdk/typescript/` is a scaffold until
   something real is wired against it.
 
