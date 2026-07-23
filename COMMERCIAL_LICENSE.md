@@ -2,9 +2,14 @@
 
 **CrystalCore.OS – Emotional Intelligence & Affective Computing System**
 
-> **Scope note:** this agreement covers the **CrystalCore-EI** package
-> (`packages/crystalcore-ei/`) specifically, not the repository as a whole
-> — see [`ADR-0009`](docs/adr/ADR-0009.md).
+> **Superseded — not in effect.** This agreement proposed commercial terms
+> for the CrystalCore-EI package specifically. The maintainer decided
+> against differentiated per-package licensing: the whole repository,
+> including CrystalCore-EI, is uniformly CC BY-NC-ND 4.0, with commercial
+> licensing handled the same way as everywhere else in the repo (contact
+> the copyright holder — see `docs/ATTRIBUTIONS.md`) rather than through
+> this agreement's specific tiers. See [`ADR-0010`](docs/adr/ADR-0010.md).
+> Kept for provenance, not in effect.
 
 Copyright (c) 2026 CrystalArchitect. All Rights Reserved.
 

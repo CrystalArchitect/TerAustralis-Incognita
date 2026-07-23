@@ -2,15 +2,11 @@
 
 **Protecting Innovation While Enabling Community**
 
-> **Scope note:** despite the repo-wide-sounding title, this document
-> describes the dual-license terms for one specific package —
-> **CrystalCore-EI** (`packages/crystalcore-ei/`, Emotional Intelligence &
-> Affective Computing) — paired with `LICENSE.md` (MIT, non-commercial) and
-> `COMMERCIAL_LICENSE.md` in this same directory. It does not describe the
-> repository's overall license: that's the root `LICENSE` file (currently
-> CC BY-NC-ND 4.0), or the target per-package model in
-> [`docs/governance/LICENSING-STRATEGY.md`](docs/governance/LICENSING-STRATEGY.md).
-> See [`ADR-0009`](docs/adr/ADR-0009.md) for how these fit together.
+> **Superseded — not the project's license.** This document proposed a
+> dual-license model for one package (CrystalCore-EI). The maintainer
+> decided against differentiated per-package licensing entirely: the whole
+> repository, `packages/` included, is uniformly CC BY-NC-ND 4.0 — see
+> [`ADR-0010`](docs/adr/ADR-0010.md). Kept for provenance, not in effect.
 
 ---
 
