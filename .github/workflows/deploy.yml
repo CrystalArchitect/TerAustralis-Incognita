@@ -7,33 +7,51 @@ on:
 jobs:
   build_site:
     runs-on: ubuntu-latest
+    outputs:
+      site_present: ${{ steps.detect.outputs.present }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Detect src/site
+        id: detect
+        run: |
+          if [ -d src/site ]; then
+            echo "present=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "present=false" >> "$GITHUB_OUTPUT"
+            echo "::notice title=src/site not in this repository::src/site (the SvelteKit site) lives only in the maintainer's local tree, not in git history on any branch — see docs/architecture/SystemMap.md, 'Where the code actually lives'. Skipping the Pages build; this run deploys nothing."
+          fi
+
       - name: Setup Node
+        if: steps.detect.outputs.present == 'true'
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
       - name: Install dependencies
+        if: steps.detect.outputs.present == 'true'
         run: cd src/site && npm install
 
       - name: Build
+        if: steps.detect.outputs.present == 'true'
         run: cd src/site && npm run build
 
       - name: Add static demo shells to the Pages artifact
+        if: steps.detect.outputs.present == 'true'
         run: |
           cp -r src/apps/crystal-interface src/site/build/crystal-interface
           cp -r src/apps/vision-web src/site/build/vision-web
 
       - name: Upload artifact
+        if: steps.detect.outputs.present == 'true'
         uses: actions/upload-pages-artifact@v3
         with:
           path: 'src/site/build'
 
   deploy:
     needs: build_site
+    if: needs.build_site.outputs.site_present == 'true'
     runs-on: ubuntu-latest
     permissions:
       pages: write
