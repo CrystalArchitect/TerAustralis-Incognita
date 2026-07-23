@@ -10,7 +10,7 @@ bug.
 | Lumina | `src/apps/lumina/` | Local-first companion: terminal, Flask API, Svelte webapp, layered memory | Working prototype | `python -m pytest src/apps/lumina/tests -q` |
 | Starline Weaver | `src/crystal-core/clementine/bridge/` | Multi-AI bus, Belt-Three law in code, matrix mode | v0, self-tested | `cd src/crystal-core && python3 -m clementine.bridge.selftest` |
 | Pipeline | `src/crystal-core/services/` | Decode → Ingest → Twin over SQLite, quarantine with reasons | v0, self-tested | `cd src/crystal-core && python3 -m services.selftest` |
-| Starline | `src/crystal-core/starline/` | P2P consent-gated memory exchange, Noise handshake | Running, self-tested | `cd src/crystal-core && python3 -m starline.selftest` |
+| Starline | `src/crystal-core/consent_transport/` | P2P consent-gated memory exchange, Noise handshake | Running, self-tested | `cd src/crystal-core && python3 -m consent_transport.selftest` |
 | RDP | `src/crystal-core/rdp/` | Tamper-evident record chain + explainable decision kernel | Running, self-tested | `cd src/crystal-core && python3 -m rdp.selftest` |
 | CrystalBridge | `src/crystalcore/` | Fail-closed MCP consent gate, append-only audit | Built (reconstructed spec) | `python -m compileall -q src/crystalcore` + gate checks exercised via guests |
 | Mythos terminal | `src/crystalcore-os/` | The Crystal universe as a playable terminal — Vision-layer code | Runs (a story, not infrastructure) | `python3 src/crystalcore-os/crystalcore_os.py` |

@@ -7,7 +7,7 @@ demonstrate.
 
 | Watch it work | Command (from repo root) |
 |---|---|
-| Starline: pair, deny, grant, exchange, revoke, deny | `cd src/crystal-core && python3 -m starline.run demo` |
+| Starline: pair, deny, grant, exchange, revoke, deny | `cd src/crystal-core && python3 -m consent_transport.run demo` |
 | RDP: every precedence tier decides, every verdict recorded | `cd src/crystal-core && python3 -m rdp.run demo` |
 | RDP witnessing a real Weaver matrix run | `cd src/crystal-core && python3 -m rdp.run matrix-demo` |
 | The pipeline over sample events | `cd src/crystal-core && python3 -m services.pipeline services/sample-events/budapest.jsonl` |

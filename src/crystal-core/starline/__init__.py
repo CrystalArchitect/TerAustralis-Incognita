@@ -1,15 +1,34 @@
-"""Starline — the sovereign communication layer between Lumina agents.
+"""Deprecated import alias — ``starline`` is now ``consent_transport``.
 
-Two locally-running companions exchange consented memory fragments directly,
-peer to peer, with no server in the middle. See docs/architecture/crystal-core/STARLINE.md.
-
-Scope for this version: strict 1:1, pull-based (a peer must request and be
-approved before anything moves), same-LAN or manually-paired discovery.
-Group/mesh sharing is deliberately out of scope — see the spec's open
-questions for why.
-
-Needs the `cryptography` package (X25519, Ed25519, ChaCha20-Poly1305) —
-the one dependency in an otherwise stdlib-only repo. See requirements-starline.txt.
+This project's peer-to-peer transport was renamed from "Starline" to
+``consent_transport`` so the built layer carries a plain, literal name (the
+mythic "Starlines" live on in ``mythos/``, not here). Importing ``starline``
+still works — it re-exports ``consent_transport`` unchanged — but is
+deprecated and will be removed in a future release.
 """
+import importlib as _importlib
+import sys as _sys
+import warnings as _warnings
 
-__version__ = "0.1.0"
+_warnings.warn(
+    "starline has been renamed to consent_transport; "
+    "this alias will be removed in a future release",
+    DeprecationWarning,
+    stacklevel=2,
+)
+
+from consent_transport import *  # noqa: F401,F403,E402
+from consent_transport import __version__  # noqa: F401,E402
+
+# Keep ``starline.<submodule>`` (and ``python -m starline.<submodule>``)
+# resolving to the real package's modules for code written against the
+# previous release.
+for _sub in (
+    "agent", "consent", "discovery", "fragment", "identity", "noise",
+    "peers", "protocol", "run", "selftest", "transport",
+):
+    _sys.modules[f"{__name__}.{_sub}"] = _importlib.import_module(
+        f"consent_transport.{_sub}"
+    )
+
+del _importlib, _sys, _warnings, _sub

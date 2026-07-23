@@ -25,7 +25,7 @@ are separate from RDP:
 | Mechanism | Where | What it does |
 |---|---|---|
 | **CrystalBridge ConsentGate** | [`src/crystalcore/gate.py`](../../../src/crystalcore/gate.py) | Fail-closed gate; four checks in order — approval → permission → scope → provenance. Every decision audited ([`src/crystalcore/audit.py`](../../../src/crystalcore/audit.py)). |
-| **Starline consent** | [`starline/consent.py`](../../../src/crystal-core/starline/consent.py) | Signed `ConsentReceipt`s; `is_granted()`. Revocation stops *future* requests at once; it cannot retract data a peer already holds, and says so. |
+| **Consent Transport consent** | [`consent_transport/consent.py`](../../../src/crystal-core/consent_transport/consent.py) | Signed `ConsentReceipt`s; `is_granted()`. Revocation stops *future* requests at once; it cannot retract data a peer already holds, and says so. |
 | **The Covenant** | [`../../../mythos/COVENANT.md`](../../../mythos/COVENANT.md) | The five commitments those gates exist to keep. |
 
 **These are separate modules today.** What follows is *correspondence* — how the
@@ -48,7 +48,7 @@ question the same way: **legitimacy before prudence, and fail closed.**
   choice back, not to proceed.
 
 So ConsentGate is, in effect, a concrete instance of RDP's constraint tier; a
-Starline grant/revocation is a signed record of the kind RDP's chain is built to
+Consent Transport grant/revocation is a signed record of the kind RDP's chain is built to
 hold; the Covenant is the source of the constraints themselves.
 
 ## Worked examples
@@ -65,11 +65,11 @@ decide({"constraints": [{"id": "gate.approval", "satisfied": False}]})
 # → {'outcome': 'DENY', 'rule': 'constraint_violation', ...}
 ```
 
-**2 — a Starline request after revocation.** `is_granted() == False` is a
+**2 — a Consent Transport request after revocation.** `is_granted() == False` is a
 constraint violation:
 
 ```python
-decide({"constraints": [{"id": "starline.consent_granted", "satisfied": False}]})
+decide({"constraints": [{"id": "consent_transport.consent_granted", "satisfied": False}]})
 # → {'outcome': 'DENY', 'rule': 'constraint_violation', ...}
 ```
 
@@ -79,8 +79,8 @@ decision falls through to the risk tier:
 ```python
 decide({
     "constraints": [
-        {"id": "gate.approval",             "satisfied": True},
-        {"id": "starline.consent_granted",  "satisfied": True},
+        {"id": "gate.approval",                    "satisfied": True},
+        {"id": "consent_transport.consent_granted", "satisfied": True},
     ],
     "risk": 0.1,
 })

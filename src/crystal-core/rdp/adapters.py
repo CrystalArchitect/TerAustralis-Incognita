@@ -3,7 +3,7 @@ RDP chain — the honest wiring sketched in docs/architecture/crystal-core/RDP-I
 
 The whole point is *clean separation*, so note what this module does NOT do:
 
-  * It does not import ConsentGate, Starline, the Starline Weaver, or any
+  * It does not import ConsentGate, Consent Transport, the Starline Weaver, or any
     enforcement/routing code.
   * It never decides anything. It accepts the *fields of an outcome that has
     already happened* and turns them into a canonical, hash-chained record.
@@ -35,7 +35,7 @@ from .canonical import sha256_hex
 from .record import append
 
 EVENT_KIND = "consent.gate.decision"
-RECEIPT_KIND = "consent.starline.receipt"
+RECEIPT_KIND = "consent_transport.receipt"
 MATRIX_EVENT_KIND = "starline.matrix.result"
 
 
@@ -187,10 +187,10 @@ class witnessing_gate:
 
 
 def consent_receipt_event(receipt: Any, *, ts: Any = None) -> dict[str, Any]:
-    """Build a canonical event from a Starline ``ConsentReceipt`` (does not append).
+    """Build a canonical event from a Consent Transport ``ConsentReceipt`` (does not append).
 
     Duck-typed on purpose — this reads ``peer_fingerprint``, ``granted``, ``ts``
-    and ``signature`` off the receipt and does **not** import Starline, keeping the
+    and ``signature`` off the receipt and does **not** import Consent Transport, keeping the
     zero-coupling rule of this module. The signature is a string and rides
     canonicalization untouched, so the chain proves the exact grant→revoke
     sequence a peer's consent went through.
@@ -210,7 +210,7 @@ def consent_receipt_event(receipt: Any, *, ts: Any = None) -> dict[str, Any]:
 
 
 def record_consent_receipt(chain: list[dict[str, Any]], receipt: Any, *, ts: Any = None) -> dict[str, Any]:
-    """Append a Starline consent grant/revoke to *chain* and return the event.
+    """Append a Consent Transport consent grant/revoke to *chain* and return the event.
 
     Call it whenever a ``ConsentReceipt`` is issued (grant *or* revoke); the chain
     then holds a tamper-evident, ordered proof of the consent history. Takes the

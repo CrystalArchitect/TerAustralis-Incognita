@@ -34,8 +34,8 @@ python -m compileall -q src tests archive
 cd src/crystal-core
 python -m clementine.bridge.selftest      # Starline Weaver
 python -m services.selftest               # Decode → Ingest → Twin pipeline
-pip install -r requirements-starline.txt
-python -m starline.selftest               # Starline
+pip install -r requirements-consenttransport.txt
+python -m consent_transport.selftest               # Starline
 python -m rdp.selftest                    # RDP record kernel
 cd ../..
 

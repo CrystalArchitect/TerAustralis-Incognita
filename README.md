@@ -41,9 +41,9 @@ cd src/apps/lumina && python3 lumina.py
 # The Starline Weaver — multi-AI message bus, Belt-Three law enforced in code
 cd src/crystal-core && python3 -m clementine.bridge.selftest
 
-# Starline — peer-to-peer sovereign memory exchange (real Noise Protocol handshake)
-cd src/crystal-core && pip install -r requirements-starline.txt && python3 -m starline.selftest
-python3 -m starline.run demo   # watch it: pair, deny, grant, exchange, revoke, deny
+# Consent Transport — peer-to-peer sovereign memory exchange (real Noise Protocol handshake)
+cd src/crystal-core && pip install -r requirements-consenttransport.txt && python3 -m consent_transport.selftest
+python3 -m consent_transport.run demo   # watch it: pair, deny, grant, exchange, revoke, deny
 
 # RDP — tamper-evident record kernel + explainable decision engine
 cd src/crystal-core && python3 -m rdp.selftest
@@ -71,7 +71,7 @@ The repository follows the **CrystalCore OS v1.0 architecture** (adopted
 | `src/apps/lumina/` | The companion — CrystalCore framework package, terminal, Flask API, Svelte webapp, browser voice |
 | `src/apps/voicebox/` | Local MCP server giving Claude Code a spoken voice on your machine |
 | `src/apps/crystal-interface/`, `src/apps/vision-web/` | Demo shells (simulated data, Authority HOLD — not production) |
-| `src/crystal-core/` | The protocol pack — Starline Weaver (`clementine/bridge/`), Decode→Ingest→Twin pipeline (`services/`), Starline (`starline/`), RDP record kernel (`rdp/`) |
+| `src/crystal-core/` | The protocol pack — Starline Weaver (`clementine/bridge/`), Decode→Ingest→Twin pipeline (`services/`), Consent Transport (`consent_transport/`), RDP record kernel (`rdp/`) |
 | `src/crystalcore/` | CrystalBridge — the MCP consent gate (fail-closed by design) |
 | `src/crystalcore-os/` | The mythos terminal (Vision-layer code) |
 | `src/site/` | The SvelteKit site for teraustralis.com.au |
@@ -87,8 +87,8 @@ Lumina's core prompt (`src/apps/lumina/crystalcore/companion.py`) carries
 five binding rules, written out in full in `mythos/COVENANT.md`: no influence
 without explicit direction, an absolute and instant pause, memory that
 belongs entirely to the human, support that's offered rather than imposed,
-and restraint as its own form of respect. Starline's consent model
-(`src/crystal-core/starline/consent.py`) is the same law applied to data instead
+and restraint as its own form of respect. Consent Transport's consent model
+(`src/crystal-core/consent_transport/consent.py`) is the same law applied to data instead
 of conversation — nothing moves without a grant, and revocation takes effect
 on the very next request.
 
