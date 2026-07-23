@@ -372,6 +372,16 @@ class CrystalCore:
         info = self.ei.get_dataset_info()
         print(info)
 
+    def multimodal(self):
+        """Show multimodal emotion detection framework and roadmap."""
+        try:
+            from .multimodal_emotion import print_multimodal_status
+
+            print_multimodal_status()
+        except ImportError:
+            print("\n⚠️  Multimodal module not available. This is an advanced feature.")
+            print("   Install optional dependencies: pip install transformers librosa mediapipe fer\n")
+
     def learning_status(self):
         """Show active learning queue status and improvement metrics."""
         from .active_learning import show_active_learning_dashboard
@@ -437,6 +447,9 @@ EMOTIONAL INTELLIGENCE:
 ACTIVE LEARNING:
   correct <msg> as <emotion> - Correct emotion prediction (e.g. 'I miss you' as longing_warm)
   learning_status      - Show active learning queue & readiness for retraining
+
+ADVANCED:
+  multimodal           - Show multimodal emotion detection roadmap (text+audio+video)
 
 SYSTEM:
   status               - Show full status (including EI)
@@ -515,6 +528,8 @@ def main():
                 os.correct(arg)
             elif cmd == "learning_status":
                 os.learning_status()
+            elif cmd == "multimodal":
+                os.multimodal()
             elif cmd == "reset":
                 os.reset()
             elif cmd == "help":
