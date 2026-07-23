@@ -36,8 +36,9 @@ In this repository (git):
 - `examples/`, `assets/` — curated demo index, branding
 - `archive/` — provenance only; never build on it
 
-Described in the docs but **not in this repository** — the code lives in
-the maintainer's local tree
+Described in the docs but **not in this repository** — the code's
+location is being re-established after the maintainer's laptop was
+retired
 (see `docs/architecture/SystemMap.md`, "Where the code actually lives"):
 
 - `src/` — all executable code (apps, crystal-core, crystalcore,

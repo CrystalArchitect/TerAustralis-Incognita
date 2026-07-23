@@ -13,10 +13,16 @@ architecture (adopted 2026-07-23, [`ADR-0001`](../adr/ADR-0001.md)).
 - **Described below but not in this repository:** `src/`, `scripts/`, and
   `tests/` — and, referenced elsewhere in the docs, `packages/` and
   `corpus/`. None of these paths exist in this repository's git history on
-  any branch (`git log --all -- src/` returns nothing). That tree lives in
-  the maintainer's local working copy — the "disk" that canon law ranks
-  above chat — and a dated copy is preserved in
+  any branch (`git log --all -- src/` returns nothing). That tree lived in
+  the maintainer's working copy on a laptop; a dated copy is preserved in
   `archive/2026/local-snapshot-2026-07-17/`.
+- **Update (2026-07-23, maintainer's report):** the laptop is gone — no
+  local working copy exists. The tree's current location is being
+  re-established (leading candidate: the maintainer's DigitalOcean
+  droplet); until it is found, the `archive/` snapshots are the only
+  git-verified code, and they hold the earlier app era, not the
+  post-reorg v1.0 components. The search-and-recovery procedure is
+  [`Migration-Plan.md` Stage 1.0](../governance/Migration-Plan.md).
 - **Consequences, stated plainly:** the CI workflow (`ci.yml`) and the
   Pages deploy (`deploy.yml`) run against `src/` and `tests/` paths that
   are not here, so both fail; the two `packages/*` workflows are dormant
@@ -26,10 +32,10 @@ architecture (adopted 2026-07-23, [`ADR-0001`](../adr/ADR-0001.md)).
   this repository. The root `CNAME` (`www.teraustralis.com.au`) points
   Pages at a site whose source (`src/site/`) is not here.
 
-The tree below is retained as the description of that local working tree
-and of the intended layout — the layout decision (`ADR-0001`) is real; its
-`src/` half has simply never been pushed here. Entries marked ✱ are in
-that described-but-not-present category.
+The tree below is retained as the description of that working tree and of
+the intended layout — the layout decision (`ADR-0001`) is real; its
+`src/` half was simply never pushed here. Entries marked ✱ are in that
+described-but-not-present category.
 
 Where each component belongs, and the staged plan for closing this gap:
 [`Project-Boundaries.md`](../governance/Project-Boundaries.md) ·

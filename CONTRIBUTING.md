@@ -80,8 +80,8 @@ The reasoning behind this licensing — and the project's wider IP principles
 
 ## Map of the repo
 
-> **Repository status:** the `src/` paths below describe the local code
-> tree and are not in this repository — see
+> **Repository status:** the `src/` paths below describe the code tree,
+> which is not in this repository — see
 > [SystemMap: where the code actually lives](docs/architecture/SystemMap.md#where-the-code-actually-lives).
 
 The full map is [`docs/architecture/SystemMap.md`](docs/architecture/SystemMap.md);
