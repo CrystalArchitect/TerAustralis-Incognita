@@ -9,14 +9,15 @@ For Lumina specifically, [mythos/content/MILESTONES.md](../../mythos/content/MIL
 already tracks a detailed week-by-week build plan — this page doesn't repeat
 that detail, it points to it.
 
-> **Repository status:** the `src/` paths on this page describe the local
-> code tree, which is not in this repository — see
+> **Repository status:** the `src/` paths on this page describe the code
+> tree, which is not in this repository — see
 > [SystemMap: where the code actually lives](../architecture/SystemMap.md#where-the-code-actually-lives).
 
 ## Built and working today
 
-Built and tested in the maintainer's local canon tree; not yet present in
-this repository (status note above):
+Built and tested in the maintainer's canon tree, last on the now-retired
+laptop — location being re-established (status note above); not present
+in this repository:
 
 - **Lumina** (`src/apps/lumina/`) — local-first AI companion, Ollama-backed.
   Terminal, Flask API, Svelte webapp, browser voice. Run it: `cd src/apps/lumina

@@ -14,8 +14,19 @@ Boundaries this plan serves: [`Project-Boundaries.md`](Project-Boundaries.md).
 - `src/`, `scripts/`, `tests/`, `packages/`, `corpus/` exist in **no
   branch of this repository's git history** (`git log --all -- src/` and
   equivalents return nothing).
-- The code tree lives in the maintainer's local working copy; a dated
-  snapshot sits in `archive/2026/local-snapshot-2026-07-17/`.
+- The code tree lived in the maintainer's working copy on a laptop; a
+  dated snapshot sits in `archive/2026/local-snapshot-2026-07-17/`.
+
+> **Assumptions re-baselined (2026-07-23, maintainer's report):** the
+> laptop is gone — **no local working copy exists**. The maintainer
+> works from an iPhone 16 Plus, reaching a DigitalOcean droplet over
+> SSH (Termius). The canonical tree's current location is
+> **unverified**; the droplet is the leading candidate (Stage 1.0
+> below). The only git-verified code remains the `archive/` snapshots —
+> which hold the earlier app era, **not** the post-reorg v1.0 protocol
+> pack. **Nothing in this plan assumes a push from a local machine**:
+> any host that has the canon tree and git access qualifies as the
+> hand-off origin.
 - Drift is provable from history alone: merged commit `1c1e473`'s message
   describes rewriting seven `packages/*/LICENSE.md` files; its diffstat
   contains none of them — the edits existed only on the local disk.
@@ -41,17 +52,48 @@ fix) plus the boundary charter, this plan, and ADR-0011.
 > **Stage 1 approved (2026-07-23).** Per this plan's per-stage gate, the
 > maintainer (Crystal) selected, in-session: **option 1b** — import into
 > `TerAustralis-Incognita-Code` with `core/` and `vision/` top-level
-> areas; **hand-off by staging-branch push** from the local canon tree
-> (the maintainer pushes; the ignore rules keep personal data out);
-> **engine-first scope** — PR 1 imports `core/` only, `vision/` follows
-> as PR 2, and the site / mythos-terminal placements are decided at
-> PR 2. Directory names are preserved under the new area roots — no
-> component renames. Options 1a and 1c below are retained for the
-> record.
+> areas; **hand-off by staging-branch push** (the maintainer pushes; the
+> ignore rules keep personal data out); **engine-first scope** — PR 1
+> imports `core/` only, `vision/` follows as PR 2, and the site /
+> mythos-terminal placements are decided at PR 2. Directory names are
+> preserved under the new area roots — no component renames. Options 1a
+> and 1c below are retained for the record.
+>
+> **Amended (2026-07-23):** "from the local canon tree" is superseded —
+> no local working copy survives the laptop's retirement. The hand-off
+> happens **from whatever host Stage 1.0 identifies as holding the
+> canon tree** (the DigitalOcean droplet is the leading candidate); the
+> push-from-a-local-machine assumption is dropped entirely.
 
-**Precondition:** the maintainer confirms the local tree (not the 07-17
-snapshot) is the canon version to import, and runs or supervises the
-import from the machine that has it.
+### Stage 1.0 — locate the canon tree (precedes the import)
+
+Run on the droplet over Termius — one paste, searches the likely homes
+and prints matches:
+
+```bash
+for d in ~ /root /home/* /opt /srv /var/www; do [ -d "$d" ] && find "$d" -maxdepth 5 -type d \( -iname "*teraustralis*" -o -iname "*teraaustralis*" -o -iname "crystal-core" -o -iname "crystalcore*" -o -iname "lumina" -o -name "consent_transport" \) 2>/dev/null; done | sort -u; echo ---; ls -la ~
+```
+
+Outcomes:
+
+- **Found on the droplet** → the droplet is the canon host; the
+  hand-off is a staging-branch push run there (`code-import-staging` on
+  the `-Code` repo), and the import proceeds per the approved shape.
+- **Not found** → recovery checklist, in order: laptop backups
+  (Time Machine / iCloud / OneDrive folder sync), any other host or
+  remote the tree was ever pushed to, the laptop itself if it
+  physically survives.
+- **Unrecoverable** → the v1.0 components (protocol pack, Consent
+  Transport, RDP, the Weaver bridge) become **rebuild-from-spec** work
+  against `docs/architecture/crystal-core/` — the specs are detailed
+  enough to rebuild honestly — and this plan gets re-baselined by a new
+  dated amendment; the `archive/` snapshots remain the only measured
+  code.
+
+**Precondition (amended):** the maintainer confirms the tree Stage 1.0
+locates is the canon version to import; the push happens from that
+host. Any machine with the tree and git access qualifies — a droplet
+driven from a phone over SSH is fine.
 
 | Option | What happens | For | Against |
 |---|---|---|---|

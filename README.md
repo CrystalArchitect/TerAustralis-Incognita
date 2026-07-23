@@ -15,8 +15,9 @@ code is the source of truth and the story says so.
 
 > **Repository status (2026-07-23):** the `src/` tree this README describes
 > is **not in this GitHub repository** — it has never been in its git
-> history. It lives in the maintainer's local working tree ("disk is
-> canon"); a dated copy sits in `archive/2026/local-snapshot-2026-07-17/`.
+> history. Its last known home was the maintainer's now-retired laptop;
+> its current location is being re-established (a dated copy sits in
+> `archive/2026/local-snapshot-2026-07-17/`).
 > Full explanation:
 > [`docs/architecture/SystemMap.md`](docs/architecture/SystemMap.md#where-the-code-actually-lives).
 > Project boundaries and the staged plan for closing this gap:

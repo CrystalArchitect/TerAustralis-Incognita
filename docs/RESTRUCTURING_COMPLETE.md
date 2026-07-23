@@ -1,9 +1,8 @@
 # Repository Restructuring Complete ✅
 
 > **Status note (2026-07-23):** the `packages/` structure this document
-> declares complete exists only in the maintainer's local tree — it never
-> landed in this repository's git history — and the differentiated
-> licensing it describes was reverted by
+> declares complete never landed in this repository's git history — and
+> the differentiated licensing it describes was reverted by
 > [`ADR-0010`](adr/ADR-0010.md). Kept for provenance. See
 > [SystemMap: where the code actually lives](architecture/SystemMap.md#where-the-code-actually-lives).
 
