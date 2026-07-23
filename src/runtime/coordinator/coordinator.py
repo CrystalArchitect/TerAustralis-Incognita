@@ -181,6 +181,9 @@ class Coordinator:
         )
 
         try:
+            # Step 0: Validate inputs
+            self._validate_task_inputs(task, context)
+
             # Step 1: Validate task against execution context scope
             self.logging.operational("debug", f"Validating task {task.task_id}", {
                 "task_id": task.task_id,
@@ -195,12 +198,17 @@ class Coordinator:
                 "capabilities_required": task.capabilities_required
             })
 
-            service_references = self._get_services_for_capabilities(task.capabilities_required)
+            # Check that all required capabilities have at least one service
+            missing_capabilities = []
+            for capability in task.capabilities_required:
+                services = self.registry.query_capability(capability)
+                if not services:
+                    missing_capabilities.append(capability)
 
-            if not service_references:
-                missing = [c for c in task.capabilities_required if c not in
-                          [sr.capabilities[0] if sr.capabilities else None for sr in service_references]]
-                raise CapabilityNotAvailableError(missing[0] if missing else "unknown")
+            if missing_capabilities:
+                raise CapabilityNotAvailableError(missing_capabilities[0])
+
+            service_references = self._get_services_for_capabilities(task.capabilities_required)
 
             # Step 3: Publish task started event
             self.events.publish(
@@ -301,7 +309,38 @@ class Coordinator:
             result.end_time = end_time
             result.duration_ms = (end_time - start_time) * 1000
 
+            # Check if execution exceeded timeout
+            if result.duration_ms > (self.default_timeout * 1000):
+                result.status = TaskStatus.TIMEOUT.value
+                result.error_details = ErrorDetails(
+                    error_code="task_timeout",
+                    message=f"Task exceeded timeout of {self.default_timeout}s",
+                    retryable=False
+                )
+
         return result
+
+    def _validate_task_inputs(self, task: Task, context: ExecutionContext) -> None:
+        """Validate task and context inputs."""
+        # Validate task fields
+        if not task.task_id or not isinstance(task.task_id, str):
+            raise TaskExecutionError("invalid_input", "task_id must be a non-empty string")
+        if not task.description or not isinstance(task.description, str):
+            raise TaskExecutionError("invalid_input", "description must be a non-empty string")
+        if not isinstance(task.capabilities_required, list):
+            raise TaskExecutionError("invalid_input", "capabilities_required must be a list")
+        if not all(isinstance(c, str) for c in task.capabilities_required):
+            raise TaskExecutionError("invalid_input", "All capabilities must be strings")
+
+        # Validate context fields
+        if not context.request_id or not isinstance(context.request_id, str):
+            raise TaskExecutionError("invalid_input", "request_id must be a non-empty string")
+        if not context.caller_identity or not isinstance(context.caller_identity, str):
+            raise TaskExecutionError("invalid_input", "caller_identity must be a non-empty string")
+        if not isinstance(context.approved_scope, list):
+            raise TaskExecutionError("invalid_input", "approved_scope must be a list")
+        if not all(isinstance(c, str) for c in context.approved_scope):
+            raise TaskExecutionError("invalid_input", "All approved_scope items must be strings")
 
     def _validate_scope(self, task: Task, context: ExecutionContext) -> None:
         """Validate that task is within caller's approved scope."""
