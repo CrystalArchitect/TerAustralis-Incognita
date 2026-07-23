@@ -1,34 +1,39 @@
 CrystalCore OS
 Copyright 2026 CrystalCore OS Contributors
 
-This product includes software developed by CrystalCore OS Contributors
-and distributed under the Apache License 2.0.
+LICENSING:
+  Code and Specifications (CrystalCore OS): CC BY-NC-ND 4.0
+  - Attribution required
+  - Non-commercial use only (with exceptions for commercial licensing)
+  - No derivative redistribution
+  - Commercial use requires explicit permission
+  
+  Mythos Content (mythos/ directory): CC BY-NC-ND 4.0
+  - See LICENSE-CONTENT.md for full terms
+  
+  Referenced Architectural Concepts: Apache 2.0
+  - MemClaw patterns are licensed under Apache 2.0
+  - https://github.com/caura-ai/caura-memclaw
+  - See docs/ATTRIBUTIONS.md for full acknowledgment
 
-This product incorporates concepts and architectural patterns from:
+For commercial licensing inquiries, contact the copyright holder.
+
+THIRD-PARTY ACKNOWLEDGMENTS:
 
   MemClaw: Governed Shared Memory for AI Agent Fleets
   Maintained by eToro and contributors
   https://github.com/caura-ai/caura-memclaw
   Licensed under Apache License 2.0
 
-  The following patterns from MemClaw informed this work:
+  The following architectural patterns from MemClaw informed this work:
   - Multi-agent governance model (visibility scopes, trust tiers)
   - Outcome-based learning and reinforcement
   - Hybrid search and capability discovery
   - Automatic knowledge structure extraction
   - Contradiction detection and conflict resolution
 
-For attribution details and third-party licensing information, see:
-  docs/ATTRIBUTIONS.md
-
-All code in this repository is licensed under the Apache License, Version 2.0.
-Content in the mythos/ directory is licensed under CC BY-NC-ND 4.0.
-See LICENSE and LICENSE-CONTENT.md for full license text.
-
 ---
 
-Apache License
-Version 2.0, January 2004
-http://www.apache.org/licenses/
+RETAIN THIS NOTICE in all non-commercial redistributions.
 
-Retain this NOTICE in all redistributions and derivative works.
+Full license text and attribution details: docs/ATTRIBUTIONS.md
