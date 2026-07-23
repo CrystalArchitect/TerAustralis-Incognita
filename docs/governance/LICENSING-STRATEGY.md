@@ -2,6 +2,15 @@
 
 **Protecting innovation while enabling community access across seven distinct products.**
 
+> **Superseded — not adopted.** This strategy's differentiated per-package
+> licensing (AGPL v3 / Proprietary / Dual / CC BY-NC-ND) was implemented in
+> `packages/*/LICENSE.md` and `packages/*/pyproject.toml`, then reverted:
+> the maintainer decided the whole repository stays uniformly CC BY-NC-ND
+> 4.0 instead, weighing operational simplicity for a pre-revenue project
+> over per-product legal nuance. See [`ADR-0010`](../adr/ADR-0010.md). Kept
+> for provenance and as the reasoning to revisit if the calculus changes
+> later (e.g. an actual paying customer for one specific package).
+
 ---
 
 ## Executive Summary

@@ -1,10 +1,10 @@
 # MIT License (Non-Commercial Use)
 
-> **Scope note:** this file is the non-commercial license for the
-> **CrystalCore-EI** package specifically (see `LICENSING.md` in this same
-> directory), not the repository's overall license. The repository's actual
-> license is the root `LICENSE` file (CC BY-NC-ND 4.0) — see
-> [`ADR-0009`](docs/adr/ADR-0009.md).
+> **Superseded — not the project's license.** This was the non-commercial
+> half of a proposed dual license for the CrystalCore-EI package. The
+> maintainer decided against differentiated per-package licensing: the
+> whole repository is uniformly CC BY-NC-ND 4.0 — see
+> [`ADR-0010`](docs/adr/ADR-0010.md). Kept for provenance, not in effect.
 
 Copyright (c) 2026 CrystalArchitect
 

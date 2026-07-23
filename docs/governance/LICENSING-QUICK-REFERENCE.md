@@ -1,5 +1,11 @@
 # Licensing Quick Reference – Visual Guide
 
+> **Superseded — not adopted.** Companion doc to
+> [`LICENSING-STRATEGY.md`](LICENSING-STRATEGY.md); the differentiated
+> per-package model it visualizes was reverted in favor of uniform
+> CC BY-NC-ND 4.0 — see [`ADR-0010`](../adr/ADR-0010.md). Kept for
+> provenance, not in effect.
+
 ---
 
 ## 🎯 Decision Tree: Which License for Each Product?
