@@ -99,6 +99,13 @@ Dated so this section ages honestly — newest first, and it's fine to trim
 older entries once they're no longer useful context; the full history is
 always in `git log`.
 
+- **2026-07-23** — Story Library design and working prototype 
+  (`docs/architecture/site/Story-Library.md`, `research/prototypes/story-library/`): 
+  complete information architecture, component structure, visual design direction, 
+  typography system, animations, React/SvelteKit hierarchy, and 16 premium 
+  storybook improvements. Demonstrates calm, book-like reading experience with 
+  visible editorial curation (Canon/Experimental/Archive). Working self-contained 
+  HTML/CSS/JS prototype proves design viability.
 - **2026-07-23** — Adopted the three-project boundary model
   (`ADR-0011`): TerAustralis Incognita as the umbrella (governance, docs,
   ADRs, mythos — no main app code), **Crystal Core** owning the engine,
