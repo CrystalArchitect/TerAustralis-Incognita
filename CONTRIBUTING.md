@@ -65,7 +65,7 @@ This repo is dual-licensed:
 - **Code & Specifications** (everything under `src/`, `docs/`, plus `tests/` and `scripts/`):
   **CC BY-NC-ND 4.0** — see `LICENSE`. Non-commercial use only; attribution required. 
   Commercial licensing available by negotiation with the copyright holder.
-- **Content** (`mythos/` — the Crystal universe canon, the TeraAustralis
+- **Content** (`mythos/` — the Crystal universe canon, the TerAustralis
   lore, the art): **CC BY-NC-ND 4.0** — see `LICENSE-CONTENT.md`. You may
   share it with credit; you may **not** remix it or use it commercially.
   Contributions to the mythos are accepted under the same terms.

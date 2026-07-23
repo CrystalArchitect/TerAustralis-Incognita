@@ -96,7 +96,7 @@ the project this charter assigns.
 
 | Repository | Role |
 |---|---|
-| `CrystalArchitect/TeraAustralis-Incognita` (this repo; slug spelling is a known debt) | The umbrella. |
+| `CrystalArchitect/TerAustralis-Incognita` (this repo) | The umbrella. |
 | `CrystalArchitect/TerAustralis-Incognita-Code` | **Reserved by charter** for the engineering projects. Empty by design — one README — until a Migration-Plan stage is approved. |
 
 Whether the engineering side stays one repository (with `core/` and

@@ -1,4 +1,4 @@
-# AGENTS.md — TeraAustralis-Incognita
+# AGENTS.md — TerAustralis-Incognita
 
 ## Project
 

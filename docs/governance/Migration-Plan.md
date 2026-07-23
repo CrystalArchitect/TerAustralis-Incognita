@@ -101,11 +101,10 @@ directive recorded in ADR-0011.
 
 | Debt | Where | Constraint |
 |---|---|---|
-| GitHub slug `TeraAustralis-Incognita` (double-a) | This repo's URL | Maintainer-only action; breaks inbound links; explicitly left out of scope by [`ADR-0007`](../adr/ADR-0007.md) |
+| ~~GitHub slug `TeraAustralis-Incognita` (double-a)~~ **Resolved** | This repo's URL | The slug ADR-0007 left unrenamed has since been corrected: the GitHub API returned `CrystalArchitect/TerAustralis-Incognita` (one 'a') when PR #48 was created, 2026-07-23. ADR-0007's "still-unrenamed" line stands as historical record only. |
 | PyPI package names `teraaustralis-*` (double-a) | The dormant publish/test workflows | Verify nothing was ever published under them before reserving corrected names (Stage 2) |
 | `corpus/` named as a surface of truth | Constitution §7 | Never built; fixing the row requires a §8 amendment. Proposed amendment text, supplied not applied: *"§7: mark the `corpus/` row as designed-but-not-built until an export pipeline exists, matching the 2026-07-21 implementation-note pattern."* |
 | Deeper stale references in `mythos/README.md` (old `src/` links, the pre-monorepo "The Crystal Vision" framing) | `mythos/` | Vision-layer content — edit only with explicit maintainer sign-off (the Stage-0 blurb fix was the minimum honest correction) |
-| SystemMap tree root label `TeraAustralis-Incognita/` | `docs/architecture/SystemMap.md` | Mirrors the live slug; flips if/when the slug is renamed |
 
 ## Appendix — stale references deliberately not touched at Stage 0
 

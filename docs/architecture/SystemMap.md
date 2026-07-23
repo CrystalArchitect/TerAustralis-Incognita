@@ -37,7 +37,7 @@ Where each component belongs, and the staged plan for closing this gap:
 ([`ADR-0011`](../adr/ADR-0011.md)).
 
 ```
-TeraAustralis-Incognita/
+TerAustralis-Incognita/
 │
 ├── README.md · LICENSE · LICENSE-CONTENT.md · NOTICE · CHANGELOG.md
 ├── CONTRIBUTING.md · CODE_OF_CONDUCT.md · SECURITY.md · AGENTS.md
