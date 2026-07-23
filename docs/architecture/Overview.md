@@ -12,7 +12,7 @@ Four components run and are tested today:
 |---|---|---|
 | **Lumina** | Local-first sovereign companion — terminal, Flask API, Svelte webapp, layered memory, Ollama-backed | `src/apps/lumina/` |
 | **Starline Weaver** | Multi-AI message bus; every message must carry a Belt-Three truth label or it is not heard; red-button halt; matrix mode | `src/crystal-core/clementine/bridge/` |
-| **Starline** | Peer-to-peer consent-gated memory exchange over a real Noise Protocol handshake | `src/crystal-core/starline/` |
+| **Starline** | Peer-to-peer consent-gated memory exchange over a real Noise Protocol handshake | `src/crystal-core/consent_transport/` |
 | **CrystalBridge** | Fail-closed MCP consent gate for guest AIs — approval → permission → scope → provenance, append-only audit | `src/crystalcore/` |
 
 Supporting pieces: the **Decode → Ingest → Twin pipeline**
@@ -39,7 +39,7 @@ tamper-evident hash chain plus an explainable decision engine), the
 One law repeats at every boundary: **nothing moves without explicit,
 revocable consent, and refusal is the default.** The Covenant
 ([`mythos/COVENANT.md`](../../mythos/COVENANT.md)) states it for
-conversation; `starline/consent.py` applies it to data;
+conversation; `consent_transport/consent.py` applies it to data;
 `src/crystalcore/gate.py` applies it to guest access. RDP *records* what the
 others decide — it never decides for them
 ([`crystal-core/RDP-INTEGRATION.md`](crystal-core/RDP-INTEGRATION.md)).
