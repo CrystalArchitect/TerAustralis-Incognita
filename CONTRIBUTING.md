@@ -58,16 +58,21 @@ pretend it was measured.
 
 This repo is dual-licensed:
 
-- **Code** (everything under `src/`, plus `tests/` and `scripts/`):
-  **Apache-2.0** — see `LICENSE`.
-- **Content** (`mythos/` — the Crystal universe canon, the TerAustralis
+- **Code & Specifications** (everything under `src/`, `docs/`, plus `tests/` and `scripts/`):
+  **CC BY-NC-ND 4.0** — see `LICENSE`. Non-commercial use only; attribution required. 
+  Commercial licensing available by negotiation with the copyright holder.
+- **Content** (`mythos/` — the Crystal universe canon, the TeraAustralis
   lore, the art): **CC BY-NC-ND 4.0** — see `LICENSE-CONTENT.md`. You may
   share it with credit; you may **not** remix it or use it commercially.
   Contributions to the mythos are accepted under the same terms.
 
-The reasoning behind this split — and the project's wider IP principles
+**Note:** Architectural patterns referenced from MemClaw are credited under
+Apache 2.0 terms (see `docs/ATTRIBUTIONS.md`). The *application* of those
+patterns in CrystalCore OS is CC BY-NC-ND 4.0.
+
+The reasoning behind this licensing — and the project's wider IP principles
 (stewardship, attribution, identity, commercial future) — is recorded in
-[`ADR-0006`](docs/adr/ADR-0006.md).
+[`docs/ATTRIBUTIONS.md`](docs/ATTRIBUTIONS.md).
 
 ## Map of the repo
 
@@ -118,15 +123,21 @@ class Registry:
 
 ### Licensing & redistribution
 
-CrystalCore OS is Apache 2.0 (code) + CC BY-NC-ND 4.0 (mythos). If you redistribute or fork this work:
+CrystalCore OS is CC BY-NC-ND 4.0 (non-commercial). If you use or redistribute this work:
 
-1. **Keep the licenses.** Apache 2.0 and CC BY-NC-ND 4.0 must remain unchanged.
+1. **Non-commercial use only.** CrystalCore OS code and specifications are for non-commercial use.
+   Commercial use requires explicit permission from the copyright holder.
 2. **Retain attribution.** ATTRIBUTIONS.md and copyright notices must stay in place.
-3. **Mark your changes.** If you modify the code, make clear what you changed.
-4. **Link back.** Link to the original CrystalCore OS repository in your README.
+3. **Do not modify and redistribute.** CC BY-NC-ND prohibits derivative redistribution; you may only
+   share unmodified versions.
+4. **Link back.** In your documentation or credits, link to the original CrystalCore OS repository.
 5. **Never rebrand.** You cannot remove attribution or falsely claim original authorship.
 
-For full policy, see [`docs/ATTRIBUTIONS.md`](docs/ATTRIBUTIONS.md).
+**Commercial licensing:** If you want to use CrystalCore OS commercially, commercialize derivatives,
+or commercialize products built on it, contact the copyright holder for a commercial license agreement.
+
+**MemClaw attribution:** The architectural patterns referenced from MemClaw remain under Apache 2.0
+(their license). Acknowledge MemClaw in any work you create; see [`docs/ATTRIBUTIONS.md`](docs/ATTRIBUTIONS.md).
 
 ## The Covenant applies to code too
 
