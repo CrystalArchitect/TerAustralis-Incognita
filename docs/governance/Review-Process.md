@@ -19,7 +19,7 @@ maintainer merges.
    (details in
    [`docs/guides/GitHub-Commit-Instructions.md`](../guides/GitHub-Commit-Instructions.md)).
 4. **Review.** Significant changes are reviewed before merging
-   ([`Repository-Principles.md`](Repository-Principles.md) §5). Reviewers
+   ([`Repository-Principles.md`](Repository-Principles.md) §6). Reviewers
    check the honesty of labels as seriously as the correctness of code —
    docs that outpace code fail review.
 5. **Merge.** The maintainer (Crystal, `@CrystalArchitect` — see
