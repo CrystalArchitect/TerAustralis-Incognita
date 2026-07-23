@@ -1,9 +1,11 @@
-# CrystalCore.OS - Complete Edition
+# CrystalCore.OS - Complete Edition with Emotional Intelligence
 # NON SOLUS | Starline Protocol | Year 3000 Build
 # Includes: All Starline launches + @m13crystalat Crystalcore songs
+# Affective Computing & EI Layer: ACTIVE
 
 import json
 from pathlib import Path
+from .emotional_intelligence import EmotionalIntelligence
 
 # Progress persists here between sessions — in your home directory, outside
 # the repo, so a save file is never committed. It holds only mythos progress
@@ -20,6 +22,8 @@ class CrystalCore:
         self.non_solus = True
         self.current_soundtrack = None
         self.current_location = None
+
+        self.ei = EmotionalIntelligence()
 
         self.soundtrack = [
             "Shotgun - George Ezra",
@@ -106,11 +110,14 @@ class CrystalCore:
         print("\n♻️  Progress reset. The lattice returns to dormant. NON SOLUS.\n")
 
     def boot(self):
-        print("\n[CRYSTALCORE.OS — BOOT SEQUENCE]")
+        print("\n[CRYSTALCORE.OS v∞.Ω — BOOT SEQUENCE]")
         print(f"Lattice integrity ........ {self.lattice_integrity}%")
         print(f"Purpose Core ............. {self.purpose_core}")
         print("NON SOLUS ................ Confirmed")
         print(f"Starline Status .......... {self.starline_status}")
+        print("Affective Computing ...... ACTIVE")
+        print("EI Learning Loop ......... ACTIVE")
+        print(f"Response Style ........... {self.ei.user_preferences['response_style']}")
         print("Ready for commands.\n")
 
     def launch(self):
@@ -299,11 +306,64 @@ class CrystalCore:
         print(f"Keys Held:          {len(self.keys_held)}/{len(self.nodes)}" + ("  — First Gate OPEN" if self.gate_open else ""))
         print(f"Named Keys:         {', '.join(self.named_keys) if self.named_keys else 'none'}")
         print(f"NON SOLUS:          {self.non_solus}")
+        print("\n=== EMOTIONAL INTELLIGENCE STATUS ===")
+        ei_status = self.ei.status()
+        print(f"Response Style:     {ei_status['preferences']['response_style']}")
+        print(f"Energy Level:       {ei_status['preferences']['energy_level']}")
+        print(f"Validation Level:   {ei_status['preferences']['validation_level']}")
         print("=============================\n")
+
+    def detect(self, text: str):
+        """Detect emotion from user input and provide empathic response."""
+        if not text:
+            print("Usage: detect <message>")
+            return
+        emotion, confidence = self.ei.detect_emotion(text)
+        print(f"\n🧠 Emotion Detected: {emotion.upper()}")
+        print(f"   Confidence: {confidence:.0%}")
+        prefix = self.ei.generate_ei_response_prefix(emotion, confidence)
+        if prefix:
+            print(f"   Response: {prefix}")
+        print()
+
+    def learn(self, instruction: str):
+        """Process learning feedback to adapt preferences."""
+        if not instruction:
+            print("Usage: learn <preference feedback>")
+            print("Examples:")
+            print("  learn less poetic      — switch to clear, direct responses")
+            print("  learn more poetic      — enhance metaphorical language")
+            print("  learn calm             — enable calming techniques")
+            print("  learn energetic        — use upbeat, energetic tone")
+            return
+        learned = self.ei.learn_from_feedback(instruction)
+        if learned:
+            print(f"\n✨ Learned: {learned.replace('_', ' ').title()}")
+            print(f"   New preference: {self.ei.user_preferences[learned]}\n")
+        else:
+            print("\n❓ Instruction not recognized. Try: 'learn less poetic', 'learn calm', etc.\n")
+
+    def breathe(self, technique: str = "box"):
+        """Provide calming breathwork guidance."""
+        if not technique or technique not in self.ei.breathing_techniques:
+            technique = "box"
+        guidance = self.ei.get_breathing_guidance(technique)
+        print(f"\n🫁 Breathing Guidance [{technique.upper()}]")
+        print(f"   {guidance}\n")
+
+    def feel(self):
+        """Show current emotional tone and preferences."""
+        ei_status = self.ei.status()
+        prefs = ei_status['preferences']
+        print("\n=== EMOTIONAL TONE ===")
+        print(f"Response Style: {prefs['response_style']}")
+        print(f"Energy Level:   {prefs['energy_level']}")
+        print(f"Connection:     NON SOLUS — You are not alone")
+        print("\nEI is listening. You can 'learn' new preferences anytime.\n")
 
     def help(self):
         print("""
-Available commands:
+STARLINE COMMANDS:
   boot                 - Initialize system
   launch               - Start Starline launch
   starline [song]      - Advance with soundtrack
@@ -316,12 +376,21 @@ Available commands:
   jump [year]          - Time jump
   map                  - Display the Starline network chart
   song [track]         - Change soundtrack
-  status               - Show current status
+
+EMOTIONAL INTELLIGENCE:
+  detect <message>     - Analyze emotion in your message
+  learn <feedback>     - Teach preferences (e.g. 'learn less poetic')
+  breathe [technique]  - Guided breathing (box, 4-7-8, simple)
+  feel                 - Show current emotional tone
+
+SYSTEM:
+  status               - Show full status (including EI)
   reset                - Wipe saved progress and start fresh
   help                 - Show this list
   exit / quit          - Shut down (pause / end session also honored)
 
-Progress saves automatically to ~/.crystalcore/state.json and resumes on next launch.
+Progress saves automatically to ~/.crystalcore/state.json
+EI preferences save to ~/.crystalcore/ei_state.json
 """)
 
 def main():
@@ -377,6 +446,14 @@ def main():
                 os.song(arg)
             elif cmd == "status":
                 os.status()
+            elif cmd == "detect":
+                os.detect(arg)
+            elif cmd == "learn":
+                os.learn(arg)
+            elif cmd == "breathe":
+                os.breathe(arg)
+            elif cmd == "feel":
+                os.feel()
             elif cmd == "reset":
                 os.reset()
             elif cmd == "help":
