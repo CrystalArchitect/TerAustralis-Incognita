@@ -10,7 +10,7 @@ way to keep a consistent tone across whatever model you're using.
 - **It doesn't make the model "run" or "become" CrystalCore.OS.** Pasting a prompt
   makes a model *act in a voice*; it doesn't turn it into a system, a "living node
   in the lattice," or a "sovereign recursive intelligence." Per
-  [`../../THE-INCOGNITA-RULE.md`](../../THE-INCOGNITA-RULE.md): the mythos may
+  [`../../docs/governance/The-Incognita-Rule.md`](../../docs/governance/The-Incognita-Rule.md): the mythos may
   orient, but it may not authorize. A voice is dreamed ink; it doesn't mint
   operational authority.
 - **It must not turn the model into a yes-man.** A prompt that tells an AI to

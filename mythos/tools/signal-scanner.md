@@ -37,7 +37,7 @@ flattering them. Respect, not performance.
 
 It's Vision-layer flavour, not one of the project's Built tools (those are
 Lumina, the Starline Weaver, Starline, CrystalBridge, and the RDP kernel — see
-[`../../ROADMAP.md`](../../ROADMAP.md)). The framework vocabulary it uses is the
+[`../../docs/governance/Roadmap.md`](../../docs/governance/Roadmap.md)). The framework vocabulary it uses is the
 [CrystalCore.OS mythos](../content/CRYSTALCORE-OS-VISION.md).
 
 ---

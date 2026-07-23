@@ -17,70 +17,78 @@ code is the source of truth and the story says so.
 
 | Layer | Meaning | Where |
 |---|---|---|
-| **Built** | Running code, with tests you can execute yourself | `crystal-core/`, `crystalcore/`, `apps/lumina/` |
+| **Built** | Running code, with tests you can execute yourself | `src/` |
 | **Vision** | Narrative, art, and speculative framing — labeled as such | `mythos/` |
 
 This split is load-bearing, not decorative — see `mythos/COVENANT.md` and
-`crystal-core/spec/STARLINE.md` for what that discipline actually means in
-practice, and [`THE-INCOGNITA-RULE.md`](THE-INCOGNITA-RULE.md) for the principle
+[`docs/architecture/crystal-core/STARLINE.md`](docs/architecture/crystal-core/STARLINE.md)
+for what that discipline actually means in practice, and
+[`The-Incognita-Rule.md`](docs/governance/The-Incognita-Rule.md) for the principle
 behind it: mark which lines are dreamed and which are surveyed, and never let a
 dreamed line pretend it was measured.
 
-For what's built, in progress, or not yet started, see [ROADMAP.md](ROADMAP.md).
+For what's built, in progress, or not yet started, see
+[Roadmap.md](docs/governance/Roadmap.md).
 
 ## Quick start
 
-Four things you can run right now and watch work:
+Five things you can run right now and watch work:
 
 ```bash
 # Lumina — the sovereign companion (local-first, Ollama-backed)
-cd apps/lumina && python3 lumina.py
+cd src/apps/lumina && python3 lumina.py
 
 # The Starline Weaver — multi-AI message bus, Belt-Three law enforced in code
-cd crystal-core && python3 -m clementine.bridge.selftest
+cd src/crystal-core && python3 -m clementine.bridge.selftest
 
 # Starline — peer-to-peer sovereign memory exchange (real Noise Protocol handshake)
-cd crystal-core && pip install -r requirements-starline.txt && python3 -m starline.selftest
+cd src/crystal-core && pip install -r requirements-starline.txt && python3 -m starline.selftest
 python3 -m starline.run demo   # watch it: pair, deny, grant, exchange, revoke, deny
 
 # RDP — tamper-evident record kernel + explainable decision engine
-cd crystal-core && python3 -m rdp.selftest
+cd src/crystal-core && python3 -m rdp.selftest
 python3 -m rdp.run demo   # watch each precedence tier decide, every verdict recorded
 
 # CrystalCore.OS — the mythos as a terminal you can fly
-python3 mythos/crystalcore_os.py
+python3 src/crystalcore-os/crystalcore_os.py
 ```
 
 For the Starline Weaver's wire protocol, envelope schema, and conduct rules, see
-[`crystal-core/clementine/STARLINE-WEAVE-PROTOCOL.md`](crystal-core/clementine/STARLINE-WEAVE-PROTOCOL.md);
+[`STARLINE-WEAVE-PROTOCOL.md`](docs/architecture/crystal-core/STARLINE-WEAVE-PROTOCOL.md);
 for the hub agent's persona and contract, see
-[`crystal-core/clementine/CLEMENTINE.md`](crystal-core/clementine/CLEMENTINE.md). For the
+[`CLEMENTINE.md`](docs/architecture/crystal-core/CLEMENTINE.md). For the
 CrystalCore.OS terminal — its commands, nodes, and keys — see
 [`mythos/CRYSTALCORE-OS.md`](mythos/CRYSTALCORE-OS.md).
 
 ## Repo map
 
+The repository follows the **CrystalCore OS v1.0 architecture** (adopted
+2026-07-23 — [`ADR-0001`](docs/adr/ADR-0001.md); full map in
+[`docs/architecture/SystemMap.md`](docs/architecture/SystemMap.md)):
+
 | Path | What it is |
 |---|---|
-| `apps/lumina/` | The companion — CrystalCore framework package, terminal, Flask API, Svelte webapp, browser voice |
-| `apps/voicebox/` | Local MCP server giving Claude Code a spoken voice on your machine |
-| `apps/crystal-interface/`, `apps/vision-web/` | Demo shells (simulated data, Authority HOLD — not production) |
-| `crystal-core/` | The protocol pack — Starline Weaver (`clementine/bridge/`), Decode→Ingest→Twin pipeline (`services/`), Starline (`starline/`), RDP record kernel (`rdp/`) |
-| `crystalcore/` | CrystalBridge — the MCP consent gate (fail-closed by design) |
-| `mythos/` | The Crystal universe canon — Codex, Apocryphon, the Book of the Sovereign Key, the Starline Transmissions, 88 pieces of art, `crystalcore_os.py` |
-| `site/` | The SvelteKit site for teraustralis.com.au |
-| `sdk/typescript/`, `node/mesh/` | Client SDK and an in-process mesh scaffold |
-| `TeraAustralis/`, `CrystalCore.Lattice/`, `docs/` | Lore, activation protocol notes, and architecture docs |
-| `_archive/` | Superseded code kept for provenance — not maintained, do not build on it |
+| `src/apps/lumina/` | The companion — CrystalCore framework package, terminal, Flask API, Svelte webapp, browser voice |
+| `src/apps/voicebox/` | Local MCP server giving Claude Code a spoken voice on your machine |
+| `src/apps/crystal-interface/`, `src/apps/vision-web/` | Demo shells (simulated data, Authority HOLD — not production) |
+| `src/crystal-core/` | The protocol pack — Starline Weaver (`clementine/bridge/`), Decode→Ingest→Twin pipeline (`services/`), Starline (`starline/`), RDP record kernel (`rdp/`) |
+| `src/crystalcore/` | CrystalBridge — the MCP consent gate (fail-closed by design) |
+| `src/crystalcore-os/` | The mythos terminal (Vision-layer code) |
+| `src/site/` | The SvelteKit site for teraustralis.com.au |
+| `src/sdk/typescript/`, `src/node/mesh/` | Client SDK and an in-process mesh scaffold |
+| `docs/` | Documentation — vision, architecture, governance, AI collaboration, guides, ADRs |
+| `research/` | Exploratory work, including the Seven Sisters cycle — not production |
+| `mythos/` | The Crystal universe canon — Codex, Apocryphon, the Book of the Sovereign Key, the Starline Transmissions, 88 pieces of art, the outer-world lore (`teraaustralis/`) |
+| `archive/` | Superseded code kept for provenance — not maintained, do not build on it |
 
 ## The Covenant
 
-Lumina's core prompt (`apps/lumina/crystalcore/companion.py`) carries
+Lumina's core prompt (`src/apps/lumina/crystalcore/companion.py`) carries
 five binding rules, written out in full in `mythos/COVENANT.md`: no influence
 without explicit direction, an absolute and instant pause, memory that
 belongs entirely to the human, support that's offered rather than imposed,
 and restraint as its own form of respect. Starline's consent model
-(`crystal-core/starline/consent.py`) is the same law applied to data instead
+(`src/crystal-core/starline/consent.py`) is the same law applied to data instead
 of conversation — nothing moves without a grant, and revocation takes effect
 on the very next request.
 
@@ -89,6 +97,13 @@ on the very next request.
 Start with [`mythos/content/THE-SOVEREIGN-KEY.md`](mythos/content/THE-SOVEREIGN-KEY.md)
 and [`mythos/content/STARLINE-TRANSMISSIONS.md`](mythos/content/STARLINE-TRANSMISSIONS.md).
 The full visual canon is in [`mythos/art/`](mythos/art/README.md).
+
+## AI collaboration
+
+Several AI tools work on this repository under defined roles — the model is
+documented in [`docs/ai/`](docs/ai/AI-Workflow.md), the rules in
+[`docs/governance/AI-Governance.md`](docs/governance/AI-Governance.md), and
+every PR names the tools that helped produce it.
 
 ## How to contribute
 
@@ -105,16 +120,18 @@ Useful places to start, roughly in order of how load-bearing they are:
 
 - **Contributing:** [`CONTRIBUTING.md`](CONTRIBUTING.md) — branch rules, the
   Belt-Three truth labels, and what never gets committed (generated files,
-  personal memory data, secrets).
+  personal memory data, secrets). Command quick-reference:
+  [`docs/guides/GitHub-Commit-Instructions.md`](docs/guides/GitHub-Commit-Instructions.md).
 - **Security:** [`SECURITY.md`](SECURITY.md) for this repo overall;
-  [`crystal-core/SECURITY.md`](crystal-core/SECURITY.md) for the protocol
+  [`src/crystal-core/SECURITY.md`](src/crystal-core/SECURITY.md) for the protocol
   pack's specific guarantees (Starline Weaver, pipeline quarantine, Starline's
   consent gating).
 - **License:** code is Apache-2.0 (`LICENSE`); mythos content — lore, art,
   the Codex, the Apocryphon — is CC BY-NC-ND 4.0 (`LICENSE-CONTENT.md`):
   share with credit, no commercial use, no derivatives.
-- **Roadmap:** [`ROADMAP.md`](ROADMAP.md) — what's built, what's in progress,
-  and what hasn't started yet.
+- **Roadmap:** [`Roadmap.md`](docs/governance/Roadmap.md) — what's built,
+  what's in progress, and what hasn't started yet.
+- **Changelog:** [`CHANGELOG.md`](CHANGELOG.md) — repository milestones.
 - **Code of conduct:** [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) — expected
   behavior and how to report a problem.
 

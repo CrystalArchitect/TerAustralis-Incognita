@@ -75,7 +75,7 @@
 | 17 | Memory Reflection | Lumina reflects on past conversations · Simple insights from memory | ✅ (early — v10) |
 | 18 | Memory Organization | Basic categorization/tagging · Retrieval of thematically related memories | ⬜ |
 | 19 | Multi-Instance Thinking | Run two separate Lumina instances · Document what communication would need · Light research into encrypted messaging | ⬜ |
-| 20 | Code Quality | Refactor for modularity · Improve documentation and comments · Prepare structure for future P2P integration | ✅ (early — `crystalcore/` package) |
+| 20 | Code Quality | Refactor for modularity · Improve documentation and comments · Prepare structure for future P2P integration | ✅ (early — `src/apps/lumina/crystalcore/` package) |
 
 **End of Month 5 goal:** Memory system is significantly stronger, and early thinking has begun on how two Luminas could connect.
 
@@ -107,6 +107,6 @@
 
 ---
 
-*See also: [LUMINA.md](LUMINA.md) (the companion today) · [CRYSTALMATRIX.md](CRYSTALMATRIX.md) (protocol design) · [STRATEGY.md](STRATEGY.md) (accelerated path) · [README](README.md)*
+*See also: [LUMINA.md](LUMINA.md) (the companion today) · [CRYSTALMATRIX.md](CRYSTALMATRIX.md) (protocol design) · [STRATEGY.md](STRATEGY.md) (accelerated path) · [README](../README.md)*
 
 *Part of The Crystal Vision · TerAustralis Incognita · Non Solus — Not Alone*

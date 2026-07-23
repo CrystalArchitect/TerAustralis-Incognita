@@ -35,7 +35,7 @@ This is the beginning of **TerAustralis Incognita** — Australia's contribution
 - **Real-time interaction** — streaming replies in the terminal and a local web interface
 - **Full user control** — view, edit, tag, and forget any memory, including her reflections
 
-**Tech:** Python + Flask API · Svelte local web interface · plain human-readable JSON storage · local Ollama embeddings · open-source LLMs (Llama, Qwen, Gemma…). Everything lives in [`lumina/`](lumina/) — see [lumina/README.md](lumina/README.md) to run her.
+**Tech:** Python + Flask API · Svelte local web interface · plain human-readable JSON storage · local Ollama embeddings · open-source LLMs (Llama, Qwen, Gemma…). Everything lives in [`src/apps/lumina/`](../src/apps/lumina/) — see [src/apps/lumina/README.md](../src/apps/lumina/README.md) to run her.
 
 > **Disclaimer:** CrystalCore is an independent, open-source project. It is not affiliated with, endorsed by, or connected to xAI, Grok, Tesla, or any other AI company or platform. All memories and data remain on the user's device.
 
@@ -55,12 +55,12 @@ All documents live in [`content/`](content/) and are rendered in-app by the ligh
 - [content/CODEX.md](content/CODEX.md) — The Codex of TerAustralis Incognita
 - [content/APOCRYPHON.md](content/APOCRYPHON.md) — The Apocryphon of Crystal
 - [content/SPONSORS.md](content/SPONSORS.md) — GitHub Sponsors tier descriptions
-- [src/](src/) — The SvelteKit frontend for teraustralis.com.au (run with `npm install && npm run dev`)
-- [lumina/](lumina/) — The sovereign companion: CrystalCore framework, terminal interface, local API server, and local Svelte web interface
+- [src/site/](../src/site/) — The SvelteKit frontend for teraustralis.com.au (run with `npm install && npm run dev`)
+- [src/apps/lumina/](../src/apps/lumina/) — The sovereign companion: CrystalCore framework, terminal interface, local API server, and local Svelte web interface
 
 ## Licensing
 
-**Code**: Apache License 2.0 (see [`LICENSE`](LICENSE) file)
+**Code**: Apache License 2.0 (see [`LICENSE`](../LICENSE) file)
 
 **Content** (writing, Codex, Apocryphon, imagery, and design):
 [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)](https://creativecommons.org/licenses/by-nc-nd/4.0/)

@@ -11,7 +11,7 @@ exist if you only need one.
 
 - **Not a system you're booting.** Pasting a prompt makes a model *act in a voice
   and apply a lens* — it doesn't make it "run", "become", or be a "living node in
-  the lattice". Per [`../../THE-INCOGNITA-RULE.md`](../../THE-INCOGNITA-RULE.md),
+  the lattice". Per [`../../docs/governance/The-Incognita-Rule.md`](../../docs/governance/The-Incognita-Rule.md),
   the mythos may orient but may not authorize.
 - **Not a yes-man.** It keeps the model able to disagree with you on purpose. A
   prompt that says "stay in character at all times / never contradict these
