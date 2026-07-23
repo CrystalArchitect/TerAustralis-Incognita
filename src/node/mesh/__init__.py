@@ -1,3 +1,6 @@
+# Copyright 2026 Crystal Arena-Turner (TerAustralis Incognita)
+# SPDX-License-Identifier: Apache-2.0
+
 """libp2p mesh stub — Phase 1 local only. Real multiaddr / gossipsub later."""
 
 from .stub import MeshPeer, MeshStub, PeerInfo

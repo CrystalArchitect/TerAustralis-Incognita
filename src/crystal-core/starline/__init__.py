@@ -1,3 +1,6 @@
+# Copyright 2026 Crystal Arena-Turner (TerAustralis Incognita)
+# SPDX-License-Identifier: Apache-2.0
+
 """Deprecated import alias — ``starline`` is now ``consent_transport``.
 
 This project's peer-to-peer transport was renamed from "Starline" to

@@ -1,3 +1,6 @@
+# Copyright 2026 Crystal Arena-Turner (TerAustralis Incognita)
+# SPDX-License-Identifier: Apache-2.0
+
 """Same-LAN discovery — a UDP broadcast, nothing fancier.
 
 This is not full mDNS/Bonjour protocol compliance; it's a small, honest

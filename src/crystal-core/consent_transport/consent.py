@@ -1,3 +1,6 @@
+# Copyright 2026 Crystal Arena-Turner (TerAustralis Incognita)
+# SPDX-License-Identifier: Apache-2.0
+
 """Consent & revocation — nothing moves without this saying yes, first.
 
 Every grant is a signed receipt held locally by the human's own agent —

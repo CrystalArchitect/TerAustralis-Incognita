@@ -1,3 +1,6 @@
+# Copyright 2026 Crystal Arena-Turner (TerAustralis Incognita)
+# SPDX-License-Identifier: Apache-2.0
+
 """Watch the RDP decision kernel work — every precedence tier, recorded.
 
     python3 -m rdp.run demo          # the decision kernel, all five tiers

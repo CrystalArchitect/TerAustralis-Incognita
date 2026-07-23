@@ -1,3 +1,6 @@
+<!-- Copyright 2026 Crystal Arena-Turner (TerAustralis Incognita) -->
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+
 <script>
   import Avatar from './lib/Avatar.svelte';
   import Chat from './lib/Chat.svelte';

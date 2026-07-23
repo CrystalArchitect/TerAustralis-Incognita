@@ -1,3 +1,6 @@
+# Copyright 2026 Crystal Arena-Turner (TerAustralis Incognita)
+# SPDX-License-Identifier: Apache-2.0
+
 """Crystal Core services — the runnable Decode → Ingest → Twin spine.
 
 Blueprint: docs/architecture/crystal-core/BLUEPRINT-v0.3.md (vision) ·

@@ -1,3 +1,6 @@
+# Copyright 2026 Crystal Arena-Turner (TerAustralis Incognita)
+# SPDX-License-Identifier: Apache-2.0
+
 """The peer store — every agent Starline has ever been introduced to.
 
 Not secret in the cryptographic sense (public keys are, by definition,

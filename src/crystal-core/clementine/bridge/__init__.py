@@ -1,3 +1,6 @@
+# Copyright 2026 Crystal Arena-Turner (TerAustralis Incognita)
+# SPDX-License-Identifier: Apache-2.0
+
 """Clementine — the communicator: a bridge where AI systems talk under Belt-Three law.
 
 Clementine is the communicator between models and nodes. Two roles run here:

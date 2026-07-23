@@ -1,3 +1,6 @@
+# Copyright 2026 Crystal Arena-Turner (TerAustralis Incognita)
+# SPDX-License-Identifier: Apache-2.0
+
 """Watch Consent Transport actually work — two agents, one process, real sockets.
 
     python3 -m consent_transport.run demo
