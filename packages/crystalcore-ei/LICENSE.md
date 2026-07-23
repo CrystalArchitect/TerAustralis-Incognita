@@ -1,51 +1,47 @@
-# MIT License (Non-Commercial Use)
+# Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International
 
 **CrystalCore.OS – Emotional Intelligence & Affective Computing**
 
-Copyright (c) 2026 CrystalArchitect
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-**This license applies ONLY to non-commercial use.** See COMMERCIAL_LICENSE.md for commercial use rights.
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Copyright (c) 2026 Crystal Arena-Turner (TerAustralis Incognita)
 
 ---
 
-## Permitted Uses (Non-Commercial)
+This work is licensed under the Creative Commons
+Attribution-NonCommercial-NoDerivatives 4.0 International License —
+the same terms as the rest of this repository's code (`LICENSE` at the
+repo root). See [`ADR-0010`](../../docs/adr/ADR-0010.md) for why: a prior
+restructuring gave this package a separate MIT-non-commercial /
+paid-commercial dual license (`LICENSE.md`, `COMMERCIAL_LICENSE.md`,
+`LICENSING.md` at the repo root); that dual-license model was superseded
+before it became authoritative. Those files are marked accordingly rather
+than deleted.
 
-✅ Personal projects and learning  
-✅ Academic research and education  
-✅ Open source contributions (non-commercial)  
-✅ Internal use within educational institutions  
-✅ Non-profit organizations (non-commercial projects)  
+To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/
 
-## Restricted Uses
+## You are free to:
 
-❌ Commercial products or services  
-❌ SaaS offerings  
-❌ Any use generating revenue or profit  
-❌ Consulting services using this code  
-❌ Resale or sublicensing (commercial)  
+**Share** — copy and redistribute the material in any medium or format
 
-## Commercial Use
+## Under the following terms:
 
-For commercial use, licensing, or enterprise agreements, see **COMMERCIAL_LICENSE.md** or contact:
-📧 ei-commercial@teraaustralis.dev
+**Attribution** — You must give appropriate credit.
+
+**NonCommercial** — You may not use the material for commercial purposes.
+Commercial use requires explicit permission from the copyright holder.
+
+**NoDerivatives** — If you remix, transform, or build upon the material,
+you may not distribute the modified material.
+
+---
+
+## Commercial Licensing
+
+For commercial use, contact the copyright holder — see
+[`docs/ATTRIBUTIONS.md`](../../docs/ATTRIBUTIONS.md).
+
+## Full License Text
+
+See https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode
 
 ---
 

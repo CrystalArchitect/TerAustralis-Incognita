@@ -4,6 +4,32 @@ Notable changes to this repository, newest first. Day-to-day status lives
 in [`docs/governance/Roadmap.md`](docs/governance/Roadmap.md); this file
 records the milestones.
 
+## 2026-07-23 — Close the licensing question: uniform CC BY-NC-ND, packages/ reverted
+
+`ADR-0009` deliberately left open whether the repository would converge on
+uniform CC BY-NC-ND 4.0 or the differentiated per-package model
+(`packages/`'s AGPL v3 / Proprietary / Dual / CC BY-NC-ND). Asked for a
+recommendation, the case for uniform CC BY-NC-ND won: for a pre-revenue,
+single-maintainer project, four parallel license regimes are real ongoing
+overhead for protection that isn't needed yet, and more regimes means more
+surface for the next uncoordinated session to get wrong. `ADR-0010` records
+the decision and reverts `packages/`'s licensing to match.
+
+### Changed
+- Every `packages/*/LICENSE.md` (7 packages) rewritten from its previous
+  license (AGPL v3, Proprietary, or MIT-non-commercial) to CC BY-NC-ND 4.0.
+- Every `packages/*/pyproject.toml`'s `license` field updated to
+  `CC-BY-NC-ND-4.0`; per-package `README.md` badges and licensing sections
+  corrected to match (`crystalcore-ei/README.md` needed the most rework).
+- `LICENSE.md`, `LICENSING.md`, `COMMERCIAL_LICENSE.md` (root files,
+  actually CrystalCore-EI-specific) and
+  `docs/governance/LICENSING-STRATEGY.md`/`LICENSING-QUICK-REFERENCE.md`
+  marked superseded in place rather than deleted — real work worth keeping
+  as a reference if a package-specific commercial license becomes relevant
+  later.
+- `README.md`'s license section rewritten a third time today — this time
+  as a flat, resolved statement instead of "still open."
+
 ## 2026-07-23 — Reconcile licensing chaos across three more uncoordinated sessions
 
 Within roughly 45 minutes, three more uncoordinated Claude sessions and a

@@ -1,56 +1,44 @@
-# GNU Affero General Public License v3.0 or later
+# Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International
 
 **Starline Weaver – Multi-AI Message Bus**
 
-Copyright (c) 2026 CrystalArchitect
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU Affero General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU Affero General Public License for more details.
-
-You should have received a copy of the GNU Affero General Public License
-along with this program. If not, see <https://www.gnu.org/licenses/>.
+Copyright (c) 2026 Crystal Arena-Turner (TerAustralis Incognita)
 
 ---
 
-## What This Means
+This work is licensed under the Creative Commons
+Attribution-NonCommercial-NoDerivatives 4.0 International License —
+the same terms as the rest of this repository's code (`LICENSE` at the
+repo root). See [`ADR-0010`](../../docs/adr/ADR-0010.md) for why: a prior
+restructuring gave each package a different license (AGPL v3, here); that
+was superseded before it became authoritative.
 
-**You can:**
-- ✅ Use Starline for any purpose
-- ✅ Modify and extend the protocol
-- ✅ Run Starline hubs (proprietary or open)
-- ✅ Build commercial services on top
+To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/
 
-**You must:**
-- 📝 Include this license and copyright notice
-- 🔗 Share modifications to Starline itself
-- 📢 Disclose protocol extensions
-- 🔄 If running Starline as a service, open-source your modifications
+## You are free to:
 
-**You cannot:**
-- ❌ Claim ownership of Starline
-- ❌ Modify license terms
-- ❌ Hide Starline modifications in proprietary SaaS
+**Share** — copy and redistribute the material in any medium or format
 
----
+## Under the following terms:
 
-## Why AGPL for a Protocol?
+**Attribution** — You must give appropriate credit.
 
-AGPL ensures the protocol remains open and compatible. If you run Starline
-as a cloud service, you must open-source your modifications, preventing
-proprietary forks that break the network.
+**NonCommercial** — You may not use the material for commercial purposes.
+Commercial use requires explicit permission from the copyright holder.
+
+**NoDerivatives** — If you remix, transform, or build upon the material,
+you may not distribute the modified material.
 
 ---
 
-## AGPL v3 Full Text
+## Commercial Licensing
 
-See https://www.gnu.org/licenses/agpl-3.0.txt for the complete license text.
+For commercial use, contact the copyright holder — see
+[`docs/ATTRIBUTIONS.md`](../../docs/ATTRIBUTIONS.md).
+
+## Full License Text
+
+See https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode
 
 ---
 

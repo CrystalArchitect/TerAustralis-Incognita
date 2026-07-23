@@ -7,7 +7,7 @@ name = "teraaustralis-bridge"
 version = "1.0.0"
 description = "MCP consent gate for AI safety with verified permission model"
 readme = "README.md"
-license = {text = "Proprietary"}
+license = {text = "CC-BY-NC-ND-4.0"}
 authors = [{name = "CrystalArchitect"}]
 requires-python = ">=3.10"
 

@@ -2,7 +2,7 @@
 
 **Production-grade emotional intelligence with Bayesian uncertainty and active learning.**
 
-[![License: MIT or Proprietary](https://img.shields.io/badge/license-MIT%20or%20Proprietary-blue.svg)](LICENSE.md)
+[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/license-CC%20BY--NC--ND%204.0-lightgrey.svg)](LICENSE.md)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-green.svg)](https://www.python.org/)
 
 ---
@@ -19,15 +19,11 @@
 
 ## Installation
 
-### Non-Commercial Use (MIT License)
-
 ```bash
 pip install teraaustralis-ei
 ```
 
-### Commercial Use
-
-For commercial deployments, see [COMMERCIAL_LICENSE.md](COMMERCIAL_LICENSE.md) for licensing options.
+Licensed CC BY-NC-ND 4.0, non-commercial — see `## Licensing` below.
 
 ---
 
@@ -104,22 +100,15 @@ exporter.export_active_learning_sample(
 
 ## Licensing
 
-### Non-Commercial (MIT License)
+**CC BY-NC-ND 4.0** — non-commercial use, attribution required, no
+derivative redistribution. See [LICENSE.md](LICENSE.md) for details.
+(Superseded from the earlier MIT-non-commercial / paid-commercial dual
+model by [ADR-0010](../../docs/adr/ADR-0010.md); `COMMERCIAL_LICENSE.md`
+and `LICENSING.md` at the repo root are marked accordingly rather than
+deleted.)
 
-✅ Free for personal use, research, and non-commercial projects  
-✅ Open source (modifications must be shared)  
-❌ Not for commercial SaaS
-
-See [LICENSE.md](LICENSE.md) for details.
-
-### Commercial
-
-For SaaS, products, services, or commercial deployments:
-
-See [COMMERCIAL_LICENSE.md](COMMERCIAL_LICENSE.md) for licensing tiers:
-- **Startup**: $5,000/year for 50K calls/month
-- **Professional**: $25,000/year for 1M calls/month
-- **Enterprise**: Custom pricing for unlimited usage
+For commercial use, contact the copyright holder — see
+[`docs/ATTRIBUTIONS.md`](../../docs/ATTRIBUTIONS.md).
 
 ---
 

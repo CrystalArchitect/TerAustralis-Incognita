@@ -1,8 +1,8 @@
 # CrystalBridge – Enterprise AI Safety Gateway
 
-**Proprietary system for unified model orchestration and safety enforcement.**
+**CC BY-NC-ND 4.0-licensed system for unified model orchestration and safety enforcement — see [ADR-0010](../../docs/adr/ADR-0010.md).**
 
-[![License: Proprietary](https://img.shields.io/badge/license-Proprietary-red.svg)](LICENSE.md)
+[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/license-CC%20BY--NC--ND%204.0-lightgrey.svg)](LICENSE.md)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-green.svg)](https://www.python.org/)
 
 ---

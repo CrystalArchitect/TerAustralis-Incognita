@@ -135,18 +135,15 @@ Useful places to start, roughly in order of how load-bearing they are:
   [`src/crystal-core/SECURITY.md`](src/crystal-core/SECURITY.md) for the protocol
   pack's specific guarantees (Starline Weaver, pipeline quarantine, Starline's
   consent gating).
-- **License:** `src/` (the actually-running, tested code today) and mythos
-  content — lore, art, the Codex, the Apocryphon — are both CC BY-NC-ND 4.0
-  (`LICENSE`, `LICENSE-CONTENT.md`): share with credit, no commercial use,
-  no derivatives; commercial licensing for code by negotiation — see
-  [`docs/ATTRIBUTIONS.md`](docs/ATTRIBUTIONS.md). A separate,
-  **in-progress** restructuring (`packages/`) targets differentiated
-  per-package licensing (AGPL v3 for most, proprietary for CrystalBridge,
-  dual MIT/commercial for CrystalCore-EI) — see
-  [`docs/governance/LICENSING-STRATEGY.md`](docs/governance/LICENSING-STRATEGY.md)
-  and [`ADR-0009`](docs/adr/ADR-0009.md). It is not yet wired in as the
-  authoritative source (`src/` still is, per `pyproject.toml`), so treat it
-  as the migration's target state, not today's license.
+- **License:** Everything in this repository — `src/`, `packages/`, and
+  mythos content (lore, art, the Codex, the Apocryphon) alike — is
+  uniformly **CC BY-NC-ND 4.0** (`LICENSE`, `LICENSE-CONTENT.md`): share
+  with credit, no commercial use, no derivatives; commercial licensing by
+  negotiation — see [`docs/ATTRIBUTIONS.md`](docs/ATTRIBUTIONS.md). A
+  differentiated per-package model (AGPL v3 / Proprietary / Dual /
+  CC BY-NC-ND) was implemented in `packages/` and then deliberately
+  reverted in favor of this uniform, simpler license — see
+  [`ADR-0010`](docs/adr/ADR-0010.md).
 - **Roadmap:** [`Roadmap.md`](docs/governance/Roadmap.md) — what's built,
   what's in progress, and what hasn't started yet.
 - **Changelog:** [`CHANGELOG.md`](CHANGELOG.md) — repository milestones.

@@ -2,7 +2,7 @@
 
 **Protocol layer for coordinated multi-AI systems with Belt-Three conduct rules.**
 
-[![License: AGPL v3](https://img.shields.io/badge/license-AGPL%20v3-blue.svg)](LICENSE.md)
+[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/license-CC%20BY--NC--ND%204.0-lightgrey.svg)](LICENSE.md)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-green.svg)](https://www.python.org/)
 
 ---
@@ -62,7 +62,7 @@ See [STARLINE-WEAVE-PROTOCOL.md](docs/STARLINE-WEAVE-PROTOCOL.md) for:
 
 ## License
 
-**AGPL v3** – See [LICENSE.md](LICENSE.md) for details.
+**CC BY-NC-ND 4.0** – See [LICENSE.md](LICENSE.md) for details. (Superseded from AGPL v3 by [ADR-0010](../../docs/adr/ADR-0010.md).)
 
 ---
 

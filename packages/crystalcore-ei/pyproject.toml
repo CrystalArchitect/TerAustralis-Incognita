@@ -7,7 +7,7 @@ name = "teraaustralis-ei"
 version = "1.0.0"
 description = "Emotional Intelligence system with Bayesian uncertainty and active learning"
 readme = "README.md"
-license = {text = "MIT or Proprietary"}
+license = {text = "CC-BY-NC-ND-4.0"}
 authors = [{name = "CrystalArchitect"}]
 requires-python = ">=3.10"
 
