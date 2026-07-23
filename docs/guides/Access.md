@@ -1,6 +1,6 @@
 # Access & Invite List
 
-**Repo (private):** https://github.com/CrystalArchitect/TeraAustralis-Incognita  
+**Repo (private):** https://github.com/CrystalArchitect/TerAustralis-Incognita  
 **Local path:** `C:\Users\cryst\.grok\downloads\TeraAustralis-Incognita`  
 **Keeper:** Crystal (CrystalArchitect)
 
@@ -19,7 +19,7 @@
 
 ## GitHub collaborator invites (human)
 
-1. Open: https://github.com/CrystalArchitect/TeraAustralis-Incognita/settings/access  
+1. Open: https://github.com/CrystalArchitect/TerAustralis-Incognita/settings/access  
 2. **Add people** → enter GitHub username or email  
 3. Permission: **Read** (lore readers) or **Write** (builders)
 

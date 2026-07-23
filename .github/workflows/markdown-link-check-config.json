@@ -23,6 +23,10 @@
     {
       "comment": "Links into the TerAustralis-Incognita-Code repository, which is private: GitHub returns 404 to the anonymous requests this checker makes, even for files that exist (verified 2026-07-24 - core/crystal-core/SECURITY.md is present on that repo's main via git, yet the blob URL 404s unauthenticated). Cross-repo targets are verified by git/PR review instead; re-enable if that repo ever goes public.",
       "pattern": "^https://github\\.com/CrystalArchitect/TerAustralis-Incognita-Code"
+    },
+    {
+      "comment": "GitHub repo settings pages (docs/guides/Access.md points admins at Settings > Access): served only to authenticated admins, so an anonymous checker gets 404 regardless of whether the URL is correct. Verified on CI run 30053981478 (2026-07-24). The admin who follows the guide is the verification.",
+      "pattern": "^https://github\\.com/[^/]+/[^/]+/settings/"
     }
   ],
   "retryOn429": true,

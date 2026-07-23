@@ -1,6 +1,6 @@
 # Push to GitHub
 
-Remote: `https://github.com/CrystalArchitect/TeraAustralis-Incognita`
+Remote: `https://github.com/CrystalArchitect/TerAustralis-Incognita`
 
 Local git has the full tree. GitHub may lag until a full push.
 
