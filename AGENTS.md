@@ -2,7 +2,7 @@
 
 ## Project
 
-Living vision stack: **TeraAustralis Incognita** · **CrystalVision** ·
+Living vision stack: **TerAustralis Incognita** · **CrystalVision** ·
 **CrystalCore.Lattice** — organized as the **CrystalCore OS v1.0**
 repository architecture (map: `docs/architecture/SystemMap.md`).
 
@@ -30,7 +30,7 @@ in `docs/ai/`. Read yours before substantial work.
   crystalcore-os, node, sdk, site, profiles)
 - `docs/` — vision · architecture · governance · ai · agents · guides · adr
 - `research/` — exploratory, not production
-- `mythos/` — the Crystal universe canon + `teraaustralis/` outer lore
+- `mythos/` — the Crystal universe canon + `teraustralis/` outer lore
   (content license)
 - `archive/` — provenance only; never build on it
 - `scripts/`, `tests/`, `examples/`, `assets/` — utilities, repo-level
