@@ -139,6 +139,25 @@ or commercialize products built on it, contact the copyright holder for a commer
 **MemClaw attribution:** The architectural patterns referenced from MemClaw remain under Apache 2.0
 (their license). Acknowledge MemClaw in any work you create; see [`docs/ATTRIBUTIONS.md`](docs/ATTRIBUTIONS.md).
 
+### Contribution licensing (why pull requests still work under a No-Derivatives license)
+
+Read literally, "no derivative redistribution" (above) and "propose changes
+via pull request" (`Ground rules` §1) pull in different directions — a PR
+is a modification, and GitHub hosting it is a redistribution. This section
+resolves that: **the outbound license (CC BY-NC-ND 4.0) governs what the
+public can do with this repository; it does not govern what you grant the
+project by contributing to it.**
+
+By submitting a pull request, you grant the maintainer a perpetual,
+worldwide license to use, modify, merge, and relicense your contribution as
+part of this project — including under terms broader or different from
+CC BY-NC-ND 4.0, such as a future commercial license. This is the standard
+"inbound greater than or equal to outbound" structure many commercially
+licensed projects use: contributors give the project room to work with
+their change; the public redistribution terms stay exactly as strict as
+`LICENSE` says. It does not change your attribution rights (`Cite external
+sources`, above) or require you to give up authorship credit.
+
 ## The Covenant applies to code too
 
 Lumina's Sovereignty Covenant (`mythos/COVENANT.md`) is not just

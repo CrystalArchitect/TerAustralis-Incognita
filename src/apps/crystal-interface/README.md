@@ -7,7 +7,7 @@ step). The citizen-facing surface is the separate, slimmer
 
 **🔭 Crystal universe — which repo is this?**  
 Siblings: **crystalcore** = Crystal Core (protocol pack) · **the-crystal-vision** = The Crystal Vision (codex site + Lumina sovereign companion app) · **teraaustralis-incognita** = TerAustralis Incognita (narrative + CrystalBridge).  
-**License:** Apache-2.0 — see `LICENSE`
+**License:** CC BY-NC-ND 4.0 — see the [repo-root `LICENSE`](../../../LICENSE)
 
 **Not production.** Every number is illustrative and **simulated in the browser**;
 this shell makes **no backend calls**. Authority **HOLD**.

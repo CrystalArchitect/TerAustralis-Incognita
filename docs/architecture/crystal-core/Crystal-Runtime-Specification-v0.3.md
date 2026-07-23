@@ -1331,4 +1331,4 @@ This specification draws on proven patterns from production systems:
 
 ---
 
-**License:** This specification is part of CrystalCore OS and is licensed under Apache 2.0. Derivative works must retain attribution to the original authors and third-party sources listed above.
+**License:** This specification is part of CrystalCore OS and is licensed under CC BY-NC-ND 4.0 (see `LICENSE`). Non-commercial use only; no derivative redistribution; attribution to the original authors and third-party sources listed above required.
