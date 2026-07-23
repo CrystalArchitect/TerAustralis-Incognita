@@ -382,6 +382,16 @@ class CrystalCore:
             print("\n⚠️  Multimodal module not available. This is an advanced feature.")
             print("   Install optional dependencies: pip install transformers librosa mediapipe fer\n")
 
+    def uncertainty(self):
+        """Show uncertainty quantification methods guide."""
+        try:
+            from .uncertainty_quantification import print_uncertainty_guide
+
+            print(print_uncertainty_guide())
+        except ImportError:
+            print("\n⚠️  Uncertainty module not available.")
+            print("   Install with: pip install torch\n")
+
     def learning_status(self):
         """Show active learning queue status and improvement metrics."""
         from .active_learning import show_active_learning_dashboard
@@ -450,6 +460,7 @@ ACTIVE LEARNING:
 
 ADVANCED:
   multimodal           - Show multimodal emotion detection roadmap (text+audio+video)
+  uncertainty          - Show uncertainty quantification methods guide (entropy, Bayesian, etc)
 
 SYSTEM:
   status               - Show full status (including EI)
@@ -530,6 +541,8 @@ def main():
                 os.learning_status()
             elif cmd == "multimodal":
                 os.multimodal()
+            elif cmd == "uncertainty":
+                os.uncertainty()
             elif cmd == "reset":
                 os.reset()
             elif cmd == "help":

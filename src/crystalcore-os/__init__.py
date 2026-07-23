@@ -23,6 +23,23 @@ except ImportError:
     VisualEmotionDetector = None
     MultimodalEmotionFusion = None
 
+try:
+    from .cross_attention_fusion import CrossAttentionFusion, MultimodalEmotionDetector
+except ImportError:
+    CrossAttentionFusion = None
+    MultimodalEmotionDetector = None
+
+try:
+    from .uncertainty_quantification import (
+        UncertaintyQuantifier,
+        ActiveLearningDecider,
+        BayesianUncertaintyQuantifier,
+    )
+except ImportError:
+    UncertaintyQuantifier = None
+    ActiveLearningDecider = None
+    BayesianUncertaintyQuantifier = None
+
 __all__ = [
     "CrystalCore",
     "EmotionalIntelligence",
@@ -36,4 +53,9 @@ __all__ = [
     "AudioEmotionDetector",
     "VisualEmotionDetector",
     "MultimodalEmotionFusion",
+    "CrossAttentionFusion",
+    "MultimodalEmotionDetector",
+    "UncertaintyQuantifier",
+    "ActiveLearningDecider",
+    "BayesianUncertaintyQuantifier",
 ]
