@@ -65,6 +65,10 @@ This repo is dual-licensed:
   share it with credit; you may **not** remix it or use it commercially.
   Contributions to the mythos are accepted under the same terms.
 
+The reasoning behind this split — and the project's wider IP principles
+(stewardship, attribution, identity, commercial future) — is recorded in
+[`ADR-0006`](docs/adr/ADR-0006.md).
+
 ## Map of the repo
 
 The full map is [`docs/architecture/SystemMap.md`](docs/architecture/SystemMap.md);
