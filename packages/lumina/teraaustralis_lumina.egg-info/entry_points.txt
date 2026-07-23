@@ -1,0 +1,2 @@
+[console_scripts]
+lumina = teraaustralis.lumina:main

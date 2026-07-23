@@ -1,0 +1,107 @@
+Metadata-Version: 2.4
+Name: teraaustralis-rdp
+Version: 1.0.0
+Summary: Record kernel with tamper-evident journal and explainable decision engine
+Author: CrystalArchitect
+License: AGPL-3.0-or-later
+Project-URL: repository, https://github.com/CrystalArchitect/teraaustralis-incognita
+Project-URL: documentation, https://teraaustralis.dev/rdp
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: jsonschema>=4.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0; extra == "dev"
+Dynamic: license-file
+
+# RDP – Recursive Dialogue Protocol
+
+**Framework for multi-turn conversational reasoning with state persistence.**
+
+[![License: AGPL v3](https://img.shields.io/badge/license-AGPL%20v3-blue.svg)](LICENSE.md)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-green.svg)](https://www.python.org/)
+
+---
+
+## Features
+
+🎯 **Recursive reasoning** – Multi-turn context preservation  
+💭 **State persistence** – Full dialogue history  
+🔗 **Model agnostic** – Works with any LLM backend  
+📝 **Structured output** – Typed responses with validation  
+🔄 **Streaming support** – Real-time token output  
+
+---
+
+## Installation
+
+```bash
+pip install teraaustralis-rdp
+```
+
+Or install in development mode:
+
+```bash
+git clone https://github.com/CrystalArchitect/teraaustralis-incognita.git
+cd teraaustralis-incognita/packages/rdp
+pip install -e .
+```
+
+---
+
+## Quick Start
+
+### Basic Dialogue
+
+```python
+from teraaustralis.rdp import RDP
+
+dialogue = RDP()
+response = dialogue.query("What is emotional intelligence?")
+print(response.text)
+
+# Follow-up preserves context
+follow_up = dialogue.query("How can I develop it?")
+print(follow_up.text)
+```
+
+### With Custom Model
+
+```python
+from teraaustralis.rdp import RDP, ModelConfig
+
+config = ModelConfig(
+    provider="openai",
+    model="gpt-4",
+    temperature=0.7
+)
+dialogue = RDP(config=config)
+```
+
+---
+
+## Documentation
+
+- [Protocol Specification](docs/RDP-PROTOCOL.md)
+- [API Reference](docs/API.md)
+- [Model Configuration](docs/MODELS.md)
+- [Contributing](CONTRIBUTING.md)
+
+---
+
+## License
+
+**AGPL v3** – See [LICENSE.md](LICENSE.md) for details.
+
+---
+
+## Support
+
+- 📧 **Issues**: https://github.com/CrystalArchitect/teraaustralis-incognita/issues
+- 💬 **Discussions**: https://github.com/CrystalArchitect/teraaustralis-incognita/discussions
+- 📚 **Docs**: https://teraaustralis.dev/rdp
+
+---
+
+*RDP: Reasoning Through Dialogue*

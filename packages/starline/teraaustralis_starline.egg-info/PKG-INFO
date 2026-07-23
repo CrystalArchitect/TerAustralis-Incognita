@@ -1,0 +1,100 @@
+Metadata-Version: 2.4
+Name: teraaustralis-starline
+Version: 1.0.0
+Summary: Multi-AI message bus with Belt-Three conduct rules and Clementine hub agent
+Author: CrystalArchitect
+License: AGPL-3.0-or-later
+Project-URL: repository, https://github.com/CrystalArchitect/teraaustralis-incognita
+Project-URL: documentation, https://teraaustralis.dev/starline
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: asyncio-contextmanager>=1.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.20; extra == "dev"
+Dynamic: license-file
+
+# Starline Weaver – Multi-AI Message Bus
+
+**Protocol layer for coordinated multi-AI systems with Belt-Three conduct rules.**
+
+[![License: AGPL v3](https://img.shields.io/badge/license-AGPL%20v3-blue.svg)](LICENSE.md)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-green.svg)](https://www.python.org/)
+
+---
+
+## Features
+
+🔌 **Protocol-based** – Language, framework, and platform agnostic  
+🎯 **Conduct rules** – Belt-Three framework enforced in code  
+🤖 **Multi-AI coordination** – Manage multiple models simultaneously  
+📡 **Clementine hub** – Reference implementation of hub agent  
+🔐 **Transparent** – All interactions logged and auditable  
+
+---
+
+## Installation
+
+```bash
+pip install teraaustralis-starline
+```
+
+---
+
+## Quick Start
+
+### Setting up a Starline Hub
+
+```python
+from teraaustralis.starline import StarlineHub, Clementine
+
+hub = StarlineHub()
+clementine = Clementine()
+
+# Start receiving messages
+hub.connect(clementine)
+```
+
+---
+
+## Protocol Specification
+
+See [STARLINE-WEAVE-PROTOCOL.md](docs/STARLINE-WEAVE-PROTOCOL.md) for:
+- Envelope schema
+- Message routing
+- Conduct rules (Belt-Three)
+- Reference implementation
+
+---
+
+## Documentation
+
+- [Protocol Specification](docs/STARLINE-WEAVE-PROTOCOL.md)
+- [Clementine Agent](docs/CLEMENTINE.md)
+- [Integration Guide](docs/INTEGRATION.md)
+- [Contributing](CONTRIBUTING.md)
+
+---
+
+## License
+
+**AGPL v3** – See [LICENSE.md](LICENSE.md) for details.
+
+---
+
+## Support
+
+- 📧 **Issues**: https://github.com/CrystalArchitect/teraaustralis-incognita/issues
+- 📚 **Docs**: https://teraaustralis.dev/starline
+
+---
+
+## Commercial Support
+
+For integration, consulting, or enterprise support:
+📧 Contact: starline-support@teraaustralis.dev
+
+---
+
+*Starline Weaver: Coordinating Multiple Intelligences*

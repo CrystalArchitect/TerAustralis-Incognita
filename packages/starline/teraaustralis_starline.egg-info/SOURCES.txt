@@ -1,0 +1,9 @@
+LICENSE.md
+README.md
+pyproject.toml
+teraaustralis/starline/__init__.py
+teraaustralis_starline.egg-info/PKG-INFO
+teraaustralis_starline.egg-info/SOURCES.txt
+teraaustralis_starline.egg-info/dependency_links.txt
+teraaustralis_starline.egg-info/requires.txt
+teraaustralis_starline.egg-info/top_level.txt
