@@ -1,9 +1,11 @@
 # CrystalCore — the engineering side
 
-The name map is in [`docs/vision/CrystalCore.md`](../vision/CrystalCore.md).
-This page covers the three *built* CrystalCores and how they divide the work.
+The taxonomy — canonical names, the tree, the naming rule for anything new —
+is in [`docs/vision/CrystalCore.md`](../vision/CrystalCore.md) and
+[`ADR-0004`](../adr/ADR-0004.md). This page covers the three *built*
+branches of that tree and how they divide the work.
 
-## The framework (`src/apps/lumina/crystalcore/`)
+## The Framework (`src/apps/lumina/crystalcore/`)
 
 The sovereign-companion framework Lumina runs on:
 
@@ -20,7 +22,7 @@ disk, no account, no cloud requirement. The Covenant
 not decoration — changes must preserve local-first operation, the absolute
 pause, and full memory ownership.
 
-## The protocol pack (`src/crystal-core/`)
+## The Protocol pack (`src/crystal-core/`)
 
 Four components, stdlib-only except where real cryptography is required:
 
@@ -39,7 +41,7 @@ Four components, stdlib-only except where real cryptography is required:
   decision kernel. It records what other components decide; it does not
   govern them ([`crystal-core/RDP-INTEGRATION.md`](crystal-core/RDP-INTEGRATION.md)).
 
-## The bridge (`src/crystalcore/`)
+## CrystalBridge (`src/crystalcore/`)
 
 CrystalBridge: the MCP stdio server that lets a guest AI meet Lumina —
 fail-closed. Every tool call passes four checks in order (approval →

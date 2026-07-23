@@ -22,11 +22,12 @@ must not be confused.
 ## Practiced by humans and tools (Process)
 
 The collaboration model — which AI does what kind of work, and in what
-order — is documented in [`docs/ai/`](../ai/AI-Workflow.md) with per-agent
-operating instructions in [`docs/agents/`](../agents/). It is a working
-agreement, not software: nothing enforces it except review discipline
-([`AI-Governance.md`](../governance/AI-Governance.md)) and the standing rule
-that every PR names the AI tools that helped produce it.
+order — is documented in [`docs/ai/`](../ai/AI-Workflow.md), with a quick
+task → tool lookup in [`Decision-Matrix.md`](../ai/Decision-Matrix.md) and
+per-agent operating instructions in [`docs/agents/`](../agents/). It is a
+working agreement, not software: nothing enforces it except review
+discipline ([`AI-Governance.md`](../governance/AI-Governance.md)) and the
+standing rule that every PR names the AI tools that helped produce it.
 
 ## Designed, never built (Vision)
 

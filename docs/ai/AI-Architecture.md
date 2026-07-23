@@ -50,36 +50,49 @@ overclaiming ([`The-Incognita-Rule.md`](../governance/The-Incognita-Rule.md)):
   [`AI-Governance.md`](../governance/AI-Governance.md).
 - **Proposed, not built** — see below.
 
-## Proposed: an AI Orchestrator
+## The AI Orchestrator concept
 
 Raised in review (ChatGPT, 2026-07-23): rather than each tool being reached
 independently, an **orchestrator** could sit in front of the roles and route
-a task to whichever tool fits it —
+a task to whichever tool fits it. An earlier sketch of the same idea (an "AI
+Router" module inside a proposed CrystalCore Engine) named the identical
+responsibility twice — **consolidated to one name, AI Orchestrator**, per
+[`ADR-0005`](../adr/ADR-0005.md).
+
+The concept has two parts, one built and one deliberately not:
+
+**Built today, docs-only:** [`Decision-Matrix.md`](Decision-Matrix.md) — a
+table a human reads to get a recommendation. That table *is* the
+orchestrator's first increment, not a placeholder for it: no runtime, no
+automation, no new failure mode, and per ChatGPT's own framing, that's a
+feature, not a gap to fill quickly.
+
+**Not built, and not yet specified:** anything that runs this automatically.
+The internal shape, if it's ever built, is:
 
 ```
-CrystalCore
-    │
-    ▼
-AI Orchestrator
- ├── ChatGPT
- ├── Claude
- ├── DeepSeek
- ├── Gemini
- ├── Grok
- └── GitHub
+Task
+  │
+  ▼
+Capability Assessment   (what does this task actually need?)
+  │
+  ▼
+Recommended AI          (today: a lookup in Decision-Matrix.md)
+  │
+  ▼
+Human Review            (the veto stays here — always)
 ```
 
-This is **Vision, not Built** — an architectural pattern under discussion,
-with no design doc, no code, and no ADR yet. It would be a real addition to
-the Lattice's designed-but-unbuilt machinery
-([`docs/architecture/Lattice.md`](../architecture/Lattice.md)) rather than a
-restatement of it: the Lattice's Weave Map registers nodes, but doesn't
-route work between them. If it moves forward, the path is the one this repo
-already documents for structural change: a concrete spec from ChatGPT, an
-ADR recording the decision, then implementation — the same sequence that
-produced the v1.0 architecture itself
+— which is *how* a request gets routed once it reaches the orchestrator,
+distinct from the six-node diagram above showing *what* it routes between.
+This would be a real addition to the Lattice's designed-but-unbuilt
+machinery ([`docs/architecture/Lattice.md`](../architecture/Lattice.md))
+rather than a restatement of it: the Lattice's Weave Map registers nodes,
+but doesn't route work between them. Automating the middle step is a future
+decision, not a current one — it needs its own spec and its own ADR before
+any code, the same sequence that produced the v1.0 architecture itself
 ([`docs/adr/ADR-0001.md`](../adr/ADR-0001.md)).
 
 Until then, routing "which AI for this task" stays a human judgment call,
-made by reading [`AI-Workflow.md`](AI-Workflow.md) and picking the matching
-flow.
+made by reading [`Decision-Matrix.md`](Decision-Matrix.md) and the full
+flows in [`AI-Workflow.md`](AI-Workflow.md).
