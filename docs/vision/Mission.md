@@ -2,7 +2,7 @@
 
 **Collective intelligence with individual sovereignty.**
 
-TeraAustralis Incognita builds two things at once, kept honestly separate:
+TerAustralis Incognita builds two things at once, kept honestly separate:
 
 1. **Working software** — a local-first AI companion (Lumina), a multi-AI
    message bus with truth-labeling enforced in code (the Starline Weaver), a
