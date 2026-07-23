@@ -26,7 +26,7 @@ until a fix has shipped.
 - **No real economics** — credits/CORE anywhere in this repo (including
   `interface/`) are simulated and labeled as such. There is no token, wallet, or
   mainnet integration.
-- **Starline** (`starline/`) is consent-gated at every exchange: an unpaired peer
+- **Consent Transport** (`consent_transport/`) is consent-gated at every exchange: an unpaired peer
   is rejected before consent is even checked; a paired-but-unconsented peer is
   denied; revoking consent takes effect on the very next request. The Noise
   Protocol handshake authenticates peers by pinned public key — connecting to the
@@ -42,5 +42,5 @@ until a fix has shipped.
 ## Scope
 
 This is a creative-protocol and demo repository. Reports about the Starline Weaver,
-the pipeline services, Starline, the published site, or leaked credentials are all
+the pipeline services, Consent Transport, the published site, or leaked credentials are all
 in scope.

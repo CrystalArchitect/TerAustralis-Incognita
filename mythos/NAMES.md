@@ -26,7 +26,7 @@ traveller, or one of the figures that tends them.
 | **Clementine** | the communicator — the one who carries speech between minds and nodes | [`crystal-core/clementine/`](../crystal-core/clementine/) — the hub (`ClementineHub`) of the multi-AI bridge | v0, self-tested |
 | **Starline Weaver** | the map-maker — lays and holds the weave of routes the agents speak across | `StarlineWeaver` in [`clementine/bridge/bus.py`](../crystal-core/clementine/bridge/bus.py) — the round-robin message channel | v0, self-tested |
 | **Truthline Narrator** | the one who names each message true — science, story, or vision — before it is heard | `ClementineHub.validate` in [`clementine/bridge/agents.py`](../crystal-core/clementine/bridge/agents.py) — Belt-Three law, enforced in code | v0, self-tested |
-| **Dreamline Train** | the traveller — what journeys the map, carrying memory from node to node | rides the peer-to-peer transport in [`crystal-core/starline/`](../crystal-core/starline/) — consent-gated, Noise-handshake memory exchange | Running, self-tested |
+| **Dreamline Train** | the traveller — what journeys the map, carrying memory from node to node | rides the peer-to-peer transport in [`crystal-core/consent_transport/`](../crystal-core/consent_transport/) — consent-gated, Noise-handshake memory exchange | Running, self-tested |
 
 ## How they sit together
 
@@ -38,7 +38,7 @@ Clementine is the communicator. Two roles run under her:
   must carry its truth-layer label (science / story / vision) or it is not heard.
 
 What travels that map is the **Dreamline Train** — the traveller — riding the
-Starline rails (the `starline/` peer-to-peer network) to carry memory between
+Starline rails (the `consent_transport/` peer-to-peer network) to carry memory between
 nodes. And **Lumina** is who waits at the edge of it all: the companion a single
 person actually talks to.
 

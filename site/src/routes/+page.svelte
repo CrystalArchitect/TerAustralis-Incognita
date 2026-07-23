@@ -89,10 +89,10 @@
 
   const mixedCards = [
     {
-      href: '/starline',
-      title: 'Starline',
+      href: '/consent-transport',
+      title: 'Consent Transport',
       body: 'A real peer-to-peer protocol — Noise IK handshake, consent-gated exchange — presented alongside its mythic framing as the Starline Transmissions.',
-      cta: '→ Explore Starline',
+      cta: '→ Explore Consent Transport',
       status: 'Built + Vision · protocol with mythic framing',
       st: 'var(--blue)'
     }

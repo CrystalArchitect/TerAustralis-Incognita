@@ -4,7 +4,7 @@ export const USER = '@m13crystalat';
 // and dreamed (vision) — see THE-INCOGNITA-RULE.md. Do not add a third.
 export const STACK = [
   { id: 'lumina', state: 'surveyed', gloss: 'local-first companion', note: 'Sovereign AI. Layered memory, terminal and web UI. Installable tonight.' },
-  { id: 'starline', state: 'surveyed', gloss: 'p2p memory exchange', note: 'Noise IK handshake, consent-gated, revocation on the next request.' },
+  { id: 'consent-transport', state: 'surveyed', gloss: 'p2p memory exchange', note: 'Noise IK handshake, consent-gated, revocation on the next request.' },
   { id: 'codex', state: 'dreamed', gloss: 'chapters I–V', note: 'Aristotle’s southern dream, the deep Songlines, and the reach for the stars.' },
   { id: 'apocryphon', state: 'dreamed', gloss: 'the companion text', note: 'In the beginning was not the Word, but the Vibration.' },
   { id: 'gallery', state: 'dreamed', gloss: '96 plates · made', note: 'Ninety-six original works from the Crystal universe. The plates exist. The world they describe does not.' },

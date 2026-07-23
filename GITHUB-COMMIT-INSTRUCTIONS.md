@@ -27,8 +27,8 @@ python -m compileall -q apps/clementine crystal-core crystalcore node tests _arc
 cd crystal-core
 python -m clementine.bridge.selftest      # Starline Weaver
 python -m services.selftest               # Decode → Ingest → Twin pipeline
-pip install -r requirements-starline.txt
-python -m starline.selftest               # Starline
+pip install -r requirements-consenttransport.txt
+python -m consent_transport.selftest      # Consent Transport
 cd ..
 ```
 
@@ -60,7 +60,7 @@ Enforced by `.gitignore`, but worth knowing (the full list is in
 
 - **Generated output** — `.svelte-kit/`, `site/build/`, `dist/`, `node_modules/`,
   `__pycache__/`
-- **Personal data** — Lumina memory and profiles, Starline identity/keys,
+- **Personal data** — Lumina memory and profiles, Consent Transport identity/keys,
   CrystalBridge audit logs
 - **Secrets** — API keys, `.env` files
 
