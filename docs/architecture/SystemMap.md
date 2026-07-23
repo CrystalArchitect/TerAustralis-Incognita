@@ -31,6 +31,11 @@ and of the intended layout — the layout decision (`ADR-0001`) is real; its
 `src/` half has simply never been pushed here. Entries marked ✱ are in
 that described-but-not-present category.
 
+Where each component belongs, and the staged plan for closing this gap:
+[`Project-Boundaries.md`](../governance/Project-Boundaries.md) ·
+[`Migration-Plan.md`](../governance/Migration-Plan.md)
+([`ADR-0011`](../adr/ADR-0011.md)).
+
 ```
 TeraAustralis-Incognita/
 │

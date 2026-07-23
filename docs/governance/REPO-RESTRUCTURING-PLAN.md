@@ -1,5 +1,12 @@
 # TeraAustralis Repository Restructuring Plan
 
+> **Superseded (2026-07-23).** This plan's `packages/` split was reverted
+> by [`ADR-0010`](../adr/ADR-0010.md) and its layout never landed in this
+> repository's git history; its "Apache-2.0 for everything" premise never
+> matched the actual `LICENSE`. The operative restructuring proposal is
+> now [`Migration-Plan.md`](Migration-Plan.md) under
+> [`ADR-0011`](../adr/ADR-0011.md). Kept as reference.
+
 **Splitting seven products into independent, cleanly-imported packages.**
 
 ---

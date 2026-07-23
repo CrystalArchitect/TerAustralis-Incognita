@@ -19,6 +19,9 @@ code is the source of truth and the story says so.
 > canon"); a dated copy sits in `archive/2026/local-snapshot-2026-07-17/`.
 > Full explanation:
 > [`docs/architecture/SystemMap.md`](docs/architecture/SystemMap.md#where-the-code-actually-lives).
+> Project boundaries and the staged plan for closing this gap:
+> [`Project-Boundaries.md`](docs/governance/Project-Boundaries.md) ·
+> [`Migration-Plan.md`](docs/governance/Migration-Plan.md) ([`ADR-0011`](docs/adr/ADR-0011.md)).
 
 ## What's real vs. what's vision
 

@@ -99,6 +99,14 @@ Dated so this section ages honestly — newest first, and it's fine to trim
 older entries once they're no longer useful context; the full history is
 always in `git log`.
 
+- **2026-07-23** — Adopted the three-project boundary model
+  (`ADR-0011`): TerAustralis Incognita as the umbrella (governance, docs,
+  ADRs, mythos — no main app code), **Crystal Core** owning the engine,
+  runtime, APIs and shared libraries, **Crystal Vision** owning the
+  user-facing application — Lumina wholly within it, Clementine as a
+  logical component inside Crystal Core. Standing charter:
+  `docs/governance/Project-Boundaries.md`; staged, per-stage-approvable
+  proposal: `docs/governance/Migration-Plan.md`. Nothing moved or renamed.
 - **2026-07-23** — Resynchronized the entry-point documentation with this
   repository's measured reality: `src/`, `scripts/`, and `tests/` are now
   marked as described-but-not-in-this-repository everywhere a newcomer
