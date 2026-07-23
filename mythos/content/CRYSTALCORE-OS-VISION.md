@@ -4,9 +4,9 @@
 the story of what a "Crystal Core operating system" would be if the metaphor
 were taken all the way to its end. It is not a description of running software.
 Where you want to know what actually executes, read the code and its specs:
-the companion is [`apps/lumina/`](../../apps/lumina/), the record kernel
-is [`crystal-core/rdp/`](../../crystal-core/rdp/README.md), the consent-gated
-memory exchange is [`crystal-core/starline/`](../../crystal-core/starline/), and
+the companion is [`src/apps/lumina/`](../../src/apps/lumina/), the record kernel
+is [`src/crystal-core/rdp/`](../../src/crystal-core/rdp/README.md), the consent-gated
+memory exchange is [`src/crystal-core/starline/`](../../src/crystal-core/starline/), and
 the playable terminal is [`../CRYSTALCORE-OS.md`](../CRYSTALCORE-OS.md). This
 document is what those things are *for* — not a claim about what they are.
 

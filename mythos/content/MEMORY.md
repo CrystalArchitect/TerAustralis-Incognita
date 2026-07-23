@@ -91,7 +91,7 @@ Stores insights and patterns Lumina has noticed over time.
 
 ## Appendix — How Memory Is Actually Implemented Today
 
-This describes the running code in `crystalcore/` (v8), so the docs never drift from reality.
+This describes the running code in `src/apps/lumina/crystalcore/` (v8), so the docs never drift from reality.
 
 ### Where memories live
 
@@ -130,6 +130,6 @@ Think of vector embeddings as GPS coordinates for meaning: a sentence becomes a 
 
 ---
 
-*See also: [LUMINA.md](LUMINA.md) · [MILESTONES.md](MILESTONES.md) · [CRYSTALMATRIX.md](CRYSTALMATRIX.md) · [README](README.md)*
+*See also: [LUMINA.md](LUMINA.md) · [MILESTONES.md](MILESTONES.md) · [CRYSTALMATRIX.md](CRYSTALMATRIX.md) · [README](../README.md)*
 
 *Part of The Crystal Vision · TerAustralis Incognita · Non Solus — Not Alone*

@@ -1,0 +1,37 @@
+# Architecture Decision Records
+
+Why the big calls were made, one file per decision. The process — when a
+decision needs one, how one is accepted — is in
+[`docs/governance/Decision-Records.md`](../governance/Decision-Records.md).
+
+## Index
+
+| ADR | Title | Status |
+|---|---|---|
+| [ADR-0001](ADR-0001.md) | Adopt the CrystalCore OS v1.0 repository architecture | Accepted |
+| [ADR-0002](ADR-0002.md) | Content areas: the mythos stays a top-level peer of docs and src | Accepted |
+| [ADR-0003](ADR-0003.md) | Move code into src/ as a uniform shift; keep runtime-coupled files with their code | Accepted |
+
+## Template
+
+```markdown
+# ADR-NNNN: <decision in one line>
+
+**Status:** Proposed | Accepted | Superseded by ADR-NNNN
+**Date:** YYYY-MM-DD
+
+## Context
+
+The situation that forced a decision, with the constraints that mattered.
+
+## Decision
+
+What was decided, concretely — paths, names, mechanisms.
+
+## Consequences
+
+What gets better, what gets worse, what to watch for.
+```
+
+Numbers are permanent: never renumber, never delete. A reversed decision
+gets a new ADR that supersedes the old one.
