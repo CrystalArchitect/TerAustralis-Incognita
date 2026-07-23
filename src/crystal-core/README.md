@@ -4,7 +4,7 @@ Creative vision lattice and protocol pack: **Seven Sisters Songline**, water car
 
 **🔭 Crystal universe — which repo is this?**  
 This is **Crystal Core** — the protocol pack: Seven Sisters Songline, Starline Weaver (multi-AI), Decode→Ingest→Twin pipeline, specs.  
-Siblings: **the-crystal-vision** = The Crystal Vision (codex site + Lumina sovereign companion app) · **crystal-vision** = Crystal Vision Interface (static demo shell) · **teraaustralis-incognita** = TeraAustralis Incognita (narrative + CrystalBridge MCP consent gate).  
+Siblings: **the-crystal-vision** = The Crystal Vision (codex site + Lumina sovereign companion app) · **crystal-vision** = Crystal Vision Interface (static demo shell) · **teraaustralis-incognita** = TerAustralis Incognita (narrative + CrystalBridge MCP consent gate).  
 **License:** Apache-2.0 — see `LICENSE`
 
 **Author:** Crystal Arena-Turner (@M13CrystalAT) · TerAustralis Incognita  

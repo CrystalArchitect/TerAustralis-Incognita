@@ -92,6 +92,13 @@ Dated so this section ages honestly — newest first, and it's fine to trim
 older entries once they're no longer useful context; the full history is
 always in `git log`.
 
+- **2026-07-23** — Corrected the project's name throughout the repository
+  from "TeraAustralis Incognita" (drift, introduced during the v1.0 reorg)
+  to **TerAustralis Incognita**, matching the maintainer's registered ABN
+  trading name; renamed `mythos/teraaustralis/` to `mythos/teraustralis/`
+  to match. `docs/adr/ADR-0007.md` has the full reasoning and the list of
+  what was deliberately left alone (`archive/`, the historical ADRs, past
+  changelog entries, and the still-unrenamed GitHub repository URL).
 - **2026-07-23** — Shipped v0.2, the Architecture Specification Release:
   `docs/vision/CrystalCore.md` rewritten as the canonical naming taxonomy
   (`ADR-0004` — locks Framework/Protocol/CrystalBridge/OS, bans future

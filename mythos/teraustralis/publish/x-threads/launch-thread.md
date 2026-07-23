@@ -1,6 +1,6 @@
 # X thread skeleton — Launch the vision
 
-1/ **TeraAustralis Incognita**  
+1/ **TerAustralis Incognita**  
 The Unknown Southern Land isn't empty. It's awakening as humanity's southern launchpad.
 
 2/ Red dust is Mars school.  

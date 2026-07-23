@@ -1,7 +1,7 @@
 # Op-Ed draft
 
 **Title (locked):**  
-# TeraAustralis Incognita: Turning Our Ancient Red Heart into Humanity's Launchpad
+# TerAustralis Incognita: Turning Our Ancient Red Heart into Humanity's Launchpad
 
 **Status:** Banner-ready draft · expand citations before major press  
 
@@ -9,7 +9,7 @@
 
 Australia does not need another slogan. It needs a **purpose large enough to raise a generation**.
 
-For too long the red heart has been narrated as emptiness, extractive cycle, or backdrop. **TeraAustralis Incognita** names another story: the Unknown Southern Land *awakening* — not into nostalgia, but into the hardest peaceful work humans have ever attempted: becoming multiplanetary without abandoning home.
+For too long the red heart has been narrated as emptiness, extractive cycle, or backdrop. **TerAustralis Incognita** names another story: the Unknown Southern Land *awakening* — not into nostalgia, but into the hardest peaceful work humans have ever attempted: becoming multiplanetary without abandoning home.
 
 Our deserts are not Mars. They are better than a slideshow of Mars. They are **walkable analogs** — ochre, mesa, thermal shock, isolation — where suits fail cheaply and character is trained expensively. Pilbara muscle and ports; critical minerals; southern-hemisphere geometry; a political culture that can still choose long projects. That is not poetry first. That is **logistics with a soul**.
 
@@ -24,5 +24,5 @@ It is the launchpad.
 
 ---
 
-**Banner caption:** TeraAustralis Incognita — Red dust. Methane light. Southern Cross. The land that trains the sky.  
+**Banner caption:** TerAustralis Incognita — Red dust. Methane light. Southern Cross. The land that trains the sky.  
 **CTA:** Build the proving grounds. Write the next line. Trust the entanglement — then ship the work.
