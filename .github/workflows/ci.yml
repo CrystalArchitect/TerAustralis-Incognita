@@ -18,26 +18,55 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
+      - name: Detect local-tree paths
+        id: detect
+        run: |
+          if [ -d src ]; then
+            echo "src_present=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "src_present=false" >> "$GITHUB_OUTPUT"
+            echo "::notice title=src/ not in this repository::src/ (and the self-tests under it) live only in the maintainer's local tree, not in git history on any branch — see docs/architecture/SystemMap.md, 'Where the code actually lives'. Steps that depend on src/ are skipped, not failed."
+          fi
+          if [ -d tests ]; then
+            echo "tests_present=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "tests_present=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Syntax-check Python sources
-        run: python -m compileall -q src tests archive
+        run: |
+          targets="archive"
+          [ "${{ steps.detect.outputs.src_present }}" = "true" ] && targets="$targets src"
+          [ "${{ steps.detect.outputs.tests_present }}" = "true" ] && targets="$targets tests"
+          python -m compileall -q $targets
+
       - name: Starline Weaver self-test
+        if: steps.detect.outputs.src_present == 'true'
         working-directory: src/crystal-core
         run: python -m clementine.bridge.selftest
       - name: Pipeline self-test
+        if: steps.detect.outputs.src_present == 'true'
         working-directory: src/crystal-core
         run: python -m services.selftest
       - name: Install Starline dependencies
+        if: steps.detect.outputs.src_present == 'true'
         working-directory: src/crystal-core
         run: pip install -r requirements-consenttransport.txt
       - name: Starline self-test
+        if: steps.detect.outputs.src_present == 'true'
         working-directory: src/crystal-core
         run: python -m consent_transport.selftest
       - name: RDP self-test
+        if: steps.detect.outputs.src_present == 'true'
         working-directory: src/crystal-core
         run: python -m rdp.selftest
       - name: Lumina dependencies
+        if: steps.detect.outputs.src_present == 'true'
         run: pip install -r src/apps/lumina/requirements.txt pytest
       - name: Lumina core tests
+        if: steps.detect.outputs.src_present == 'true'
         run: python -m pytest src/apps/lumina/tests -q
       - name: Mesh stub tests
+        if: steps.detect.outputs.tests_present == 'true'
         run: python -m pytest tests -q
