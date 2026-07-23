@@ -1,0 +1,15 @@
+LICENSE.md
+README.md
+pyproject.toml
+teraaustralis/rdp/__init__.py
+teraaustralis/rdp/adapters.py
+teraaustralis/rdp/canonical.py
+teraaustralis/rdp/kernel.py
+teraaustralis/rdp/record.py
+teraaustralis/rdp/run.py
+teraaustralis/rdp/selftest.py
+teraaustralis_rdp.egg-info/PKG-INFO
+teraaustralis_rdp.egg-info/SOURCES.txt
+teraaustralis_rdp.egg-info/dependency_links.txt
+teraaustralis_rdp.egg-info/requires.txt
+teraaustralis_rdp.egg-info/top_level.txt

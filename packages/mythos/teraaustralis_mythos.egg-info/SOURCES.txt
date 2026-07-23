@@ -1,0 +1,9 @@
+LICENSE.md
+README.md
+pyproject.toml
+teraaustralis/mythos/__init__.py
+teraaustralis_mythos.egg-info/PKG-INFO
+teraaustralis_mythos.egg-info/SOURCES.txt
+teraaustralis_mythos.egg-info/dependency_links.txt
+teraaustralis_mythos.egg-info/requires.txt
+teraaustralis_mythos.egg-info/top_level.txt
