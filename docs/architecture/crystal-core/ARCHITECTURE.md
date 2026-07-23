@@ -15,7 +15,7 @@
 | **CrystalBridge** (guest-AI gate) | `src/crystalcore/` | MCP server: fail-closed ConsentGate (approval · permission · scope · provenance), append-only audit; guests claude / grok / cursor with scoped tools `status, recall, teach, message` |
 | **Starline Weaver** (multi-AI conversation) | `src/crystal-core/clementine/bridge/` | In-process + networked HTTP bus; every message labeled science/story/vision; red-button halt; adapters for Claude/GPT/Grok |
 | **Songline pack** (protocol + ethics) | `research/seven-sisters/` | Seven paths, Belt-Three law, water briefs, landing page (GitHub Pages, live) |
-| **TerAustralis Incognita** (narrative) | `mythos/teraaustralis/` | Manifesto, publish threads, strategy, Lattice memory deltas |
+| **TerAustralis Incognita** (narrative) | `mythos/teraustralis/` | Manifesto, publish threads, strategy, Lattice memory deltas |
 | **Decode/Ingest/Twin pipeline** | `src/crystal-core/services/` | **This scaffold** — see §2 |
 
 **One sentence:** A sovereign companion (Lumina) with her own memory, a consent

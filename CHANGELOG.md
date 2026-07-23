@@ -4,6 +4,67 @@ Notable changes to this repository, newest first. Day-to-day status lives
 in [`docs/governance/Roadmap.md`](docs/governance/Roadmap.md); this file
 records the milestones.
 
+## 2026-07-23 — Name correction: TerAustralis Incognita
+
+The project's name was being spelled "TeraAustralis Incognita" (two a's)
+across most of the repository, but the maintainer's registered ABN trading
+name is **TerAustralis Incognita** (one 'a') — confirmed by `README.md`'s
+title, `NOTICE`, and every ABN reference under `archive/`, which already
+agreed with the correct spelling. The double-a spelling was drift introduced
+during the v1.0 reorganization, not a deliberate choice. Full reasoning:
+[`docs/adr/ADR-0007.md`](docs/adr/ADR-0007.md).
+
+### Changed
+- `mythos/teraaustralis/` renamed to `mythos/teraustralis/` (history
+  preserved via `git mv`); every internal path reference updated to match.
+- Prose references to the project name corrected throughout live docs:
+  `README.md`, `NOTICE`, `CONTRIBUTING.md`, `AGENTS.md`,
+  `docs/governance/Constitution.md` (§1's locked name, corrected via its own
+  §8 amendment process — see that file's amendment log), `docs/vision/Mission.md`,
+  `docs/adr/ADR-0006.md`, and the mythos content that moved with the
+  directory.
+- `docs/adr/ADR-0001.md`, `docs/adr/ADR-0002.md`, and this file's own older
+  entries are left unedited as the historical record of what was actually
+  done at the time; `ADR-0007` supersedes the spelling detail without
+  rewriting them.
+- GitHub repository URLs and `git clone` instructions are unchanged — they
+  still correctly point at `CrystalArchitect/TeraAustralis-Incognita`, the
+  actual (unrenamed) repository name. Renaming the repository itself is
+  flagged in `ADR-0007` as a separate, maintainer-only decision.
+
+## 2026-07-23 — CrystalCore OS v0.2: Architecture Specification Release
+
+Following review of v0.1, redefined v0.2 from "build the Engine" to
+"clarify the architecture before implementing it" — a documentation-only
+release, no runtime, by design. Rationale and the full decisions:
+[`docs/adr/ADR-0004.md`](docs/adr/ADR-0004.md) (naming) and
+[`docs/adr/ADR-0005.md`](docs/adr/ADR-0005.md) (the orchestrator concept).
+
+### Changed
+- `docs/vision/CrystalCore.md` rewritten from a five-row disambiguation
+  table into the canonical taxonomy: CrystalCore Framework, CrystalCore
+  Protocol, CrystalBridge, and CrystalCore OS, with the pre-existing
+  mythos-terminal/platform name collision documented honestly rather than
+  silently resolved. Any future runtime component is barred from becoming a
+  fifth or sixth "CrystalCore" — it gets a name that describes its role.
+- `docs/architecture/CrystalCore.md`'s section headers aligned to the new
+  canonical names (Framework / Protocol pack / CrystalBridge).
+- `docs/ai/AI-Architecture.md`'s orchestrator section: the previously
+  separate "AI Router" idea folded into one name, "AI Orchestrator,"
+  defined as recommend-then-human-decides (Task → Capability Assessment →
+  Recommended AI → Human Review) rather than autonomous dispatch.
+- `docs/governance/Roadmap.md`'s platform roadmap renumbered: v0.2 is now
+  this specification release (delivered); the actual Engine build moves to
+  v0.3, gated on the specification reaching implementation-level detail;
+  the former v0.3 (Living Archive) becomes v0.4.
+
+### Added
+- `docs/ai/Decision-Matrix.md` — a task-type → recommended-AI →
+  human-review-level table. This is the AI Orchestrator concept's first
+  real increment, not a placeholder: no runtime, no automation, no new
+  failure mode.
+- `docs/adr/ADR-0004.md` and `ADR-0005.md`.
+
 ## 2026-07-23 — CrystalCore OS v1.0 repository architecture
 
 The repository adopted the CrystalCore OS v1.0 layout (platform milestone

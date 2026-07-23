@@ -58,12 +58,21 @@ pretend it was measured.
 
 This repo is dual-licensed:
 
-- **Code** (everything under `src/`, plus `tests/` and `scripts/`):
-  **Apache-2.0** — see `LICENSE`.
+- **Code & Specifications** (everything under `src/`, `docs/`, plus `tests/` and `scripts/`):
+  **CC BY-NC-ND 4.0** — see `LICENSE`. Non-commercial use only; attribution required. 
+  Commercial licensing available by negotiation with the copyright holder.
 - **Content** (`mythos/` — the Crystal universe canon, the TeraAustralis
   lore, the art): **CC BY-NC-ND 4.0** — see `LICENSE-CONTENT.md`. You may
   share it with credit; you may **not** remix it or use it commercially.
   Contributions to the mythos are accepted under the same terms.
+
+**Note:** Architectural patterns referenced from MemClaw are credited under
+Apache 2.0 terms (see `docs/ATTRIBUTIONS.md`). The *application* of those
+patterns in CrystalCore OS is CC BY-NC-ND 4.0.
+
+The reasoning behind this licensing — and the project's wider IP principles
+(stewardship, attribution, identity, commercial future) — is recorded in
+[`docs/ATTRIBUTIONS.md`](docs/ATTRIBUTIONS.md).
 
 ## Map of the repo
 
@@ -93,6 +102,42 @@ AI tools are first-class contributors here, under rules:
 The short version — every PR names the AI tools that helped produce it,
 AI claims follow the same evidence rule as everyone else's, and the
 maintainer keeps the veto.
+
+## Attribution & intellectual property
+
+### Cite external sources
+
+When your contribution draws on external work (papers, articles, open-source projects, documented systems), cite the source:
+
+1. **In your PR description:** Link to the source and explain what inspired your design.
+2. **In the code:** Add a comment with a link to the source or paper.
+3. **In this repo:** If the contribution is significant, propose an entry in [`docs/ATTRIBUTIONS.md`](docs/ATTRIBUTIONS.md).
+
+Example:
+```python
+# Registry pattern inspired by MemClaw's multi-agent governance
+# See: https://github.com/caura-ai/caura-memclaw (Apache 2.0)
+class Registry:
+    ...
+```
+
+### Licensing & redistribution
+
+CrystalCore OS is CC BY-NC-ND 4.0 (non-commercial). If you use or redistribute this work:
+
+1. **Non-commercial use only.** CrystalCore OS code and specifications are for non-commercial use.
+   Commercial use requires explicit permission from the copyright holder.
+2. **Retain attribution.** ATTRIBUTIONS.md and copyright notices must stay in place.
+3. **Do not modify and redistribute.** CC BY-NC-ND prohibits derivative redistribution; you may only
+   share unmodified versions.
+4. **Link back.** In your documentation or credits, link to the original CrystalCore OS repository.
+5. **Never rebrand.** You cannot remove attribution or falsely claim original authorship.
+
+**Commercial licensing:** If you want to use CrystalCore OS commercially, commercialize derivatives,
+or commercialize products built on it, contact the copyright holder for a commercial license agreement.
+
+**MemClaw attribution:** The architectural patterns referenced from MemClaw remain under Apache 2.0
+(their license). Acknowledge MemClaw in any work you create; see [`docs/ATTRIBUTIONS.md`](docs/ATTRIBUTIONS.md).
 
 ## The Covenant applies to code too
 

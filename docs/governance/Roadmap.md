@@ -67,9 +67,20 @@ is a plan, not a promise:
 - **v0.1 — Repository foundation** *(delivered 2026-07-23)*: the v1.0
   directory architecture, documentation tree, governance docs, AI
   collaboration docs, and GitHub configuration.
-- **v0.2 — Engine layer** *(not started)*: CrystalCore Engine, plugin
-  system, configuration, logging, AI orchestration layer.
-- **v0.3 — Living Archive** *(not started)*: knowledge graph, search,
+- **v0.2 — Architecture Specification Release** *(delivered 2026-07-23)*:
+  redefined from "build the Engine" to "clarify the architecture before
+  implementing it," per review of v0.1
+  ([`ADR-0004`](../adr/ADR-0004.md), [`ADR-0005`](../adr/ADR-0005.md)). No
+  runtime shipped by design — the deliverables are the CrystalCore naming
+  taxonomy, the documented relationships between its built components, the
+  AI decision matrix, and the AI Orchestrator concept.
+- **v0.3 — Engine layer** *(not started)*: the runtime CrystalCore Engine,
+  plugin system, configuration, logging — implementing what v0.2 specified.
+  Blocked on that specification being used as a real implementation
+  blueprint (module interfaces, data flow, testing strategy — the level of
+  detail [`ADR-0001`](../adr/ADR-0001.md) had before v0.1 was implemented),
+  not just the naming and concept-level decisions v0.2 actually shipped.
+- **v0.4 — Living Archive** *(not started)*: knowledge graph, search,
   cross-referencing, optional Notion synchronization.
 - **v1.0 — Stable platform** *(target)*: stable architecture, automated
   testing across the platform, complete documentation, production-ready
@@ -81,6 +92,21 @@ Dated so this section ages honestly — newest first, and it's fine to trim
 older entries once they're no longer useful context; the full history is
 always in `git log`.
 
+- **2026-07-23** — Corrected the project's name throughout the repository
+  from "TeraAustralis Incognita" (drift, introduced during the v1.0 reorg)
+  to **TerAustralis Incognita**, matching the maintainer's registered ABN
+  trading name; renamed `mythos/teraaustralis/` to `mythos/teraustralis/`
+  to match. `docs/adr/ADR-0007.md` has the full reasoning and the list of
+  what was deliberately left alone (`archive/`, the historical ADRs, past
+  changelog entries, and the still-unrenamed GitHub repository URL).
+- **2026-07-23** — Shipped v0.2, the Architecture Specification Release:
+  `docs/vision/CrystalCore.md` rewritten as the canonical naming taxonomy
+  (`ADR-0004` — locks Framework/Protocol/CrystalBridge/OS, bans future
+  components from becoming a fifth "CrystalCore"); `docs/ai/Decision-Matrix.md`
+  added as a task-type → recommended-AI table; the AI Orchestrator concept
+  consolidated with the previously separate "AI Router" idea under one name
+  and one shape — recommend, then a human decides (`ADR-0005`). No runtime
+  shipped; that's the point of doing this as its own release before v0.3.
 - **2026-07-23** — Reorganized the repository into the CrystalCore OS v1.0
   architecture: code under `src/`, documentation under `docs/`
   (vision · architecture · governance · ai · agents · guides · adr),
