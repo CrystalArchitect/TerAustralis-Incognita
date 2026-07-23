@@ -7,7 +7,9 @@ Contributions are welcome; here's what to know before you open a PR.
 Before opening a PR, also read [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) —
 short, and specific to how this project actually works. For the exact
 clone / check / commit / push commands, see
-[`GITHUB-COMMIT-INSTRUCTIONS.md`](GITHUB-COMMIT-INSTRUCTIONS.md).
+[`docs/guides/GitHub-Commit-Instructions.md`](docs/guides/GitHub-Commit-Instructions.md);
+the full review process is
+[`docs/governance/Review-Process.md`](docs/governance/Review-Process.md).
 
 ## Ground rules
 
@@ -23,12 +25,12 @@ clone / check / commit / push commands, see
    don't work around it.
 4. **No secrets.** API keys live in environment variables only. `.env`
    files are ignored and stay that way.
-5. **CI must pass.** Every PR runs a Python syntax check and the
+5. **CI must pass.** Every PR runs a Python syntax check, the
    crystal-core self-tests (`clementine.bridge.selftest`,
-   `services.selftest`, `rdp.selftest`). Run them locally first:
+   `services.selftest`, `starline.selftest`, `rdp.selftest`), and the
+   pytest suites. Run them locally first:
    ```bash
-   python -m compileall -q apps/clementine crystal-core crystalcore node tests
-   cd crystal-core && python -m clementine.bridge.selftest && python -m services.selftest && python -m rdp.selftest
+   scripts/maintenance/check.sh
    ```
 
 ## The Belt-Three law (labels)
@@ -47,7 +49,8 @@ appear in Vision-layer content, it is storytelling only — no affiliation or
 endorsement implied.
 
 The *why* behind these labels — and the rest of the project's honesty
-discipline — is written out in [`THE-INCOGNITA-RULE.md`](THE-INCOGNITA-RULE.md):
+discipline — is written out in
+[`The-Incognita-Rule.md`](docs/governance/The-Incognita-Rule.md):
 mark which lines are dreamed and which are surveyed, and never let a dreamed line
 pretend it was measured.
 
@@ -55,29 +58,41 @@ pretend it was measured.
 
 This repo is dual-licensed:
 
-- **Code** (apps, services, packages, crystalcore, crystal-core, node,
-  sdk, tests): **Apache-2.0** — see `LICENSE`.
-- **Content** (TeraAustralis lore, `mythos/`, CrystalVision suite,
-  universe/brand docs, imagery): **CC BY-NC-ND 4.0** — see
-  `LICENSE-CONTENT.md`. You may share it with credit; you may **not**
-  remix it or use it commercially. Contributions to the mythos are
-  accepted under the same terms.
+- **Code** (everything under `src/`, plus `tests/` and `scripts/`):
+  **Apache-2.0** — see `LICENSE`.
+- **Content** (`mythos/` — the Crystal universe canon, the TeraAustralis
+  lore, the art): **CC BY-NC-ND 4.0** — see `LICENSE-CONTENT.md`. You may
+  share it with credit; you may **not** remix it or use it commercially.
+  Contributions to the mythos are accepted under the same terms.
 
 ## Map of the repo
 
+The full map is [`docs/architecture/SystemMap.md`](docs/architecture/SystemMap.md);
+the short version:
+
 | Path | What it is |
 |------|-----------|
-| `apps/clementine/` | The sovereign companion (CrystalCore framework, Flask API, Svelte webapp) |
-| `apps/voicebox/` | Local MCP text-to-speech server |
-| `apps/crystal-interface/`, `apps/vision-web/` | Demo shells (simulated data, Authority HOLD) |
-| `crystal-core/` | Protocol pack — Starline Weaver, Decode→Ingest→Twin pipeline, specs |
-| `crystalcore/` | CrystalBridge MCP consent gate (fail-closed) |
+| `src/apps/lumina/` | The sovereign companion (CrystalCore framework, Flask API, Svelte webapp) |
+| `src/apps/voicebox/` | Local MCP text-to-speech server |
+| `src/apps/crystal-interface/`, `src/apps/vision-web/` | Demo shells (simulated data, Authority HOLD) |
+| `src/crystal-core/` | Protocol pack — Starline Weaver, Decode→Ingest→Twin pipeline, Starline, RDP |
+| `src/crystalcore/` | CrystalBridge MCP consent gate (fail-closed) |
+| `src/site/` | SvelteKit site for teraustralis.com.au |
+| `docs/` | Documentation — architecture, governance, AI collaboration, guides, ADRs |
+| `research/` | Exploratory work — not production |
 | `mythos/` | The canon — Codex, Apocryphon, Covenant, the Book of the Sovereign Key, art |
-| `site/` | SvelteKit site for teraustralis.com.au |
-| `_archive/` | Legacy copies kept for provenance — do not build on these |
+| `archive/` | Legacy copies kept for provenance — do not build on these |
 
-See [`ROADMAP.md`](ROADMAP.md) for what's built, in progress, or not yet
-started across these paths.
+See [`Roadmap.md`](docs/governance/Roadmap.md) for what's built, in
+progress, or not yet started across these paths.
+
+## AI-assisted contributions
+
+AI tools are first-class contributors here, under rules:
+[`docs/governance/AI-Governance.md`](docs/governance/AI-Governance.md).
+The short version — every PR names the AI tools that helped produce it,
+AI claims follow the same evidence rule as everyone else's, and the
+maintainer keeps the veto.
 
 ## The Covenant applies to code too
 
