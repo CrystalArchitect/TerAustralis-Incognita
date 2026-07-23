@@ -81,11 +81,12 @@ The repository follows the **CrystalCore OS v1.0 architecture** (adopted
 | `mythos/` | The Crystal universe canon — Codex, Apocryphon, the Book of the Sovereign Key, the Starline Transmissions, 88 pieces of art, the outer-world lore (`teraustralis/`) |
 | `archive/` | Superseded code kept for provenance — not maintained, do not build on it |
 
-**Why `mythos/` sits at the top level instead of under `docs/`:** it's under
-a different license than everything else in the tree — CC BY-NC-ND 4.0
-(`LICENSE-CONTENT.md`) versus the code's Apache-2.0 (`LICENSE`) — and folding
-canon into `docs/` would blur that boundary. Keeping it a peer of `src/` and
-`docs/` makes the license split visible from the directory listing alone,
+**Why `mythos/` sits at the top level instead of under `docs/`:** code and
+content are administratively separate license areas — `LICENSE-CONTENT.md`
+for `mythos/`, `LICENSE` for everything else — even though both currently
+carry the same CC BY-NC-ND 4.0 terms ([`ADR-0008`](docs/adr/ADR-0008.md)).
+Folding canon into `docs/` would blur that boundary. Keeping it a peer of
+`src/` and `docs/` makes the split visible from the directory listing alone,
 with no need to open a file to find out which rule applies. Full reasoning:
 [`ADR-0002`](docs/adr/ADR-0002.md).
 
@@ -134,9 +135,11 @@ Useful places to start, roughly in order of how load-bearing they are:
   [`src/crystal-core/SECURITY.md`](src/crystal-core/SECURITY.md) for the protocol
   pack's specific guarantees (Starline Weaver, pipeline quarantine, Starline's
   consent gating).
-- **License:** code is Apache-2.0 (`LICENSE`); mythos content — lore, art,
-  the Codex, the Apocryphon — is CC BY-NC-ND 4.0 (`LICENSE-CONTENT.md`):
-  share with credit, no commercial use, no derivatives.
+- **License:** code (`LICENSE`) and mythos content — lore, art, the Codex,
+  the Apocryphon (`LICENSE-CONTENT.md`) — are both CC BY-NC-ND 4.0: share
+  with credit, no commercial use, no derivatives. Commercial licensing for
+  code is available by negotiation with the copyright holder — see
+  [`docs/ATTRIBUTIONS.md`](docs/ATTRIBUTIONS.md).
 - **Roadmap:** [`Roadmap.md`](docs/governance/Roadmap.md) — what's built,
   what's in progress, and what hasn't started yet.
 - **Changelog:** [`CHANGELOG.md`](CHANGELOG.md) — repository milestones.

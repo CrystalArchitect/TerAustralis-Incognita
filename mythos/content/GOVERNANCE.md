@@ -26,7 +26,7 @@ A capability moves up the ladder only when the code moves first. Documentation i
 
 This project does not claim, and its documents must never imply:
 
-- Production-readiness or fitness guarantees — the code ships under Apache 2.0, as-is
+- Production-readiness or fitness guarantees — the code ships under CC BY-NC-ND 4.0, as-is
 - Safety or security guarantees against all adversaries
 - Clinical, therapeutic, or diagnostic authority of any kind
 - AGI, or that the companion's warmth is more than an architecture faithfully run

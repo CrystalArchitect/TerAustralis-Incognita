@@ -21,4 +21,8 @@ Full legal text: https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode
 ---
 
 **Note**: The code itself (services, packages, node, sdk, apps, crystalcore,
-scripts, tests) remains under Apache 2.0 — see `LICENSE`.
+scripts, tests) is licensed separately under CC BY-NC-ND 4.0 — see `LICENSE`.
+This file and `LICENSE` currently carry the same terms; they're kept as
+separate files because code and content are administratively distinct areas
+that may diverge again in the future (see
+[`ADR-0002`](docs/adr/ADR-0002.md), [`ADR-0008`](docs/adr/ADR-0008.md)).
