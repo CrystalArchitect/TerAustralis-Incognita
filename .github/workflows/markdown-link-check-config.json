@@ -19,6 +19,10 @@
     {
       "comment": "PyPI's account-tokens page, referenced only from the three superseded packages/-era publishing guides (docs/PUBLISHING.md, docs/FIRST_RELEASE.md, docs/RESTRUCTURING_COMPLETE.md) - moot until a real PyPI publish is attempted.",
       "pattern": "^https://pypi\\.org/manage/account/tokens/"
+    },
+    {
+      "comment": "Links into the TerAustralis-Incognita-Code repository, which is private: GitHub returns 404 to the anonymous requests this checker makes, even for files that exist (verified 2026-07-24 - core/crystal-core/SECURITY.md is present on that repo's main via git, yet the blob URL 404s unauthenticated). Cross-repo targets are verified by git/PR review instead; re-enable if that repo ever goes public.",
+      "pattern": "^https://github\\.com/CrystalArchitect/TerAustralis-Incognita-Code"
     }
   ],
   "retryOn429": true,
