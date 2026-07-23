@@ -8,7 +8,9 @@ that bind all of it are in
 [`docs/governance/AI-Governance.md`](../governance/AI-Governance.md).
 
 Each tool has a profile in this folder; each agent has operating
-instructions in [`docs/agents/`](../agents/).
+instructions in [`docs/agents/`](../agents/). For the assembled picture —
+all six roles in one table, how they connect, and what's proposed but not
+built — start with [`AI-Architecture.md`](AI-Architecture.md).
 
 ## The flows
 
