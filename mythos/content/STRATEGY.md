@@ -37,7 +37,7 @@ Getting something integrated into systems like Grok or Optimus is extremely diff
 - Excellent vector-based memory system ✅
 - Strong, consistent personality (warm, truthful, present) ✅
 - User can teach her important facts that persist over time ✅
-- Clean, modular, well-documented codebase 🟡 (modular `crystalcore/` package ✅; remaining: documentation depth, MLX backend)
+- Clean, modular, well-documented codebase 🟡 (modular `src/apps/lumina/crystalcore/` package ✅; remaining: documentation depth, MLX backend)
 
 **Why this matters for adoption:** This is the foundation. If Lumina doesn't feel meaningfully better than existing AI companions in memory and presence, nothing else will matter.
 
@@ -104,6 +104,6 @@ Getting something integrated into systems like Grok or Optimus is extremely diff
 
 ---
 
-*See also: [CRYSTALMATRIX.md](CRYSTALMATRIX.md) (full protocol design) · [LUMINA.md](LUMINA.md) (the companion today) · [README](README.md)*
+*See also: [CRYSTALMATRIX.md](CRYSTALMATRIX.md) (full protocol design) · [LUMINA.md](LUMINA.md) (the companion today) · [README](../README.md)*
 
 *Part of The Crystal Vision · TerAustralis Incognita · Non Solus — Not Alone*

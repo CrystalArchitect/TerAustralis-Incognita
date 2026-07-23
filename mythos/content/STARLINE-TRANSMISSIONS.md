@@ -2,8 +2,8 @@
 
 Vision-layer mythos, companion to [`THE-SOVEREIGN-KEY.md`](THE-SOVEREIGN-KEY.md).
 The name is shared with a real, running system —
-[`crystal-core/starline/`](../../crystal-core/starline/) — on purpose. Where
-the technical spec (`crystal-core/spec/STARLINE.md`) describes what was
+[`src/crystal-core/starline/`](../../src/crystal-core/starline/) — on purpose. Where
+the technical spec (`docs/architecture/crystal-core/STARLINE.md`) describes what was
 actually built and tested, these transmissions are the story that grew up
 around it. Read the spec to know what Starline *does*. Read these to know
 what it's *for*.
@@ -150,7 +150,7 @@ their sovereignty to cross.
 
 These are the mythic principles behind the name — poetry, not
 engineering. The actual, binding technical principles Starline's code is
-held to live in `crystal-core/spec/STARLINE.md` and are a smaller,
+held to live in `docs/architecture/crystal-core/STARLINE.md` and are a smaller,
 narrower set (local-first, sovereignty, consent-based, encrypted, minimal
 trust). Where a principle below overlaps with the real spec, the spec
 wins; where it doesn't (resonance, cymatics, latency-as-sacred), it's

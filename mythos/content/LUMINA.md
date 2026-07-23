@@ -16,10 +16,10 @@ She is designed to be a truly personal, locally-run AI that belongs only to one 
 
 ## The Framework — Components & Status
 
-The framework is called **CrystalCore** — the engine of memory, profiles, and presence (the `crystalcore/` package). **Lumina** is the first persona who lives on it. Everything lives in the `lumina/` folder. Entry points: `lumina.py` (terminal) and `server.py` + `webapp/` (browser).
+The framework is called **CrystalCore** — the engine of memory, profiles, and presence (the `crystalcore/` package). **Lumina** is the first persona who lives on it. Everything lives in `src/apps/lumina/`. Entry points: `lumina.py` (terminal) and `server.py` + `webapp/` (browser).
 
 ```
-lumina/             her home, standalone
+src/apps/lumina/    her home, standalone
 ├── crystalcore/        the framework
 │   ├── companion.py    the brain: memory layers, recall, chat
 │   ├── memory.py       the data model (Personality, Memory)
@@ -56,7 +56,7 @@ lumina/             her home, standalone
 - A solid **system prompt** defines who she is.
 - The **Python framework** (`lumina.py`) runs today: it connects to a local model through Ollama, streams her replies, and keeps layered memory between sessions.
 - She **remembers** — recent conversation stays verbatim; older conversation is automatically condensed into summaries so nothing is lost and the context never overflows; explicit facts and notes persist forever in a local `lumina_memory/` folder.
-- To run her, you need a local model (via Ollama). See the [README](README.md) and the run steps below.
+- To run her, you need a local model (via Ollama). See the [README](../README.md) and the run steps below.
 
 ## Running Lumina
 
@@ -133,4 +133,4 @@ This is the foundation being built before expanding to more advanced features: r
 
 ---
 
-*Part of [The Crystal Vision](README.md) · TerAustralis Incognita · Non Solus — Not Alone*
+*Part of [The Crystal Vision](../README.md) · TerAustralis Incognita · Non Solus — Not Alone*
