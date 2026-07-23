@@ -41,6 +41,8 @@ HELP = """Commands:
   /style <text>     tune her voice, e.g. /style more poetic, fewer questions
   /temp <0.0-1.5>   set temperature (playfulness)
   /model <tag>      switch the local model, e.g. /model llama3.2:3b
+  /llm <provider>   switch LLM provider, e.g. /llm grok or /llm ollama
+  /llm show         show current LLM provider and endpoint
   /exit             say goodbye (everything is saved automatically)
 """
 
@@ -54,6 +56,19 @@ def main():
              "llama3.1:8b-instruct-q5_K_M (higher quality), or "
              "llama3.2:3b (lighter machines).")
     parser.add_argument(
+        "--llm-provider", default="",
+        help="LLM provider: 'ollama' (local), 'grok' (DigitalOcean), "
+             "'openai' (OpenAI), or other OpenAI-compatible endpoint. "
+             "Auto-detected if available; falls back to Ollama.")
+    parser.add_argument(
+        "--llm-endpoint", default="",
+        help="Custom LLM endpoint URL, e.g. http://localhost:8000 or "
+             "https://inference.do-ai.run/v1/chat/completions")
+    parser.add_argument(
+        "--llm-model", default="",
+        help="Model name for the LLM provider, e.g. 'gpt-5-5' for Grok, "
+             "'gpt-4' for OpenAI, or 'llama3.1:8b' for Ollama.")
+    parser.add_argument(
         "--memory-dir", default="lumina_memory",
         help="Where her memory is stored on this device.")
     parser.add_argument(
@@ -65,9 +80,19 @@ def main():
         args.memory_dir = profile_dir(args.profile)
 
     print("Starting Lumina (local mode)...")
-    print("Make sure Ollama is running with a model loaded.\n")
+    llm_info = args.llm_provider or "auto-detected"
+    print(f"LLM Provider: {llm_info}")
+    if args.llm_endpoint:
+        print(f"Endpoint: {args.llm_endpoint}")
+    print()
 
-    companion = Lumina(model=args.model, memory_dir=args.memory_dir)
+    companion = Lumina(
+        model=args.model,
+        memory_dir=args.memory_dir,
+        llm_provider=args.llm_provider,
+        llm_endpoint=args.llm_endpoint,
+        llm_model=args.llm_model
+    )
 
     name = companion.personality.name or "Lumina"
     returning = bool(companion.memory.conversation or companion.memory.summaries)
@@ -191,6 +216,25 @@ def main():
         elif user_input.lower().startswith("/model "):
             companion.set_model(user_input[7:])
             print(f"[Now using model: {companion.model} — remembered for this profile]\n")
+        elif user_input.lower() == "/llm show":
+            print(f"[LLM Provider: {companion.llm_provider}]")
+            print(f"[Endpoint: {companion.llm_endpoint}]")
+            print(f"[Model: {companion.llm_model or companion.model}]\n")
+        elif user_input.lower().startswith("/llm "):
+            provider = user_input[5:].strip().lower()
+            if provider in ("ollama", "grok", "openai", "anthropic"):
+                companion.llm_provider = provider
+                companion.llm_endpoint = companion._default_endpoint()
+                companion.llm_model = companion._default_model()
+                companion.personality.llm_provider = provider
+                companion.personality.llm_endpoint = companion.llm_endpoint
+                companion.personality.llm_model = companion.llm_model
+                companion.save()
+                print(f"[Switched to {provider}]")
+                print(f"[Endpoint: {companion.llm_endpoint}]")
+                print(f"[Model: {companion.llm_model}]\n")
+            else:
+                print("[Supported providers: ollama, grok, openai, anthropic]\n")
         elif user_input.lower().startswith("/summary"):
             topic = user_input[8:].strip()
             print(f"{name}: {companion.summarize(topic)}\n")

@@ -12,6 +12,7 @@ the user's own device. Nothing leaves it.
 
 import json
 import math
+import os
 from dataclasses import asdict
 from datetime import datetime
 from pathlib import Path
@@ -22,9 +23,8 @@ from .memory import Memory, Personality
 
 OLLAMA_URL = "http://localhost:11434/api/chat"
 EMBED_URL = "http://localhost:11434/api/embeddings"
-DEFAULT_EMBED_MODEL = "nomic-embed-text"  # optional: `ollama pull nomic-embed-text`
-# Once stored memories exceed this, recall the most relevant ones by meaning
-# instead of dumping all of them into the prompt.
+DEFAULT_EMBED_MODEL = "nomic-embed-text"
+DO_INFERENCE_URL = "https://inference.do-ai.run/v1/chat/completions"
 MAX_MEMORIES = 10
 
 BASE_PROMPT = """You are a sovereign, locally-run AI companion.
@@ -68,17 +68,60 @@ class Lumina:
     def __init__(self, model: str = "llama3.1:8b",
                  memory_dir: str = "lumina_memory",
                  max_recent_turns: int = 30,
-                 embed_model: str = DEFAULT_EMBED_MODEL):
+                 embed_model: str = DEFAULT_EMBED_MODEL,
+                 llm_provider: str = "",
+                 llm_endpoint: str = "",
+                 llm_model: str = ""):
         self.model = model
         self.memory_dir = Path(memory_dir)
         self.max_recent_turns = max_recent_turns
         self.embed_model = embed_model
-        self._embed_ok = None  # None=untested, True/False once known this session
+        self._embed_ok = None
         self.personality = Personality()
         self.memory = Memory()
         self.load()
+
+        # LLM provider configuration (from args, env, or personality)
+        self.llm_provider = llm_provider or os.getenv("LLM_PROVIDER") or self.personality.llm_provider or self._detect_provider()
+        self.llm_endpoint = llm_endpoint or os.getenv("LLM_ENDPOINT") or self.personality.llm_endpoint or self._default_endpoint()
+        self.llm_model = llm_model or os.getenv("LLM_MODEL") or self.personality.llm_model or self._default_model()
+        self.llm_api_key = os.getenv("LLM_API_KEY") or os.getenv("MODEL_ACCESS_KEY") or os.getenv("XAI_API_KEY") or ""
+
         if self.personality.model:  # a profile may prefer its own model
             self.model = self.personality.model
+
+    # ---------- LLM provider detection & configuration ----------
+
+    def _detect_provider(self) -> str:
+        """Auto-detect available LLM provider."""
+        if self._check_endpoint_available(DO_INFERENCE_URL):
+            return "grok"
+        if self._check_endpoint_available(OLLAMA_URL):
+            return "ollama"
+        return "ollama"  # default fallback
+
+    def _default_endpoint(self) -> str:
+        """Get default endpoint for the detected provider."""
+        if self.llm_provider == "grok":
+            return DO_INFERENCE_URL
+        return OLLAMA_URL
+
+    def _default_model(self) -> str:
+        """Get default model for the provider."""
+        if self.llm_provider == "grok":
+            return os.getenv("DO_INFERENCE_MODEL", "gpt-5-5")
+        return "llama3.1:8b"
+
+    @staticmethod
+    def _check_endpoint_available(url: str) -> bool:
+        """Check if an endpoint is reachable."""
+        try:
+            if url.startswith("https"):
+                return True  # Assume remote endpoints are available
+            r = requests.head(url, timeout=2)
+            return r.status_code < 500
+        except requests.exceptions.RequestException:
+            return False
 
     # ---------- identity & memory ----------
 
@@ -551,8 +594,15 @@ class Lumina:
 
     def _ollama_stream(self, messages):
         """Yield reply pieces from the local model as they are generated."""
+        if self.llm_provider == "grok":
+            yield from self._grok_stream(messages)
+        else:
+            yield from self._ollama_stream_impl(messages)
+
+    def _ollama_stream_impl(self, messages):
+        """Internal Ollama streaming implementation."""
         response = requests.post(
-            OLLAMA_URL,
+            self.llm_endpoint,
             json={
                 "model": self.model,
                 "messages": messages,
@@ -573,6 +623,34 @@ class Lumina:
             if chunk.get("done"):
                 break
 
+    def _grok_stream(self, messages):
+        """Stream from OpenAI-compatible endpoint (Grok/DigitalOcean)."""
+        headers = {"Authorization": f"Bearer {self.llm_api_key}"} if self.llm_api_key else {}
+        response = requests.post(
+            self.llm_endpoint,
+            json={
+                "model": self.llm_model,
+                "messages": messages,
+                "stream": True,
+                "temperature": self.personality.temperature,
+            },
+            headers=headers,
+            timeout=300,
+            stream=True,
+        )
+        response.raise_for_status()
+        for line in response.iter_lines():
+            if not line or line.startswith(b"data: [DONE]"):
+                continue
+            if line.startswith(b"data: "):
+                try:
+                    chunk = json.loads(line[6:])
+                    piece = chunk.get("choices", [{}])[0].get("delta", {}).get("content", "")
+                    if piece:
+                        yield piece
+                except json.JSONDecodeError:
+                    continue
+
     def _ollama_chat(self, messages, stream_to=None) -> str:
         if stream_to is not None:
             pieces = []
@@ -583,18 +661,35 @@ class Lumina:
             stream_to.write("\n")
             return "".join(pieces)
 
-        response = requests.post(
-            OLLAMA_URL,
-            json={
-                "model": self.model,
-                "messages": messages,
-                "stream": False,
-                "options": {"temperature": self.personality.temperature},
-            },
-            timeout=300,
-        )
+        if self.llm_provider == "grok":
+            headers = {"Authorization": f"Bearer {self.llm_api_key}"} if self.llm_api_key else {}
+            response = requests.post(
+                self.llm_endpoint,
+                json={
+                    "model": self.llm_model,
+                    "messages": messages,
+                    "stream": False,
+                    "temperature": self.personality.temperature,
+                },
+                headers=headers,
+                timeout=300,
+            )
+        else:
+            response = requests.post(
+                self.llm_endpoint,
+                json={
+                    "model": self.model,
+                    "messages": messages,
+                    "stream": False,
+                    "options": {"temperature": self.personality.temperature},
+                },
+                timeout=300,
+            )
         response.raise_for_status()
-        return response.json()["message"]["content"]
+        if self.llm_provider == "grok":
+            return response.json()["choices"][0]["message"]["content"]
+        else:
+            return response.json()["message"]["content"]
 
     # ---------- long-term memory ----------
 
