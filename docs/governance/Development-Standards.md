@@ -44,9 +44,11 @@ product specs, not aspirations — review treats a regression here as a bug.
 - Component names follow the canon page
   ([`mythos/NAMES.md`](../../mythos/NAMES.md)) — in particular, "Songline"
   is never a component name.
-- Code is Apache-2.0 (`LICENSE`); mythos content is CC BY-NC-ND 4.0
-  (`LICENSE-CONTENT.md`). Keep each contribution on the right side of that
-  line.
+- Code (`LICENSE`) and mythos content (`LICENSE-CONTENT.md`) are both
+  CC BY-NC-ND 4.0 — non-commercial, no derivative redistribution
+  ([`ADR-0008`](../adr/ADR-0008.md)). Keep each contribution on the right
+  side of the `src/` vs `mythos/` line regardless; they're still
+  administratively separate areas.
 
 ## Style
 

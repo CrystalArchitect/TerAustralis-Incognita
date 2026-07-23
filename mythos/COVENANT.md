@@ -46,5 +46,5 @@ built on the CrystalCore framework inherits them.
 ---
 
 *Part of the TerAustralis Incognita mythos. Content licensed CC BY-NC-ND 4.0
-(see `LICENSE-CONTENT.md`); the covenant's implementation in code is
-Apache-2.0.*
+(see `LICENSE-CONTENT.md`); the covenant's implementation in code is also
+CC BY-NC-ND 4.0 (see `LICENSE`).*

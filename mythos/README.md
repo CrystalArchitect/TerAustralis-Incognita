@@ -60,7 +60,8 @@ All documents live in [`content/`](content/) and are rendered in-app by the ligh
 
 ## Licensing
 
-**Code**: Apache License 2.0 (see [`LICENSE`](../LICENSE) file)
+**Code**: CC BY-NC-ND 4.0 (see [`LICENSE`](../LICENSE) file) — non-commercial,
+no derivative redistribution; commercial licensing available by negotiation.
 
 **Content** (writing, Codex, Apocryphon, imagery, and design):
 [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)](https://creativecommons.org/licenses/by-nc-nd/4.0/)

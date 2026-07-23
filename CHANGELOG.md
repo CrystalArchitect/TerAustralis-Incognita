@@ -4,6 +4,43 @@ Notable changes to this repository, newest first. Day-to-day status lives
 in [`docs/governance/Roadmap.md`](docs/governance/Roadmap.md); this file
 records the milestones.
 
+## 2026-07-23 — Code license: CC BY-NC-ND 4.0, superseding ADR-0006 §1
+
+A separate, uncoordinated Claude session changed `LICENSE` from Apache-2.0
+to CC BY-NC-ND 4.0 for full commercial exclusivity on the code, reversing
+`ADR-0006`'s open-core decision without a superseding ADR, and its rewrite
+of `NOTICE` also silently dropped the "TerAustralis Incognita" name and
+copyright holder that `ADR-0007` had just fixed. The maintainer confirmed
+CC BY-NC-ND 4.0 for code is the intended direction. `ADR-0008` records that
+formally and fixes the resulting inconsistencies.
+
+### Changed
+- `docs/adr/ADR-0008.md` added: supersedes `ADR-0006` §1 only (§§2–3 —
+  the six IP principles, trademark status — are unaffected); verifies via
+  `git log` that no third-party contributor's code is affected by the
+  relicensing (only the maintainer and Claude have ever committed here);
+  adds a contribution-licensing clause to `CONTRIBUTING.md` reconciling
+  "no derivative redistribution" with the repo's own pull-request workflow.
+- `NOTICE` restored to "TerAustralis Incognita" / Crystal Arena-Turner as
+  copyright holder, without touching the CC BY-NC-ND terms.
+- `docs/ATTRIBUTIONS.md`'s "License Enforcement" and "Rebranding & Theft
+  Prevention" sections rewritten — they had contradicted the rest of the
+  same document by telling readers commercial use was freely permitted.
+- Roughly a dozen other stale "code is Apache-2.0" references corrected for
+  consistency: `README.md`, `LICENSE-CONTENT.md`, `mythos/README.md`,
+  `mythos/COVENANT.md`, the `GOVERNANCE.md`/`LICENSE-CONTENT.md` site
+  content mirrors, `docs/governance/Development-Standards.md`,
+  `docs/architecture/crystal-core/Crystal-Runtime-Specification-v0.3.md`,
+  two component `README.md`s, and the live site's `Footer.svelte` (was
+  telling visitors the code was Apache-2.0 with a link to apache.org).
+- Two nested per-component `LICENSE` files with full Apache-2.0 text
+  (`src/crystal-core/LICENSE`, `src/apps/crystal-interface/LICENSE`)
+  deleted — a monorepo with one root `LICENSE` doesn't need duplicates
+  that can drift out of sync again.
+- `src/sdk/typescript/package.json`'s `license` field updated to match;
+  flagged in `ADR-0008` as worth a second look since a No-Derivatives
+  license on a published npm package is unusual.
+
 ## 2026-07-23 — Name correction: TerAustralis Incognita
 
 The project's name was being spelled "TeraAustralis Incognita" (two a's)

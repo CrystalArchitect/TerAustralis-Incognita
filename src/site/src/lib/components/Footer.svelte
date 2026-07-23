@@ -2,7 +2,7 @@
   /**
    * @typedef {Object} Props
    * @property {boolean} [showVoices] - Show the Voices Framework acknowledgement paragraph.
-   * @property {boolean} [showCode] - Show the Apache code-license note alongside the content license.
+   * @property {boolean} [showCode] - Show the code-license note alongside the content license.
    */
 
   /** @type {Props} */
@@ -24,11 +24,13 @@
 
   <p>
     {#if showCode}
-      Code licensed under <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0</a>.
+      Code and content licensed under
+      <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>.
+    {:else}
+      Content licensed under
+      <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>.
     {/if}
-    Content licensed under
-    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>. ABN 70 741 068
-    059. © 2026 TerAustralis Incognita.
+    ABN 70 741 068 059. © 2026 TerAustralis Incognita.
   </p>
 
   <p>
