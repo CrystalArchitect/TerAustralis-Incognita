@@ -31,7 +31,6 @@
       </div>
     {/each}
   </div>
-  <!-- CrystalSensor joins here once its Archive page lands. -->
 </section>
 
 <Footer />

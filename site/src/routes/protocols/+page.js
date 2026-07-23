@@ -21,6 +21,15 @@ export function load() {
         { href: '/docs/crystalmatrix', label: '→ Read the design' }
       ],
       st: 'var(--blue)'
+    },
+    {
+      title: 'CrystalSensor',
+      status: 'Design',
+      body: 'The external-input layer — text, audio, device and environment readings flowing into the reasoning pipeline under consent and provenance, all local. It processes the external world only; the mind is inviolable. Documented and designed; not yet integrated.',
+      links: [
+        { href: '/docs/crystalsensor', label: '→ Read the design' }
+      ],
+      st: 'var(--purple)'
     }
   ];
 
