@@ -1,3 +1,6 @@
+# Copyright 2026 Crystal Arena-Turner (TerAustralis Incognita)
+# SPDX-License-Identifier: Apache-2.0
+
 # CrystalCore.OS - Complete Edition
 # NON SOLUS | Starline Protocol | Year 3000 Build
 # Includes: All Starline launches + @m13crystalat Crystalcore songs

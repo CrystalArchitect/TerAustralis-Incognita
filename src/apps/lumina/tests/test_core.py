@@ -1,3 +1,6 @@
+# Copyright 2026 Crystal Arena-Turner (TerAustralis Incognita)
+# SPDX-License-Identifier: Apache-2.0
+
 """First real tests for Lumina's deterministic, Ollama-free core.
 
 These cover the parts that must never quietly break: the similarity/recency

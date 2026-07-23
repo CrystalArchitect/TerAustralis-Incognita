@@ -1,3 +1,6 @@
+# Copyright 2026 Crystal Arena-Turner (TerAustralis Incognita)
+# SPDX-License-Identifier: Apache-2.0
+
 """Memory fragments — the only thing that ever crosses a Starline connection.
 
 A fragment is small and self-contained: one event, one reflection, one

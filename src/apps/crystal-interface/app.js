@@ -1,3 +1,6 @@
+// Copyright 2026 Crystal Arena-Turner (TerAustralis Incognita)
+// SPDX-License-Identifier: Apache-2.0
+
 /* Crystal Core interactive shell — complete demo UI (not production) */
 const state = {
   epoch: "sister-2-danube-gate",

@@ -1,3 +1,6 @@
+# Copyright 2026 Crystal Arena-Turner (TerAustralis Incognita)
+# SPDX-License-Identifier: Apache-2.0
+
 """RDP decision kernel — a deterministic precedence engine for verdicts.
 
 Given a decision context, this returns one verdict, and always for a reason you

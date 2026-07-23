@@ -1,3 +1,6 @@
+# Copyright 2026 Crystal Arena-Turner (TerAustralis Incognita)
+# SPDX-License-Identifier: Apache-2.0
+
 """Run a conversation on the Starline Weaver.
 
     python3 -m clementine.bridge.run --agents echo,sisters --turns 4 --topic "first water"

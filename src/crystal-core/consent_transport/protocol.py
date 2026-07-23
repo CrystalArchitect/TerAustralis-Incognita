@@ -1,3 +1,6 @@
+# Copyright 2026 Crystal Arena-Turner (TerAustralis Incognita)
+# SPDX-License-Identifier: Apache-2.0
+
 """The wire protocol — what gets said, once the Noise channel is open.
 
 Deliberately tiny: three message types, because pull-based 1:1 exchange

@@ -1,3 +1,6 @@
+# Copyright 2026 Crystal Arena-Turner (TerAustralis Incognita)
+# SPDX-License-Identifier: Apache-2.0
+
 """Configuration loader for CrystalBridge — reads src/profiles/<name>/bridge_config.json.
 
 Reconstructed spec: there is no design doc for this file (it was lost when the

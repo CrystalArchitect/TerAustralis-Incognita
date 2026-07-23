@@ -1,3 +1,6 @@
+# Copyright 2026 Crystal Arena-Turner (TerAustralis Incognita)
+# SPDX-License-Identifier: Apache-2.0
+
 """RDP-JCS Profile v1 — deterministic canonical JSON for the record chain.
 
 The point of canonicalization is simple: the *same* event must always produce

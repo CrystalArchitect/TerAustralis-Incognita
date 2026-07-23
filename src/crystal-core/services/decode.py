@@ -1,3 +1,6 @@
+# Copyright 2026 Crystal Arena-Turner (TerAustralis Incognita)
+# SPDX-License-Identifier: Apache-2.0
+
 """DECODE — validate and normalize crystal.twin.event/1 envelopes.
 
 Belt-Three carried into metering: no fake hydrology → no fake events.

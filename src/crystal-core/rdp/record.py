@@ -1,3 +1,6 @@
+# Copyright 2026 Crystal Arena-Turner (TerAustralis Incognita)
+# SPDX-License-Identifier: Apache-2.0
+
 """RDP record — an append-only, hash-chained log of events.
 
 Each event carries the hash of the one before it, so the log is tamper-evident:

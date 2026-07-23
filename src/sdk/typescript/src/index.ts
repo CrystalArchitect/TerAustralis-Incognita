@@ -1,3 +1,6 @@
+// Copyright 2026 Crystal Arena-Turner (TerAustralis Incognita)
+// SPDX-License-Identifier: Apache-2.0
+
 /**
  * Crystal Core TypeScript SDK — Phase 1 client for local node agent.
  * Mainnet HOLD. Auth (DID challenge + capability macaroon) planned.

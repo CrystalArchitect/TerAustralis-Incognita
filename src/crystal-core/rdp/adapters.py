@@ -1,3 +1,6 @@
+# Copyright 2026 Crystal Arena-Turner (TerAustralis Incognita)
+# SPDX-License-Identifier: Apache-2.0
+
 """Adapters that record outcomes from the pack's real gates and buses onto an
 RDP chain — the honest wiring sketched in docs/architecture/crystal-core/RDP-INTEGRATION.md, made concrete.
 

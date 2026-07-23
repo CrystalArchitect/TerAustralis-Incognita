@@ -1,3 +1,6 @@
+# Copyright 2026 Crystal Arena-Turner (TerAustralis Incognita)
+# SPDX-License-Identifier: Apache-2.0
+
 """Reciprocal Dawn Protocol (RDP) — the deterministic decision/record layer.
 
 Reconstructed from the RDP-Spec v1.1 handoff summary. The original reference

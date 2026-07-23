@@ -1,3 +1,6 @@
+<!-- Copyright 2026 Crystal Arena-Turner (TerAustralis Incognita) -->
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+
 <script>
   /**
    * Her future senses. Note: her *speaking* voice already works today — toggle

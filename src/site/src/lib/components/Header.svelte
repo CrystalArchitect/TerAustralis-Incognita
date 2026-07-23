@@ -1,3 +1,6 @@
+<!-- Copyright 2026 Crystal Arena-Turner (TerAustralis Incognita) -->
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+
 <header class="site">
   <a class="wordmark" href="/">TerAustralis&nbsp;Incognita</a>
   <nav aria-label="Sections">
