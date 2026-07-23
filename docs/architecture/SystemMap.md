@@ -46,7 +46,7 @@ TeraAustralis-Incognita/
 ├── mythos/             the Crystal universe canon — content, not code
 │   ├── content/        Codex, Apocryphon, Sovereign Key, Transmissions…
 │   ├── art/            the visual canon
-│   ├── teraaustralis/  outer-world lore + publish drafts
+│   ├── teraustralis/   outer-world lore + publish drafts
 │   └── tools/          prompt tools (text, not software)
 │
 ├── archive/            superseded material kept for provenance

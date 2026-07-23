@@ -78,7 +78,7 @@ The repository follows the **CrystalCore OS v1.0 architecture** (adopted
 | `src/sdk/typescript/`, `src/node/mesh/` | Client SDK and an in-process mesh scaffold |
 | `docs/` | Documentation — vision, architecture, governance, AI collaboration, guides, ADRs |
 | `research/` | Exploratory work, including the Seven Sisters cycle — not production |
-| `mythos/` | The Crystal universe canon — Codex, Apocryphon, the Book of the Sovereign Key, the Starline Transmissions, 88 pieces of art, the outer-world lore (`teraaustralis/`) |
+| `mythos/` | The Crystal universe canon — Codex, Apocryphon, the Book of the Sovereign Key, the Starline Transmissions, 88 pieces of art, the outer-world lore (`teraustralis/`) |
 | `archive/` | Superseded code kept for provenance — not maintained, do not build on it |
 
 **Why `mythos/` sits at the top level instead of under `docs/`:** it's under

@@ -4,6 +4,34 @@ Notable changes to this repository, newest first. Day-to-day status lives
 in [`docs/governance/Roadmap.md`](docs/governance/Roadmap.md); this file
 records the milestones.
 
+## 2026-07-23 — Name correction: TerAustralis Incognita
+
+The project's name was being spelled "TeraAustralis Incognita" (two a's)
+across most of the repository, but the maintainer's registered ABN trading
+name is **TerAustralis Incognita** (one 'a') — confirmed by `README.md`'s
+title, `NOTICE`, and every ABN reference under `archive/`, which already
+agreed with the correct spelling. The double-a spelling was drift introduced
+during the v1.0 reorganization, not a deliberate choice. Full reasoning:
+[`docs/adr/ADR-0007.md`](docs/adr/ADR-0007.md).
+
+### Changed
+- `mythos/teraaustralis/` renamed to `mythos/teraustralis/` (history
+  preserved via `git mv`); every internal path reference updated to match.
+- Prose references to the project name corrected throughout live docs:
+  `README.md`, `NOTICE`, `CONTRIBUTING.md`, `AGENTS.md`,
+  `docs/governance/Constitution.md` (§1's locked name, corrected via its own
+  §8 amendment process — see that file's amendment log), `docs/vision/Mission.md`,
+  `docs/adr/ADR-0006.md`, and the mythos content that moved with the
+  directory.
+- `docs/adr/ADR-0001.md`, `docs/adr/ADR-0002.md`, and this file's own older
+  entries are left unedited as the historical record of what was actually
+  done at the time; `ADR-0007` supersedes the spelling detail without
+  rewriting them.
+- GitHub repository URLs and `git clone` instructions are unchanged — they
+  still correctly point at `CrystalArchitect/TeraAustralis-Incognita`, the
+  actual (unrenamed) repository name. Renaming the repository itself is
+  flagged in `ADR-0007` as a separate, maintainer-only decision.
+
 ## 2026-07-23 — CrystalCore OS v0.2: Architecture Specification Release
 
 Following review of v0.1, redefined v0.2 from "build the Engine" to

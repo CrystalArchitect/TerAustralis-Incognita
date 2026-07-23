@@ -2,7 +2,7 @@
 
 ## Name
 
-**TeraAustralis Incognita** — The Unknown Southern Land awakening.
+**TerAustralis Incognita** — The Unknown Southern Land awakening.
 
 ## Fusion
 

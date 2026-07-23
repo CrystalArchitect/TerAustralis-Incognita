@@ -1,4 +1,4 @@
-# TeraAustralis Incognita — Outer vision
+# TerAustralis Incognita — Outer vision
 
 The Unknown Southern Land awakening. Civilizational calling for Australia as
 the **Southern Pillar** of multiplanetary humanity.
