@@ -14,6 +14,7 @@ nothing in here claims to be more built than it is (see
 | [`agents/`](agents/) | Operating instructions for each AI agent working in this repo |
 | [`guides/`](guides/) | How do I do a specific task — commit, push, connect a guest AI? |
 | [`adr/`](adr/) | Architecture Decision Records — why the big calls were made |
+| [`reviews/`](reviews/) | Point-in-time architectural surveys — dated snapshots, not living docs |
 
 Component-level specs that used to live beside the code are under
 [`architecture/crystal-core/`](architecture/crystal-core/); the Lattice
