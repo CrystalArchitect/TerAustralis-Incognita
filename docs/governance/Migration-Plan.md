@@ -124,6 +124,74 @@ The only place workflow changes are proposed; none are made before it.
 - **Engineering repo(s):** stand up CI mirroring the old `ci.yml` checks
   against real paths (compileall, the four self-test suites, pytest).
 
+> **Stage 2 executed (2026-07-23).** Per this plan's per-stage gate, the
+> maintainer approved all three sub-decisions in-session:
+>
+> - **Pages + CNAME moved now** to `TerAustralis-Incognita-Code`
+>   (`.github/workflows/deploy.yml`, `CNAME`), since `vision/site/` (PR 3)
+>   gave the plan's "wherever `src/site/` lands" question a real answer.
+>   The old `deploy.yml` had been failing on every push since before
+>   Stage 0 (target already absent), so this stood up a first working
+>   deploy rather than displacing one. **Outstanding manual step:** a repo
+>   admin must set `TerAustralis-Incognita-Code`'s Settings → Pages →
+>   Source to "GitHub Actions" — no API access to do this from an agent
+>   session.
+> - **Umbrella `ci.yml` retargeted** to docs-appropriate checks: markdown
+>   lint (`markdownlint-cli2`, config at `.markdownlint.jsonc`) and a link
+>   check (`markdown-link-check`, config at
+>   `.github/workflows/markdown-link-check-config.json`). The markdownlint
+>   config is deliberately lenient on first landing: it disables 20 rule
+>   categories that had 3,504 pre-existing violations across 102 files
+>   (this repo's docs predate the check and don't follow one house style;
+>   re-enable a rule only alongside actually fixing its hits, not as a
+>   drive-by rewrite). The link checker is scoped to **external
+>   (`https?://`) links only** — `markdown-link-check` has a reproducible
+>   bug resolving parent-relative local links (confirmed independent of
+>   config, in complete isolation, across tool versions 3.11–3.14: a link
+>   like `../adr/ADR-0005.md` reports dead even when the target exists),
+>   so checking local cross-references was dropped rather than shipped
+>   broken. This also sidesteps the known-absent
+>   `src/`·`scripts/`·`tests/`·`packages/`·`corpus/` path patterns (23
+>   links, already tracked in this plan's stale-reference appendix with
+>   their own sign-off/staging requirements). Additional exclusions:
+>   three social platforms that reliably 403 automated clients regardless
+>   of runner (`x.com`/`twitter.com`, `patreon.com`, `suno.com`);
+>   `localhost` (dev-server instructions, never a real endpoint);
+>   `crystalarchitect.dev` (genuinely fails DNS resolution — confirmed via
+>   `getent`, not a proxy artifact — but its only two references are
+>   already-superseded historical docs, not this check's job to guess a
+>   replacement domain for); `pypi.org/manage/account/tokens/` (referenced
+>   only from the superseded packages-era publishing guides). One
+>   genuinely broken link this check surfaced (`README.md`'s pointer to
+>   `src/crystal-core/SECURITY.md`) was fixed in the same commit, pointing
+>   at `core/crystal-core/SECURITY.md` in `TerAustralis-Incognita-Code`.
+>   Three more `docs/PUBLISHING.md`, `docs/COMMERCIAL_LICENSING_GUIDE.md`,
+>   `docs/FIRST_RELEASE.md` — got the same "Status note" banner already
+>   used on `docs/RESTRUCTURING_COMPLETE.md` and the `LICENSING-*` docs,
+>   completing that appendix row. Two links (both `github.com`, both to
+>   confirmed-real, confirmed-accessible targets — verified via `git`
+>   operations and DNS resolution) could not be validated from this
+>   sandboxed agent session, which blocks generic unauthenticated
+>   `github.com` requests outside its pre-authorized tool paths; left
+>   unexcluded, on the expectation that a real GitHub Actions runner
+>   (which has normal internet egress) resolves them fine — the first CI
+>   run on this PR is the actual test.
+> - **Both dormant `packages/*` workflows removed** (`test-packages.yml`,
+>   `publish-packages.yml`). Verified safe first: zero git tags exist in
+>   this repository, locally or on the remote — `publish-packages.yml` is
+>   tag-gated only, so it never fired. Spot-checked 2 of the 7
+>   `teraaustralis-*` PyPI names directly (`teraaustralis-lumina`,
+>   `teraaustralis-bridge`) — both unclaimed (404). Debts register updated
+>   below.
+>
+> Full CI sequence re-verified locally in `TerAustralis-Incognita-Code`
+> before shipping: 70/70 tests passing (7 Weaver + 4 pipeline + 9 Consent
+> Transport + 31 RDP + 3 mesh + 16 Lumina). The mesh stub tests
+> (`core/tests/unit/test_mesh_stub.py`) were imported alongside this work
+> — they were the umbrella's repo-level `tests/` dir, missed by PR 1
+> because it only materialized component directories, not the repo-level
+> catch-all.
+
 ## Stage 3 — repo-count decision point, and Lumina's framework
 
 **Split `-Code` into `core` and `vision` repositories only when at least
@@ -155,7 +223,7 @@ directive recorded in ADR-0011.
 | Debt | Where | Constraint |
 |---|---|---|
 | ~~GitHub slug `TeraAustralis-Incognita` (double-a)~~ **Resolved** | This repo's URL | The slug ADR-0007 left unrenamed has since been corrected: the GitHub API returned `CrystalArchitect/TerAustralis-Incognita` (one 'a') when PR #48 was created, 2026-07-23. ADR-0007's "still-unrenamed" line stands as historical record only. |
-| PyPI package names `teraaustralis-*` (double-a) | The dormant publish/test workflows | Verify nothing was ever published under them before reserving corrected names (Stage 2) |
+| ~~PyPI package names `teraaustralis-*` (double-a)~~ **Resolved** | The dormant publish/test workflows | Verified 2026-07-23: zero git tags ever pushed (the publish workflow was tag-gated, so it never fired) and 2 of 7 names spot-checked directly on PyPI — both unclaimed. Both workflows removed at Stage 2; corrected names (`teraustralis-*`) are free to reserve whenever publishing becomes real. |
 | `corpus/` named as a surface of truth | Constitution §7 | Never built; fixing the row requires a §8 amendment. Proposed amendment text, supplied not applied: *"§7: mark the `corpus/` row as designed-but-not-built until an export pipeline exists, matching the 2026-07-21 implementation-note pattern."* |
 | Deeper stale references in `mythos/README.md` (old `src/` links, the pre-monorepo "The Crystal Vision" framing) | `mythos/` | Vision-layer content — edit only with explicit maintainer sign-off (the Stage-0 blurb fix was the minimum honest correction) |
 
@@ -167,7 +235,7 @@ and the stage that sweeps them:
 
 | Group | Files (representative) | Why left at Stage 0 | Swept by |
 |---|---|---|---|
-| Workflows + PR template | `.github/workflows/*` (4), `.github/PULL_REQUEST_TEMPLATE.md` | Functional config, excluded from a docs-only change | Stage 2 |
+| ~~Workflows + PR template~~ **Swept** | `.github/workflows/*` (4), `.github/PULL_REQUEST_TEMPLATE.md` | Functional config, excluded from a docs-only change | Stage 2 (2026-07-23): `ci.yml` retargeted to docs checks, `deploy.yml`/`CNAME` moved to `TerAustralis-Incognita-Code`, both dormant `packages/*` workflows removed, `PULL_REQUEST_TEMPLATE.md`'s checks updated to match |
 | Historical record | `docs/adr/ADR-0001…0010`, `CHANGELOG.md` past entries | Never rewritten, per ADR-0007's pattern | Never (new entries supersede) |
 | Superseded-era docs | `docs/PUBLISHING.md`, `docs/FIRST_RELEASE.md`, `docs/COMMERCIAL_LICENSING_GUIDE.md`, `docs/governance/LICENSING-*`, root `LICENSING.md` | Describe the reverted `packages/` era; already banner-marked or pointed at by ADR-0010 | Stage 2 (banner or retire) |
 | Deep architecture/vision specs | `docs/architecture/Overview.md`, `CrystalCore.md`, `CrystalVision.md`, `AI-Weave.md`, `Lattice.md`, `Full-Stack-v0.5.md`, `crystal-core/*`, `docs/vision/*` | Component specs; their paths become true again wherever the code lands | Stage 1 (path sweep with the import) |

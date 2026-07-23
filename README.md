@@ -151,7 +151,8 @@ Useful places to start, roughly in order of how load-bearing they are:
   personal memory data, secrets). Command quick-reference:
   [`docs/guides/GitHub-Commit-Instructions.md`](docs/guides/GitHub-Commit-Instructions.md).
 - **Security:** [`SECURITY.md`](SECURITY.md) for this repo overall;
-  [`src/crystal-core/SECURITY.md`](src/crystal-core/SECURITY.md) for the protocol
+  [`core/crystal-core/SECURITY.md`](https://github.com/CrystalArchitect/TerAustralis-Incognita-Code/blob/main/core/crystal-core/SECURITY.md)
+  (now in `TerAustralis-Incognita-Code`, per `ADR-0011`) for the protocol
   pack's specific guarantees (Starline Weaver, pipeline quarantine, Starline's
   consent gating).
 - **License:** Everything in this repository — `src/`, `packages/`, and
