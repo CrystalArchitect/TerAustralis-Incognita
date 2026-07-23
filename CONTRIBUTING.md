@@ -98,6 +98,36 @@ The short version — every PR names the AI tools that helped produce it,
 AI claims follow the same evidence rule as everyone else's, and the
 maintainer keeps the veto.
 
+## Attribution & intellectual property
+
+### Cite external sources
+
+When your contribution draws on external work (papers, articles, open-source projects, documented systems), cite the source:
+
+1. **In your PR description:** Link to the source and explain what inspired your design.
+2. **In the code:** Add a comment with a link to the source or paper.
+3. **In this repo:** If the contribution is significant, propose an entry in [`docs/ATTRIBUTIONS.md`](docs/ATTRIBUTIONS.md).
+
+Example:
+```python
+# Registry pattern inspired by MemClaw's multi-agent governance
+# See: https://github.com/caura-ai/caura-memclaw (Apache 2.0)
+class Registry:
+    ...
+```
+
+### Licensing & redistribution
+
+CrystalCore OS is Apache 2.0 (code) + CC BY-NC-ND 4.0 (mythos). If you redistribute or fork this work:
+
+1. **Keep the licenses.** Apache 2.0 and CC BY-NC-ND 4.0 must remain unchanged.
+2. **Retain attribution.** ATTRIBUTIONS.md and copyright notices must stay in place.
+3. **Mark your changes.** If you modify the code, make clear what you changed.
+4. **Link back.** Link to the original CrystalCore OS repository in your README.
+5. **Never rebrand.** You cannot remove attribution or falsely claim original authorship.
+
+For full policy, see [`docs/ATTRIBUTIONS.md`](docs/ATTRIBUTIONS.md).
+
 ## The Covenant applies to code too
 
 Lumina's Sovereignty Covenant (`mythos/COVENANT.md`) is not just

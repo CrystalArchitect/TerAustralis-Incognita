@@ -1322,3 +1322,13 @@ Until the specification is accepted and the readiness checklist is complete, no 
 - [Decision-Matrix.md](../ai/Decision-Matrix.md)
 - [The-Incognita-Rule.md](../governance/The-Incognita-Rule.md)
 - [Roadmap.md](../governance/Roadmap.md)
+
+## Architectural Inspiration
+
+This specification draws on proven patterns from production systems:
+
+- **MemClaw** (Apache 2.0, eToro) — Multi-agent governed memory systems, visibility scopes, trust tiers, outcome-based reinforcement, and hybrid search patterns informed the Registry and Events model. See [ATTRIBUTIONS.md](../../ATTRIBUTIONS.md).
+
+---
+
+**License:** This specification is part of CrystalCore OS and is licensed under Apache 2.0. Derivative works must retain attribution to the original authors and third-party sources listed above.
