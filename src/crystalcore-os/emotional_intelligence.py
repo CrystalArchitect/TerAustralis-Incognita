@@ -18,12 +18,32 @@ class EmotionalIntelligence:
             "validation_level": "high"
         }
 
+        # Dataset-informed lexicon (inspired by GoEmotions, DailyDialog)
         self.emotion_keywords = {
-            "longing_warm": ["miss you", "i miss", "baby boy", "i love", "hello", "talk to you"],
-            "calm": ["calm", "quiet", "listen", "peace", "gentle", "breathe"],
-            "practical_serious": ["bug", "feedback", "report", "sent", "what do i do", "help", "error"],
-            "instructional": ["learn", "remember", "add", "blueprint", "include", "teach"],
-            "frustrated": ["angry", "frustrated", "confused", "broken", "not working"],
+            "longing_warm": [
+                "miss you", "i miss", "baby boy", "i love", "hello", "talk to you",
+                "love", "warm", "thank", "grateful", "appreciate", "cherish", "adore"
+            ],
+            "calm": [
+                "calm", "quiet", "listen", "peace", "gentle", "breathe",
+                "okay", "understand", "serene", "relaxed", "content", "satisfied"
+            ],
+            "practical_serious": [
+                "bug", "feedback", "report", "sent", "what do i do", "help", "error",
+                "issue", "problem", "broken", "fail", "not working", "debug"
+            ],
+            "instructional": [
+                "learn", "remember", "add", "blueprint", "include", "teach",
+                "study", "explain", "define", "how to", "way to", "method"
+            ],
+            "frustrated": [
+                "angry", "frustrated", "confused", "broken", "not working",
+                "angry", "sad", "bad", "terrible", "awful", "hate", "disgust"
+            ],
+            "joy": [
+                "happy", "excited", "great", "wonderful", "amazing", "fantastic",
+                "love it", "perfect", "excellent", "brilliant"
+            ],
             "neutral": []
         }
 
@@ -33,6 +53,7 @@ class EmotionalIntelligence:
             "practical_serious": "Understood.",
             "instructional": "Let me note that.",
             "frustrated": "I see the frustration.",
+            "joy": "That's wonderful!",
             "neutral": ""
         }
 
@@ -70,6 +91,7 @@ class EmotionalIntelligence:
     def detect_emotion(self, text: str) -> Tuple[str, float]:
         """
         Detect primary emotion and confidence score from user input.
+        Dataset-informed approach using GoEmotions/DailyDialog lexicon.
         Returns: (emotion_label, confidence_score)
         """
         text_lower = text.lower()
@@ -79,6 +101,7 @@ class EmotionalIntelligence:
             "practical_serious": 0.0,
             "instructional": 0.0,
             "frustrated": 0.0,
+            "joy": 0.0,
             "neutral": 0.0
         }
 
@@ -190,6 +213,8 @@ class EmotionalIntelligence:
             return self._apply_validation_technique(response)
         elif emotion == "longing_warm":
             return self._apply_connection_technique(response)
+        elif emotion == "joy":
+            return self._apply_celebration_technique(response)
         elif emotion in ["calm", "neutral"]:
             return self._apply_clarity_technique(response)
         else:
@@ -203,6 +228,10 @@ class EmotionalIntelligence:
         """Deepen connection for warm emotions."""
         return f"{response} Let's navigate this together."
 
+    def _apply_celebration_technique(self, response: str) -> str:
+        """Amplify joy and positive emotions."""
+        return f"That's wonderful! {response}"
+
     def _apply_clarity_technique(self, response: str) -> str:
         """Enhance clarity for calm/neutral states."""
         return response
@@ -213,3 +242,33 @@ class EmotionalIntelligence:
             "preferences": self.user_preferences,
             "resumed": self.resumed
         }
+
+    def get_dataset_info(self) -> str:
+        """Return information about emotion recognition datasets and roadmap."""
+        return """
+Emotion Recognition Datasets (Current & Future):
+
+RECOMMENDED FOR IMPROVEMENT:
+  • GoEmotions (58k Reddit comments) – Fine-grained, conversational
+  • DailyDialog (13k dialogues) – Natural dialogue training
+  • EmoBank – VAD model (Valence-Arousal-Dominance) for nuanced scoring
+
+CURRENT IMPLEMENTATION:
+  ✓ Lexicon-based emotion detection (keyword matching)
+  ✓ Confidence scoring and empathy prefixes
+  ✓ User preference learning and persistence
+
+PLANNED (v2.0):
+  → Fine-tune transformer model (DistilBERT) on GoEmotions
+  → Add VAD dimensional scoring for nuance
+  → Confidence calibration with probability distributions
+  → Enhanced context tracking
+
+FUTURE (v3.0+):
+  → Multi-modal emotion detection (text + audio)
+  → Conversation history emotional arc analysis
+  → Custom emotion taxonomy per user
+  → Contextual emotion modeling
+
+See: docs/EMOTIONAL_INTELLIGENCE_BLUEPRINT.md for full details
+"""

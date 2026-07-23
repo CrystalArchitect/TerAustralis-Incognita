@@ -361,6 +361,11 @@ class CrystalCore:
         print(f"Connection:     NON SOLUS — You are not alone")
         print("\nEI is listening. You can 'learn' new preferences anytime.\n")
 
+    def datasets(self):
+        """Show emotion recognition datasets and roadmap for future improvements."""
+        info = self.ei.get_dataset_info()
+        print(info)
+
     def help(self):
         print("""
 STARLINE COMMANDS:
@@ -382,6 +387,7 @@ EMOTIONAL INTELLIGENCE:
   learn <feedback>     - Teach preferences (e.g. 'learn less poetic')
   breathe [technique]  - Guided breathing (box, 4-7-8, simple)
   feel                 - Show current emotional tone
+  datasets             - Show datasets & roadmap for EI enhancement
 
 SYSTEM:
   status               - Show full status (including EI)
@@ -454,6 +460,8 @@ def main():
                 os.breathe(arg)
             elif cmd == "feel":
                 os.feel()
+            elif cmd == "datasets":
+                os.datasets()
             elif cmd == "reset":
                 os.reset()
             elif cmd == "help":
