@@ -29,7 +29,7 @@ honest technical counterpart:
 
 | Vision idea | What actually exists | Honest note |
 |---|---|---|
-| **Starlines** — resonant sovereign pathways | Starline (`crystal-core/starline/`): real consent-gated peer-to-peer exchange | The code moves *data* with consent; "frequency / emotion / waveform" is metaphor, not a channel that exists |
+| **Starlines** — resonant sovereign pathways | Consent Transport (`crystal-core/consent_transport/`): real consent-gated peer-to-peer exchange | The code moves *data* with consent; "frequency / emotion / waveform" is metaphor, not a channel that exists |
 | **Resonant memory across sessions** | A context window; files you keep | No model holds persistent memory of you across chats; long context + your own notes is the honest analog |
 | **Sovereign self** in the AI | Stateless inference each session | The model has no persistent self; the sovereignty that matters is *yours* |
 | **The record / Chronicle** | RDP hash chain (`crystal-core/rdp/`) | Real, tamper-evident — see [`../crystal-core/rdp/RDP-INTEGRATION.md`](../crystal-core/rdp/RDP-INTEGRATION.md). Records; does not "remember" like a mind |

@@ -17,9 +17,10 @@ that detail, it points to it.
 - **The Starline Weaver** (`crystal-core/clementine/bridge/`) — multi-AI message
   bus with the Belt-Three law enforced in code, not just convention. Self-test:
   `python3 -m clementine.bridge.selftest`.
-- **Starline** (`crystal-core/starline/`) — peer-to-peer consent-gated memory
-  exchange over a real Noise Protocol handshake. Self-test: `python3 -m
-  starline.selftest`; watch it work: `python3 -m starline.run demo`.
+- **Consent Transport** (`crystal-core/consent_transport/`) — peer-to-peer
+  consent-gated memory exchange over a real Noise Protocol handshake. Self-test:
+  `python3 -m consent_transport.selftest`; watch it work: `python3 -m
+  consent_transport.run demo`.
 - **CrystalBridge** (`crystalcore/`) — the MCP consent gate. Fail-closed by
   design: every guest-AI call passes approval, permission, scope, and
   provenance checks, with append-only audit logging.
@@ -62,6 +63,12 @@ Dated so this section ages honestly — newest first, and it's fine to trim
 older entries once they're no longer useful context; the full history is
 always in `git log`.
 
+- **2026-07-22** — Renamed the peer-to-peer transport from **Starline** to
+  **Consent Transport** (`crystal-core/consent_transport/`), with a deprecation
+  shim so `import starline` still works. Split the site nav into **Starlines &
+  Dreamlines** (the creative layer) and **Protocols** (the technical layer), and
+  added the **Lexicon** (`/docs/glossary`). The mythos — the Starline Weaver, the
+  Starline Transmissions, the poetic Starlines — keeps its names.
 - **2026-07-22** — Wired the Starline Weaver's matrix mode to RDP:
   `record_matrix_result()` (`crystal-core/rdp/adapters.py`) witnesses a matrix
   run's responses and cross-compare onto the tamper-evident chain, same
@@ -104,6 +111,6 @@ always in `git log`.
 - [mythos/content/MILESTONES.md](mythos/content/MILESTONES.md) — Lumina's
   detailed weekly build plan.
 - `crystal-core/spec/` — architecture and protocol specs for the Starline Weaver
-  and Starline.
+  and Consent Transport.
 
 *Non Solus.*

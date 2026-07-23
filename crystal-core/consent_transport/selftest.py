@@ -1,6 +1,6 @@
-"""Self-test for Starline — proves the sovereignty guarantees are real.
+"""Self-test for Consent Transport — proves the sovereignty guarantees are real.
 
-    python3 -m starline.selftest
+    python3 -m consent_transport.selftest
 
 Every test here uses real TCP sockets and a real Noise handshake — no
 mocking of the crypto or the network layer. If this passes, two agents on

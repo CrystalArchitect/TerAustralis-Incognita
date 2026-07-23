@@ -26,12 +26,12 @@ jobs:
       - name: Pipeline self-test
         working-directory: crystal-core
         run: python -m services.selftest
-      - name: Install Starline dependencies
+      - name: Install Consent Transport dependencies
         working-directory: crystal-core
-        run: pip install -r requirements-starline.txt
-      - name: Starline self-test
+        run: pip install -r requirements-consenttransport.txt
+      - name: Consent Transport self-test
         working-directory: crystal-core
-        run: python -m starline.selftest
+        run: python -m consent_transport.selftest
       - name: RDP self-test
         working-directory: crystal-core
         run: python -m rdp.selftest

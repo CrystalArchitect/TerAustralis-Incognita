@@ -174,7 +174,7 @@ RDP is a **record + decision** layer — it reaches a verdict deterministically 
 proves *what was decided, why, and in what order*. It does **not** replace the
 pack's consent machinery, and shouldn't be read as doing so:
 
-- **Consent** still lives in Starline's `consent.py` (`crystal-core/starline/`)
+- **Consent** still lives in Consent Transport's `consent.py` (`crystal-core/consent_transport/`)
   and CrystalBridge's fail-closed ConsentGate (`crystalcore/`) — nothing moves
   without a grant.
 - **The Covenant** (`mythos/COVENANT.md`) is still the law those gates enforce.
@@ -191,7 +191,7 @@ and an honest note that they are separate modules today — see
 decision kernel (`kernel.py`) with its demo (`run.py`) — all with real tests.
 
 **Not here yet:** a document mapping RDP onto the pack's real consent mechanisms
-(Starline consent, CrystalBridge's ConsentGate, the Covenant) with worked
+(Consent Transport consent, CrystalBridge's ConsentGate, the Covenant) with worked
 examples, and richer constraint/obligation modelling beyond the pre-evaluated
 inputs the kernel takes today. Those build on this foundation in a later pass.
 This README only claims what the code actually does.

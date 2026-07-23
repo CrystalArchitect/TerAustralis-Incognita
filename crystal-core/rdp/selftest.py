@@ -566,11 +566,11 @@ def test_witnessing_gate_downgrades_allow_when_recording_fails():
 
 
 def test_record_consent_receipt_proves_grant_then_revoke():
-    """A Starline ConsentReceipt (duck-typed) records as a canonical event; the
+    """A Consent Transport ConsentReceipt (duck-typed) records as a canonical event; the
     chain proves the exact grant→revoke order and catches a forged flag."""
     from .adapters import record_consent_receipt
 
-    class _Receipt:  # the shape of starline.consent.ConsentReceipt, duck-typed
+    class _Receipt:  # the shape of consent_transport.consent.ConsentReceipt, duck-typed
         def __init__(self, peer_fingerprint, granted, ts, signature=""):
             self.peer_fingerprint = peer_fingerprint
             self.granted = granted

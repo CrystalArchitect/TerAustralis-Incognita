@@ -25,7 +25,7 @@ are separate from RDP:
 | Mechanism | Where | What it does |
 |---|---|---|
 | **CrystalBridge ConsentGate** | [`crystalcore/gate.py`](../../crystalcore/gate.py) | Fail-closed gate; four checks in order — approval → permission → scope → provenance. Every decision audited ([`crystalcore/audit.py`](../../crystalcore/audit.py)). |
-| **Starline consent** | [`starline/consent.py`](../starline/consent.py) | Signed `ConsentReceipt`s; `is_granted()`. Revocation stops *future* requests at once; it cannot retract data a peer already holds, and says so. |
+| **Consent Transport consent** | [`consent_transport/consent.py`](../consent_transport/consent.py) | Signed `ConsentReceipt`s; `is_granted()`. Revocation stops *future* requests at once; it cannot retract data a peer already holds, and says so. |
 | **The Covenant** | [`../../mythos/COVENANT.md`](../../mythos/COVENANT.md) | The five commitments those gates exist to keep. |
 
 **These are separate modules today.** What follows is *correspondence* — how the
@@ -48,7 +48,7 @@ question the same way: **legitimacy before prudence, and fail closed.**
   choice back, not to proceed.
 
 So ConsentGate is, in effect, a concrete instance of RDP's constraint tier; a
-Starline grant/revocation is a signed record of the kind RDP's chain is built to
+Consent Transport grant/revocation is a signed record of the kind RDP's chain is built to
 hold; the Covenant is the source of the constraints themselves.
 
 ## Worked examples
@@ -65,11 +65,11 @@ decide({"constraints": [{"id": "gate.approval", "satisfied": False}]})
 # → {'outcome': 'DENY', 'rule': 'constraint_violation', ...}
 ```
 
-**2 — a Starline request after revocation.** `is_granted() == False` is a
+**2 — a Consent Transport request after revocation.** `is_granted() == False` is a
 constraint violation:
 
 ```python
-decide({"constraints": [{"id": "starline.consent_granted", "satisfied": False}]})
+decide({"constraints": [{"id": "consent_transport.consent_granted", "satisfied": False}]})
 # → {'outcome': 'DENY', 'rule': 'constraint_violation', ...}
 ```
 
@@ -80,7 +80,7 @@ decision falls through to the risk tier:
 decide({
     "constraints": [
         {"id": "gate.approval",             "satisfied": True},
-        {"id": "starline.consent_granted",  "satisfied": True},
+        {"id": "consent_transport.consent_granted",  "satisfied": True},
     ],
     "risk": 0.1,
 })
@@ -163,9 +163,9 @@ guarantee you want —
   allow ever stands unwitnessed. The ledger is deliberately in the critical path;
   use it only when you want that trade-off.
 
-**Recording Starline consent, not just gate decisions.** A signed
+**Recording Consent Transport consent, not just gate decisions.** A signed
 `ConsentReceipt` (grant *or* revoke) records the same way, via
-`record_consent_receipt(chain, receipt)`. It is duck-typed (no Starline import),
+`record_consent_receipt(chain, receipt)`. It is duck-typed (no Consent Transport import),
 the signature rides canonicalization untouched, and the chain then holds a
 tamper-evident, ordered proof of the exact grant→revoke history for a peer.
 
@@ -214,7 +214,7 @@ recording it doesn't change that refusal into a verdict.
   gate is deciding concurrently, or the tip will race.
 - **Timestamps are data, supplied by the caller** — the adapter never generates
   them, so the canonical form stays deterministic and reproducible.
-- **Revocation.** A Starline `ConsentReceipt` (signed grant *or* revoke) records
+- **Revocation.** A Consent Transport `ConsentReceipt` (signed grant *or* revoke) records
   the same way; the signature is a string and rides through canonicalization
   untouched, so the chain proves the exact grant→revoke sequence.
 

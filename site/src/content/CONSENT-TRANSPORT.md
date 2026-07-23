@@ -1,10 +1,12 @@
-# Starline — Technical Architecture
+# Consent Transport — Technical Architecture
 
-**Status:** v1 implemented — `crystal-core/starline/` · `python3 -m starline.selftest`
+**Status:** v1 implemented — `crystal-core/consent_transport/` · `python3 -m consent_transport.selftest`
+
+*Formerly published as Starline. Renamed so the built layer carries a plain name — see the [Lexicon](/docs/glossary).*
 
 ## Purpose
 
-Starline is the sovereign communication layer between individually
+Consent Transport is the sovereign communication layer between individually
 locally-running Lumina agents. It lets two companions exchange
 consented memory fragments directly, peer to peer, without routing
 through a central server or surrendering data ownership.
@@ -50,7 +52,7 @@ than the answer for whoever revisits this later:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                    Starline Layer (crystal-core)              │
+│              Consent Transport Layer (crystal-core)          │
 ├─────────────────────────────────────────────────────────────┤
 │  Lumina (local)  ◄── Noise IK, TCP ──►  Other sovereign agent │
 │         │                                          │          │
@@ -108,7 +110,7 @@ signed fragment as its own — the receiving client independently
 re-verifies every fragment's signature and silently drops anything that
 doesn't check out.
 
-## Security properties, tested (`starline/selftest.py`)
+## Security properties, tested (`consent_transport/selftest.py`)
 
 - A correct handshake between the real pinned keys succeeds, and only that.
 - Connecting to the wrong pinned key (impersonation) fails the handshake outright.
