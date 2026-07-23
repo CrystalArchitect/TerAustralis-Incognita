@@ -13,12 +13,21 @@ This repository is two things at once, kept honestly separate:
 Nothing here pretends to be more built than it is. Where the two meet, the
 code is the source of truth and the story says so.
 
+> **Repository status (2026-07-23):** the `src/` tree this README describes
+> is **not in this GitHub repository** — it has never been in its git
+> history. It lives in the maintainer's local working tree ("disk is
+> canon"); a dated copy sits in `archive/2026/local-snapshot-2026-07-17/`.
+> Full explanation:
+> [`docs/architecture/SystemMap.md`](docs/architecture/SystemMap.md#where-the-code-actually-lives).
+
 ## What's real vs. what's vision
 
 | Layer | Meaning | Where |
 |---|---|---|
-| **Built** | Running code, with tests you can execute yourself | `src/` |
+| **Built** | Running code, with tests you can execute yourself | `src/` ✱ |
 | **Vision** | Narrative, art, and speculative framing — labeled as such | `mythos/` |
+
+✱ Described tree; not in this repository — see the status note above.
 
 This split is load-bearing, not decorative — see `mythos/COVENANT.md` and
 [`docs/architecture/crystal-core/STARLINE.md`](docs/architecture/crystal-core/STARLINE.md)
@@ -32,7 +41,9 @@ For what's built, in progress, or not yet started, see
 
 ## Quick start
 
-Five things you can run right now and watch work:
+Five things you can run right now and watch work — *from the local code
+tree; these commands will not run from a fresh clone of this repository
+(status note above):*
 
 ```bash
 # Lumina — the sovereign companion (local-first, Ollama-backed)
@@ -68,18 +79,22 @@ The repository follows the **CrystalCore OS v1.0 architecture** (adopted
 
 | Path | What it is |
 |---|---|
-| `src/apps/lumina/` | The companion — CrystalCore framework package, terminal, Flask API, Svelte webapp, browser voice |
-| `src/apps/voicebox/` | Local MCP server giving Claude Code a spoken voice on your machine |
-| `src/apps/crystal-interface/`, `src/apps/vision-web/` | Demo shells (simulated data, Authority HOLD — not production) |
-| `src/crystal-core/` | The protocol pack — Starline Weaver (`clementine/bridge/`), Decode→Ingest→Twin pipeline (`services/`), Consent Transport (`consent_transport/`), RDP record kernel (`rdp/`) |
-| `src/crystalcore/` | CrystalBridge — the MCP consent gate (fail-closed by design) |
-| `src/crystalcore-os/` | The mythos terminal (Vision-layer code) |
-| `src/site/` | The SvelteKit site for teraustralis.com.au |
-| `src/sdk/typescript/`, `src/node/mesh/` | Client SDK and an in-process mesh scaffold |
+| `src/apps/lumina/` ✱ | The companion — CrystalCore framework package, terminal, Flask API, Svelte webapp, browser voice |
+| `src/apps/voicebox/` ✱ | Local MCP server giving Claude Code a spoken voice on your machine |
+| `src/apps/crystal-interface/`, `src/apps/vision-web/` ✱ | Demo shells (simulated data, Authority HOLD — not production) |
+| `src/crystal-core/` ✱ | The protocol pack — Starline Weaver (`clementine/bridge/`), Decode→Ingest→Twin pipeline (`services/`), Consent Transport (`consent_transport/`), RDP record kernel (`rdp/`) |
+| `src/crystalcore/` ✱ | CrystalBridge — the MCP consent gate (fail-closed by design) |
+| `src/crystalcore-os/` ✱ | The mythos terminal (Vision-layer code) |
+| `src/site/` ✱ | The SvelteKit site for teraustralis.com.au |
+| `src/sdk/typescript/`, `src/node/mesh/` ✱ | Client SDK and an in-process mesh scaffold |
+| `dbt/crystalcore_emotion_warehouse/` | The emotion-warehouse dbt project (see [`docs/DBT_WAREHOUSE_INTEGRATION.md`](docs/DBT_WAREHOUSE_INTEGRATION.md)) |
 | `docs/` | Documentation — vision, architecture, governance, AI collaboration, guides, ADRs |
 | `research/` | Exploratory work, including the Seven Sisters cycle — not production |
 | `mythos/` | The Crystal universe canon — Codex, Apocryphon, the Book of the Sovereign Key, the Starline Transmissions, 88 pieces of art, the outer-world lore (`teraustralis/`) |
 | `archive/` | Superseded code kept for provenance — not maintained, do not build on it |
+
+✱ In the described local tree, not in this repository — see the status
+note at the top of this README.
 
 **Why `mythos/` sits at the top level instead of under `docs/`:** code and
 content are administratively separate license areas — `LICENSE-CONTENT.md`

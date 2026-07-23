@@ -5,6 +5,11 @@ demos the components already ship with — this page is the index; the code
 stays with its component so the demos can't drift from what they
 demonstrate.
 
+> **Repository status:** the commands below run against the code tree,
+> which is not in this repository — they will not run from a fresh clone.
+> See
+> [SystemMap: where the code actually lives](../docs/architecture/SystemMap.md#where-the-code-actually-lives).
+
 | Watch it work | Command (from repo root) |
 |---|---|
 | Starline: pair, deny, grant, exchange, revoke, deny | `cd src/crystal-core && python3 -m consent_transport.run demo` |

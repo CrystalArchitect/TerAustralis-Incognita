@@ -32,6 +32,10 @@ the full review process is
    ```bash
    scripts/maintenance/check.sh
    ```
+   *Reality note:* the paths CI checks (`src/`, `tests/`) and `scripts/`
+   itself are not in this repository, and `ci.yml` currently fails on
+   `main` for exactly that reason — see
+   [`docs/architecture/SystemMap.md`](docs/architecture/SystemMap.md#where-the-code-actually-lives).
 
 ## The Belt-Three law (labels)
 
@@ -75,6 +79,10 @@ The reasoning behind this licensing — and the project's wider IP principles
 [`docs/ATTRIBUTIONS.md`](docs/ATTRIBUTIONS.md).
 
 ## Map of the repo
+
+> **Repository status:** the `src/` paths below describe the local code
+> tree and are not in this repository — see
+> [SystemMap: where the code actually lives](docs/architecture/SystemMap.md#where-the-code-actually-lives).
 
 The full map is [`docs/architecture/SystemMap.md`](docs/architecture/SystemMap.md);
 the short version:
