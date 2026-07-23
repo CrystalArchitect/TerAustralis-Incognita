@@ -134,9 +134,13 @@ Useful places to start, roughly in order of how load-bearing they are:
   [`src/crystal-core/SECURITY.md`](src/crystal-core/SECURITY.md) for the protocol
   pack's specific guarantees (Starline Weaver, pipeline quarantine, Starline's
   consent gating).
-- **License:** code is Apache-2.0 (`LICENSE`); mythos content — lore, art,
-  the Codex, the Apocryphon — is CC BY-NC-ND 4.0 (`LICENSE-CONTENT.md`):
-  share with credit, no commercial use, no derivatives.
+- **License:** Code licensing varies by component:
+  - **Core systems** (Lumina, Starline Weaver, RDP, Consent Transport, CrystalBridge): Apache-2.0 (`LICENSE`)
+  - **CrystalCore.OS Emotional Intelligence**: Dual license
+    - Non-commercial use: MIT (`LICENSE.md`) — free, for research and personal projects
+    - Commercial use: Paid commercial license (`COMMERCIAL_LICENSE.md`) — for SaaS, products, consulting
+    - See [`LICENSING.md`](LICENSING.md) for details and pricing
+  - **Mythos content** (lore, art, Codex, Apocryphon): CC BY-NC-ND 4.0 (`LICENSE-CONTENT.md`) — share with credit, no commercial use, no derivatives
 - **Roadmap:** [`Roadmap.md`](docs/governance/Roadmap.md) — what's built,
   what's in progress, and what hasn't started yet.
 - **Changelog:** [`CHANGELOG.md`](CHANGELOG.md) — repository milestones.
