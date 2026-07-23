@@ -11,6 +11,8 @@ decision needs one, how one is accepted — is in
 | [ADR-0001](ADR-0001.md) | Adopt the CrystalCore OS v1.0 repository architecture | Accepted |
 | [ADR-0002](ADR-0002.md) | Content areas: the mythos stays a top-level peer of docs and src | Accepted |
 | [ADR-0003](ADR-0003.md) | Move code into src/ as a uniform shift; keep runtime-coupled files with their code | Accepted |
+| [ADR-0004](ADR-0004.md) | Lock the CrystalCore naming taxonomy; ban future CrystalCore-* runtime names | Accepted |
+| [ADR-0005](ADR-0005.md) | AI Orchestrator — consolidate the naming; ship the concept as documentation first | Accepted |
 
 ## Template
 

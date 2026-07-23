@@ -4,6 +4,39 @@ Notable changes to this repository, newest first. Day-to-day status lives
 in [`docs/governance/Roadmap.md`](docs/governance/Roadmap.md); this file
 records the milestones.
 
+## 2026-07-23 — CrystalCore OS v0.2: Architecture Specification Release
+
+Following review of v0.1, redefined v0.2 from "build the Engine" to
+"clarify the architecture before implementing it" — a documentation-only
+release, no runtime, by design. Rationale and the full decisions:
+[`docs/adr/ADR-0004.md`](docs/adr/ADR-0004.md) (naming) and
+[`docs/adr/ADR-0005.md`](docs/adr/ADR-0005.md) (the orchestrator concept).
+
+### Changed
+- `docs/vision/CrystalCore.md` rewritten from a five-row disambiguation
+  table into the canonical taxonomy: CrystalCore Framework, CrystalCore
+  Protocol, CrystalBridge, and CrystalCore OS, with the pre-existing
+  mythos-terminal/platform name collision documented honestly rather than
+  silently resolved. Any future runtime component is barred from becoming a
+  fifth or sixth "CrystalCore" — it gets a name that describes its role.
+- `docs/architecture/CrystalCore.md`'s section headers aligned to the new
+  canonical names (Framework / Protocol pack / CrystalBridge).
+- `docs/ai/AI-Architecture.md`'s orchestrator section: the previously
+  separate "AI Router" idea folded into one name, "AI Orchestrator,"
+  defined as recommend-then-human-decides (Task → Capability Assessment →
+  Recommended AI → Human Review) rather than autonomous dispatch.
+- `docs/governance/Roadmap.md`'s platform roadmap renumbered: v0.2 is now
+  this specification release (delivered); the actual Engine build moves to
+  v0.3, gated on the specification reaching implementation-level detail;
+  the former v0.3 (Living Archive) becomes v0.4.
+
+### Added
+- `docs/ai/Decision-Matrix.md` — a task-type → recommended-AI →
+  human-review-level table. This is the AI Orchestrator concept's first
+  real increment, not a placeholder: no runtime, no automation, no new
+  failure mode.
+- `docs/adr/ADR-0004.md` and `ADR-0005.md`.
+
 ## 2026-07-23 — CrystalCore OS v1.0 repository architecture
 
 The repository adopted the CrystalCore OS v1.0 layout (platform milestone
