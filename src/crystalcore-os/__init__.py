@@ -40,6 +40,12 @@ except ImportError:
     ActiveLearningDecider = None
     BayesianUncertaintyQuantifier = None
 
+try:
+    from .dbt_integration import DbtDataExporter, DbtDataIngester
+except ImportError:
+    DbtDataExporter = None
+    DbtDataIngester = None
+
 __all__ = [
     "CrystalCore",
     "EmotionalIntelligence",
@@ -58,4 +64,6 @@ __all__ = [
     "UncertaintyQuantifier",
     "ActiveLearningDecider",
     "BayesianUncertaintyQuantifier",
+    "DbtDataExporter",
+    "DbtDataIngester",
 ]
