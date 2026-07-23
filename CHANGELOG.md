@@ -4,6 +4,36 @@ Notable changes to this repository, newest first. Day-to-day status lives
 in [`docs/governance/Roadmap.md`](docs/governance/Roadmap.md); this file
 records the milestones.
 
+## 2026-07-23 — Reconcile licensing chaos across three more uncoordinated sessions
+
+Within roughly 45 minutes, three more uncoordinated Claude sessions and a
+direct push landed licensing-related changes on `main`: one added
+Apache-2.0 SPDX headers to 97 source files, then partially self-corrected;
+another pushed a large restructuring (`packages/`, seven independent
+packages with differentiated per-package licenses — AGPL v3, Proprietary,
+MIT/Commercial dual, CC BY-NC-ND) that changed `README.md`'s license claim
+to something matching neither the root `LICENSE` file nor the new
+per-package licenses it was meant to summarize. `ADR-0009` reconciles this:
+CC BY-NC-ND 4.0 (root `LICENSE`) governs `src/` and `mythos/` today; the
+`packages/` restructuring is real, deliberate work but not yet wired in as
+authoritative (`pyproject.toml` still points at `src/`), so it's recorded
+as the migration's target, not today's license — deliberately not deciding
+between the two as the eventual outcome.
+
+### Changed
+- `README.md`'s license section rewritten to state both facts explicitly
+  instead of picking one silently.
+- 97 source files' stale `SPDX-License-Identifier: Apache-2.0` headers
+  (under `src/apps/`, `src/crystal-core/`, `src/crystalcore/`,
+  `src/crystalcore-os/`, `src/node/`, `src/sdk/`, `src/site/`)
+  batch-corrected to `CC-BY-NC-ND-4.0`.
+- `LICENSE.md`, `LICENSING.md`, `COMMERCIAL_LICENSE.md` (new root files
+  from the restructuring, titled ambiguously as if repo-wide) given a scope
+  note: they're the CrystalCore-EI package's license specifically, not the
+  repository's.
+- `origin/main`'s restructuring merged into this branch; the only real
+  content conflict was `README.md`'s license bullet.
+
 ## 2026-07-23 — Code license: CC BY-NC-ND 4.0, superseding ADR-0006 §1
 
 A separate, uncoordinated Claude session changed `LICENSE` from Apache-2.0
