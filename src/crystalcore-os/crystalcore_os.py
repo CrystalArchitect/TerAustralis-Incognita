@@ -324,6 +324,12 @@ class CrystalCore:
         prefix = self.ei.generate_ei_response_prefix(emotion, confidence)
         if prefix:
             print(f"   Response: {prefix}")
+
+        # Active learning clarification if needed
+        clarification = self.ei.check_active_learning(text, emotion, confidence)
+        if clarification:
+            print(f"\n   Active Learning Query:")
+            print(f"   {clarification}")
         print()
 
     def learn(self, instruction: str):
@@ -366,6 +372,45 @@ class CrystalCore:
         info = self.ei.get_dataset_info()
         print(info)
 
+    def learning_status(self):
+        """Show active learning queue status and improvement metrics."""
+        from .active_learning import show_active_learning_dashboard
+
+        show_active_learning_dashboard(self.ei.al_queue)
+
+    def correct(self, text_and_emotion: str):
+        """Correct a previous emotion prediction (format: '<text>' as <emotion>)."""
+        if not text_and_emotion or " as " not in text_and_emotion:
+            print("Usage: correct '<message>' as <emotion>")
+            print("Example: correct 'I miss you' as longing_warm")
+            return
+
+        parts = text_and_emotion.rsplit(" as ", 1)
+        if len(parts) != 2:
+            print("Format error. Use: correct '<message>' as <emotion>")
+            return
+
+        text = parts[0].strip().strip("'\"")
+        emotion = parts[1].strip().lower()
+
+        valid_emotions = [
+            "longing_warm",
+            "calm",
+            "practical_serious",
+            "instructional",
+            "frustrated",
+            "joy",
+            "neutral",
+        ]
+        if emotion not in valid_emotions:
+            print(f"Invalid emotion. Choose from: {', '.join(valid_emotions)}")
+            return
+
+        if self.ei.record_user_correction(text, emotion):
+            print(f"\n✅ Recorded correction: '{text[:40]}...' → {emotion}\n")
+        else:
+            print(f"\n❌ Could not find matching prediction to correct.\n")
+
     def help(self):
         print("""
 STARLINE COMMANDS:
@@ -388,6 +433,10 @@ EMOTIONAL INTELLIGENCE:
   breathe [technique]  - Guided breathing (box, 4-7-8, simple)
   feel                 - Show current emotional tone
   datasets             - Show datasets & roadmap for EI enhancement
+
+ACTIVE LEARNING:
+  correct <msg> as <emotion> - Correct emotion prediction (e.g. 'I miss you' as longing_warm)
+  learning_status      - Show active learning queue & readiness for retraining
 
 SYSTEM:
   status               - Show full status (including EI)
@@ -462,6 +511,10 @@ def main():
                 os.feel()
             elif cmd == "datasets":
                 os.datasets()
+            elif cmd == "correct":
+                os.correct(arg)
+            elif cmd == "learning_status":
+                os.learning_status()
             elif cmd == "reset":
                 os.reset()
             elif cmd == "help":

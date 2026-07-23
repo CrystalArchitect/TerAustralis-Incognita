@@ -1,10 +1,15 @@
 # Emotional Intelligence & Affective Computing for CrystalCore.OS
-# Implements EI techniques, emotion detection, and adaptive response generation
+# Implements EI techniques, emotion detection, adaptive response generation,
+# and active learning loop for continuous improvement
 
 import json
+import logging
 from pathlib import Path
 from typing import Tuple, Dict, Optional
 
+from .active_learning import ActiveLearningQueue, ActiveLearner
+
+logger = logging.getLogger(__name__)
 EI_STATE_PATH = Path.home() / ".crystalcore" / "ei_state.json"
 
 
@@ -17,6 +22,10 @@ class EmotionalIntelligence:
             "energy_level": "neutral",
             "validation_level": "high"
         }
+
+        # Active learning components
+        self.al_queue = ActiveLearningQueue()
+        self.active_learner = ActiveLearner(self.al_queue)
 
         # Dataset-informed lexicon (inspired by GoEmotions, DailyDialog)
         self.emotion_keywords = {
@@ -243,6 +252,24 @@ class EmotionalIntelligence:
             "resumed": self.resumed
         }
 
+    def check_active_learning(self, text: str, emotion: str, confidence: float) -> Optional[str]:
+        """
+        Check if active learning clarification should be requested.
+        Returns clarification query if confidence is low, None otherwise.
+        """
+        if self.active_learner.should_query_user(confidence):
+            self.active_learner.log_for_labeling(text, emotion, confidence)
+            return self.active_learner.generate_clarification_query(text, emotion, confidence)
+        return None
+
+    def record_user_correction(self, text: str, corrected_emotion: str) -> bool:
+        """Record a user correction for active learning."""
+        return self.active_learner.process_user_correction(text, corrected_emotion)
+
+    def get_learning_status(self) -> Dict:
+        """Get current active learning queue status."""
+        return self.al_queue.get_status()
+
     def get_dataset_info(self) -> str:
         """Return information about emotion recognition datasets and roadmap."""
         return """
@@ -257,12 +284,14 @@ CURRENT IMPLEMENTATION:
   ✓ Lexicon-based emotion detection (keyword matching)
   ✓ Confidence scoring and empathy prefixes
   ✓ User preference learning and persistence
+  ✓ Active learning loop with user feedback collection
 
 PLANNED (v2.0):
   → Fine-tune transformer model (DistilBERT) on GoEmotions
   → Add VAD dimensional scoring for nuance
   → Confidence calibration with probability distributions
   → Enhanced context tracking
+  → Automated periodic model retraining
 
 FUTURE (v3.0+):
   → Multi-modal emotion detection (text + audio)
