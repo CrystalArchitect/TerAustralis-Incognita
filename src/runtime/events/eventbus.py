@@ -53,6 +53,7 @@ class EventBus:
             self.max_queue_size = config.get("eventbus.max_queue_size", 10000)
             self.retention_seconds = config.get("eventbus.retention_seconds", 300)
             self.delivery_timeout_seconds = config.get("eventbus.delivery_timeout_seconds", 30)
+            self.handler_timeout_seconds = config.get("eventbus.handler_timeout_seconds", 5)
             self.max_retries = config.get("eventbus.max_retries", 3)
             self.log_level = config.get("eventbus.log_level", "info")
         except Exception as e:
@@ -62,6 +63,7 @@ class EventBus:
         self._events: List[Event] = []
         self._subscriptions: Dict[str, Subscription] = {}
         self._lock = threading.RLock()
+        self._delivery_lock = threading.Lock()
 
         # Delivery tracking
         self._delivery_attempts: Dict[str, int] = {}
@@ -69,7 +71,8 @@ class EventBus:
 
         self.logging.operational("info", "EventBus initialized", {
             "max_queue_size": self.max_queue_size,
-            "retention_seconds": self.retention_seconds
+            "retention_seconds": self.retention_seconds,
+            "handler_timeout_seconds": self.handler_timeout_seconds
         })
 
     def publish(
@@ -213,20 +216,33 @@ class EventBus:
                 self._deliver_to_subscriber(event, subscription)
 
     def _deliver_to_subscriber(self, event: Event, subscription: Subscription) -> None:
-        """Attempt to deliver an event to a subscriber."""
-        try:
-            subscription.handler(event)
-            # Mark as delivered
-            if subscription.subscription_id in self._pending_events:
-                if event.event_id in self._pending_events[subscription.subscription_id]:
-                    self._pending_events[subscription.subscription_id].remove(event.event_id)
-        except Exception as e:
-            self.logging.operational("warn", f"Delivery failed for subscription", {
+        """Attempt to deliver an event to a subscriber with timeout."""
+        def run_handler():
+            try:
+                subscription.handler(event)
+                # Mark as delivered
+                with self._delivery_lock:
+                    if subscription.subscription_id in self._pending_events:
+                        if event.event_id in self._pending_events[subscription.subscription_id]:
+                            self._pending_events[subscription.subscription_id].remove(event.event_id)
+            except Exception as e:
+                self.logging.operational("warn", f"Delivery failed for subscription", {
+                    "subscription_id": subscription.subscription_id,
+                    "event_id": event.event_id,
+                    "error": str(e),
+                })
+
+        # Run handler in thread with timeout to prevent blocking
+        handler_thread = threading.Thread(target=run_handler, daemon=True)
+        handler_thread.start()
+        handler_thread.join(timeout=self.handler_timeout_seconds)
+
+        if handler_thread.is_alive():
+            self.logging.operational("warn", f"Handler timeout for subscription", {
                 "subscription_id": subscription.subscription_id,
                 "event_id": event.event_id,
-                "error": str(e),
+                "timeout_seconds": self.handler_timeout_seconds,
             })
-            # Could implement retry logic here
 
     def _matches_pattern(self, event_type: str, pattern: str) -> bool:
         """Check if event_type matches pattern (wildcard support)."""

@@ -4,6 +4,7 @@ from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional
 import time
 import json
+import threading
 
 from ..coordinator.coordinator import Coordinator, Task, ExecutionContext
 from ..logging.logger import Logger
@@ -63,8 +64,9 @@ class RuntimeAPI:
         except Exception as e:
             raise ValueError(f"Failed to load API configuration: {e}")
 
-        # Rate limiting
+        # Rate limiting with thread safety
         self._request_times: Dict[str, List[float]] = {}
+        self._rate_limit_lock = threading.Lock()
         self._start_time = time.time()
         self._request_count = 0
         self._error_count = 0
@@ -368,26 +370,27 @@ class RuntimeAPI:
             )
 
     def _check_rate_limit(self, caller_identity: str) -> bool:
-        """Check if caller is within rate limit."""
-        now = time.time()
+        """Check if caller is within rate limit (thread-safe)."""
+        with self._rate_limit_lock:
+            now = time.time()
 
-        # Initialize if needed
-        if caller_identity not in self._request_times:
-            self._request_times[caller_identity] = []
+            # Initialize if needed
+            if caller_identity not in self._request_times:
+                self._request_times[caller_identity] = []
 
-        # Remove old entries (older than 1 minute)
-        self._request_times[caller_identity] = [
-            t for t in self._request_times[caller_identity]
-            if now - t < 60
-        ]
+            # Remove old entries (older than 1 minute)
+            self._request_times[caller_identity] = [
+                t for t in self._request_times[caller_identity]
+                if now - t < 60
+            ]
 
-        # Check limit
-        if len(self._request_times[caller_identity]) >= self.rate_limit_per_minute:
-            return False
+            # Check limit
+            if len(self._request_times[caller_identity]) >= self.rate_limit_per_minute:
+                return False
 
-        # Add current request
-        self._request_times[caller_identity].append(now)
-        return True
+            # Add current request (atomic with check)
+            self._request_times[caller_identity].append(now)
+            return True
 
     def get_metrics(self) -> Dict[str, Any]:
         """Get API metrics."""
