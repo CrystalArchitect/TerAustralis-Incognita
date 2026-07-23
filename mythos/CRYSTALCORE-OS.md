@@ -2,11 +2,11 @@
 
 The mythos as a terminal you can fly.
 
-`crystalcore_os.py` in this folder is a small, self-contained text adventure —
+`crystalcore_os.py` (in `src/crystalcore-os/`) is a small, self-contained text adventure —
 the Crystal universe rendered as an interactive command line. It's Vision-layer:
 a playable story, not one of the project's Built software components (those are
 Lumina, the Starline Weaver, Starline, and CrystalBridge — see
-[`../ROADMAP.md`](../ROADMAP.md)). No server, no dependencies, no account. You
+[`../docs/governance/Roadmap.md`](../docs/governance/Roadmap.md)). No server, no dependencies, no account. You
 launch a Starline, cross the network, visit five nodes, gather their keys, and
 the First Gate opens — *not by force, but by sovereign recognition.* For the
 cosmology behind the terminal — the Lattice, the Cosmic Archive, the Sovereign
@@ -15,7 +15,7 @@ Vectors — see [`content/CRYSTALCORE-OS-VISION.md`](content/CRYSTALCORE-OS-VISI
 ## Run it
 
 ```bash
-python3 mythos/crystalcore_os.py
+python3 src/crystalcore-os/crystalcore_os.py
 ```
 
 Standard-library Python only — nothing to install. You'll land at a

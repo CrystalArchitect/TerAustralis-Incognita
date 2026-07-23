@@ -17,20 +17,20 @@ jobs:
           node-version: '20'
 
       - name: Install dependencies
-        run: cd site && npm install
+        run: cd src/site && npm install
 
       - name: Build
-        run: cd site && npm run build
+        run: cd src/site && npm run build
 
       - name: Add static demo shells to the Pages artifact
         run: |
-          cp -r apps/crystal-interface site/build/crystal-interface
-          cp -r apps/vision-web site/build/vision-web
+          cp -r src/apps/crystal-interface src/site/build/crystal-interface
+          cp -r src/apps/vision-web src/site/build/vision-web
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'site/build'
+          path: 'src/site/build'
 
   deploy:
     needs: build_site

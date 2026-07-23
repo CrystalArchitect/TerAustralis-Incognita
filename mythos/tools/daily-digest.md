@@ -9,7 +9,7 @@ resonance and boiled down to what's worth a closer look. It's the
 a "scan" of a day you didn't feed it. A version that generates fake posts and
 assigns them fake 80/100 scores would be manufacturing a survey that never
 happened — precisely the dreamed-as-surveyed move
-[`../../THE-INCOGNITA-RULE.md`](../../THE-INCOGNITA-RULE.md) forbids. If you paste
+[`../../docs/governance/The-Incognita-Rule.md`](../../docs/governance/The-Incognita-Rule.md) forbids. If you paste
 nothing, there's nothing to report, and that's an honest answer. A quiet day is a
 quiet day.
 

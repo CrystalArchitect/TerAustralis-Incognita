@@ -14,12 +14,12 @@ until a fix has shipped.
 
 ## Safety measures in this repo
 
-- **CrystalBridge is fail-closed** (`crystalcore/gate.py`): every guest-AI call
+- **CrystalBridge is fail-closed** (`src/crystalcore/gate.py`): every guest-AI call
   passes four checks — approval, permission, scope, provenance — and refusal is
   the default on any failure.
-- **Append-only audit** (`crystalcore/audit.py`): every guest interaction is
+- **Append-only audit** (`src/crystalcore/audit.py`): every guest interaction is
   logged; the log is not rewritten.
-- **Scoped guests** (`profiles/*/bridge_config.json`): each guest AI gets an
+- **Scoped guests** (`src/profiles/*/bridge_config.json`): each guest AI gets an
   explicit tool list; nothing is granted implicitly.
 - **No secrets committed** — `.gitignore` blocks `.env`, keys, and credentials.
 

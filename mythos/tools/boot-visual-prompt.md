@@ -17,7 +17,7 @@ repo runs either one.
   preview, or "weave" anything. No boot sequence has been generated,
   integrated, or added to any Lattice by this commit — these are text
   prompts, unexecuted, per
-  [`../../THE-INCOGNITA-RULE.md`](../../THE-INCOGNITA-RULE.md): a dreamed
+  [`../../docs/governance/The-Incognita-Rule.md`](../../docs/governance/The-Incognita-Rule.md): a dreamed
   line stays dreamed until something surveyed — an actual rendered file
   someone can look at — exists.
 - **Not a claim about a source clip.** The identity-flow beat is written from

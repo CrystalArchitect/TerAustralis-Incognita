@@ -1,7 +1,7 @@
 # Content License
 
 All original written content in this repository — the TerAustralis lore and
-narrative (`TeraAustralis/`), the CrystalVision visual suite (`CrystalVision/`),
+narrative (`mythos/teraaustralis/`), the CrystalVision visual suite (`CrystalVision/`),
 universe/brand documents, imagery, and design — is licensed under:
 
 **Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)**

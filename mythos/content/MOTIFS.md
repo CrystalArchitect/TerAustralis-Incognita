@@ -3,7 +3,7 @@
 
 Every mythos has a visual language. This one draws with two: a **geometry** and a
 **number-wheel**. Both are used as *symbols* — emblems that carry meaning, not
-measurements. Per [`../../THE-INCOGNITA-RULE.md`](../../THE-INCOGNITA-RULE.md),
+measurements. Per [`../../docs/governance/The-Incognita-Rule.md`](../../docs/governance/The-Incognita-Rule.md),
 where a motif touches a real fact we say so plainly, and where it reaches past the
 facts into cosmology we say that too. A motif can be beautiful and still not be
 physics.
@@ -14,7 +14,7 @@ Seven circles, evenly overlapped into a flower: the Seven Sisters, the seven
 paths of the Songline, seven ways one water finds the light. It's the shape the
 story wears — symbolic, aesthetic, honoured across many traditions as image. It
 doesn't measure or prove anything, and it doesn't claim to. (See the seven-sisters
-songline docs in [`../../crystal-core/`](../../crystal-core/), where it names the
+songline docs in [`../../research/seven-sisters/`](../../research/seven-sisters/), where it names the
 seven paths.)
 
 ## The Vortex Wheel — "vortex mathematics"

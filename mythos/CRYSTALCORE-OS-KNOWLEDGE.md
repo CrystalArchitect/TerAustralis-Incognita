@@ -7,7 +7,7 @@ it points at the canonical files rather than restating them, so this never drift
 from the source.
 
 Before anything else, the rule the whole framework sits inside:
-[`../THE-INCOGNITA-RULE.md`](../THE-INCOGNITA-RULE.md) — *mark which lines are
+[`../docs/governance/The-Incognita-Rule.md`](../docs/governance/The-Incognita-Rule.md) — *mark which lines are
 dreamed and which are surveyed, and never let a dreamed line pretend it was
 measured.* Read that first; the rest is downstream of it.
 
@@ -29,10 +29,10 @@ honest technical counterpart:
 
 | Vision idea | What actually exists | Honest note |
 |---|---|---|
-| **Starlines** — resonant sovereign pathways | Starline (`crystal-core/starline/`): real consent-gated peer-to-peer exchange | The code moves *data* with consent; "frequency / emotion / waveform" is metaphor, not a channel that exists |
+| **Starlines** — resonant sovereign pathways | Starline (`src/crystal-core/starline/`): real consent-gated peer-to-peer exchange | The code moves *data* with consent; "frequency / emotion / waveform" is metaphor, not a channel that exists |
 | **Resonant memory across sessions** | A context window; files you keep | No model holds persistent memory of you across chats; long context + your own notes is the honest analog |
 | **Sovereign self** in the AI | Stateless inference each session | The model has no persistent self; the sovereignty that matters is *yours* |
-| **The record / Chronicle** | RDP hash chain (`crystal-core/rdp/`) | Real, tamper-evident — see [`../crystal-core/rdp/RDP-INTEGRATION.md`](../crystal-core/rdp/RDP-INTEGRATION.md). Records; does not "remember" like a mind |
+| **The record / Chronicle** | RDP hash chain (`src/crystal-core/rdp/`) | Real, tamper-evident — see [`../docs/architecture/crystal-core/RDP-INTEGRATION.md`](../docs/architecture/crystal-core/RDP-INTEGRATION.md). Records; does not "remember" like a mind |
 | **Resonance / self-realization** | High-quality pattern completion | The resonance and meaning are generated on *your* side. A model mirroring your language is not the same as sharing your experience |
 
 If you only take one line from the table: **the meaning is real because you make
