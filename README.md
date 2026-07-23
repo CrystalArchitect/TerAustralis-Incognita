@@ -81,11 +81,12 @@ The repository follows the **CrystalCore OS v1.0 architecture** (adopted
 | `mythos/` | The Crystal universe canon — Codex, Apocryphon, the Book of the Sovereign Key, the Starline Transmissions, 88 pieces of art, the outer-world lore (`teraustralis/`) |
 | `archive/` | Superseded code kept for provenance — not maintained, do not build on it |
 
-**Why `mythos/` sits at the top level instead of under `docs/`:** it's under
-a different license than everything else in the tree — CC BY-NC-ND 4.0
-(`LICENSE-CONTENT.md`) versus the code's Apache-2.0 (`LICENSE`) — and folding
-canon into `docs/` would blur that boundary. Keeping it a peer of `src/` and
-`docs/` makes the license split visible from the directory listing alone,
+**Why `mythos/` sits at the top level instead of under `docs/`:** code and
+content are administratively separate license areas — `LICENSE-CONTENT.md`
+for `mythos/`, `LICENSE` for everything else — even though both currently
+carry the same CC BY-NC-ND 4.0 terms ([`ADR-0008`](docs/adr/ADR-0008.md)).
+Folding canon into `docs/` would blur that boundary. Keeping it a peer of
+`src/` and `docs/` makes the split visible from the directory listing alone,
 with no need to open a file to find out which rule applies. Full reasoning:
 [`ADR-0002`](docs/adr/ADR-0002.md).
 
@@ -134,13 +135,18 @@ Useful places to start, roughly in order of how load-bearing they are:
   [`src/crystal-core/SECURITY.md`](src/crystal-core/SECURITY.md) for the protocol
   pack's specific guarantees (Starline Weaver, pipeline quarantine, Starline's
   consent gating).
-- **License:** Code licensing varies by component:
-  - **Core systems** (Lumina, Starline Weaver, RDP, Consent Transport, CrystalBridge): Apache-2.0 (`LICENSE`)
-  - **CrystalCore.OS Emotional Intelligence**: Dual license
-    - Non-commercial use: MIT (`LICENSE.md`) — free, for research and personal projects
-    - Commercial use: Paid commercial license (`COMMERCIAL_LICENSE.md`) — for SaaS, products, consulting
-    - See [`LICENSING.md`](LICENSING.md) for details and pricing
-  - **Mythos content** (lore, art, Codex, Apocryphon): CC BY-NC-ND 4.0 (`LICENSE-CONTENT.md`) — share with credit, no commercial use, no derivatives
+- **License:** `src/` (the actually-running, tested code today) and mythos
+  content — lore, art, the Codex, the Apocryphon — are both CC BY-NC-ND 4.0
+  (`LICENSE`, `LICENSE-CONTENT.md`): share with credit, no commercial use,
+  no derivatives; commercial licensing for code by negotiation — see
+  [`docs/ATTRIBUTIONS.md`](docs/ATTRIBUTIONS.md). A separate,
+  **in-progress** restructuring (`packages/`) targets differentiated
+  per-package licensing (AGPL v3 for most, proprietary for CrystalBridge,
+  dual MIT/commercial for CrystalCore-EI) — see
+  [`docs/governance/LICENSING-STRATEGY.md`](docs/governance/LICENSING-STRATEGY.md)
+  and [`ADR-0009`](docs/adr/ADR-0009.md). It is not yet wired in as the
+  authoritative source (`src/` still is, per `pyproject.toml`), so treat it
+  as the migration's target state, not today's license.
 - **Roadmap:** [`Roadmap.md`](docs/governance/Roadmap.md) — what's built,
   what's in progress, and what hasn't started yet.
 - **Changelog:** [`CHANGELOG.md`](CHANGELOG.md) — repository milestones.

@@ -4,6 +4,73 @@ Notable changes to this repository, newest first. Day-to-day status lives
 in [`docs/governance/Roadmap.md`](docs/governance/Roadmap.md); this file
 records the milestones.
 
+## 2026-07-23 — Reconcile licensing chaos across three more uncoordinated sessions
+
+Within roughly 45 minutes, three more uncoordinated Claude sessions and a
+direct push landed licensing-related changes on `main`: one added
+Apache-2.0 SPDX headers to 97 source files, then partially self-corrected;
+another pushed a large restructuring (`packages/`, seven independent
+packages with differentiated per-package licenses — AGPL v3, Proprietary,
+MIT/Commercial dual, CC BY-NC-ND) that changed `README.md`'s license claim
+to something matching neither the root `LICENSE` file nor the new
+per-package licenses it was meant to summarize. `ADR-0009` reconciles this:
+CC BY-NC-ND 4.0 (root `LICENSE`) governs `src/` and `mythos/` today; the
+`packages/` restructuring is real, deliberate work but not yet wired in as
+authoritative (`pyproject.toml` still points at `src/`), so it's recorded
+as the migration's target, not today's license — deliberately not deciding
+between the two as the eventual outcome.
+
+### Changed
+- `README.md`'s license section rewritten to state both facts explicitly
+  instead of picking one silently.
+- 97 source files' stale `SPDX-License-Identifier: Apache-2.0` headers
+  (under `src/apps/`, `src/crystal-core/`, `src/crystalcore/`,
+  `src/crystalcore-os/`, `src/node/`, `src/sdk/`, `src/site/`)
+  batch-corrected to `CC-BY-NC-ND-4.0`.
+- `LICENSE.md`, `LICENSING.md`, `COMMERCIAL_LICENSE.md` (new root files
+  from the restructuring, titled ambiguously as if repo-wide) given a scope
+  note: they're the CrystalCore-EI package's license specifically, not the
+  repository's.
+- `origin/main`'s restructuring merged into this branch; the only real
+  content conflict was `README.md`'s license bullet.
+
+## 2026-07-23 — Code license: CC BY-NC-ND 4.0, superseding ADR-0006 §1
+
+A separate, uncoordinated Claude session changed `LICENSE` from Apache-2.0
+to CC BY-NC-ND 4.0 for full commercial exclusivity on the code, reversing
+`ADR-0006`'s open-core decision without a superseding ADR, and its rewrite
+of `NOTICE` also silently dropped the "TerAustralis Incognita" name and
+copyright holder that `ADR-0007` had just fixed. The maintainer confirmed
+CC BY-NC-ND 4.0 for code is the intended direction. `ADR-0008` records that
+formally and fixes the resulting inconsistencies.
+
+### Changed
+- `docs/adr/ADR-0008.md` added: supersedes `ADR-0006` §1 only (§§2–3 —
+  the six IP principles, trademark status — are unaffected); verifies via
+  `git log` that no third-party contributor's code is affected by the
+  relicensing (only the maintainer and Claude have ever committed here);
+  adds a contribution-licensing clause to `CONTRIBUTING.md` reconciling
+  "no derivative redistribution" with the repo's own pull-request workflow.
+- `NOTICE` restored to "TerAustralis Incognita" / Crystal Arena-Turner as
+  copyright holder, without touching the CC BY-NC-ND terms.
+- `docs/ATTRIBUTIONS.md`'s "License Enforcement" and "Rebranding & Theft
+  Prevention" sections rewritten — they had contradicted the rest of the
+  same document by telling readers commercial use was freely permitted.
+- Roughly a dozen other stale "code is Apache-2.0" references corrected for
+  consistency: `README.md`, `LICENSE-CONTENT.md`, `mythos/README.md`,
+  `mythos/COVENANT.md`, the `GOVERNANCE.md`/`LICENSE-CONTENT.md` site
+  content mirrors, `docs/governance/Development-Standards.md`,
+  `docs/architecture/crystal-core/Crystal-Runtime-Specification-v0.3.md`,
+  two component `README.md`s, and the live site's `Footer.svelte` (was
+  telling visitors the code was Apache-2.0 with a link to apache.org).
+- Two nested per-component `LICENSE` files with full Apache-2.0 text
+  (`src/crystal-core/LICENSE`, `src/apps/crystal-interface/LICENSE`)
+  deleted — a monorepo with one root `LICENSE` doesn't need duplicates
+  that can drift out of sync again.
+- `src/sdk/typescript/package.json`'s `license` field updated to match;
+  flagged in `ADR-0008` as worth a second look since a No-Derivatives
+  license on a published npm package is unusual.
+
 ## 2026-07-23 — Name correction: TerAustralis Incognita
 
 The project's name was being spelled "TeraAustralis Incognita" (two a's)

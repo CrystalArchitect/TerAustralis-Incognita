@@ -48,11 +48,13 @@ MemClaw's mechanism for flagging conflicting memories informed:
 ### Attribution & Licensing
 
 When using CrystalCore OS or the Crystal Runtime:
-- This work is distributed under Apache 2.0, the same permissive license as MemClaw
-- Any derivative or redistributed version must:
+- This work is distributed under CC BY-NC-ND 4.0 — non-commercial use only,
+  no derivative redistribution. MemClaw itself remains Apache 2.0; only the
+  *application* of its patterns here is CC BY-NC-ND 4.0.
+- Any non-commercial, unmodified redistribution must:
   1. Retain this ATTRIBUTIONS.md file or equivalent attribution
   2. State that it is derived from CrystalCore OS (and indirectly, from MemClaw)
-  3. Preserve the Apache 2.0 license notice and reference the original sources
+  3. Preserve the CC BY-NC-ND 4.0 license notice and reference the original sources
   4. Not misrepresent authorship or remove attribution notices
 
 ---
@@ -109,42 +111,40 @@ If you redistribute unmodified CrystalCore OS:
 ### Copyright Notice
 
 ```
-Copyright (c) 2026 CrystalCore OS Contributors
+Copyright (c) 2026 Crystal Arena-Turner (TerAustralis Incognita)
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+Licensed under Creative Commons Attribution-NonCommercial-NoDerivatives
+4.0 International (CC BY-NC-ND 4.0). Non-commercial use only; no
+derivative redistribution; attribution required. Commercial use requires
+explicit permission from the copyright holder.
 
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+Full legal text: https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode
 
 This work incorporates concepts and patterns from MemClaw
 (https://github.com/caura-ai/caura-memclaw, Apache 2.0),
-maintained by eToro and contributors.
+maintained by eToro and contributors — those patterns remain credited
+under MemClaw's own Apache 2.0 license; only their application here is
+CC BY-NC-ND 4.0.
 ```
 
 This notice applies to all code, specifications, and documentation in CrystalCore OS unless otherwise noted.
 
 ### Rebranding & Theft Prevention
 
-CrystalCore OS is protected under Apache 2.0. This means:
-- **You can use it freely** — for commercial or personal projects, with or without modification.
-- **You must attribute it** — any distribution or modification must credit the original work and this license.
+CrystalCore OS is protected under CC BY-NC-ND 4.0. This means:
+- **Non-commercial use is allowed** — research, education, personal projects, with attribution.
+- **Commercial use requires the copyright holder's explicit permission** — this is not permissively licensed for commercial or unrestricted reuse.
+- **You must attribute it** — any permitted distribution must credit the original work and this license.
 - **You cannot rebrand it** — you cannot remove attribution, falsify authorship, or present modified versions as your original work.
-- **Derivative works must be disclosed** — if you modify and redistribute, users must know it is derived from CrystalCore OS.
+- **You cannot distribute modified versions at all** — CC BY-NC-ND prohibits derivative redistribution outright, commercial or not; only unmodified copies may be shared.
 
-If you discover a violation (rebranding, false attribution, license removal, etc.), report it to the project maintainers or to the Apache Software Foundation.
+If you discover a violation (rebranding, false attribution, unauthorized commercial use, license removal, etc.), report it to the project maintainer.
 
 ---
 
 ## Related Documents
 
-- [LICENSE](../../LICENSE) — Full Apache 2.0 license text
+- [LICENSE](../../LICENSE) — Full CC BY-NC-ND 4.0 license summary and terms
 - [CONTRIBUTING.md](../../CONTRIBUTING.md) — Contribution guidelines (includes attribution requirements)
 - [README.md](../../README.md) — Project overview
 - [docs/governance/AI-Governance.md](governance/AI-Governance.md) — AI collaboration governance (includes attribution rules for AI-assisted work)
