@@ -1,0 +1,59 @@
+name: Publish Packages to PyPI
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+      - 'lumina-v*'
+      - 'rdp-v*'
+      - 'consent-v*'
+      - 'bridge-v*'
+      - 'starline-v*'
+      - 'ei-v*'
+      - 'mythos-v*'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        package:
+          - { dir: 'packages/lumina', name: 'teraaustralis-lumina' }
+          - { dir: 'packages/rdp', name: 'teraaustralis-rdp' }
+          - { dir: 'packages/consent-transport', name: 'teraaustralis-consent' }
+          - { dir: 'packages/crystalbridge', name: 'teraaustralis-bridge' }
+          - { dir: 'packages/starline', name: 'teraaustralis-starline' }
+          - { dir: 'packages/crystalcore-ei', name: 'teraaustralis-ei' }
+          - { dir: 'packages/mythos', name: 'teraaustralis-mythos' }
+
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      
+      - name: Install build tools
+        run: |
+          python -m pip install --upgrade pip
+          pip install build twine
+      
+      - name: Build package
+        run: |
+          cd ${{ matrix.package.dir }}
+          python -m build
+      
+      - name: Check distribution
+        run: |
+          cd ${{ matrix.package.dir }}
+          twine check dist/*
+      
+      - name: Publish to PyPI
+        if: startsWith(github.ref, 'refs/tags/')
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+        run: |
+          cd ${{ matrix.package.dir }}
+          twine upload dist/* --skip-existing
