@@ -11,6 +11,10 @@ __pycache__/
 *.pyc
 .venv/
 venv/
+*.egg-info/
+build/
+dist/
+.pytest_cache/
 
 # OS / editor
 .DS_Store
