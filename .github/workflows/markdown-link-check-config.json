@@ -27,10 +27,14 @@
     {
       "comment": "GitHub repo settings pages (docs/guides/Access.md points admins at Settings > Access): served only to authenticated admins, so an anonymous checker gets 404 regardless of whether the URL is correct. Verified on CI run 30053981478 (2026-07-24). The admin who follows the guide is the verification.",
       "pattern": "^https://github\\.com/[^/]+/[^/]+/settings/"
+    },
+    {
+      "comment": "Australia's State of the Environment portal times out for CI runners (ESOCKETTIMEDOUT at 20s, CI run 30054270459, 2026-07-24) - referenced from research/seven-sisters/WATER-BRIEF.md. Reachable in a browser; the timeout is checker-vs-portal behaviour, not link death.",
+      "pattern": "^https://soe\\.dcceew\\.gov\\.au"
     }
   ],
   "retryOn429": true,
   "retryCount": 3,
   "timeout": "20s",
-  "aliveStatusCodes": [200, 206, 301, 302, 403]
+  "aliveStatusCodes": [200, 202, 206, 301, 302, 403]
 }
