@@ -16,6 +16,7 @@ decision needs one, how one is accepted — is in
 | [ADR-0006](ADR-0006.md) | Licensing strategy — keep the dual license, record the IP principles, flag trademark as unfinished | Accepted — §1 superseded by ADR-0008 |
 | [ADR-0007](ADR-0007.md) | Correct the project name to "TerAustralis Incognita"; rename mythos/teraaustralis/ | Accepted |
 | [ADR-0008](ADR-0008.md) | Supersede ADR-0006 §1 — adopt CC BY-NC-ND 4.0 for code; reconcile the fallout | Accepted |
+| [ADR-0009](ADR-0009.md) | Reconcile the licensing chaos — CC BY-NC-ND governs today; packages/ is an in-progress target | Accepted |
 
 ## Template
 

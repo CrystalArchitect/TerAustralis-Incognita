@@ -2,6 +2,10 @@
 
 **CrystalCore.OS – Emotional Intelligence & Affective Computing System**
 
+> **Scope note:** this agreement covers the **CrystalCore-EI** package
+> (`packages/crystalcore-ei/`) specifically, not the repository as a whole
+> — see [`ADR-0009`](docs/adr/ADR-0009.md).
+
 Copyright (c) 2026 CrystalArchitect. All Rights Reserved.
 
 ---
