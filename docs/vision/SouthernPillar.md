@@ -3,7 +3,7 @@
 Vision-layer strategy — direction and framing, not measured claims. Moved
 here from `TeraAustralis/strategy/southern-pillar.md` in the v1.0
 reorganization; the surrounding lore lives in
-[`mythos/teraaustralis/`](../../mythos/teraaustralis/README.md).
+[`mythos/teraustralis/`](../../mythos/teraustralis/README.md).
 
 ## Southern Pillar
 

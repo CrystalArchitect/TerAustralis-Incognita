@@ -28,6 +28,9 @@ clementine_memory/
 clementine_profiles/
 memory/config.json
 
+# CrystalCore.OS local state — user preferences, progress, active learning queue
+.crystalcore/
+
 # CrystalBridge audit trail and guest messages — real conversation content,
 # never go in git (bridge_config.json itself is fine to commit)
 src/profiles/*/audit.jsonl
