@@ -38,6 +38,17 @@ fix) plus the boundary charter, this plan, and ADR-0011.
 
 ## Stage 1 — land the code into git
 
+> **Stage 1 approved (2026-07-23).** Per this plan's per-stage gate, the
+> maintainer (Crystal) selected, in-session: **option 1b** — import into
+> `TerAustralis-Incognita-Code` with `core/` and `vision/` top-level
+> areas; **hand-off by staging-branch push** from the local canon tree
+> (the maintainer pushes; the ignore rules keep personal data out);
+> **engine-first scope** — PR 1 imports `core/` only, `vision/` follows
+> as PR 2, and the site / mythos-terminal placements are decided at
+> PR 2. Directory names are preserved under the new area roots — no
+> component renames. Options 1a and 1c below are retained for the
+> record.
+
 **Precondition:** the maintainer confirms the local tree (not the 07-17
 snapshot) is the canon version to import, and runs or supervises the
 import from the machine that has it.
