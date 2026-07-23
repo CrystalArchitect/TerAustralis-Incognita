@@ -13,7 +13,7 @@ maintainer merges.
 3. **CI must pass** (`.github/workflows/ci.yml`):
    - `python -m compileall -q src tests archive` — syntax across the tree
    - the crystal-core self-tests: `clementine.bridge.selftest`,
-     `services.selftest`, `starline.selftest`, `rdp.selftest`
+     `services.selftest`, `consent_transport.selftest`, `rdp.selftest`
    - `pytest src/apps/lumina/tests` and `pytest tests`
    Run the same checks locally first: `scripts/maintenance/check.sh`
    (details in

@@ -27,7 +27,7 @@ the full review process is
    files are ignored and stay that way.
 5. **CI must pass.** Every PR runs a Python syntax check, the
    crystal-core self-tests (`clementine.bridge.selftest`,
-   `services.selftest`, `starline.selftest`, `rdp.selftest`), and the
+   `services.selftest`, `consent_transport.selftest`, `rdp.selftest`), and the
    pytest suites. Run them locally first:
    ```bash
    scripts/maintenance/check.sh

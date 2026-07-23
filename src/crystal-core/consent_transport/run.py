@@ -1,6 +1,6 @@
-"""Watch Starline actually work — two agents, one process, real sockets.
+"""Watch Consent Transport actually work — two agents, one process, real sockets.
 
-    python3 -m starline.run demo
+    python3 -m consent_transport.run demo
 
 Runs two agents (in throwaway temp directories, never touching real
 identity files), pairs them, shows a request being denied before consent,
@@ -67,7 +67,7 @@ def demo() -> None:
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="Starline demo")
+    parser = argparse.ArgumentParser(description="Consent Transport demo")
     parser.add_argument("command", choices=["demo"], nargs="?", default="demo")
     parser.parse_args(argv)
     demo()

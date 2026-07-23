@@ -84,17 +84,17 @@ python3 -m services.api --port 8899                                 # serve it
 Visual story: open `interface/index.html` — an interactive demo of the twin, pipeline,
 mesh, and econ simulation (simulated data, labeled as such).
 
-## Starline — sovereign agent-to-agent communication
+## Consent Transport — sovereign agent-to-agent communication
 
 The technical realization of the mythic Starlines: two locally-running Lumina
 agents exchange consented memory fragments directly, peer to peer, over a real Noise
 Protocol handshake — no server between them, no data moved without explicit,
 revocable consent. Spec: `../../docs/architecture/crystal-core/STARLINE.md`. Needs one dependency
-(`pip install -r requirements-starline.txt`) — the only non-stdlib code in this repo.
+(`pip install -r requirements-consenttransport.txt`) — the only non-stdlib code in this repo.
 
 ```bash
-python3 -m starline.selftest   # prove it — real TCP sockets, real handshake, 9/9
-python3 -m starline.run demo   # watch it: pair, deny, grant, exchange, revoke, deny
+python3 -m consent_transport.selftest   # prove it — real TCP sockets, real handshake, 9/9
+python3 -m consent_transport.run demo   # watch it: pair, deny, grant, exchange, revoke, deny
 ```
 
 ## Paths (1–7)

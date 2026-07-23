@@ -5,12 +5,12 @@
 </script>
 
 <svelte:head>
-  <title>Starline Protocol - TerAustralis Incognita</title>
+  <title>Consent Transport Protocol - TerAustralis Incognita</title>
 </svelte:head>
 
 <div class="starline-container">
   <section class="starline-hero">
-    <h1>Starline Protocol</h1>
+    <h1>Consent Transport Protocol</h1>
     <p>Sovereign peer-to-peer memory exchange with consent as law.</p>
     <p style="font-size: 0.95rem; opacity: 0.7; margin-top: 1rem;">
       Real implementation using Noise Protocol IK (X25519 + ChaCha20-Poly1305 + SHA256).
@@ -21,9 +21,9 @@
 
   <section class="starline-intro">
     <div class="intro-text">
-      <h2>What is Starline?</h2>
+      <h2>What is Consent Transport?</h2>
       <p>
-        Starline is a peer-to-peer protocol for sovereign memory exchange. Two agents meet as equals,
+        Consent Transport is a peer-to-peer protocol for sovereign memory exchange. Two agents meet as equals,
         authenticate each other through a Noise handshake, and exchange fragments of memory — but only
         if consent is granted, and only while consent holds.
       </p>
@@ -33,7 +33,7 @@
         no third-party relay can intercept or change it.
       </p>
       <p>
-        Starline emerged from a simple question: <em>"What if we built a network where every node
+        Consent Transport (formerly known as Starline, the technical realization of the mythic "Starlines") emerged from a simple question: <em>"What if we built a network where every node
         is sovereign?"</em>
       </p>
     </div>

@@ -17,9 +17,9 @@ that detail, it points to it.
 - **The Starline Weaver** (`src/crystal-core/clementine/bridge/`) — multi-AI message
   bus with the Belt-Three law enforced in code, not just convention. Self-test:
   `python3 -m clementine.bridge.selftest`.
-- **Starline** (`src/crystal-core/starline/`) — peer-to-peer consent-gated memory
+- **Starline** (`src/crystal-core/consent_transport/`) — peer-to-peer consent-gated memory
   exchange over a real Noise Protocol handshake. Self-test: `python3 -m
-  starline.selftest`; watch it work: `python3 -m starline.run demo`.
+  consent_transport.selftest`; watch it work: `python3 -m consent_transport.run demo`.
 - **CrystalBridge** (`src/crystalcore/`) — the MCP consent gate. Fail-closed by
   design: every guest-AI call passes approval, permission, scope, and
   provenance checks, with append-only audit logging.

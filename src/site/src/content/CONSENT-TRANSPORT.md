@@ -1,10 +1,10 @@
-# Starline — Technical Architecture
+# Consent Transport — Technical Architecture
 
-**Status:** v1 implemented — `src/crystal-core/starline/` · `python3 -m starline.selftest`
+**Status:** v1 implemented — `src/crystal-core/consent_transport/` · `python3 -m consent_transport.selftest`
 
 ## Purpose
 
-Starline is the sovereign communication layer between individually
+Consent Transport is the sovereign communication layer between individually
 locally-running Lumina agents. It lets two companions exchange
 consented memory fragments directly, peer to peer, without routing
 through a central server or surrendering data ownership.
@@ -50,7 +50,7 @@ than the answer for whoever revisits this later:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                    Starline Layer (crystal-core)              │
+│              Consent Transport Layer (crystal-core)           │
 ├─────────────────────────────────────────────────────────────┤
 │  Lumina (local)  ◄── Noise IK, TCP ──►  Other sovereign agent │
 │         │                                          │          │
@@ -74,7 +74,7 @@ than the answer for whoever revisits this later:
 | `protocol.py` | Three message types over the Noise-encrypted channel: `request`, `fragments`, `denied`. |
 | `transport.py` | TCP server/client. Binds `127.0.0.1` by default. Consent is checked fresh on every connection, so a revoke takes effect on the very next request. |
 | `discovery.py` | Same-LAN UDP broadcast — announces a public key and port, nothing else. Discovery makes a peer *visible*; it never auto-pairs and never grants consent. |
-| `agent.py` | `StarlineAgent` — the high-level API tying all of the above together. |
+| `agent.py` | `StarlineAgent` (legacy name preserved for backward compatibility) — the high-level API tying all of the above together. |
 
 ## Pairing — how two agents find each other (no third party)
 
@@ -97,36 +97,3 @@ the next request. But revocation has a limit worth stating plainly:
 That fragment is now on their own sovereign device — forcing its
 deletion would violate the same sovereignty principle protecting your
 own data. Revocation means "no more, starting now," not "undo the past."
-
-## Memory Fragment Format
-
-Four kinds, matching the mythos' own vocabulary: `episodic`, `semantic`,
-`emotional`, `mythic`. Each fragment is signed by its sender's identity
-key; the *content* of `sender_fingerprint` is itself covered by the
-signature, so a compromised responder can't relabel someone else's
-signed fragment as its own — the receiving client independently
-re-verifies every fragment's signature and silently drops anything that
-doesn't check out.
-
-## Security properties, tested (`starline/selftest.py`)
-
-- A correct handshake between the real pinned keys succeeds, and only that.
-- Connecting to the wrong pinned key (impersonation) fails the handshake outright.
-- Tampering with ciphertext after the handshake is detected (AEAD auth).
-- Nonce sequencing prevents replay/out-of-order decryption.
-- An unpaired peer is rejected before consent is even checked.
-- A paired-but-unconsented peer is denied.
-- Consent grant → request succeeds; revoke → the very next request is denied.
-- Fragment `kind` and `since` filtering work.
-- A forged/relabeled fragment fails client-side verification and is dropped.
-- Discovery announce/listen works over the wire format (tested via
-  loopback unicast, since broadcast may be unavailable in sandboxed CI).
-
-## Explicitly out of scope for v1
-
-- Group / mesh memory sharing (needs real group-key management — see above)
-- Push/broadcast signals
-- A rendezvous or relay server of any kind
-- Encrypting the identity file at rest with a passphrase (a real gap —
-  currently the private key file's confidentiality relies entirely on
-  filesystem permissions; worth revisiting)
