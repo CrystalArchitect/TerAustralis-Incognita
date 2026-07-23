@@ -18,14 +18,20 @@
 
 ## Checks run
 
-<!-- Paste what you ran and the results — claims come with evidence.
-     `scripts/maintenance/check.sh` runs the same checks CI runs. -->
+<!-- Paste what you ran and the results — claims come with evidence. -->
 
-- [ ] `python -m compileall -q src tests archive`
-- [ ] crystal-core self-tests (`clementine.bridge` / `services` / `starline` / `rdp`)
-- [ ] `pytest src/apps/lumina/tests` and `pytest tests`
-- [ ] site builds (`cd src/site && npm run build`) — if the site changed
+- [ ] Markdown lint passes (`npx markdownlint-cli2 "**/*.md" "#node_modules" "#archive"`) —
+      CI runs the same check with `.markdownlint.jsonc`
+- [ ] Link check passes (CI runs `markdown-link-check` with
+      `.github/workflows/markdown-link-check-config.json`)
 - [ ] No generated files, secrets, or personal data staged
+
+This repository holds governance, architecture docs, ADRs, and the mythos —
+no application code (see
+[`docs/architecture/SystemMap.md`](../docs/architecture/SystemMap.md#where-the-code-actually-lives)).
+For engine/app code changes, see
+[`TerAustralis-Incognita-Code`](https://github.com/CrystalArchitect/TerAustralis-Incognita-Code)'s
+own PR template.
 
 ## For the reviewer
 

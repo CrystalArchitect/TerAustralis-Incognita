@@ -1,5 +1,11 @@
 # Publishing Packages to PyPI
 
+> **Status note (2026-07-23):** the `packages/` structure this guide
+> publishes from never landed in this repository's git history, and the
+> per-package licensing it assumes was reverted by
+> [`ADR-0010`](adr/ADR-0010.md). Kept for provenance. See
+> [SystemMap: where the code actually lives](architecture/SystemMap.md#where-the-code-actually-lives).
+
 This guide explains how to publish individual packages from the TeraAustralis repository to PyPI.
 
 ## Package List

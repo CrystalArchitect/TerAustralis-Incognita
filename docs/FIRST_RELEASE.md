@@ -1,5 +1,10 @@
 # First Production Release Guide
 
+> **Status note (2026-07-23):** none of this ever happened — the `packages/`
+> structure this guide assumes ready for release never landed in this
+> repository's git history. Kept for provenance. See
+> [SystemMap: where the code actually lives](architecture/SystemMap.md#where-the-code-actually-lives).
+
 This guide walks through publishing the first version of TeraAustralis packages to PyPI.
 
 ## Current State

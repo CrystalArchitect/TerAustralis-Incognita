@@ -1,5 +1,10 @@
 # Commercial Licensing Guide
 
+> **Status note (2026-07-23):** the per-package licensing tiers this guide
+> describes were reverted by [`ADR-0010`](adr/ADR-0010.md) — the whole
+> repository is uniformly CC BY-NC-ND 4.0. Kept for provenance. See
+> [SystemMap: where the code actually lives](architecture/SystemMap.md#where-the-code-actually-lives).
+
 This document outlines the commercial licensing strategies for TeraAustralis products and how to implement license verification in deployed systems.
 
 ## Product Licensing Summary

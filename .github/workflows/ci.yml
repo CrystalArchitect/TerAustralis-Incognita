@@ -10,63 +10,25 @@ permissions:
   contents: read
 
 jobs:
-  python-checks:
-    name: Python syntax + self-tests
+  docs-checks:
+    name: Markdown lint + link check
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+
+      - name: Markdown lint
+        uses: DavidAnson/markdownlint-cli2-action@v19
         with:
-          python-version: "3.12"
+          globs: |
+            **/*.md
+            !node_modules
+            !archive
 
-      - name: Detect local-tree paths
-        id: detect
-        run: |
-          if [ -d src ]; then
-            echo "src_present=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "src_present=false" >> "$GITHUB_OUTPUT"
-            echo "::notice title=src/ not in this repository::src/ (and the self-tests under it) live only in the maintainer's local tree, not in git history on any branch — see docs/architecture/SystemMap.md, 'Where the code actually lives'. Steps that depend on src/ are skipped, not failed."
-          fi
-          if [ -d tests ]; then
-            echo "tests_present=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "tests_present=false" >> "$GITHUB_OUTPUT"
-          fi
-
-      - name: Syntax-check Python sources
-        run: |
-          targets="archive"
-          [ "${{ steps.detect.outputs.src_present }}" = "true" ] && targets="$targets src"
-          [ "${{ steps.detect.outputs.tests_present }}" = "true" ] && targets="$targets tests"
-          python -m compileall -q $targets
-
-      - name: Starline Weaver self-test
-        if: steps.detect.outputs.src_present == 'true'
-        working-directory: src/crystal-core
-        run: python -m clementine.bridge.selftest
-      - name: Pipeline self-test
-        if: steps.detect.outputs.src_present == 'true'
-        working-directory: src/crystal-core
-        run: python -m services.selftest
-      - name: Install Starline dependencies
-        if: steps.detect.outputs.src_present == 'true'
-        working-directory: src/crystal-core
-        run: pip install -r requirements-consenttransport.txt
-      - name: Starline self-test
-        if: steps.detect.outputs.src_present == 'true'
-        working-directory: src/crystal-core
-        run: python -m consent_transport.selftest
-      - name: RDP self-test
-        if: steps.detect.outputs.src_present == 'true'
-        working-directory: src/crystal-core
-        run: python -m rdp.selftest
-      - name: Lumina dependencies
-        if: steps.detect.outputs.src_present == 'true'
-        run: pip install -r src/apps/lumina/requirements.txt pytest
-      - name: Lumina core tests
-        if: steps.detect.outputs.src_present == 'true'
-        run: python -m pytest src/apps/lumina/tests -q
-      - name: Mesh stub tests
-        if: steps.detect.outputs.tests_present == 'true'
-        run: python -m pytest tests -q
+      - name: Link check
+        uses: gaurav-nelson/github-action-markdown-link-check@v1
+        with:
+          use-quiet-mode: 'yes'
+          use-verbose-mode: 'yes'
+          config-file: '.github/workflows/markdown-link-check-config.json'
+          folder-path: '.'
+          file-extension: '.md'
