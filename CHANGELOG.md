@@ -4,6 +4,21 @@ Notable changes to this repository, newest first. Day-to-day status lives
 in [`docs/governance/Roadmap.md`](docs/governance/Roadmap.md); this file
 records the milestones.
 
+## 2026-07-23 — Deferred trademark registration for cost; adopted ™ notice
+
+Formal trademark registration (flagged as an open item in `ADR-0006`) isn't
+affordable right now. Rather than leave that unresolved, `ADR-0008` records
+what's actually true today: registration is deferred until revenue/funding
+justifies it, and the zero-cost interim steps are adopted now.
+
+### Changed
+- `README.md`'s title and `NOTICE`'s copyright line now carry a **™** mark
+  next to "TerAustralis Incognita" — an unregistered-mark claim, which
+  matches the project's real status; no filing or fee involved.
+- [`docs/adr/ADR-0008.md`](docs/adr/ADR-0008.md) added, naming the revisit
+  trigger (funding/revenue) and the interim protection actually in place
+  (ABN trading-name registration + common-law rights from use).
+
 ## 2026-07-23 — Name correction: TerAustralis Incognita
 
 The project's name was being spelled "TeraAustralis Incognita" (two a's)

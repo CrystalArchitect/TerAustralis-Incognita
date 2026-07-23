@@ -1,4 +1,4 @@
-# TerAustralis Incognita
+# TerAustralis Incognita™
 
 **Collective intelligence with individual sovereignty.**
 

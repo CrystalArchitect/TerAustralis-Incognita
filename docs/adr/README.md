@@ -15,6 +15,7 @@ decision needs one, how one is accepted — is in
 | [ADR-0005](ADR-0005.md) | AI Orchestrator — consolidate the naming; ship the concept as documentation first | Accepted |
 | [ADR-0006](ADR-0006.md) | Licensing strategy — keep the dual license, record the IP principles, flag trademark as unfinished | Accepted |
 | [ADR-0007](ADR-0007.md) | Correct the project name to "TerAustralis Incognita"; rename mythos/teraaustralis/ | Accepted |
+| [ADR-0008](ADR-0008.md) | Defer trademark registration for cost; adopt no-cost interim protective measures now | Accepted |
 
 ## Template
 
