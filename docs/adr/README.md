@@ -13,6 +13,7 @@ decision needs one, how one is accepted — is in
 | [ADR-0003](ADR-0003.md) | Move code into src/ as a uniform shift; keep runtime-coupled files with their code | Accepted |
 | [ADR-0004](ADR-0004.md) | Lock the CrystalCore naming taxonomy; ban future CrystalCore-* runtime names | Accepted |
 | [ADR-0005](ADR-0005.md) | AI Orchestrator — consolidate the naming; ship the concept as documentation first | Accepted |
+| [ADR-0006](ADR-0006.md) | Licensing strategy — keep the dual license, record the IP principles, flag trademark as unfinished | Accepted |
 
 ## Template
 
