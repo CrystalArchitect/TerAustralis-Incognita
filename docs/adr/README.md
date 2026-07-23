@@ -18,6 +18,7 @@ decision needs one, how one is accepted — is in
 | [ADR-0008](ADR-0008.md) | Supersede ADR-0006 §1 — adopt CC BY-NC-ND 4.0 for code; reconcile the fallout | Accepted |
 | [ADR-0009](ADR-0009.md) | Reconcile the licensing chaos — CC BY-NC-ND governs today; packages/ is an in-progress target | Accepted — target question resolved by ADR-0010 |
 | [ADR-0010](ADR-0010.md) | Uniform CC BY-NC-ND 4.0 for the whole repository; differentiated per-package licensing not adopted | Accepted |
+| [ADR-0011](ADR-0011.md) | Adopt the three-project boundary model — umbrella, Crystal Core, Crystal Vision | Accepted |
 
 ## Template
 

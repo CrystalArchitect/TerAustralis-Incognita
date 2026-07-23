@@ -5,6 +5,11 @@ it. Status labels follow [`Roadmap.md`](../governance/Roadmap.md) — if this
 table and the roadmap ever disagree, the roadmap wins and this table has a
 bug.
 
+> **Repository status:** the paths and "Prove it" commands below refer to
+> the code tree, which is not in this repository — they are not runnable
+> from a fresh clone. See
+> [SystemMap: where the code actually lives](SystemMap.md#where-the-code-actually-lives).
+
 | Module | Path | What it is | Status | Prove it |
 |---|---|---|---|---|
 | Lumina | `src/apps/lumina/` | Local-first companion: terminal, Flask API, Svelte webapp, layered memory | Working prototype | `python -m pytest src/apps/lumina/tests -q` |

@@ -3,8 +3,41 @@
 The authoritative "where things live" for the CrystalCore OS v1.0 repository
 architecture (adopted 2026-07-23, [`ADR-0001`](../adr/ADR-0001.md)).
 
+## Where the code actually lives
+
+**Repository status (2026-07-23), measured against git history:**
+
+- **In this repository (git):** `docs/`, `mythos/`, `research/`, `dbt/`,
+  `examples/`, `assets/`, `archive/`, `.github/`, and the root legal and
+  entry-point files. That is the complete list.
+- **Described below but not in this repository:** `src/`, `scripts/`, and
+  `tests/` — and, referenced elsewhere in the docs, `packages/` and
+  `corpus/`. None of these paths exist in this repository's git history on
+  any branch (`git log --all -- src/` returns nothing). That tree lives in
+  the maintainer's local working copy — the "disk" that canon law ranks
+  above chat — and a dated copy is preserved in
+  `archive/2026/local-snapshot-2026-07-17/`.
+- **Consequences, stated plainly:** the CI workflow (`ci.yml`) and the
+  Pages deploy (`deploy.yml`) run against `src/` and `tests/` paths that
+  are not here, so both fail; the two `packages/*` workflows are dormant
+  (path- and tag-gated, and `packages/` is absent). Commands quoted in
+  this documentation — the self-tests, the demos,
+  `scripts/maintenance/check.sh` — are not runnable from a fresh clone of
+  this repository. The root `CNAME` (`www.teraustralis.com.au`) points
+  Pages at a site whose source (`src/site/`) is not here.
+
+The tree below is retained as the description of that local working tree
+and of the intended layout — the layout decision (`ADR-0001`) is real; its
+`src/` half has simply never been pushed here. Entries marked ✱ are in
+that described-but-not-present category.
+
+Where each component belongs, and the staged plan for closing this gap:
+[`Project-Boundaries.md`](../governance/Project-Boundaries.md) ·
+[`Migration-Plan.md`](../governance/Migration-Plan.md)
+([`ADR-0011`](../adr/ADR-0011.md)).
+
 ```
-TeraAustralis-Incognita/
+TerAustralis-Incognita/
 │
 ├── README.md · LICENSE · LICENSE-CONTENT.md · NOTICE · CHANGELOG.md
 ├── CONTRIBUTING.md · CODE_OF_CONDUCT.md · SECURITY.md · AGENTS.md
@@ -25,7 +58,7 @@ TeraAustralis-Incognita/
 │   ├── guides/         task how-tos (commit, push, guest access)
 │   └── adr/            Architecture Decision Records
 │
-├── src/                executable code only
+├── src/ ✱              executable code only
 │   ├── apps/           lumina (companion) · voicebox (MCP TTS) ·
 │   │                   crystal-interface + vision-web (demo shells)
 │   ├── crystal-core/   protocol pack: clementine/bridge (Starline Weaver) ·
@@ -56,14 +89,20 @@ TeraAustralis-Incognita/
 ├── assets/             project-level branding/diagrams (see its README —
 │                       mythos art is canon content and stays in mythos/)
 │
-├── scripts/            developer utilities (check.sh mirrors CI)
+├── dbt/                crystalcore_emotion_warehouse — the emotion-warehouse
+│                       dbt project (docs/DBT_WAREHOUSE_INTEGRATION.md)
 │
-├── tests/              repo-level test suites (unit/)
+├── scripts/ ✱          developer utilities (check.sh mirrors CI)
+│
+├── tests/ ✱            repo-level test suites (unit/)
 │                       component tests live beside their component
 │                       (src/apps/lumina/tests/, the crystal-core selftests)
 │
 └── examples/           runnable demos, curated (see its README)
 ```
+
+✱ = described here, but not in this repository — see
+["Where the code actually lives"](#where-the-code-actually-lives) above.
 
 ## Rules that keep the map honest
 

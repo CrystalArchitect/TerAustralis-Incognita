@@ -4,6 +4,40 @@ Notable changes to this repository, newest first. Day-to-day status lives
 in [`docs/governance/Roadmap.md`](docs/governance/Roadmap.md); this file
 records the milestones.
 
+## 2026-07-23 — Docs synced to repository reality; three-project boundaries adopted (ADR-0011)
+
+Two ordered commits, one decision. First, the entry-point documentation
+(README, AGENTS, CONTRIBUTING, SystemMap, Modules, Roadmap, examples,
+mythos/README) was resynchronized with what this repository measurably
+contains: `src/`, `scripts/`, and `tests/` have never existed in its git
+history — the code lives in the maintainer's local working tree — and the
+docs now say so instead of implying otherwise, with the canonical
+explanation in `docs/architecture/SystemMap.md` ("Where the code actually
+lives") and the previously unmapped `dbt/` directory on the map. Second,
+`ADR-0011` adopted the three-project boundary model: **TerAustralis
+Incognita** as the umbrella (governance, docs, ADRs, mythos — no main app
+code), **Crystal Core** owning the engine, runtime, APIs, and shared
+libraries, **Crystal Vision** owning the user-facing application — Lumina
+wholly within it, Clementine as a logical component inside Crystal Core.
+
+### Added
+- `docs/adr/ADR-0011.md` — the boundary decision, including its
+  decided-NOT list (no renames, no moves, no new repos, no workflow
+  changes, no locked-name or taxonomy changes).
+- `docs/governance/Project-Boundaries.md` — the standing charter:
+  component→project map and the dependency rule (Crystal Vision may
+  depend on Crystal Core; never the reverse).
+- `docs/governance/Migration-Plan.md` — a staged, per-stage-approvable,
+  reversible proposal (labeled Vision) for landing the code into git and
+  retiring the drift; nothing in it is executed.
+
+### Changed
+- Reality banners and pointer notes across the entry-point docs; the
+  stale pre-monorepo sibling-repo blurb in `mythos/README.md` replaced.
+- `docs/governance/REPO-RESTRUCTURING-PLAN.md` marked superseded in place
+  (its `packages/` split was reverted by `ADR-0010` and never landed in
+  this repository's history).
+
 ## 2026-07-23 — Close the licensing question: uniform CC BY-NC-ND, packages/ reverted
 
 `ADR-0009` deliberately left open whether the repository would converge on

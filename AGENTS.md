@@ -1,4 +1,4 @@
-# AGENTS.md — TeraAustralis-Incognita
+# AGENTS.md — TerAustralis-Incognita
 
 ## Project
 
@@ -26,15 +26,23 @@ in `docs/ai/`. Read yours before substantial work.
 
 ## Layout
 
-- `src/` — all executable code (apps, crystal-core, crystalcore,
-  crystalcore-os, node, sdk, site, profiles)
+In this repository (git):
+
 - `docs/` — vision · architecture · governance · ai · agents · guides · adr
-- `research/` — exploratory, not production
 - `mythos/` — the Crystal universe canon + `teraustralis/` outer lore
   (content license)
+- `research/` — exploratory, not production
+- `dbt/` — the emotion-warehouse dbt project
+- `examples/`, `assets/` — curated demo index, branding
 - `archive/` — provenance only; never build on it
-- `scripts/`, `tests/`, `examples/`, `assets/` — utilities, repo-level
-  suites, curated demos, branding
+
+Described in the docs but **not in this repository** — the code lives in
+the maintainer's local tree
+(see `docs/architecture/SystemMap.md`, "Where the code actually lives"):
+
+- `src/` — all executable code (apps, crystal-core, crystalcore,
+  crystalcore-os, node, sdk, site, profiles)
+- `scripts/`, `tests/` — utilities and repo-level suites
 
 ## Checks
 
@@ -43,5 +51,8 @@ Run what CI runs before pushing:
 ```bash
 scripts/maintenance/check.sh
 ```
+
+`scripts/` is not in this repository, so for docs-only changes here there
+is currently nothing to run — see the SystemMap status note.
 
 (Details: `docs/guides/GitHub-Commit-Instructions.md`.)
