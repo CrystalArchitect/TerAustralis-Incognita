@@ -9,6 +9,28 @@ from pathlib import Path
 class Config:
     """Centralized configuration management for the runtime."""
 
+    # Allowlist of safe configuration keys that can be set via environment variables
+    ALLOWED_ENV_KEYS = {
+        "coordinator.default_timeout_seconds",
+        "coordinator.retry_count",
+        "coordinator.max_concurrent_tasks",
+        "coordinator.log_level",
+        "registry.heartbeat_timeout_seconds",
+        "registry.status_check_interval_seconds",
+        "registry.max_services",
+        "registry.log_level",
+        "api.host",
+        "api.port",
+        "api.rate_limit_per_minute",
+        "api.log_level",
+        "plugins.enabled",
+        "plugins.directory",
+        "plugins.auto_load",
+        "plugins.log_level",
+        "logging.log_level",
+        "logging.audit_enabled",
+    }
+
     def __init__(self, config_file: Optional[str] = None, env_prefix: str = "CRYSTAL_") -> None:
         """
         Initialize the Config manager.
@@ -68,6 +90,11 @@ class Config:
 
                 # Convert to nested key format (e.g., CRYSTAL_COORDINATOR__TIMEOUT -> coordinator.timeout)
                 config_key = config_key.replace("__", ".")
+
+                # SECURITY: Only allow allowlisted configuration keys
+                if config_key not in self.ALLOWED_ENV_KEYS:
+                    # Silently skip disallowed keys to prevent information disclosure
+                    continue
 
                 # Try to parse as JSON first (for complex types)
                 try:

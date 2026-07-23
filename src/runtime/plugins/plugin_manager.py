@@ -337,26 +337,55 @@ class PluginManager:
         except (ImportError, ModuleNotFoundError, ValueError):
             return False
 
+    def _is_safe_path(self, path: str) -> bool:
+        """Check if path is safe (no directory traversal attacks)."""
+        try:
+            # Resolve to absolute path
+            abs_path = os.path.abspath(path)
+            plugin_dir = os.path.abspath(self.plugin_directory)
+
+            # Check if resolved path stays within plugin directory (if using relative path)
+            if not abs_path.startswith(plugin_dir) and not os.path.isabs(path):
+                return False
+
+            # Reject paths with .. sequences
+            if ".." in path:
+                return False
+
+            return True
+        except Exception:
+            return False
+
     def _load_plugin_module(self, plugin_path: str) -> Any:
         """Load a Python module for a plugin."""
+        plugin_id = str(uuid.uuid4())
+
         # Try as file path
         if os.path.exists(plugin_path):
+            # Validate path doesn't traverse directories
+            if not self._is_safe_path(plugin_path):
+                raise PluginLoadError("invalid_path", plugin_path, "Path traversal detected")
+
             import importlib.util
-            spec = importlib.util.spec_from_file_location("plugin", plugin_path)
+            spec = importlib.util.spec_from_file_location(f"plugin_{plugin_id}", plugin_path)
             if spec and spec.loader:
                 module = importlib.util.module_from_spec(spec)
-                sys.modules["plugin"] = module
+                sys.modules[f"plugin_{plugin_id}"] = module
                 spec.loader.exec_module(module)
                 return module
 
         # Try as full path in plugin directory
         full_path = os.path.join(self.plugin_directory, plugin_path)
         if os.path.exists(full_path):
+            # Validate path doesn't traverse directories
+            if not self._is_safe_path(full_path):
+                raise PluginLoadError("invalid_path", plugin_path, "Path traversal detected")
+
             import importlib.util
-            spec = importlib.util.spec_from_file_location("plugin", full_path)
+            spec = importlib.util.spec_from_file_location(f"plugin_{plugin_id}", full_path)
             if spec and spec.loader:
                 module = importlib.util.module_from_spec(spec)
-                sys.modules["plugin"] = module
+                sys.modules[f"plugin_{plugin_id}"] = module
                 spec.loader.exec_module(module)
                 return module
 
@@ -369,14 +398,30 @@ class PluginManager:
     def _extract_metadata(self, module: Any) -> PluginMetadata:
         """Extract metadata from a plugin module."""
         if hasattr(module, "PLUGIN_METADATA"):
-            return module.PLUGIN_METADATA
+            metadata = module.PLUGIN_METADATA
+            # Validate metadata structure
+            if not isinstance(metadata, PluginMetadata):
+                raise PluginLoadError("invalid_metadata", getattr(module, "__name__", "unknown"),
+                                    "PLUGIN_METADATA must be PluginMetadata instance")
+            return metadata
 
         # Create default metadata
+        name = getattr(module, "__name__", "unknown")
+        version = getattr(module, "__version__", "0.0.1")
+        description = getattr(module, "__doc__", "No description")
+        author = getattr(module, "__author__", "Unknown")
+
+        # Validate metadata fields
+        if not isinstance(name, str) or not name:
+            raise PluginLoadError("invalid_metadata", name, "Plugin name must be non-empty string")
+        if not isinstance(version, str) or not version:
+            raise PluginLoadError("invalid_metadata", name, "Plugin version must be non-empty string")
+
         return PluginMetadata(
-            name=getattr(module, "__name__", "unknown"),
-            version=getattr(module, "__version__", "0.0.1"),
-            description=getattr(module, "__doc__", "No description"),
-            author=getattr(module, "__author__", "Unknown"),
+            name=name,
+            version=version,
+            description=description,
+            author=author,
         )
 
     def _check_compatibility(self, metadata: PluginMetadata) -> bool:
@@ -398,21 +443,42 @@ class PluginManager:
 
     def _compare_versions(self, v1: str, v2: str) -> int:
         """Compare two semantic versions. Returns -1 if v1 < v2, 0 if equal, 1 if v1 > v2."""
-        parts1 = [int(x) for x in v1.split(".")]
-        parts2 = [int(x) for x in v2.split(".")]
+        try:
+            # Extract numeric parts only (e.g., "1.0.0-beta" -> "1.0.0")
+            def get_numeric_parts(v: str):
+                # Get the base version before any pre-release identifiers
+                base = v.split("-")[0].split("+")[0]
+                parts = []
+                for part in base.split("."):
+                    try:
+                        parts.append(int(part))
+                    except ValueError:
+                        # Skip non-numeric parts
+                        pass
+                return parts
 
-        for p1, p2 in zip(parts1, parts2):
-            if p1 < p2:
+            parts1 = get_numeric_parts(v1)
+            parts2 = get_numeric_parts(v2)
+
+            # Pad with zeros if needed
+            max_len = max(len(parts1), len(parts2))
+            parts1.extend([0] * (max_len - len(parts1)))
+            parts2.extend([0] * (max_len - len(parts2)))
+
+            for p1, p2 in zip(parts1, parts2):
+                if p1 < p2:
+                    return -1
+                elif p1 > p2:
+                    return 1
+
+            return 0
+        except Exception:
+            # Fallback to string comparison if version parsing fails
+            if v1 < v2:
                 return -1
-            elif p1 > p2:
+            elif v1 > v2:
                 return 1
-
-        if len(parts1) < len(parts2):
-            return -1
-        elif len(parts1) > len(parts2):
-            return 1
-
-        return 0
+            return 0
 
     def _register_hooks(self, plugin_id: str, module: Any, metadata: PluginMetadata) -> List[str]:
         """Register hooks from a plugin."""

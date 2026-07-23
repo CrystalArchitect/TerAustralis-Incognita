@@ -329,8 +329,19 @@ class RuntimeAPI:
     def _handle_get_audit_logs(self, caller_identity: str) -> APIResponse:
         """Handle get audit logs request."""
         try:
+            # SECURITY: Only allow system_admin or internal callers to see audit logs
+            # Other users can only see logs related to their own activities
+            is_admin = caller_identity in ["system_admin", "admin", "internal"]
+
             # Get audit records
             records = self.logging.get_audit_records(limit=100)
+
+            if not is_admin:
+                # Filter to only show logs where caller is the actor or resource is related
+                records = [
+                    r for r in records
+                    if r.actor == caller_identity
+                ]
 
             return APIResponse(
                 status_code=200,
