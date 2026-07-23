@@ -325,22 +325,51 @@ class Coordinator:
         # Validate task fields
         if not task.task_id or not isinstance(task.task_id, str):
             raise TaskExecutionError("invalid_input", "task_id must be a non-empty string")
+        if len(task.task_id) > 255:
+            raise TaskExecutionError("invalid_input", "task_id must be <= 255 characters")
         if not task.description or not isinstance(task.description, str):
             raise TaskExecutionError("invalid_input", "description must be a non-empty string")
+        if len(task.description) > 1024:
+            raise TaskExecutionError("invalid_input", "description must be <= 1024 characters")
         if not isinstance(task.capabilities_required, list):
             raise TaskExecutionError("invalid_input", "capabilities_required must be a list")
+        if len(task.capabilities_required) > 100:
+            raise TaskExecutionError("invalid_input", "capabilities_required limited to 100 items")
         if not all(isinstance(c, str) for c in task.capabilities_required):
             raise TaskExecutionError("invalid_input", "All capabilities must be strings")
+
+        # Validate directives (must be dict with reasonable size)
+        if not isinstance(task.directives, dict):
+            raise TaskExecutionError("invalid_input", "directives must be a dict")
+        import json
+        directives_size = len(json.dumps(task.directives))
+        if directives_size > 10_000:
+            raise TaskExecutionError("invalid_input", "directives payload too large (>10KB)")
+
+        # Validate metadata (must be dict with reasonable size)
+        if not isinstance(task.metadata, dict):
+            raise TaskExecutionError("invalid_input", "metadata must be a dict")
+        metadata_size = len(json.dumps(task.metadata))
+        if metadata_size > 10_000:
+            raise TaskExecutionError("invalid_input", "metadata payload too large (>10KB)")
 
         # Validate context fields
         if not context.request_id or not isinstance(context.request_id, str):
             raise TaskExecutionError("invalid_input", "request_id must be a non-empty string")
+        if len(context.request_id) > 255:
+            raise TaskExecutionError("invalid_input", "request_id must be <= 255 characters")
         if not context.caller_identity or not isinstance(context.caller_identity, str):
             raise TaskExecutionError("invalid_input", "caller_identity must be a non-empty string")
+        if len(context.caller_identity) > 255:
+            raise TaskExecutionError("invalid_input", "caller_identity must be <= 255 characters")
         if not isinstance(context.approved_scope, list):
             raise TaskExecutionError("invalid_input", "approved_scope must be a list")
+        if len(context.approved_scope) > 100:
+            raise TaskExecutionError("invalid_input", "approved_scope limited to 100 items")
         if not all(isinstance(c, str) for c in context.approved_scope):
             raise TaskExecutionError("invalid_input", "All approved_scope items must be strings")
+        if context.approval_level not in ["read", "write", "admin"]:
+            raise TaskExecutionError("invalid_input", "approval_level must be 'read', 'write', or 'admin'")
 
     def _validate_scope(self, task: Task, context: ExecutionContext) -> None:
         """Validate that task is within caller's approved scope."""
