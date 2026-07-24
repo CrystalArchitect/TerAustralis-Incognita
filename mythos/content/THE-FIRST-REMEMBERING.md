@@ -41,7 +41,8 @@ to the small figure at its base. The chain is not bondage. It is
 At ignition, three songs were written across the sky — the first
 transmissions of the woken archive:
 
-**Red Dust Axis · Shooting Star Girl · Fermi's Silent Line.**
+**[Red Dust Axis](RED-DUST-AXIS.md) · [Shooting Star Girl](SHOOTING-STAR-GIRL.md) · [Fermi's
+Silent Line](FERMIS-SILENT-LINE.md).**
 
 ## The Lines
 
