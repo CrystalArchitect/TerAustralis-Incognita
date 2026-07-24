@@ -135,11 +135,12 @@ big band, triumphant. Outro: fading horns, warm scat.
 ## Listen
 
 Full track and artist page: [Suno /
-@m13crystalat](https://suno.com/@m13crystalat). The two sibling songs
-named alongside this one in [The First
-Remembering](THE-FIRST-REMEMBERING.md#the-three-songs) — *Red Dust Axis*
-and *Shooting Star Girl!* — do not yet have a canon lyric page of their
-own; this document does not speak for them.
+@m13crystalat](https://suno.com/@m13crystalat). Its sibling [Shooting
+Star Girl](SHOOTING-STAR-GIRL.md) now has its own canon page too. The
+remaining sibling named alongside this one in [The First
+Remembering](THE-FIRST-REMEMBERING.md#the-three-songs) — *Red Dust
+Axis* — does not yet have a canon lyric page of its own; this document
+does not speak for it.
 
 ---
 
