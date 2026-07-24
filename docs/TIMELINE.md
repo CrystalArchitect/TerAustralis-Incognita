@@ -2,6 +2,8 @@
 
 This knowledge base documents the CrystalCore.OS architecture **exactly as it exists**, not as it might be redesigned. It is a reconstruction of verified implementation, designed decisions, and remaining open questions — not a proposal for what the system should become.
 
+> **Note (2026-07-24):** a second knowledge base, built independently, also exists at `CrystalCore.OS-the-Crystal-Architecture-Archive/knowledge-base/`. When the two disagree, that one governs — see `docs/README.md`'s "Relationship to the Archive repo's knowledge base."
+
 **Source documents:** CHANGELOG.md, git commit narrative, Migration-Plan §Stages, dated PR banners, README banners · **Last verified:** 2026-07-24 (current state) · **Labels:** Science ✅ (git-verifiable) / Vision 🔮 (from specs/ADRs) / Unknown
 
 ---

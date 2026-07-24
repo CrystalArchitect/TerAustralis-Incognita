@@ -25,17 +25,21 @@ the full review process is
    don't work around it.
 4. **No secrets.** API keys live in environment variables only. `.env`
    files are ignored and stay that way.
-5. **CI must pass.** Every PR runs a Python syntax check, the
-   crystal-core self-tests (`clementine.bridge.selftest`,
-   `services.selftest`, `consent_transport.selftest`, `rdp.selftest`), and the
-   pytest suites. Run them locally first:
+5. **CI must pass.** This repository's own `ci.yml` checks markdown
+   lint and links only — no Python runs here (Stage 2 of the migration
+   retargeted CI to docs-only checks once `src/`/`tests/`/`scripts/`
+   moved out; see
+   [`docs/architecture/SystemMap.md`](docs/architecture/SystemMap.md#where-the-code-actually-lives)).
+   Run the same checks locally first:
    ```bash
-   scripts/maintenance/check.sh
+   npx markdownlint-cli2 "**/*.md" "#node_modules" "#archive"
    ```
-   *Reality note:* the paths CI checks (`src/`, `tests/`) and `scripts/`
-   itself are not in this repository, and `ci.yml` currently fails on
-   `main` for exactly that reason — see
-   [`docs/architecture/SystemMap.md`](docs/architecture/SystemMap.md#where-the-code-actually-lives).
+   The Python syntax check, the crystal-core self-tests
+   (`clementine.bridge.selftest`, `services.selftest`,
+   `consent_transport.selftest`, `rdp.selftest`, `crystalcore.selftest`),
+   and the pytest suites this note used to describe now run in
+   [`TerAustralis-Incognita-Code`](https://github.com/CrystalArchitect/TerAustralis-Incognita-Code)'s
+   own `ci.yml` — that's where `core/` and `vision/` actually live.
 
 ## The Belt-Three law (labels)
 
@@ -46,8 +50,11 @@ Everything in this project carries one of three truth labels:
 | **Science** | Astronomy, hydrology, published geography, running code |
 | **Story** | Dreaming / Songline narratives (honour; no restricted detail) |
 | **Vision** | CrystalCore art, mythos, and protocol fiction |
+| **Docs / governance / process** | ADRs, policy, review process, this file — not itself Science/Story/Vision content, but carries its own honesty obligation (a process doc can misdescribe reality same as any other claim) |
 
-Keep them straight. Code claims must be true; mythos must be labeled as
+Added the fourth row 2026-07-24: `.github/PULL_REQUEST_TEMPLATE.md`
+already carried it as a real, distinct checkbox — this table just
+hadn't caught up. Keep them straight. Code claims must be true; mythos must be labeled as
 mythos; no real-world coercion or fake hydrology, ever. Where real people
 appear in Vision-layer content, it is storytelling only — no affiliation or
 endorsement implied.

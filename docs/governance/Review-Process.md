@@ -10,14 +10,20 @@ maintainer merges.
 2. **Open a pull request** against `main`. The template asks for three
    things: what changed, the Belt-Three label of the change (Science /
    Story / Vision), and which AI tools assisted.
-3. **CI must pass** (`.github/workflows/ci.yml`):
-   - `python -m compileall -q src tests archive` — syntax across the tree
-   - the crystal-core self-tests: `clementine.bridge.selftest`,
-     `services.selftest`, `consent_transport.selftest`, `rdp.selftest`
-   - `pytest src/apps/lumina/tests` and `pytest tests`
-   Run the same checks locally first: `scripts/maintenance/check.sh`
-   (details in
-   [`docs/guides/GitHub-Commit-Instructions.md`](../guides/GitHub-Commit-Instructions.md)).
+3. **CI must pass** (`.github/workflows/ci.yml`). In *this* repository,
+   since Stage 2 of the migration moved `src/`/`tests/`/`scripts/` out,
+   that means markdown lint and a link check only — no Python runs
+   here. Run the same checks locally first:
+   ```bash
+   npx markdownlint-cli2 "**/*.md" "#node_modules" "#archive"
+   ```
+   The Python syntax check, the crystal-core self-tests
+   (`clementine.bridge.selftest`, `services.selftest`,
+   `consent_transport.selftest`, `rdp.selftest`, `crystalcore.selftest`),
+   and the pytest suites this section used to describe now run in
+   [`TerAustralis-Incognita-Code`](https://github.com/CrystalArchitect/TerAustralis-Incognita-Code)'s
+   own `ci.yml`, against `core/` and `vision/` — that repo has its own
+   PR template and review checklist for engine/app changes.
 4. **Review.** Significant changes are reviewed before merging
    ([`Repository-Principles.md`](Repository-Principles.md) §6). Reviewers
    check the honesty of labels as seriously as the correctness of code —
