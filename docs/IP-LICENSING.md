@@ -2,6 +2,8 @@
 
 This knowledge base documents the CrystalCore.OS architecture **exactly as it exists**, not as it might be redesigned. It is a reconstruction of verified implementation, designed decisions, and remaining open questions — not a proposal for what the system should become.
 
+> **Note (2026-07-24):** a second knowledge base, built independently, also exists at `CrystalCore.OS-the-Crystal-Architecture-Archive/knowledge-base/`. When the two disagree, that one governs — see `docs/README.md`'s "Relationship to the Archive repo's knowledge base."
+
 **Source documents:** ADR-0006, ADR-0008, ADR-0009, ADR-0010 (licensing), ADR-0004, ADR-0007 (naming), Constitution §7, Migration-Plan debts register · **Last verified:** 2026-07-23 (ADR dates) · **Labels:** Science ✅ / Vision 🔮 / Locked / Resolved / Outstanding
 
 ---

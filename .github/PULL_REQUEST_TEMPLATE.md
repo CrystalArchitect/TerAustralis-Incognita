@@ -7,9 +7,11 @@
 <!-- Which layer does this change live on? Keep the labels honest
      (CONTRIBUTING.md, docs/governance/The-Incognita-Rule.md). -->
 
-- [ ] **Science / Built** — running code, tests, checkable facts
-- [ ] **Story / Vision** — mythos, art, speculative framing (labeled as such)
-- [ ] **Docs / governance / process**
+- [ ] **Science** — running code, tests, checkable facts
+- [ ] **Story** — Dreaming / Songline narrative (honour; no restricted detail)
+- [ ] **Vision** — CrystalCore art, mythos, protocol fiction (labeled as such)
+- [ ] **Docs / governance / process** — ADRs, policy, process — not itself
+      Science/Story/Vision content (see `CONTRIBUTING.md`)
 
 ## AI tools used
 

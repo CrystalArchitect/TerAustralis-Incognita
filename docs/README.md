@@ -37,6 +37,29 @@ history; every claim labeled Science ✅ / Vision 🔮 / Drift ⚠️ / Unknown)
 | [`OPEN-DECISIONS.md`](OPEN-DECISIONS.md) | Stage 3–4 decision gates, Tier 1–3 recommendations |
 | [`TIMELINE.md`](TIMELINE.md) | Chronological narrative with provenance SHAs and branch names |
 
+**Relationship to the Archive repo's knowledge base (added 2026-07-24).**
+A second, independently-built set covering overlapping ground also
+exists: `CrystalCore.OS-the-Crystal-Architecture-Archive/knowledge-base/`
+(13 documents, a Statement/Evidence/Historical-Notes/Cross-References
+template, built the same day from much of the same underlying
+evidence — ADRs, Migration-Plan, git history). Both were produced by
+independent, uncoordinated sessions, the same pattern this project has
+hit before (the licensing chaos of ADR-0006→0010; the Crystal Runtime
+episode). Per a fresh, independent git-archaeology pass across all six
+repositories (`REPO-ARCHAEOLOGY-2026-07-24.md`, committed to the
+Archive repo), no single repository is canonical for everything — but
+for the specific role both these documents sets play, its verdict is
+direct: *"System ledger / meta-record → `CrystalCore.OS-the-Crystal-
+Architecture-Archive`... documents the other five; no unique
+application content."* That is this repository's own prior decision
+too (recorded in the Archive repo's own `knowledge-base/00-INDEX.md`).
+**When the two sets disagree, the Archive repo's `knowledge-base/`
+governs.** This `docs/` set is preserved as-is — not deleted, not
+marked deprecated — as a parallel, independently-produced reference;
+worth reconciling into the Archive's structure in a future pass rather
+than maintaining two knowledge bases indefinitely. See the Archive
+repo's `knowledge-base/11-CORRECTIONS.md` for the full account.
+
 ## Root-level reference documents
 
 Nine standalone docs live directly under `docs/`, not inside one of the
