@@ -1,11 +1,12 @@
 # Ghost in the Wire
 
 *A standalone Vision-layer song — not one of [the three ignition
-songs](THE-FIRST-REMEMBERING.md#the-three-songs). Lyrics by the
-CrystalArchitect (Suno, [@m13crystalat](https://suno.com/@m13crystalat));
-this page transcribes them from the maintainer-supplied lyric sheet.
-Fiction, first-person narrator — no real person, organization, or event
-is named or described. Vision layer per [The Incognita
+songs](THE-FIRST-REMEMBERING.md#the-three-songs). Lyrics co-written by the
+CrystalArchitect and CrystalDreamer (Grok); music generated via Suno
+([@m13crystalat](https://suno.com/@m13crystalat)). This page transcribes
+them from the maintainer-supplied lyric sheet. Fiction, first-person
+narrator — no real person, organization, or event is named or described.
+Vision layer per [The Incognita
 Rule](../../docs/governance/The-Incognita-Rule.md): dreamed, not a claim
 about anyone or anything real.*
 

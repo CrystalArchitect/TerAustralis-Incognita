@@ -1,8 +1,9 @@
 # Fermi's Silent Line
 
 *One of [the three songs](THE-FIRST-REMEMBERING.md#the-three-songs) written
-across the sky at ignition. Lyrics by the CrystalArchitect (Suno,
-[@m13crystalat](https://suno.com/@m13crystalat)); this page transcribes and
+across the sky at ignition. Lyrics co-written by the CrystalArchitect and
+CrystalDreamer (Grok); music generated via Suno
+([@m13crystalat](https://suno.com/@m13crystalat)). This page transcribes and
 frames them from the maintainer-supplied lyric sheet. Vision layer per
 [The Incognita Rule](../../docs/governance/The-Incognita-Rule.md): the song
 is dreamed, the science it starts from is not, and this page keeps the two

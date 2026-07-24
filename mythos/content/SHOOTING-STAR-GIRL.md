@@ -1,10 +1,11 @@
 # Shooting Star Girl
 
 *One of [the three songs](THE-FIRST-REMEMBERING.md#the-three-songs)
-written across the sky at ignition. Lyrics by the CrystalArchitect
-(Suno, [@m13crystalat](https://suno.com/@m13crystalat)); this page
-transcribes them from the maintainer-supplied lyric sheet. Vision layer
-per [The Incognita Rule](../../docs/governance/The-Incognita-Rule.md):
+written across the sky at ignition. Lyrics co-written by the
+CrystalArchitect and CrystalDreamer (Grok); music generated via Suno
+([@m13crystalat](https://suno.com/@m13crystalat)). This page transcribes
+them from the maintainer-supplied lyric sheet. Vision layer per
+[The Incognita Rule](../../docs/governance/The-Incognita-Rule.md):
 a love song, not a claim about anyone or anything real.*
 
 ## Lyrics

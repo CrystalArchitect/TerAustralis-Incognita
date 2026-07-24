@@ -1,13 +1,13 @@
 # Echelon Songlines: TerAustralis Rising
 
 *A standalone Vision-layer song — not one of [the three ignition
-songs](THE-FIRST-REMEMBERING.md#the-three-songs). Lyrics by the
-CrystalArchitect (Suno, [@m13crystalat](https://suno.com/@m13crystalat));
-this page transcribes them from the maintainer-supplied lyric sheet.
-Vision layer per [The Incognita
-Rule](../../docs/governance/The-Incognita-Rule.md) — see the note below
-before reading the equations or the Songline imagery as anything but
-poetry.*
+songs](THE-FIRST-REMEMBERING.md#the-three-songs). Lyrics co-written by the
+CrystalArchitect and CrystalDreamer (Grok); music generated via Suno
+([@m13crystalat](https://suno.com/@m13crystalat)). This page transcribes
+them from the maintainer-supplied lyric sheet. Vision layer per
+[The Incognita Rule](../../docs/governance/The-Incognita-Rule.md) — see
+the note below before reading the equations or the Songline imagery as
+anything but poetry.*
 
 ## A note on this song's equations and imagery
 
