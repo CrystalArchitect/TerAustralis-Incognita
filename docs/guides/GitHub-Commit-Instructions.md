@@ -10,7 +10,7 @@ flat collection of files. Everything below runs from the repo root.
 ## One-time setup
 
 ```bash
-git clone https://github.com/CrystalArchitect/TeraAustralis-Incognita.git
+git clone https://github.com/CrystalArchitect/TerAustralis-Incognita.git
 cd TeraAustralis-Incognita
 ```
 

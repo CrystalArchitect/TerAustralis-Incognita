@@ -19,10 +19,22 @@
     {
       "comment": "PyPI's account-tokens page, referenced only from the three superseded packages/-era publishing guides (docs/PUBLISHING.md, docs/FIRST_RELEASE.md, docs/RESTRUCTURING_COMPLETE.md) - moot until a real PyPI publish is attempted.",
       "pattern": "^https://pypi\\.org/manage/account/tokens/"
+    },
+    {
+      "comment": "Links into the TerAustralis-Incognita-Code repository, which is private: GitHub returns 404 to the anonymous requests this checker makes, even for files that exist (verified 2026-07-24 - core/crystal-core/SECURITY.md is present on that repo's main via git, yet the blob URL 404s unauthenticated). Cross-repo targets are verified by git/PR review instead; re-enable if that repo ever goes public.",
+      "pattern": "^https://github\\.com/CrystalArchitect/TerAustralis-Incognita-Code"
+    },
+    {
+      "comment": "GitHub repo settings pages (docs/guides/Access.md points admins at Settings > Access): served only to authenticated admins, so an anonymous checker gets 404 regardless of whether the URL is correct. Verified on CI run 30053981478 (2026-07-24). The admin who follows the guide is the verification.",
+      "pattern": "^https://github\\.com/[^/]+/[^/]+/settings/"
+    },
+    {
+      "comment": "Australia's State of the Environment portal times out for CI runners (ESOCKETTIMEDOUT at 20s, CI run 30054270459, 2026-07-24) - referenced from research/seven-sisters/WATER-BRIEF.md. Reachable in a browser; the timeout is checker-vs-portal behaviour, not link death.",
+      "pattern": "^https://soe\\.dcceew\\.gov\\.au"
     }
   ],
   "retryOn429": true,
   "retryCount": 3,
   "timeout": "20s",
-  "aliveStatusCodes": [200, 206, 301, 302, 403]
+  "aliveStatusCodes": [200, 202, 206, 301, 302, 403]
 }
