@@ -32,8 +32,10 @@ Four components, stdlib-only except where real cryptography is required:
   Spec: [`crystal-core/STARLINE-WEAVE-PROTOCOL.md`](crystal-core/STARLINE-WEAVE-PROTOCOL.md).
 - **Pipeline** (`services/`) — Decode → Ingest → Twin: validate events,
   quarantine bad ones with reasons, aggregate into a SQLite twin.
-- **Starline** (`starline/`) — peer-to-peer memory exchange over a real
-  Noise handshake; consent receipts, instant revocation. Spec:
+- **Starline / Consent Transport** (`consent_transport/`; `starline/` is
+  a deprecated backward-compatibility alias re-exporting the same code)
+  — peer-to-peer memory exchange over a real Noise handshake; consent
+  receipts, instant revocation. Spec:
   [`crystal-core/STARLINE.md`](crystal-core/STARLINE.md). The one component
   with a dependency (`cryptography`) — audited primitives are not something
   to hand-roll.

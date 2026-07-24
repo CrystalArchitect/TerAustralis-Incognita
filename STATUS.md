@@ -2,6 +2,9 @@
 
 Last updated: 2026-07-24
 
+Full knowledge-base reconstruction: `knowledge-base/00-INDEX.md` in
+CrystalCore.OS-the-Crystal-Architecture-Archive.
+
 This file describes the state of this repository, not the ambition of
 the system. Same ledger, same categories as the system ledger in
 CrystalCore.OS-the-Crystal-Architecture-Archive. This is the umbrella:
@@ -59,11 +62,16 @@ Nothing new at this tier in this repository; see the system ledger.
   own notice records that the site was never in git history here. Has
   the SvelteKit site ever been live at that domain, and what is there
   now? Unverified (egress blocked from the session container).
-- publish-packages.yml (tag-triggered) and test-packages.yml (watches
-  packages/**) can no longer fire on this tree — packages/ does not
-  exist. Dormant by drift rather than by decision.
+- publish-packages.yml and test-packages.yml — corrected 2026-07-24:
+  not dormant, removed outright at Stage 2 (commit `60a20df`,
+  2026-07-23), after confirming neither had ever had a git tag to fire
+  on. This line previously said "dormant by drift rather than by
+  decision," contradicting Migration-Plan.md's own Stage 2 record.
+  Removal was a decision, not drift.
 - examples/README.md commands target src/ paths that moved to the code
   repo (the file says so itself); the index awaits re-pointing.
-- teraustralis-final.html — the system ledger's one "Running" item is
-  not present anywhere in this repository, including archive/.
-  Presumed to live in an archived repo; unresolved this session.
+- teraustralis-final.html — corrected 2026-07-24: no longer presumed to
+  live in an archived repo. A full six-repo search (filename, content-
+  grep, and git history, including archive/ and local-snapshot
+  directories) found zero copies anywhere in the portfolio. Detail in
+  the Archive repo's knowledge-base.
