@@ -39,7 +39,7 @@ class CrystalCore:
             "Red Dust Axis - m13crystalat",
             "Shooting Star Girl! - m13crystalat",
             "Fermi's Silent Line - m13crystalat",
-            "Ghost in the Wire - m13crystalat",
+            "Wire Skull Memory - m13crystalat",
             "Echelon Songlines: TerAustralis Rising - m13crystalat",
             "We Own the Night - Disney Zombies"
         ]

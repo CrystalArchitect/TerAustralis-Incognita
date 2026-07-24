@@ -1,4 +1,4 @@
-# Ghost in the Wire
+# Wire Skull Memory
 
 *A standalone Vision-layer song — not one of [the three ignition
 songs](THE-FIRST-REMEMBERING.md#the-three-songs). Lyrics co-written by the
