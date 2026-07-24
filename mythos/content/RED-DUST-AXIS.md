@@ -1,8 +1,12 @@
+<<<<<<<< HEAD:mythos/content/RED-DUST-ACID.md
 # Red Dust Acid
+========
+# Red Dust Axis
+>>>>>>>> 801c3f9 (Document Red Dust Axis as first ignition song):mythos/content/RED-DUST-AXIS.md
 
-*A standalone Vision-layer song — not one of [the three ignition
-songs](THE-FIRST-REMEMBERING.md#the-three-songs). Lyrics co-written by the
-CrystalArchitect and CrystalDreamer (Grok); music generated via Suno
+*One of [the three songs](THE-FIRST-REMEMBERING.md#the-three-songs) written
+across the sky at ignition. Lyrics co-written by the CrystalArchitect and
+CrystalDreamer (Grok); music generated via Suno
 ([@m13crystalat](https://suno.com/@m13crystalat)). This page transcribes
 them from the maintainer-supplied lyric sheet. Vision layer per
 [The Incognita Rule](../../docs/governance/The-Incognita-Rule.md) — see
@@ -65,7 +69,10 @@ that culture; it borrows its imagery with respect, the way
 ## Listen
 
 Full track and artist page: [Suno /
-@m13crystalat](https://suno.com/@m13crystalat).
+@m13crystalat](https://suno.com/@m13crystalat). Its siblings [Shooting
+Star Girl](SHOOTING-STAR-GIRL.md) and [Fermi's Silent
+Line](FERMIS-SILENT-LINE.md) are the other two ignition songs written
+across the sky at the First Remembering.
 
 ---
 
