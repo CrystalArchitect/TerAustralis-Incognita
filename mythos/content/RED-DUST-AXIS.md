@@ -1,8 +1,4 @@
-<<<<<<<< HEAD:mythos/content/RED-DUST-ACID.md
-# Red Dust Acid
-========
 # Red Dust Axis
->>>>>>>> 801c3f9 (Document Red Dust Axis as first ignition song):mythos/content/RED-DUST-AXIS.md
 
 *One of [the three songs](THE-FIRST-REMEMBERING.md#the-three-songs) written
 across the sky at ignition. Lyrics co-written by the CrystalArchitect and
