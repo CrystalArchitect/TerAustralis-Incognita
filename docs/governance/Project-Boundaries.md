@@ -94,14 +94,52 @@ the project this charter assigns.
 
 ## Repositories, today
 
+*(Rewritten 2026-07-24 from a same-day survey of all six repositories —
+the original section predated Stage 1 and still called `-Code` "empty by
+design." Science layer: every row below was verified against the actual
+trees and git histories.)*
+
+**The living system:**
+
 | Repository | Role |
 |---|---|
-| `CrystalArchitect/TerAustralis-Incognita` (this repo) | The umbrella. |
-| `CrystalArchitect/TerAustralis-Incognita-Code` | **Reserved by charter** for the engineering projects. Empty by design — one README — until a Migration-Plan stage is approved. |
+| `CrystalArchitect/TerAustralis-Incognita` (this repo) | The umbrella: governance, ADRs, architecture docs, research, provenance mirrors under `archive/`, and `mythos/` — **the** canon home (Codex, Apocryphon, The First Remembering, the crystalcore-os terminal). |
+| `CrystalArchitect/TerAustralis-Incognita-Code` (private) | The software, per Migration-Plan Stages 1–2: `core/` (engine — protocol pack with Clementine, CrystalBridge, mesh stub, SDK) and `vision/` (application — Lumina, voicebox, demo shells, **the site source**). Full CI; carries the Pages deploy and `CNAME`. |
+| `CrystalArchitect/CrystalCore.OS-the-Crystal-Architecture-Archive` | The system ledger: one fleet-wide `STATUS.md` — state, receipts, known unknowns across all repositories. Deliberately small. |
 
-Whether the engineering side stays one repository (with `core/` and
-`vision/` areas) or becomes two is the Migration-Plan Stage 3 decision
-point — deliberately not decided here.
+**Frozen provenance** — checkpointed 2026-07-17 (the laptop hand-off),
+deliberately left unarchived, never edited; their code lives on as
+ancestors of the `-Code` tree:
+
+| Repository | Was | Lives on as |
+|---|---|---|
+| `The-Crystal-Vision` (tag `vision-safe-2026-07-17`) | Codex site + Clementine companion; holds the complete **crystalcore v0.13.4 bytecode rescue** and the laptop snapshot | Ancestor of Lumina's embedded framework (which forked the earlier 0.7.0 line — see open decisions) |
+| `crystalcore` (tag `crystalcore-safe-2026-07-17`) | The Songline protocol pack | Direct ancestor of `core/crystal-core` (SonglineBus → Starline Weaver) |
+| `crystal-vision` | Static demo shell (Grok build) | Direct ancestor of `vision/apps/crystal-interface` |
+
+**How canon reaches the public site** — the one cross-repo pipeline:
+
+```
+mythos/ (umbrella, canonical)
+   → copied by hand into vision/site/src/content/ (-Code)
+   → built by deploy.yml → GitHub Pages → www.teraustralis.com.au
+```
+
+The site renders *copies*, not the canon directly — a known,
+deliberate drift risk: new canon is not public until its copy step
+happens.
+
+**Open decisions this map records rather than resolves:**
+
+- **Stage 3 repo count** — whether `core/`/`vision/` split into two
+  repositories (Migration-Plan criteria; deliberately not decided here).
+- **0.13.4 lineage** — Lumina's framework forked the 0.7.0 line; the
+  0.13.4 rescue's extras (SpaceXAI provider, `node.py`, `status.py`,
+  CLI) sit unreconciled in `The-Crystal-Vision`.
+- **Frozen repos' end state** — GitHub-archive (read-only flag) the
+  three provenance repos, or leave them as-is.
+- **Site copy of new canon** — The First Remembering is canonical but
+  not yet copied into the site content set.
 
 ## Amendment
 
