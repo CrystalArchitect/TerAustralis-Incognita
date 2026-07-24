@@ -204,7 +204,8 @@ See: Crystal Runtime Specification v0.3, Section 4.1 (Coordinator).
 
 - **CrystalBridge** (`src/crystalcore/`) — MCP consent gate, upstream of runtime.
 - **Lumina** (`src/apps/lumina/`) — Local-first AI companion.
-- **Starline** (`src/crystal-core/starline/`) — P2P consent-gated memory.
+- **Starline** (`src/crystal-core/consent_transport/`; `starline/` is a
+  deprecated alias) — P2P consent-gated memory.
 - **Starline Weaver** (`src/crystal-core/clementine/bridge/`) — Multi-AI message bus.
 - **RDP** (`src/crystal-core/rdp/`) — Tamper-evident chain.
 

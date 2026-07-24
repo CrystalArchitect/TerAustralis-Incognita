@@ -23,14 +23,22 @@ architecture (adopted 2026-07-23, [`ADR-0001`](../adr/ADR-0001.md)).
   git-verified code, and they hold the earlier app era, not the
   post-reorg v1.0 components. The search-and-recovery procedure is
   [`Migration-Plan.md` Stage 1.0](../governance/Migration-Plan.md).
-- **Consequences, stated plainly:** the CI workflow (`ci.yml`) and the
-  Pages deploy (`deploy.yml`) run against `src/` and `tests/` paths that
-  are not here, so both fail; the two `packages/*` workflows are dormant
-  (path- and tag-gated, and `packages/` is absent). Commands quoted in
-  this documentation — the self-tests, the demos,
-  `scripts/maintenance/check.sh` — are not runnable from a fresh clone of
-  this repository. The root `CNAME` (`www.teraustralis.com.au`) points
-  Pages at a site whose source (`src/site/`) is not here.
+- **Consequences, corrected 2026-07-24:** this paragraph said the CI
+  workflow (`ci.yml`) and the Pages deploy (`deploy.yml`) ran against
+  absent `src/`/`tests/` paths and both failed, and that the root
+  `CNAME` pointed Pages at an absent site. True when written (2026-07-23,
+  13:47 UTC); resolved within hours by Stage 2 of
+  [`Migration-Plan.md`](../governance/Migration-Plan.md) (same day):
+  `ci.yml` here was retargeted to docs-only checks (markdownlint +
+  external link check), and `deploy.yml` + `CNAME` moved to
+  `TerAustralis-Incognita-Code`, where `vision/site/` actually lives —
+  Pages source still needs a manual admin switch there, no API path to
+  do it from a session. The two `packages/*` workflows named below were
+  not left dormant either — Stage 2 removed them outright, after
+  confirming neither had ever had a git tag to fire on. What's
+  unchanged: commands quoted in this documentation (self-tests, demos,
+  `scripts/maintenance/check.sh`) remain unrunnable from a fresh clone
+  of this repository, because `src/` and `tests/` are still not here.
 
 The tree below is retained as the description of that working tree and of
 the intended layout — the layout decision (`ADR-0001`) is real; its
@@ -68,7 +76,8 @@ TerAustralis-Incognita/
 │   ├── apps/           lumina (companion) · voicebox (MCP TTS) ·
 │   │                   crystal-interface + vision-web (demo shells)
 │   ├── crystal-core/   protocol pack: clementine/bridge (Starline Weaver) ·
-│   │                   services (pipeline) · starline (P2P exchange) ·
+│   │                   services (pipeline) · consent_transport (P2P
+│   │                   exchange; `starline/` is a deprecated alias) ·
 │   │                   rdp (record kernel) · interface, cli, index.html
 │   ├── crystalcore/    CrystalBridge — the MCP consent gate
 │   ├── crystalcore-os/ the mythos terminal (Vision-layer code)

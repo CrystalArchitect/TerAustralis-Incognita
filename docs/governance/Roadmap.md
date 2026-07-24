@@ -130,6 +130,30 @@ always in `git log`.
   to match. `docs/adr/ADR-0007.md` has the full reasoning and the list of
   what was deliberately left alone (`archive/`, the historical ADRs, past
   changelog entries, and the still-unrenamed GitHub repository URL).
+- **2026-07-23** — Added 2026-07-24, previously missing from this
+  section though CHANGELOG.md recorded all four: closed the licensing
+  question (`ADR-0010`) — uniform CC BY-NC-ND 4.0 across the whole
+  repository (`src/`, `packages/`, `mythos/` alike), rejecting a
+  four-way differentiated per-package model on the grounds that "four
+  parallel license regimes are real, ongoing operational overhead...
+  for protection that isn't needed yet." Fourth ADR in one day touching
+  the code license (0006 → 0008 → 0009 → 0010); this is the terminus.
+- **2026-07-23** — Reconciled a second licensing collision (`ADR-0009`):
+  97 stale Apache-2.0 SPDX headers and a `packages/` restructuring with
+  four more licenses, from three more uncoordinated sessions. Ruled
+  root `LICENSE` (CC BY-NC-ND) governs `src/` and `mythos/` today;
+  `packages/`'s differentiated licensing left open, later closed by
+  `ADR-0010` above. Batch-fixed the stale headers.
+- **2026-07-23** — Superseded `ADR-0006`'s code-license decision
+  (`ADR-0008`): an uncoordinated session had already flipped root
+  `LICENSE` to CC BY-NC-ND 4.0 "for commercial exclusivity"; this ADR
+  formally records that direction, verifies no third-party relicensing
+  gap exists (only two authors have ever committed), and fixes ~15
+  files still claiming Apache-2.0.
+- **2026-07-23** — Added `ADR-0006`: the original licensing strategy
+  (keep the Apache-2.0 / CC BY-NC-ND dual-license split) and six IP
+  principles. Its code-license call was superseded the same day by
+  `ADR-0008` above; the IP principles it recorded still stand.
 - **2026-07-23** — Shipped v0.2, the Architecture Specification Release:
   `docs/vision/CrystalCore.md` rewritten as the canonical naming taxonomy
   (`ADR-0004` — locks Framework/Protocol/CrystalBridge/OS, bans future
