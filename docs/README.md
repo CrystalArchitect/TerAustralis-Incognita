@@ -20,6 +20,23 @@ Component-level specs that used to live beside the code are under
 [`architecture/crystal-core/`](architecture/crystal-core/); the Lattice
 design sketch is under [`architecture/lattice/`](architecture/lattice/).
 
+## Canonical knowledge base
+
+Seven cross-linked documents describe the architecture **exactly as it
+exists** — verified implementation, designed decisions, and open questions
+(reconstructed 2026-07-24 from this repo's ADRs, Migration-Plan, and git
+history; every claim labeled Science ✅ / Vision 🔮 / Drift ⚠️ / Unknown):
+
+| File | What it covers |
+|------|----------------|
+| [`ARCHITECTURE.md`](ARCHITECTURE.md) | Belt-Three model, three-project boundary, six-repository constellation |
+| [`REPOSITORIES.md`](REPOSITORIES.md) | Six-repo inventory (3 living + 3 frozen) — roles, links, CI/CD state |
+| [`GOVERNANCE.md`](GOVERNANCE.md) | ADR trail (0001–0011), locked names, the Incognita Rule, amendment process |
+| [`TECHNICAL-FINDINGS.md`](TECHNICAL-FINDINGS.md) | 2026-07-23 audit findings, component state matrix, test coverage |
+| [`IP-LICENSING.md`](IP-LICENSING.md) | License trail (CC BY-NC-ND 4.0), naming debts resolved & outstanding |
+| [`OPEN-DECISIONS.md`](OPEN-DECISIONS.md) | Stage 3–4 decision gates, Tier 1–3 recommendations |
+| [`TIMELINE.md`](TIMELINE.md) | Chronological narrative with provenance SHAs and branch names |
+
 ## Root-level reference documents
 
 Nine standalone docs live directly under `docs/`, not inside one of the
