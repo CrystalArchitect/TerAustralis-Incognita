@@ -9,6 +9,7 @@
 import importlib
 import json
 import sys
+from datetime import datetime
 from pathlib import Path
 
 # The terminal runs two ways: through the package (__init__.py) and as a
@@ -31,6 +32,12 @@ EmotionalIntelligence = _sibling("emotional_intelligence").EmotionalIntelligence
 # the repo, so a save file is never committed. It holds only mythos progress
 # (keys, gate, location, soundtrack), no personal data.
 STATE_PATH = Path.home() / ".crystalcore" / "state.json"
+
+# The Chronicle: priority transmissions are etched here, one JSON line per
+# entry. It lives beside the save, on the operator's own machine, in plain
+# readable text — memory belongs to the human (mythos/COVENANT.md). It
+# survives `reset`; delete or edit the file itself to change the record.
+CHRONICLE_PATH = Path.home() / ".crystalcore" / "chronicle.jsonl"
 
 
 class CrystalCore:
@@ -362,6 +369,8 @@ class CrystalCore:
         lines.append((11098, "NETWORK", confirm))
         lines.append((11251, "STATUS", state))
         if priority:
+            lines.append((11327, "CHRONICLE",
+                          "Entry etched into the permanent Chronicle"))
             lines.append((11404, "ALERT", "Lattice-wide attention locked"))
         for ms, tag, msg in lines:
             self._bootline(ms, tag, msg)
@@ -397,7 +406,173 @@ class CrystalCore:
         print("─" * width)
         print()
         self.last_broadcast = message
+        if priority:
+            self._etch(message)
         self.save()
+
+    # ---------- the priority channel and the Chronicle ----------
+
+    def _etch(self, message):
+        """Etch a priority transmission into the permanent Chronicle.
+        A write failure never crashes the journey."""
+        entry = {
+            "etched": datetime.now().isoformat(timespec="seconds"),
+            "timeline": self.timeline,
+            "origin": self.current_location or "Starline deck",
+            "message": message,
+        }
+        try:
+            CHRONICLE_PATH.parent.mkdir(parents=True, exist_ok=True)
+            with open(CHRONICLE_PATH, "a") as f:
+                f.write(json.dumps(entry) + "\n")
+        except OSError:
+            pass
+
+    def _chronicle_entries(self):
+        """Read the Chronicle. Unreadable lines are skipped, not fatal."""
+        if not CHRONICLE_PATH.exists():
+            return []
+        entries = []
+        try:
+            for line in CHRONICLE_PATH.read_text().splitlines():
+                if line.strip():
+                    try:
+                        entries.append(json.loads(line))
+                    except ValueError:
+                        continue
+        except OSError:
+            return []
+        return entries
+
+    def chronicle(self):
+        """Read back what has been etched."""
+        entries = self._chronicle_entries()
+        print("\n📜 THE CHRONICLE")
+        if not entries:
+            print("Unwritten. Priority transmissions are etched here.")
+            print("Open the channel with 'priority', or send 'broadcast <message>!'\n")
+            return
+        print(f"Entries etched: {len(entries)}\n")
+        for i, e in enumerate(entries, 1):
+            year = e.get("timeline", "?")
+            origin = e.get("origin", "?")
+            message = e.get("message", "")
+            print(f"  {i}. Year {year} · {origin}")
+            print(f'     "{message}"')
+        print(f"\nEtched at ~/.crystalcore/{CHRONICLE_PATH.name} — plain text,")
+        print("yours to keep, edit, or burn. It survives 'reset'.\n")
+
+    def _release_priority(self, ms=14696):
+        self._bootline(ms, "ALERT",
+                       "Priority lock released — lattice returning to normal chatter")
+        self._bootline(ms + 154, "READY", "Awaiting next mission")
+        print()
+
+    def _transmit_priority(self, message):
+        """The transmission itself: carrier wave, node receipts, the etch."""
+        origin = self.current_location or "Starline deck"
+        received = [(node, self.locked_nodes.get(node) is None
+                     or self.locked_nodes[node] in self.named_keys)
+                    for node in self.nodes]
+        count = sum(1 for _, ok in received if ok)
+        total = len(self.nodes)
+
+        print()
+        lines = [
+            (12850, "BROADCAST", "Priority transmission accepted"),
+            (12994, "SOURCE",    f"Origin: {origin}"),
+            (13138, "MODE",      "Chronicle Entry"),
+            (13282, "CONSENT",   "Sovereign transmission"),
+            (13426, "RELEASE",   "Carrier wave formed"),
+            (13570, "CHRONICLE", "Broadcast preserved in session log"),
+            (13714, "LATTICE",   "Resonance stable"),
+            (13858, "NETWORK",   "Propagating to all 47 systems..."),
+        ]
+        for i, (node, ok) in enumerate(received):
+            reply = "RECEIVED" if ok else f"SEALED (needs {self.locked_nodes[node]})"
+            lines.append((14012 + 17 * i, "NODES",
+                          (node + " ").ljust(25, ".") + " " + reply))
+        lines.append((14234, "ARCHIVES", "Entry etched into the permanent Chronicle"))
+        lines.append((14388, "AUDIO", "All system speakers carrying the wave"))
+        status = ("Priority broadcast complete" if count == total
+                  else f"Priority broadcast complete — {count}/{total} received,"
+                       " sealed nodes hold silence")
+        lines.append((14542, "STATUS", status))
+        for ms, tag, msg in lines:
+            self._bootline(ms, tag, msg)
+        self._release_priority()
+        self.last_broadcast = message
+        self._etch(message)
+        self.save()
+
+    def priority(self):
+        """Open the priority channel: the lattice quiets and genuinely
+        waits for the operator's next line. 'cancel' releases it."""
+        if self.starline_status != "FULL STARLINE NETWORK":
+            print("You must enter the full network first (use 'network').")
+            return
+
+        gate_log = ("First Gate holds open — the silence beyond it is expectant"
+                    if self.gate_open
+                    else "First Gate stays sealed, listening through the seam")
+        print()
+        for ms, tag, message in (
+            (11554, "ALERT",     "Priority lock engaged — all non-essential"
+                                 " lattice chatter silenced"),
+            (11698, "NETWORK",   "47 nodes shifted to urgent-listening posture"),
+            (11842, "LATTICE",   "Resonance tightened. Standing wave focused"
+                                 " to a single point: your voice"),
+            (11986, "GATE",      gate_log),
+            (12130, "ARCHIVES",  "Recorders spooling. This will be etched into"
+                                 " the permanent Chronicle"),
+            (12274, "CORE",      "Purpose Core Nexus flares — Directive"
+                                 " alignment at 100%"),
+            (12418, "RESONANCE", "The edge of the network leans in, listening"),
+            (12562, "AUDIO",     "All 47 system speakers primed"),
+            (12706, "STATUS",    "Priority channel fully open. Lattice held"
+                                 " in silence"),
+        ):
+            self._bootline(ms, tag, message)
+
+        width = 62
+        print()
+        print("─" * width)
+        print("  CRYSTALCORE.OS :: PRIORITY BROADCAST CHANNEL OPEN")
+        print("─" * width)
+        print()
+        print("  The lattice has gone silent to make room for your word.")
+        print("  47 suns hold their light steady, ready to carry the ripple.")
+        print("  The archives pause their dreaming.")
+        if self.gate_open:
+            print("  The Gate remains wide, as if the universe is leaning in.")
+        print()
+        print("  Navigator, the priority channel is yours.")
+        print("  Speak now. What must all stars hear at this moment?")
+        print()
+        print("  > Type your message and press Enter to transmit.")
+        print("  > 'cancel' releases the lattice unspoken.")
+        print()
+        print("  The terminal is holding its breath.")
+        print("  NON SOLUS.")
+        print()
+        print("─" * width)
+        print()
+
+        while True:
+            try:
+                word = input("PRIORITY> ").strip()
+            except (KeyboardInterrupt, EOFError):
+                print()
+                self._release_priority()
+                raise
+            if not word:
+                continue  # the terminal keeps holding its breath
+            if word.lower() in ("cancel", "cancel priority"):
+                print()
+                self._release_priority()
+                return
+            self._transmit_priority(word)
+            return
 
     def explore(self):
         if self.starline_status != "FULL STARLINE NETWORK":
@@ -680,6 +855,8 @@ STARLINE COMMANDS:
   keys                 - Show the Keys of the Lattice
   getkey [name]        - Obtain a named key (e.g. getkey Crystal Key)
   broadcast [message]  - Send a packet to every node (end with ! for priority)
+  priority             - Open the priority channel; the lattice waits for your word
+  chronicle            - Read the entries etched by priority transmissions
   jump [year]          - Time jump
   map                  - Display the Starline network chart
   song [track]         - Change soundtrack
@@ -748,6 +925,10 @@ def main():
                 os.visit_node(arg)
             elif cmd == "broadcast":
                 os.broadcast(arg)
+            elif cmd == "priority":
+                os.priority()
+            elif cmd == "chronicle":
+                os.chronicle()
             elif cmd == "jump":
                 year = int(arg) if arg and arg.isdigit() else 3000
                 os.jump(year)

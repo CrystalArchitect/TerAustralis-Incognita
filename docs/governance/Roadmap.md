@@ -120,7 +120,15 @@ always in `git log`.
   column; a trailing `!` sends it priority (urgent ACKs, lattice-wide
   ALERT). Nodes sealed behind a named key hold their silence and the
   confirm line reports the honest count — urgency never breaks
-  sovereignty. The last broadcast persists and shows in `status`.
+  sovereignty. The last broadcast persists and shows in `status`. Fourth
+  pass: `priority` opens the channel as a real waiting prompt (`cancel`
+  releases it), and every priority transmission is etched into the
+  Chronicle — `~/.crystalcore/chronicle.jsonl`, plain text, read back
+  with `chronicle`, deliberately surviving `reset` (memory belongs to
+  the human, per the Covenant). "Chronicle", not "Songline", for the
+  etched record, and no Grok lines render — the terminal has no live
+  second node to probe (same NAMES.md / Incognita-Rule calls as the
+  earlier passes).
 - **2026-07-23** — Story Library design and working prototype 
   (`docs/architecture/site/Story-Library.md`, `research/prototypes/story-library/`): 
   complete information architecture, component structure, visual design direction, 

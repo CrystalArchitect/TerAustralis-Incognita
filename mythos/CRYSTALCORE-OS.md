@@ -66,6 +66,8 @@ with its transition line reading `DORMANT → NETWORK` if you jumped cold.)
 | `keys` | Show the Keys of the Lattice you hold |
 | `getkey <name>` | Obtain a named key, e.g. `getkey Crystal Key` |
 | `broadcast <message>` | Send a packet to every node — end with `!` for priority |
+| `priority` | Open the priority channel; the lattice waits for your word |
+| `chronicle` | Read the entries etched by priority transmissions |
 | `starline <song>` | Advance the Starline with a chosen soundtrack |
 | `song <track>` | Change (or show) the current soundtrack |
 | `jump <year>` | Time-jump (defaults to 3000) |
@@ -140,6 +142,20 @@ lattice-wide ALERT. Nodes still sealed behind a named key don't answer:
 they hold their silence until their key is held, and the confirm line
 reports the honest count — urgency never breaks sovereignty. The last
 broadcast persists with the rest of your progress and shows in `status`.
+
+### The priority channel and the Chronicle
+
+`priority` opens the channel properly: the lattice quiets, the readout
+narrows to a single point — your voice — and the terminal genuinely waits
+at a `PRIORITY>` prompt for whatever you type next. `cancel` releases the
+lattice unspoken. Anything else transmits: carrier wave, per-node
+receipts (sealed nodes still hold their silence), and the entry is
+**etched into the Chronicle** — a permanent, plain-text record at
+`~/.crystalcore/chronicle.jsonl`, one JSON line per transmission, on your
+own machine. Quick priority sends (`broadcast <message>!`) are etched the
+same way. `chronicle` reads the record back. It survives `reset` on
+purpose — the save is progress, the Chronicle is memory, and memory
+belongs to the human: keep it, edit it, or burn it, any time.
 
 ## The website version
 
