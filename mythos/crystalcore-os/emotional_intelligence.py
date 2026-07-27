@@ -7,7 +7,11 @@ import logging
 from pathlib import Path
 from typing import Tuple, Dict, Optional
 
-from .active_learning import ActiveLearningQueue, ActiveLearner
+try:
+    from .active_learning import ActiveLearningQueue, ActiveLearner
+except ImportError:
+    # Script mode — crystalcore_os.py puts this directory on sys.path.
+    from active_learning import ActiveLearningQueue, ActiveLearner
 
 logger = logging.getLogger(__name__)
 EI_STATE_PATH = Path.home() / ".crystalcore" / "ei_state.json"

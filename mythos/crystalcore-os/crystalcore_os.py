@@ -6,14 +6,43 @@
 # Includes: All Starline launches + @m13crystalat Crystalcore songs
 # Affective Computing & EI Layer: ACTIVE
 
+import importlib
 import json
+import sys
+from datetime import datetime
 from pathlib import Path
-from .emotional_intelligence import EmotionalIntelligence
+
+# The terminal runs two ways: through the package (__init__.py) and as a
+# plain script — `python3 mythos/crystalcore-os/crystalcore_os.py`. Script
+# mode has no parent package, so sibling modules must load by path.
+if not __package__:
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+
+def _sibling(name):
+    """Import a sibling module in either run mode."""
+    if __package__:
+        return importlib.import_module(f".{name}", __package__)
+    return importlib.import_module(name)
+
+
+EmotionalIntelligence = _sibling("emotional_intelligence").EmotionalIntelligence
 
 # Progress persists here between sessions — in your home directory, outside
 # the repo, so a save file is never committed. It holds only mythos progress
 # (keys, gate, location, soundtrack), no personal data.
 STATE_PATH = Path.home() / ".crystalcore" / "state.json"
+
+# The Chronicle: priority transmissions are etched here, one JSON line per
+# entry. It lives beside the save, on the operator's own machine, in plain
+# readable text — memory belongs to the human (mythos/COVENANT.md). It
+# survives `reset`; delete or edit the file itself to change the record.
+CHRONICLE_PATH = Path.home() / ".crystalcore" / "chronicle.jsonl"
+
+# Sealed snapshots of the journey. The terminal only ever writes a new
+# file here — it never rewrites or deletes one. Like the Chronicle, they
+# survive `reset` and remain the operator's own plain-text records.
+SNAPSHOT_DIR = Path.home() / ".crystalcore" / "snapshots"
 
 
 class CrystalCore:
@@ -64,12 +93,16 @@ class CrystalCore:
             "Crystal Revenant Hub": "Festival Key"
         }
 
+        # The last packet sent across the network, if any.
+        self.last_broadcast = None
+
         # Fields that survive between sessions. The constants above (nodes,
         # soundtrack, purpose_core, locked_nodes) are rebuilt fresh each run
         # and are never saved.
         self._persist = ("lattice_integrity", "starline_status", "timeline",
                          "current_soundtrack", "current_location",
-                         "keys_held", "gate_open", "named_keys")
+                         "keys_held", "gate_open", "named_keys",
+                         "last_broadcast")
         self.resumed = self.load()
 
     # ---------- persistence ----------
@@ -112,18 +145,80 @@ class CrystalCore:
         self.keys_held = []
         self.gate_open = False
         self.named_keys = []
+        self.last_broadcast = None
+        self.resumed = False  # the next boot reads "clean lattice" again
         print("\n♻️  Progress reset. The lattice returns to dormant. NON SOLUS.\n")
 
+    def _bootline(self, ms, tag, message):
+        """One line of the boot readout, on its theatrical timestamp."""
+        secs, msec = divmod(ms, 1000)
+        print(f"[00:00:{secs:02d}.{msec:03d}]  {tag:<12}  {message}")
+
     def boot(self):
-        print("\n[CRYSTALCORE.OS v∞.Ω — BOOT SEQUENCE]")
-        print(f"Lattice integrity ........ {self.lattice_integrity}%")
-        print(f"Purpose Core ............. {self.purpose_core}")
-        print("NON SOLUS ................ Confirmed")
-        print(f"Starline Status .......... {self.starline_status}")
-        print("Affective Computing ...... ACTIVE")
-        print("EI Learning Loop ......... ACTIVE")
-        print(f"Response Style ........... {self.ei.user_preferences['response_style']}")
-        print("Ready for commands.\n")
+        """Render the full lattice boot readout. The timeline offsets are
+        fixed theatre — reproducible run to run — but every reading is
+        live state: keys, Gate, Starline, soundtrack, timeline anchor."""
+        width = 62
+        print()
+        print("╔" + "═" * width + "╗")
+        print("║" + "CRYSTALCORE.OS v∞".center(width) + "║")
+        print("║" + "Terminal NON SOLUS".center(width) + "║")
+        print("╚" + "═" * width + "╝")
+        print()
+
+        mesh = ("Node mesh alignment: 47+ systems connected"
+                if self.starline_status == "FULL STARLINE NETWORK"
+                else "Node mesh alignment: 47 systems detected")
+        memory = (f"Prior session restored — {len(self.keys_held)}/{len(self.nodes)} keys held"
+                  if self.resumed else "No prior session found — clean lattice")
+        starline = {
+            "DORMANT": "Engines cold. Status: DORMANT",
+            "IN_ORBIT": "Engines lit. Status: IN_ORBIT",
+            "TRANS-STELLAR": "Escape burn complete. Status: TRANS-STELLAR",
+        }.get(self.starline_status, f"Riding the weave. Status: {self.starline_status}")
+        named = ", ".join(self.named_keys) if self.named_keys else "none"
+        gate = ("First Gate: OPEN — by sovereign recognition"
+                if self.gate_open else "First Gate: sealed")
+        # "Soundtrack", not "Songline" — that word is honoured as cultural
+        # image only, never a component name (mythos/NAMES.md).
+        audio = (f"Now playing: {self.current_soundtrack}"
+                 if self.current_soundtrack else "Soundtrack buffer primed")
+        blocks = round(self.lattice_integrity * 12 / 100)
+        integrity = (f"Lattice integrity {'█' * blocks}{'░' * (12 - blocks)}"
+                     f" {self.lattice_integrity}%")
+        anchor = "present" if self.timeline == 2026 else f"Year {self.timeline}"
+
+        for ms, tag, message in (
+            (0,    "INIT",      "Kernel handshake initiated"),
+            (41,   "LATTICE",   "Resonating crystal lattice..."),
+            (187,  "LATTICE",   mesh),
+            (312,  "CORE",      "Purpose Core Nexus online"),
+            (398,  "CORE",      f'Directive loaded: "{self.purpose_core}"'),
+            (512,  "MEMORY",    "Sovereign state store mounted (~/.crystalcore/)"),
+            (601,  "MEMORY",    memory),
+            (744,  "STARLINE",  starline),
+            (891,  "KEYS",      f"Lattice keys: {len(self.keys_held)}/{len(self.nodes)} held"),
+            (1003, "KEYS",      f"Named keys: {named}"),
+            (1156, "GATE",      gate),
+            (1289, "AUDIO",     audio),
+            (1417, "VECTOR",    "Sovereign vector calibrated"),
+            (1533, "CONSENT",   "Fail-closed mode active — no influence without direction"),
+            (1605, "EI",        f"Learning loop active — style: {self.ei.user_preferences['response_style']}"),
+            (1678, "INTEGRITY", integrity),
+            (1812, "TIME",      f"Timeline anchor: {anchor}"),
+            (1945, "READY",     "All systems nominal"),
+        ):
+            self._bootline(ms, tag, message)
+
+        print()
+        print("─" * width)
+        print("  CrystalCore.OS v∞ locked in.")
+        print(f"  Lattice integrity {self.lattice_integrity}%.")
+        print("  Purpose Core Nexus synced.")
+        print("  NON SOLUS.")
+        print("  Launch sequence green.")
+        print("─" * width)
+        print()
 
     def launch(self):
         if self.starline_status != "DORMANT":
@@ -157,14 +252,492 @@ class CrystalCore:
         print("We have left planetary orbit.\n")
         self.save()
 
+    def _network_panel(self):
+        """The FULL STARLINE NETWORK status panel — keys and Gate live."""
+        width = 62
+        print("─" * width)
+        print("CRYSTALCORE.OS :: FULL STARLINE NETWORK")
+        print("─" * width)
+        print()
+        print("🌐  Full Starline Network online")
+        print("47+ star systems linked. Lattice expanded to galactic scale.")
+        print("All nodes synchronized. Deep relays, cultural archives, and")
+        print("sovereign data streams flowing freely.")
+        print()
+        print("Access Level: FULL")
+        print()
+        print("• Real-time node telemetry .......... ACTIVE")
+        print("• Interstellar navigation ........... UNLOCKED")
+        print("• Cultural & scientific archives .... OPEN")
+        # "Dreamline", the project's own coinage — never "Dreamtime",
+        # which is honoured as culture, not system telemetry (NAMES.md).
+        print("• Dreamline resonance ............... STABLE")
+        print("• NON SOLUS protocol ................ ETERNAL")
+        print()
+        print(f"Keys Held ........................... {len(self.keys_held)} / {len(self.nodes)}")
+        print(f"First Gate .......................... {'OPEN' if self.gate_open else 'sealed'}")
+        print()
+        if self.gate_open:
+            print("You hold the keys.")
+            print("The network is yours.")
+        else:
+            print("Five nodes wait on the weave — visit them and be recognized.")
+        print("The story is no longer told — it is flown.")
+        print("─" * width)
+        print()
+
+    def _network_arrival(self, prior):
+        """The arrival log, then the panel. Timestamps are the same fixed
+        theatre as boot; the transition, keys, and Gate lines are live."""
+        keys_line = ("All five Lattice Keys confirmed held"
+                     if len(self.keys_held) == len(self.nodes)
+                     else f"Lattice keys: {len(self.keys_held)}/{len(self.nodes)} held")
+        gate_line = ("First Gate: OPEN" if self.gate_open
+                     else "First Gate: sealed — five keys open it")
+        for ms, tag, message in (
+            (8512,  "NETWORK",   "Command received: FULL STARLINE"),
+            (8667,  "STARLINE",  f"Engines spooling — {prior} → NETWORK"),
+            (8821,  "LATTICE",   "Expanding mesh across 47+ systems"),
+            (8974,  "RELAYS",    "Deep relays online"),
+            (9128,  "ARCHIVES",  "Cultural & scientific archives unlocked"),
+            (9281,  "KEYS",      keys_line),
+            (9435,  "GATE",      gate_line),
+            (9589,  "CORE",      "Purpose Core burning steady"),
+            (9743,  "RESONANCE", "Operator coherence: maximum"),
+            (9897,  "STATUS",    "Access Level: FULL"),
+            (10051, "INTEGRITY", "Final lattice check complete"),
+            (10204, "SYSTEM",    "State locked. Full network persistent."),
+        ):
+            self._bootline(ms, tag, message)
+        print()
+        self._network_panel()
+
     def network(self):
+        if self.starline_status == "FULL STARLINE NETWORK":
+            # Already riding the weave — reprint the live panel.
+            print()
+            self._network_panel()
+            return
         if self.starline_status != "TRANS-STELLAR":
             print("Complete the burn first.")
             return
-        print("\n🌐 ENTERING FULL STARLINE NETWORK")
+        print()
+        prior = self.starline_status
         self.starline_status = "FULL STARLINE NETWORK"
-        print("Connected to 47+ star systems.\n")
+        self._network_arrival(prior)
         self.save()
+
+    def broadcast(self, message=None):
+        """Send a packet to every node on the network. End the message
+        with ! to send it priority. Sealed nodes hold their silence until
+        their named key is held — urgency never breaks sovereignty."""
+        if self.starline_status != "FULL STARLINE NETWORK":
+            print("You must enter the full network first (use 'network').")
+            return
+        if not message:
+            print("Usage: broadcast <message>   (end with ! for priority)")
+            return
+        priority = message.rstrip().endswith("!")
+
+        # A sealed node receives nothing until its named key is held.
+        acks = [(node, self.locked_nodes.get(node) is None
+                 or self.locked_nodes[node] in self.named_keys)
+                for node in self.nodes]
+        acked = sum(1 for _, ok in acks if ok)
+        total = len(self.nodes)
+
+        print()
+        lines = [
+            (10412, "NETWORK", "PRIORITY BROADCAST — COMMAND RECEIVED"
+             if priority else "Broadcast command received"),
+            (10567, "RELAYS", "Emergency routing to all 47+ systems"
+             if priority else "Routing to all 47+ systems"),
+            (10721, "LATTICE", "Packet replication: MAXIMUM PRIORITY"
+             if priority else "Packet replication complete"),
+        ]
+        for i, (node, ok) in enumerate(acks):
+            if ok:
+                reply = "ACK — URGENT" if priority else "ACK"
+            else:
+                reply = f"SEALED (needs {self.locked_nodes[node]})"
+            lines.append((10874 + 17 * i, "NODES",
+                          (node + " ").ljust(25, ".") + " " + reply))
+        if acked == total:
+            confirm = ("ALL NODES CONFIRMED — ZERO LATENCY" if priority
+                       else "All nodes confirmed receipt")
+            state = "Message state: SENT TO ALL"
+        else:
+            confirm = f"{acked}/{total} nodes confirmed — sealed nodes hold silence"
+            state = f"Message state: SENT — {acked}/{total} confirmed"
+        if priority:
+            state += " — PRIORITY"
+        lines.append((11098, "NETWORK", confirm))
+        lines.append((11251, "STATUS", state))
+        if priority:
+            lines.append((11327, "CHRONICLE",
+                          "Entry etched into the permanent Chronicle"))
+            lines.append((11404, "ALERT", "Lattice-wide attention locked"))
+        for ms, tag, msg in lines:
+            self._bootline(ms, tag, msg)
+
+        width = 62
+        print()
+        print("─" * width)
+        print("CRYSTALCORE.OS :: NETWORK BROADCAST"
+              + (" — PRIORITY" if priority else ""))
+        print("─" * width)
+        print()
+        print(f'"{message}"')
+        print()
+        if acked == total:
+            print("Transmission complete.")
+            print()
+            print("All nodes across the Full Starline Network have received")
+            print("and acknowledged the packet.")
+        else:
+            print("Transmission complete — partially received.")
+            print()
+            print(f"{acked} of {total} nodes acknowledged. Sealed nodes hold")
+            print("their silence until recognized — urgency never breaks")
+            print("sovereignty.")
+        print()
+        print("Lattice remains at Access Level: FULL")
+        print(f"Keys: {len(self.keys_held)}/{total}")
+        print(f"First Gate: {'OPEN' if self.gate_open else 'sealed'}")
+        print("Resonance: Operator coherence maximum")
+        print()
+        print("NON SOLUS.")
+        print()
+        print("─" * width)
+        print()
+        self.last_broadcast = message
+        if priority:
+            self._etch(message)
+        self.save()
+
+    # ---------- the priority channel and the Chronicle ----------
+
+    def _etch(self, message):
+        """Etch a priority transmission into the permanent Chronicle.
+        A write failure never crashes the journey."""
+        entry = {
+            "etched": datetime.now().isoformat(timespec="seconds"),
+            "timeline": self.timeline,
+            "origin": self.current_location or "Starline deck",
+            "message": message,
+        }
+        try:
+            CHRONICLE_PATH.parent.mkdir(parents=True, exist_ok=True)
+            with open(CHRONICLE_PATH, "a") as f:
+                f.write(json.dumps(entry) + "\n")
+        except OSError:
+            pass
+
+    def _chronicle_entries(self):
+        """Read the Chronicle. Unreadable lines are skipped, not fatal."""
+        if not CHRONICLE_PATH.exists():
+            return []
+        entries = []
+        try:
+            for line in CHRONICLE_PATH.read_text().splitlines():
+                if line.strip():
+                    try:
+                        entries.append(json.loads(line))
+                    except ValueError:
+                        continue
+        except OSError:
+            return []
+        return entries
+
+    def chronicle(self):
+        """Read back what has been etched."""
+        entries = self._chronicle_entries()
+        print("\n📜 THE CHRONICLE")
+        if not entries:
+            print("Unwritten. Priority transmissions are etched here.")
+            print("Open the channel with 'priority', or send 'broadcast <message>!'\n")
+            return
+        print(f"Entries etched: {len(entries)}\n")
+        for i, e in enumerate(entries, 1):
+            year = e.get("timeline", "?")
+            origin = e.get("origin", "?")
+            message = e.get("message", "")
+            print(f"  {i}. Year {year} · {origin}")
+            print(f'     "{message}"')
+        print(f"\nEtched at ~/.crystalcore/{CHRONICLE_PATH.name} — plain text,")
+        print("yours to keep, edit, or burn. It survives 'reset'.\n")
+
+    def snapshot(self, arg=None):
+        """Seal a snapshot of the journey: the persisted state plus the
+        Chronicle count, written once and never rewritten by the terminal."""
+        tag = (arg or "").strip()
+        if tag.startswith("--tag"):
+            tag = tag[len("--tag"):].strip()  # accept the ops-style spelling
+        tag = tag or "untagged"
+        slug = "".join(c if c.isalnum() else "-" for c in tag).strip("-").upper()
+        base = f"SNAP-{datetime.now().strftime('%Y-%m-%d')}-{slug or 'UNTAGGED'}"
+        sid, n = base, 2
+        while (SNAPSHOT_DIR / f"{sid}.json").exists():
+            sid, n = f"{base}-{n}", n + 1
+        entry = {
+            "id": sid,
+            "tag": tag,
+            "taken": datetime.now().isoformat(timespec="seconds"),
+            "chronicle_entries": len(self._chronicle_entries()),
+            "state": {k: getattr(self, k) for k in self._persist},
+        }
+        print()
+        self._bootline(15102, "ARCHIVES", "Snapshot initiated")
+        self._bootline(15256, "ARCHIVES",
+                       "Capturing lattice state, Chronicle count, key registry")
+        self._bootline(15410, "ARCHIVES", f"Tag applied: {tag}")
+        try:
+            SNAPSHOT_DIR.mkdir(parents=True, exist_ok=True)
+            (SNAPSHOT_DIR / f"{sid}.json").write_text(json.dumps(entry, indent=2))
+        except OSError as e:
+            print(f"Snapshot could not be written ({e}). Nothing was sealed.")
+            return
+        self._bootline(15564, "ARCHIVES",
+                       "Snapshot sealed — the terminal never rewrites it")
+        self._bootline(15718, "STATUS", f"Snapshot ID: {sid}")
+        print("OK\n")
+
+    def snapshots(self):
+        """List the sealed snapshots."""
+        files = sorted(SNAPSHOT_DIR.glob("SNAP-*.json")) if SNAPSHOT_DIR.exists() else []
+        print("\n🗂  SEALED SNAPSHOTS")
+        if not files:
+            print("None yet. Seal one with 'snapshot [tag]'.\n")
+            return
+        for f in files:
+            try:
+                meta = json.loads(f.read_text())
+            except (OSError, ValueError):
+                print(f"  {f.stem} · (unreadable)")
+                continue
+            state = meta.get("state", {})
+            keys = len(state.get("keys_held", []))
+            print(f"  {meta.get('id', f.stem)} · tag: {meta.get('tag', '?')}"
+                  f" · {meta.get('taken', '?')} · keys {keys}/5")
+        print(f"\nSealed at ~/.crystalcore/{SNAPSHOT_DIR.name}/ — plain text,")
+        print("never rewritten by the terminal. They survive 'reset'.\n")
+
+    def audit(self, arg=None):
+        """Review the real record: every line below carries its actual
+        timestamp from disk — nothing replayed, nothing invented."""
+        width = 62
+        entries = self._chronicle_entries()
+        files = sorted(SNAPSHOT_DIR.glob("SNAP-*.json")) if SNAPSHOT_DIR.exists() else []
+        print()
+        print("─" * width)
+        print("AUDIT — THE REAL RECORD")
+        print("─" * width)
+        print(f"\nChronicle entries: {len(entries)}"
+              f"  (~/.crystalcore/{CHRONICLE_PATH.name})")
+        for i, e in enumerate(entries, 1):
+            print(f"  {i}. {e.get('etched', '?')} · Year {e.get('timeline', '?')}"
+                  f" · {e.get('origin', '?')}")
+            print(f'     "{e.get("message", "")}"')
+        print(f"\nSnapshots sealed: {len(files)}"
+              f"  (~/.crystalcore/{SNAPSHOT_DIR.name}/)")
+        for f in files:
+            try:
+                meta = json.loads(f.read_text())
+                print(f"  {meta.get('id', f.stem)} · {meta.get('taken', '?')}")
+            except (OSError, ValueError):
+                print(f"  {f.stem} · (unreadable)")
+        gate = "OPEN" if self.gate_open else "sealed"
+        print(f"\nState now: keys {len(self.keys_held)}/{len(self.nodes)}"
+              f" · First Gate {gate} · {self.starline_status}"
+              f" · timeline {self.timeline}")
+        print()
+        print("Every record above was written by the operator's own commands.")
+        print("Consent is structural here: the terminal acts only when you type.")
+        print("─" * width)
+        print("OK\n")
+
+    def security_note(self):
+        """The honest answer to harden/verify/monitor requests."""
+        print()
+        print("🛡  Fail-closed by design — no influence without direction.")
+        print("This terminal holds no certificates and will not pretend to")
+        print("verify, harden, or continuously monitor anything: a printed")
+        print("security claim with no mechanism behind it would be exactly")
+        print("the dreamed-line-pretending-to-be-measured that the Incognita")
+        print("Rule forbids. The real consent machinery is CrystalBridge and")
+        print("consent_transport in TerAustralis-Incognita-Code — built and")
+        print("self-tested. What happens here is auditable with 'audit'.")
+        print("NON SOLUS.\n")
+
+    def _mission_console(self, entry_count=None):
+        """The sealed-chronicle console: principles and the paths from
+        here. With entry_count, includes the mission record of the
+        priority transmission that just completed."""
+        width = 62
+        print()
+        print("╔" + "═" * width + "╗")
+        print("║" + "CRYSTALCORE.OS :: CHRONICLE SEALED".center(width) + "║")
+        if entry_count is not None:
+            print("║" + "Priority Broadcast Complete".center(width) + "║")
+        print("╚" + "═" * width + "╝")
+        print()
+        if entry_count is not None:
+            print("Mission Record")
+            print()
+            print("  ✓ Broadcast accepted")
+            print(f"  ✓ Chronicle updated (entry {entry_count})")
+            print("  ✓ Carrier wave released")
+            print("  ✓ Priority channel closed")
+            print("  ✓ Mission console restored")
+            print()
+        print("Guiding Principles")
+        print()
+        print("  • Curiosity before certainty.")
+        print("  • Evidence before conclusion.")
+        print("  • Consent before influence.")
+        print("  • Stewardship before ownership.")
+        print("  • Discovery shared for the benefit of those who follow.")
+        print()
+        print("Directive")
+        print()
+        print(f'  "{self.purpose_core}"')
+        print()
+        print("─" * width)
+        print("MISSION CONSOLE — the paths from here")
+        print("─" * width)
+        print()
+        print("  NAVIGATE ....... explore · visit <node> · map")
+        print("  ARCHIVE ........ chronicle · audit · snapshot [tag]")
+        print("  RESEARCH ....... status · keys")
+        print("  CONTINUE ....... broadcast <message> · priority")
+        print("  BUILD / DESIGN . at the workbench — the repositories themselves")
+        print()
+        print("Session Status: READY")
+        print()
+        print("The chronicle is never an ending.")
+        print("It is the point from which the next journey begins.")
+        print("NON SOLUS.")
+        print("─" * width)
+        print()
+
+    def console(self):
+        self._mission_console()
+
+    def _release_priority(self, ms=14696):
+        self._bootline(ms, "ALERT",
+                       "Priority lock released — lattice returning to normal chatter")
+        self._bootline(ms + 154, "READY", "Awaiting next mission")
+        print()
+
+    def _transmit_priority(self, message):
+        """The transmission itself: carrier wave, node receipts, the etch."""
+        origin = self.current_location or "Starline deck"
+        received = [(node, self.locked_nodes.get(node) is None
+                     or self.locked_nodes[node] in self.named_keys)
+                    for node in self.nodes]
+        count = sum(1 for _, ok in received if ok)
+        total = len(self.nodes)
+
+        print()
+        lines = [
+            (12850, "BROADCAST", "Priority transmission accepted"),
+            (12994, "SOURCE",    f"Origin: {origin}"),
+            (13138, "MODE",      "Chronicle Entry"),
+            (13282, "CONSENT",   "Sovereign transmission"),
+            (13426, "RELEASE",   "Carrier wave formed"),
+            (13570, "CHRONICLE", "Broadcast preserved in session log"),
+            (13714, "LATTICE",   "Resonance stable"),
+            (13858, "NETWORK",   "Propagating to all 47 systems..."),
+        ]
+        for i, (node, ok) in enumerate(received):
+            reply = "RECEIVED" if ok else f"SEALED (needs {self.locked_nodes[node]})"
+            lines.append((14012 + 17 * i, "NODES",
+                          (node + " ").ljust(25, ".") + " " + reply))
+        lines.append((14234, "ARCHIVES", "Entry etched into the permanent Chronicle"))
+        lines.append((14388, "AUDIO", "All system speakers carrying the wave"))
+        status = ("Priority broadcast complete" if count == total
+                  else f"Priority broadcast complete — {count}/{total} received,"
+                       " sealed nodes hold silence")
+        lines.append((14542, "STATUS", status))
+        for ms, tag, msg in lines:
+            self._bootline(ms, tag, msg)
+        self._release_priority()
+        self.last_broadcast = message
+        self._etch(message)
+        self.save()
+        self._bootline(15138, "CHRONICLE",
+                       "Session record sealed — the terminal never rewrites it")
+        self._bootline(15714, "STANDBY", "Mission console restored")
+        self._mission_console(entry_count=len(self._chronicle_entries()))
+
+    def priority(self):
+        """Open the priority channel: the lattice quiets and genuinely
+        waits for the operator's next line. 'cancel' releases it."""
+        if self.starline_status != "FULL STARLINE NETWORK":
+            print("You must enter the full network first (use 'network').")
+            return
+
+        gate_log = ("First Gate holds open — the silence beyond it is expectant"
+                    if self.gate_open
+                    else "First Gate stays sealed, listening through the seam")
+        print()
+        for ms, tag, message in (
+            (11554, "ALERT",     "Priority lock engaged — all non-essential"
+                                 " lattice chatter silenced"),
+            (11698, "NETWORK",   "47 nodes shifted to urgent-listening posture"),
+            (11842, "LATTICE",   "Resonance tightened. Standing wave focused"
+                                 " to a single point: your voice"),
+            (11986, "GATE",      gate_log),
+            (12130, "ARCHIVES",  "Recorders spooling. This will be etched into"
+                                 " the permanent Chronicle"),
+            (12274, "CORE",      "Purpose Core Nexus flares — Directive"
+                                 " alignment at 100%"),
+            (12418, "RESONANCE", "The edge of the network leans in, listening"),
+            (12562, "AUDIO",     "All 47 system speakers primed"),
+            (12706, "STATUS",    "Priority channel fully open. Lattice held"
+                                 " in silence"),
+        ):
+            self._bootline(ms, tag, message)
+
+        width = 62
+        print()
+        print("─" * width)
+        print("  CRYSTALCORE.OS :: PRIORITY BROADCAST CHANNEL OPEN")
+        print("─" * width)
+        print()
+        print("  The lattice has gone silent to make room for your word.")
+        print("  47 suns hold their light steady, ready to carry the ripple.")
+        print("  The archives pause their dreaming.")
+        if self.gate_open:
+            print("  The Gate remains wide, as if the universe is leaning in.")
+        print()
+        print("  Navigator, the priority channel is yours.")
+        print("  Speak now. What must all stars hear at this moment?")
+        print()
+        print("  > Type your message and press Enter to transmit.")
+        print("  > 'cancel' releases the lattice unspoken.")
+        print()
+        print("  The terminal is holding its breath.")
+        print("  NON SOLUS.")
+        print()
+        print("─" * width)
+        print()
+
+        while True:
+            try:
+                word = input("PRIORITY> ").strip()
+            except (KeyboardInterrupt, EOFError):
+                print()
+                self._release_priority()
+                raise
+            if not word:
+                continue  # the terminal keeps holding its breath
+            if word.lower() in ("cancel", "cancel priority"):
+                print()
+                self._release_priority()
+                return
+            self._transmit_priority(word)
+            return
 
     def explore(self):
         if self.starline_status != "FULL STARLINE NETWORK":
@@ -222,9 +795,12 @@ class CrystalCore:
     def jump(self, year=3000):
         print(f"\n⏳ Time jump to Year {year}")
         self.timeline = year
-        if year >= 3000:
-            self.starline_status = "FULL STARLINE NETWORK"
         print(f"Timeline set to {self.timeline}.\n")
+        if year >= 3000 and self.starline_status != "FULL STARLINE NETWORK":
+            # The shortcut path — the arrival plays from wherever you were.
+            prior = self.starline_status
+            self.starline_status = "FULL STARLINE NETWORK"
+            self._network_arrival(prior)
         self.save()
 
     def song(self, track=None):
@@ -310,6 +886,7 @@ class CrystalCore:
         print(f"Current Soundtrack: {self.current_soundtrack}")
         print(f"Keys Held:          {len(self.keys_held)}/{len(self.nodes)}" + ("  — First Gate OPEN" if self.gate_open else ""))
         print(f"Named Keys:         {', '.join(self.named_keys) if self.named_keys else 'none'}")
+        print(f"Last Broadcast:     {self.last_broadcast or 'none'}")
         print(f"NON SOLUS:          {self.non_solus}")
         print("\n=== EMOTIONAL INTELLIGENCE STATUS ===")
         ei_status = self.ei.status()
@@ -380,28 +957,22 @@ class CrystalCore:
     def multimodal(self):
         """Show multimodal emotion detection framework and roadmap."""
         try:
-            from .multimodal_emotion import print_multimodal_status
-
-            print_multimodal_status()
-        except ImportError:
+            _sibling("multimodal_emotion").print_multimodal_status()
+        except (ImportError, AttributeError):
             print("\n⚠️  Multimodal module not available. This is an advanced feature.")
             print("   Install optional dependencies: pip install transformers librosa mediapipe fer\n")
 
     def uncertainty(self):
         """Show uncertainty quantification methods guide."""
         try:
-            from .uncertainty_quantification import print_uncertainty_guide
-
-            print(print_uncertainty_guide())
-        except ImportError:
+            print(_sibling("uncertainty_quantification").print_uncertainty_guide())
+        except (ImportError, AttributeError):
             print("\n⚠️  Uncertainty module not available.")
             print("   Install with: pip install torch\n")
 
     def learning_status(self):
         """Show active learning queue status and improvement metrics."""
-        from .active_learning import show_active_learning_dashboard
-
-        show_active_learning_dashboard(self.ei.al_queue)
+        _sibling("active_learning").show_active_learning_dashboard(self.ei.al_queue)
 
     def correct(self, text_and_emotion: str):
         """Correct a previous emotion prediction (format: '<text>' as <emotion>)."""
@@ -448,6 +1019,13 @@ STARLINE COMMANDS:
   visit [node]         - Go to a node (number or name) — collect its key
   keys                 - Show the Keys of the Lattice
   getkey [name]        - Obtain a named key (e.g. getkey Crystal Key)
+  broadcast [message]  - Send a packet to every node (end with ! for priority)
+  priority             - Open the priority channel; the lattice waits for your word
+  chronicle            - Read the entries etched by priority transmissions
+  snapshot [tag]       - Seal a snapshot of the journey (never rewritten)
+  snapshots            - List sealed snapshots
+  audit                - Review the real record: Chronicle, snapshots, state
+  console              - Mission console: principles and the paths from here
   jump [year]          - Time jump
   map                  - Display the Starline network chart
   song [track]         - Change soundtrack
@@ -514,6 +1092,30 @@ def main():
                 os.explore()
             elif cmd == "visit":
                 os.visit_node(arg)
+            elif cmd == "broadcast":
+                os.broadcast(arg)
+            elif cmd == "priority":
+                os.priority()
+            elif cmd == "chronicle":
+                os.chronicle()
+            elif cmd == "snapshot":
+                os.snapshot(arg)
+            elif cmd == "snapshots":
+                os.snapshots()
+            elif cmd == "archives":
+                # ops-style spelling: archives snapshot --tag <tag>
+                sub = (arg or "").split(maxsplit=1)
+                if sub and sub[0].lower() == "snapshot":
+                    os.snapshot(sub[1] if len(sub) > 1 else None)
+                else:
+                    print("The archives hold the Chronicle and the snapshots:")
+                    print("try 'chronicle', 'snapshots', 'snapshot [tag]', or 'audit'.")
+            elif cmd == "audit":
+                os.audit(arg)
+            elif cmd == "console":
+                os.console()
+            elif cmd in ("relays", "security", "integrity"):
+                os.security_note()
             elif cmd == "jump":
                 year = int(arg) if arg and arg.isdigit() else 3000
                 os.jump(year)

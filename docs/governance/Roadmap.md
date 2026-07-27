@@ -100,6 +100,49 @@ Dated so this section ages honestly — newest first, and it's fine to trim
 older entries once they're no longer useful context; the full history is
 always in `git log`.
 
+- **2026-07-27** — The CrystalCore.OS terminal boots from a fresh clone
+  (`mythos/crystalcore-os/crystalcore_os.py`). Fixed the relative-import
+  crash in script mode (dual-mode sibling imports), replaced `boot` with
+  the full state-aware lattice readout (banner, timestamped subsystem
+  lines, launch-sequence summary), anchored the active-learning queue to
+  `~/.crystalcore/` beside the other two save files, and pointed the doc's
+  run command at the path that exists. The boot audio line reads
+  "Soundtrack buffer" — per `mythos/NAMES.md`, "Songline" stays a cultural
+  image, never a component name. Second pass, same branch: `network` (and
+  `jump` into Year 3000) now play the full-network arrival — command log
+  plus the FULL STARLINE NETWORK status panel, keys and Gate live, and
+  re-running `network` while connected reprints the panel instead of
+  "Complete the burn first." The panel reads "Dreamline resonance" and
+  "cultural archives" where the source mock said Dreamtime/Songline — the
+  same NAMES.md rule — and its RESONANCE line names only the operator: the
+  terminal has no live second node, so it doesn't claim one. Third pass:
+  `broadcast <message>` — a network-wide packet with a per-node ACK
+  column; a trailing `!` sends it priority (urgent ACKs, lattice-wide
+  ALERT). Nodes sealed behind a named key hold their silence and the
+  confirm line reports the honest count — urgency never breaks
+  sovereignty. The last broadcast persists and shows in `status`. Fourth
+  pass: `priority` opens the channel as a real waiting prompt (`cancel`
+  releases it), and every priority transmission is etched into the
+  Chronicle — `~/.crystalcore/chronicle.jsonl`, plain text, read back
+  with `chronicle`, deliberately surviving `reset` (memory belongs to
+  the human, per the Covenant). "Chronicle", not "Songline", for the
+  etched record, and no Grok lines render — the terminal has no live
+  second node to probe (same NAMES.md / Incognita-Rule calls as the
+  earlier passes). Fifth pass: `snapshot [tag]` seals write-once
+  snapshots (ops spelling `archives snapshot --tag` accepted),
+  `snapshots` lists them, `audit` prints the real record — actual disk
+  timestamps, nothing replayed — and a completed priority transmission
+  closes with the sealed-chronicle mission console (`console` reprints
+  it). Deliberately NOT implemented from the source mock:
+  `verify-certificates`, `security harden`, and continuous integrity
+  monitoring — printed security claims with no mechanism behind them are
+  the exact dreamed-line-pretending-to-be-measured the Incognita Rule
+  forbids; those commands now answer honestly and point at
+  CrystalBridge/consent_transport (the built consent machinery) and at
+  `audit`. Sixth pass: the site gains /repositories — the real
+  six-repo portfolio rendered from the Archive’s ledgers (roles, dated
+  states, honest links; the private repo listed unlinked), plus one
+  more dead double-a GitHub link fixed (lowercase variant).
 - **2026-07-23** — Story Library design and working prototype 
   (`docs/architecture/site/Story-Library.md`, `research/prototypes/story-library/`): 
   complete information architecture, component structure, visual design direction, 
