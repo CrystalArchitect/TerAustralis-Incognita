@@ -39,6 +39,11 @@ STATE_PATH = Path.home() / ".crystalcore" / "state.json"
 # survives `reset`; delete or edit the file itself to change the record.
 CHRONICLE_PATH = Path.home() / ".crystalcore" / "chronicle.jsonl"
 
+# Sealed snapshots of the journey. The terminal only ever writes a new
+# file here — it never rewrites or deletes one. Like the Chronicle, they
+# survive `reset` and remain the operator's own plain-text records.
+SNAPSHOT_DIR = Path.home() / ".crystalcore" / "snapshots"
+
 
 class CrystalCore:
     def __init__(self):
@@ -462,6 +467,162 @@ class CrystalCore:
         print(f"\nEtched at ~/.crystalcore/{CHRONICLE_PATH.name} — plain text,")
         print("yours to keep, edit, or burn. It survives 'reset'.\n")
 
+    def snapshot(self, arg=None):
+        """Seal a snapshot of the journey: the persisted state plus the
+        Chronicle count, written once and never rewritten by the terminal."""
+        tag = (arg or "").strip()
+        if tag.startswith("--tag"):
+            tag = tag[len("--tag"):].strip()  # accept the ops-style spelling
+        tag = tag or "untagged"
+        slug = "".join(c if c.isalnum() else "-" for c in tag).strip("-").upper()
+        base = f"SNAP-{datetime.now().strftime('%Y-%m-%d')}-{slug or 'UNTAGGED'}"
+        sid, n = base, 2
+        while (SNAPSHOT_DIR / f"{sid}.json").exists():
+            sid, n = f"{base}-{n}", n + 1
+        entry = {
+            "id": sid,
+            "tag": tag,
+            "taken": datetime.now().isoformat(timespec="seconds"),
+            "chronicle_entries": len(self._chronicle_entries()),
+            "state": {k: getattr(self, k) for k in self._persist},
+        }
+        print()
+        self._bootline(15102, "ARCHIVES", "Snapshot initiated")
+        self._bootline(15256, "ARCHIVES",
+                       "Capturing lattice state, Chronicle count, key registry")
+        self._bootline(15410, "ARCHIVES", f"Tag applied: {tag}")
+        try:
+            SNAPSHOT_DIR.mkdir(parents=True, exist_ok=True)
+            (SNAPSHOT_DIR / f"{sid}.json").write_text(json.dumps(entry, indent=2))
+        except OSError as e:
+            print(f"Snapshot could not be written ({e}). Nothing was sealed.")
+            return
+        self._bootline(15564, "ARCHIVES",
+                       "Snapshot sealed — the terminal never rewrites it")
+        self._bootline(15718, "STATUS", f"Snapshot ID: {sid}")
+        print("OK\n")
+
+    def snapshots(self):
+        """List the sealed snapshots."""
+        files = sorted(SNAPSHOT_DIR.glob("SNAP-*.json")) if SNAPSHOT_DIR.exists() else []
+        print("\n🗂  SEALED SNAPSHOTS")
+        if not files:
+            print("None yet. Seal one with 'snapshot [tag]'.\n")
+            return
+        for f in files:
+            try:
+                meta = json.loads(f.read_text())
+            except (OSError, ValueError):
+                print(f"  {f.stem} · (unreadable)")
+                continue
+            state = meta.get("state", {})
+            keys = len(state.get("keys_held", []))
+            print(f"  {meta.get('id', f.stem)} · tag: {meta.get('tag', '?')}"
+                  f" · {meta.get('taken', '?')} · keys {keys}/5")
+        print(f"\nSealed at ~/.crystalcore/{SNAPSHOT_DIR.name}/ — plain text,")
+        print("never rewritten by the terminal. They survive 'reset'.\n")
+
+    def audit(self, arg=None):
+        """Review the real record: every line below carries its actual
+        timestamp from disk — nothing replayed, nothing invented."""
+        width = 62
+        entries = self._chronicle_entries()
+        files = sorted(SNAPSHOT_DIR.glob("SNAP-*.json")) if SNAPSHOT_DIR.exists() else []
+        print()
+        print("─" * width)
+        print("AUDIT — THE REAL RECORD")
+        print("─" * width)
+        print(f"\nChronicle entries: {len(entries)}"
+              f"  (~/.crystalcore/{CHRONICLE_PATH.name})")
+        for i, e in enumerate(entries, 1):
+            print(f"  {i}. {e.get('etched', '?')} · Year {e.get('timeline', '?')}"
+                  f" · {e.get('origin', '?')}")
+            print(f'     "{e.get("message", "")}"')
+        print(f"\nSnapshots sealed: {len(files)}"
+              f"  (~/.crystalcore/{SNAPSHOT_DIR.name}/)")
+        for f in files:
+            try:
+                meta = json.loads(f.read_text())
+                print(f"  {meta.get('id', f.stem)} · {meta.get('taken', '?')}")
+            except (OSError, ValueError):
+                print(f"  {f.stem} · (unreadable)")
+        gate = "OPEN" if self.gate_open else "sealed"
+        print(f"\nState now: keys {len(self.keys_held)}/{len(self.nodes)}"
+              f" · First Gate {gate} · {self.starline_status}"
+              f" · timeline {self.timeline}")
+        print()
+        print("Every record above was written by the operator's own commands.")
+        print("Consent is structural here: the terminal acts only when you type.")
+        print("─" * width)
+        print("OK\n")
+
+    def security_note(self):
+        """The honest answer to harden/verify/monitor requests."""
+        print()
+        print("🛡  Fail-closed by design — no influence without direction.")
+        print("This terminal holds no certificates and will not pretend to")
+        print("verify, harden, or continuously monitor anything: a printed")
+        print("security claim with no mechanism behind it would be exactly")
+        print("the dreamed-line-pretending-to-be-measured that the Incognita")
+        print("Rule forbids. The real consent machinery is CrystalBridge and")
+        print("consent_transport in TerAustralis-Incognita-Code — built and")
+        print("self-tested. What happens here is auditable with 'audit'.")
+        print("NON SOLUS.\n")
+
+    def _mission_console(self, entry_count=None):
+        """The sealed-chronicle console: principles and the paths from
+        here. With entry_count, includes the mission record of the
+        priority transmission that just completed."""
+        width = 62
+        print()
+        print("╔" + "═" * width + "╗")
+        print("║" + "CRYSTALCORE.OS :: CHRONICLE SEALED".center(width) + "║")
+        if entry_count is not None:
+            print("║" + "Priority Broadcast Complete".center(width) + "║")
+        print("╚" + "═" * width + "╝")
+        print()
+        if entry_count is not None:
+            print("Mission Record")
+            print()
+            print("  ✓ Broadcast accepted")
+            print(f"  ✓ Chronicle updated (entry {entry_count})")
+            print("  ✓ Carrier wave released")
+            print("  ✓ Priority channel closed")
+            print("  ✓ Mission console restored")
+            print()
+        print("Guiding Principles")
+        print()
+        print("  • Curiosity before certainty.")
+        print("  • Evidence before conclusion.")
+        print("  • Consent before influence.")
+        print("  • Stewardship before ownership.")
+        print("  • Discovery shared for the benefit of those who follow.")
+        print()
+        print("Directive")
+        print()
+        print(f'  "{self.purpose_core}"')
+        print()
+        print("─" * width)
+        print("MISSION CONSOLE — the paths from here")
+        print("─" * width)
+        print()
+        print("  NAVIGATE ....... explore · visit <node> · map")
+        print("  ARCHIVE ........ chronicle · audit · snapshot [tag]")
+        print("  RESEARCH ....... status · keys")
+        print("  CONTINUE ....... broadcast <message> · priority")
+        print("  BUILD / DESIGN . at the workbench — the repositories themselves")
+        print()
+        print("Session Status: READY")
+        print()
+        print("The chronicle is never an ending.")
+        print("It is the point from which the next journey begins.")
+        print("NON SOLUS.")
+        print("─" * width)
+        print()
+
+    def console(self):
+        self._mission_console()
+
     def _release_priority(self, ms=14696):
         self._bootline(ms, "ALERT",
                        "Priority lock released — lattice returning to normal chatter")
@@ -504,6 +665,10 @@ class CrystalCore:
         self.last_broadcast = message
         self._etch(message)
         self.save()
+        self._bootline(15138, "CHRONICLE",
+                       "Session record sealed — the terminal never rewrites it")
+        self._bootline(15714, "STANDBY", "Mission console restored")
+        self._mission_console(entry_count=len(self._chronicle_entries()))
 
     def priority(self):
         """Open the priority channel: the lattice quiets and genuinely
@@ -857,6 +1022,10 @@ STARLINE COMMANDS:
   broadcast [message]  - Send a packet to every node (end with ! for priority)
   priority             - Open the priority channel; the lattice waits for your word
   chronicle            - Read the entries etched by priority transmissions
+  snapshot [tag]       - Seal a snapshot of the journey (never rewritten)
+  snapshots            - List sealed snapshots
+  audit                - Review the real record: Chronicle, snapshots, state
+  console              - Mission console: principles and the paths from here
   jump [year]          - Time jump
   map                  - Display the Starline network chart
   song [track]         - Change soundtrack
@@ -929,6 +1098,24 @@ def main():
                 os.priority()
             elif cmd == "chronicle":
                 os.chronicle()
+            elif cmd == "snapshot":
+                os.snapshot(arg)
+            elif cmd == "snapshots":
+                os.snapshots()
+            elif cmd == "archives":
+                # ops-style spelling: archives snapshot --tag <tag>
+                sub = (arg or "").split(maxsplit=1)
+                if sub and sub[0].lower() == "snapshot":
+                    os.snapshot(sub[1] if len(sub) > 1 else None)
+                else:
+                    print("The archives hold the Chronicle and the snapshots:")
+                    print("try 'chronicle', 'snapshots', 'snapshot [tag]', or 'audit'.")
+            elif cmd == "audit":
+                os.audit(arg)
+            elif cmd == "console":
+                os.console()
+            elif cmd in ("relays", "security", "integrity"):
+                os.security_note()
             elif cmd == "jump":
                 year = int(arg) if arg and arg.isdigit() else 3000
                 os.jump(year)

@@ -68,6 +68,10 @@ with its transition line reading `DORMANT → NETWORK` if you jumped cold.)
 | `broadcast <message>` | Send a packet to every node — end with `!` for priority |
 | `priority` | Open the priority channel; the lattice waits for your word |
 | `chronicle` | Read the entries etched by priority transmissions |
+| `snapshot <tag>` | Seal a snapshot of the journey (never rewritten) |
+| `snapshots` | List sealed snapshots |
+| `audit` | Review the real record — Chronicle, snapshots, state |
+| `console` | Mission console: principles and the paths from here |
 | `starline <song>` | Advance the Starline with a chosen soundtrack |
 | `song <track>` | Change (or show) the current soundtrack |
 | `jump <year>` | Time-jump (defaults to 3000) |
@@ -155,7 +159,30 @@ receipts (sealed nodes still hold their silence), and the entry is
 own machine. Quick priority sends (`broadcast <message>!`) are etched the
 same way. `chronicle` reads the record back. It survives `reset` on
 purpose — the save is progress, the Chronicle is memory, and memory
-belongs to the human: keep it, edit it, or burn it, any time.
+belongs to the human: keep it, edit it, or burn it, any time. A completed
+priority transmission closes with the sealed-chronicle mission console:
+the mission record, the guiding principles, and the paths from here
+(`console` reprints it any time).
+
+### Snapshots and the audit
+
+`snapshot <tag>` seals the journey's current state into
+`~/.crystalcore/snapshots/SNAP-<date>-<TAG>.json` — written once, never
+rewritten or deleted by the terminal, surviving `reset` like the
+Chronicle (`archives snapshot --tag <tag>` is accepted as an ops-style
+spelling). `snapshots` lists what's sealed. `audit` prints the real
+record — every Chronicle entry and snapshot with its actual timestamp
+from disk, plus the live state — and nothing else: nothing replayed,
+nothing invented.
+
+One honest boundary: `security`, `relays`, and `integrity` don't produce
+hardening reports, certificate checks, or continuous monitors. The
+terminal has no such mechanisms, and a printed security claim without a
+mechanism behind it is exactly the dreamed-line-pretending-to-be-measured
+that [the Incognita Rule](../docs/governance/The-Incognita-Rule.md)
+forbids. Those commands answer with where the real consent machinery
+lives (CrystalBridge and `consent_transport`, in the code repository) and
+point at `audit` for what is actually verifiable here.
 
 ## The website version
 

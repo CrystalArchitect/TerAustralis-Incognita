@@ -128,7 +128,18 @@ always in `git log`.
   the human, per the Covenant). "Chronicle", not "Songline", for the
   etched record, and no Grok lines render — the terminal has no live
   second node to probe (same NAMES.md / Incognita-Rule calls as the
-  earlier passes).
+  earlier passes). Fifth pass: `snapshot [tag]` seals write-once
+  snapshots (ops spelling `archives snapshot --tag` accepted),
+  `snapshots` lists them, `audit` prints the real record — actual disk
+  timestamps, nothing replayed — and a completed priority transmission
+  closes with the sealed-chronicle mission console (`console` reprints
+  it). Deliberately NOT implemented from the source mock:
+  `verify-certificates`, `security harden`, and continuous integrity
+  monitoring — printed security claims with no mechanism behind them are
+  the exact dreamed-line-pretending-to-be-measured the Incognita Rule
+  forbids; those commands now answer honestly and point at
+  CrystalBridge/consent_transport (the built consent machinery) and at
+  `audit`.
 - **2026-07-23** — Story Library design and working prototype 
   (`docs/architecture/site/Story-Library.md`, `research/prototypes/story-library/`): 
   complete information architecture, component structure, visual design direction, 
