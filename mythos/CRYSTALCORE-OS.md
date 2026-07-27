@@ -2,7 +2,7 @@
 
 The mythos as a terminal you can fly.
 
-`crystalcore_os.py` (in `src/crystalcore-os/`) is a small, self-contained text adventure —
+[`crystalcore-os/crystalcore_os.py`](crystalcore-os/crystalcore_os.py) is a small, self-contained text adventure —
 the Crystal universe rendered as an interactive command line. It's Vision-layer:
 a playable story, not one of the project's Built software components (those are
 Lumina, the Starline Weaver, Starline, and CrystalBridge — see
@@ -15,7 +15,7 @@ Vectors — see [`content/CRYSTALCORE-OS-VISION.md`](content/CRYSTALCORE-OS-VISI
 ## Run it
 
 ```bash
-python3 src/crystalcore-os/crystalcore_os.py
+python3 mythos/crystalcore-os/crystalcore_os.py
 ```
 
 Standard-library Python only — nothing to install. You'll land at a
@@ -31,9 +31,13 @@ intended path is:
 boot  →  launch  →  burn  →  network  →  explore  →  visit <node>
 ```
 
-- `boot` — bring the system up; prints the Purpose Core and confirms NON
-  SOLUS. A cinematic take on this moment — a video-generation prompt, not
-  rendered output — lives in
+- `boot` — bring the system up: the terminal banner, a timestamped
+  subsystem readout, and the launch-sequence summary ("Launch sequence
+  green"). The timestamps are fixed theatre, but every reading is live
+  state — memory store, Starline status, keys held, the Gate, the current
+  soundtrack, the timeline anchor — so a resumed lattice boots differently
+  from a clean one. A cinematic take on this moment — a video-generation
+  prompt, not rendered output — lives in
   [`tools/boot-visual-prompt.md`](tools/boot-visual-prompt.md).
 - `launch` — spool the engines; the Starline goes from DORMANT to IN ORBIT and
   the first soundtrack cues.

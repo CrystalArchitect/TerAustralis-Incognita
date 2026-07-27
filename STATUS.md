@@ -1,6 +1,6 @@
 # STATUS
 
-Last updated: 2026-07-24
+Last updated: 2026-07-27
 
 Full knowledge-base reconstruction: `knowledge-base/00-INDEX.md` in
 CrystalCore.OS-the-Crystal-Architecture-Archive.
@@ -14,6 +14,12 @@ Migration Plan, and the ledger reflects that.
 ## Running
 Executes, or can be opened and used by someone other than me.
 
+- mythos/crystalcore-os/crystalcore_os.py — the CrystalCore.OS mythos
+  terminal boots, plays to the open First Gate, and saves/resumes from a
+  fresh clone, stdlib-only, verified 2026-07-27
+  (`python3 mythos/crystalcore-os/crystalcore_os.py`). Before this pass
+  it exited 1 at import when run as a script (relative import with no
+  parent package).
 - research/prototypes/story-library — self-contained HTML prototype;
   no build step; renders in a headless browser, verified 2026-07-24.
 - CI on main is green (run of 2026-07-23), with honest scope: the

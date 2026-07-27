@@ -100,6 +100,15 @@ Dated so this section ages honestly — newest first, and it's fine to trim
 older entries once they're no longer useful context; the full history is
 always in `git log`.
 
+- **2026-07-27** — The CrystalCore.OS terminal boots from a fresh clone
+  (`mythos/crystalcore-os/crystalcore_os.py`). Fixed the relative-import
+  crash in script mode (dual-mode sibling imports), replaced `boot` with
+  the full state-aware lattice readout (banner, timestamped subsystem
+  lines, launch-sequence summary), anchored the active-learning queue to
+  `~/.crystalcore/` beside the other two save files, and pointed the doc's
+  run command at the path that exists. The boot audio line reads
+  "Soundtrack buffer" — per `mythos/NAMES.md`, "Songline" stays a cultural
+  image, never a component name.
 - **2026-07-23** — Story Library design and working prototype 
   (`docs/architecture/site/Story-Library.md`, `research/prototypes/story-library/`): 
   complete information architecture, component structure, visual design direction, 

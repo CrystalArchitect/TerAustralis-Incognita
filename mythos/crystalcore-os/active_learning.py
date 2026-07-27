@@ -16,8 +16,14 @@ MIN_SAMPLES_FOR_RETRAIN = 10
 class ActiveLearningQueue:
     """Manages the active learning queue for continuous model improvement."""
 
-    def __init__(self, filename: str = ".crystalcore/active_learning_queue.jsonl"):
-        self.filename = Path(filename)
+    def __init__(self, filename: Optional[str] = None):
+        # Home-anchored like STATE_PATH and EI_STATE_PATH, so all three
+        # saves live in ~/.crystalcore/ no matter where the terminal is
+        # launched from — never in a working tree.
+        if filename is None:
+            self.filename = Path.home() / ".crystalcore" / "active_learning_queue.jsonl"
+        else:
+            self.filename = Path(filename)
         self.filename.parent.mkdir(parents=True, exist_ok=True)
         self.queue: List[Dict] = []
         self.load_queue()

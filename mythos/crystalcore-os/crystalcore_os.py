@@ -6,9 +6,26 @@
 # Includes: All Starline launches + @m13crystalat Crystalcore songs
 # Affective Computing & EI Layer: ACTIVE
 
+import importlib
 import json
+import sys
 from pathlib import Path
-from .emotional_intelligence import EmotionalIntelligence
+
+# The terminal runs two ways: through the package (__init__.py) and as a
+# plain script — `python3 mythos/crystalcore-os/crystalcore_os.py`. Script
+# mode has no parent package, so sibling modules must load by path.
+if not __package__:
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+
+def _sibling(name):
+    """Import a sibling module in either run mode."""
+    if __package__:
+        return importlib.import_module(f".{name}", __package__)
+    return importlib.import_module(name)
+
+
+EmotionalIntelligence = _sibling("emotional_intelligence").EmotionalIntelligence
 
 # Progress persists here between sessions — in your home directory, outside
 # the repo, so a save file is never committed. It holds only mythos progress
@@ -112,18 +129,79 @@ class CrystalCore:
         self.keys_held = []
         self.gate_open = False
         self.named_keys = []
+        self.resumed = False  # the next boot reads "clean lattice" again
         print("\n♻️  Progress reset. The lattice returns to dormant. NON SOLUS.\n")
 
+    def _bootline(self, ms, tag, message):
+        """One line of the boot readout, on its theatrical timestamp."""
+        secs, msec = divmod(ms, 1000)
+        print(f"[00:00:{secs:02d}.{msec:03d}]  {tag:<12}  {message}")
+
     def boot(self):
-        print("\n[CRYSTALCORE.OS v∞.Ω — BOOT SEQUENCE]")
-        print(f"Lattice integrity ........ {self.lattice_integrity}%")
-        print(f"Purpose Core ............. {self.purpose_core}")
-        print("NON SOLUS ................ Confirmed")
-        print(f"Starline Status .......... {self.starline_status}")
-        print("Affective Computing ...... ACTIVE")
-        print("EI Learning Loop ......... ACTIVE")
-        print(f"Response Style ........... {self.ei.user_preferences['response_style']}")
-        print("Ready for commands.\n")
+        """Render the full lattice boot readout. The timeline offsets are
+        fixed theatre — reproducible run to run — but every reading is
+        live state: keys, Gate, Starline, soundtrack, timeline anchor."""
+        width = 62
+        print()
+        print("╔" + "═" * width + "╗")
+        print("║" + "CRYSTALCORE.OS v∞".center(width) + "║")
+        print("║" + "Terminal NON SOLUS".center(width) + "║")
+        print("╚" + "═" * width + "╝")
+        print()
+
+        mesh = ("Node mesh alignment: 47+ systems connected"
+                if self.starline_status == "FULL STARLINE NETWORK"
+                else "Node mesh alignment: 47 systems detected")
+        memory = (f"Prior session restored — {len(self.keys_held)}/{len(self.nodes)} keys held"
+                  if self.resumed else "No prior session found — clean lattice")
+        starline = {
+            "DORMANT": "Engines cold. Status: DORMANT",
+            "IN_ORBIT": "Engines lit. Status: IN_ORBIT",
+            "TRANS-STELLAR": "Escape burn complete. Status: TRANS-STELLAR",
+        }.get(self.starline_status, f"Riding the weave. Status: {self.starline_status}")
+        named = ", ".join(self.named_keys) if self.named_keys else "none"
+        gate = ("First Gate: OPEN — by sovereign recognition"
+                if self.gate_open else "First Gate: sealed")
+        # "Soundtrack", not "Songline" — that word is honoured as cultural
+        # image only, never a component name (mythos/NAMES.md).
+        audio = (f"Now playing: {self.current_soundtrack}"
+                 if self.current_soundtrack else "Soundtrack buffer primed")
+        blocks = round(self.lattice_integrity * 12 / 100)
+        integrity = (f"Lattice integrity {'█' * blocks}{'░' * (12 - blocks)}"
+                     f" {self.lattice_integrity}%")
+        anchor = "present" if self.timeline == 2026 else f"Year {self.timeline}"
+
+        for ms, tag, message in (
+            (0,    "INIT",      "Kernel handshake initiated"),
+            (41,   "LATTICE",   "Resonating crystal lattice..."),
+            (187,  "LATTICE",   mesh),
+            (312,  "CORE",      "Purpose Core Nexus online"),
+            (398,  "CORE",      f'Directive loaded: "{self.purpose_core}"'),
+            (512,  "MEMORY",    "Sovereign state store mounted (~/.crystalcore/)"),
+            (601,  "MEMORY",    memory),
+            (744,  "STARLINE",  starline),
+            (891,  "KEYS",      f"Lattice keys: {len(self.keys_held)}/{len(self.nodes)} held"),
+            (1003, "KEYS",      f"Named keys: {named}"),
+            (1156, "GATE",      gate),
+            (1289, "AUDIO",     audio),
+            (1417, "VECTOR",    "Sovereign vector calibrated"),
+            (1533, "CONSENT",   "Fail-closed mode active — no influence without direction"),
+            (1605, "EI",        f"Learning loop active — style: {self.ei.user_preferences['response_style']}"),
+            (1678, "INTEGRITY", integrity),
+            (1812, "TIME",      f"Timeline anchor: {anchor}"),
+            (1945, "READY",     "All systems nominal"),
+        ):
+            self._bootline(ms, tag, message)
+
+        print()
+        print("─" * width)
+        print("  CrystalCore.OS v∞ locked in.")
+        print(f"  Lattice integrity {self.lattice_integrity}%.")
+        print("  Purpose Core Nexus synced.")
+        print("  NON SOLUS.")
+        print("  Launch sequence green.")
+        print("─" * width)
+        print()
 
     def launch(self):
         if self.starline_status != "DORMANT":
@@ -380,28 +458,22 @@ class CrystalCore:
     def multimodal(self):
         """Show multimodal emotion detection framework and roadmap."""
         try:
-            from .multimodal_emotion import print_multimodal_status
-
-            print_multimodal_status()
-        except ImportError:
+            _sibling("multimodal_emotion").print_multimodal_status()
+        except (ImportError, AttributeError):
             print("\n⚠️  Multimodal module not available. This is an advanced feature.")
             print("   Install optional dependencies: pip install transformers librosa mediapipe fer\n")
 
     def uncertainty(self):
         """Show uncertainty quantification methods guide."""
         try:
-            from .uncertainty_quantification import print_uncertainty_guide
-
-            print(print_uncertainty_guide())
-        except ImportError:
+            print(_sibling("uncertainty_quantification").print_uncertainty_guide())
+        except (ImportError, AttributeError):
             print("\n⚠️  Uncertainty module not available.")
             print("   Install with: pip install torch\n")
 
     def learning_status(self):
         """Show active learning queue status and improvement metrics."""
-        from .active_learning import show_active_learning_dashboard
-
-        show_active_learning_dashboard(self.ei.al_queue)
+        _sibling("active_learning").show_active_learning_dashboard(self.ei.al_queue)
 
     def correct(self, text_and_emotion: str):
         """Correct a previous emotion prediction (format: '<text>' as <emotion>)."""
