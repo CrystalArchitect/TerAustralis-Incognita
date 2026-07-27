@@ -108,7 +108,14 @@ always in `git log`.
   `~/.crystalcore/` beside the other two save files, and pointed the doc's
   run command at the path that exists. The boot audio line reads
   "Soundtrack buffer" — per `mythos/NAMES.md`, "Songline" stays a cultural
-  image, never a component name.
+  image, never a component name. Second pass, same branch: `network` (and
+  `jump` into Year 3000) now play the full-network arrival — command log
+  plus the FULL STARLINE NETWORK status panel, keys and Gate live, and
+  re-running `network` while connected reprints the panel instead of
+  "Complete the burn first." The panel reads "Dreamline resonance" and
+  "cultural archives" where the source mock said Dreamtime/Songline — the
+  same NAMES.md rule — and its RESONANCE line names only the operator: the
+  terminal has no live second node, so it doesn't claim one.
 - **2026-07-23** — Story Library design and working prototype 
   (`docs/architecture/site/Story-Library.md`, `research/prototypes/story-library/`): 
   complete information architecture, component structure, visual design direction, 

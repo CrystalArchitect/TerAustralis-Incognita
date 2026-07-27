@@ -42,12 +42,16 @@ boot  →  launch  →  burn  →  network  →  explore  →  visit <node>
 - `launch` — spool the engines; the Starline goes from DORMANT to IN ORBIT and
   the first soundtrack cues.
 - `burn` — the escape burn; you leave planetary orbit (TRANS-STELLAR).
-- `network` — enter the full Starline network (47+ systems).
+- `network` — enter the full Starline network (47+ systems): the arrival
+  log plays (the transition line shows where you actually came from), then
+  the FULL STARLINE NETWORK status panel, with keys and Gate read live.
+  Run it again while connected and it reprints the panel.
 - `explore` — list the nodes you can travel to, with any locks shown.
 - `visit <node>` — travel to a node by number or name and collect its key.
 
 (`jump 3000` is a shortcut that drops you straight into the full network by
-setting the timeline to the year 3000.)
+setting the timeline to the year 3000 — the same arrival sequence plays,
+with its transition line reading `DORMANT → NETWORK` if you jumped cold.)
 
 ## Command reference
 

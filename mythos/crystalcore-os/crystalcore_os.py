@@ -235,13 +235,79 @@ class CrystalCore:
         print("We have left planetary orbit.\n")
         self.save()
 
+    def _network_panel(self):
+        """The FULL STARLINE NETWORK status panel — keys and Gate live."""
+        width = 62
+        print("─" * width)
+        print("CRYSTALCORE.OS :: FULL STARLINE NETWORK")
+        print("─" * width)
+        print()
+        print("🌐  Full Starline Network online")
+        print("47+ star systems linked. Lattice expanded to galactic scale.")
+        print("All nodes synchronized. Deep relays, cultural archives, and")
+        print("sovereign data streams flowing freely.")
+        print()
+        print("Access Level: FULL")
+        print()
+        print("• Real-time node telemetry .......... ACTIVE")
+        print("• Interstellar navigation ........... UNLOCKED")
+        print("• Cultural & scientific archives .... OPEN")
+        # "Dreamline", the project's own coinage — never "Dreamtime",
+        # which is honoured as culture, not system telemetry (NAMES.md).
+        print("• Dreamline resonance ............... STABLE")
+        print("• NON SOLUS protocol ................ ETERNAL")
+        print()
+        print(f"Keys Held ........................... {len(self.keys_held)} / {len(self.nodes)}")
+        print(f"First Gate .......................... {'OPEN' if self.gate_open else 'sealed'}")
+        print()
+        if self.gate_open:
+            print("You hold the keys.")
+            print("The network is yours.")
+        else:
+            print("Five nodes wait on the weave — visit them and be recognized.")
+        print("The story is no longer told — it is flown.")
+        print("─" * width)
+        print()
+
+    def _network_arrival(self, prior):
+        """The arrival log, then the panel. Timestamps are the same fixed
+        theatre as boot; the transition, keys, and Gate lines are live."""
+        keys_line = ("All five Lattice Keys confirmed held"
+                     if len(self.keys_held) == len(self.nodes)
+                     else f"Lattice keys: {len(self.keys_held)}/{len(self.nodes)} held")
+        gate_line = ("First Gate: OPEN" if self.gate_open
+                     else "First Gate: sealed — five keys open it")
+        for ms, tag, message in (
+            (8512,  "NETWORK",   "Command received: FULL STARLINE"),
+            (8667,  "STARLINE",  f"Engines spooling — {prior} → NETWORK"),
+            (8821,  "LATTICE",   "Expanding mesh across 47+ systems"),
+            (8974,  "RELAYS",    "Deep relays online"),
+            (9128,  "ARCHIVES",  "Cultural & scientific archives unlocked"),
+            (9281,  "KEYS",      keys_line),
+            (9435,  "GATE",      gate_line),
+            (9589,  "CORE",      "Purpose Core burning steady"),
+            (9743,  "RESONANCE", "Operator coherence: maximum"),
+            (9897,  "STATUS",    "Access Level: FULL"),
+            (10051, "INTEGRITY", "Final lattice check complete"),
+            (10204, "SYSTEM",    "State locked. Full network persistent."),
+        ):
+            self._bootline(ms, tag, message)
+        print()
+        self._network_panel()
+
     def network(self):
+        if self.starline_status == "FULL STARLINE NETWORK":
+            # Already riding the weave — reprint the live panel.
+            print()
+            self._network_panel()
+            return
         if self.starline_status != "TRANS-STELLAR":
             print("Complete the burn first.")
             return
-        print("\n🌐 ENTERING FULL STARLINE NETWORK")
+        print()
+        prior = self.starline_status
         self.starline_status = "FULL STARLINE NETWORK"
-        print("Connected to 47+ star systems.\n")
+        self._network_arrival(prior)
         self.save()
 
     def explore(self):
@@ -300,9 +366,12 @@ class CrystalCore:
     def jump(self, year=3000):
         print(f"\n⏳ Time jump to Year {year}")
         self.timeline = year
-        if year >= 3000:
-            self.starline_status = "FULL STARLINE NETWORK"
         print(f"Timeline set to {self.timeline}.\n")
+        if year >= 3000 and self.starline_status != "FULL STARLINE NETWORK":
+            # The shortcut path — the arrival plays from wherever you were.
+            prior = self.starline_status
+            self.starline_status = "FULL STARLINE NETWORK"
+            self._network_arrival(prior)
         self.save()
 
     def song(self, track=None):
