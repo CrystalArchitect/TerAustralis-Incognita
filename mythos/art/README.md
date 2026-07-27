@@ -102,6 +102,28 @@ CC BY-NC-ND 4.0 — see `../content/LICENSE-CONTENT.md`.
 | `i-love-it.jpeg` | *AI-generated (Grok, on X)* — boot-visual sequence, the closing card: "I LOVE IT" over the seed-of-life and the beam of ignition |
 | `chain-and-the-light-body.jpeg` | *AI-generated (Grok, on X)* — boot-visual sequence: the figure mid-transmutation, seed-of-life taking form as the old chain still trails below |
 
+| `terra-australis-incognita-antique-map.jpeg` | An antique-cartography rendering of the world labeled "Terra Australis Incognita — Nondum Plene Cognita," compasses and rolled charts at the edges — the project's name as a 16th-century mapmaker might have drawn it |
+| `marsbase-downunder-proving-ground.jpeg` | MarsBase Downunder — Mars Proving Ground establishing shot: three starship-style rockets (one marked with the Aboriginal flag), domes, dishes, rovers, and a weathered "WELCOME TO MARSBASE DOWNUNDER · EST. 2074" sign over red dune country, petroglyphs on the foreground rock |
+| `mars-settlement-dusk.jpeg` | The Mars settlement at dusk — domes, solar arrays, and a standing rocket among red mesas under a crescent moon |
+| `mars-dome-sail-habitat.jpeg` | A geodesic dome habitat with twin sail-shaped solar wings, a rocket climbing on the horizon behind it |
+| `pilgrims-of-the-launch-road.jpeg` | Astronauts and Aboriginal walkers move together down a light-veined desert road toward a launching rocket, kangaroos among them, the Milky Way and two worlds overhead |
+| `crystal-ship-earth-departure.jpeg` | A crystalline ship trailing a network of light peels away from Earth's nightside toward a waiting red world |
+| `crystal-ship-lattice-ring-breach.jpeg` | A violet crystal ship breaches a great lattice ring in orbit, fire behind it, cloverleaf light-motifs scattered through the dark |
+| `starline-network-nodes-map.jpeg` | The Starline network as a five-point star of light: Earth at the crown, Mars Redoubt, Alpha Centauri, Crystal Revenant Hub, and Purpose Core Nexus threaded together at a blossoming core |
+| `festival-of-the-rainbow-spire.jpeg` | Cloaked figures in flight converge on a rainbow crystal spire at the heart of a lantern-lit crystal city, aurora breaking overhead |
+| `crystalcore-orion-hunter-seeker-protector.jpeg` | Orion traced over its nebula and labeled "CrystalCore — Hunter, Seeker & Protector" |
+| `crystalcore-southern-cross-kinship.jpeg` | The Southern Cross rendered as a crystal tetrahedron, labeled "CrystalCore Southern Cross — Kinship & Dynamic Navigation" |
+| `crystalcore-north-star-constitution.jpeg` | A crystal-cave aperture opening onto the polar star field, labeled "CrystalCore North Star — Immutable Constitution & True North" |
+| `crystalcore-os-boot-dave-repair.jpeg` | A tongue-in-cheek CrystalCore.OS boot splash — "Starlines + Dreamlines Activated," dual tracks online — hosted by Dave, the wrench-wielding rabbit of `daves.repair` ("You break it, we repair it. You are it, we repair you.") |
+| `lattice-sphere-over-monument-valley.jpeg` | A translucent data-lattice sphere rises like a second sun behind Monument Valley's mesas, a small crystalline structure keeping watch below |
+| `sigil-sun-monument-valley.jpeg` | A circular star-sigil stands in for the sun over Monument Valley, a waveform trailing across the sky like a signal |
+| `network-sun-walker.jpeg` | A lone figure walks the desert road toward a network-pattern sun, a vehicle waiting at the roadside |
+| `monument-valley-sunset.jpeg` | Monument Valley at sunset, unadorned — the bare desert canon the rest of this set builds on |
+| `dune-field-mesas.jpeg` | A dune field rolling out toward distant mesas in the haze |
+| `dune-sea-walkers.jpeg` | Two tiny figures cross a vast dune sea, dwarfed by the ridgelines |
+| `desert-flight-path.jpeg` | A light aircraft crosses a red desert sky above a lone grazing animal and a curving dirt track |
+| `desert-water-tower.jpeg` | A circular water-tower installation stands alone on red desert ground beneath a rising moon |
+
 **Truth label (Vision):** this art is the project's own mythic narrative. Where a
 real person's name or likeness appears — whether as a name, a silhouette, or a
 photographic likeness (e.g. "the Breaker of the E") — it is Vision-layer
