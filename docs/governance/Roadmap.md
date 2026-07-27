@@ -139,7 +139,10 @@ always in `git log`.
   the exact dreamed-line-pretending-to-be-measured the Incognita Rule
   forbids; those commands now answer honestly and point at
   CrystalBridge/consent_transport (the built consent machinery) and at
-  `audit`.
+  `audit`. Sixth pass: the site gains /repositories — the real
+  six-repo portfolio rendered from the Archive’s ledgers (roles, dated
+  states, honest links; the private repo listed unlinked), plus one
+  more dead double-a GitHub link fixed (lowercase variant).
 - **2026-07-23** — Story Library design and working prototype 
   (`docs/architecture/site/Story-Library.md`, `research/prototypes/story-library/`): 
   complete information architecture, component structure, visual design direction, 
