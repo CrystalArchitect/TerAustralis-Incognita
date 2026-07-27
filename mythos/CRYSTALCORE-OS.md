@@ -65,6 +65,7 @@ with its transition line reading `DORMANT → NETWORK` if you jumped cold.)
 | `visit <node>` | Travel to a node (number or name) and collect its key |
 | `keys` | Show the Keys of the Lattice you hold |
 | `getkey <name>` | Obtain a named key, e.g. `getkey Crystal Key` |
+| `broadcast <message>` | Send a packet to every node — end with `!` for priority |
 | `starline <song>` | Advance the Starline with a chosen soundtrack |
 | `song <track>` | Change (or show) the current soundtrack |
 | `jump <year>` | Time-jump (defaults to 3000) |
@@ -129,6 +130,16 @@ The full-resolution version of that chart is the artwork at
 top of `crystalcore_os.py`. It mixes the CrystalArchitect's own tracks
 (@m13crystalat) with a handful of popular songs. `song` on its own tells you
 what's playing; `song <part of a title or artist>` switches to a match.
+
+## Broadcasting
+
+Once you're in the full network, `broadcast <message>` sends a packet to
+all five nodes and prints each node's acknowledgment. End the message with
+`!` and it goes out priority — emergency routing, urgent ACKs, and a
+lattice-wide ALERT. Nodes still sealed behind a named key don't answer:
+they hold their silence until their key is held, and the confirm line
+reports the honest count — urgency never breaks sovereignty. The last
+broadcast persists with the rest of your progress and shows in `status`.
 
 ## The website version
 

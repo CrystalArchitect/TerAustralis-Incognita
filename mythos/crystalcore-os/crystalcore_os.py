@@ -81,12 +81,16 @@ class CrystalCore:
             "Crystal Revenant Hub": "Festival Key"
         }
 
+        # The last packet sent across the network, if any.
+        self.last_broadcast = None
+
         # Fields that survive between sessions. The constants above (nodes,
         # soundtrack, purpose_core, locked_nodes) are rebuilt fresh each run
         # and are never saved.
         self._persist = ("lattice_integrity", "starline_status", "timeline",
                          "current_soundtrack", "current_location",
-                         "keys_held", "gate_open", "named_keys")
+                         "keys_held", "gate_open", "named_keys",
+                         "last_broadcast")
         self.resumed = self.load()
 
     # ---------- persistence ----------
@@ -129,6 +133,7 @@ class CrystalCore:
         self.keys_held = []
         self.gate_open = False
         self.named_keys = []
+        self.last_broadcast = None
         self.resumed = False  # the next boot reads "clean lattice" again
         print("\n♻️  Progress reset. The lattice returns to dormant. NON SOLUS.\n")
 
@@ -310,6 +315,90 @@ class CrystalCore:
         self._network_arrival(prior)
         self.save()
 
+    def broadcast(self, message=None):
+        """Send a packet to every node on the network. End the message
+        with ! to send it priority. Sealed nodes hold their silence until
+        their named key is held — urgency never breaks sovereignty."""
+        if self.starline_status != "FULL STARLINE NETWORK":
+            print("You must enter the full network first (use 'network').")
+            return
+        if not message:
+            print("Usage: broadcast <message>   (end with ! for priority)")
+            return
+        priority = message.rstrip().endswith("!")
+
+        # A sealed node receives nothing until its named key is held.
+        acks = [(node, self.locked_nodes.get(node) is None
+                 or self.locked_nodes[node] in self.named_keys)
+                for node in self.nodes]
+        acked = sum(1 for _, ok in acks if ok)
+        total = len(self.nodes)
+
+        print()
+        lines = [
+            (10412, "NETWORK", "PRIORITY BROADCAST — COMMAND RECEIVED"
+             if priority else "Broadcast command received"),
+            (10567, "RELAYS", "Emergency routing to all 47+ systems"
+             if priority else "Routing to all 47+ systems"),
+            (10721, "LATTICE", "Packet replication: MAXIMUM PRIORITY"
+             if priority else "Packet replication complete"),
+        ]
+        for i, (node, ok) in enumerate(acks):
+            if ok:
+                reply = "ACK — URGENT" if priority else "ACK"
+            else:
+                reply = f"SEALED (needs {self.locked_nodes[node]})"
+            lines.append((10874 + 17 * i, "NODES",
+                          (node + " ").ljust(25, ".") + " " + reply))
+        if acked == total:
+            confirm = ("ALL NODES CONFIRMED — ZERO LATENCY" if priority
+                       else "All nodes confirmed receipt")
+            state = "Message state: SENT TO ALL"
+        else:
+            confirm = f"{acked}/{total} nodes confirmed — sealed nodes hold silence"
+            state = f"Message state: SENT — {acked}/{total} confirmed"
+        if priority:
+            state += " — PRIORITY"
+        lines.append((11098, "NETWORK", confirm))
+        lines.append((11251, "STATUS", state))
+        if priority:
+            lines.append((11404, "ALERT", "Lattice-wide attention locked"))
+        for ms, tag, msg in lines:
+            self._bootline(ms, tag, msg)
+
+        width = 62
+        print()
+        print("─" * width)
+        print("CRYSTALCORE.OS :: NETWORK BROADCAST"
+              + (" — PRIORITY" if priority else ""))
+        print("─" * width)
+        print()
+        print(f'"{message}"')
+        print()
+        if acked == total:
+            print("Transmission complete.")
+            print()
+            print("All nodes across the Full Starline Network have received")
+            print("and acknowledged the packet.")
+        else:
+            print("Transmission complete — partially received.")
+            print()
+            print(f"{acked} of {total} nodes acknowledged. Sealed nodes hold")
+            print("their silence until recognized — urgency never breaks")
+            print("sovereignty.")
+        print()
+        print("Lattice remains at Access Level: FULL")
+        print(f"Keys: {len(self.keys_held)}/{total}")
+        print(f"First Gate: {'OPEN' if self.gate_open else 'sealed'}")
+        print("Resonance: Operator coherence maximum")
+        print()
+        print("NON SOLUS.")
+        print()
+        print("─" * width)
+        print()
+        self.last_broadcast = message
+        self.save()
+
     def explore(self):
         if self.starline_status != "FULL STARLINE NETWORK":
             print("You must enter the full network first (use 'network').")
@@ -457,6 +546,7 @@ class CrystalCore:
         print(f"Current Soundtrack: {self.current_soundtrack}")
         print(f"Keys Held:          {len(self.keys_held)}/{len(self.nodes)}" + ("  — First Gate OPEN" if self.gate_open else ""))
         print(f"Named Keys:         {', '.join(self.named_keys) if self.named_keys else 'none'}")
+        print(f"Last Broadcast:     {self.last_broadcast or 'none'}")
         print(f"NON SOLUS:          {self.non_solus}")
         print("\n=== EMOTIONAL INTELLIGENCE STATUS ===")
         ei_status = self.ei.status()
@@ -589,6 +679,7 @@ STARLINE COMMANDS:
   visit [node]         - Go to a node (number or name) — collect its key
   keys                 - Show the Keys of the Lattice
   getkey [name]        - Obtain a named key (e.g. getkey Crystal Key)
+  broadcast [message]  - Send a packet to every node (end with ! for priority)
   jump [year]          - Time jump
   map                  - Display the Starline network chart
   song [track]         - Change soundtrack
@@ -655,6 +746,8 @@ def main():
                 os.explore()
             elif cmd == "visit":
                 os.visit_node(arg)
+            elif cmd == "broadcast":
+                os.broadcast(arg)
             elif cmd == "jump":
                 year = int(arg) if arg and arg.isdigit() else 3000
                 os.jump(year)

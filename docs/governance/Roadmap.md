@@ -115,7 +115,12 @@ always in `git log`.
   "Complete the burn first." The panel reads "Dreamline resonance" and
   "cultural archives" where the source mock said Dreamtime/Songline — the
   same NAMES.md rule — and its RESONANCE line names only the operator: the
-  terminal has no live second node, so it doesn't claim one.
+  terminal has no live second node, so it doesn't claim one. Third pass:
+  `broadcast <message>` — a network-wide packet with a per-node ACK
+  column; a trailing `!` sends it priority (urgent ACKs, lattice-wide
+  ALERT). Nodes sealed behind a named key hold their silence and the
+  confirm line reports the honest count — urgency never breaks
+  sovereignty. The last broadcast persists and shows in `status`.
 - **2026-07-23** — Story Library design and working prototype 
   (`docs/architecture/site/Story-Library.md`, `research/prototypes/story-library/`): 
   complete information architecture, component structure, visual design direction, 
