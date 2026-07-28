@@ -68,6 +68,19 @@ Nothing new at this tier in this repository; see the system ledger.
   own notice records that the site was never in git history here. Has
   the SvelteKit site ever been live at that domain, and what is there
   now? Unverified (egress blocked from the session container).
+  **Partially answered 2026-07-28, by CI rather than by audit.** The
+  link check on PR #70 reached the domain from a GitHub runner — real
+  egress, not a proxied session container — and reported exactly one
+  dead link: `/crystalcore-os` returned 404, while the bare
+  `https://www.teraustralis.com.au` referenced from `README.md` passed
+  in the same run. So the domain *is* serving something at root, and
+  whatever it serves is **not** the current SvelteKit site, whose
+  routes include `crystalcore-os`. Still open: what that deployment
+  actually is, and where it came from, given no repo in the
+  constellation admits to deploying it. Egress from the session
+  container remains blocked (proxy answers 403 to CONNECT), so this
+  cannot be narrowed further from here — but CI is now a usable probe
+  for it.
 - publish-packages.yml and test-packages.yml — corrected 2026-07-24:
   not dormant, removed outright at Stage 2 (commit `60a20df`,
   2026-07-23), after confirming neither had ever had a git tag to fire
