@@ -68,6 +68,27 @@ Nothing new at this tier in this repository; see the system ledger.
   own notice records that the site was never in git history here. Has
   the SvelteKit site ever been live at that domain, and what is there
   now? Unverified (egress blocked from the session container).
+  **Answered 2026-07-28: the site is live and serving the SvelteKit
+  build.** The Code repo's `Publish site` workflow ends by probing
+  `https://www.teraustralis.com.au/crystalcore-os` — a path that exists
+  only in the build, chosen precisely because the failure mode it
+  guards renders the README at `/` and returns 200 there. Runs at
+  20:28, 20:33 and 20:39 UTC all succeeded, so that probe returned 200
+  each time. The Pages source race was fixed in that repo the same day
+  (#24, "Set the Pages source in code so the race stops happening").
+  This entry's premise — that the latest Pages run deployed nothing —
+  described `TerAustralis-Incognita`, which correctly deploys nothing;
+  the site is published from `TerAustralis-Incognita-Code`, which owns
+  the CNAME.
+
+  A caution recorded from getting this wrong once: PR #70's link check
+  hit that same URL at 20:36 and got a 404, midway through the 20:33
+  deploy. A GitHub Pages swap can 404 briefly, so a single link-check
+  failure against this domain is not evidence the page is gone — the
+  deploy probe, which retries twelve times, is the authority. And
+  link-checking it from a session container is never valid: the agent
+  proxy answers 403 to CONNECT and 403 is in `aliveStatusCodes`, so
+  every URL on the domain reports alive locally regardless of truth.
 - publish-packages.yml and test-packages.yml — corrected 2026-07-24:
   not dormant, removed outright at Stage 2 (commit `60a20df`,
   2026-07-23), after confirming neither had ever had a git tag to fire

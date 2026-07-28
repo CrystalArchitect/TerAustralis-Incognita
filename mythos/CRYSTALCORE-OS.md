@@ -7,7 +7,7 @@ the Crystal universe rendered as an interactive command line. It's Vision-layer:
 a playable story, not one of the project's Built software components (those are
 Lumina, the Starline Weaver, Starline, and CrystalBridge — see
 [`../docs/governance/Roadmap.md`](../docs/governance/Roadmap.md)). No server, no dependencies, no account. You
-launch a Starline, cross the network, visit five nodes, gather their keys, and
+launch a Starline, cross the network, visit seven nodes, gather their keys, and
 the First Gate opens — *not by force, but by sovereign recognition.* For the
 cosmology behind the terminal — the Lattice, the Cosmic Archive, the Sovereign
 Vectors — see [`content/CRYSTALCORE-OS-VISION.md`](content/CRYSTALCORE-OS-VISION.md).
@@ -90,30 +90,38 @@ directory, not the repo, so a save is never committed), and the next launch
 picks up where you left off:
 
 ```
-Session resumed — 3/5 keys held.
+Session resumed — 3/7 keys held.
 ```
 
 `reset` wipes the save and returns the lattice to its dormant, first-launch
 state. Only mythos progress is stored — no personal data.
 
-## The five nodes
+## The seven nodes
 
-`visit` each of these to claim its key:
+`visit` each of these to claim its key. Ordered as the Starline Expansion
+chart runs them, outward from Earth:
 
 1. Earth Node
-2. Mars Redoubt
-3. Alpha Centauri Outpost
-4. Crystal Revenant Hub — *locked, needs the Festival Key*
-5. Purpose Core Nexus — *locked, needs the Crystal Key*
+2. Sunwash Atolls — *locked, needs the Magenta Key*
+3. Mars Redoubt
+4. Alpha Centauri Outpost
+5. Cinderwake Chain — *locked, needs the Ember Key*
+6. Crystal Revenant Hub — *locked, needs the Festival Key*
+7. Purpose Core Nexus — *locked, needs the Crystal Key*
 
-Two nodes are sealed behind **named** keys. Pick those up first:
+Sunwash Atolls and Cinderwake Chain entered the canon on 2026-07-28, from
+the Starline Expansion chart.
+
+Four nodes are sealed behind **named** keys. Pick those up first:
 
 ```
+getkey Magenta Key
+getkey Ember Key
 getkey Festival Key
 getkey Crystal Key
 ```
 
-Then `visit` them like any other node. When you hold the key of all five nodes,
+Then `visit` them like any other node. When you hold the key of all seven nodes,
 the First Gate opens:
 
 > All keys held — the First Gate opens. Not by force. By sovereign recognition.
@@ -124,13 +132,19 @@ the First Gate opens:
 ## The map and the soundtrack
 
 `map` prints an ASCII chart of the Year-3000 Starline network — Earth down
-through Mars Redoubt and Alpha Centauri to the Crystal Revenant Hub and the
-Purpose Core Nexus, with the Purpose Core line burning at the centre:
+through Sunwash Atolls to Mars Redoubt, out to Alpha Centauri, down through
+Cinderwake Chain to the Crystal Revenant Hub and the Purpose Core Nexus, with
+the Purpose Core line burning at the centre:
 
 > "Expand to the stars and thereby understand the Universe"
 
-The full-resolution version of that chart is the artwork at
-[`art/starline-network-year-3000.jpeg`](art/README.md).
+Sealed nodes carry a live `[LOCKED — <key>]` tag that clears once you hold
+the named key, so the chart always shows your actual progress.
+
+The artwork at [`art/starline-network-year-3000.jpeg`](art/README.md) renders
+the same network, but predates the 2026-07-28 expansion — it shows the
+original five nodes, without Sunwash Atolls or Cinderwake Chain. The ASCII
+chart is current; the artwork is an earlier state of the same map.
 
 `song` and `starline` cycle a soundtrack — defined at the
 top of `crystalcore_os.py`. It mixes the CrystalArchitect's own tracks
@@ -140,7 +154,7 @@ what's playing; `song <part of a title or artist>` switches to a match.
 ## Broadcasting
 
 Once you're in the full network, `broadcast <message>` sends a packet to
-all five nodes and prints each node's acknowledgment. End the message with
+all seven nodes and prints each node's acknowledgment. End the message with
 `!` and it goes out priority — emergency routing, urgent ACKs, and a
 lattice-wide ALERT. Nodes still sealed behind a named key don't answer:
 they hold their silence until their key is held, and the confirm line
@@ -188,7 +202,9 @@ point at `audit` for what is actually verifiable here.
 
 The [`/crystalcore-os`](https://www.teraustralis.com.au/crystalcore-os) page on
 the site is a simplified, in-browser recreation of this terminal, for people who
-want a taste without running Python. `crystalcore_os.py` is the authoritative
-version — where the two differ, trust the code.
+want a taste without running Python. Its source lives in
+`TerAustralis-Incognita-Code` at `vision/site/src/routes/crystalcore-os/`.
+`crystalcore_os.py` is the authoritative version — where the two differ, trust
+the code.
 
 *Non Solus.*
