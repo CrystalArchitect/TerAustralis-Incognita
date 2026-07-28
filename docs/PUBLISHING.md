@@ -1,5 +1,13 @@
 # Publishing Packages to PyPI
 
+> **Scope note.** This guide describes the `packages/` layout and its
+> per-package licensing (AGPL v3 / Proprietary / dual). That model was
+> **not adopted** — [`ADR-0010`](adr/ADR-0010.md) chose uniform
+> CC BY-NC-ND 4.0 for the whole repository, and
+> [`ADR-0013`](adr/ADR-0013.md) extended it across the portfolio. The
+> `packages/` tree it refers to does not exist here. Kept for provenance;
+> read it as history, not as instructions.
+
 > **Status note (2026-07-23):** the `packages/` structure this guide
 > publishes from never landed in this repository's git history, and the
 > per-package licensing it assumes was reverted by
@@ -192,5 +200,4 @@ Check automated workflows: https://github.com/CrystalArchitect/teraaustralis-inc
 - [Python Packaging Guide](https://packaging.python.org/)
 - [twine Documentation](https://twine.readthedocs.io/)
 - [PyPI Publishing Docs](https://pypi.org/help/#publishing)
-- [AGPL v3 License](../packages/lumina/LICENSE.md)
-- [Proprietary License](../packages/crystalbridge/LICENSE.md)
+- [The licence that actually governs this repository](../LICENSE) — CC BY-NC-ND 4.0

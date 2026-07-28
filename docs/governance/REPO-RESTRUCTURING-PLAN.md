@@ -1,5 +1,13 @@
 # TeraAustralis Repository Restructuring Plan
 
+> **Status note (2026-07-28).** This plan proposes the `packages/` split.
+> That split was **not adopted**: [`ADR-0010`](../adr/ADR-0010.md) chose
+> uniform CC BY-NC-ND 4.0 over differentiated per-package licensing, and
+> [`ADR-0011`](../adr/ADR-0011.md) adopted the three-repository boundary
+> model instead. No `packages/` tree exists in this repository. References
+> to it below are shown as plain paths rather than links, because there is
+> nothing to link to. Kept for provenance.
+
 > **Superseded (2026-07-23).** This plan's `packages/` split was reverted
 > by [`ADR-0010`](../adr/ADR-0010.md) and its layout never landed in this
 > repository's git history; its "Apache-2.0 for everything" premise never
@@ -197,13 +205,13 @@ Collective intelligence with individual sovereignty.
 
 | Package | License | Purpose |
 |---------|---------|---------|
-| [Lumina](packages/lumina) | AGPL v3 | Sovereign AI companion |
-| [Starline](packages/starline) | AGPL v3 | Multi-AI message bus |
-| [Consent Transport](packages/consent-transport) | AGPL v3 | P2P sovereign memory |
-| [RDP](packages/rdp) | AGPL v3 | Record kernel & decisions |
-| [CrystalBridge](packages/crystalbridge) | Proprietary | AI safety consent gate |
-| [EI System](packages/crystalcore-ei) | Dual (MIT + Commercial) | Emotion intelligence |
-| [Mythos](packages/mythos) | CC BY-NC-ND | Story, art, canon |
+| `packages/lumina` | AGPL v3 | Sovereign AI companion |
+| `packages/starline` | AGPL v3 | Multi-AI message bus |
+| `packages/consent-transport` | AGPL v3 | P2P sovereign memory |
+| `packages/rdp` | AGPL v3 | Record kernel & decisions |
+| `packages/crystalbridge` | Proprietary | AI safety consent gate |
+| `packages/crystalcore-ei` | Dual (MIT + Commercial) | Emotion intelligence |
+| `packages/mythos` | CC BY-NC-ND | Story, art, canon |
 
 ## 🚀 Quick Start
 
@@ -216,9 +224,9 @@ pip install -e packages/starline
 
 ## 📚 Documentation
 
-- [Licensing Strategy](docs/governance/LICENSING-STRATEGY.md)
-- [Repo Restructuring](docs/governance/REPO-RESTRUCTURING-PLAN.md)
-- [Individual package READMEs](packages/)
+- [Licensing Strategy](LICENSING-STRATEGY.md)
+- [Repo Restructuring](REPO-RESTRUCTURING-PLAN.md)
+- `packages/`
 ```
 
 ---

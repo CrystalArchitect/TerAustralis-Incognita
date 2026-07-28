@@ -1,5 +1,13 @@
 # Commercial Licensing Guide
 
+> **Scope note.** This guide describes the `packages/` layout and its
+> per-package licensing (AGPL v3 / Proprietary / dual). That model was
+> **not adopted** — [`ADR-0010`](adr/ADR-0010.md) chose uniform
+> CC BY-NC-ND 4.0 for the whole repository, and
+> [`ADR-0013`](adr/ADR-0013.md) extended it across the portfolio. The
+> `packages/` tree it refers to does not exist here. Kept for provenance;
+> read it as history, not as instructions.
+
 > **Status note (2026-07-23):** the per-package licensing tiers this guide
 > describes were reverted by [`ADR-0010`](adr/ADR-0010.md) — the whole
 > repository is uniformly CC BY-NC-ND 4.0. Kept for provenance. See
@@ -293,8 +301,7 @@ Every commercial deployment must include:
 
 ## Further Resources
 
-- [AGPL v3 License Text](../packages/lumina/LICENSE.md)
-- [Proprietary License Terms](../packages/crystalbridge/LICENSE.md)
-- [Dual License Agreement](../packages/crystalcore-ei/COMMERCIAL_LICENSE.md)
+- [The licence that actually governs this repository](../LICENSE) — CC BY-NC-ND 4.0
+- [Commercial licensing terms](../COMMERCIAL_LICENSE.md)
 - [Licensing Strategy](../docs/governance/LICENSING-STRATEGY.md)
 - [Publishing Guide](./PUBLISHING.md)

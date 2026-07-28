@@ -144,9 +144,9 @@ If you discover a violation (rebranding, false attribution, unauthorized commerc
 
 ## Related Documents
 
-- [LICENSE](../../LICENSE) — Full CC BY-NC-ND 4.0 license summary and terms
-- [CONTRIBUTING.md](../../CONTRIBUTING.md) — Contribution guidelines (includes attribution requirements)
-- [README.md](../../README.md) — Project overview
+- [LICENSE](../LICENSE) — Full CC BY-NC-ND 4.0 license summary and terms
+- [CONTRIBUTING.md](../CONTRIBUTING.md) — Contribution guidelines (includes attribution requirements)
+- [README.md](../README.md) — Project overview
 - [docs/governance/AI-Governance.md](governance/AI-Governance.md) — AI collaboration governance (includes attribution rules for AI-assisted work)
 
 ---

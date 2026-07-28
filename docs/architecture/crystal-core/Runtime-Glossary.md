@@ -195,10 +195,10 @@ See: Crystal Runtime Specification v0.3, Section 4.1 (Coordinator).
 ### Related Documents
 
 - [Crystal-Runtime-Specification-v0.3.md](Crystal-Runtime-Specification-v0.3.md) — Architecture specification for the runtime.
-- [docs/ai/Decision-Matrix.md](../ai/Decision-Matrix.md) — Task-type lookup for AI Orchestrator (documented, not automated).
-- [docs/adr/ADR-0005.md](../adr/ADR-0005.md) — AI Orchestrator consolidation decision.
-- [docs/architecture/AI-Weave.md](AI-Weave.md) — How AI systems collaborate (Built/Practiced/Proposed split).
-- [docs/governance/The-Incognita-Rule.md](../governance/The-Incognita-Rule.md) — Governance principle: no model agreeing with you is evidence.
+- [docs/ai/Decision-Matrix.md](../../ai/Decision-Matrix.md) — Task-type lookup for AI Orchestrator (documented, not automated).
+- [docs/adr/ADR-0005.md](../../adr/ADR-0005.md) — AI Orchestrator consolidation decision.
+- [docs/architecture/AI-Weave.md](../AI-Weave.md) — How AI systems collaborate (Built/Practiced/Proposed split).
+- [docs/governance/The-Incognita-Rule.md](../../governance/The-Incognita-Rule.md) — Governance principle: no model agreeing with you is evidence.
 
 ### Key Projects
 
