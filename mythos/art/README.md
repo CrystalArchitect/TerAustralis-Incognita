@@ -143,6 +143,7 @@ CC BY-NC-ND 4.0 — see `../content/LICENSE-CONTENT.md`.
 | `dune-sea-walkers.jpeg` | Two tiny figures cross a vast dune sea, dwarfed by the ridgelines |
 | `desert-flight-path.jpeg` | A light aircraft crosses a red desert sky above a lone grazing animal and a curving dirt track |
 | `desert-water-tower.jpeg` | A circular water-tower installation stands alone on red desert ground beneath a rising moon |
+| `lattice-motion.mp4` | Motion piece — thirty seconds of the lattice, AI-generated. The only moving image in the collection |
 
 **Truth label (Vision):** this art is the project's own mythic narrative. Where a
 real person's name or likeness appears — whether as a name, a silhouette, or a
