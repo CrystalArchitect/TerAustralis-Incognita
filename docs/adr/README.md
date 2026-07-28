@@ -20,7 +20,7 @@ decision needs one, how one is accepted — is in
 | [ADR-0010](ADR-0010.md) | Uniform CC BY-NC-ND 4.0 for the whole repository; differentiated per-package licensing not adopted | Accepted |
 | [ADR-0011](ADR-0011.md) | Adopt the three-project boundary model — umbrella, Crystal Core, Crystal Vision | Accepted |
 | [ADR-0012](ADR-0012.md) | Site visual-token layer now; domain restructure deferred behind triggers | Proposed |
-| [ADR-0013](ADR-0013.md) | Extend uniform CC BY-NC-ND 4.0 across the whole portfolio; retire Apache-2.0 and the unlicensed repositories | Proposed |
+| [ADR-0013](ADR-0013.md) | Extend uniform CC BY-NC-ND 4.0 across the whole portfolio; retire Apache-2.0 and the unlicensed repositories | Accepted |
 
 ## Template
 
