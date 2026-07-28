@@ -105,7 +105,7 @@ chart runs them, outward from Earth:
 2. Sunwash Atolls — *locked, needs the Magenta Key*
 3. Mars Redoubt
 4. Alpha Centauri Outpost
-5. Cinderwake Chain — *locked, needs the Ember Ley*
+5. Cinderwake Chain — *locked, needs the Ember Key*
 6. Crystal Revenant Hub — *locked, needs the Festival Key*
 7. Purpose Core Nexus — *locked, needs the Crystal Key*
 
@@ -116,7 +116,7 @@ Four nodes are sealed behind **named** keys. Pick those up first:
 
 ```
 getkey Magenta Key
-getkey Ember Ley
+getkey Ember Key
 getkey Festival Key
 getkey Crystal Key
 ```

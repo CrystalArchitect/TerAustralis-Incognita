@@ -111,7 +111,7 @@ class CrystalCore:
             "Purpose Core Nexus": "Crystal Key",
             "Crystal Revenant Hub": "Festival Key",
             "Sunwash Atolls": "Magenta Key",
-            "Cinderwake Chain": "Ember Ley"
+            "Cinderwake Chain": "Ember Key"
         }
 
         # The last packet sent across the network, if any.
