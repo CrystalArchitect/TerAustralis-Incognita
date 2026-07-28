@@ -1,7 +1,7 @@
 {
   "ignorePatterns": [
     {
-      "comment": "External links only. markdown-link-check has a reproducible bug resolving parent-relative local links (e.g. '../adr/ADR-0005.md' from a nested file reports dead even when the target exists) - confirmed independent of any config, in complete isolation, across tool versions 3.11-3.14. Internal cross-references also include known-absent code paths (src/, scripts/, tests/, packages/, corpus/) already tracked as their own staged debt in docs/governance/Migration-Plan.md. Scoping to https?:// sidesteps the bug and avoids re-flagging already-catalogued debt, at the cost of not catching internal cross-reference rot - a tradeoff, not a gap discovered later.",
+      "comment": "External links only. markdown-link-check has a reproducible bug resolving parent-relative local links (e.g. '../adr/ADR-0005.md' from a nested file reports dead even when the target exists) - confirmed independent of any config, in complete isolation, across tool versions 3.11-3.14. Internal cross-references also include known-absent code paths (src/, scripts/, tests/, packages/, corpus/) already tracked as their own staged debt in docs/governance/Migration-Plan.md. Scoping to https?:// sidesteps the bug and avoids re-flagging already-catalogued debt. UPDATE 2026-07-28: the cost of that trade - internal cross-reference rot going uncaught - had reached 62 broken links by the portfolio review. Internal links are now checked by .github/scripts/check-internal-links.py, which resolves them against `git ls-files` instead of over HTTP and so does not hit this bug at all. This pattern therefore no longer leaves a gap: it divides the work, external here, internal there.",
       "pattern": "^(?!https?://)"
     },
     {

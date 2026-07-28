@@ -304,8 +304,8 @@ dbt debug
 
 - [dbt Documentation](https://docs.getdbt.com/)
 - [dbt Best Practices](https://docs.getdbt.com/guides/best-practices)
-- [CrystalCore.OS Emotional Intelligence](../../../docs/EMOTIONAL_INTELLIGENCE_BLUEPRINT.md)
-- [Uncertainty Quantification Methods](../../../docs/ADVANCED_UNCERTAINTY_METHODS.md)
+- [CrystalCore.OS Emotional Intelligence](../../docs/EMOTIONAL_INTELLIGENCE_BLUEPRINT.md)
+- [Uncertainty Quantification Methods](../../docs/ADVANCED_UNCERTAINTY_METHODS.md)
 
 ---
 

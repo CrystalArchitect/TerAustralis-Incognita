@@ -1019,4 +1019,4 @@ GET    /runtime/logs/audit?start_time=<unix>&end_time=<unix>
 
 - [Crystal-Runtime-Specification-v0.3.md](Crystal-Runtime-Specification-v0.3.md)
 - [Runtime-Glossary.md](Runtime-Glossary.md)
-- [ADR-0005: AI Orchestrator](../adr/ADR-0005.md)
+- [ADR-0005: AI Orchestrator](../../adr/ADR-0005.md)

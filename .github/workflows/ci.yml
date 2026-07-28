@@ -24,6 +24,15 @@ jobs:
             !node_modules
             !archive
 
+      # Internal cross-references, resolved against `git ls-files` rather
+      # than over HTTP. The external checker below cannot do this -- it
+      # reports parent-relative local links as dead even when they exist,
+      # which is why its config scopes itself to ^https?:// -- so internal
+      # link rot went uncaught until the 2026-07-28 review counted 62 of
+      # them. Path arithmetic against the index has no such bug.
+      - name: Internal link check
+        run: python3 .github/scripts/check-internal-links.py
+
       # Run the checker CLI directly (same invocation as local verification)
       # instead of the folder-path action: archive/ must be excluded to
       # match the lint step above - it is frozen provenance whose dead

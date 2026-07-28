@@ -1316,12 +1316,12 @@ Until the specification is accepted and the readiness checklist is complete, no 
 
 ## References
 
-- [ADR-0001: Adopt the CrystalCore OS v1.0 repository architecture](ADR-0001.md)
-- [ADR-0004: Lock the CrysCore naming taxonomy](ADR-0004.md)
-- [ADR-0005: AI Orchestrator — consolidate the naming](ADR-0005.md)
-- [Decision-Matrix.md](../ai/Decision-Matrix.md)
-- [The-Incognita-Rule.md](../governance/The-Incognita-Rule.md)
-- [Roadmap.md](../governance/Roadmap.md)
+- [ADR-0001: Adopt the CrystalCore OS v1.0 repository architecture](../../adr/ADR-0001.md)
+- [ADR-0004: Lock the CrysCore naming taxonomy](../../adr/ADR-0004.md)
+- [ADR-0005: AI Orchestrator — consolidate the naming](../../adr/ADR-0005.md)
+- [Decision-Matrix.md](../../ai/Decision-Matrix.md)
+- [The-Incognita-Rule.md](../../governance/The-Incognita-Rule.md)
+- [Roadmap.md](../../governance/Roadmap.md)
 
 ## Architectural Inspiration
 
