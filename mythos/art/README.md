@@ -51,7 +51,7 @@ CC BY-NC-ND 4.0 — see `../content/LICENSE-CONTENT.md`.
 | `crystalcore-os-upgrade-tilt.jpeg` | The upgrade tablet, angled render |
 | `light-bearer-over-the-mesh.jpeg` | The star-woven light-bearer above the world, the mesh of hands reaching up to meet her |
 | `song-of-the-lattice.jpeg` | The lattice singing — staves of light pouring from her voice into the weave |
-| `dawn-of-the-settlement.jpeg` | Dawn over the red-dirt settlement — desks and their workers, solar fields, rockets rising, crystal coins in the sky (Vision-layer imagery; the project holds no token) |
+| `dawn-of-the-settlement.jpeg` | Dawn over the red-dirt settlement — desks and their workers, solar fields, rockets rising, crystal coins in the sky (Vision-layer imagery; the project issues no token — see the [Ordinals licence grant](../../docs/governance/ORDINALS-LICENCE-GRANT.md) for the separate, licensed third-party inscriptions of this art) |
 | `starline-network-year-3000.jpeg` | The Starline Network, Year 3000 — Earth Node, Mars Redoubt, Alpha Centauri Outpost, Crystal Revenant Hub, the Purpose quote burning at the Nexus (rendered by the `map` command in `../crystalcore_os.py`) |
 | `fleet-of-the-starlines.jpeg` | The fleet riding the starline rings out from the bright hub, worlds on either side |
 | `network-web.jpeg` | The network as living web — every node named, the three original songs written across the sky (Red Dust Axis · Shooting Star Girl · Fermi's Silent Line) |
@@ -116,6 +116,11 @@ CC BY-NC-ND 4.0 — see `../content/LICENSE-CONTENT.md`.
 | `where-we-are-going.jpeg` | *AI-generated (Grok Imagine)* — the crystal ship running out through the red nebula, trailing filaments of light beneath its NON SOLUS legend |
 | `no-comparison.jpeg` | *AI-generated (Grok Imagine)* — the crystal figure alight in the hall of watching screens: "No Comparison · NON SOLUS" |
 | `multiplanetary-training-layer.jpeg` | *AI-generated (Grok Imagine)* — the crowned figure above the crystal city, a labelled Grok shard and a rising rocket at either hand: "Multiplanetary Training Layer · NON SOLUS". Names a real product; see the company note below |
+| `first-layer-the-living-surface.jpeg` | *AI-generated (Grok Imagine)* — the continent as aged relief chart, veins of light through the red interior: "First Layer — The Living Surface" |
+| `the-heart-from-orbit.jpeg` | *AI-generated (Grok Imagine)* — the continent from orbit, the golden spiral turning at its centre, light arcing out past the coast |
+| `crystalcore-lattice-overlay.jpeg` | *AI-generated (Grok Imagine)* — the CrystalCore lattice laid over the continent — nodes lit teal and gold along the old routes |
+| `sovereign-horizon.jpeg` | *AI-generated (Grok Imagine)* — the red continent under launch traces, the spiral holding the centre: "Sovereign Horizon" |
+| `incognita-lattice-architecture.jpeg` | *AI-generated (Grok Imagine)* — the Incognita Lattice architecture in exploded layers — Surface, Knowledge Lattice, Red Dust & Songlines, Multiplanetary Interface, with the Sovereign Edge at the margin |
 
 | `terra-australis-incognita-antique-map.jpeg` | An antique-cartography rendering of the world labeled "Terra Australis Incognita — Nondum Plene Cognita," compasses and rolled charts at the edges — the project's name as a 16th-century mapmaker might have drawn it |
 | `marsbase-downunder-proving-ground.jpeg` | MarsBase Downunder — Mars Proving Ground establishing shot: three starship-style rockets (one marked with the Aboriginal flag), domes, dishes, rovers, and a weathered "WELCOME TO MARSBASE DOWNUNDER · EST. 2074" sign over red dune country, petroglyphs on the foreground rock |
