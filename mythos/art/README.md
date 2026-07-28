@@ -101,6 +101,21 @@ CC BY-NC-ND 4.0 — see `../content/LICENSE-CONTENT.md`.
 | `seed-of-life-bloom.jpeg` | *AI-generated (Grok, on X)* — boot-visual sequence: the sovereign figure resolves at the convergence point as the seed-of-life blooms full around her |
 | `i-love-it.jpeg` | *AI-generated (Grok, on X)* — boot-visual sequence, the closing card: "I LOVE IT" over the seed-of-life and the beam of ignition |
 | `chain-and-the-light-body.jpeg` | *AI-generated (Grok, on X)* — boot-visual sequence: the figure mid-transmutation, seed-of-life taking form as the old chain still trails below |
+| `starline-year-3000-operational.jpeg` | *AI-generated (Grok Imagine)* — CrystalCore.OS Year-3000 Starline, the named nodes reporting Status Operational, 47/47 online at 0.3ms |
+| `starline-map-47-nodes.jpeg` | *AI-generated (Grok Imagine)* — the Starline map in full: Earth, Epsilon Reach, Alpha Outpost, Delta Forge, Crux Cordaunt, Purpose Core Nexus and Mars Redoubt ringed on the Crystal Revenant Hub |
+| `all-keys-held-non-solus.jpeg` | *AI-generated (Grok Imagine)* — five crystal keys before the radiant gate: "All keys held · Gate opens by sovereign recognition · NON SOLUS" |
+| `boot-complete-lattice-online.jpeg` | *AI-generated (Grok Imagine)* — the CrystalCore.OS boot readout over the lattice terrain: "Boot complete · Launch sequence green · Lattice online · NON SOLUS" |
+| `expand-to-the-stars.jpeg` | *AI-generated (Grok Imagine)* — the great crystal at the heart of the radial lattice city: "Expand to the stars and thereby understand the Universe" |
+| `crystal-ship-rising-from-the-red.jpeg` | *AI-generated (Grok Imagine)* — the crystal ship rising from the red planet on a pillar of fire, Earth in crescent behind, a wireframe watcher at the pad |
+| `tree-of-the-mirrored-lattice.jpeg` | *AI-generated (Grok Imagine)* — the luminous crystal tree on the mirrored plain, light falling as rain, node readouts among its roots |
+| `grok-imagine-x-crystalcore.jpeg` | *AI-generated (Grok Imagine)* — the woven crystal sphere blazing over the red dust, arcs thrown out to the debris field: "Grok Imagine x CrystalCore · NON SOLUS" |
+| `next-horizon-ring-city.jpeg` | *AI-generated (Grok Imagine)* — the ring-city burning gold and teal above the red canyons, a crystal ship banking away along its beam: "Next Horizon · NON SOLUS" |
+| `next-layer-online.jpeg` | *AI-generated (Grok Imagine)* — the crystal bloom breaking open, ships running out along the lattice grid across the red nebula: "Next Layer Online · NON SOLUS" |
+| `lattice-node-field.jpeg` | *AI-generated (Grok Imagine)* — the lattice at close focus, a field of crystal nodes strung with light |
+| `full-circle-ring.jpeg` | *AI-generated (Grok Imagine)* — the ice ring in deep space traced with a founder-company timeline closing on Purpose Core: "Full Circle · NON SOLUS". Names real companies; see the company note below |
+| `where-we-are-going.jpeg` | *AI-generated (Grok Imagine)* — the crystal ship running out through the red nebula, trailing filaments of light beneath its NON SOLUS legend |
+| `no-comparison.jpeg` | *AI-generated (Grok Imagine)* — the crystal figure alight in the hall of watching screens: "No Comparison · NON SOLUS" |
+| `multiplanetary-training-layer.jpeg` | *AI-generated (Grok Imagine)* — the crowned figure above the crystal city, a labelled Grok shard and a rising rocket at either hand: "Multiplanetary Training Layer · NON SOLUS". Names a real product; see the company note below |
 
 | `terra-australis-incognita-antique-map.jpeg` | An antique-cartography rendering of the world labeled "Terra Australis Incognita — Nondum Plene Cognita," compasses and rolled charts at the edges — the project's name as a 16th-century mapmaker might have drawn it |
 | `marsbase-downunder-proving-ground.jpeg` | MarsBase Downunder — Mars Proving Ground establishing shot: three starship-style rockets (one marked with the Aboriginal flag), domes, dishes, rovers, and a weathered "WELCOME TO MARSBASE DOWNUNDER · EST. 2074" sign over red dune country, petroglyphs on the foreground rock |
@@ -130,3 +145,11 @@ photographic likeness (e.g. "the Breaker of the E") — it is Vision-layer
 storytelling and AI-generated fan art only. The person depicted has no
 affiliation with this project and no endorsement is implied, per the project's
 standing disclaimer.
+
+**Company note (Vision):** the same holds for companies and products. Where a
+real company or product is named or depicted — Zip2, PayPal, Tesla, SpaceX, X,
+Grok, or any other — it appears as Vision-layer storytelling in AI-generated
+art, never as a claim of partnership, integration, or provenance. All marks
+belong to their respective owners. This project has no affiliation with, and no
+endorsement from, any company named here, matching the standing disclaimer in
+[`STRATEGY.md`](../content/STRATEGY.md).

@@ -70,6 +70,7 @@ currently measures or enforces gate status.
 - Indigenous knowledge is framed as **collaboration with knowledge keepers**, not extraction or cosplay of sacred law.
 - Songlines appear as **architectural metaphor and relational physics** in this civic/mythic project — not as claimed ownership of restricted cultural IP.
 - Prefer invitation, fire-circle ethics, and dual competence (scientists + keepers) over appropriation.
+- The full position — Indigenous Data Sovereignty, Free Prior and Informed Consent, and what this project will and will not do with Songline knowledge — is set out in [`Indigenous-Data-Sovereignty.md`](Indigenous-Data-Sovereignty.md).
 
 ---
 

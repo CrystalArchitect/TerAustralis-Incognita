@@ -29,7 +29,7 @@ with emotion_labels as (
     select 24, 'remorse', 'Regret for action', 'self-awareness' union all
     select 25, 'sadness', 'Sorrow', 'self-regulation' union all
     select 26, 'surprise', 'Unexpected reaction', 'self-awareness' union all
-    select 27, 'neutral', 'No strong emotion', 'neutral' union all
+    select 27, 'neutral', 'No strong emotion', 'neutral'
 )
 
 select
