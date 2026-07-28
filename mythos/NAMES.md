@@ -45,13 +45,9 @@ person actually talks to.
 So: the Weaver lays the map, the Narrator keeps it honest, the Train travels it,
 Clementine speaks across it, and Lumina is home at the end of the line.
 
-## A note on borrowed words
+## A note on this project's coinages
 
-"Songline" is not used for any of these — it belongs to the First Peoples of this
-land, not to a piece of software. Where **Songlines** and **songline veins**
-appear in the mythos and the art, they are honoured as cultural image, never
-claimed as a component name. "Starline" and "Dreamline" are this project's own
-coinages; "Dreamline" is canon here (Starlines & Dreamlines), distinct from
-"Dreamtime."
+"Starline" and "Dreamline" are this project's own coinages; "Dreamline" is canon
+here (Starlines & Dreamlines), distinct from "Dreamtime."
 
 *Non Solus.*

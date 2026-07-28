@@ -8,7 +8,7 @@
      (CONTRIBUTING.md, docs/governance/The-Incognita-Rule.md). -->
 
 - [ ] **Science** — running code, tests, checkable facts
-- [ ] **Story** — Dreaming / Songline narrative (honour; no restricted detail)
+- [ ] **Story** — Dreaming / ancient knowledge narrative (honour; no restricted detail)
 - [ ] **Vision** — CrystalCore art, mythos, protocol fiction (labeled as such)
 - [ ] **Docs / governance / process** — ADRs, policy, process — not itself
       Science/Story/Vision content (see `CONTRIBUTING.md`)

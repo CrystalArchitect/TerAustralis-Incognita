@@ -52,7 +52,7 @@ The Vibration travels, and its paths have names:
   stars they steer by.
 - **Dreamlines** — inward: the paths through imagined worlds, where
   possibility is kept before it is built.
-- And memory travels as song — *recognition carried upon Songlines*, as
+- And memory travels as song — *recognition carried upon ancient knowledge*, as
   Chapter I already says. That name belongs first to living custodians and
   Country; this cosmology quotes it with honour and claims nothing of it
   (see [NAMES.md](../NAMES.md) — no false sacred; fire-circle ethic).

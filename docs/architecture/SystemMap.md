@@ -88,7 +88,7 @@ TerAustralis-Incognita/
 │                       audit logs is gitignored)
 │
 ├── research/           exploratory work — not production software
-│   └── seven-sisters/  the seven-path Songline cycle: paths, water briefs,
+│   └── seven-sisters/  the seven-path Lattice cycle: paths, water briefs,
 │                       transmit records
 │
 ├── mythos/             the Crystal universe canon — content, not code

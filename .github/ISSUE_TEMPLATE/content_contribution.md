@@ -20,7 +20,7 @@ Vision material, labeled as such, and it doesn't borrow authority from the
 code — it may point at real components, never speak for them.
 
 **Cultural respect**
-If it touches Songlines, Seven Sisters, or other First Peoples' material:
+If it touches ancient knowledge, Seven Sisters, or other First Peoples' material:
 confirm it honours rather than claims — no restricted detail, no false
 sacred (`mythos/NAMES.md`, Constitution §5).
 

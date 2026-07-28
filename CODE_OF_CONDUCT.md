@@ -23,7 +23,7 @@ requests, discussions, and any community space linked from README.md.
 ## Cultural respect
 
 Some of this project's Vision-layer content (`mythos/`) draws on Dreamtime
-Songlines as narrative and architectural metaphor. Contributions that touch
+imagery as narrative and architectural metaphor. Contributions that touch
 this material should treat it as collaboration and honour, not extraction —
 no claimed ownership of restricted cultural knowledge, no invented "sacred"
 detail, no treating real Indigenous culture as a skin for the fiction. This

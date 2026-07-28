@@ -18,7 +18,7 @@ Restated from the root [`AGENTS.md`](../../AGENTS.md) and the
    ([`The-Incognita-Rule.md`](The-Incognita-Rule.md)).
 4. **Name your tools.** Every PR description lists the AI tools that helped
    produce it. The PR template asks; answer truthfully.
-5. **Cultural respect.** No false sacred, fire-circle ethic — Songlines are
+5. **Cultural respect.** No false sacred, fire-circle ethic — cultural imagery is
    honoured as cultural image, never claimed as component names
    ([`mythos/NAMES.md`](../../mythos/NAMES.md)).
 

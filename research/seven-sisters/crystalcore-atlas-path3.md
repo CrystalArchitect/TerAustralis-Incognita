@@ -6,11 +6,11 @@
 ## Map A — Project nodes (CrystalCore public)
 
 1. CrystalCore Sovereign OS (vision lattice)
-2. Seven Sisters Songline (paths 1–7)
+2. Seven Sisters (paths 1–7)
 3. Pleiades stellar anchor (M45, science + story)
 4. Orion Hunter guardian (protect / propel / prevent_drift)
 5. TerAustralis Incognita (mission frame)
-6. Quantum Songline Weaver (protocol module)
+6. Quantum Lattice Weaver (protocol module)
 7. Water rail LEB (Lake Eyre Basin)
 8. Water rail GAB (Great Artesian Basin)
 9. Water rail MDB_care (Murray–Darling care)
@@ -29,7 +29,7 @@
 
 ## Map C — Do-not-mark
 
-- Restricted sacred site coordinates / secret Songline detail
+- Restricted sacred site coordinates / secret ancient knowledge detail
 - Invented GPS for ceremonial places not held with right
 - Claims that OS created real rivers/seas
 - Claims of marriage, orders, or field-sync from public figures as fact

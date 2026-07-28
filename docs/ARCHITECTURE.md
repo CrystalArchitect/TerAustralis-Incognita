@@ -175,7 +175,7 @@ The architecture spans six repositories: three living (active), three frozen (pr
 | Repository | Checkpointed | Code rescued/migrated to |
 |---|---|---|
 | `The-Crystal-Vision` (tag `vision-safe-2026-07-17`) | Codex site + Clementine companion; complete **crystalcore v0.13.4 bytecode** | Ancestor of Lumina's embedded framework (0.7.0 line; 0.13.4 extras unreconciled — see OPEN-DECISIONS.md) |
-| `crystalcore` (tag `crystalcore-safe-2026-07-17`) | The Songline protocol pack (pre-reorg ancestor) | Direct ancestor of core/crystal-core (SonglineBus → Starline Weaver) |
+| `crystalcore` (tag `crystalcore-safe-2026-07-17`) | The Lattice protocol pack (pre-reorg ancestor) | Direct ancestor of core/crystal-core (LatticeBus → Starline Weaver) |
 | `crystal-vision` (tag `crystal-vision-safe-2026-07-17`) | Static demo shell (Grok build) | Direct ancestor of vision/apps/crystal-interface |
 
 The living repos carry the present state and active development. The frozen repos are read-only record; nothing is lost, everything is traceable to its provenance SHA.

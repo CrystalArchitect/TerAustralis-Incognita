@@ -29,7 +29,7 @@ Do not rename casually. Aliases may appear in publish copy only if they point ba
 
 ## 2. Purpose
 
-Build a **national and civilizational calling** for Australia as the **Southern Pillar** of multiplanetary humanity — fusing **Dreamtime Songlines** (as relational, multi-scalar architecture) with **Starship-class first-principles engineering**.
+Build a **national and civilizational calling** for Australia as the **Southern Pillar** of multiplanetary humanity — fusing **Dreamtime knowledge** (as relational, multi-scalar architecture) with **Starship-class first-principles engineering**.
 
 This is not a slogan pack. It is purpose, jobs, redundancy against the Great Filter, and a living myth that can be *walked on soil* and *flown to the Moon/Mars*.
 
@@ -68,7 +68,7 @@ currently measures or enforces gate status.
 ## 5. Cultural respect
 
 - Indigenous knowledge is framed as **collaboration with knowledge keepers**, not extraction or cosplay of sacred law.
-- Songlines appear as **architectural metaphor and relational physics** in this civic/mythic project — not as claimed ownership of restricted cultural IP.
+- Cultural imagery appears as **architectural metaphor and relational physics** in this civic/mythic project — not as claimed ownership of restricted cultural IP.
 - Prefer invitation, fire-circle ethics, and dual competence (scientists + keepers) over appropriation.
 
 ---

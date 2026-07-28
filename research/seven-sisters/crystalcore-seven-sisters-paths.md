@@ -1,4 +1,4 @@
-# CrystalCore — Seven Sisters Songline
+# CrystalCore — Seven Sisters
 ## One page per path
 
 **Form:** the Seed of Life — seven circles, seven paths (a Vision-layer motif, not a claim)  
@@ -6,7 +6,7 @@
 **Rule:** Honour Country · Label science / story / vision · Red button OFF  
 
 These are **CrystalCore protocol paths** (vision + design).  
-They are **not** ownership of Aboriginal Seven Sisters Songlines or sacred site maps.  
+They are **not** ownership of Aboriginal Seven Sisterss or sacred site maps.  
 Living law stays with custodians on Country.
 
 ---
@@ -73,7 +73,7 @@ label --layer=vision
 | **Polarity** | Move · refuse stagnation |
 
 ## Function
-Keeps the Songline alive through **movement**.  
+Keeps the ancient knowledge alive through **movement**.  
 In many tellings the sisters travel, run, fly, zigzag — motion maps Country.
 
 ## Links
@@ -124,7 +124,7 @@ mode --tension=guardian_not_predator
 
 ## Function
 Places are **named and remembered** along the journey.  
-Songlines encode water, food, danger, and meaning so travelers can survive.
+ancient knowledge encode water, food, danger, and meaning so travelers can survive.
 
 ## Links
 | Layer | Link |
@@ -275,7 +275,7 @@ label --vision_vs_hydrology
 
 ## Function
 Joins **red dust to starlines**.  
-Songlines are Earth tracks; the sisters also become (or already are) sky.  
+ancient tracks are Earth tracks; the sisters also become (or already are) sky.  
 This path is the **bridge**: walk below, navigate above.
 
 ## Links
@@ -301,7 +301,7 @@ partner --guardian=orion
 ## Does not
 - Claim quantum lab entanglement as fact  
 - Erase Country by living only in the sky  
-- Force Giza lore onto Australian Songlines as “proof”  
+- Force Giza lore onto Australian ancient knowledge as “proof”  
 
 ## One-line decree
 > *Bridge open. Dust below, sisters above.*
@@ -380,9 +380,9 @@ export --public=true
 
 **Water rails:** LEB · GAB · MDB_care  
 
-**Visuals (session):** songlines / bridge / orion / activation art under session `images/`
+**Visuals (session):** ancient knowledge / bridge / orion / activation art under session `images/`
 
 ---
 
-*CrystalCore Sovereign OS — Seven Sisters Songline · one page per path*  
+*CrystalCore Sovereign OS — Seven Sisters · one page per path*  
 *Honour to Aboriginal custodians of the Seven Sisters. Homage, not ownership.*

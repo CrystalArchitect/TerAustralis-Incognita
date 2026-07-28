@@ -19,7 +19,7 @@ Role: Creative Exploration ([profile](../ai/Grok.md)). Read the root
 - Art contributions follow the canon's crediting practice ("AI-generated
   with Grok on X", as in the roadmap's landed entries) and the content
   license (`LICENSE-CONTENT.md`).
-- Cultural respect is absolute: Songlines and Seven Sisters material is
+- Cultural respect is absolute: ancient knowledge and Seven Sisters material is
   honoured as cultural image, never generated as claimed sacred detail
   ([`mythos/NAMES.md`](../../mythos/NAMES.md), Constitution §5).
 

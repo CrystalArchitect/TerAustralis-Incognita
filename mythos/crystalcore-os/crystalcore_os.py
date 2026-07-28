@@ -179,7 +179,7 @@ class CrystalCore:
         named = ", ".join(self.named_keys) if self.named_keys else "none"
         gate = ("First Gate: OPEN — by sovereign recognition"
                 if self.gate_open else "First Gate: sealed")
-        # "Soundtrack", not "Songline" — that word is honoured as cultural
+        # "Soundtrack", not "ancient knowledge" — that word is honoured as cultural
         # image only, never a component name (mythos/NAMES.md).
         audio = (f"Now playing: {self.current_soundtrack}"
                  if self.current_soundtrack else "Soundtrack buffer primed")

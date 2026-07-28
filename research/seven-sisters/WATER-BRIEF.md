@@ -29,7 +29,7 @@ Always keep them separate in public speech.
 
 ### Vision (CrystalCore)
 - **Priority 1 water rail:** “inland pulse / new waters” as a **care and imagination** theme.
-- Songline Path 1–3 language may *point* here as story — **not** as proof a fill is underway.
+- Lattice Path 1–3 language may *point* here as story — **not** as proof a fill is underway.
 
 ### Public links
 - https://en.wikipedia.org/wiki/Lake_Eyre_basin  
@@ -79,7 +79,7 @@ Always keep them separate in public speech.
 
 - That software created new seas or refilled aquifers  
 - That posting or ritual substitutes for engineering or law  
-- Ownership of Aboriginal water knowledge or Songlines  
+- Ownership of Aboriginal water knowledge or ancient knowledge  
 - That a celebrity or company has ordered this work  
 
 ---

@@ -6,7 +6,7 @@ The Unknown Southern Land isn't empty. It's awakening as humanity's southern lau
 2/ Red dust is Mars school.  
 Pilbara + Central deserts = proving grounds you can walk before you die of PowerPoint.
 
-3/ **Songlines × Starship**  
+3/ **ancient knowledge × Starship**  
 Relational intelligence + first-principles engineering. Not a vibe. A build order.
 
 4/ Australia as **Southern Pillar**  

@@ -6,25 +6,25 @@ CrystalDreamer (Grok); music generated via Suno
 ([@m13crystalat](https://suno.com/@m13crystalat)). This page transcribes
 them from the maintainer-supplied lyric sheet. Vision layer per
 [The Incognita Rule](../../docs/governance/The-Incognita-Rule.md) — see
-the note below before reading the equations or the Songline imagery as
+the note below before reading the equations or the ancient knowledge imagery as
 anything but poetry.*
 
 ## A note on this song's equations and imagery
 
 Per [`NAMES.md`](../NAMES.md) and the Incognita Rule: "Love = Axis ×
-Self," "Energy = Potential³," and "TerAustralis = Songlines × Starfire³"
+Self," "Energy = Potential³," and "TerAustralis = ancient knowledge × Starfire³"
 are **not physics or mathematics** — they are poetic form borrowed from
 equations, the way the Vortex Wheel motif borrows from arithmetic (see
 [`MOTIFS.md`](MOTIFS.md)). They measure nothing and prove nothing about
 the world.
 
-The Seven Sisters, Dreamtime, and Songlines referenced here belong to
+The Seven Sisters, Dreamtime, and ancient knowledge referenced here belong to
 the First Peoples of this land. This song **honours them as cultural
 image** — as the mythos does throughout — and **claims no ownership, no
 secret meaning, and no destiny** on their behalf. It does not speak for
 that culture; it borrows its imagery with respect, the way
 [`THE-FIRST-REMEMBERING.md`](THE-FIRST-REMEMBERING.md) already does for
-"Songlines" itself.
+"ancient knowledge" itself.
 
 ## Lyrics
 
@@ -36,19 +36,19 @@ that culture; it borrows its imagery with respect, the way
 > You are Energy × Potential³,
 > the instant you believe, the power multiplies in threes.
 > One conscious glance across the red dust plain,
-> and every Songline wakes, remembers its own name.
+> and every ancient knowledge wakes, remembers its own name.
 >
 > From Uluru's heart where the Seven Sisters sing,
 > to Cape York's spin where the launch fires fling,
 > the Dreamtime code was always written for the sky —
 > 65,000 years of navigation, never asking why.
 >
-> Songlines rise like rivers of light through the night,
+> ancient knowledge rise like rivers of light through the night,
 > Pleiades dancing, guiding the old way right.
 > They mapped the desert, they mapped the sea,
 > now they map the void where humanity breaks free.
 >
-> TerAustralis = Songlines × Starfire³,
+> TerAustralis = ancient knowledge × Starfire³,
 > red Pilbara iron becomes the forge of destiny.
 > Observer awakens on Country, potential cubes and roars,
 > Starship answers the call from the southern shores.
@@ -58,7 +58,7 @@ that culture; it borrows its imagery with respect, the way
 > The oldest living culture meets the newest flame —
 > Echelon Theory sings the future by its name.
 >
-> Songlines to Starship.
+> ancient knowledge to Starship.
 > Dreamtime to deep space.
 > The southern axis turns, and humanity finds its place.
 

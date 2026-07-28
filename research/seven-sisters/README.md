@@ -1,6 +1,6 @@
 # Seven Sisters cycle
 
-The seven-path Songline process of the original crystal-core repo — moved
+The seven-path ancient knowledge process of the original crystal-core repo — moved
 here from `crystal-core/` in the v1.0 reorganization
 ([`ADR-0001`](../../docs/adr/ADR-0001.md)) because it is exploratory and
 narrative material, not part of the protocol pack's running code.
@@ -9,7 +9,7 @@ These documents mix layers and say so internally — the water briefs carry
 checkable hydrology (Science), the paths are practice and narrative
 (Story/Vision), and the transmit records are a log of what was actually
 posted. The pack's ethics line stands: honour to Aboriginal custodians of
-the Seven Sisters; the Songline is engaged as collaborative metaphor, never
+the Seven Sisters; the ancient knowledge is engaged as collaborative metaphor, never
 claimed ([`mythos/NAMES.md`](../../mythos/NAMES.md)).
 
 ## Contents

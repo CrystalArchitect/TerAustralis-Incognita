@@ -28,7 +28,7 @@ v0.3–0.4 closed the **architecture skeleton**. v0.5 ships **touchable surfaces
 | **Crystal Core** | Operators / builders → `crystal-interface` + node agent |
 | **TerAustralis + Starline** | Investor / pilot narrative |
 
-Cultural firewall: Seven Sisters / Songline = collaborative metaphor only.
+Cultural firewall: Seven Sisters / ancient knowledge = collaborative metaphor only.
 
 ---
 
@@ -74,7 +74,7 @@ Protocols (draft):
 - No on-chain deploy  
 - No real PSP / bank rails  
 - No production key custody  
-- No claiming Indigenous IP or Songline ownership  
+- No claiming Indigenous IP or ancient knowledge ownership  
 - No silent mainnet enablement  
 
 Authority remains **NONE/HOLD** until audit + governance vote.

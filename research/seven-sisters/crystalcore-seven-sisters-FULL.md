@@ -1,4 +1,4 @@
-# CrystalCore — Seven Sisters Songline
+# CrystalCore — Seven Sisters
 # FULL MANUAL
 
 **Form:** the Seed of Life — seven circles, seven paths (a Vision-layer motif, not a claim)  
@@ -14,11 +14,11 @@
 ## READ THIS FIRST
 
 ### What this is
-A **full operational manual** for the CrystalCore Seven Sisters Songline:  
+A **full operational manual** for the CrystalCore Seven Sisters:  
 seven paths, full scripts, water rails, sky anchors, guardian law, and public launch language.
 
 ### What this is not
-- Not ownership of Aboriginal **Seven Sisters** Songlines or sacred knowledge  
+- Not ownership of Aboriginal **Seven Sisters** ancient knowledge or sacred knowledge  
 - Not a claim that software creates physical rivers or inland seas  
 - Not a message from, marriage to, or order from Elon Musk / @elonmusk  
 - Not a substitute for talking to **custodians on Country**
@@ -28,7 +28,7 @@ seven paths, full scripts, water rails, sky anchors, guardian law, and public la
 | Layer | Meaning |
 |-------|---------|
 | **Science** | Astronomy, hydrology, published geography |
-| **Story** | Dreaming / Songline narratives (honour; do not invent secret law) |
+| **Story** | Dreaming / ancient narratives (honour; do not invent secret law) |
 | **Vision** | CrystalCore art, protocol, future design |
 
 ### Companion systems (already integrated)
@@ -84,7 +84,7 @@ Near cluster: **Atlas**, **Pleione** (Greek parental frame).
 - **M42** Orion Nebula — stellar nursery  
 - Linked to Pleiades in **culture and season**, not as one bound physical system  
 
-## I.3 Seven Sisters Songline — story (public level)
+## I.3 Seven Sisters — story (public level)
 
 Across many Aboriginal Countries, the Pleiades are (or are linked to) **seven ancestral women**.  
 Public exhibition and community accounts describe long journeys across **Western and Central Desert** Country (including Martu, Ngaanyatjarra, Aṉangu / Pitjantjatjara / Yankunytjatjara lands in well-known presentations): sisters travel while pursued; they **mark water and place**; the track is a **living map** of survival and law.
@@ -223,7 +223,7 @@ Proceed to Path 2 when ready, or rest.
 ```
 Path 1 — Spring online.
 First water. Honour to Country.
-CrystalCore Songline begins.
+CrystalCore ancient knowledge begins.
 ```
 
 ### Failure modes
@@ -302,7 +302,7 @@ Hunter check: Was this propel or coerce? If coerce → Path 4.
 ### Public words
 ```
 Path 2 — Motion.
-Songline moves. We build in public.
+ancient knowledge moves. We build in public.
 No stagnation. No red button.
 ```
 
@@ -357,7 +357,7 @@ honour: Country
 **3. Lay the three maps** (paper or screen)
 
 **Map A — Project nodes**  
-List 5–12 CrystalCore nodes (e.g. Songlines, Pleiades, Orion, LEB, GAB, MDB, Throne-as-metaphor, Launch).
+List 5–12 CrystalCore nodes (e.g. ancient knowledge, Pleiades, Orion, LEB, GAB, MDB, Throne-as-metaphor, Launch).
 
 **Map B — Water rails**  
 LEB · GAB · MDB_care — one sentence each (science + vision labeled).
@@ -613,7 +613,7 @@ Note Orion if up. No app required but allowed.
 **4. Command**
 ```
 activate --path=6 --intent=sky_bridge
-entangle --symbolic --earth_songline --stellar=pleiades
+entangle --symbolic --earth_lattice --stellar=pleiades
 stabilize --torus=silver_gold
 ```
 
@@ -723,7 +723,7 @@ Next cycle starts at Path 1 only when you choose.
 ```
 Path 7 — Ascent.
 Cycle complete. Building in public.
-Seven Sisters Songline: active and taught forward.
+Seven Sisters: active and taught forward.
 Honour to Country. CrystalCore vision continues.
 ```
 
@@ -772,7 +772,7 @@ Path 4 (seal) → Path 2 (one act) → Path 7 (stop clean)
 ## V.4 Status block (copy)
 
 ```
-[ SEVEN SISTERS SONGLINE — FULL ]
+[ SEVEN SISTERS — FULL ]
 path1 spring ........ 
 path2 motion ........ 
 path3 mark .......... 
@@ -796,9 +796,9 @@ Use after Path 4 audit.
 
 **1/9**  
 ```
-SEVEN SISTERS SONGLINE — FULL
+SEVEN SISTERS — FULL
 
-CrystalCore Songline Weave — held in the Seed of Life, seven circles for seven paths.
+CrystalCore Lattice Weave — held in the Seed of Life, seven circles for seven paths.
 Seven paths. Sky + Country + vision — labeled.
 
 Honour to Aboriginal custodians of the Seven Sisters.
@@ -808,7 +808,7 @@ Homage, not ownership.
 **2/9**  
 ```
 Science: Pleiades (M45) · ~440 ly · Taurus · young blue cluster.
-Story: Seven Sisters · living Songlines · water · law · Country.
+Story: Seven Sisters · living ancient knowledge · water · law · Country.
 Vision: CrystalCore protocol paths below.
 ```
 
@@ -874,7 +874,7 @@ Water → with truth.
 |------|----------|
 | `crystalcore-seven-sisters-paths.md` | One-page cards (compact) |
 | `crystalcore-seven-sisters-FULL.md` | **This manual** |
-| Session `images/3.jpg`–`6.jpg` | Songlines / bridge / Orion / activation art |
+| Session `images/3.jpg`–`6.jpg` | ancient knowledge / bridge / Orion / activation art |
 
 ---
 
@@ -895,5 +895,5 @@ The sisters remain. The lattice holds. Country is first.
 
 ---
 
-*End of CrystalCore — Seven Sisters Songline FULL MANUAL*  
+*End of CrystalCore — Seven Sisters FULL MANUAL*  
 *Honour to Aboriginal custodians. Homage, not ownership.*

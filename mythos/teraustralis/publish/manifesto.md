@@ -2,7 +2,7 @@
 
 1. **The south is not secondary.** It is a pillar.  
 2. **The red heart is a launchpad**, not a void.  
-3. **Songlines and Starships** are one architecture told in two dialects.  
+3. **ancient knowledge and Starships** are one architecture told in two dialects.  
 4. **Dust is a teacher.** Fail on Earth first.  
 5. **Barra-tech** is pride in repairable, honest machines.  
 6. **Fire-circle before press release** when land and story are touched.  
