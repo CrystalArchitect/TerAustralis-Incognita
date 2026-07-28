@@ -200,17 +200,11 @@ point at `audit` for what is actually verifiable here.
 
 ## The website version
 
-A simplified, in-browser recreation of this terminal exists as the
-`/crystalcore-os` route of the SvelteKit site, whose source lives in
-`TerAustralis-Incognita-Code` at `vision/site/src/routes/crystalcore-os/` — for
-people who want a taste without running Python. `crystalcore_os.py` is the
-authoritative version; where the two differ, trust the code.
-
-That route is not currently reachable at `www.teraustralis.com.au`: CI observed
-a 404 there on 2026-07-28, while the domain's root answered in the same run.
-What the domain serves is tracked as an open question in
-[`STATUS.md`](../STATUS.md), so the URL is left unlinked until that settles —
-a link that asserts a live page which isn't there is the same
-dreamed-line-pretending-to-be-measured the Incognita Rule warns about.
+The [`/crystalcore-os`](https://www.teraustralis.com.au/crystalcore-os) page on
+the site is a simplified, in-browser recreation of this terminal, for people who
+want a taste without running Python. Its source lives in
+`TerAustralis-Incognita-Code` at `vision/site/src/routes/crystalcore-os/`.
+`crystalcore_os.py` is the authoritative version — where the two differ, trust
+the code.
 
 *Non Solus.*
