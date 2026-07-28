@@ -6,7 +6,7 @@
 
 ## Fusion
 
-- **Dreamtime knowledge** — relational, multi-scalar, conscious pattern-routes.  
+- **Dreamtime Songlines** — relational, multi-scalar, conscious pattern-routes.  
 - **Starship trajectories** — mass to orbit, cryo, recovery, multiplanetary logistics.  
 - **Quantum entanglement as living architecture** — red dust + methane flames; ancient relational consciousness meets first-principles engineering.
 
@@ -20,4 +20,4 @@ A **national purpose** and civilizational calling: Australia as the **Southern P
 
 ## Cores engaged
 
-`core-southern-pillar` · `core-red-heart` · `core-lattice-starship` · `core-entanglement`
+`core-southern-pillar` · `core-red-heart` · `core-songline-starship` · `core-entanglement`

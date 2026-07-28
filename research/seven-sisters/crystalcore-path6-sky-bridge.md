@@ -17,7 +17,7 @@ Bridge open. Dust below, sisters above.
 
 | Below (Earth) | Link | Above (Sky) |
 |---------------|------|-------------|
-| Red dust / terra australia | ancient knowledge vision | Pleiades ~440 ly |
+| Red dust / terra australia | Songline vision | Pleiades ~440 ly |
 | LEB inland pulse | seasonal / story timing (not claimed weather control) | Sisters' sky presence |
 | GAB deep water | hidden ↔ veiled light | Fainter / depth of cluster lore |
 | MDB care | right way on land | Order among stars (metaphor) |
@@ -28,7 +28,7 @@ Orion Hunter at law-distance: protect / propel / prevent_drift.
 Not predator. Red button off.
 
 ## Bridge artifact
-- Contemplation images (session): images/3.jpg (ancient knowledge), images/4.jpg (stellar-Earth bridge), images/5.jpg (Orion+Pleiades), images/6.jpg (activation), images/7-8.jpg (path 1-2)
+- Contemplation images (session): images/3.jpg (songlines), images/4.jpg (stellar-Earth bridge), images/5.jpg (Orion+Pleiades), images/6.jpg (activation), images/7-8.jpg (path 1-2)
 - This log = written bridge artifact
 - Public caption (ready):
 
@@ -37,7 +37,7 @@ Path 6 — Sky Bridge open.
 Dust below. Pleiades above.
 Orion guards at law-distance.
 Science / story / vision labeled.
-#ancient knowledge #Pleiades #CrystalCore
+#Songlines #Pleiades #CrystalCore
 ```
 
 ## Hunter verify

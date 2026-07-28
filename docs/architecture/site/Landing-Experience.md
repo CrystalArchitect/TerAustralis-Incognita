@@ -96,7 +96,7 @@ Already on disk in `vision/site/src/app.css`, kept as canon:
 - **MarsBase DownUnder** (named in the mission brief's Explore list)
   appears nowhere in the six repositories — a dreamed line, not yet
   surveyed. It gets no homepage link until something exists to link.
-- **ancient knowledge** are honoured as cultural image in the mythos and are
+- **Songlines** are honoured as cultural image in the mythos and are
   not a navigation item or feature name (`mythos/NAMES.md`).
 - **Lumina's CTA** leads to the Lumina page and its run-it-yourself
   instructions. There is no hosted chat, so the page must not imply

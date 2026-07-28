@@ -243,9 +243,9 @@ Three meanings appear in `STARLINE.md` vs. `STARLINE-WEAVE-PROTOCOL.md`.
 **Tier 2 recommendation:** Disambiguate the way ADR-0004 disambiguated "CrystalCore" — write a taxonomy ADR for "Starline," lock the meanings, prevent future proliferation.
 
 **Candidates for renaming (to clarify, not change meaning):**
-- **Meaning A:** "Consent Transport" or "LatticeTransport" (already has clear module names)
+- **Meaning A:** "Consent Transport" or "SonglineTransport" (already has clear module names)
 - **Meaning B:** "Starline Weaver" (already distinguished in one document)
-- **Meaning C:** "Lattice Network" (fictional, distinct from protocol names)
+- **Meaning C:** "Songline Network" (fictional, distinct from protocol names)
 
 **Why this matters:** Vocabulary collisions force readers to infer from context, making specifications harder to search and understand.
 

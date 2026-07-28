@@ -48,7 +48,7 @@ Everything in this project carries one of three truth labels:
 | Layer | Meaning |
 |-------|---------|
 | **Science** | Astronomy, hydrology, published geography, running code |
-| **Story** | Dreaming / ancient narratives (honour; no restricted detail) |
+| **Story** | Dreaming / Songline narratives (honour; no restricted detail) |
 | **Vision** | CrystalCore art, mythos, and protocol fiction |
 | **Docs / governance / process** | ADRs, policy, review process, this file — not itself Science/Story/Vision content, but carries its own honesty obligation (a process doc can misdescribe reality same as any other claim) |
 

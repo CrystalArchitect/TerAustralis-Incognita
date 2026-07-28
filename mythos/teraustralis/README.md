@@ -12,7 +12,7 @@ reorganization (`../../docs/adr/ADR-0002.md`).
 
 | Path | Content |
 |------|---------|
-| `mythic-essence.md` | Core name, ancient knowledge × Starship |
+| `mythic-essence.md` | Core name, Songlines × Starship |
 | `publish/` | Op-ed, manifesto, X threads — outward-facing drafts |
 
 The strategic vision (Southern Pillar, Great Filter, jobs) lives in

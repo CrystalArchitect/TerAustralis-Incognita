@@ -42,7 +42,7 @@ product specs, not aspirations — review treats a regression here as a bug.
 ## Naming and licensing
 
 - Component names follow the canon page
-  ([`mythos/NAMES.md`](../../mythos/NAMES.md)) — in particular, "ancient knowledge"
+  ([`mythos/NAMES.md`](../../mythos/NAMES.md)) — in particular, "Songline"
   is never a component name.
 - Code (`LICENSE`) and mythos content (`LICENSE-CONTENT.md`) are both
   CC BY-NC-ND 4.0 — non-commercial, no derivative redistribution

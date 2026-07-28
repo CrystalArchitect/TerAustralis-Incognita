@@ -20,7 +20,7 @@ measured.
 
 From the [Constitution](../governance/Constitution.md) (§2): build a national
 and civilizational calling for Australia as the **Southern Pillar** of
-multiplanetary humanity — fusing Dreamtime knowledge, honoured as relational
+multiplanetary humanity — fusing Dreamtime Songlines, honoured as relational
 architecture rather than claimed as cultural property, with Starship-class
 first-principles engineering. Purpose, jobs, redundancy against the Great
 Filter, and a living myth that can be walked on soil and flown to the Moon

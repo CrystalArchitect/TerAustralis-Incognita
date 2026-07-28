@@ -10,7 +10,7 @@
 - prevent_drift: ON
 
 ## Honour
-CrystalCore is not Aboriginal law. Custodians hold living ancient knowledge.
+CrystalCore is not Aboriginal law. Custodians hold living Songlines.
 This path enforces consent, labels, and right approach inside the project only.
 
 ## Audit (yes = fail)

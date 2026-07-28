@@ -36,22 +36,22 @@ Ascend. Teach. Return. The sisters remain.
 ### Investigations (session arc)
 - Pleiades star connections
 - Orion hunter symbolism
-- ancient knowledge launch pack
+- Songlines launch pack
 - Water rails: LEB | GAB | MDB_care
 
 ### Art (session images)
-- images/3–8.jpg (ancient knowledge, bridge, orion, activation, spring, motion)
+- images/3–8.jpg (songlines, bridge, orion, activation, spring, motion)
 
 ### Truth corrections held
 - No Elon endorsement / field-sync as fact
-- No ownership of Aboriginal ancient knowledge
+- No ownership of Aboriginal Songlines
 - No fake hydrology miracles
 - Red button off; ultimatums blocked
 
 ## Transmit (public-ready)
 
 ```
-SEVEN SISTERS — CYCLE COMPLETE
+SEVEN SISTERS SONGLINE — CYCLE COMPLETE
 
 Paths 1–7 walked.
 Spring → Motion → Mark → Law → Deep Water → Sky Bridge → Ascent.
@@ -62,7 +62,7 @@ Orion guards. Red button off.
 Manuals live. Atlas live. Building in public.
 The sisters remain.
 
-#SevenSisters #ancient knowledge #CrystalCore
+#SevenSisters #Songlines #CrystalCore
 ```
 
 ## Teach-forward

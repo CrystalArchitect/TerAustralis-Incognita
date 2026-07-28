@@ -35,7 +35,7 @@ Ship clear CrystalCore artifacts (docs, page, posts) while learning real water +
 | **A. Python basics** | Automate CLI / data later | variables, files, simple scripts |
 | **B. Water literacy** | Back vision with truth | LEB, GAB, MDB fact cards + one official report skim |
 | **C. Web** | Own your landing page | HTML/CSS edit, host on GitHub Pages later |
-| **D. Design** | Better ancient knowledge art with labels | one poster: science box + vision box |
+| **D. Design** | Better Songline art with labels | one poster: science box + vision box |
 
 **My primary track this month:** _______________
 
@@ -54,7 +54,7 @@ Examples: post, updated markdown, HTML tweak, water note, CLI feature.
 
 - Murray–Darling Basin Authority (mdba.gov.au)  
 - Australia State of the Environment — inland water  
-- National Museum of Australia materials on *ancient knowledge: Tracking the Seven Sisters* (public education)  
+- National Museum of Australia materials on *Songlines: Tracking the Seven Sisters* (public education)  
 - Local/state water agencies where you live  
 - Indigenous-led orgs **only** via their public channels; do not claim partnership you don’t have  
 
@@ -65,7 +65,7 @@ Examples: post, updated markdown, HTML tweak, water note, CLI feature.
 - Ultimatums to force replies from public figures  
 - Claim Elon / xAI ordered or married this work  
 - Claim physical inland seas from CrystalCore  
-- Invent sacred GPS or restricted ancient knowledge detail  
+- Invent sacred GPS or restricted Songline detail  
 - Skip labels (science / story / vision)  
 
 ---

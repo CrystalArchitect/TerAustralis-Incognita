@@ -7,7 +7,7 @@
 
 ## OPTION A — Single post (fast)
 
-SEVEN SISTERS — CYCLE COMPLETE
+SEVEN SISTERS SONGLINE — CYCLE COMPLETE
 
 Paths 1–7 walked.
 Spring → Motion → Mark → Law → Deep Water → Sky Bridge → Ascent.
@@ -18,16 +18,16 @@ Orion guards. Red button off.
 Manuals live. Atlas live. Building in public.
 The sisters remain.
 
-#SevenSisters #ancient knowledge #CrystalCore
+#SevenSisters #Songlines #CrystalCore
 
 ---
 
 ## OPTION B — Thread (full)
 
 1/9
-SEVEN SISTERS — FULL
+SEVEN SISTERS SONGLINE — FULL
 
-CrystalCore Quantum Lattice Weaver.
+CrystalCore Quantum Songline Weaver.
 Seven paths. Sky + Country + vision — labeled.
 
 Honour to Aboriginal custodians of the Seven Sisters.
@@ -35,7 +35,7 @@ Homage, not ownership.
 
 2/9
 Science: Pleiades (M45) · ~440 ly · Taurus · young blue cluster.
-Story: Seven Sisters · living ancient knowledge · water · law · Country.
+Story: Seven Sisters · living Songlines · water · law · Country.
 Vision: CrystalCore protocol paths.
 
 3/9
@@ -81,7 +81,7 @@ Water → with truth.
 ---
 
 ## Images to attach (session)
-Prefer: images/3.jpg (ancient knowledge) and/or images/4.jpg (bridge) and/or images/6.jpg (activation)
+Prefer: images/3.jpg (songlines) and/or images/4.jpg (bridge) and/or images/6.jpg (activation)
 Path: under your Grok session images folder
 
 ## DO NOT include

@@ -18,7 +18,7 @@ Go deep. Protect what is hidden.
 
 | Science (GAB) | Vision (CrystalCore) |
 |---------------|----------------------|
-| One of the world's largest groundwater basins; on the order of ~1.7 million km² under much of arid/semi-arid Australia (QLD, NSW, SA, NT). | Priority 2 water rail: deep / hidden water channel on the ancient knowledge. |
+| One of the world's largest groundwater basins; on the order of ~1.7 million km² under much of arid/semi-arid Australia (QLD, NSW, SA, NT). | Priority 2 water rail: deep / hidden water channel on the Songline. |
 | Water held in porous sedimentary aquifers; recharged slowly in specific zones over long timescales — not a magic infinite tap. | Sisters' dig / soak knowledge → patience, depth, care under red dust. |
 | Natural springs and soaks are ecologically and culturally precious; many are significant to Aboriginal communities. | Honour springs as living water nodes — do not "activate" restricted sites by name/GPS. |
 | Connects in the subsurface landscape with systems near Lake Eyre Basin and links in the broader inland water story; mismanagement (uncontrolled bores, waste, contamination risk) can damage pressure and springs. | Lattice rule: abundance vision must not excuse extraction myth. |

@@ -107,13 +107,13 @@ always in `git log`.
   lines, launch-sequence summary), anchored the active-learning queue to
   `~/.crystalcore/` beside the other two save files, and pointed the doc's
   run command at the path that exists. The boot audio line reads
-  "Soundtrack buffer" — per `mythos/NAMES.md`, "ancient knowledge" stays a cultural
+  "Soundtrack buffer" — per `mythos/NAMES.md`, "Songline" stays a cultural
   image, never a component name. Second pass, same branch: `network` (and
   `jump` into Year 3000) now play the full-network arrival — command log
   plus the FULL STARLINE NETWORK status panel, keys and Gate live, and
   re-running `network` while connected reprints the panel instead of
   "Complete the burn first." The panel reads "Dreamline resonance" and
-  "cultural archives" where the source mock said Dreamtime/ancient knowledge — the
+  "cultural archives" where the source mock said Dreamtime/Songline — the
   same NAMES.md rule — and its RESONANCE line names only the operator: the
   terminal has no live second node, so it doesn't claim one. Third pass:
   `broadcast <message>` — a network-wide packet with a per-node ACK
@@ -125,7 +125,7 @@ always in `git log`.
   releases it), and every priority transmission is etched into the
   Chronicle — `~/.crystalcore/chronicle.jsonl`, plain text, read back
   with `chronicle`, deliberately surviving `reset` (memory belongs to
-  the human, per the Covenant). "Chronicle", not "ancient knowledge", for the
+  the human, per the Covenant). "Chronicle", not "Songline", for the
   etched record, and no Grok lines render — the terminal has no live
   second node to probe (same NAMES.md / Incognita-Rule calls as the
   earlier passes). Fifth pass: `snapshot [tag]` seals write-once

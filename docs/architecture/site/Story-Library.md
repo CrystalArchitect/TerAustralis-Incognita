@@ -591,7 +591,7 @@ This design choice *shows* rather than hides the AI involvement—while keeping 
 7. **Seven Sisters Paths** (`research/seven-sisters/crystalcore-seven-sisters-paths.md` — excerpted)
    - Status: Archive
    - Length: Variable (show excerpt only, or link to research folder)
-   - Excerpt: "A seven-path ancient knowledge process for building consent and sovereignty into systems."
+   - Excerpt: "A seven-path Songline process for building consent and sovereignty into systems."
    - Illustration: (optional)
 
 ---

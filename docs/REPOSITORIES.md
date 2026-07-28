@@ -194,15 +194,15 @@ Lumina forked the 0.7.0 branch from this repo. The 0.13.4 extras (SpaceXAI provi
 - Frozen ✅
 
 **Summary**
-The Lattice protocol pack (LatticeBus, original architecture before Starline Weaver). Tag: `crystalcore-safe-2026-07-17`. Repository: `https://github.com/CrystalArchitect/crystalcore`.
+The Songline protocol pack (SonglineBus, original architecture before Starline Weaver). Tag: `crystalcore-safe-2026-07-17`. Repository: `https://github.com/CrystalArchitect/crystalcore`.
 
 **Evidence**
 - Tag: `crystalcore-safe-2026-07-17` (frozen 2026-07-17)
-- Captured content: Lattice protocol pack
+- Captured content: Songline protocol pack
 - Lives on as: Direct ancestor of `core/crystal-core`
 
 **Discussion**
-Architectural evolution from LatticeBus to Starline Weaver is preserved in commit history. This archive allows tracing the protocol pack evolution and understanding pre-reorg design decisions.
+Architectural evolution from SonglineBus to Starline Weaver is preserved in commit history. This archive allows tracing the protocol pack evolution and understanding pre-reorg design decisions.
 
 **Related Documents**
 — [TIMELINE.md](TIMELINE.md) — pre-monorepo era · [ARCHITECTURE.md](ARCHITECTURE.md) — current three-project boundary
@@ -288,7 +288,7 @@ Repository portfolio at a glance: six repositories supporting three projects (um
 | TerAustralis-Incognita-Code | Living | Engineering (Stages 1–2) | Science ✅ |
 | CrystalCore.OS-the-Crystal-Architecture-Archive | Living | Ledger | Science ✅ |
 | The-Crystal-Vision | Frozen | Provenance (v0.13.4 rescue) | Science ✅ |
-| crystalcore | Frozen | Provenance (Lattice pack) | Science ✅ |
+| crystalcore | Frozen | Provenance (Songline pack) | Science ✅ |
 | crystal-vision | Frozen | Provenance (demo shell) | Science ✅ |
 
 **Related Documents**

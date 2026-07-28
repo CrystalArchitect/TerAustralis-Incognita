@@ -48,7 +48,7 @@ All four repos are checkpointed at tag `-safe-2026-07-17` to preserve pre-reorg 
 | Repo | Focus | State | Lives on as |
 |---|---|---|---|
 | `The-Crystal-Vision` | Codex site + Clementine companion; holds complete crystalcore v0.13.4 bytecode | Frozen ✅ | Ancestor of Lumina's embedded Framework (0.7.0 fork line; 0.13.4 extras unreconciled) |
-| `crystalcore` | Lattice protocol pack | Frozen ✅ | Direct ancestor of core/crystal-core (LatticeBus → Starline Weaver evolution) |
+| `crystalcore` | Songline protocol pack | Frozen ✅ | Direct ancestor of core/crystal-core (SonglineBus → Starline Weaver evolution) |
 | `crystal-vision` | Static demo shell (Grok build) | Frozen ✅ | Direct ancestor of vision/apps/crystal-interface |
 | (Fourth repo) | TerAustralis-Incognita umbrella | Frozen ✅ | Evolved into current living umbrella repo |
 

@@ -114,7 +114,7 @@ ancestors of the `-Code` tree:
 | Repository | Was | Lives on as |
 |---|---|---|
 | `The-Crystal-Vision` (tag `vision-safe-2026-07-17`) | Codex site + Clementine companion; holds the complete **crystalcore v0.13.4 bytecode rescue** and the laptop snapshot | Ancestor of Lumina's embedded framework (which forked the earlier 0.7.0 line — see open decisions) |
-| `crystalcore` (tag `crystalcore-safe-2026-07-17`) | The Lattice protocol pack | Direct ancestor of `core/crystal-core` (LatticeBus → Starline Weaver) |
+| `crystalcore` (tag `crystalcore-safe-2026-07-17`) | The Songline protocol pack | Direct ancestor of `core/crystal-core` (SonglineBus → Starline Weaver) |
 | `crystal-vision` | Static demo shell (Grok build) | Direct ancestor of `vision/apps/crystal-interface` |
 
 **How canon reaches the public site** — the one cross-repo pipeline:
