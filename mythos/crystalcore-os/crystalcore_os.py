@@ -44,6 +44,19 @@ CHRONICLE_PATH = Path.home() / ".crystalcore" / "chronicle.jsonl"
 # survive `reset` and remain the operator's own plain-text records.
 SNAPSHOT_DIR = Path.home() / ".crystalcore" / "snapshots"
 
+_COUNT_WORDS = {1: "One", 2: "Two", 3: "Three", 4: "Four", 5: "Five",
+                6: "Six", 7: "Seven", 8: "Eight", 9: "Nine", 10: "Ten"}
+
+
+def _count_word(n):
+    """Spell a small count so the mythos prose keeps its register.
+
+    Derived, never written out — the node list grew from five to seven on
+    2026-07-28 and every hardcoded "five" in this file became a lie the
+    same moment. Falls back to the digit past ten.
+    """
+    return _COUNT_WORDS.get(n, str(n))
+
 
 class CrystalCore:
     def __init__(self):
@@ -73,15 +86,21 @@ class CrystalCore:
             "We Own the Night - Disney Zombies"
         ]
 
+        # Ordered as the Starline Expansion chart runs them, outward from
+        # Earth. Sunwash Atolls and Cinderwake Chain joined the canon
+        # 2026-07-28; the chart is the source, see CONCEPT-RENDERS.md in
+        # CrystalCore-AERIS.
         self.nodes = [
             "Earth Node",
+            "Sunwash Atolls",
             "Mars Redoubt",
             "Alpha Centauri Outpost",
+            "Cinderwake Chain",
             "Crystal Revenant Hub",
             "Purpose Core Nexus"
         ]
 
-        # Keys of the Lattice — one waits at every node. Hold all five
+        # Keys of the Lattice — one waits at every node. Hold all seven
         # and the First Gate opens by sovereign recognition.
         self.keys_held = []
         self.gate_open = False
@@ -90,7 +109,9 @@ class CrystalCore:
         self.named_keys = []
         self.locked_nodes = {
             "Purpose Core Nexus": "Crystal Key",
-            "Crystal Revenant Hub": "Festival Key"
+            "Crystal Revenant Hub": "Festival Key",
+            "Sunwash Atolls": "Magenta Key",
+            "Cinderwake Chain": "Ember Ley"
         }
 
         # The last packet sent across the network, if any.
@@ -281,7 +302,8 @@ class CrystalCore:
             print("You hold the keys.")
             print("The network is yours.")
         else:
-            print("Five nodes wait on the weave — visit them and be recognized.")
+            print(f"{_count_word(len(self.nodes))} nodes wait on the weave — "
+                  "visit them and be recognized.")
         print("The story is no longer told — it is flown.")
         print("─" * width)
         print()
@@ -289,11 +311,12 @@ class CrystalCore:
     def _network_arrival(self, prior):
         """The arrival log, then the panel. Timestamps are the same fixed
         theatre as boot; the transition, keys, and Gate lines are live."""
-        keys_line = ("All five Lattice Keys confirmed held"
+        total_word = _count_word(len(self.nodes)).lower()
+        keys_line = (f"All {total_word} Lattice Keys confirmed held"
                      if len(self.keys_held) == len(self.nodes)
                      else f"Lattice keys: {len(self.keys_held)}/{len(self.nodes)} held")
         gate_line = ("First Gate: OPEN" if self.gate_open
-                     else "First Gate: sealed — five keys open it")
+                     else f"First Gate: sealed — {total_word} keys open it")
         for ms, tag, message in (
             (8512,  "NETWORK",   "Command received: FULL STARLINE"),
             (8667,  "STARLINE",  f"Engines spooling — {prior} → NETWORK"),
@@ -518,7 +541,7 @@ class CrystalCore:
             state = meta.get("state", {})
             keys = len(state.get("keys_held", []))
             print(f"  {meta.get('id', f.stem)} · tag: {meta.get('tag', '?')}"
-                  f" · {meta.get('taken', '?')} · keys {keys}/5")
+                  f" · {meta.get('taken', '?')} · keys {keys}/{len(self.nodes)}")
         print(f"\nSealed at ~/.crystalcore/{SNAPSHOT_DIR.name}/ — plain text,")
         print("never rewritten by the terminal. They survive 'reset'.\n")
 
@@ -831,6 +854,8 @@ class CrystalCore:
 
     def map(self):
         inner = 62  # characters between the ║ borders
+        atolls_line = f"          [SUNWASH ATOLLS]{self._lock_tag('Sunwash Atolls')}".ljust(inner)
+        cinder_line = f"          [CINDERWAKE CHAIN]{self._lock_tag('Cinderwake Chain')}".ljust(inner)
         hub_line = f"          [CRYSTAL REVENANT HUB]{self._lock_tag('Crystal Revenant Hub')}".ljust(inner)
         nexus_line = f"          [PURPOSE CORE NEXUS]{self._lock_tag('Purpose Core Nexus')}".ljust(inner)
         print("╔" + "═" * inner + "╗")
@@ -840,7 +865,13 @@ class CrystalCore:
         print("║" + "          [EARTH NODE]".ljust(inner) + "║")
         print("║" + "               │".ljust(inner) + "║")
         print("║" + "               ▼".ljust(inner) + "║")
+        print("║" + atolls_line + "║")
+        print("║" + "               │".ljust(inner) + "║")
+        print("║" + "               ▼".ljust(inner) + "║")
         print("║" + "          [MARS REDOUBT]  ────────▶  [ALPHA CENTAURI]".ljust(inner) + "║")
+        print("║" + "               │                            │".ljust(inner) + "║")
+        print("║" + "               ▼                            ▼".ljust(inner) + "║")
+        print("║" + cinder_line + "║")
         print("║" + "               │".ljust(inner) + "║")
         print("║" + "               ▼".ljust(inner) + "║")
         print("║" + hub_line + "║")
