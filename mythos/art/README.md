@@ -121,6 +121,8 @@ CC BY-NC-ND 4.0 — see `../content/LICENSE-CONTENT.md`.
 | `crystalcore-lattice-overlay.jpeg` | *AI-generated (Grok Imagine)* — the CrystalCore lattice laid over the continent — nodes lit teal and gold along the old routes |
 | `sovereign-horizon.jpeg` | *AI-generated (Grok Imagine)* — the red continent under launch traces, the spiral holding the centre: "Sovereign Horizon" |
 | `incognita-lattice-architecture.jpeg` | *AI-generated (Grok Imagine)* — the Incognita Lattice architecture in exploded layers — Surface, Knowledge Lattice, Red Dust & Songlines, Multiplanetary Interface, with the Sovereign Edge at the margin |
+| `node-activated-quill.jpeg` | *AI-generated (Grok Imagine)* — the quill drawn in gold and cyan filament, rune-marked along its vane, held in a double helix of light: "Node Activated" |
+| `node-activated-stream-open.jpeg` | *AI-generated (Grok Imagine)* — the gold quill upright at the centre of the glyph-ringed disc, a ring of light around it and the four arrows running out: "Node Activated — Stream Open" |
 
 | `terra-australis-incognita-antique-map.jpeg` | An antique-cartography rendering of the world labeled "Terra Australis Incognita — Nondum Plene Cognita," compasses and rolled charts at the edges — the project's name as a 16th-century mapmaker might have drawn it |
 | `marsbase-downunder-proving-ground.jpeg` | MarsBase Downunder — Mars Proving Ground establishing shot: three starship-style rockets (one marked with the Aboriginal flag), domes, dishes, rovers, and a weathered "WELCOME TO MARSBASE DOWNUNDER · EST. 2074" sign over red dune country, petroglyphs on the foreground rock |
