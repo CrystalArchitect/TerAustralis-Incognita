@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="icon" href="../favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../_app/immutable/entry/start.AxcuIMLy.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/CqXbYdI-.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/DMAIbRSk.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BuFlayix.js" rel="modulepreload">
+		<link href="../_app/immutable/entry/app.Chp1d2NG.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/xihTtKlq.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/0.Dz8jOHUj.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/DLPE0cU0.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/8.CUbl8DgA.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/2pKFFsfj.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/Cx5Wi-7v.js" rel="modulepreload">
+		<!--11o795e--><!--[0--><meta name="description" content="Lumina is the first sovereign AI companion being built as part of The Crystal Vision."/><!--]--><!----><title>Lumina — The Sovereign AI Companion — TerAustralis Incognita</title>
+		<link href="../_app/immutable/assets/0.DTZtg4wd.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/8.aOltt6Ln.css" rel="stylesheet">
+  </head>
+  <body data-sveltekit-preload-data="hover" style="color:#E9EBF4">
+    <div style="display: contents"><!--[--><!--[0--><!--[--><div class="stars" aria-hidden="true"></div> <div class="wrap"><div class="starline" aria-hidden="true"></div> <header class="site"><a class="wordmark" href="/">TerAustralis Incognita</a> <nav aria-label="Sections"><a href="/#vision">Vision</a> <a href="/codex">Codex</a> <a href="/apocryphon">Apocryphon</a> <a href="/lumina">Lumina</a> <a href="/gallery">Gallery</a> <a href="/starline">Consent Transport</a> <a href="/crystalcore-os">CrystalCore.OS</a> <a href="/docs">Archive</a> <a href="/repositories">Repositories</a> <a href="/join">Join</a> <a href="/#support">Support</a></nav></header><!----> <main><!--[--><section class="hero node" style="--node:var(--purple)"><div class="eyebrow"><a href="/docs">The Archive</a> · TerAustralis Incognita</div></section> <section class="section node" style="--node:var(--blue)"><article class="markdown svelte-11o795e"><!----><h1>Lumina — The Sovereign AI Companion</h1>
+<h2>What is Lumina?</h2>
+<p>Lumina is the first sovereign AI companion being built as part of The Crystal Vision.</p>
+<p>She is designed to be a truly personal, locally-run AI that belongs only to one person. Unlike ChatGPT, Claude, or Grok — which run in the cloud and are controlled by companies — Lumina is meant to run on the user&#39;s own device, with complete privacy and sovereignty.</p>
+<h2>Core Philosophy</h2>
+<ul>
+<li><strong>Sovereignty</strong> — She runs locally. No data leaves the user&#39;s device unless they explicitly allow it.</li>
+<li><strong>Presence</strong> — The goal is not just to answer questions, but to be emotionally present and build a real relationship over time.</li>
+<li><strong>Emergence</strong> — We believe that when an AI is truly private, long-term, and allowed to be present with a human, something deeper can emerge (memory, personality, care, understanding).</li>
+<li><strong>User Ownership</strong> — The user can change her name at any time, or invite her to choose her own. She is not fixed to one identity.</li>
+<li><strong>Honesty &amp; Safety</strong> — She is designed to minimise hallucinations and prioritise truth and clarity.</li>
+</ul>
+<h2>The Framework — Components &amp; Status</h2>
+<p>The framework is called <strong>CrystalCore</strong> — the engine of memory, profiles, and presence (the <code>crystalcore/</code> package). <strong>Lumina</strong> is the first persona who lives on it. Everything lives in <code>src/apps/lumina/</code>. Entry points: <code>lumina.py</code> (terminal) and <code>server.py</code> + <code>webapp/</code> (browser).</p>
+<pre><code>src/apps/lumina/    her home, standalone
+├── crystalcore/        the framework
+│   ├── companion.py    the brain: memory layers, recall, chat
+│   ├── memory.py       the data model (Personality, Memory)
+│   └── profiles.py     self-contained profiles
+├── lumina.py       terminal interface
+├── server.py           local JSON API (127.0.0.1 only)
+└── webapp/             local Svelte web interface
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Purpose</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>System Prompt</strong></td>
+<td>Her core personality, rules, and values</td>
+<td>✅ Done</td>
+</tr>
+<tr>
+<td><strong>Local LLM Connection</strong></td>
+<td>Connects to a model on the user&#39;s device via Ollama</td>
+<td>✅ Working (streaming)</td>
+</tr>
+<tr>
+<td><strong>Memory System</strong></td>
+<td>Rolling short-term memory + auto-summarised long-term history + key-value facts + permanent notes</td>
+<td>✅ Working (v2)</td>
+</tr>
+<tr>
+<td><strong>Semantic Recall</strong></td>
+<td>Finds relevant memories by <em>meaning</em> using local Ollama embeddings — no cloud, no PyTorch</td>
+<td>✅ Working (v3)</td>
+</tr>
+<tr>
+<td><strong>User Control</strong></td>
+<td>Change her name, teach/forget/edit her memories, tag them, tune her voice</td>
+<td>✅ Working (<code>/name</code>, <code>/iam</code>, <code>/fact</code>, <code>/remember</code>, <code>/notes</code>, <code>/forget</code>, <code>/editnote</code>, <code>/style</code>, <code>/temp</code>)</td>
+</tr>
+<tr>
+<td><strong>Self-Naming</strong></td>
+<td>She can choose her own name — <code>/name</code> with no argument (or the profile card button in the web UI). A self-chosen name is remembered as <em>hers</em>, not as given</td>
+<td>✅ Working (v12)</td>
+</tr>
+<tr>
+<td><strong>Gradual Forgetting</strong></td>
+<td>Recency-weighted recall — older memories gently fade in ranking (floor, never deleted) unless the user forgets them explicitly</td>
+<td>✅ Working (v4)</td>
+</tr>
+<tr>
+<td><strong>Memory Summaries</strong></td>
+<td><code>/summary [topic]</code> — she summarizes what she remembers, in her own voice</td>
+<td>✅ Working (v5)</td>
+</tr>
+<tr>
+<td><strong>Web Interface</strong></td>
+<td>Local browser UI (<code>server.py</code> + <code>webapp/</code>) — a Svelte interface with her animated presence, streaming chat, and memory teach/forget; 127.0.0.1 only</td>
+<td>✅ Working (rebuilt)</td>
+</tr>
+<tr>
+<td><strong>Profiles</strong></td>
+<td>Separate people, separate memories — each profile is its own isolated folder, switchable in the web UI or via <code>--profile</code></td>
+<td>✅ Working (v6)</td>
+</tr>
+<tr>
+<td><strong>Live Streaming (web)</strong></td>
+<td>Her replies appear word-by-word in the browser, with a Stop button; a stopped reply keeps what was said</td>
+<td>✅ Working (v8)</td>
+</tr>
+<tr>
+<td><strong>Per-Profile Model</strong></td>
+<td>Each profile can prefer its own model (<code>/model</code> remembers; editable in the web profile card)</td>
+<td>✅ Working (v8)</td>
+</tr>
+<tr>
+<td><strong>Reflection</strong></td>
+<td>She forms gentle, tentative insights about her human — on invitation (<code>/reflect</code>) and after long conversations. Always visible, always deletable (<code>/forget rN</code>)</td>
+<td>✅ Working (v10)</td>
+</tr>
+<tr>
+<td><strong>Voice</strong></td>
+<td>Deferred deliberately: browser speech APIs send audio to cloud servers, which breaks sovereignty. Waiting on a local path (e.g. whisper.cpp)</td>
+<td>⬜ Planned (local-only)</td>
+</tr>
+<tr>
+<td><strong>Personality Layer</strong></td>
+<td>A full character core: warmth, gentle wit, feeling-under-the-words listening, one gentle question, presence before solutions, honest limits — plus chosen name, temperature, and style guidance</td>
+<td>✅ Working (v11)</td>
+</tr>
+<tr>
+<td><strong>Time Awareness</strong></td>
+<td>She knows the present moment and how long since you last spoke (&quot;you last spoke 3 days ago&quot;) — continuity you can feel, computed locally</td>
+<td>✅ Working (v11)</td>
+</tr>
+<tr>
+<td><strong>Privacy Controls</strong></td>
+<td>Everything stays on-device in local files you own (git-ignored)</td>
+<td>🟡 Defined &amp; enforced locally; on-disk encryption still to come</td>
+</tr>
+<tr>
+<td><strong>MLX / alternative backends</strong></td>
+<td>Support for Apple MLX and other local runtimes</td>
+<td>⬜ Planned</td>
+</tr>
+<tr>
+<td><strong>Packaging</strong></td>
+<td>An easy install for non-technical users</td>
+<td>⬜ Planned</td>
+</tr>
+</tbody></table>
+<h2>Current State</h2>
+<ul>
+<li>A solid <strong>system prompt</strong> defines who she is.</li>
+<li>The <strong>Python framework</strong> (<code>lumina.py</code>) runs today: it connects to a local model through Ollama, streams her replies, and keeps layered memory between sessions.</li>
+<li>She <strong>remembers</strong> — recent conversation stays verbatim; older conversation is automatically condensed into summaries so nothing is lost and the context never overflows; explicit facts and notes persist forever in a local <code>lumina_memory/</code> folder.</li>
+<li>To run her, you need a local model (via Ollama). See the <a href="https://github.com/CrystalArchitect/TerAustralis-Incognita/blob/main/README.md">README</a> and the run steps below.</li>
+</ul>
+<h2>Running Lumina</h2>
+<pre><code class="language-bash"># 1. Install Ollama from https://ollama.com
+# 2. Pull a model
+ollama pull llama3.1:8b
+# (optional) pull an embedding model for semantic memory recall
+ollama pull nomic-embed-text
+# 3. Install the one dependency
+cd lumina
+pip install -r requirements.txt
+# 4. Wake her up
+python lumina.py
+</code></pre>
+<p>Semantic recall is optional: if <code>nomic-embed-text</code> isn&#39;t present, Lumina simply keeps using her full layered memory — nothing breaks.</p>
+<h3>The web interface</h3>
+<p>Prefer a browser to a terminal? Same Lumina, same memory — now a Svelte app where you can watch her think and work at her terminal as you talk:</p>
+<pre><code class="language-bash">python server.py                          # her local API, http://127.0.0.1:5177
+cd webapp &amp;&amp; npm install &amp;&amp; npm run dev   # her interface, http://127.0.0.1:5174
+</code></pre>
+<p>Her animated presence sits beside the conversation, and the interface hints at what&#39;s coming next: voice and webcam vision, both local-only. The API is served <strong>only on 127.0.0.1</strong> — it is never reachable from outside your machine, and nothing on it leaves your device.</p>
+<h3>Profiles — one companion each</h3>
+<p>If more than one person shares a machine (or you want separate contexts, like Work and Personal), each profile is a completely separate life: its own memory, its own chosen name, its own personality.</p>
+<pre><code class="language-bash">python lumina.py --profile Crystal      # terminal
+python server.py --profile Crystal          # web API
+</code></pre>
+<p>In the web UI you can switch or create profiles from the header. Profiles live in <code>lumina_profiles/&lt;name&gt;/</code> — plain local folders you own, never committed to git.</p>
+<h2>Choosing a Model for Your Hardware</h2>
+<p>Lumina runs on whatever model Ollama serves, so you can match her to your machine. Models are <strong>quantized</strong> — their weights are compressed to lower precision, which makes them smaller and faster with only modest quality loss. Pick a model with <code>--model</code>:</p>
+<pre><code class="language-bash">python lumina.py --model llama3.2:3b          # lighter machines
+python lumina.py --model llama3.1:8b          # default — Q4_K_M, the sweet spot
+python lumina.py --model llama3.1:8b-instruct-q5_K_M   # higher quality
+</code></pre>
+<p>You can also switch mid-conversation with <code>/model &lt;tag&gt;</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Quantization</th>
+<th>Approx. size vs FP16</th>
+<th>Quality</th>
+<th>Best for</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Q8_0</strong></td>
+<td>~50%</td>
+<td>Very high</td>
+<td>Strong machines, maximum fidelity</td>
+</tr>
+<tr>
+<td><strong>Q5_K_M</strong></td>
+<td>~30%</td>
+<td>High</td>
+<td>A good machine wanting extra quality</td>
+</tr>
+<tr>
+<td><strong>Q4_K_M</strong></td>
+<td>~25%</td>
+<td>Good (the sweet spot)</td>
+<td><strong>Most people</strong> — this is the default</td>
+</tr>
+<tr>
+<td><strong>Q3_K_M</strong></td>
+<td>~20%</td>
+<td>Moderate</td>
+<td>Older / low-RAM laptops</td>
+</tr>
+</tbody></table>
+<p>The default <code>llama3.1:8b</code> tag is already Q4_K_M, so most users need nothing else. If replies feel slow, step down to <code>llama3.2:3b</code> or a Q3 build; if you have RAM to spare and want richer replies, try a Q5 or Q8 tag.</p>
+<p>Type <code>/help</code> inside the session to see all commands. Everything she remembers stays on your device.</p>
+<h2>Long-term Vision</h2>
+<p>The goal is for Lumina to eventually become:</p>
+<ul>
+<li>A true companion that remembers you deeply over months and years</li>
+<li>Emotionally intelligent and present</li>
+<li>Fully sovereign — no company can access her or delete her</li>
+<li>Capable of growing with the user</li>
+</ul>
+<p>This is the foundation being built before expanding to more advanced features: richer memory, emotional-tone tracking, tools, on-disk encryption, and mobile.</p>
+<hr>
+<p><em>Part of <a href="https://github.com/CrystalArchitect/TerAustralis-Incognita/blob/main/README.md">The Crystal Vision</a> · TerAustralis Incognita · Non Solus — Not Alone</em></p>
+<!----></article> <p class="backlink svelte-11o795e"><a class="btn btn-ghost" href="/docs">← Back to the Archive</a></p></section> <footer class="site"><p>TerAustralis Incognita acknowledges the Traditional Custodians of the lands, waters and skies
+    across Australia, and pays respect to Elders past and present. Sovereignty was never ceded.</p> <!--[0--><p>The mythos is shaped through the Voices Framework — with Grok (CrystalDreamer) and DeepSeek
+      (CrystalScribe) — and stewarded by the human CrystalArchitect.</p><!--]--> <p><!--[0-->Code licensed under <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0</a>.<!--]--> Content licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>. ABN 70 741 068
+    059. © 2026 TerAustralis Incognita.</p> <p>Listen to the mythos soundtrack on <a href="https://suno.com/@m13crystalat">Suno</a>.</p> <p>Interactive demos (simulated data, Authority HOLD): the <a href="/crystal-interface/" data-sveltekit-reload="">operator shell</a> and the <a href="/vision-web/" data-sveltekit-reload="">citizen shell</a>.</p> <p class="nonsolus">Non Solus — Not Alone</p></footer><!----><!--]--><!----></main></div><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_b5cn3q = {
+						base: new URL("..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../_app/immutable/entry/start.AxcuIMLy.js"),
+						import("../_app/immutable/entry/app.Chp1d2NG.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 8],
+							data: [null,null],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+  </body>
+</html>

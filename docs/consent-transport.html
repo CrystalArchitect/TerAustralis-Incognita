@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="icon" href="../favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../_app/immutable/entry/start.AxcuIMLy.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/CqXbYdI-.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/DMAIbRSk.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BuFlayix.js" rel="modulepreload">
+		<link href="../_app/immutable/entry/app.Chp1d2NG.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/xihTtKlq.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/0.Dz8jOHUj.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/DLPE0cU0.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/8.CUbl8DgA.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/2pKFFsfj.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/Cx5Wi-7v.js" rel="modulepreload">
+		<!--11o795e--><!--[0--><meta name="description" content="Status: v1 implemented — src/crystal-core/consenttransport/ · python3 -m consenttransport.selftest"/><!--]--><!----><title>Consent Transport — Technical Architecture — TerAustralis Incognita</title>
+		<link href="../_app/immutable/assets/0.DTZtg4wd.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/8.aOltt6Ln.css" rel="stylesheet">
+  </head>
+  <body data-sveltekit-preload-data="hover" style="color:#E9EBF4">
+    <div style="display: contents"><!--[--><!--[0--><!--[--><div class="stars" aria-hidden="true"></div> <div class="wrap"><div class="starline" aria-hidden="true"></div> <header class="site"><a class="wordmark" href="/">TerAustralis Incognita</a> <nav aria-label="Sections"><a href="/#vision">Vision</a> <a href="/codex">Codex</a> <a href="/apocryphon">Apocryphon</a> <a href="/lumina">Lumina</a> <a href="/gallery">Gallery</a> <a href="/starline">Consent Transport</a> <a href="/crystalcore-os">CrystalCore.OS</a> <a href="/docs">Archive</a> <a href="/repositories">Repositories</a> <a href="/join">Join</a> <a href="/#support">Support</a></nav></header><!----> <main><!--[--><section class="hero node" style="--node:var(--purple)"><div class="eyebrow"><a href="/docs">The Archive</a> · TerAustralis Incognita</div></section> <section class="section node" style="--node:var(--blue)"><article class="markdown svelte-11o795e"><!----><h1>Consent Transport — Technical Architecture</h1>
+<p><strong>Status:</strong> v1 implemented — <code>src/crystal-core/consent_transport/</code> · <code>python3 -m consent_transport.selftest</code></p>
+<h2>Purpose</h2>
+<p>Consent Transport is the sovereign communication layer between individually
+locally-running Lumina agents. It lets two companions exchange
+consented memory fragments directly, peer to peer, without routing
+through a central server or surrendering data ownership.</p>
+<p>It is the technical realization of the mythic &quot;Starlines&quot; in <code>mythos/</code> —
+pathways of connection that are consensual, encrypted, and owned by the
+participants, not by a platform between them.</p>
+<h2>Core Design Principles</h2>
+<table>
+<thead>
+<tr>
+<th>Principle</th>
+<th>Description</th>
+<th>Non-negotiable</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Local-first</td>
+<td>All primary data and memory lives on the user&#39;s device</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Sovereignty</td>
+<td>No third party can access, read, or retain another agent&#39;s data</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Consent-based</td>
+<td>No data moves without explicit, revocable permission from the owner</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Encrypted</td>
+<td>All transit is end-to-end encrypted (Noise Protocol)</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Minimal trust</td>
+<td>Agents trust cryptographic identity + explicit consent, never a platform</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Mythic + technical</td>
+<td>The architecture should feel like an extension of Songlines/Starlines</td>
+<td>Preferred</td>
+</tr>
+</tbody></table>
+<h2>v1 Scope Decisions</h2>
+<p>The original draft of this document left three questions open. They&#39;re
+answered here, with the reasoning, because the reasoning matters more
+than the answer for whoever revisits this later:</p>
+<ul>
+<li><strong>Pull-based, not push.</strong> An agent must request fragments and be
+explicitly approved before anything is sent. Push/broadcast would mean
+receiving <em>before</em> consenting to receive — that inverts the consent
+principle. Pull keeps consent strictly ahead of every exchange.</li>
+<li><strong>Strict 1:1, not group/mesh.</strong> Group memory sharing needs real
+group-key management (what protocols like Signal&#39;s MLS exist to
+solve) — that&#39;s a separate, harder problem, not a flag to flip later.
+Ship 1:1, learn from real use, revisit groups deliberately.</li>
+<li><strong>Direct peer-to-peer over Noise, not libp2p or Nostr.</strong> libp2p&#39;s
+mesh/pubsub/NAT-traversal machinery is more surface area than a 1:1
+pull protocol needs. Nostr&#39;s relay model reintroduces a third party in
+the transport path even with encrypted payloads. The Noise Protocol
+Framework (same primitive family WireGuard and Signal&#39;s handshakes use)
+gives mutual authentication and forward secrecy with a two-message
+handshake and nothing else in between.</li>
+</ul>
+<h2>High-Level Architecture</h2>
+<pre><code>┌─────────────────────────────────────────────────────────────┐
+│              Consent Transport Layer (crystal-core)           │
+├─────────────────────────────────────────────────────────────┤
+│  Lumina (local)  ◄── Noise IK, TCP ──►  Other sovereign agent │
+│         │                                          │          │
+│         ▼                                          ▼          │
+│  ┌────────────────────────────────────────────────────────┐  │
+│  │           Local Memory Fragments (per agent)             │  │
+│  │  episodic · semantic · emotional · mythic                │  │
+│  └────────────────────────────────────────────────────────┘  │
+└─────────────────────────────────────────────────────────────┘
+</code></pre>
+<h2>Components (implemented)</h2>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Responsibility</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>identity.py</code></td>
+<td>Ed25519 signing keypair + X25519 DH keypair per agent. Private keys never leave the device; the identity file is gitignored and unrecoverable if lost, by design.</td>
+</tr>
+<tr>
+<td><code>noise.py</code></td>
+<td><code>Noise_IK_25519_ChaChaPoly_SHA256</code> — a literal, from-spec implementation of the Noise Protocol Framework&#39;s <code>IK</code> pattern. No custom crypto: X25519, ChaCha20-Poly1305, and SHA256/HMAC come from <code>cryptography</code> and the stdlib.</td>
+</tr>
+<tr>
+<td><code>peers.py</code></td>
+<td>The local &quot;address book&quot; — paired peers and their public keys. Pairing ≠ consent; these are deliberately separate steps.</td>
+</tr>
+<tr>
+<td><code>consent.py</code></td>
+<td>Signed, timestamped grant/revoke receipts. The most recent receipt for a peer wins; no receipt means no consent — closed by default.</td>
+</tr>
+<tr>
+<td><code>fragment.py</code></td>
+<td>The <code>MemoryFragment</code> — small, typed, signed. Never a bulk memory dump.</td>
+</tr>
+<tr>
+<td><code>protocol.py</code></td>
+<td>Three message types over the Noise-encrypted channel: <code>request</code>, <code>fragments</code>, <code>denied</code>.</td>
+</tr>
+<tr>
+<td><code>transport.py</code></td>
+<td>TCP server/client. Binds <code>127.0.0.1</code> by default. Consent is checked fresh on every connection, so a revoke takes effect on the very next request.</td>
+</tr>
+<tr>
+<td><code>discovery.py</code></td>
+<td>Same-LAN UDP broadcast — announces a public key and port, nothing else. Discovery makes a peer <em>visible</em>; it never auto-pairs and never grants consent.</td>
+</tr>
+<tr>
+<td><code>agent.py</code></td>
+<td><code>StarlineAgent</code> (legacy name preserved for backward compatibility) — the high-level API tying all of the above together.</td>
+</tr>
+</tbody></table>
+<h2>Pairing — how two agents find each other (no third party)</h2>
+<ol>
+<li><strong>Same-LAN</strong>: <code>agent.announce()</code> broadcasts a UDP packet with the
+agent&#39;s public keys and port; <code>agent.discover()</code> on the LAN hears it.
+Either agent then calls <code>agent.pair(announcement)</code> — a human-approved
+step, not automatic.</li>
+<li><strong>Remote / off-LAN</strong>: manual key exchange — one agent shows a QR code
+or the fingerprint/keys as text, the other scans or pastes it into
+<code>agent.pair_manual(...)</code>.</li>
+</ol>
+<p>No rendezvous server, no relay, in either path.</p>
+<h2>Consent &amp; Revocation — the honest limits</h2>
+<p>Every fragment exchange requires the receiving human to have explicitly
+<code>grant()</code>-ed the requesting peer. <code>revoke()</code> takes effect immediately on
+the next request. But revocation has a limit worth stating plainly:
+<strong>it cannot delete a fragment a peer already legitimately received.</strong>
+That fragment is now on their own sovereign device — forcing its
+deletion would violate the same sovereignty principle protecting your
+own data. Revocation means &quot;no more, starting now,&quot; not &quot;undo the past.&quot;</p>
+<!----></article> <p class="backlink svelte-11o795e"><a class="btn btn-ghost" href="/docs">← Back to the Archive</a></p></section> <footer class="site"><p>TerAustralis Incognita acknowledges the Traditional Custodians of the lands, waters and skies
+    across Australia, and pays respect to Elders past and present. Sovereignty was never ceded.</p> <!--[0--><p>The mythos is shaped through the Voices Framework — with Grok (CrystalDreamer) and DeepSeek
+      (CrystalScribe) — and stewarded by the human CrystalArchitect.</p><!--]--> <p><!--[0-->Code licensed under <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0</a>.<!--]--> Content licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>. ABN 70 741 068
+    059. © 2026 TerAustralis Incognita.</p> <p>Listen to the mythos soundtrack on <a href="https://suno.com/@m13crystalat">Suno</a>.</p> <p>Interactive demos (simulated data, Authority HOLD): the <a href="/crystal-interface/" data-sveltekit-reload="">operator shell</a> and the <a href="/vision-web/" data-sveltekit-reload="">citizen shell</a>.</p> <p class="nonsolus">Non Solus — Not Alone</p></footer><!----><!--]--><!----></main></div><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_b5cn3q = {
+						base: new URL("..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../_app/immutable/entry/start.AxcuIMLy.js"),
+						import("../_app/immutable/entry/app.Chp1d2NG.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 8],
+							data: [null,null],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+  </body>
+</html>

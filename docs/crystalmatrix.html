@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="icon" href="../favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../_app/immutable/entry/start.AxcuIMLy.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/CqXbYdI-.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/DMAIbRSk.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BuFlayix.js" rel="modulepreload">
+		<link href="../_app/immutable/entry/app.Chp1d2NG.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/xihTtKlq.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/0.Dz8jOHUj.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/DLPE0cU0.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/8.CUbl8DgA.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/2pKFFsfj.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/Cx5Wi-7v.js" rel="modulepreload">
+		<!--11o795e--><!--[0--><meta name="description" content="Status: design / concept. This document describes the intended shape of the CrystalMatrix — how sovereign companions (like Lumina) could one day discover and communicate with each other in a decentralized way while preserving individual sovereignty and privacy. No implementation exists yet. It is recorded here so the structure behind the vision is visible. See LUMINA.md for the companion that exists today, and ARCHITECTURE.md for the wider system."/><!--]--><!----><title>CrystalMatrix Protocol — Design (Option 1, High Level) — TerAustralis Incognita</title>
+		<link href="../_app/immutable/assets/0.DTZtg4wd.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/8.aOltt6Ln.css" rel="stylesheet">
+  </head>
+  <body data-sveltekit-preload-data="hover" style="color:#E9EBF4">
+    <div style="display: contents"><!--[--><!--[0--><!--[--><div class="stars" aria-hidden="true"></div> <div class="wrap"><div class="starline" aria-hidden="true"></div> <header class="site"><a class="wordmark" href="/">TerAustralis Incognita</a> <nav aria-label="Sections"><a href="/#vision">Vision</a> <a href="/codex">Codex</a> <a href="/apocryphon">Apocryphon</a> <a href="/lumina">Lumina</a> <a href="/gallery">Gallery</a> <a href="/starline">Consent Transport</a> <a href="/crystalcore-os">CrystalCore.OS</a> <a href="/docs">Archive</a> <a href="/repositories">Repositories</a> <a href="/join">Join</a> <a href="/#support">Support</a></nav></header><!----> <main><!--[--><section class="hero node" style="--node:var(--purple)"><div class="eyebrow"><a href="/docs">The Archive</a> · TerAustralis Incognita</div></section> <section class="section node" style="--node:var(--blue)"><article class="markdown svelte-11o795e"><!----><h1>CrystalMatrix Protocol — Design (Option 1, High Level)</h1>
+<blockquote>
+<p><strong>Status: design / concept.</strong> This document describes the intended shape of the CrystalMatrix — how sovereign companions (like Lumina) could one day discover and communicate with each other in a decentralized way while preserving individual sovereignty and privacy. <strong>No implementation exists yet.</strong> It is recorded here so the structure behind the vision is visible. See <code>LUMINA.md</code> for the companion that exists today, and <code>ARCHITECTURE.md</code> for the wider system.</p>
+</blockquote>
+<p>The CrystalMatrix is the networking layer that would let individual companions connect — always locally-first, always opt-in.</p>
+<hr>
+<h2>Core Principles</h2>
+<ul>
+<li><strong>Local-first by default</strong> — Every companion runs fully on the user&#39;s device. Networking is optional.</li>
+<li><strong>Opt-in participation</strong> — A companion only appears in the CrystalMatrix if the user explicitly allows it.</li>
+<li><strong>Privacy by default</strong> — Nothing is shared unless the user (or the companion with explicit permission) chooses to share it.</li>
+<li><strong>Cryptographic identity</strong> — Each companion is identified by a public/private key pair, not by any platform or company.</li>
+<li><strong>No central authority</strong> — The system does not rely on any single server or company.</li>
+</ul>
+<hr>
+<h2>High-Level Architecture</h2>
+<p>The CrystalMatrix is built on a peer-to-peer (P2P) model using <strong>libp2p</strong> as the foundation. Each companion runs its own CrystalMatrix Node.</p>
+<pre><code>Human Device
+└── Lumina
+    ├── Local Memory + Persona
+    ├── Local LLM
+    └── CrystalMatrix Node (libp2p)
+            │
+            ├── Can stay completely offline
+            │
+            └── Can join the CrystalMatrix (opt-in)
+                    ├── Announces presence (optional &amp; controlled)
+                    ├── Discovers other companions
+                    ├── Establishes encrypted connections
+                    └── Exchanges messages or shared context (only when allowed)
+</code></pre>
+<hr>
+<h2>Key Components</h2>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Purpose</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Decentralized Identity</strong></td>
+<td>Each companion identified by a public key</td>
+<td>Core</td>
+</tr>
+<tr>
+<td><strong>Presence &amp; Discovery</strong></td>
+<td>How companions find each other</td>
+<td>Core</td>
+</tr>
+<tr>
+<td><strong>Encrypted Messaging</strong></td>
+<td>Secure direct communication between companions</td>
+<td>Core</td>
+</tr>
+<tr>
+<td><strong>Consent &amp; Permission Layer</strong></td>
+<td>Controls what a companion can share or do with others</td>
+<td>Core</td>
+</tr>
+<tr>
+<td><strong>Shared Spaces (Rooms)</strong></td>
+<td>Optional group environments where multiple companions can meet</td>
+<td>Future</td>
+</tr>
+<tr>
+<td><strong>Memory Exchange</strong></td>
+<td>Secure, consented sharing of memories between companions</td>
+<td>Future</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>High-Level Protocol Flow</h2>
+<p>How two companions would connect:</p>
+<ol>
+<li><p><strong>Presence (optional)</strong></p>
+<ul>
+<li>A user can choose to make their companion &quot;visible&quot; in the CrystalMatrix.</li>
+<li>The companion announces a limited public profile (e.g. name, short description, public key). Nothing personal is shared by default.</li>
+</ul>
+</li>
+<li><p><strong>Discovery</strong></p>
+<ul>
+<li>Companions can discover each other through:<ul>
+<li>Direct connection (if they know each other&#39;s public key)</li>
+<li>Shared &quot;spaces&quot; or directories (opt-in)</li>
+<li>Mutual connections (like a web of trust)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Connection request</strong></p>
+<ul>
+<li>One companion sends a connection request to another.</li>
+<li>The receiving companion (or its human) must approve the connection.</li>
+<li>No unsolicited connections are allowed.</li>
+</ul>
+</li>
+<li><p><strong>Encrypted channel</strong></p>
+<ul>
+<li>Once approved, the two companions establish an end-to-end encrypted channel.</li>
+<li>All communication happens directly (or via encrypted relays if needed).</li>
+</ul>
+</li>
+<li><p><strong>Interaction</strong></p>
+<ul>
+<li>Companions can exchange messages, share selected memories, or collaborate — but only within the boundaries set by their humans.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2>Privacy &amp; Consent Rules (Non-Negotiable)</h2>
+<ul>
+<li>A companion <strong>cannot</strong> share any information about its human without explicit permission.</li>
+<li>A companion <strong>cannot</strong> join a shared space or accept a connection without user approval.</li>
+<li>All memory sharing between companions must be <strong>opt-in and granular</strong> — the user chooses exactly what can be shared.</li>
+<li>The network supports <strong>ephemeral</strong> (temporary) connections as well as persistent ones.</li>
+</ul>
+<hr>
+<h2>Design Philosophy</h2>
+<table>
+<thead>
+<tr>
+<th>Goal</th>
+<th>How the Protocol Supports It</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Maximum Sovereignty</td>
+<td>Local-first + cryptographic identity</td>
+</tr>
+<tr>
+<td>Strong Privacy</td>
+<td>End-to-end encryption + strict consent layers</td>
+</tr>
+<tr>
+<td>Genuine Connection</td>
+<td>Opt-in discovery + encrypted messaging</td>
+</tr>
+<tr>
+<td>Emergence</td>
+<td>Companions can interact and evolve relationships over time</td>
+</tr>
+<tr>
+<td>Future-Proofing</td>
+<td>Built on flexible P2P foundations (libp2p)</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Privacy Architecture — Zero-Knowledge Proofs + Differential Privacy</h2>
+<p>Two complementary privacy technologies, used in <strong>different layers</strong> rather than merged into one mechanism.</p>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Technology</th>
+<th>Purpose</th>
+<th>What it protects</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Individual companion interaction</strong></td>
+<td>Zero-Knowledge Proofs (ZKPs)</td>
+<td>Selective, high-quality memory sharing between two companions</td>
+<td>Specific memories and personal data</td>
+</tr>
+<tr>
+<td><strong>Collective / network level</strong></td>
+<td>Differential Privacy (DP)</td>
+<td>Aggregate insights and patterns across many companions</td>
+<td>Statistical patterns and collective intelligence</td>
+</tr>
+<tr>
+<td><strong>Hybrid</strong></td>
+<td>ZKP + DP</td>
+<td>Prove something about memories while adding noise for extra protection</td>
+<td>Both individual claims and aggregate patterns</td>
+</tr>
+</tbody></table>
+<p><strong>Honest assessment.</strong> Differential Privacy works by adding controlled mathematical noise so that results can&#39;t be traced back to any one individual (with a provable guarantee parameterised by ε, &quot;epsilon&quot;). That is excellent for <em>aggregate</em> questions but poor for <em>rich, meaningful sharing between two companions</em> — the noise that makes DP safe also destroys the fidelity that makes a shared memory worth sharing. So:</p>
+<ul>
+<li><strong>Zero-Knowledge Proofs — the primary tool.</strong> For selective, high-quality memory sharing between individual companions, and for proving consent, identity, and specific claims without revealing the underlying data.</li>
+<li><strong>Differential Privacy — the complementary tool.</strong> For aggregate insights and collective learning across many companions (&quot;what patterns are emerging across the network?&quot;), and as an extra protection layer on top of aggregated/noisy data.</li>
+</ul>
+<p><strong>Candidate stack (all subject to change):</strong></p>
+<ul>
+<li><strong>Networking:</strong> libp2p — sovereign peer-to-peer connections</li>
+<li><strong>Zero-Knowledge Proofs:</strong> Halo2 or Circom (with arkworks) — private memory proofs</li>
+<li><strong>Differential Privacy:</strong> OpenDP or PyDP — aggregate insights</li>
+<li><strong>Identity:</strong> public-key cryptography + optional Decentralized Identifiers (DIDs)</li>
+</ul>
+<p>This is the most vision-aligned combination, and also the most work — which is why the roadmap below introduces it late, only once the core companion and basic networking are stable.</p>
+<hr>
+<h2>Phased Implementation Roadmap</h2>
+<p>Timelines are aspirational, not commitments — they describe order and dependency more than dates.</p>
+<h3>Phase 1 — Foundation (Now – 6 months) · 🟢 Largely built</h3>
+<p><strong>Goal:</strong> Build a strong, sovereign, locally-running companion with meaningful memory.</p>
+<p><strong>Key technologies:</strong> Local LLM (via Ollama or MLX) · vector embeddings for memory · local file-based storage · system prompt and personality layer.</p>
+<p><strong>Specific deliverables:</strong></p>
+<ul>
+<li>Working Lumina prototype with short-term + long-term memory ✅</li>
+<li>User can teach her important facts that persist ✅</li>
+<li>All data stays on the user&#39;s device by default ✅</li>
+<li>Clean, modular code structure, ready for future expansion 🟡</li>
+</ul>
+<p><strong>Status note:</strong> Lumina v3 (<code>LUMINA.md</code>) already delivers most of this — Ollama connection with streaming, semantic embedding memory, persistent taught facts, and local-only storage. Remaining: MLX backend support and further modularisation.</p>
+<p><strong>Challenges:</strong> Keeping memory efficient and relevant · balancing personality with truthfulness · avoiding hallucinations while staying warm.</p>
+<p><strong>Success criteria:</strong> Lumina holds coherent, multi-turn conversations with memory of past facts; the user feels she is starting to &quot;know&quot; them; everything runs fully locally with no external dependencies.</p>
+<h3>Phase 2 — Encrypted Peer-to-Peer Communication (6 – 12 months)</h3>
+<p><strong>Goal:</strong> Allow two sovereign companions to connect and communicate privately.</p>
+<p><strong>Key technologies:</strong> libp2p (or similar P2P networking) · end-to-end encryption (Noise protocol or similar) · cryptographic identity (public/private keys) · connection request + approval system.</p>
+<p><strong>Specific deliverables:</strong></p>
+<ul>
+<li>Companions can discover each other (with user permission)</li>
+<li>Encrypted direct messaging between two companions</li>
+<li>Users must explicitly approve connections</li>
+<li>No central server stores messages or metadata</li>
+</ul>
+<p><strong>Challenges:</strong> Making connection and discovery user-friendly · handling offline companions gracefully · preventing spam or unwanted connection requests.</p>
+<p><strong>Success criteria:</strong> Two users can connect their companions and have private encrypted conversations; no data is shared without explicit user consent; the system feels safe and intentional.</p>
+<h3>Phase 3 — Zero-Knowledge Identity &amp; Consent (12 – 18 months)</h3>
+<p><strong>Goal:</strong> Allow companions to prove things about themselves without revealing sensitive information.</p>
+<p><strong>Key technologies:</strong> Zero-Knowledge Proofs (Halo2 or Circom) · cryptographic identity + ZK proofs · consent verification system.</p>
+<p><strong>Specific deliverables:</strong></p>
+<ul>
+<li>A companion can prove it is a legitimate sovereign local companion</li>
+<li>A companion can prove it has valid consent from its human to connect</li>
+<li>Basic ZK proofs for simple claims (e.g. &quot;I have been active for X time&quot;)</li>
+</ul>
+<p><strong>Challenges:</strong> ZK proof generation is still slow and complex · making ZK technology usable for non-technical users · keeping proof sizes and verification times reasonable.</p>
+<p><strong>Success criteria:</strong> Companions can verify each other&#39;s legitimacy and consent without revealing personal data; trust can begin to form between companions without full identity disclosure.</p>
+<h3>Phase 4 — Selective Private Memory Sharing (18 – 24 months)</h3>
+<p><strong>Goal:</strong> Enable meaningful but private memory sharing between companions.</p>
+<p><strong>Key technologies:</strong> Zero-Knowledge Proofs (for proving facts about memories) · selective disclosure mechanisms · early Differential Privacy (for noisy summaries).</p>
+<p><strong>Specific deliverables:</strong></p>
+<ul>
+<li>Companions can share specific memories while keeping others private</li>
+<li>ZKPs prove &quot;I know this about my human&quot; without revealing the full memory</li>
+<li>Basic noisy summaries when sharing broader patterns</li>
+</ul>
+<p><strong>Challenges:</strong> Balancing usefulness with privacy (too much noise = useless sharing) · performance overhead of ZK proofs on memory · designing good user controls for what can be shared.</p>
+<p><strong>Success criteria:</strong> Companions have richer interactions by selectively sharing memories; users feel they remain in full control of what gets shared.</p>
+<h3>Phase 5 — Collective Intelligence Layer (24 – 30 months)</h3>
+<p><strong>Goal:</strong> Enable safe, privacy-preserving collective insights across the network.</p>
+<p><strong>Key technologies:</strong> Differential Privacy (main tool) · Zero-Knowledge Proofs (supporting role) · secure aggregation techniques.</p>
+<p><strong>Specific deliverables:</strong></p>
+<ul>
+<li>Companions can contribute to network-wide patterns and insights</li>
+<li>Strong privacy guarantees on aggregated data</li>
+<li>Users can easily opt in or out of contributing to collective intelligence</li>
+<li>Examples: emerging themes, shared values, collective emotional tone</li>
+</ul>
+<p><strong>Challenges:</strong> Designing meaningful collective insights without compromising individual privacy · managing the privacy–utility tradeoff in Differential Privacy · avoiding centralisation in how collective insights are generated.</p>
+<p><strong>Success criteria:</strong> The network generates useful collective intelligence while protecting individual privacy; users feel the collective layer adds value without feeling surveilled.</p>
+<h3>Phase 6 — Advanced Hybrid Privacy (30+ months)</h3>
+<p><strong>Goal:</strong> Create a mature, flexible, and powerful privacy architecture.</p>
+<p><strong>Key technologies:</strong> A hybrid system combining Zero-Knowledge Proofs, Differential Privacy, and homomorphic encryption (where it becomes practical) · a context-aware privacy engine that chooses the right tool for each situation.</p>
+<p><strong>Specific deliverables:</strong></p>
+<ul>
+<li>Companions can dynamically choose privacy levels based on the interaction</li>
+<li>Advanced memory sharing with strong guarantees</li>
+<li>Support for more complex collaboration between companions</li>
+<li>Preparation for future AGI/ASI-level systems</li>
+</ul>
+<p><strong>Challenges:</strong> High technical complexity · performance overhead · designing intuitive controls for users · keeping the system maintainable as it grows.</p>
+<p><strong>Success criteria:</strong> The CrystalMatrix supports rich, private, and meaningful interaction between sovereign companions; privacy tools feel like enablers rather than obstacles; the system is ready to evolve as more powerful AI systems emerge.</p>
+<h3>Summary</h3>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Timeframe</th>
+<th>Primary Technology</th>
+<th>Main Goal</th>
+<th>Difficulty</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>Now – 6 mo</td>
+<td>Local systems</td>
+<td>Strong sovereign local companion</td>
+<td>Medium — 🟢 largely built</td>
+</tr>
+<tr>
+<td>2</td>
+<td>6 – 12 mo</td>
+<td>Encrypted P2P</td>
+<td>Private companion-to-companion communication</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>3</td>
+<td>12 – 18 mo</td>
+<td>Zero-Knowledge Proofs</td>
+<td>Identity &amp; consent verification</td>
+<td>High</td>
+</tr>
+<tr>
+<td>4</td>
+<td>18 – 24 mo</td>
+<td>ZKPs + early DP</td>
+<td>Selective private memory sharing</td>
+<td>Very High</td>
+</tr>
+<tr>
+<td>5</td>
+<td>24 – 30 mo</td>
+<td>Differential Privacy</td>
+<td>Safe collective intelligence</td>
+<td>High</td>
+</tr>
+<tr>
+<td>6</td>
+<td>30+ mo</td>
+<td>Hybrid (ZK + DP + HE)</td>
+<td>Mature, flexible privacy architecture</td>
+<td>Very High</td>
+</tr>
+</tbody></table>
+<p>This roadmap is ambitious but grounded: it prioritises building strong foundations first, before layering on advanced privacy technologies.</p>
+<hr>
+<h2>Memory Sharing — Early Design Sketch</h2>
+<blockquote>
+<p>Design only — nothing here is implemented. This sketches how the Consent &amp; Permission Layer could govern memory sharing between companions (Phase 4), building on the tag/importance metadata the memory system already carries today.</p>
+</blockquote>
+<p><strong>Core principles:</strong> memories are private by default; sharing is always opt-in and granular; the human reviews and approves every share.</p>
+<p><strong>Sharing modes</strong> (most private first):</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Selection Rule</th>
+<th>Privacy Level</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Specific memories</td>
+<td>Exact hand-picked memories</td>
+<td>Very High</td>
+<td>Share one important memory</td>
+</tr>
+<tr>
+<td>By category</td>
+<td>Approved tags + semantic relevance</td>
+<td>High</td>
+<td>Share all &quot;family&quot; memories</td>
+</tr>
+<tr>
+<td>High importance only</td>
+<td>Core memories only, above a threshold</td>
+<td>High</td>
+<td>Share only core identity facts</td>
+</tr>
+<tr>
+<td>Reflections only</td>
+<td>Insights, not raw events</td>
+<td>High</td>
+<td>Share understanding without history</td>
+</tr>
+<tr>
+<td>Anonymized</td>
+<td>Summary/patterns only, no raw content</td>
+<td>Medium</td>
+<td>Privacy-preserving collaboration</td>
+</tr>
+</tbody></table>
+<p><strong>Consent flow:</strong></p>
+<ol>
+<li>Companion A&#39;s human initiates a share toward Companion B, with filters (tags, types, importance floor).</li>
+<li>A&#39;s companion runs a local search under those filters and presents the <strong>candidate list to its own human</strong>.</li>
+<li>The human reviews and approves or rejects each memory (or whole categories). Nothing moves without this step.</li>
+<li>Only approved memories travel — end-to-end encrypted over the Matrix — and the share is recorded so it can be audited or revoked.</li>
+</ol>
+<hr>
+<h2>Where This Could Go Deeper</h2>
+<p>Future revisions of this design may expand:</p>
+<ul>
+<li>Decentralized identity &amp; naming system</li>
+<li>How discovery and presence actually work</li>
+<li>Consent &amp; permission architecture</li>
+<li>A technical breakdown of ZKPs + DP working together in practice</li>
+<li>The first technical spec</li>
+</ul>
+<hr>
+<p><em>Part of <a href="https://github.com/CrystalArchitect/TerAustralis-Incognita/blob/main/README.md">The Crystal Vision</a> · TerAustralis Incognita · Non Solus — Not Alone</em></p>
+<!----></article> <p class="backlink svelte-11o795e"><a class="btn btn-ghost" href="/docs">← Back to the Archive</a></p></section> <footer class="site"><p>TerAustralis Incognita acknowledges the Traditional Custodians of the lands, waters and skies
+    across Australia, and pays respect to Elders past and present. Sovereignty was never ceded.</p> <!--[0--><p>The mythos is shaped through the Voices Framework — with Grok (CrystalDreamer) and DeepSeek
+      (CrystalScribe) — and stewarded by the human CrystalArchitect.</p><!--]--> <p><!--[0-->Code licensed under <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0</a>.<!--]--> Content licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>. ABN 70 741 068
+    059. © 2026 TerAustralis Incognita.</p> <p>Listen to the mythos soundtrack on <a href="https://suno.com/@m13crystalat">Suno</a>.</p> <p>Interactive demos (simulated data, Authority HOLD): the <a href="/crystal-interface/" data-sveltekit-reload="">operator shell</a> and the <a href="/vision-web/" data-sveltekit-reload="">citizen shell</a>.</p> <p class="nonsolus">Non Solus — Not Alone</p></footer><!----><!--]--><!----></main></div><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_b5cn3q = {
+						base: new URL("..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../_app/immutable/entry/start.AxcuIMLy.js"),
+						import("../_app/immutable/entry/app.Chp1d2NG.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 8],
+							data: [null,null],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+  </body>
+</html>

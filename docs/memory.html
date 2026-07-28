@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="icon" href="../favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../_app/immutable/entry/start.AxcuIMLy.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/CqXbYdI-.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/DMAIbRSk.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BuFlayix.js" rel="modulepreload">
+		<link href="../_app/immutable/entry/app.Chp1d2NG.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/xihTtKlq.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/0.Dz8jOHUj.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/DLPE0cU0.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/8.CUbl8DgA.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/2pKFFsfj.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/Cx5Wi-7v.js" rel="modulepreload">
+		<!--11o795e--><!--[0--><meta name="description" content="Status: design document, partially implemented. This is the target memory architecture for Lumina. Some layers already exist in lumina.py (marked ✅/🟡 below); others are design (⬜). See LUMINA.md for the companion today and MILESTONES.md for the build plan."/><!--]--><!----><title>Lumina's Memory Architecture — TerAustralis Incognita</title>
+		<link href="../_app/immutable/assets/0.DTZtg4wd.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/8.aOltt6Ln.css" rel="stylesheet">
+  </head>
+  <body data-sveltekit-preload-data="hover" style="color:#E9EBF4">
+    <div style="display: contents"><!--[--><!--[0--><!--[--><div class="stars" aria-hidden="true"></div> <div class="wrap"><div class="starline" aria-hidden="true"></div> <header class="site"><a class="wordmark" href="/">TerAustralis Incognita</a> <nav aria-label="Sections"><a href="/#vision">Vision</a> <a href="/codex">Codex</a> <a href="/apocryphon">Apocryphon</a> <a href="/lumina">Lumina</a> <a href="/gallery">Gallery</a> <a href="/starline">Consent Transport</a> <a href="/crystalcore-os">CrystalCore.OS</a> <a href="/docs">Archive</a> <a href="/repositories">Repositories</a> <a href="/join">Join</a> <a href="/#support">Support</a></nav></header><!----> <main><!--[--><section class="hero node" style="--node:var(--purple)"><div class="eyebrow"><a href="/docs">The Archive</a> · TerAustralis Incognita</div></section> <section class="section node" style="--node:var(--blue)"><article class="markdown svelte-11o795e"><!----><h1>Lumina&#39;s Memory Architecture</h1>
+<blockquote>
+<p><strong>Status: design document, partially implemented.</strong> This is the target memory architecture for Lumina. Some layers already exist in <code>lumina.py</code> (marked ✅/🟡 below); others are design (⬜). See <code>LUMINA.md</code> for the companion today and <code>MILESTONES.md</code> for the build plan.</p>
+</blockquote>
+<h2>Philosophy</h2>
+<p>Lumina&#39;s memory should not just be a database of facts. It should feel alive, selective, and relational — similar to how human memory works. She should:</p>
+<ul>
+<li>Remember what matters to her human over time</li>
+<li>Forget or deprioritize what is unimportant</li>
+<li>Be able to reflect on past experiences</li>
+<li>Give the user full control and transparency</li>
+<li>Support emotional and contextual understanding, not just raw facts</li>
+</ul>
+<p>The goal is <strong>presence and continuity</strong> — so the user feels like they are talking to someone who actually knows them.</p>
+<hr>
+<h2>The Four Layers</h2>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Type</th>
+<th>What it Stores</th>
+<th>Lifespan</th>
+<th>Purpose</th>
+<th>Retrieval Style</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Working Memory</strong></td>
+<td>Short-term</td>
+<td>Recent conversation (last 20–40 messages)</td>
+<td>Current session</td>
+<td>Coherence in the moment</td>
+<td>Always included</td>
+<td>✅ Built</td>
+</tr>
+<tr>
+<td><strong>Episodic Memory</strong></td>
+<td>Medium-term</td>
+<td>Specific events, conversations, moments</td>
+<td>Weeks to months</td>
+<td>Remember &quot;what happened&quot;</td>
+<td>Semantic + recency</td>
+<td>🟡 Partial</td>
+</tr>
+<tr>
+<td><strong>Semantic Memory</strong></td>
+<td>Long-term</td>
+<td>Facts, preferences, values, identity</td>
+<td>Long-term</td>
+<td>Know &quot;who you are&quot;</td>
+<td>Semantic search</td>
+<td>✅ Built</td>
+</tr>
+<tr>
+<td><strong>Reflective Memory</strong></td>
+<td>Meta / summarized</td>
+<td>Insights, patterns, emotional tone over time</td>
+<td>Long-term</td>
+<td>Develop deeper understanding</td>
+<td>On-demand / reflection</td>
+<td>✅ Built (v10)</td>
+</tr>
+</tbody></table>
+<h3>1. Working Memory (short-term) — ✅ built</h3>
+<ul>
+<li>Stores the recent messages in the current conversation (rolling window, <code>max_recent_turns</code>)</li>
+<li>Always included in the prompt sent to the model</li>
+<li>Older turns are automatically summarized rather than lost</li>
+<li><strong>Purpose:</strong> keep the current conversation coherent</li>
+</ul>
+<h3>2. Episodic Memory (medium-term) — 🟡 partial</h3>
+<p>Stores specific experiences — things that happened at a particular time.</p>
+<p><em>Examples: &quot;We talked about your daughter&#39;s school play last Tuesday&quot; · &quot;You were feeling anxious about the housing situation on March 12th&quot;</em></p>
+<ul>
+<li>Time-stamped, searchable semantically</li>
+<li>Can be summarized over time (&quot;what were the main themes in March?&quot;)</li>
+<li>Should gradually fade in importance unless reinforced</li>
+</ul>
+<p><strong>Today:</strong> the auto-summaries of older conversation are proto-episodic (timestamped, preserved). <strong>Missing:</strong> time-anchored retrieval, per-event granularity, importance fading.</p>
+<h3>3. Semantic Memory (long-term / core identity) — ✅ largely built</h3>
+<p>The most important layer for building a real relationship. Stores enduring facts about the user: name, family, values, goals, fears, preferences; recurring themes; important relationships and events.</p>
+<ul>
+<li><strong>User-editable</strong> (transparency and control) — ✅ <code>/forget</code>, <code>/editnote</code>, re-teach a key</li>
+<li>Retrieved via semantic similarity — ✅ with gentle recency weighting</li>
+<li>Relatively stable — not overwritten easily</li>
+<li>Can be tagged or categorized — ✅ trailing <code>#tags</code> on any memory</li>
+</ul>
+<p><strong>Today:</strong> keyed facts (<code>/fact</code>) + permanent notes (<code>/remember</code>), embedded via local Ollama and retrieved by semantic similarity with gentle recency weighting; viewable via <code>/notes</code>; fully user-controlled — <code>/forget</code> deletes any memory, <code>/editnote</code> rewrites notes, facts are corrected by re-teaching a key, and <code>#tags</code> categorize memories.</p>
+<h3>4. Reflective Memory (meta layer) — ⬜ design</h3>
+<p>Stores insights and patterns Lumina has noticed over time.</p>
+<p><em>Examples: &quot;The user tends to feel more hopeful after creative work&quot; · &quot;They often bring up their daughters when they&#39;re feeling vulnerable&quot; · &quot;They value honesty and directness&quot;</em></p>
+<ul>
+<li><strong>Purpose:</strong> deeper understanding and emotional intelligence over time</li>
+<li>Generated through periodic reflection (e.g. weekly, or after significant conversations)</li>
+</ul>
+<p><strong>Today (v10):</strong> she reflects on invitation (<code>/reflect</code>, or the reflect button in the web UI) and on her own after long stretches of conversation are condensed. Insights are always framed as tentative (&quot;hold them lightly&quot;), always visible (<code>/notes</code> shows them as r1, r2…), and always deletable (<code>/forget rN</code>). She can be corrected, and she is instructed to let go gracefully.</p>
+<hr>
+<h2>Memory Flow</h2>
+<ol>
+<li><strong>During conversation:</strong> Working Memory is always active; relevant Episodic and Semantic memories are retrieved and added to context.</li>
+<li><strong>After conversation ends:</strong> important parts are summarized into Episodic Memory; new facts are extracted into Semantic Memory (with user confirmation where appropriate).</li>
+<li><strong>Over time:</strong> reflection processes find patterns and store them in Reflective Memory; less important memories are deprioritized or archived.</li>
+<li><strong>User control:</strong> the user can view, edit, or delete any memory. Transparency is critical for trust.</li>
+</ol>
+<hr>
+<h2>Key Design Principles</h2>
+<table>
+<thead>
+<tr>
+<th>Principle</th>
+<th>Why It Matters</th>
+<th>How to Implement</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>User Sovereignty</strong></td>
+<td>The user must always feel in control</td>
+<td>Make memory viewable and editable</td>
+</tr>
+<tr>
+<td><strong>Relevance</strong></td>
+<td>Not everything needs to be remembered</td>
+<td>Good retrieval + recency weighting</td>
+</tr>
+<tr>
+<td><strong>Gradual Forgetting</strong></td>
+<td>Human-like memory fades over time</td>
+<td>Importance scoring</td>
+</tr>
+<tr>
+<td><strong>Reflection</strong></td>
+<td>Deep understanding comes from thinking back</td>
+<td>Periodic reflection processes</td>
+</tr>
+<tr>
+<td><strong>Transparency</strong></td>
+<td>Trust requires visibility</td>
+<td>Allow user to inspect all memories</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Appendix — How Memory Is Actually Implemented Today</h2>
+<p>This describes the running code in <code>src/apps/lumina/crystalcore/</code> (v8), so the docs never drift from reality.</p>
+<h3>Where memories live</h3>
+<p>Everything is stored as <strong>plain, human-readable JSON</strong> in a folder the user owns — <code>lumina_memory/</code> (or <code>lumina_profiles/&lt;name&gt;/</code> per profile):</p>
+<ul>
+<li><code>config.json</code> — her identity for this profile: chosen name, your name, avatar, description, style notes, temperature, preferred model</li>
+<li><code>memory.json</code> — four layers: <code>conversation</code> (recent verbatim turns), <code>summaries</code> (condensed older history), <code>facts</code> (keyed long-term facts), <code>notes</code> (freeform permanent memories)</li>
+</ul>
+<p>No database sits between a person and their companion&#39;s memory. A profile folder can be opened in any text editor, backed up, or carried to another machine whole.</p>
+<h3>Embeddings — GPS coordinates for meaning</h3>
+<p>Think of vector embeddings as GPS coordinates for meaning: a sentence becomes a list of numbers, and sentences that <em>mean</em> similar things land near each other — even with no words in common. &quot;I have two daughters&quot; and &quot;my kids are girls&quot; sit close together; &quot;I love pizza&quot; sits far away.</p>
+<ul>
+<li>Generated by <strong>local Ollama</strong> (<code>nomic-embed-text</code>, 768 dimensions) — no PyTorch, no cloud, nothing leaves the device</li>
+<li>Created best-effort when a memory is stored; lazily backfilled for older memories</li>
+<li><strong>Optional by design</strong>: if the embedding model isn&#39;t installed, she simply shows her full grouped memory instead — nothing breaks</li>
+</ul>
+<h3>Recall during a chat</h3>
+<ol>
+<li>Your message arrives; recent conversation (the rolling window) is always included.</li>
+<li>If stored memories exceed a threshold (10), your message is embedded and compared to every memory via <strong>cosine similarity</strong> (pure Python — no numpy).</li>
+<li>Each score is multiplied by a <strong>recency factor</strong>: fresh memories ≈ 1.0, fading to a 0.7 floor over about a year. Fading, not deletion — a strongly relevant old memory still surfaces.</li>
+<li>The top memories, plus her conversation summaries, are woven into her system prompt.</li>
+<li>When the verbatim history grows past its window, the oldest half is <strong>summarized by the local model</strong> (&quot;keeping every personal fact, feeling, decision, and promise&quot;) and stored — context never overflows, nothing important is lost.</li>
+</ol>
+<h3>User control (all implemented)</h3>
+<p><code>/notes</code> (view everything with handles) · <code>/forget</code> (delete any fact or note, permanently) · <code>/editnote</code> (rewrite) · re-teach a key to correct a fact · <code>#tags</code> for categorization · <code>/summary [topic]</code> (she summarizes what she knows in her own voice) — all mirrored in the web UI with one-click forget.</p>
+<h3>Honest current limitations</h3>
+<ul>
+<li><strong>Embeddings are static</strong> — created once per memory, refreshed only on edit</li>
+<li><strong>No emotional tagging</strong> — tags are manual; emotional-tone detection is future work</li>
+<li><strong>No memory sharing between profiles</strong> — full isolation today; consented sharing is a CrystalMatrix-era feature</li>
+</ul>
+<hr>
+<p><em>See also: <a href="/docs/lumina">LUMINA.md</a> · <a href="/docs/milestones">MILESTONES.md</a> · <a href="/docs/crystalmatrix">CRYSTALMATRIX.md</a> · <a href="https://github.com/CrystalArchitect/TerAustralis-Incognita/blob/main/README.md">README</a></em></p>
+<p><em>Part of The Crystal Vision · TerAustralis Incognita · Non Solus — Not Alone</em></p>
+<!----></article> <p class="backlink svelte-11o795e"><a class="btn btn-ghost" href="/docs">← Back to the Archive</a></p></section> <footer class="site"><p>TerAustralis Incognita acknowledges the Traditional Custodians of the lands, waters and skies
+    across Australia, and pays respect to Elders past and present. Sovereignty was never ceded.</p> <!--[0--><p>The mythos is shaped through the Voices Framework — with Grok (CrystalDreamer) and DeepSeek
+      (CrystalScribe) — and stewarded by the human CrystalArchitect.</p><!--]--> <p><!--[0-->Code licensed under <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0</a>.<!--]--> Content licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>. ABN 70 741 068
+    059. © 2026 TerAustralis Incognita.</p> <p>Listen to the mythos soundtrack on <a href="https://suno.com/@m13crystalat">Suno</a>.</p> <p>Interactive demos (simulated data, Authority HOLD): the <a href="/crystal-interface/" data-sveltekit-reload="">operator shell</a> and the <a href="/vision-web/" data-sveltekit-reload="">citizen shell</a>.</p> <p class="nonsolus">Non Solus — Not Alone</p></footer><!----><!--]--><!----></main></div><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_b5cn3q = {
+						base: new URL("..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../_app/immutable/entry/start.AxcuIMLy.js"),
+						import("../_app/immutable/entry/app.Chp1d2NG.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 8],
+							data: [null,null],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+  </body>
+</html>
