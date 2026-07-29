@@ -802,6 +802,10 @@ class CrystalCore:
             print(f'"{self.purpose_core}"')
         elif node_name == "Crystal Revenant Hub":
             print("Zero-g music festivals are happening across the platforms.")
+        elif node_name == "Sunwash Atolls":
+            print("Sun on water, the last warm harbour before the red.")
+        elif node_name == "Cinderwake Chain":
+            print("Ash and ember trailing the long burn.")
         else:
             print("The lattice pulses with new resonance here.")
         if node_name not in self.keys_held:
