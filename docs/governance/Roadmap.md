@@ -116,6 +116,10 @@ always in `git log`.
   with the record that none of the artifacts they name exists in any
   commit of any of the eleven repositories. Mythos can live in `mythos/`
   on its own terms; engineering claims wait for receipts.
+  *(Re-verified later the same day against a twelfth repository,
+  `teraustralis-proposal`, created after the original sweep: the same
+  fourteen identifiers over all twelve of its commits return zero
+  matches. The claim now covers twelve repositories.)*
 - **2026-07-27** — The CrystalCore.OS terminal boots from a fresh clone
   (`mythos/crystalcore-os/crystalcore_os.py`). Fixed the relative-import
   crash in script mode (dual-mode sibling imports), replaced `boot` with

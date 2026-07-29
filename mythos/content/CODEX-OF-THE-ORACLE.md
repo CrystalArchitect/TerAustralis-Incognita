@@ -73,9 +73,11 @@ governance, evidence, verification, runtime and hardware claims — is
 recorded in the CrystalCore.OS archive repository as
 `WEAVER-NEXUS-HANDOFF-2026-07-29.md`, together with what checking it
 found: none of the artifacts it names occurs in any commit of any of the
-eleven repositories. That is why only the Loom half is here. Mythos can
-live in `mythos/` on its own terms; engineering claims cannot live
-anywhere until they have receipts.
+twelve repositories — eleven searched 2026-07-29, and a twelfth,
+`teraustralis-proposal`, created later that same day and searched on the
+same fourteen identifiers with the same result. That is why only the Loom
+half is here. Mythos can live in `mythos/` on its own terms; engineering
+claims cannot live anywhere until they have receipts.
 
 ---
 
