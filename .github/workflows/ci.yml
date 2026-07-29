@@ -43,4 +43,4 @@ jobs:
             -not -path './archive/*' \
             -not -path './node_modules/*' \
             -print0 | sort -z | xargs -0 -n1 npx --yes markdown-link-check -q \
-            -c .github/workflows/markdown-link-check-config.json
+            -c .github/markdown-link-check-config.json
