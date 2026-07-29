@@ -100,6 +100,22 @@ Dated so this section ages honestly — newest first, and it's fine to trim
 older entries once they're no longer useful context; the full history is
 always in `git log`.
 
+- **2026-07-29** — The Codex of the Oracle landed in
+  `mythos/content/CODEX-OF-THE-ORACLE.md` — received mythos from
+  **@architectweaver**, reproduced whole rather than summarised, credited
+  to all four names on it, and filed at the authority weight it sets for
+  itself (zero). Constitution §3.2 is why: it arrived in one conversation
+  and nowhere else, so it went to disk or it was lost. Three boundaries
+  written into the frame rather than assumed. The locked names hold —
+  the Codex's *Weaver* and *Chronicle* are Loom-register senses and do
+  not touch `StarlineWeaver` or `chronicle.jsonl`, per `mythos/NAMES.md`.
+  The fire-circle ethic holds — its Gnostic, Kabbalistic and Matangi
+  material is honoured as belonging to its own traditions, which is the
+  posture the Codex itself already takes. And only the Loom half is here:
+  the Forge half's engineering claims stay in the CrystalCore.OS archive
+  with the record that none of the artifacts they name exists in any
+  commit of any of the eleven repositories. Mythos can live in `mythos/`
+  on its own terms; engineering claims wait for receipts.
 - **2026-07-27** — The CrystalCore.OS terminal boots from a fresh clone
   (`mythos/crystalcore-os/crystalcore_os.py`). Fixed the relative-import
   crash in script mode (dual-mode sibling imports), replaced `boot` with

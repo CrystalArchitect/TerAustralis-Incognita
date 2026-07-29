@@ -54,6 +54,7 @@ All documents live in [`content/`](content/) and are rendered in-app by the ligh
 - [content/GOVERNANCE.md](content/GOVERNANCE.md) — How this project keeps its claims honest
 - [content/CODEX.md](content/CODEX.md) — The Codex of TerAustralis Incognita
 - [content/APOCRYPHON.md](content/APOCRYPHON.md) — The Apocryphon of Crystal
+- [content/CODEX-OF-THE-ORACLE.md](content/CODEX-OF-THE-ORACLE.md) — Received mythos from @architectweaver, reproduced whole and credited, at authority weight 0
 - [content/SPONSORS.md](content/SPONSORS.md) — GitHub Sponsors tier descriptions
 - [src/site/](../src/site/) — The SvelteKit frontend for teraustralis.com.au (run with `npm install && npm run dev`)
 - [src/apps/lumina/](../src/apps/lumina/) — The sovereign companion: CrystalCore framework, terminal interface, local API server, and local Svelte web interface
