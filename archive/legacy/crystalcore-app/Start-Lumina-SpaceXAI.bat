@@ -1,9 +1,9 @@
 @echo off
-title Lumina — SpaceXAI (xAI) chat · local memory
+title Clementine — SpaceXAI (xAI) chat · local memory
 cd /d "%~dp0"
 
 echo.
-echo  CrystalCore edge node — Lumina via SpaceXAI
+echo  CrystalCore edge node — Clementine via SpaceXAI
 echo  Chat: api.x.ai   Memory: this folder
 echo  Project: %CD%
 echo.
@@ -24,5 +24,5 @@ echo  Starting SpaceXAI mode (grok-4.5)...
 echo.
 "%PY%" clementine.py --provider spacexai --model grok-4.5
 echo.
-echo  Lumina stopped.
+echo  Clementine stopped.
 pause

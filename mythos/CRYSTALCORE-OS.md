@@ -5,7 +5,7 @@ The mythos as a terminal you can fly.
 [`crystalcore-os/crystalcore_os.py`](crystalcore-os/crystalcore_os.py) is a small, self-contained text adventure —
 the Crystal universe rendered as an interactive command line. It's Vision-layer:
 a playable story, not one of the project's Built software components (those are
-Lumina, the Starline Weaver, Starline, and CrystalBridge — see
+Clementine, the Starline Weaver, Starline, and CrystalBridge — see
 [`../docs/governance/Roadmap.md`](../docs/governance/Roadmap.md)). No server, no dependencies, no account. You
 launch a Starline, cross the network, visit seven nodes, gather their keys, and
 the First Gate opens — *not by force, but by sovereign recognition.* For the

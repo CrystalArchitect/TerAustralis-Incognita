@@ -47,6 +47,6 @@ Depends on:
 ✓ Clementine (layer separation proven)
 ✓ RDP (tamper-evident records proven)
 ✓ Consent Transport (agency proven)
-✓ Lumina (dialogue interface proven)
+✓ Clementine (dialogue interface proven)
 
 This prototype adds interpretation discipline on top of those layers.

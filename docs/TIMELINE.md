@@ -47,7 +47,7 @@ All four repos are checkpointed at tag `-safe-2026-07-17` to preserve pre-reorg 
 
 | Repo | Focus | State | Lives on as |
 |---|---|---|---|
-| `The-Crystal-Vision` | Codex site + Clementine companion; holds complete crystalcore v0.13.4 bytecode | Frozen ✅ | Ancestor of Lumina's embedded Framework (0.7.0 fork line; 0.13.4 extras unreconciled) |
+| `The-Crystal-Vision` | Codex site + Clementine companion; holds complete crystalcore v0.13.4 bytecode | Frozen ✅ | Ancestor of Clementine's embedded Framework (0.7.0 fork line; 0.13.4 extras unreconciled) |
 | `crystalcore` | Songline protocol pack | Frozen ✅ | Direct ancestor of core/crystal-core (SonglineBus → Starline Weaver evolution) |
 | `crystal-vision` | Static demo shell (Grok build) | Frozen ✅ | Direct ancestor of vision/apps/crystal-interface |
 | (Fourth repo) | TerAustralis-Incognita umbrella | Frozen ✅ | Evolved into current living umbrella repo |
@@ -119,11 +119,11 @@ On 2026-07-23, a comprehensive reorganization happened in a single day: the umbr
 
 ### Stage 1B: Code Import (application layer — vision/)
 
-**What happened:** The `src/apps/` directory was imported under `vision/apps/` (Lumina, crystal-interface, vision-web, voicebox). The site (`src/site/`) was imported under `vision/site/`. All paths preserved. Lumina's embedded Framework came along.
+**What happened:** The `src/apps/` directory was imported under `vision/apps/` (Clementine, crystal-interface, vision-web, voicebox). The site (`src/site/`) was imported under `vision/site/`. All paths preserved. Clementine's embedded Framework came along.
 
 **PR:** TerAustralis-Incognita-Code #2 (merged)
 
-**Verification:** 16 Lumina tests passed; app shells self-labeled HOLD (honest scope).
+**Verification:** 16 Clementine tests passed; app shells self-labeled HOLD (honest scope).
 
 **Stage 1 outcome:** Both PRs merged; `-Code` repo contains the complete v1.0 engine and application.
 
@@ -154,7 +154,7 @@ On 2026-07-23, a comprehensive reorganization happened in a single day: the umbr
 
 ### Stage 3–4: Deferred (as of 2026-07-24)
 
-**Stage 3 — Repo-count decision and Lumina framework split:** Decision gates specified; not yet met. See [OPEN-DECISIONS.md](OPEN-DECISIONS.md).
+**Stage 3 — Repo-count decision and Clementine framework split:** Decision gates specified; not yet met. See [OPEN-DECISIONS.md](OPEN-DECISIONS.md).
 
 **Stage 4 — Remaining placements (dbt, site sync, examples):** Recommendations stated; not yet implemented. See [OPEN-DECISIONS.md](OPEN-DECISIONS.md).
 
@@ -183,7 +183,7 @@ The full canon tree (`src/` + `packages/`) was located on a DigitalOcean droplet
 **Evidence**
 - Repository: TerAustralis-Incognita (umbrella repo, git ls-remote confirms branch exists)
 - Branch: `claude/crystalcore-boot-visual-jau1bk` @ SHA `32692fd`
-- Verified: Droplet at `/root/lumina/repo` (umbrella clone with canon tree on session branch); clean working copy
+- Verified: Droplet at `/root/clementine/repo` (umbrella clone with canon tree on session branch); clean working copy
 - Date: 2026-07-23
 - Related Documents: [REPOSITORIES.md](REPOSITORIES.md) — frozen repos · [ARCHITECTURE.md](ARCHITECTURE.md) — dependency rule
 

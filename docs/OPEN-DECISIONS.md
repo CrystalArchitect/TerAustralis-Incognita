@@ -58,21 +58,21 @@ Should TerAustralis-Incognita-Code be split into separate `core` and `vision` re
 
 ---
 
-## Stage 3 Decision 2: Lumina Framework Extraction
+## Stage 3 Decision 2: Clementine Framework Extraction
 
 **Status**
-- Vision 🔮 (criteria specified, Lumina stays whole for now)
+- Vision 🔮 (criteria specified, Clementine stays whole for now)
 
 **Summary**
-Should CrystalCore Framework be extracted from Lumina into Crystal Core?
+Should CrystalCore Framework be extracted from Clementine into Crystal Core?
 
 **Evidence**
 - Repository: TerAustralis-Incognita / docs/governance/Migration-Plan.md (Stage 3 decision gate)
-- Current state: Framework embedded in Lumina (vision/apps/lumina/crystalcore/)
+- Current state: Framework embedded in Clementine (core/crystalcore/mind/)
 
 **Discussion**
 
-**Current state:** Framework lives embedded in Lumina; carries ADR-0004 name while traveling with companion app. Lumina stays whole in Crystal Vision (per maintainer directive, recorded ADR-0011).
+**Current state:** Framework lives embedded in Clementine; carries ADR-0004 name while traveling with companion app. Clementine stays whole in Crystal Vision (per maintainer directive, recorded ADR-0011).
 
 **Decision gate — extract Framework ONLY when at least one of these is true:**
 1. A second companion app needs the Framework (establishes reusability)
@@ -264,18 +264,18 @@ How should the pre-reorg `crystalcore` versions (0.7.0 vs. 0.13.4) be reconciled
 
 **Evidence**
 - Repository: The-Crystal-Vision (frozen repo, tag `vision-safe-2026-07-17`)
-- Current state: Lumina's Framework forked 0.7.0 line (16 tests passing)
+- Current state: Clementine's Framework forked 0.7.0 line (16 tests passing)
 - Archived state: 0.13.4 bytecode rescue in frozen repo (spell-checking, audio effects, GUI)
 
 **Discussion**
 
 **Current state (2026-07-24):**
-- Lumina's embedded Framework forked 0.7.0 line (tested, integrated, 16 tests)
+- Clementine's embedded Framework forked 0.7.0 line (tested, integrated, 16 tests)
 - The-Crystal-Vision frozen repo contains complete 0.13.4 bytecode rescue
 - 0.13.4 extras (SpaceXAI provider, `node.py`, `status.py`, CLI) remain unreconciled
 
 **Open Questions**
-1. Should 0.13.4 features be integrated into the 0.7.0 fork running in Lumina?
+1. Should 0.13.4 features be integrated into the 0.7.0 fork running in Clementine?
 2. Are the 0.13.4 extras valuable or historical?
 3. What does the 0.13.4 → 0.7.0 fork represent architecturally?
 

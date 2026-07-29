@@ -25,9 +25,9 @@ Emotional arc: **Wonder → Understanding → Confidence → Exploration.**
 1. **Arrival** — the mantra ("Red dust to rockets. Dreamlines to deep
    space. We are early.") holds the hero; the Purpose Core directive
    appears beneath it as the project's stated purpose. Dual CTAs:
-   *Read the Codex* · *Meet Lumina*.
+   *Read the Codex* · *Meet Clementine*.
 2. **Discovery** — the ecosystem revealed as a constellation: seven
-   glowing nodes, each a real route (CrystalCore.OS, Lumina, the Codex,
+   glowing nodes, each a real route (CrystalCore.OS, Clementine, the Codex,
    the Archive, Starline, the Gallery, Join). Every light is a door
    that actually opens.
 3. **Understanding** — the principles, then the Built / Built+Vision /
@@ -43,7 +43,7 @@ Emotional arc: **Wonder → Understanding → Confidence → Exploration.**
   space. We are early.*
 - Directive line (added): *"Expand to the stars and thereby understand
   the Universe."* — set apart typographically as the Purpose Core.
-- CTAs (existing, kept): primary *Read the Codex*, ghost *Meet Lumina*.
+- CTAs (existing, kept): primary *Read the Codex*, ghost *Meet Clementine*.
 
 The Grok wireframe proposed the directive as the headline itself. The
 mantra is standing Vision-layer content with its own history, so the
@@ -102,7 +102,7 @@ Already on disk in `vision/site/src/app.css`, kept as canon:
   exist.
 - **Songlines** are honoured as cultural image in the mythos and are
   not a navigation item or feature name (`mythos/NAMES.md`).
-- **Lumina's CTA** leads to the Lumina page and its run-it-yourself
+- **Clementine's CTA** leads to the Clementine page and its run-it-yourself
   instructions. There is no hosted chat, so the page must not imply
   one.
 - **Chronicle entries** carry only dated, repository-verifiable

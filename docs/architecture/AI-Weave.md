@@ -13,7 +13,7 @@ must not be confused.
   question out to every agent independently and counts agreement — a count,
   not a verdict (an echo is not a witness).
 - **CrystalBridge** (`src/crystalcore/`) — the consent gate guest AIs pass
-  through to reach Lumina: approval → permission → scope → provenance,
+  through to reach Clementine: approval → permission → scope → provenance,
   fail-closed, append-only audit.
 - **RDP** (`src/crystal-core/rdp/`) — when the Weaver runs a matrix, the
   result can be witnessed onto a tamper-evident chain. RDP records; it never

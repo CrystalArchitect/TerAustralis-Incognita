@@ -253,7 +253,7 @@ def test_category_drift_detection():
 After v0.1 passes these tests, integration points:
 
 - ARCHIVE stores Chronicle entries
-- Lumina reads Mirror/Latency/Chronicle results
+- Clementine reads Mirror/Latency/Chronicle results
 - CrystalCore.OS CONSTITUTION enforces these rules across all uses
 - Future FORGE capability tests scenarios against invariants
 

@@ -19,7 +19,7 @@ the full review process is
    `node_modules/`, and `__pycache__/` are all ignored — if `git status`
    shows hundreds of files after running a dev server, stop and check
    `.gitignore` before staging.
-3. **Never commit personal data.** Lumina's memory and profiles
+3. **Never commit personal data.** Clementine's memory and profiles
    (`clementine_memory*`, `clementine_profiles/`) are the user's private
    property and must never enter git — the `.gitignore` enforces this;
    don't work around it.
@@ -96,7 +96,7 @@ the short version:
 
 | Path | What it is |
 |------|-----------|
-| `src/apps/lumina/` | The sovereign companion (CrystalCore framework, Flask API, Svelte webapp) |
+| `vision/apps/clementine/` | The sovereign companion (CrystalCore framework, Flask API, Svelte webapp) |
 | `src/apps/voicebox/` | Local MCP text-to-speech server |
 | `src/apps/crystal-interface/`, `src/apps/vision-web/` | Demo shells (simulated data, Authority HOLD) |
 | `src/crystal-core/` | Protocol pack — Starline Weaver, Decode→Ingest→Twin pipeline, Starline, RDP |
@@ -175,7 +175,7 @@ sources`, above) or require you to give up authorship credit.
 
 ## The Covenant applies to code too
 
-Lumina's Sovereignty Covenant (`mythos/COVENANT.md`) is not just
+Clementine's Sovereignty Covenant (`mythos/COVENANT.md`) is not just
 lore — it's the product spec. Changes to the companion must preserve:
 local-first operation, opt-in cloud, absolute pause, full memory
 ownership, and support that is offered, never imposed.

@@ -122,7 +122,7 @@ Each named component has a home in one of the three projects. Some placements ar
 
 | Component | Described home | Project | Status | Note |
 |---|---|---|---|---|
-| **Lumina** (sovereign companion + embedded **CrystalCore Framework**) | `src/apps/lumina/` | **Crystal Vision** | Science ✅ | Whole product per maintainer directive; Framework keeps ADR-0004 name; split criteria operationalized in Migration-Plan §Stage 3 |
+| **Clementine** (sovereign companion + embedded **CrystalCore Framework**) | `vision/apps/clementine/` | **Crystal Vision** | Science ✅ | Whole product per maintainer directive; Framework keeps ADR-0004 name; split criteria operationalized in Migration-Plan §Stage 3 |
 | **CrystalCore Protocol pack** (Starline Weaver, Decode→Ingest→Twin pipeline, Consent Transport, RDP) | `src/crystal-core/` | **Crystal Core** | Science ✅ | Protocol machinery other components call |
 | **Clementine** (orchestration, AI-to-AI comms coordination) | `clementine/bridge/` inside protocol pack | **Crystal Core** (logical component) | Science ✅ | Named component, not a repository; per maintainer directive |
 | **CrystalBridge** (fail-closed MCP consent gate + profile configs) | `src/crystalcore/`, `src/profiles/` | **Crystal Core** | Science ✅ | Integration/API layer |
@@ -169,14 +169,14 @@ The portfolio is larger than the architecture. Eleven repositories exist as at 2
 | Repository | Role | Contents | CI/CD |
 |---|---|---|---|
 | `CrystalArchitect/TerAustralis-Incognita` | The umbrella: governance, ADRs, architecture docs, research, provenance mirrors, mythos | docs/, mythos/, research/, archive/, assets/ | Markdown lint + external link check (2026-07-24) |
-| `CrystalArchitect/TerAustralis-Incognita-Code` | The software per Migration-Plan Stages 1–2: core/ (engine) + vision/ (application) | core/, vision/, LICENSE, CNAME, .github/workflows/ | compileall, 4 self-test suites (core/), Lumina pytest, mesh pytest; Pages deploy |
+| `CrystalArchitect/TerAustralis-Incognita-Code` | The software per Migration-Plan Stages 1–2: core/ (engine) + vision/ (application) | core/, vision/, LICENSE, CNAME, .github/workflows/ | compileall, 4 self-test suites (core/), Clementine pytest, mesh pytest; Pages deploy |
 | `CrystalArchitect/CrystalCore.OS-the-Crystal-Architecture-Archive` | The system ledger: one fleet-wide STATUS.md (state, receipts, known unknowns across all repos) | STATUS.md | None (ledger only) |
 
 ### Frozen provenance repositories
 
 | Repository | Checkpointed | Code rescued/migrated to |
 |---|---|---|
-| `The-Crystal-Vision` (tag `vision-safe-2026-07-17`) | Codex site + Clementine companion; complete **crystalcore v0.13.4 bytecode** | Ancestor of Lumina's embedded framework (0.7.0 line; 0.13.4 extras unreconciled — see OPEN-DECISIONS.md) |
+| `The-Crystal-Vision` (tag `vision-safe-2026-07-17`) | Codex site + Clementine companion; complete **crystalcore v0.13.4 bytecode** | Ancestor of Clementine's embedded framework (0.7.0 line; 0.13.4 extras unreconciled — see OPEN-DECISIONS.md) |
 | `crystalcore` (tag `crystalcore-safe-2026-07-17`) | The Songline protocol pack (pre-reorg ancestor) | Direct ancestor of core/crystal-core (SonglineBus → Starline Weaver) |
 | `crystal-vision` (tag `crystal-vision-safe-2026-07-17`) | Static demo shell (Grok build) | Direct ancestor of vision/apps/crystal-interface |
 
@@ -204,7 +204,7 @@ Three placements and one architectural choice remain to be decided at specific s
 
 1. **Stage 3 — Repo-count decision:** Whether to split `-Code` into separate `core` and `vision` repositories. Split only when release cadences diverge, licensing changes, external contributors need scoping, or CI/product surfaces diverge enough to fight each other. Until then: one repository, two top-level areas, dependency rule enforced in review.
 
-2. **Stage 3 — Lumina framework extraction:** Whether to separate CrystalCore Framework from Lumina. Extract into Crystal Core only when a second companion app needs it, an external consumer imports it, or independent versioning/release pressure appears. Until then: Lumina stays whole in Crystal Vision, per maintainer directive (recorded ADR-0011).
+2. **Stage 3 — Clementine framework extraction:** Whether to separate CrystalCore Framework from Clementine. Extract into Crystal Core only when a second companion app needs it, an external consumer imports it, or independent versioning/release pressure appears. Until then: Clementine stays whole in Crystal Vision, per maintainer directive (recorded ADR-0011).
 
 3. **Stage 4 — Site placement:** Recommendation is Crystal Vision (public face). Pages/CNAME mechanics solved Stage 2 (moved to `-Code` 2026-07-23).
 

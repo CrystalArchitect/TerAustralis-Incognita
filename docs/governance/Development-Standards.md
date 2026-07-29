@@ -25,7 +25,7 @@ must meet.
 
 - **No generated output**: `__pycache__/`, `.svelte-kit/`,
   `src/site/build/`, `dist/`, `node_modules/`.
-- **No personal data**: Lumina memory and profiles, Starline
+- **No personal data**: Clementine memory and profiles, Starline
   identity/peers/consent files, CrystalBridge audit and message logs. These
   are a user's private property and never enter git.
 - **No secrets**: keys live in environment variables; `.env` stays ignored.

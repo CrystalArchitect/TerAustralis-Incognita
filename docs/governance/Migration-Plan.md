@@ -71,7 +71,7 @@ Run on the droplet over Termius — one paste, searches the likely homes
 and prints matches:
 
 ```bash
-for d in ~ /root /home/* /opt /srv /var/www; do [ -d "$d" ] && find "$d" -maxdepth 5 -type d \( -iname "*teraustralis*" -o -iname "*teraaustralis*" -o -iname "crystal-core" -o -iname "crystalcore*" -o -iname "lumina" -o -name "consent_transport" \) 2>/dev/null; done | sort -u; echo ---; ls -la ~
+for d in ~ /root /home/* /opt /srv /var/www; do [ -d "$d" ] && find "$d" -maxdepth 5 -type d \( -iname "*teraustralis*" -o -iname "*teraaustralis*" -o -iname "crystal-core" -o -iname "crystalcore*" -o -iname "clementine" -o -name "consent_transport" \) 2>/dev/null; done | sort -u; echo ---; ls -la ~
 ```
 
 Outcomes:
@@ -180,19 +180,19 @@ The only place workflow changes are proposed; none are made before it.
 >   `publish-packages.yml`). Verified safe first: zero git tags exist in
 >   this repository, locally or on the remote — `publish-packages.yml` is
 >   tag-gated only, so it never fired. Spot-checked 2 of the 7
->   `teraaustralis-*` PyPI names directly (`teraaustralis-lumina`,
+>   `teraaustralis-*` PyPI names directly (`teraaustralis-clementine`,
 >   `teraaustralis-bridge`) — both unclaimed (404). Debts register updated
 >   below.
 >
 > Full CI sequence re-verified locally in `TerAustralis-Incognita-Code`
 > before shipping: 70/70 tests passing (7 Weaver + 4 pipeline + 9 Consent
-> Transport + 31 RDP + 3 mesh + 16 Lumina). The mesh stub tests
+> Transport + 31 RDP + 3 mesh + 16 Clementine). The mesh stub tests
 > (`core/tests/unit/test_mesh_stub.py`) were imported alongside this work
 > — they were the umbrella's repo-level `tests/` dir, missed by PR 1
 > because it only materialized component directories, not the repo-level
 > catch-all.
 
-## Stage 3 — repo-count decision point, and Lumina's framework
+## Stage 3 — repo-count decision point, and Clementine's framework
 
 **Split `-Code` into `core` and `vision` repositories only when at least
 one of these is true:** release cadences diverge; a licensing split
@@ -201,11 +201,11 @@ one side; or CI/product surfaces diverge enough to fight each other.
 Until then: one repository, two top-level areas, the dependency rule
 enforced in review.
 
-**Lumina framework split — "strong reason" operationalized.** Extract the
-CrystalCore Framework from Lumina into Crystal Core only when at least one
+**Clementine framework split — "strong reason" operationalized.** Extract the
+CrystalCore Framework from Clementine into Crystal Core only when at least one
 of: a second companion app needs the Framework; an external consumer
 imports it; independent versioning/release pressure appears. Absent
-these, Lumina stays whole in Crystal Vision, per the maintainer's
+these, Clementine stays whole in Crystal Vision, per the maintainer's
 directive recorded in ADR-0011.
 
 ## Stage 4 — remaining placements

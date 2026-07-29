@@ -56,7 +56,7 @@ local working copy — see
 
 | Component | Described home today | Project | Note |
 |---|---|---|---|
-| **Lumina** — the sovereign companion, including its embedded **CrystalCore Framework** package | `src/apps/lumina/` (framework at `src/apps/lumina/crystalcore/`) | **Crystal Vision** | Flagship user-facing product, whole — per maintainer directive. The Framework keeps its ADR-0004 name while traveling with Lumina; split criteria are operationalized in [Migration-Plan §Stage 3](Migration-Plan.md). |
+| **Clementine** — the sovereign companion, including its embedded **CrystalCore Framework** package | `vision/apps/clementine/` (framework at `core/crystalcore/mind/`) | **Crystal Vision** | Flagship user-facing product, whole — per maintainer directive. The Framework keeps its ADR-0004 name while traveling with Clementine; split criteria are operationalized in [Migration-Plan §Stage 3](Migration-Plan.md). |
 | **CrystalCore Protocol pack** — Starline Weaver, Decode→Ingest→Twin pipeline, Consent Transport / Starline, RDP | `src/crystal-core/` | **Crystal Core** | The protocol machinery other components call. |
 | **Clementine** — orchestration layer coordinating comms between AI systems | `clementine/bridge/` inside the protocol pack (persona: [`CLEMENTINE.md`](../architecture/crystal-core/CLEMENTINE.md)) | **Crystal Core** — *logical component* | A named component, not a repository — per maintainer directive. |
 | **CrystalBridge** — the fail-closed MCP consent gate, plus its profile configs | `src/crystalcore/`, `src/profiles/` | **Crystal Core** | Integration/API layer. |
@@ -104,7 +104,7 @@ trees and git histories.)*
 | Repository | Role |
 |---|---|
 | `CrystalArchitect/TerAustralis-Incognita` (this repo) | The umbrella: governance, ADRs, architecture docs, research, provenance mirrors under `archive/`, and `mythos/` — **the** canon home (Codex, Apocryphon, The First Remembering, the crystalcore-os terminal). |
-| `CrystalArchitect/TerAustralis-Incognita-Code` (private) | The software, per Migration-Plan Stages 1–2: `core/` (engine — protocol pack with Clementine, CrystalBridge, mesh stub, SDK) and `vision/` (application — Lumina, voicebox, demo shells, **the site source**). Full CI; carries the Pages deploy and `CNAME`. |
+| `CrystalArchitect/TerAustralis-Incognita-Code` (private) | The software, per Migration-Plan Stages 1–2: `core/` (engine — protocol pack with Clementine, CrystalBridge, mesh stub, SDK) and `vision/` (application — Clementine, voicebox, demo shells, **the site source**). Full CI; carries the Pages deploy and `CNAME`. |
 | `CrystalArchitect/CrystalCore.OS-the-Crystal-Architecture-Archive` | The system ledger: one fleet-wide `STATUS.md` — state, receipts, known unknowns across all repositories. Deliberately small. |
 
 **Frozen provenance** — checkpointed 2026-07-17 (the laptop hand-off),
@@ -113,7 +113,7 @@ ancestors of the `-Code` tree:
 
 | Repository | Was | Lives on as |
 |---|---|---|
-| `The-Crystal-Vision` (tag `vision-safe-2026-07-17`) | Codex site + Clementine companion; holds the complete **crystalcore v0.13.4 bytecode rescue** and the laptop snapshot | Ancestor of Lumina's embedded framework (which forked the earlier 0.7.0 line — see open decisions) |
+| `The-Crystal-Vision` (tag `vision-safe-2026-07-17`) | Codex site + Clementine companion; holds the complete **crystalcore v0.13.4 bytecode rescue** and the laptop snapshot | Ancestor of Clementine's embedded framework (which forked the earlier 0.7.0 line — see open decisions) |
 | `crystalcore` (tag `crystalcore-safe-2026-07-17`) | The Songline protocol pack | Direct ancestor of `core/crystal-core` (SonglineBus → Starline Weaver) |
 | `crystal-vision` | Static demo shell (Grok build) | Direct ancestor of `vision/apps/crystal-interface` |
 
@@ -133,7 +133,7 @@ happens.
 
 - **Stage 3 repo count** — whether `core/`/`vision/` split into two
   repositories (Migration-Plan criteria; deliberately not decided here).
-- **0.13.4 lineage** — Lumina's framework forked the 0.7.0 line; the
+- **0.13.4 lineage** — Clementine's framework forked the 0.7.0 line; the
   0.13.4 rescue's extras (SpaceXAI provider, `node.py`, `status.py`,
   CLI) sit unreconciled in `The-Crystal-Vision`.
 - **Frozen repos' end state** — GitHub-archive (read-only flag) the

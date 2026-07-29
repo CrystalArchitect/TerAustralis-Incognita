@@ -95,9 +95,9 @@ This is the most consequential finding in the whole review, so it's worth statin
 
 | Component | What it is | Status |
 |---|---|---|
-| `src/crystalcore` | **CrystalBridge** — a fail-closed MCP server letting a guest AI reach Lumina with only granted access. Internally coherent and precisely wired — but its own docstring claims four checks (approval, permission, scope, provenance) while the code implements exactly two. | 🔴 Zero test coverage |
+| `src/crystalcore` | **CrystalBridge** — a fail-closed MCP server letting a guest AI reach Clementine with only granted access. Internally coherent and precisely wired — but its own docstring claims four checks (approval, permission, scope, provenance) while the code implements exactly two. | 🔴 Zero test coverage |
 | `src/crystal-core` | **The protocol pack** — the strongest engineering in the repo: a real Noise-protocol P2P transport (`consent_transport`, 9/9), a labeled multi-agent message bus with a kill switch (`clementine/bridge`, 7/7), a hash-chained audit + decision kernel with property-based tests (`rdp`, 31/31), and a decode/ingest pipeline (`services`, 4/4). | ✅ 51 self-tests |
-| `src/runtime` | A well-built, generic service-orchestration scaffold (coordinator, registry, events, config, plugins, logging, API) — heavily tested, defensively written — with no domain logic tying it to Lumina, consent, or MCP. Grep confirms two textual mentions of the other systems in the entire tree, both in comments, neither a real import. | ✅ 75 tests |
+| `src/runtime` | A well-built, generic service-orchestration scaffold (coordinator, registry, events, config, plugins, logging, API) — heavily tested, defensively written — with no domain logic tying it to Clementine, consent, or MCP. Grep confirms two textual mentions of the other systems in the entire tree, both in comments, neither a real import. | ✅ 75 tests |
 | `src/crystalcore-os` | A fourth, standalone island: half text-adventure game (a fictional "Starline Network" with a soundtrack list), half genuinely real ML research code — DistilBERT fine-tuning, Bayesian uncertainty quantification, cross-attention fusion. Wired to nothing else in the repo. | 🔴 Zero test coverage |
 
 The one genuine cross-import in the entire codebase lives in `rdp/run.py`'s demo subcommands, which lazily import the real CrystalBridge and Clementine modules to prove the wiring *can* work — deliberately kept out of any production code path, and out of the test suite, on both sides.
@@ -114,7 +114,7 @@ The one genuine cross-import in the entire codebase lives in `rdp/run.py`'s demo
 | runtime (7 submodules) | pytest, heavy mocking | 75 | root `pytest` |
 | node/mesh | pytest | 3 | root `pytest` |
 | crystalcore-os | — | none found | — |
-| apps/lumina | pytest + conftest | 16 | check.sh only — excluded from root `testpaths` |
+| apps/clementine | pytest + conftest | 16 | check.sh only — excluded from root `testpaths` |
 
 Root `pytest` collects 78 (75 + 3) exactly as the code repo's README claims. Everything above was re-run personally rather than trusted from static reads — all reported passes are confirmed by execution, not inference.
 
@@ -122,7 +122,7 @@ Root `pytest` collects 78 (75 + 3) exactly as the code repo's README claims. Eve
 
 | Term | Meaning A | Meaning B |
 |---|---|---|
-| `crystalcore` | The MCP bridge package (`src/crystalcore/`) | Lumina's internal companion framework (`src/apps/lumina/crystalcore/`) — a third and fourth meaning also exist (`src/crystalcore-os/`, and "Crystal Core" the protocol pack) |
+| `crystalcore` | The MCP bridge package (`src/crystalcore/`) | Clementine's internal companion framework (`core/crystalcore/mind/`) — a third and fourth meaning also exist (`src/crystalcore-os/`, and "Crystal Core" the protocol pack) |
 | "bridge" | `crystalcore/bridge.py` — the MCP stdio server | `clementine/bridge/` — an unrelated multi-agent chat bus |
 | scope / provenance | Named but never implemented in `gate.py`'s docstring | Fully implemented as `ExecutionContext` fields in `runtime/coordinator.py` — for a different resource model entirely |
 | "Starline" | The real P2P transport (`consent_transport`) | The message bus ("Starline Weaver") *and* a fictional game state machine in `crystalcore_os.py` |
@@ -131,11 +131,11 @@ Root `pytest` collects 78 (75 + 3) exactly as the code repo's README claims. Eve
 
 ## §5 Packaging, apps, SDK & site (teraaustralis-incognita-code — the delivery surface)
 
-> 🔴 **`packages/` is not earning its keep.** Seven `teraaustralis.*` namespace packages exist. Five non-empty ones are byte-for-byte copies of `src/` code — verified by diff, the only difference in any file is a stripped copyright header — not thin re-export wrappers. Every README describes an API surface that doesn't exist in the shipped code: fabricated class names (`ConsentTransport`, `RDP`, `Lumina` — none of which are ever defined), invented pricing tiers ("$1,000–$50,000/month" for a package that's actually a toy chat-bus demo), a content structure for `packages/mythos` matching nothing in the real `mythos/`. Nothing in `packages/` has ever been executed by a test, a self-test, or even a syntax check — `check.sh`'s `compileall` pass doesn't include the directory at all.
+> 🔴 **`packages/` is not earning its keep.** Seven `teraaustralis.*` namespace packages exist. Five non-empty ones are byte-for-byte copies of `src/` code — verified by diff, the only difference in any file is a stripped copyright header — not thin re-export wrappers. Every README describes an API surface that doesn't exist in the shipped code: fabricated class names (`ConsentTransport`, `RDP`, `Clementine` — none of which are ever defined), invented pricing tiers ("$1,000–$50,000/month" for a package that's actually a toy chat-bus demo), a content structure for `packages/mythos` matching nothing in the real `mythos/`. Nothing in `packages/` has ever been executed by a test, a self-test, or even a syntax check — `check.sh`'s `compileall` pass doesn't include the directory at all.
 
 Drift has already visibly happened, not just theoretically:
 
-- `packages/lumina/__init__.py` carries CrystalBridge's docstring, copied over by mistake — its declared console-script entry point (`lumina = "teraaustralis.lumina:main"`) points at an attribute that doesn't exist, so installing and running it would fail immediately.
+- `packages/clementine/__init__.py` carries CrystalBridge's docstring, copied over by mistake — its declared console-script entry point (`clementine = "teraaustralis.clementine:main"`) points at an attribute that doesn't exist, so installing and running it would fail immediately.
 - `packages/crystalbridge`'s copy of `bridge.py` hardcodes a relative path that resolved correctly one directory level up in the original — copied one level differently, it now points at a directory that doesn't exist in the shipped package.
 - `packages/starline` imports `teraaustralis.consent_transport` without declaring it as a dependency, so a standalone `pip install` fails before any of this even bites.
 
@@ -143,21 +143,21 @@ Drift has already visibly happened, not just theoretically:
 
 | App | Stack | Status |
 |---|---|---|
-| lumina | Flask API + Svelte 5 / Vite 6 | ✅ The most complete surface in the repo — 16 real tests, CORS locked to localhost, real memory/recall logic |
+| clementine | Flask API + Svelte 5 / Vite 6 | ✅ The most complete surface in the repo — 16 real tests, CORS locked to localhost, real memory/recall logic |
 | crystal-interface | Static HTML/JS, no framework | 🔮 Self-labeled "static demo only… Authority: HOLD" in its own SECURITY.md — good hygiene, no ambiguity |
 | vision-web | Static HTML/JS | 🔮 Unusually candid "honest scope of the simulation" section calling out its own stubs by name |
 | voicebox | stdlib-only Python, single file | ✅ Small, complete, dependency-free MCP text-to-speech server — no tests, but no stubs either |
 
 The TypeScript SDK (`src/sdk/typescript`, v0.5.0) is honestly labeled "demo / Phase 1, no npm publish, Mainnet HOLD" — and the code backing that label is real, not scaffold-with-TODOs: a working `CrystalClient` class with proper error handling, just not yet meant for anyone outside the repo to depend on.
 
-The site (`src/site`, SvelteKit + static adapter) produces nine routes through two different content mechanisms that coexist without much cross-talk: `/docs` and `/docs/[slug]` auto-load all 22 files in `src/content/` at build time; everything else — home, apocryphon, codex, crystalcore, crystalcore-os, lumina, starline, join, gallery — is hardcoded directly into Svelte components. The gallery route's 92 hardcoded entries were checked against the 92 actual image files on disk and match exactly. One redundancy worth knowing about: `/codex` (hardcoded) and `/docs/codex` (markdown-driven, from `CODEX.md`) present closely related material through two independently maintained paths.
+The site (`src/site`, SvelteKit + static adapter) produces nine routes through two different content mechanisms that coexist without much cross-talk: `/docs` and `/docs/[slug]` auto-load all 22 files in `src/content/` at build time; everything else — home, apocryphon, codex, crystalcore, crystalcore-os, clementine, starline, join, gallery — is hardcoded directly into Svelte components. The gallery route's 92 hardcoded entries were checked against the 92 actual image files on disk and match exactly. One redundancy worth knowing about: `/codex` (hardcoded) and `/docs/codex` (markdown-driven, from `CODEX.md`) present closely related material through two independently maintained paths.
 
 ### Coverage across the whole delivery surface
 
 | Surface | Executed test coverage |
 |---|---|
 | All seven `packages/` | 🔴 None — five carry dead duplicate test files that nothing ever runs |
-| apps/lumina | ✅ 16 tests, executed via check.sh |
+| apps/clementine | ✅ 16 tests, executed via check.sh |
 | apps/crystal-interface, vision-web, voicebox | 🔴 None |
 | sdk/typescript | ⚠️ Type-check only (`tsc --noEmit`, not a test runner) |
 | site | ⚠️ Type-check only (`svelte-check`, not a test runner) |
@@ -178,7 +178,7 @@ What this review of "the website" is therefore built from is the site's source (
 
 1. **Documentation lags in one direction and leads in the other.** The runtime exists in code while the docs call it unstarted; `packages/` READMEs describe products that were never built at all. Both are symptoms of the same root cause — writing and shipping happened faster than anyone had time to reconcile.
 2. **The project already knows how to fix naming collisions — it just hasn't applied the fix everywhere.** ADR-0004 disambiguated "CrystalCore" with a real taxonomy. "Starline," "bridge," and the stray "scope/provenance" echo between `gate.py` and `coordinator.py` would all benefit from the same treatment.
-3. **Test coverage is bimodal, and the gap tracks exactly where copying or reconstruction happened.** Hand-written original code (the protocol pack, the runtime, Lumina) is rigorously tested. Copied code (all of `packages/`) and reconstructed code (CrystalBridge itself, crystalcore-os) have none.
+3. **Test coverage is bimodal, and the gap tracks exactly where copying or reconstruction happened.** Hand-written original code (the protocol pack, the runtime, Clementine) is rigorously tested. Copied code (all of `packages/`) and reconstructed code (CrystalBridge itself, crystalcore-os) have none.
 4. **The honesty discipline is the project's best asset, and it hasn't yet been turned on the two weakest spots.** The Incognita Rule produces admirably candid "not built yet" language throughout the docs repo and the demo apps' own SECURITY.md files. It has not yet been applied to the repo split itself, or to what `packages/` actually ships versus what its READMEs claim.
 
 ---

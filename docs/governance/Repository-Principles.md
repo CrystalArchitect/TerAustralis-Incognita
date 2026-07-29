@@ -40,7 +40,7 @@ nine with the reasoning and the cross-references attached.
    [`Decision-Records.md`](Decision-Records.md).
 6. **Significant changes are reviewed before merging.** Branch, PR, green
    CI, maintainer merge — see [`Review-Process.md`](Review-Process.md).
-7. **Keep components loosely coupled.** Lumina, the protocol pack, and
+7. **Keep components loosely coupled.** Clementine, the protocol pack, and
    CrystalBridge stay separate packages because they answer different trust
    questions — see ["why three, not one"](../architecture/CrystalCore.md#why-three-not-one).
    A new component earns its own boundary rather than reaching into

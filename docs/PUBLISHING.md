@@ -20,7 +20,7 @@ This guide explains how to publish individual packages from the TeraAustralis re
 
 | Package | Directory | PyPI Name | License |
 |---------|-----------|-----------|---------|
-| Lumina | `packages/lumina` | `teraaustralis-lumina` | AGPL-3.0 |
+| Clementine | `packages/clementine` | `teraaustralis-clementine` | AGPL-3.0 |
 | RDP | `packages/rdp` | `teraaustralis-rdp` | AGPL-3.0 |
 | Consent Transport | `packages/consent-transport` | `teraaustralis-consent` | AGPL-3.0 |
 | CrystalBridge | `packages/crystalbridge` | `teraaustralis-bridge` | Proprietary |
@@ -68,8 +68,8 @@ Push a version tag to trigger publishing:
 
 ```bash
 # Single package release
-git tag lumina-v1.1.0
-git push origin lumina-v1.1.0
+git tag clementine-v1.1.0
+git push origin clementine-v1.1.0
 
 # All packages with same version
 git tag v1.1.0
@@ -79,7 +79,7 @@ git push origin v1.1.0
 **Tag Format:**
 - `v{version}` — Triggers all packages
 - `{package}-v{version}` — Triggers specific package
-  - `lumina-v1.1.0`
+  - `clementine-v1.1.0`
   - `rdp-v1.2.0`
   - `consent-v1.0.5`
   - `bridge-v2.0.0`
@@ -127,9 +127,9 @@ git push origin v1.2.0
 Use package-specific tags:
 
 ```bash
-# Release Lumina 1.1.0
-git tag lumina-v1.1.0
-git push origin lumina-v1.1.0
+# Release Clementine 1.1.0
+git tag clementine-v1.1.0
+git push origin clementine-v1.1.0
 
 # Release RDP 1.2.0 (different version)
 git tag rdp-v1.2.0
@@ -138,7 +138,7 @@ git push origin rdp-v1.2.0
 
 ## License Considerations
 
-### AGPL v3 Packages (Lumina, Starline, Consent, RDP)
+### AGPL v3 Packages (Clementine, Starline, Consent, RDP)
 
 - **PyPI:** Published under AGPL-3.0
 - **Commercial Use:** Available via commercial licensing

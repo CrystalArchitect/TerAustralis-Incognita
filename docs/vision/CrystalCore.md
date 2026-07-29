@@ -10,7 +10,7 @@ recorded in [`ADR-0004`](../adr/ADR-0004.md).
 ```
 CrystalCore
 │
-├── CrystalCore Framework        the sovereign-companion engine (Lumina runs on it)
+├── CrystalCore Framework        the sovereign-companion engine (Clementine runs on it)
 │
 ├── CrystalCore Protocol         the multi-agent protocol pack (Weaver, pipeline,
 │                                Starline, RDP)
@@ -32,7 +32,7 @@ not software at all; it's how the repository is organized and governed
 
 | Canonical name | What it is | Layer | Where |
 |---|---|---|---|
-| **CrystalCore Framework** | The sovereign-companion engine Lumina runs on: brain, layered memory, profiles | Built | `src/apps/lumina/crystalcore/` |
+| **CrystalCore Framework** | The sovereign-companion engine Clementine runs on: brain, layered memory, profiles | Built | `core/crystalcore/mind/` |
 | **CrystalCore Protocol** | Starline Weaver, Decode→Ingest→Twin pipeline, Starline, RDP record kernel | Built | `src/crystal-core/` |
 | **CrystalBridge** | The MCP consent gate — a Python package that happens to also be named `crystalcore` | Built | `src/crystalcore/` |
 | **CrystalCore OS** (platform) | This repository's organizational architecture — layout, docs tree, governance, AI collaboration model | Process | [`docs/architecture/SystemMap.md`](../architecture/SystemMap.md), [`ADR-0001`](../adr/ADR-0001.md) |

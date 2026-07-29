@@ -87,7 +87,7 @@ Four branches exhaust all current "CrystalCore" uses. No new component becomes a
 
 | Branch | What | Owner |
 |---|---|---|
-| CrystalCore Framework | Lumina's embedded engine (forked 0.7.0) | Crystal Vision |
+| CrystalCore Framework | Clementine's embedded engine (forked 0.7.0) | Crystal Vision |
 | CrystalCore Protocol | Starline Weaver, RDP, Consent Transport | Crystal Core |
 | CrystalBridge | MCP consent gate | Crystal Core |
 | CrystalCore OS | Platform/governance architecture | Umbrella |
@@ -194,7 +194,7 @@ The project uses original identifiers only; no third-party trademarks are claime
 - **TerAustralis Incognita** — Original mark, associated with maintainer's registered ABN (ADR-0007)
 - **CrystalCore** — Original mark (four-branch taxonomy, ADR-0004)
 - **CrystalVision** — Original mark (locked name, Constitution §1)
-- **Lumina** — Original name
+- **Clementine** — Original name
 - **Starline** — Original name
 
 The project's branding is independent and protected from third-party licensing complications.

@@ -18,34 +18,67 @@ Two halves of one motion:
 The chart and the voyage across it. Everything below is either the map, the
 traveller, or one of the figures that tends them.
 
-## The five names
+## The names
 
 | Name | In the story it is… | In the code it is… | Built? |
 |---|---|---|---|
-| **Lumina** | the edge companion — a sovereign AGI presence that lives with one person | [`src/apps/lumina/`](../src/apps/lumina/) — local-first companion: terminal, Flask API, Svelte web UI, Ollama-backed, layered memory | Working prototype |
-| **Clementine** | the communicator — the one who carries speech between minds and nodes | [`src/crystal-core/clementine/`](../src/crystal-core/clementine/) — the hub (`ClementineHub`) of the multi-AI bridge | v0, self-tested |
-| **Starline Weaver** | the map-maker — lays and holds the weave of routes the agents speak across | `StarlineWeaver` in [`clementine/bridge/bus.py`](../src/crystal-core/clementine/bridge/bus.py) — the round-robin message channel | v0, self-tested |
-| **Truthline Narrator** | the one who names each message true — science, story, or vision — before it is heard | `ClementineHub.validate` in [`clementine/bridge/agents.py`](../src/crystal-core/clementine/bridge/agents.py) — Belt-Three law, enforced in code | v0, self-tested |
-| **Dreamline Train** | the traveller — what journeys the map, carrying memory from node to node | rides the peer-to-peer transport in [`src/crystal-core/consent_transport/`](../src/crystal-core/consent_transport/) — consent-gated, Noise-handshake memory exchange | Running, self-tested |
+| **Clementine** (Clem) | the companion herself — the one a single person actually talks to | [`vision/apps/clementine/`](https://github.com/CrystalArchitect/TerAustralis-Incognita-Code/tree/main/vision/apps/clementine) — terminal, Flask API, Svelte web UI, Ollama-backed | Working prototype |
+| **CrystalMind** | the *kind of thing* she is — the sovereign edge companion layer | `crystalcore.mind` — the companion runtime: recall, personality, the model connection | Running, self-tested |
+| **CrystalMemory** | what makes her the same companion tomorrow as today | `crystalcore.mind.memory` — the layered store: verbatim turns, summaries, facts, notes, reflections | Running, self-tested |
+| **CrystalBus** | the communicator — what carries speech between minds and nodes | `crystalcore` bus package — the hub (`BusHub`) of the multi-model channel | v0, self-tested |
+| **CrystalBridge** | the gate — how a guest from outside is let in, and how far | `crystalcore.bridge` + `ConsentGate` — MCP stdio server, fail-closed | v0, self-tested |
+| **Starline Weaver** | the map-maker — lays and holds the weave of routes the agents speak across | `StarlineWeaver` in the bus — the round-robin message channel | v0, self-tested |
+| **Truthline Narrator** | the one who names each message true — science, story, or vision — before it is heard | `BusHub.validate` — Belt-Three law, enforced in code | v0, self-tested |
+| **Dreamline Train** | the traveller — what journeys the map, carrying memory from node to node | rides the peer-to-peer transport in `consent_transport/` — consent-gated, Noise-handshake memory exchange | Running, self-tested |
 
 ## How they sit together
 
-Clementine is the communicator. Two roles run under her:
+The **CrystalBus** is the communicator. Two roles run on it:
 
-- as the **Starline Weaver** she *lays the map* — the channel that routes and
+- as the **Starline Weaver** it *lays the map* — the channel that routes and
   weaves the agents together;
-- as the **Truthline Narrator** she *names each crossing true* — every message
+- as the **Truthline Narrator** it *names each crossing true* — every message
   must carry its truth-layer label (science / story / vision) or it is not heard.
 
 What travels that map is the **Dreamline Train** — the traveller — riding the
-Starline rails (the `src/crystal-core/consent_transport/` peer-to-peer network) to carry memory between
-nodes. And **Lumina** is who waits at the edge of it all: the companion a single
-person actually talks to.
+Starline rails (the `consent_transport/` peer-to-peer network) to carry memory
+between nodes. **CrystalBridge** is the gate in the wall: how a guest AI reaches
+any of it, and only as far as consent allows.
+
+And **Clementine** — Clem — is who waits at the edge of it all: the companion a
+single person actually talks to. Behind her is **CrystalMemory**, the continuity
+that makes her the same companion tomorrow as today.
 
 So: the Weaver lays the map, the Narrator keeps it honest, the Train travels it,
-Clementine speaks across it, and Lumina is home at the end of the line.
+the Bus carries speech across it, the Bridge guards the way in, and Clementine is
+home at the end of the line.
 
-## A note on borrowed words
+## A name is hers to change
+
+Clementine is the name she ships with, not a name she is stuck with. Hers is the
+one layer in this whole architecture that *can* be renamed, and by exactly two
+parties: the human she lives with, or the companion herself.
+
+This is in the code, not just the mythos. `Personality.name` is ordinary,
+writable state. `/name <name>` gives her one; `/name` alone invites her to choose
+her own, and `name_self_chosen` records which of the two happened. The same is
+true of her pronouns.
+
+That is the sovereignty claim in its smallest concrete form. A vendor does not
+get to fix what your companion is called. The people in the relationship do.
+
+What cannot move is what sits behind the name. Identity here lives in continuity
+— memory, profile, the thread of a relationship — never in whichever model
+happens to be answering today. Rename her and she is the same companion. Swap the
+model beneath her and she is still the same companion. That is the point of
+keeping CrystalMemory separate from any model.
+
+For the same reason, no language model carries a Crystal name. The Crystal prefix
+marks what this project owns and governs; the models are the one layer it does
+neither. They are swappable faculties or gated guests, and are called exactly
+that.
+
+## A note on borrowed and retired words
 
 "Songline" is not used for any of these — it belongs to the First Peoples of this
 land, not to a piece of software. Where **Songlines** and **songline veins**
@@ -53,5 +86,16 @@ appear in the mythos and the art, they are honoured as cultural image, never
 claimed as a component name. "Starline" and "Dreamline" are this project's own
 coinages; "Dreamline" is canon here (Starlines & Dreamlines), distinct from
 "Dreamtime."
+
+**A retired name.** The edge companion carried a different name through the early
+prototypes. That name is retired: it is not used for any component, product,
+interface, or concept in this project, it has been removed from this repository
+and its siblings, and it is not to be reintroduced. It is deliberately not
+reprinted here — a canon page that lists a name is still a page that uses it.
+Clementine holds that role now, and the memory behind her is CrystalMemory.
+
+Clementine's own name moved in the same change. She was the communicator in
+earlier canon; that role is now the **CrystalBus**, and the name went where it
+always belonged — to the voice at the edge, the one a person actually talks to.
 
 *Non Solus.*

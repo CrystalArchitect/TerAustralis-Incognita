@@ -12,7 +12,7 @@ Internal paths and claims inside archived material describe the repository
 
 | Folder | What it is |
 |---|---|
-| `legacy/crystalcore-app/` | The pre-monorepo application (Lumina's ancestor with its own site, batch launchers, and docs) — superseded by `src/apps/lumina/` and `src/site/` |
+| `legacy/crystalcore-app/` | The pre-monorepo application (Clementine's ancestor with its own site, batch launchers, and docs) — superseded by `vision/apps/clementine/` and `src/site/` |
 | `2026/local-snapshot-2026-07-17/` | A dated working-tree snapshot from the machine migration, including the crystalcore v0.13 recovery state |
 
 New archive material lands under a dated folder (`2026/…`) or `legacy/`,

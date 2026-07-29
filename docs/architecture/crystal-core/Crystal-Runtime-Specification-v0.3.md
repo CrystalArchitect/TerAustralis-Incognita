@@ -10,13 +10,13 @@
 
 ### What the Runtime Is
 
-The Crystal Runtime is a coordination layer that orchestrates the interaction between independent systems already built and working: Lumina, Starline, Starline Weaver, CrystalBridge, and RDP.
+The Crystal Runtime is a coordination layer that orchestrates the interaction between independent systems already built and working: Clementine, Starline, Starline Weaver, CrystalBridge, and RDP.
 
 The runtime does not provide AI capabilities, consensus mechanisms, or protocol implementations. It coordinates existing capabilities, maintains component lifecycle, routes requests to appropriate systems, and provides a unified external interface.
 
 ### What It Is Not
 
-- **Not a replacement for Lumina, Starline, Starline Weaver, CrystalBridge, or RDP.** Each retains its responsibility and operates independently.
+- **Not a replacement for Clementine, Starline, Starline Weaver, CrystalBridge, or RDP.** Each retains its responsibility and operates independently.
 - **Not an AI orchestrator in the algorithmic sense.** The AI Orchestrator is a documented decision process in `docs/ai/Decision-Matrix.md`, not a runtime dispatcher. Any future automation of that process requires its own specification and ADR.
 - **Not a message bus.** The Starline Weaver provides that. The runtime uses it where needed but does not replace or duplicate it.
 - **Not a storage system.** Each component manages its own state; the runtime coordinates access, not ownership.
@@ -28,15 +28,15 @@ CrystalCore OS is the platform — the repository structure, governance model, d
 
 The Crystal Runtime is a *component* within that platform. It is not another "CrystalCore-*" name; that naming is locked per `docs/adr/ADR-0004.md`. The runtime has one name, one responsibility set, and one interface contract.
 
-### Relationship to Lumina
+### Relationship to Clementine
 
-**Lumina** is an independent local-first AI companion that provides conversational AI, memory management, and voice interaction.
+**Clementine** is an independent local-first AI companion that provides conversational AI, memory management, and voice interaction.
 
-- **Remains independent:** Lumina's AI model, memory system, and terminal interface are unchanged.
-- **Runtime interaction:** Lumina registers with the runtime's Registry. The runtime can route requests to Lumina through standard interfaces.
-- **What the runtime does not do:** The runtime does not choose what Lumina says, modify its memory, or override its decisions.
+- **Remains independent:** Clementine's AI model, memory system, and terminal interface are unchanged.
+- **Runtime interaction:** Clementine registers with the runtime's Registry. The runtime can route requests to Clementine through standard interfaces.
+- **What the runtime does not do:** The runtime does not choose what Clementine says, modify its memory, or override its decisions.
 - **Data exchanged:** Task requests (text, voice, context) and responses (text, structured data).
-- **Failure isolation:** If Lumina is unavailable, the runtime marks it as offline in the Registry and fails requests appropriately without cascading.
+- **Failure isolation:** If Clementine is unavailable, the runtime marks it as offline in the Registry and fails requests appropriately without cascading.
 
 ### Relationship to Starline
 
@@ -144,7 +144,7 @@ The runtime's decision to route a request to a component does not grant that com
         │               │               │
         ├──────────────┬┼┬──────────────┤
         │              │││              │
-     Lumina      Starline Weaver   CrystalBridge
+     Clementine      Starline Weaver   CrystalBridge
         │              │││              │
         └──────────────┴┼┴──────────────┘
                         │
@@ -157,7 +157,7 @@ The runtime's decision to route a request to a component does not grant that com
 1. **Request arrives** at the runtime's API boundary (CrystalBridge consent gate already passed).
 2. **Coordinator** receives the request and determines which components are needed.
 3. **Registry** provides current availability and capabilities of each component.
-4. **Events** carry task data to target components (Lumina, Weaver, Starline).
+4. **Events** carry task data to target components (Clementine, Weaver, Starline).
 5. **Components execute** independently using their existing logic.
 6. **Results return** through Events to the Coordinator.
 7. **Logging** records the transaction to RDP and operational logs.
@@ -235,7 +235,7 @@ Coordinator.execute_workflow(
 **Future Extension Points**
 
 - Pluggable workflow engines (different orchestration strategies per task type).
-- Distributed coordination if multi-instance Lumina is built.
+- Distributed coordination if multi-instance Clementine is built.
 - Advanced scheduling (priority queues, resource constraints).
 
 ---
@@ -676,31 +676,31 @@ API.health_check() -> HealthStatus
 
 ## 5. Component Integration
 
-### Lumina Integration
+### Clementine Integration
 
-**Lumina remains an independent system.** The runtime does not control its AI model, memory, or terminal interface.
+**Clementine remains an independent system.** The runtime does not control its AI model, memory, or terminal interface.
 
 **Runtime interaction:**
-- Lumina registers itself with the Registry under capability `"ai.lumina"`.
-- When a task requires conversational AI, the Coordinator routes it to Lumina via Events.
-- Lumina processes the request using its own logic and returns a response.
+- Clementine registers itself with the Registry under capability `"ai.clementine"`.
+- When a task requires conversational AI, the Coordinator routes it to Clementine via Events.
+- Clementine processes the request using its own logic and returns a response.
 - The response flows back through Events to the Coordinator.
 
 **What remains independent:**
-- Lumina's choice of which model to use.
-- Lumina's memory management and recall strategy.
-- Lumina's voice interface and terminal UI.
-- Lumina's internal error handling.
+- Clementine's choice of which model to use.
+- Clementine's memory management and recall strategy.
+- Clementine's voice interface and terminal UI.
+- Clementine's internal error handling.
 
 **Data exchanged:**
 - Request: task description, context (user message, prior conversation).
 - Response: AI-generated text or structured data.
 
 **Failure isolation:**
-- If Lumina crashes, the Registry marks it offline.
-- In-flight requests to Lumina timeout and are failed back to the caller.
+- If Clementine crashes, the Registry marks it offline.
+- In-flight requests to Clementine timeout and are failed back to the caller.
 - The runtime continues operating; other workflows proceed.
-- Lumina restarts independently (not controlled by the runtime).
+- Clementine restarts independently (not controlled by the runtime).
 
 ### Starline Integration
 
@@ -967,7 +967,7 @@ Operational logs answer: "What is the runtime doing right now?"
 
 Examples:
 - `[INFO] Coordinator starting task ID 12345`.
-- `[INFO] Component Lumina registered, available.`.
+- `[INFO] Component Clementine registered, available.`.
 - `[WARN] Timeout waiting for Weaver response, failing task.`.
 
 Retention: 30 days (configurable).  
@@ -978,7 +978,7 @@ Destination: Log files, stdout/stderr.
 Diagnostic logs answer: "Why is the runtime behaving this way?"
 
 Examples:
-- `[DEBUG] Registry query for 'ai.lumina' returned 1 match.`.
+- `[DEBUG] Registry query for 'ai.clementine' returned 1 match.`.
 - `[DEBUG] Event published to 3 subscribers, delivered to 2, 1 timeout.`.
 - `[TRACE] Coordinator.execute() entering state machine: AWAITING_REGISTRY.`.
 
@@ -1035,7 +1035,7 @@ The operation failed in a way that will not succeed on retry.
 Examples:
 - A required component was not found (not registered).
 - Task exceeds allowed scope from CrystalBridge.
-- A component rejected the task permanently (e.g., Lumina's refusal).
+- A component rejected the task permanently (e.g., Clementine's refusal).
 
 **Runtime behavior:** Fail the task immediately. Do not retry.
 
@@ -1108,7 +1108,7 @@ Testing verifies that the runtime correctly orchestrates components and handles 
 
 ### Contract Testing
 
-**Scope:** Runtime interfaces with external components (Lumina, Starline, Weaver, CrystalBridge, RDP).
+**Scope:** Runtime interfaces with external components (Clementine, Starline, Weaver, CrystalBridge, RDP).
 
 **Emphasis:**
 - Request/response format (do we send valid requests, do we parse responses correctly?).
@@ -1116,8 +1116,8 @@ Testing verifies that the runtime correctly orchestrates components and handles 
 - Timeout behavior (do we wait appropriately and timeout correctly?).
 
 **Example:**
-- Mock Lumina returning a response, verify the Coordinator correctly parses it.
-- Mock Lumina timing out, verify the Coordinator fails the task appropriately.
+- Mock Clementine returning a response, verify the Coordinator correctly parses it.
+- Mock Clementine timing out, verify the Coordinator fails the task appropriately.
 - Mock CrystalBridge rejecting a request, verify the Coordinator fails the task.
 
 ### Replay Testing
@@ -1129,7 +1129,7 @@ Testing verifies that the runtime correctly orchestrates components and handles 
 - Failure scenario coverage (recorded sequences of edge cases and failures).
 
 **Example:**
-- Record a sequence of events: Coordinator receives task, Registry returns capabilities, Coordinator routes to Lumina, Lumina times out, Coordinator fails the task.
+- Record a sequence of events: Coordinator receives task, Registry returns capabilities, Coordinator routes to Clementine, Clementine times out, Coordinator fails the task.
 - Replay that sequence and verify the same outcome.
 
 ### End-to-End Testing
@@ -1266,7 +1266,7 @@ This specification does not modify Starline, Starline Weaver, CrystalBridge, or 
 
 ### Replacement of Existing Systems
 
-The runtime does not replace Lumina, Starline, CrystalBridge, or RDP. It coordinates them. If future versions of those systems are needed, they are built independently; the runtime adapts by updating how it invokes them.
+The runtime does not replace Clementine, Starline, CrystalBridge, or RDP. It coordinates them. If future versions of those systems are needed, they are built independently; the runtime adapts by updating how it invokes them.
 
 ### Repository Organization
 

@@ -5,9 +5,9 @@ is in [`docs/vision/CrystalCore.md`](../vision/CrystalCore.md) and
 [`ADR-0004`](../adr/ADR-0004.md). This page covers the three *built*
 branches of that tree and how they divide the work.
 
-## The Framework (`src/apps/lumina/crystalcore/`)
+## The Framework (`core/crystalcore/mind/`)
 
-The sovereign-companion framework Lumina runs on:
+The sovereign-companion framework Clementine runs on:
 
 - `companion.py` — the brain: memory layers, recall, chat, and the Covenant
   carried in the core prompt
@@ -45,7 +45,7 @@ Four components, stdlib-only except where real cryptography is required:
 
 ## CrystalBridge (`src/crystalcore/`)
 
-CrystalBridge: the MCP stdio server that lets a guest AI meet Lumina —
+CrystalBridge: the MCP stdio server that lets a guest AI meet Clementine —
 fail-closed. Every tool call passes four checks in order (approval →
 permission → scope → provenance, `gate.py`) and lands in an append-only
 audit log (`audit.py`). Guest grants live in

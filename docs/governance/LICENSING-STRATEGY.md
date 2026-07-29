@@ -28,8 +28,8 @@ The repository currently mixes seven products under Apache-2.0, creating IP expo
 
 ## Product Analysis & Recommendations
 
-### 1. 📱 **Lumina** (The Sovereign Companion)
-**Location**: `src/apps/lumina/`  
+### 1. 📱 **Clementine** (The Sovereign Companion)
+**Location**: `vision/apps/clementine/`  
 **What it is**: Local-first AI companion with persona, memory, Flask API, web UI
 
 **Strategic Value**: ⭐⭐⭐⭐⭐ **VERY HIGH**
@@ -218,7 +218,7 @@ Why Proprietary:
 
 | Product | Package | Location | License | Commercial | Support |
 |---------|---------|----------|---------|-----------|---------|
-| **Lumina** | `@teraaustralis/lumina` | `packages/lumina/` | AGPL v3 | Optional (commercial variant) | Community + Commercial |
+| **Clementine** | `@teraaustralis/clementine` | `packages/clementine/` | AGPL v3 | Optional (commercial variant) | Community + Commercial |
 | **Starline Weaver** | `@teraaustralis/starline` | `packages/starline/` | AGPL v3 | Consulting/integration | Community + Consulting |
 | **Consent Transport** | `@teraaustralis/consent` | `packages/consent-transport/` | AGPL v3 | Research licensing | Academic + Support |
 | **RDP** | `@teraaustralis/rdp` | `packages/rdp/` | AGPL v3 | Audit/compliance licensing | Commercial (regulated industries) |
@@ -230,7 +230,7 @@ Why Proprietary:
 
 ## Licensing Tiers & Pricing
 
-### AGPL v3 Products (Lumina, Starline, Consent, RDP)
+### AGPL v3 Products (Clementine, Starline, Consent, RDP)
 **Open source, free to use. Optional commercial support:**
 
 | Tier | Cost | Support | Use Case |

@@ -7,14 +7,14 @@ overrides it.
 
 ## Software direction
 
-- **Lumina grows more reliable before she grows more capable** — error
+- **Clementine grows more reliable before she grows more capable** — error
   recovery, memory export and deletion, fact-checking against her own memory
   (MILESTONES.md Month 4+).
 - **From stub to mesh** — `src/node/mesh/` keeps the API shape of a real
   libp2p host so that gossipsub, Noise, and peer discovery can replace the
   in-process stub without rewriting callers. A mainnet mesh is explicitly on
   hold until consent and safety questions are settled.
-- **Multi-instance Lumina** — two sovereign companions exchanging consented
+- **Multi-instance Clementine** — two sovereign companions exchanging consented
   memory over Starline rails. Design not started; the consent law it would
   run under already exists in code (`src/crystal-core/consent_transport/consent.py`).
 - **A consumer for the SDK** — `src/sdk/typescript/` is a scaffold until

@@ -120,7 +120,7 @@ What stays local: **memory files**, **embeddings**, **profiles**, and the web UI
 
 # 2. Explicit opt-in, then chat with SpaceXAI
 python clementine.py --provider spacexai --model grok-4.5
-# Windows: double-click Start-Lumina-SpaceXAI.bat  (records opt-in)
+# Windows: double-click Start-Clementine-SpaceXAI.bat  (records opt-in)
 # Web: pick spacexai → confirm dialog → Save profile
 # Mid-session:
 #   /optin

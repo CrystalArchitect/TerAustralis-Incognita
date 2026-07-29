@@ -39,7 +39,7 @@
                                                        │
                                       ┌────────────────▼─┐
                                       │ AGPL v3          │
-                                      │ (Lumina, etc)    │
+                                      │ (Clementine, etc)    │
                                       │                  │
                                       │ - Open source    │
                                       │ - Free to use    │
@@ -76,11 +76,11 @@
 ║ TeraAustralis Products & Licenses                                 ║
 ╠════════════════════════════════════════════════════════════════════╣
 ║                                                                    ║
-║  📱 LUMINA (Companion)                                            ║
+║  📱 CLEMENTINE (Companion)                                            ║
 ║  ├─ License: AGPL v3                                             ║
 ║  ├─ Strategy: Open source + support services                     ║
 ║  ├─ Revenue: Consulting, support contracts, SaaS variant         ║
-║  └─ Contact: lumina@teraaustralis.dev                            ║
+║  └─ Contact: clementine@teraaustralis.dev                            ║
 ║                                                                    ║
 ║  🔌 STARLINE WEAVER (Message Bus)                                ║
 ║  ├─ License: AGPL v3                                             ║
@@ -125,7 +125,7 @@
 
 ## 💰 Revenue Model by License Type
 
-### AGPL v3 (Lumina, Starline, Consent, RDP)
+### AGPL v3 (Clementine, Starline, Consent, RDP)
 ```
 Free/Open Source → + Services = Revenue
                     
@@ -164,7 +164,7 @@ Annual: $500K–$2M+ (high-value customers)
 ## 🔄 Product Dependencies
 
 ```
-Lumina (End-user facing)
+Clementine (End-user facing)
     ↓ imports
     ├→ Starline (message bus)
     ├→ Consent (P2P secure)
@@ -269,7 +269,7 @@ licenses/
 ├── MIT.txt                    (Full text)
 ├── CC-BY-NC-ND-4.0.txt        (Full text)
 │
-packages/lumina/
+packages/clementine/
 ├── LICENSE.md                 (AGPL v3 - copy from above)
 │
 packages/starline/

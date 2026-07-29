@@ -53,7 +53,7 @@ This ensures that even constitutional change does not rewrite history.
 {
   "statement": "string (1-500 chars)",
   "source": {
-    "origin": "lumina|api|human|archive",
+    "origin": "clementine|api|human|archive",
     "identifier": "string",
     "timestamp": "ISO8601 UTC"
   },
@@ -105,7 +105,7 @@ If a breaking change (e.g., new required field) becomes necessary:
 
 Semantic versioning for the implementation:
 - `v0.1.0`: Initial Convergence Lens release (observation-only surfaces, five governance keys)
-- `v0.2.0`: Example — Lumina integration (new features, no breaking changes to existing APIs)
+- `v0.2.0`: Example — Clementine integration (new features, no breaking changes to existing APIs)
 - `v1.0.0`: Only when Constitution and Archive contracts are frozen (all layers mature)
 
 All releases are tagged in git as `v{major}.{minor}.{patch}`.

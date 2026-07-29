@@ -82,7 +82,7 @@ Seven `teraaustralis.*` namespace packages exist. Five non-empty ones are byte-f
 **Discussion**
 
 **Specific issues:**
-- `packages/lumina/__init__.py`: carries CrystalBridge's docstring (copied by mistake); entry point (`lumina = "teraaustralis.lumina:main"`) points at non-existent attribute → fails on install.
+- `packages/clementine/__init__.py`: carries CrystalBridge's docstring (copied by mistake); entry point (`clementine = "teraaustralis.clementine:main"`) points at non-existent attribute → fails on install.
 - `packages/crystalbridge`: hardcodes relative path that worked one level up; copied differently, points at non-existent directory.
 - `packages/starline`: imports `teraaustralis.consent_transport` without declaring it as dependency → `pip install` fails.
 
@@ -200,17 +200,17 @@ Each component is in one of four states: Running (built, tested, in production o
 | Crystal Runtime | Running ✅ | 75 pytest; 7 submodules (contradicts Roadmap.md) |
 | Mesh stub | Built-not-running ✅ | 3 pytest; transport library |
 | TypeScript SDK | Designed-not-built 🔮 | v0.5.0; Phase 1 / Mainnet HOLD |
-| Lumina companion | Running ✅ | 16 pytest; most complete surface |
+| Clementine companion | Running ✅ | 16 pytest; most complete surface |
 | Voicebox (TTS server) | Running ✅ | No tests; single file, stdlib-only |
 | Demo shells | Built-not-running 🔮 | HOLD status; honest scope labeling |
 | Site (SvelteKit) | Running ✅ | Type-check only; 9 routes, deployed |
 | CrystalCore.OS mythos terminal | Designed-not-built 🔮 | Half game, half ML research; not wired |
-| CrystalCore Framework | Running ✅ | 16 tests (via Lumina); 0.7.0 fork |
+| CrystalCore Framework | Running ✅ | 16 tests (via Clementine); 0.7.0 fork |
 | Protocol pack | Running ✅ | 51 self-tests; strongest engineering |
 | dbt emotion warehouse | Designed-not-built 🔴 | Syntax error; no data source; 0 tests |
 
 **Summary by state:**
-- Running ✅: 5 components (Lumina, voicebox, site, runtime, protocol pack)
+- Running ✅: 5 components (Clementine, voicebox, site, runtime, protocol pack)
 - Built-not-running ✅: 7 components (protocol submodules, runtime, mesh) — pass tests, not deployed
 - Designed-not-built 🔮: 4 components (SDK, demos, mythos, Framework) — spec exists, marked not-yet-ready
 - Concept-only: None (all design has at least a spec)
@@ -246,13 +246,13 @@ Each component is in one of four states: Running (built, tested, in production o
 | crystal-core / services | selftest.py | 4 / 4 |
 | runtime (7 submodules) | pytest (heavy mocking) | 75 |
 | node/mesh | pytest | 3 |
-| apps/lumina | pytest + conftest | 16 |
+| apps/clementine | pytest + conftest | 16 |
 | **Total confirmed** | — | **70 passing** |
 
 **Umbrella repo:** Legacy `tests/` existed pre-reorg; not re-run post-split. Not included in `-Code` tally.
 
 **Bimodal distribution:**
-- Hand-written original (protocol pack, runtime, Lumina): heavily tested.
+- Hand-written original (protocol pack, runtime, Clementine): heavily tested.
 - Copied code (packages/): zero coverage.
 - Reconstructed code (CrystalBridge, crystalcore-os): zero coverage.
 
@@ -282,7 +282,7 @@ Several terms name more than one thing across the codebase. ADR-0004 resolved th
 
 | Term | Meaning A | Meaning B | Notes |
 |---|---|---|---|
-| `crystalcore` | MCP bridge package | Lumina's internal framework | Also: game state, protocol pack (4 meanings) |
+| `crystalcore` | MCP bridge package | Clementine's internal framework | Also: game state, protocol pack (4 meanings) |
 | "bridge" | MCP stdio server | Multi-agent chat bus | Unrelated, same word |
 | scope / provenance | Named in `gate.py` docstring | Implemented in `runtime/coordinator.py` | Different resource models |
 | "Starline" | Real P2P transport | Message bus + fictional state machine | Three meanings in two docs |

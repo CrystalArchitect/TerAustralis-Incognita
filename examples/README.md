@@ -16,7 +16,7 @@ demonstrate.
 | RDP: every precedence tier decides, every verdict recorded | `cd src/crystal-core && python3 -m rdp.run demo` |
 | RDP witnessing a real Weaver matrix run | `cd src/crystal-core && python3 -m rdp.run matrix-demo` |
 | The pipeline over sample events | `cd src/crystal-core && python3 -m services.pipeline services/sample-events/budapest.jsonl` |
-| Lumina, the sovereign companion | `cd src/apps/lumina && python3 lumina.py` |
+| Clementine, the sovereign companion | `cd src/apps/clementine && python3 clementine.py` |
 | The mythos as a terminal | `python3 src/crystalcore-os/crystalcore_os.py` |
 
 Recorded transcripts of the Starline Weaver in action:
