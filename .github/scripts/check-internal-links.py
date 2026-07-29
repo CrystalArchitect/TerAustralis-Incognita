@@ -43,6 +43,24 @@ KNOWN_ABSENT_ROOTS = ("src/", "packages/", "scripts/", "tests/", "corpus/")
 
 LINK = re.compile(r'\[[^\]]*\]\(([^)\s]+)(?:\s+"[^"]*")?\)')
 
+# Links inside code are being *quoted*, not followed -- a document that
+# shows `![cover](assets/cover.jpeg)` as an example of markup is not
+# claiming that path exists relative to itself. Strip fenced blocks and
+# inline spans before matching, or every doc that quotes a link fails.
+FENCE = re.compile(r"^```.*?^```", re.MULTILINE | re.DOTALL)
+INDENTED_FENCE = re.compile(r"^~~~.*?^~~~", re.MULTILINE | re.DOTALL)
+INLINE_CODE = re.compile(r"`+[^`\n]*`+")
+
+
+def strip_code(text: str) -> str:
+    """Blank out code regions, preserving line count so any future
+    line-numbered reporting still points at the right place."""
+    def blank(m):
+        return re.sub(r"[^\n]", " ", m.group(0))
+    text = FENCE.sub(blank, text)
+    text = INDENTED_FENCE.sub(blank, text)
+    return INLINE_CODE.sub(blank, text)
+
 
 def tracked_files() -> list[str]:
     out = subprocess.run(
@@ -76,7 +94,7 @@ def main(argv: list[str]) -> int:
         except OSError:
             continue
 
-        for match in LINK.finditer(text):
+        for match in LINK.finditer(strip_code(text)):
             url = match.group(1)
             if url.startswith(("http://", "https://", "mailto:", "tel:", "data:", "#")):
                 continue
