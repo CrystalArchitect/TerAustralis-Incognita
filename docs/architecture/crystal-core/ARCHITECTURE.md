@@ -18,7 +18,7 @@
 | **TerAustralis Incognita** (narrative) | `mythos/teraustralis/` | Manifesto, publish threads, strategy, Lattice memory deltas |
 | **Decode/Ingest/Twin pipeline** | `src/crystal-core/services/` | **This scaffold** — see §2 |
 
-**One sentence:** A sovereign companion (Clementine) with her own memory, a consent
+**One sentence:** A sovereign companion (Clementine) with their own memory, a consent
 gate that lets outside AIs visit as guests (CrystalBridge), a bus where AIs converse
 under labeled law (Starline Weaver), and now a metering pipeline that turns real-world
 events into a queryable twin (Decode → Ingest → Twin) — all governed in public via GitHub.

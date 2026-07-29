@@ -7,8 +7,8 @@ overrides it.
 
 ## Software direction
 
-- **Clementine grows more reliable before she grows more capable** — error
-  recovery, memory export and deletion, fact-checking against her own memory
+- **Clementine grows more reliable before they grow more capable** — error
+  recovery, memory export and deletion, fact-checking against their own memory
   (MILESTONES.md Month 4+).
 - **From stub to mesh** — `src/node/mesh/` keeps the API shape of a real
   libp2p host so that gossipsub, Noise, and peer discovery can replace the
