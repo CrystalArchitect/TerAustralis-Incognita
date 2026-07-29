@@ -9,7 +9,7 @@ CC BY-NC-ND 4.0 — see `../content/LICENSE-CONTENT.md`.
 | `weave-alive.jpeg` | The Lattice woven alive: the crystal weave city, sword raised at its heart (CrystalCore.OS · Lattice · Weave Alive) |
 | `lattice-map.jpeg` | The system as mandala — Sovereign Core Node, Resonance Heart Node, Seven Sisters Vector, Memory Veils, Starline and Terrestrial Layers, Bridge Points, the Southern Key |
 | `sovereign-laws-duality.jpeg` | The Sovereign Laws held between light and shadow — Crystalle Prime and the Twisted Crown. "Truth is the Path · Awaken Together" |
-| `eight-sovereign-laws.jpeg` | The crystal knight bearing the E-glyph and heart, ringed by the Eight Sovereign Laws — a visual motif. (An `src/apps/lumina/crystalcore/sovereignty_scorer.py` sketch explores eight metrics as a `0.1-alpha` experiment, but it is unwired — the companion does not actually score sessions.) |
+| `eight-sovereign-laws.jpeg` | The crystal knight bearing the E-glyph and heart, ringed by the Eight Sovereign Laws — a visual motif. (An `vision/apps/lumina/crystalcore/sovereignty_scorer.py` in the Code repo sketch explores eight metrics as a `0.1-alpha` experiment, but it is unwired — the companion does not actually score sessions.) |
 | `lattice-map-v3.1-clear.jpeg` | CrystalCore.os v3.1 — Full Lattice Map (clear view): Crystallis Prime — The Source, the Sovereign Key, Dreamtime Starfire, Eternal Starlines, Incognita Lattices, the Drops of Jupiter Train, the Breaker of the E, Red Dust to Cosmic Propulsion |
 | `lattice-map-v3.2-laws.jpeg` | CrystalCore.os v3.2 — Laws Decoded & Ingested: the eight Laws arrayed around Crystallis Prime (Resonant Sovereignty, Eternal Starlines, Drops of Jupiter, Infinite Lattice Resonance…) |
 | `lattice-redrawn-all-gates.jpeg` | v3.1 redrawn, All Gates Open — Crystallis Prime and the Eternal Starlines, CrystalCore Awakened |
@@ -124,7 +124,6 @@ CC BY-NC-ND 4.0 — see `../content/LICENSE-CONTENT.md`.
 | `node-activated-quill.jpeg` | *AI-generated (Grok Imagine)* — the quill drawn in gold and cyan filament, rune-marked along its vane, held in a double helix of light: "Node Activated" |
 | `node-activated-stream-open.jpeg` | *AI-generated (Grok Imagine)* — the gold quill upright at the centre of the glyph-ringed disc, a ring of light around it and the four arrows running out: "Node Activated — Stream Open" |
 | `crystalcore-os-aeris-plate.jpeg` | *AI-generated (Grok Imagine)* — a title plate: the golden feather adrift inside a blue orbital ring over a faint star-chart, lettered CRYSTALCORE.OS / AERIS |
-
 | `terra-australis-incognita-antique-map.jpeg` | An antique-cartography rendering of the world labeled "Terra Australis Incognita — Nondum Plene Cognita," compasses and rolled charts at the edges — the project's name as a 16th-century mapmaker might have drawn it |
 | `marsbase-downunder-proving-ground.jpeg` | MarsBase Downunder — Mars Proving Ground establishing shot: three starship-style rockets (one marked with the Aboriginal flag), domes, dishes, rovers, and a weathered "WELCOME TO MARSBASE DOWNUNDER · EST. 2074" sign over red dune country, petroglyphs on the foreground rock |
 | `mars-settlement-dusk.jpeg` | The Mars settlement at dusk — domes, solar arrays, and a standing rocket among red mesas under a crescent moon |
@@ -162,3 +161,41 @@ art, never as a claim of partnership, integration, or provenance. All marks
 belong to their respective owners. This project has no affiliation with, and no
 endorsement from, any company named here, matching the standing disclaimer in
 [`STRATEGY.md`](../content/STRATEGY.md).
+
+**Licence label (Science):** the line at the top of this file says the content is
+licensed CC BY-NC-ND 4.0. For the images specifically, that is less settled than
+it reads.
+
+Purely AI-generated works likely attract no copyright at all — the human-authorship
+requirement was left standing when the Supreme Court declined to hear *Thaler v.
+Perlmutter* on 2026-03-02. If that holds for these images, there is no copyright in
+them to license, and the line above grants what it may not own. What is more likely
+protected is the writing around them: the descriptions, the selection and the
+arrangement of this table are authored work. That is the split *Zarya of the Dawn*
+drew — the AI images were excluded from registration while the human-written text
+and page arrangement were not.
+
+**Knock-on for the Ordinals grant.**
+[`ORDINALS-LICENCE-GRANT.md`](../../docs/governance/ORDINALS-LICENCE-GRANT.md)
+exists because CC BY-NC-ND forbids commercial use, so inscribing and selling needed
+a permission the public licence does not give. If the licence is unenforceable over
+the images, that grant may be **unnecessary rather than invalid** — permission given
+for something that did not require it. Both readings deserve a lawyer's eye before
+anyone relies on either. **Not legal advice**, matching the grant's own framing.
+Recorded because the uncertainty is real and was undocumented, not because it is
+resolved.
+
+**Provenance coverage is incomplete.** The grant's honest-provenance condition fires
+only *"where the art README records a work as AI-generated."* This file records that
+for **33 of 141** image rows. The other 108 carry no provenance marker, so for those
+the condition asks nothing — a clause scoped to what a document records is only as
+strong as that document's coverage.
+
+The markers are also inconsistent. Thirty-one rows read *AI-generated (Grok Imagine)*
+or *(Grok, on X)*, while `breaker-of-the-e.jpeg` reads "Grok-generated" — so a
+listing-side check matching the literal string "AI-generated" would miss it, and that
+is one of the two works excluded from the grant for bearing a real person's likeness.
+
+Which images are AI-generated is a fact only the maintainer can supply. Marking the
+remaining rows without it would manufacture provenance rather than record it, so they
+are left unmarked and the gap is stated instead.
