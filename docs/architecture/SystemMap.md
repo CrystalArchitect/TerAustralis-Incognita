@@ -75,7 +75,7 @@ TerAustralis-Incognita/
 ├── src/ ✱              executable code only
 │   ├── apps/           clementine (companion) · voicebox (MCP TTS) ·
 │   │                   crystal-interface + vision-web (demo shells)
-│   ├── crystal-core/   protocol pack: clementine/bridge (Starline Weaver) ·
+│   ├── crystal-core/   protocol pack: bus (Starline Weaver) ·
 │   │                   services (pipeline) · consent_transport (P2P
 │   │                   exchange; `starline/` is a deprecated alias) ·
 │   │                   rdp (record kernel) · interface, cli, index.html

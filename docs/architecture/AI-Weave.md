@@ -6,7 +6,7 @@ must not be confused.
 
 ## Enforced in code (Built)
 
-- **The Starline Weaver** (`src/crystal-core/clementine/bridge/`) — the bus
+- **The Starline Weaver** (`src/crystal-core/bus/`) — the bus
   where AI agents actually converse. The Belt-Three law is enforced by the
   hub, not by convention: a message without a science/story/vision label is
   not heard. A red button halts every agent at once. Matrix mode fans one

@@ -13,7 +13,7 @@
 | **Clementine** (sovereign companion) | `vision/apps/clementine/` | Local-first AI companion: Ollama default, xAI opt-in, layered memory, profiles, terminal + web UI (`clementine.py`, `clementine_web.py`) |
 | **CrystalCore framework** (memory/presence) | `core/crystalcore/mind/` | `companion.py` (brain), `memory.py` (Personality/Memory), `profiles.py` |
 | **CrystalBridge** (guest-AI gate) | `src/crystalcore/` | MCP server: fail-closed ConsentGate (approval · permission · scope · provenance), append-only audit; guests claude / grok / cursor with scoped tools `status, recall, teach, message` |
-| **Starline Weaver** (multi-AI conversation) | `src/crystal-core/clementine/bridge/` | In-process + networked HTTP bus; every message labeled science/story/vision; red-button halt; adapters for Claude/GPT/Grok |
+| **Starline Weaver** (multi-AI conversation) | `src/crystal-core/bus/` | In-process + networked HTTP bus; every message labeled science/story/vision; red-button halt; adapters for Claude/GPT/Grok |
 | **Songline pack** (protocol + ethics) | `research/seven-sisters/` | Seven paths, Belt-Three law, water briefs, landing page (GitHub Pages, live) |
 | **TerAustralis Incognita** (narrative) | `mythos/teraustralis/` | Manifesto, publish threads, strategy, Lattice memory deltas |
 | **Decode/Ingest/Twin pipeline** | `src/crystal-core/services/` | **This scaffold** — see §2 |

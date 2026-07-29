@@ -26,7 +26,7 @@ pause, and full memory ownership.
 
 Four components, stdlib-only except where real cryptography is required:
 
-- **Starline Weaver** (`clementine/bridge/`) — the multi-AI bus. Every
+- **Starline Weaver** (`bus/`) — the multi-AI bus. Every
   message must carry a science/story/vision label or it is not heard
   (Belt-Three law, enforced in `agents.py`); a red button halts everything.
   Spec: [`crystal-core/STARLINE-WEAVE-PROTOCOL.md`](crystal-core/STARLINE-WEAVE-PROTOCOL.md).

@@ -124,7 +124,7 @@ Each named component has a home in one of the three projects. Some placements ar
 |---|---|---|---|---|
 | **Clementine** (sovereign companion + embedded **CrystalCore Framework**) | `vision/apps/clementine/` | **Crystal Vision** | Science ✅ | Whole product per maintainer directive; Framework keeps ADR-0004 name; split criteria operationalized in Migration-Plan §Stage 3 |
 | **CrystalCore Protocol pack** (Starline Weaver, Decode→Ingest→Twin pipeline, Consent Transport, RDP) | `src/crystal-core/` | **Crystal Core** | Science ✅ | Protocol machinery other components call |
-| **Clementine** (orchestration, AI-to-AI comms coordination) | `clementine/bridge/` inside protocol pack | **Crystal Core** (logical component) | Science ✅ | Named component, not a repository; per maintainer directive |
+| **Clementine** (orchestration, AI-to-AI comms coordination) | `bus/` inside protocol pack | **Crystal Core** (logical component) | Science ✅ | Named component, not a repository; per maintainer directive |
 | **CrystalBridge** (fail-closed MCP consent gate + profile configs) | `src/crystalcore/`, `src/profiles/` | **Crystal Core** | Science ✅ | Integration/API layer |
 | **Mesh stub** (shared transport library) | `src/node/mesh/` | **Crystal Core** | Science ✅ | Stub only today |
 | **TypeScript SDK** (client API scaffold) | `src/sdk/typescript/` | **Crystal Core** | Science ✅ | Phase 1 / Mainnet HOLD |

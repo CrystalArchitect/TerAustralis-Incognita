@@ -58,7 +58,7 @@ local working copy — see
 |---|---|---|---|
 | **Clementine** — the sovereign companion, including its embedded **CrystalCore Framework** package | `vision/apps/clementine/` (framework at `core/crystalcore/mind/`) | **Crystal Vision** | Flagship user-facing product, whole — per maintainer directive. The Framework keeps its ADR-0004 name while traveling with Clementine; split criteria are operationalized in [Migration-Plan §Stage 3](Migration-Plan.md). |
 | **CrystalCore Protocol pack** — Starline Weaver, Decode→Ingest→Twin pipeline, Consent Transport / Starline, RDP | `src/crystal-core/` | **Crystal Core** | The protocol machinery other components call. |
-| **Clementine** — orchestration layer coordinating comms between AI systems | `clementine/bridge/` inside the protocol pack (persona: [`CLEMENTINE.md`](../architecture/crystal-core/CLEMENTINE.md)) | **Crystal Core** — *logical component* | A named component, not a repository — per maintainer directive. |
+| **CrystalBus** — the channel coordinating comms between AI systems | `bus/` inside the protocol pack (card: [`CRYSTALBUS.md`](../architecture/crystal-core/CRYSTALBUS.md)) | **Crystal Core** — *logical component* | A named component, not a repository — per maintainer directive. Carried the name Clementine before that name moved to the companion. |
 | **CrystalBridge** — the fail-closed MCP consent gate, plus its profile configs | `src/crystalcore/`, `src/profiles/` | **Crystal Core** | Integration/API layer. |
 | **Mesh stub** | `src/node/mesh/` | **Crystal Core** | Shared transport library (stub only today). |
 | **TypeScript SDK** | `src/sdk/typescript/` | **Crystal Core** | Client API scaffold. |

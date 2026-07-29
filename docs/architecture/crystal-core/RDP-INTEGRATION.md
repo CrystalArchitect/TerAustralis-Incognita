@@ -175,7 +175,7 @@ record.json` (or piped via stdin) loads a chain, prints each event, and runs
 record was disturbed. Read-only; it trusts nothing but the hashes.
 
 **Recording a Starline Weaver matrix result.** The Weaver's matrix mode
-(`clementine.bridge.bus.StarlineWeaver.run_matrix()` — one question, every
+(`bus.bus.StarlineWeaver.run_matrix()` — one question, every
 agent independently, no agent sees another's reply) produces a transcript and
 a `cross_compare()` summary that are exactly the kind of thing RDP exists to
 witness: a permanent, tamper-evident record of what was asked, what each
@@ -193,7 +193,7 @@ chain, and a caught tamper:
 python3 -m rdp.run matrix-demo
 ```
 
-That subcommand imports `clementine.bridge` for real (lazily, so `rdp.run
+That subcommand imports `bus` for real (lazily, so `rdp.run
 demo` stays dependency-free); it is *not* a stub. Same reminder as the gate
 demo, same reason: **the Weaver asked and compared; RDP only remembered.**
 Nothing here — not RDP, not the adapter — judges which agent's answer was

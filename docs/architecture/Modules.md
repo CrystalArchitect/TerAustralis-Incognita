@@ -13,7 +13,7 @@ bug.
 | Module | Path | What it is | Status | Prove it |
 |---|---|---|---|---|
 | Clementine | `vision/apps/clementine/` | Local-first companion: terminal, Flask API, Svelte webapp, layered memory | Working prototype | `python -m pytest vision/apps/clementine/tests -q` |
-| Starline Weaver | `src/crystal-core/clementine/bridge/` | Multi-AI bus, Belt-Three law in code, matrix mode | v0, self-tested | `cd src/crystal-core && python3 -m clementine.bridge.selftest` |
+| Starline Weaver | `src/crystal-core/bus/` | Multi-AI bus, Belt-Three law in code, matrix mode | v0, self-tested | `cd src/crystal-core && python3 -m bus.selftest` |
 | Pipeline | `src/crystal-core/services/` | Decode → Ingest → Twin over SQLite, quarantine with reasons | v0, self-tested | `cd src/crystal-core && python3 -m services.selftest` |
 | Starline | `src/crystal-core/consent_transport/` | P2P consent-gated memory exchange, Noise handshake | Running, self-tested | `cd src/crystal-core && python3 -m consent_transport.selftest` |
 | RDP | `src/crystal-core/rdp/` | Tamper-evident record chain + explainable decision kernel | Running, self-tested | `cd src/crystal-core && python3 -m rdp.selftest` |

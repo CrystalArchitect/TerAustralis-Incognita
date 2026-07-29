@@ -138,7 +138,7 @@ The complete working software — Crystal Core (engine) and Crystal Vision (appl
 
 **CI/CD pipeline:**
 - `compileall` — verify all .py files compile
-- `clementine.bridge.selftest` — 7 integration tests
+- `bus.selftest` — 7 integration tests
 - `consent_transport.selftest` — 9 crypto + socket tests
 - `rdp.selftest` — 31 property-based tests
 - `services.selftest` — 4 tests

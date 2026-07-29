@@ -59,7 +59,7 @@ Why AGPL v3:
 ---
 
 ### 2. 🔌 **Starline Weaver** (Multi-AI Message Bus)
-**Location**: `src/crystal-core/clementine/bridge/`  
+**Location**: `src/crystal-core/bus/`  
 **What it is**: Wire protocol, envelope schema, Belt-Three conduct rules enforced in code
 
 **Strategic Value**: ⭐⭐⭐⭐ **HIGH**

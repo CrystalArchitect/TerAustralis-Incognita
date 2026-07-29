@@ -11,7 +11,7 @@ Four components run and are tested today:
 | Component | Role | Lives at |
 |---|---|---|
 | **Clementine** | Local-first sovereign companion — terminal, Flask API, Svelte webapp, layered memory, Ollama-backed | `vision/apps/clementine/` |
-| **Starline Weaver** | Multi-AI message bus; every message must carry a Belt-Three truth label or it is not heard; red-button halt; matrix mode | `src/crystal-core/clementine/bridge/` |
+| **Starline Weaver** | Multi-AI message bus; every message must carry a Belt-Three truth label or it is not heard; red-button halt; matrix mode | `src/crystal-core/bus/` |
 | **Starline** | Peer-to-peer consent-gated memory exchange over a real Noise Protocol handshake | `src/crystal-core/consent_transport/` |
 | **CrystalBridge** | Fail-closed MCP consent gate for guest AIs — approval → permission → scope → provenance, append-only audit | `src/crystalcore/` |
 
