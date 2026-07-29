@@ -96,10 +96,10 @@ Already on disk in `vision/site/src/app.css`, kept as canon:
 - **MarsBase DownUnder** (named in the mission brief's Explore list)
   appeared nowhere in the six repositories searched on 2026-07-24 — a
   dreamed line, not yet surveyed. It gets no homepage link until something
-  exists to link. **Scope note (2026-07-28):** five repositories have been
-  created since that search and were not covered by it, so this is an
-  absence across the six then searched, not across the eleven that now
-  exist.
+  exists to link. **Scope note (updated 2026-07-29):** six repositories
+  have been created since that search and were not covered by it, so this
+  is an absence across the six then searched, not across the twelve that
+  now exist.
 - **Songlines** are honoured as cultural image in the mythos and are
   not a navigation item or feature name (`mythos/NAMES.md`).
 - **Clementine's CTA** leads to the Clementine page and its run-it-yourself

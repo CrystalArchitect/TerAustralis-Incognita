@@ -155,7 +155,7 @@ Components know their home and their dependency direction. New work goes into th
 **Summary**
 The architecture spans six repositories: three living (active), three frozen (provenance only). The three living repos form the complete canonical system. The three frozen repos preserve pre-reorg code and are never edited.
 
-The portfolio is larger than the architecture. Eleven repositories exist as at 2026-07-28; the other five post-date this model and are not fitted to it. See [REPOSITORIES.md](REPOSITORIES.md) for the list and the Archive's `02-REPOSITORY-MAP.md` for the canonical map of all eleven.
+The portfolio is larger than the architecture. Twelve repositories exist as at 2026-07-29; the other six post-date this model and are not fitted to it. See [REPOSITORIES.md](REPOSITORIES.md) for the list and the Archive's `02-REPOSITORY-MAP.md` for the canonical map, which covers eleven of the twelve.
 
 **Evidence**
 - Repository: TerAustralis-Incognita / docs/governance/Project-Boundaries.md
@@ -255,7 +255,7 @@ The CrystalCore.OS architecture divides into:
 - **Three layers of organization:** Belt-Three model (Science, Vision, Docs-governance)
 - **Four strata of function:** Constitution (unchanging), Archive (provenance), Forge (engineering), Mythos (story)
 - **Three projects with a dependency rule:** Umbrella (canon) → Core (engine) ← Vision (application)
-- **Six repositories in this model:** Three living (active development + ledger), three frozen (provenance) — of eleven in the portfolio as at 2026-07-28
+- **Six repositories in this model:** Three living (active development + ledger), three frozen (provenance) — of twelve in the portfolio as at 2026-07-29
 - **Clear component-to-project mapping** with specific decision gates for Stage 3–4 placements
 
 This architecture is designed to prevent common failures: inversion of dependency direction, conflation of story with engineering, loss of provenance, and architectural drift hidden in narrative.

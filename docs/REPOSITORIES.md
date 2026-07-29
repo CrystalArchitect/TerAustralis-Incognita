@@ -8,17 +8,18 @@ This knowledge base documents the CrystalCore.OS architecture **exactly as it ex
 
 ---
 
-## The Constellation — eleven repositories
+## The Constellation — twelve repositories as at 2026-07-29
 
 **Status**
-- Science ✅ (count re-verified 2026-07-28; the six-repository model below was verified 2026-07-24 and remains accurate for those six)
+- Science ✅ (count re-verified 2026-07-29; the six-repository model below was verified 2026-07-24 and remains accurate for those six)
 
 **Summary**
-The system spans **eleven** repositories. Six of them carry the model this page
-documents in detail: three living (active, in use) and three frozen (provenance
-only, never edited). The three living repos form the complete canonical system.
+The system spans **twelve** repositories as at 2026-07-29. Six of them carry the
+model this page documents in detail: three living (active, in use) and three
+frozen (provenance only, never edited). The three living repos form the complete
+canonical system.
 
-Five more exist and are **not** described by the living/frozen model — they were
+Six more exist and are **not** described by the living/frozen model — they were
 created after it was written and have not been fitted to it:
 
 | Repository | Visibility | Created |
@@ -28,16 +29,20 @@ created after it was written and have not been fitted to it:
 | `crystalcore-os-aeris-vault12` | public | 2026-07-28 |
 | `teraustralis-incognita-v2` | private | 2026-07-24 |
 | `teraustralis-v2-presentation` | private | 2026-07-28 |
+| `teraustralis-proposal` | public | 2026-07-29 |
 
-Categorising those five is deliberately left to the Archive's
-`knowledge-base/02-REPOSITORY-MAP.md`, which now covers all eleven. This page
-is not the canonical map and should not grow a second one.
+Categorising those six is deliberately left to the Archive's
+`knowledge-base/02-REPOSITORY-MAP.md`. That map currently covers **eleven** —
+it was written before `teraustralis-proposal` existed and does not yet mention
+it, so its own heading is one repository behind this page until it is re-run.
+This page is not the canonical map and should not grow a second one.
 
 **Evidence**
 - Repository: TerAustralis-Incognita / docs/governance/Project-Boundaries.md (rewritten 2026-07-24 from same-day survey of all six)
 - Verified: direct inspection of code trees + ls-remote
 - Date: Two-repo split implemented as same-day history rewrite 2026-07-23 (per architecture-survey.md §1)
 - Count corrected 2026-07-28 from a GitHub API query returning `total_count: 11` for `user:CrystalArchitect`. Of the five additions, four were created 2026-07-28; `teraustralis-incognita-v2` was created 2026-07-24 and existed, unsurveyed, on the day the six-repository model was verified.
+- Count corrected again 2026-07-29 from the same query, now returning `total_count: 12`. The addition is `teraustralis-proposal`, created 2026-07-29 10:17 UTC — a public, All-Rights-Reserved proposal package (14 files, 12 commits, sole author Crystal Arena-Turner) holding the Pilbara / Port Hedland logistics case named as an advancement priority in [TERAUSTRALIS-FRAMEWORK.md](TERAUSTRALIS-FRAMEWORK.md) §6.2. It carries its own `LICENSE`, which is **All Rights Reserved** (view-only; no copying, derivative work, or implementation without written permission) — a licence class that did not previously appear anywhere in the portfolio. [`ADR-0013`](adr/ADR-0013.md) catalogued the portfolio's licensing as at 2026-07-28 across eleven repositories and is deliberately left unedited as the record of that sweep; this repository post-dates it and was not in it.
 
 **Why this drifted**
 "Six repositories" was true when written and was overtaken, not mistaken. The
@@ -298,7 +303,7 @@ Site renders *copies*, not canon directly. Publishing delay is acceptable design
 - Science ✅
 
 **Summary**
-Repository portfolio at a glance: the six repositories this page models — three living, supporting three projects (umbrella, Core, Vision), plus three frozen archives for provenance. Five further repositories exist and are outside this model; see the constellation section above and the Archive's `02-REPOSITORY-MAP.md`.
+Repository portfolio at a glance: the six repositories this page models — three living, supporting three projects (umbrella, Core, Vision), plus three frozen archives for provenance. Six further repositories exist as at 2026-07-29 and are outside this model; see the constellation section above and the Archive's `02-REPOSITORY-MAP.md` (which covers eleven of the twelve).
 
 **Evidence**
 - Complete inventory: three living repos + three frozen archives
