@@ -189,7 +189,7 @@ def full_expose(
             "terminal": "python clementine.py",
             "web": "python clementine_web.py  # http://127.0.0.1:5000",
             "expose_cli": "python -m crystalcore.expose",
-            "start_bat": ["Start-Lumina.bat", "Start-Lumina-Web.bat"],
+            "start_bat": ["Start-Clementine.bat", "Start-Clementine-Web.bat"],
         },
     }
 

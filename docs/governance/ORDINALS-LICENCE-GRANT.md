@@ -66,7 +66,7 @@ automatically; extending the grant takes a dated amendment to this file.
    more.
 4. **No sublicensing.** The Grantee may not pass this permission to anyone else.
 5. **No name or trademark rights.** Nothing here grants rights in the names
-   TerAustralis Incognita, CrystalCore, Incognita Lattice, Lumina, Starline or
+   TerAustralis Incognita, CrystalCore, Incognita Lattice, Clementine, Starline or
    Dreamline beyond naming the source of the art.
 6. **Art only.** The mythos text, code, documentation and governance material
    are outside this grant entirely.

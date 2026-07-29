@@ -40,7 +40,7 @@ python -m rdp.selftest                    # RDP record kernel
 cd ../..
 
 # Test suites
-python -m pytest src/apps/lumina/tests -q
+python -m pytest vision/apps/clementine/tests -q
 python -m pytest tests -q
 ```
 
@@ -72,7 +72,7 @@ Enforced by `.gitignore`, but worth knowing (the full list is in
 
 - **Generated output** — `.svelte-kit/`, `src/site/build/`, `dist/`,
   `node_modules/`, `__pycache__/`
-- **Personal data** — Lumina memory and profiles, Starline identity/keys,
+- **Personal data** — Clementine memory and profiles, Starline identity/keys,
   CrystalBridge audit logs
 - **Secrets** — API keys, `.env` files
 

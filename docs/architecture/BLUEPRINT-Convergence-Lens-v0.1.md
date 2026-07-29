@@ -118,7 +118,7 @@ Enforces:
 
 # Companion Model
 
-Lumina may act as:
+Clementine may act as:
 
 **Guide:**
 Expands exploration.
@@ -172,12 +172,12 @@ Current implementation dependencies:
 ✓ Clementine — layer separation
 ✓ RDP — tamper-evident records
 ✓ Consent Transport — agency protection
-✓ Lumina — companion interface
+✓ Clementine — companion interface
 
 Future:
 
 → Convergence Lens prototype
-→ Lumina integration
+→ Clementine integration
 → Public observation portal
 
 ---

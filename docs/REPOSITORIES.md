@@ -114,9 +114,9 @@ The complete working software — Crystal Core (engine) and Crystal Vision (appl
 | `core/crystalcore/` | CrystalBridge: MCP consent gate, profiles | Science ✅ |
 | `core/node/mesh/` | Mesh stub: transport library | Science ✅ |
 | `core/sdk/typescript/` | TypeScript client scaffold (v0.5.0, Phase 1 / Mainnet HOLD) | Science ✅ |
-| `vision/` | Crystal Vision: Lumina, demo shells, voicebox, site | Science ✅ |
-| `vision/apps/lumina/` | Sovereign companion + embedded CrystalCore Framework | Science ✅ |
-| `vision/apps/lumina/crystalcore/` | Embedded Framework (forked 0.7.0; 0.13.4 unreconciled) | Science ✅ |
+| `vision/` | Crystal Vision: Clementine, demo shells, voicebox, site | Science ✅ |
+| `vision/apps/clementine/` | Sovereign companion + embedded CrystalCore Framework | Science ✅ |
+| `core/crystalcore/mind/` | Embedded Framework (forked 0.7.0; 0.13.4 unreconciled) | Science ✅ |
 | `vision/apps/voicebox/` | MCP text-to-speech server | Science ✅ |
 | `vision/apps/crystal-interface/` | Static demo shell (Authority HOLD) | Science ✅ |
 | `vision/apps/vision-web/` | Static demo shell (honest scope callouts) | Science ✅ |
@@ -128,7 +128,7 @@ The complete working software — Crystal Core (engine) and Crystal Vision (appl
 **Test coverage (confirmed 2026-07-23):**
 - Protocol pack: 51 self-tests (clementine 7, consent_transport 9, rdp 31, services 4)
 - Mesh: 3 pytest
-- Lumina: 16 tests
+- Clementine: 16 tests
 - **Total: 70 passing tests**
 
 **CI/CD pipeline:**
@@ -137,7 +137,7 @@ The complete working software — Crystal Core (engine) and Crystal Vision (appl
 - `consent_transport.selftest` — 9 crypto + socket tests
 - `rdp.selftest` — 31 property-based tests
 - `services.selftest` — 4 tests
-- `Lumina pytest` — 16 tests
+- `Clementine pytest` — 16 tests
 - `mesh pytest` — 3 tests
 - **Pages deploy** — build and publish site
 
@@ -202,10 +202,10 @@ Codex site + Clementine companion; complete **crystalcore v0.13.4 bytecode rescu
 **Evidence**
 - Tag: `vision-safe-2026-07-17` (frozen 2026-07-17)
 - Captured content: Codex site, Clementine companion, v0.13.4 bytecode
-- Lives on as: Ancestor of Lumina's embedded framework
+- Lives on as: Ancestor of Clementine's embedded framework
 
 **Discussion**
-Lumina forked the 0.7.0 branch from this repo. The 0.13.4 extras (SpaceXAI provider, `node.py`, `status.py`, CLI) remain unreconciled in this frozen repo. If questions arise about original implementation details, design intent, or pre-reorg behavior, this is the archive to consult.
+Clementine forked the 0.7.0 branch from this repo. The 0.13.4 extras (SpaceXAI provider, `node.py`, `status.py`, CLI) remain unreconciled in this frozen repo. If questions arise about original implementation details, design intent, or pre-reorg behavior, this is the archive to consult.
 
 **Related Documents**
 — [OPEN-DECISIONS.md](OPEN-DECISIONS.md) — lineage reconciliation decision · [TIMELINE.md](TIMELINE.md) — pre-monorepo era

@@ -88,7 +88,7 @@ These names are reserved and cannot be reused. Attempts to name a new component 
 
 | Branch | What | Where |
 |---|---|---|
-| **CrystalCore Framework** | Lumina's embedded engine (forked 0.7.0) | vision/apps/lumina/crystalcore/ |
+| **CrystalCore Framework** | Clementine's embedded engine (forked 0.7.0) | core/crystalcore/mind/ |
 | **CrystalCore Protocol** | Protocol pack (Starline Weaver, RDP, Consent Transport) | core/crystal-core/ |
 | **CrystalBridge** | MCP consent gate (integration layer) | core/crystalcore/ |
 | **CrystalCore OS** | Platform/governance architecture | Umbrella governance |

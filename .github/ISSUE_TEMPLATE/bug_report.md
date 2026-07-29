@@ -8,7 +8,7 @@ assignees: ''
 ---
 
 **Which component**
-Lumina · Starline Weaver · pipeline · Starline · RDP · CrystalBridge ·
+Clementine · Starline Weaver · pipeline · Starline · RDP · CrystalBridge ·
 site · docs · other (see `docs/architecture/Modules.md` for the map).
 
 **Describe the bug**
@@ -30,7 +30,7 @@ a docstring, the roadmap).
 **Environment**
  - OS:
  - Python / Node version:
- - Ollama model (if Lumina-related):
+ - Ollama model (if Clementine-related):
 
 **Additional context**
 Anything else that helps. If the bug is that documentation claims more than

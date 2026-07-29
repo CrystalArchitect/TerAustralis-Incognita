@@ -64,7 +64,7 @@ Before releasing, test building locally:
 pip install build twine
 
 # Test build a single package
-cd packages/lumina
+cd packages/clementine
 python -m build
 ls dist/
 
@@ -75,8 +75,8 @@ cd ../..
 
 Expected output:
 ```
-teraaustralis-lumina-1.0.0.tar.gz
-teraaustralis_lumina-1.0.0-py3-none-any.whl
+teraaustralis-clementine-1.0.0.tar.gz
+teraaustralis_clementine-1.0.0-py3-none-any.whl
 ✓ Check passed
 ```
 
@@ -99,9 +99,9 @@ git push origin v1.0.0
 Release packages at different times:
 
 ```bash
-# Release Lumina
-git tag -a lumina-v1.0.0 -m "Lumina 1.0.0 - Local-first AI companion"
-git push origin lumina-v1.0.0
+# Release Clementine
+git tag -a clementine-v1.0.0 -m "Clementine 1.0.0 - Local-first AI companion"
+git push origin clementine-v1.0.0
 
 # Later: Release RDP
 git tag -a rdp-v1.0.0 -m "RDP 1.0.0 - Decision kernel"
@@ -114,7 +114,7 @@ git push origin rdp-v1.0.0
 
 Release high-maturity packages first:
 
-1. **Week 1:** `lumina-v1.0.0` (most stable)
+1. **Week 1:** `clementine-v1.0.0` (most stable)
 2. **Week 2:** `rdp-v1.0.0`, `consent-v1.0.0`
 3. **Week 3:** `starline-v1.0.0`, `ei-v1.0.0`
 4. **Week 4:** `bridge-v1.0.0` (requires license review), `mythos-v1.0.0`
@@ -145,7 +145,7 @@ publish-packages / publish (matrix)
 After workflow succeeds:
 
 1. Check PyPI package page:
-   - https://pypi.org/project/teraaustralis-lumina/
+   - https://pypi.org/project/teraaustralis-clementine/
    - https://pypi.org/project/teraaustralis-rdp/
    - etc.
 
@@ -157,8 +157,8 @@ After workflow succeeds:
 
 3. Install from PyPI to verify:
 ```bash
-pip install teraaustralis-lumina
-python -c "from teraaustralis.lumina.crystalcore import Lumina; print('✓ Lumina installed from PyPI')"
+pip install teraaustralis-clementine
+python -c "from teraaustralis.clementine.crystalcore import Clementine; print('✓ Clementine installed from PyPI')"
 ```
 
 ## Step 7: Announce Release
@@ -171,7 +171,7 @@ python -c "from teraaustralis.lumina.crystalcore import Lumina; print('✓ Lumin
 
 All packages are now available on PyPI:
 
-- **Lumina** — [`teraaustralis-lumina`](https://pypi.org/project/teraaustralis-lumina/) (AGPL v3)
+- **Clementine** — [`teraaustralis-clementine`](https://pypi.org/project/teraaustralis-clementine/) (AGPL v3)
 - **RDP** — [`teraaustralis-rdp`](https://pypi.org/project/teraaustralis-rdp/) (AGPL v3)
 - ...
 ```
@@ -188,7 +188,7 @@ gh release create v1.0.0 \
 🎉 TeraAustralis 1.0.0 is live on PyPI!
 
 7 production-ready packages for multi-AI coordination:
-- Lumina: Local-first AI companion
+- Clementine: Local-first AI companion
 - RDP: Decision kernel & reasoning
 - Consent Transport: Privacy-respecting data exchange
 - CrystalBridge: Enterprise safety gateway
@@ -196,7 +196,7 @@ gh release create v1.0.0 \
 - CrystalCore-EI: Emotion intelligence + uncertainty
 - Mythos: Universe lore & narrative
 
-Get started: pip install teraaustralis-lumina
+Get started: pip install teraaustralis-clementine
 Docs: https://teraaustralis.dev
 
 #OpenSource #Python #AI #MultiAI
@@ -242,7 +242,7 @@ cd ../..
 
 - [ ] All packages published to PyPI successfully
 - [ ] PyPI package pages display correctly
-- [ ] Installation works: `pip install teraaustralis-lumina`
+- [ ] Installation works: `pip install teraaustralis-clementine`
 - [ ] README and docs updated with PyPI links
 - [ ] GitHub Releases created
 - [ ] Social media announcement posted
@@ -264,7 +264,7 @@ For version 1.0.1+ releases, repeat this process:
 
 **Tag Format Reminder:**
 - All packages: `git tag v1.0.1`
-- Single package: `git tag lumina-v1.0.1`
+- Single package: `git tag clementine-v1.0.1`
 
 ## Support
 
@@ -277,4 +277,4 @@ For version 1.0.1+ releases, repeat this process:
 
 **You are here:** Ready to push first tags ✨
 
-**Next:** `git tag -a lumina-v1.0.0 -m "Lumina 1.0.0 release" && git push origin lumina-v1.0.0`
+**Next:** `git tag -a clementine-v1.0.0 -m "Clementine 1.0.0 release" && git push origin clementine-v1.0.0`

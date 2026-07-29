@@ -6,7 +6,7 @@
 
 ## Purpose
 
-Define what claims Convergence Lens accepts from external sources (Lumina, APIs, humans), how they are validated before ingestion, and how provenance is preserved. Prevents invalid or unclaimed observations from entering MIRROR/CHRONICLE registers.
+Define what claims Convergence Lens accepts from external sources (Clementine, APIs, humans), how they are validated before ingestion, and how provenance is preserved. Prevents invalid or unclaimed observations from entering MIRROR/CHRONICLE registers.
 
 ---
 
@@ -18,7 +18,7 @@ Define what claims Convergence Lens accepts from external sources (Lumina, APIs,
 {
   "statement": "string (1-500 chars)",
   "source": {
-    "origin": "lumina|api|human|archive",
+    "origin": "clementine|api|human|archive",
     "identifier": "string (source-specific ID)",
     "timestamp": "ISO8601 UTC"
   },
@@ -30,7 +30,7 @@ Define what claims Convergence Lens accepts from external sources (Lumina, APIs,
 ### Validation Gate (Must Pass All)
 
 1. **Statement non-empty**: `len(statement) > 0` and `len(statement) <= 500`
-2. **Source traceable**: `origin` in `{lumina, api, human, archive}`; `identifier` unique within that origin
+2. **Source traceable**: `origin` in `{clementine, api, human, archive}`; `identifier` unique within that origin
 3. **Timestamp valid**: ISO8601 UTC, not more than 24 hours in future
 4. **Evidence tier specified**: one of `{simulation, historical, live}`
 5. **Quality gate present**: one of `{high, medium, low}`
@@ -73,7 +73,7 @@ Every admitted claim must retain:
 
 ```python
 {
-  "source_origin": str,        # "lumina", "api", "human", "archive"
+  "source_origin": str,        # "clementine", "api", "human", "archive"
   "source_id": str,             # Unique within origin
   "submitted_at": ISO8601,      # When ingested
   "evidence_tier": str,         # simulation | historical | live
@@ -100,15 +100,15 @@ Sources with admission rate <30% are flagged as "unreliable". Governance views t
 
 ---
 
-## Lumina-Specific Rules
+## Clementine-Specific Rules
 
-Lumina claims must:
+Clementine claims must:
 1. Include exact `evidence_tier` (simulation/historical/live) — no auto-detection
 2. Include measurement timestamp or explicit "no direct measurement"
 3. If `live`, must be measurable/falsifiable within 90 days
 4. If `simulation`, must state the scenario clearly in statement
 
-Lumina claims admitted at quality_gate ≥ "medium" proceed to MIRROR decomposition; lower-quality claims are queued for governance review before ingestion.
+Clementine claims admitted at quality_gate ≥ "medium" proceed to MIRROR decomposition; lower-quality claims are queued for governance review before ingestion.
 
 ---
 
@@ -121,7 +121,7 @@ External Claim → Validation Gate → Quality Assignment → Provenance Record 
 
 If validation gate fails: claim is logged (with reason) in source's rejection_log but NOT admitted.
 
-If quality gate is below "medium" and source is Lumina: governance must approve before MIRROR decomposition.
+If quality gate is below "medium" and source is Clementine: governance must approve before MIRROR decomposition.
 
 ---
 
@@ -138,7 +138,7 @@ If quality gate is below "medium" and source is Lumina: governance must approve 
 ## Success Criteria
 
 Data Source Key is locked when:
-- ✓ Lumina can submit claims and have them validated correctly
+- ✓ Clementine can submit claims and have them validated correctly
 - ✓ Rejected claims are logged with reason but not admitted
 - ✓ Provenance is attached to every admitted claim
 - ✓ Simulation vs live claims are distinguished in Chronicle storage

@@ -30,7 +30,7 @@ TeraAustralis repository has been successfully restructured from a monolithic co
 
 ```
 packages/
-├── lumina/                    → teraaustralis-lumina (AGPL v3)
+├── clementine/                    → teraaustralis-clementine (AGPL v3)
 ├── rdp/                       → teraaustralis-rdp (AGPL v3)
 ├── consent-transport/         → teraaustralis-consent (AGPL v3)
 ├── crystalbridge/             → teraaustralis-bridge (Proprietary)
@@ -69,7 +69,7 @@ packages/
 
 #### 4a: Testing
 - All 7 packages install successfully
-- Core packages (Lumina, RDP, Consent) fully functional
+- Core packages (Clementine, RDP, Consent) fully functional
 - Cross-package imports validated
 - Python 3.10+ compatibility verified
 
@@ -89,7 +89,7 @@ packages/
 
 ### Open Source (AGPL v3)
 
-**Products:** Lumina, Starline, Consent Transport, RDP
+**Products:** Clementine, Starline, Consent Transport, RDP
 
 - Free for open-source / non-commercial use
 - Commercial SaaS: $2.5K–$10K/year per product
@@ -129,14 +129,14 @@ packages/
 ## Revenue Projections
 
 ### Conservative (Year 1)
-- Lumina: 5 licenses × $5K = $25K
+- Clementine: 5 licenses × $5K = $25K
 - Starline: 3 licenses × $7.5K = $22.5K
 - CrystalCore-EI: 1×$25K + 2×$5K = $35K
 - CrystalBridge: 1 × $50K = $50K
 - **Total: $132.5K**
 
 ### Growth (Year 3)
-- Lumina: 50 licenses × $7.5K = $375K
+- Clementine: 50 licenses × $7.5K = $375K
 - Starline: 20 licenses × $10K = $200K
 - CrystalCore-EI: 5×$25K + 15×$5K = $200K
 - CrystalBridge: 2×$500K + 5×$100K = $1.5M
@@ -158,9 +158,9 @@ packages/
 ### Ready to Publish
 
 ```bash
-# Tag and publish Lumina
-git tag lumina-v1.1.0
-git push origin lumina-v1.1.0
+# Tag and publish Clementine
+git tag clementine-v1.1.0
+git push origin clementine-v1.1.0
 
 # Tag and publish all packages
 git tag v1.1.0
@@ -204,7 +204,7 @@ Sample implementations provided in:
 
 | Product | Email |
 |---------|-------|
-| Lumina | lumina-commercial@teraaustralis.dev |
+| Clementine | clementine-commercial@teraaustralis.dev |
 | Starline | starline-support@teraaustralis.dev |
 | Consent | consent-commercial@teraaustralis.dev |
 | RDP | rdp-commercial@teraaustralis.dev |
@@ -261,7 +261,7 @@ done
 
 # Verify imports
 python3 << 'EOF'
-from teraaustralis.lumina.crystalcore import Lumina
+from teraaustralis.clementine.crystalcore import Clementine
 from teraaustralis.rdp.kernel import decide_and_record
 from teraaustralis.consent_transport.transport import StarlineServer
 from teraaustralis.starline import __version__
@@ -273,10 +273,10 @@ EOF
 
 ```bash
 # Create version tag
-git tag -a lumina-v1.1.0 -m "Lumina release 1.1.0"
+git tag -a clementine-v1.1.0 -m "Clementine release 1.1.0"
 
 # Push to trigger CI/CD
-git push origin lumina-v1.1.0
+git push origin clementine-v1.1.0
 
 # Check GitHub Actions for automated publishing
 # https://github.com/CrystalArchitect/teraaustralis-incognita/actions
@@ -354,7 +354,7 @@ git push origin lumina-v1.1.0
 - Run `python -m py_compile` to validate syntax
 
 **Q: CI/CD not triggered**
-- Verify git tag format: `v1.0.0` or `lumina-v1.0.0`
+- Verify git tag format: `v1.0.0` or `clementine-v1.0.0`
 - Check GitHub Secrets has `PYPI_API_TOKEN`
 - Review action logs at https://github.com/CrystalArchitect/teraaustralis-incognita/actions
 

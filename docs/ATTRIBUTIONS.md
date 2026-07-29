@@ -19,7 +19,7 @@ The following architectural patterns from MemClaw informed the design of the Cry
 MemClaw's approach to governing memory access across agent fleets directly inspired the Crystal Runtime's Registry and Events modules. Specifically:
 - **Visibility scopes:** Controlling who (which agent, team, or organization) can see and use which capabilities and data
 - **Trust tiers:** Establishing levels of authorization (approval, permission, scope, provenance) similar to CrystalBridge's consent model
-- **Fleet-scoped coordination:** Enabling cross-agent collaboration under unified rules, analogous to the runtime's coordination of Lumina, Starline, Weaver, CrystalBridge, and RDP
+- **Fleet-scoped coordination:** Enabling cross-agent collaboration under unified rules, analogous to the runtime's coordination of Clementine, Starline, Weaver, CrystalBridge, and RDP
 
 #### 2. Outcome-Based Learning & Reinforcement
 MemClaw's feedback loop (agents report successes/failures to improve what gets stored) informed the Crystal Runtime's:

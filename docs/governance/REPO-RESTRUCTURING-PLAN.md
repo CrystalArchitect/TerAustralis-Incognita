@@ -24,7 +24,7 @@
 ```
 teraaustralis-incognita/
 ├── src/
-│   ├── apps/lumina/                    # Product 1
+│   ├── apps/clementine/                    # Product 1
 │   ├── crystal-core/
 │   │   ├── clementine/                 # Product 2 (Starline)
 │   │   ├── consent_transport/          # Product 3 (Consent)
@@ -54,8 +54,8 @@ teraaustralis-incognita/
 ```
 teraaustralis-incognita/                    # Main monorepo (umbrella)
 ├── packages/
-│   ├── lumina/                            # Package 1: Companion
-│   │   ├── teraaustralis/lumina/
+│   ├── clementine/                            # Package 1: Companion
+│   │   ├── teraaustralis/clementine/
 │   │   ├── LICENSE.md                     # AGPL v3
 │   │   ├── setup.py
 │   │   └── pyproject.toml
@@ -103,7 +103,7 @@ teraaustralis-incognita/                    # Main monorepo (umbrella)
 ├── docs/
 ├── .github/                               # GitHub Actions for each package
 │   └── workflows/
-│       ├── package-lumina.yml
+│       ├── package-clementine.yml
 │       ├── package-starline.yml
 │       └── ...
 │
@@ -120,22 +120,22 @@ teraaustralis-incognita/                    # Main monorepo (umbrella)
 
 #### Step 1.1: Create package directories
 ```bash
-mkdir -p packages/{lumina,starline,consent-transport,rdp,crystalbridge,crystalcore-ei,mythos}
-mkdir -p packages/lumina/teraaustralis/lumina
+mkdir -p packages/{clementine,starline,consent-transport,rdp,crystalbridge,crystalcore-ei,mythos}
+mkdir -p packages/clementine/teraaustralis/clementine
 mkdir -p packages/starline/teraaustralis/starline
 # ... etc for all packages
 ```
 
 #### Step 1.2: Create package configuration files
 
-**`packages/lumina/pyproject.toml`:**
+**`packages/clementine/pyproject.toml`:**
 ```toml
 [build-system]
 requires = ["setuptools>=65", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "teraaustralis-lumina"
+name = "teraaustralis-clementine"
 version = "1.0.0"
 description = "Local-first sovereign AI companion"
 readme = "README.md"
@@ -149,37 +149,37 @@ dependencies = [
 ]
 
 [project.scripts]
-lumina = "teraaustralis.lumina:main"
+clementine = "teraaustralis.clementine:main"
 
 [project.urls]
-repository = "https://github.com/CrystalArchitect/teraaustralis-lumina"
-documentation = "https://teraaustralis.dev/lumina"
+repository = "https://github.com/CrystalArchitect/teraaustralis-clementine"
+documentation = "https://teraaustralis.dev/clementine"
 ```
 
-**`packages/lumina/setup.py`:**
+**`packages/clementine/setup.py`:**
 ```python
 from setuptools import setup, find_packages
 
 setup(
-    name="teraaustralis-lumina",
+    name="teraaustralis-clementine",
     version="1.0.0",
     packages=find_packages(),
     package_data={
-        "teraaustralis.lumina": ["templates/*", "static/*"],
+        "teraaustralis.clementine": ["templates/*", "static/*"],
     },
 )
 ```
 
-**`packages/lumina/LICENSE.md`:**
+**`packages/clementine/LICENSE.md`:**
 ```
 AGPL-3.0-or-later License
 
 [Full AGPL v3 text here]
 ```
 
-**`packages/lumina/README.md`:**
+**`packages/clementine/README.md`:**
 ```markdown
-# Lumina – The Sovereign Companion
+# Clementine – The Sovereign Companion
 
 Local-first AI companion with consent-driven memory.
 
@@ -187,7 +187,7 @@ Local-first AI companion with consent-driven memory.
 AGPL v3 – See LICENSE.md
 
 ## Installation
-pip install teraaustralis-lumina
+pip install teraaustralis-clementine
 
 ## Contributing
 See CONTRIBUTING.md
@@ -205,7 +205,7 @@ Collective intelligence with individual sovereignty.
 
 | Package | License | Purpose |
 |---------|---------|---------|
-| `packages/lumina` | AGPL v3 | Sovereign AI companion |
+| `packages/clementine` | AGPL v3 | Sovereign AI companion |
 | `packages/starline` | AGPL v3 | Multi-AI message bus |
 | `packages/consent-transport` | AGPL v3 | P2P sovereign memory |
 | `packages/rdp` | AGPL v3 | Record kernel & decisions |
@@ -217,7 +217,7 @@ Collective intelligence with individual sovereignty.
 
 Install all packages:
 ```bash
-pip install -e packages/lumina
+pip install -e packages/clementine
 pip install -e packages/starline
 # ... or use install-all.sh
 ```
@@ -233,15 +233,15 @@ pip install -e packages/starline
 
 ### PHASE 2: Move Code (Week 2-3)
 
-#### Step 2.1: Move Lumina
+#### Step 2.1: Move Clementine
 ```bash
-# Current: src/apps/lumina/
-# Target: packages/lumina/teraaustralis/lumina/
+# Current: vision/apps/clementine/
+# Target: packages/clementine/teraaustralis/clementine/
 
-cp -r src/apps/lumina/* packages/lumina/teraaustralis/lumina/
+cp -r vision/apps/clementine/* packages/clementine/teraaustralis/clementine/
 ```
 
-**Create `packages/lumina/teraaustralis/__init__.py`:**
+**Create `packages/clementine/teraaustralis/__init__.py`:**
 ```python
 # Namespace package marker
 __path__ = __import__('pkgutil').extend_path(__path__, __name__)
@@ -303,8 +303,8 @@ from src.crystal_core.consent_transport import ConsentTransport
 
 **After (new import path):**
 ```python
-# In Lumina
-from teraaustralis.lumina import Lumina
+# In Clementine
+from teraaustralis.clementine import Clementine
 
 # In Starline
 from teraaustralis.starline import Starline
@@ -316,9 +316,9 @@ from teraaustralis.consent import ConsentTransport
 
 #### Step 3.2: Add cross-package dependencies
 
-**When Lumina uses Starline:**
+**When Clementine uses Starline:**
 
-`packages/lumina/pyproject.toml`:
+`packages/clementine/pyproject.toml`:
 ```toml
 dependencies = [
     # ...
@@ -328,21 +328,21 @@ dependencies = [
 
 **Install in dev mode:**
 ```bash
-pip install -e packages/lumina
+pip install -e packages/clementine
 pip install -e packages/starline
-# Lumina can now import from Starline
+# Clementine can now import from Starline
 ```
 
 #### Step 3.3: Update package __init__.py files
 
-**`packages/lumina/teraaustralis/lumina/__init__.py`:**
+**`packages/clementine/teraaustralis/clementine/__init__.py`:**
 ```python
-from .lumina import Lumina
+from .clementine import Clementine
 from .companion import Companion
 from .api import create_app
 
 __version__ = "1.0.0"
-__all__ = ["Lumina", "Companion", "create_app"]
+__all__ = ["Clementine", "Companion", "create_app"]
 ```
 
 ---
@@ -351,9 +351,9 @@ __all__ = ["Lumina", "Companion", "create_app"]
 
 #### Step 4.1: Update CI/CD
 
-**`.github/workflows/test-lumina.yml`:**
+**`.github/workflows/test-clementine.yml`:**
 ```yaml
-name: Test Lumina
+name: Test Clementine
 on: [push, pull_request]
 
 jobs:
@@ -364,16 +364,16 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: "3.10"
-      - run: pip install -e packages/lumina[dev]
-      - run: pytest packages/lumina/tests/
+      - run: pip install -e packages/clementine[dev]
+      - run: pytest packages/clementine/tests/
 ```
 
 #### Step 4.2: Add license headers to source files
 
-**Every `.py` file in `packages/lumina/`:**
+**Every `.py` file in `packages/clementine/`:**
 ```python
 """
-Lumina – The Sovereign Companion
+Clementine – The Sovereign Companion
 Copyright (c) 2026 CrystalArchitect
 
 Licensed under the GNU Affero General Public License v3.0 or later.
@@ -398,7 +398,7 @@ Each package gets:
 
 | Product | Old Path | New Path | Size | License |
 |---------|----------|----------|------|---------|
-| Lumina | `src/apps/lumina/` | `packages/lumina/teraaustralis/lumina/` | ~2MB | AGPL v3 |
+| Clementine | `vision/apps/clementine/` | `packages/clementine/teraaustralis/clementine/` | ~2MB | AGPL v3 |
 | Starline | `src/crystal-core/clementine/` + `starline/` | `packages/starline/teraaustralis/starline/` | ~1.5MB | AGPL v3 |
 | Consent | `src/crystal-core/consent_transport/` | `packages/consent-transport/teraaustralis/consent/` | ~800KB | AGPL v3 |
 | RDP | `src/crystal-core/rdp/` | `packages/rdp/teraaustralis/rdp/` | ~600KB | AGPL v3 |
@@ -456,7 +456,7 @@ echo "✅ All packages published!"
 After restructuring, dependencies will be explicit:
 
 ```
-lumina
+clementine
   ├─→ starline (imports Clementine)
   ├─→ consent-transport (imports ConsentTransport)
   └─→ crystalcore-ei (imports EI for emotion detection)
@@ -509,7 +509,7 @@ If restructuring causes issues:
 ## Success Criteria
 
 ✅ Each package installs independently via pip  
-✅ Imports work: `from teraaustralis.lumina import Lumina`  
+✅ Imports work: `from teraaustralis.clementine import Clementine`  
 ✅ Each package has own LICENSE.md  
 ✅ Each package has own version number  
 ✅ CI/CD tests pass for each package  

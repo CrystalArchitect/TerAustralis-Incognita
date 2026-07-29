@@ -19,7 +19,7 @@ This document outlines the commercial licensing strategies for TeraAustralis pro
 
 ### Open Source (AGPL v3)
 
-**Products:** Lumina, Starline Weaver, Consent Transport, RDP
+**Products:** Clementine, Starline Weaver, Consent Transport, RDP
 
 - **Model:** Free for open-source / non-commercial use
 - **Commercial SaaS:** License required ($2.5K–$10K+/year)
@@ -27,7 +27,7 @@ This document outlines the commercial licensing strategies for TeraAustralis pro
 - **Revenue:** Support contracts, commercial SaaS licensing
 
 **Licensing Contacts:**
-- Lumina: lumina-commercial@teraaustralis.dev
+- Clementine: clementine-commercial@teraaustralis.dev
 - Starline: starline-support@teraaustralis.dev
 - Consent: consent-commercial@teraaustralis.dev
 - RDP: rdp-commercial@teraaustralis.dev
@@ -101,7 +101,7 @@ def check_license_requirement():
             "⚠️  AGPL v3 Commercial Notice:\n"
             "If you are using this in a commercial SaaS product,\n"
             "you are required to have a commercial license.\n"
-            "Contact: lumina-commercial@teraaustralis.dev"
+            "Contact: clementine-commercial@teraaustralis.dev"
         )
 ```
 
@@ -110,11 +110,11 @@ def check_license_requirement():
 ```markdown
 ## Commercial Use
 
-If you are using Lumina in a commercial SaaS product or service,
+If you are using Clementine in a commercial SaaS product or service,
 you are required to obtain a commercial license. The AGPL v3 license
 permits commercial services but requires source code disclosure.
 
-For commercial licensing: lumina-commercial@teraaustralis.dev
+For commercial licensing: clementine-commercial@teraaustralis.dev
 ```
 
 ### For Proprietary (CrystalBridge)
@@ -238,7 +238,7 @@ class LicenseManager:
 
 | Product | Licenses | Annual | Notes |
 |---------|----------|--------|-------|
-| Lumina | 5 × $5K | $25K | Early adoption |
+| Clementine | 5 × $5K | $25K | Early adoption |
 | Starline | 3 × $7.5K | $22.5K | Technical teams |
 | CrystalCore-EI | 1 × $25K + 2 × $5K | $35K | Dual licensing working |
 | CrystalBridge | 1 × $50K/yr | $50K | Enterprise early access |
@@ -248,7 +248,7 @@ class LicenseManager:
 
 | Product | Licenses | Annual | Notes |
 |---------|----------|--------|-------|
-| Lumina | 50 × $7.5K | $375K | Widespread adoption |
+| Clementine | 50 × $7.5K | $375K | Widespread adoption |
 | Starline | 20 × $10K | $200K | Protocol standard |
 | CrystalCore-EI | 5 × $25K + 15 × $5K | $200K | Scaling startups |
 | CrystalBridge | 2 × $500K + 5 × $100K | $1.5M | Enterprise deployments |
@@ -261,7 +261,7 @@ class LicenseManager:
 1. **Create products:**
 
 ```bash
-stripe products create --name="Lumina Commercial License" --type=service
+stripe products create --name="Clementine Commercial License" --type=service
 stripe price create --product=prod_xyz --currency=usd --unit_amount=500000 --recurring=[interval=month]
 ```
 

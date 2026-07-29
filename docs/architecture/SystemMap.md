@@ -73,7 +73,7 @@ TerAustralis-Incognita/
 │   └── adr/            Architecture Decision Records
 │
 ├── src/ ✱              executable code only
-│   ├── apps/           lumina (companion) · voicebox (MCP TTS) ·
+│   ├── apps/           clementine (companion) · voicebox (MCP TTS) ·
 │   │                   crystal-interface + vision-web (demo shells)
 │   ├── crystal-core/   protocol pack: clementine/bridge (Starline Weaver) ·
 │   │                   services (pipeline) · consent_transport (P2P
@@ -111,7 +111,7 @@ TerAustralis-Incognita/
 │
 ├── tests/ ✱            repo-level test suites (unit/)
 │                       component tests live beside their component
-│                       (src/apps/lumina/tests/, the crystal-core selftests)
+│                       (vision/apps/clementine/tests/, the crystal-core selftests)
 │
 └── examples/           runnable demos, curated (see its README)
 ```

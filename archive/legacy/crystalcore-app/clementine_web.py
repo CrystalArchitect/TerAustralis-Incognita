@@ -303,7 +303,7 @@ document.getElementById('send').onsubmit = async (e) => {
       let detail = '';
       try { detail = (await r.text()).slice(0, 400); } catch (_) {}
       d.textContent = '[error ' + r.status + '] ' +
-        (detail || 'Chat request failed. Is Lumina still running on 127.0.0.1?');
+        (detail || 'Chat request failed. Is Clementine still running on 127.0.0.1?');
       resumeConversation();
     } else if (!r.body) {
       d.textContent = '[error] No response body (try http://127.0.0.1:5000 not another host).';

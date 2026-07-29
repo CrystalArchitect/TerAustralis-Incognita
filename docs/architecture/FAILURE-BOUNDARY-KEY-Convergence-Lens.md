@@ -27,7 +27,7 @@ if classification.type == 'vision' and components['observation'] is not None:
     → ESCALATE: governance_view
 ```
 
-**Action**: Claim is rejected; source reliability flag incremented. If source is Lumina, governance is alerted.
+**Action**: Claim is rejected; source reliability flag incremented. If source is Clementine, governance is alerted.
 
 ---
 
@@ -157,7 +157,7 @@ The system does **not** attempt to "fix" the violation automatically. No auto-re
 1. Governance reviews source reliability metrics
 2. Source is demoted to lower quality tier
 3. All future claims from source require pre-approval
-4. If source is Lumina, integration is paused pending investigation
+4. If source is Clementine, integration is paused pending investigation
 
 **There is no "auto-recovery" mode.** All recovery requires explicit governance action.
 
@@ -175,16 +175,16 @@ The system does **not** attempt to "fix" the violation automatically. No auto-re
 
 ---
 
-## Lumina-Specific Safety Rules
+## Clementine-Specific Safety Rules
 
-Lumina claims that violate invariants:
-1. Are logged in failure_log with source_origin = "lumina"
+Clementine claims that violate invariants:
+1. Are logged in failure_log with source_origin = "clementine"
 2. Do **not** proceed to MIRROR decomposition
 3. Trigger governance alert (email + dashboard notification)
 4. Are queued for governance review (may be approved with modifications)
-5. Are tracked in Lumina's reliability metrics
+5. Are tracked in Clementine's reliability metrics
 
-If Lumina violation rate exceeds 10% over 7 days, Lumina ingestion is **paused** until governance resolves the root cause.
+If Clementine violation rate exceeds 10% over 7 days, Clementine ingestion is **paused** until governance resolves the root cause.
 
 ---
 
@@ -221,7 +221,7 @@ Failure Boundary Key is locked when:
 - ✓ All 5 invariant violations are detectable and halt processing immediately
 - ✓ Failure log is immutable and governance-queryable
 - ✓ System does not auto-recover; only governance can resume
-- ✓ Lumina violations trigger governance alerts
+- ✓ Clementine violations trigger governance alerts
 - ✓ Rate limits prevent DoS via invalid claims
 - ✓ Under load (50 qps), violations are detected <100ms
 - ✓ Recovery procedures are documented and testable

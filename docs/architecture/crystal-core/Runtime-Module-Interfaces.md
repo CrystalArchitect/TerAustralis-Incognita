@@ -169,7 +169,7 @@ class Registry:
         Register a new service and its capabilities.
         
         Args:
-            service_id: Unique identifier for the service (e.g., "lumina", "starline.weaver")
+            service_id: Unique identifier for the service (e.g., "clementine", "starline.weaver")
             capabilities: List of Capability objects this service provides
             metadata: ServiceMetadata with version, health_check_url, etc.
             
@@ -208,7 +208,7 @@ class Registry:
         Find all services providing a capability.
         
         Args:
-            capability_name: Capability to search for (e.g., "ai.lumina")
+            capability_name: Capability to search for (e.g., "ai.clementine")
             
         Returns:
             List of ServiceReference objects (sorted by status, then registration time)
@@ -270,7 +270,7 @@ class Registry:
 ```python
 class Capability:
     """A capability provided by a service."""
-    name: str                 # e.g., "ai.lumina", "mesh.p2p.starline"
+    name: str                 # e.g., "ai.clementine", "mesh.p2p.starline"
     version: str              # Semantic version (e.g., "1.0.0")
     description: str          # Human-readable description
     input_schema: dict        # JSON Schema for inputs

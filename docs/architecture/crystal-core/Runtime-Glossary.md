@@ -21,7 +21,7 @@ See: Crystal Runtime Specification v0.3, Section 9.
 ## C
 
 ### Capability
-**A service or function provided by a registered component.** Capabilities are named and versioned. Examples: `"ai.lumina"` (conversational AI from Lumina), `"mesh.p2p.starline"` (peer-to-peer coordination), `"ai.consensus.weaver"` (multi-AI agreement). The Registry tracks which components provide which capabilities.
+**A service or function provided by a registered component.** Capabilities are named and versioned. Examples: `"ai.clementine"` (conversational AI from Clementine), `"mesh.p2p.starline"` (peer-to-peer coordination), `"ai.consensus.weaver"` (multi-AI agreement). The Registry tracks which components provide which capabilities.
 
 See: Crystal Runtime Specification v0.3, Section 4.2 (Registry).
 
@@ -31,7 +31,7 @@ See: Crystal Runtime Specification v0.3, Section 4.2 (Registry).
 See: Crystal Runtime Specification v0.3, Section 5 (Component Integration).
 
 ### Crystal Runtime
-**The coordination layer that orchestrates Lumina, Starline, Starline Weaver, CrystalBridge, and RDP without replacing or subsuming their responsibilities.** The runtime receives tasks, determines which components are needed, sequences their execution, and returns results. It is not an AI system, consensus mechanism, or protocol implementation—it coordinates existing systems.
+**The coordination layer that orchestrates Clementine, Starline, Starline Weaver, CrystalBridge, and RDP without replacing or subsuming their responsibilities.** The runtime receives tasks, determines which components are needed, sequences their execution, and returns results. It is not an AI system, consensus mechanism, or protocol implementation—it coordinates existing systems.
 
 See: Crystal Runtime Specification v0.3, Section 1 (Scope).
 
@@ -68,7 +68,7 @@ See: Crystal Runtime Specification v0.3, Section 4.3 (Events).
 See: Crystal Runtime Specification v0.3, Section 2 (Architectural Principles).
 
 ### Failure Isolation
-**The property that a component's failure does not cascade to other components or halt the entire runtime.** Example: If Lumina crashes, the runtime marks it offline in the Registry, fails in-flight tasks for Lumina, and continues accepting tasks that do not depend on Lumina. Each component's failures are contained.
+**The property that a component's failure does not cascade to other components or halt the entire runtime.** Example: If Clementine crashes, the runtime marks it offline in the Registry, fails in-flight tasks for Clementine, and continues accepting tasks that do not depend on Clementine. Each component's failures are contained.
 
 See: Crystal Runtime Specification v0.3, Section 5 (Component Integration).
 
@@ -90,8 +90,8 @@ See: Crystal Runtime Specification v0.3, Section 4.5 (Plugins).
 
 See: Crystal Runtime Specification v0.3, Section 4.6 (Logging) and Section 9.
 
-### Lumina
-**A local-first AI companion system providing conversational AI, memory management, and voice interaction.** Lumina is independent; the runtime coordinates it but does not control its AI model, memory, or terminal interface. Lumina registers under capability `"ai.lumina"`.
+### Clementine
+**A local-first AI companion system providing conversational AI, memory management, and voice interaction.** Clementine is independent; the runtime coordinates it but does not control its AI model, memory, or terminal interface. Clementine registers under capability `"ai.clementine"`.
 
 See: Crystal Runtime Specification v0.3, Section 5 (Component Integration).
 
@@ -184,7 +184,7 @@ See: Crystal Runtime Specification v0.3, Section 12 (Security Considerations).
 ## W
 
 ### Workflow
-**A sequence of component calls orchestrated by the Coordinator to accomplish a task.** A workflow may involve one component (query Lumina) or multiple components (route to Weaver, wait for consensus, then route the result to Starline). The Coordinator executes workflows and returns results (or errors).
+**A sequence of component calls orchestrated by the Coordinator to accomplish a task.** A workflow may involve one component (query Clementine) or multiple components (route to Weaver, wait for consensus, then route the result to Starline). The Coordinator executes workflows and returns results (or errors).
 
 See: Crystal Runtime Specification v0.3, Section 4.1 (Coordinator).
 
@@ -203,7 +203,7 @@ See: Crystal Runtime Specification v0.3, Section 4.1 (Coordinator).
 ### Key Projects
 
 - **CrystalBridge** (`src/crystalcore/`) — MCP consent gate, upstream of runtime.
-- **Lumina** (`src/apps/lumina/`) — Local-first AI companion.
+- **Clementine** (`vision/apps/clementine/`) — Local-first AI companion.
 - **Starline** (`src/crystal-core/consent_transport/`; `starline/` is a
   deprecated alias) — P2P consent-gated memory.
 - **Starline Weaver** (`src/crystal-core/clementine/bridge/`) — Multi-AI message bus.

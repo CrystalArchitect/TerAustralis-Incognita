@@ -50,8 +50,8 @@ tree; these commands will not run from a fresh clone of this repository
 (status note above):*
 
 ```bash
-# Lumina — the sovereign companion (local-first, Ollama-backed)
-cd src/apps/lumina && python3 lumina.py
+# Clementine — the sovereign companion (local-first, Ollama-backed)
+cd src/apps/clementine && python3 clementine.py
 
 # The Starline Weaver — multi-AI message bus, Belt-Three law enforced in code
 cd src/crystal-core && python3 -m clementine.bridge.selftest
@@ -83,7 +83,7 @@ The repository follows the **CrystalCore OS v1.0 architecture** (adopted
 
 | Path | What it is |
 |---|---|
-| `src/apps/lumina/` ✱ | The companion — CrystalCore framework package, terminal, Flask API, Svelte webapp, browser voice |
+| `vision/apps/clementine/` ✱ | The companion — CrystalCore framework package, terminal, Flask API, Svelte webapp, browser voice |
 | `src/apps/voicebox/` ✱ | Local MCP server giving Claude Code a spoken voice on your machine |
 | `src/apps/crystal-interface/`, `src/apps/vision-web/` ✱ | Demo shells (simulated data, Authority HOLD — not production) |
 | `src/crystal-core/` ✱ | The protocol pack — Starline Weaver (`clementine/bridge/`), Decode→Ingest→Twin pipeline (`services/`), Consent Transport (`consent_transport/`), RDP record kernel (`rdp/`) |
@@ -111,7 +111,7 @@ with no need to open a file to find out which rule applies. Full reasoning:
 
 ## The Covenant
 
-Lumina's core prompt (`src/apps/lumina/crystalcore/companion.py`) carries
+Clementine's core prompt (`core/crystalcore/mind/companion.py`) carries
 five binding rules, written out in full in `mythos/COVENANT.md`: no influence
 without explicit direction, an absolute and instant pause, memory that
 belongs entirely to the human, support that's offered rather than imposed,
@@ -137,7 +137,7 @@ every PR names the tools that helped produce it.
 
 Useful places to start, roughly in order of how load-bearing they are:
 
-- **Code** — Lumina, the Starline Weaver, Starline, CrystalBridge: fixes,
+- **Code** — Clementine, the Starline Weaver, Starline, CrystalBridge: fixes,
   features, tests.
 - **Docs** — architecture notes, clearer guides, filling gaps in what's here.
 - **Mythos** — the Codex, the Apocryphon, the Starline Transmissions, and the

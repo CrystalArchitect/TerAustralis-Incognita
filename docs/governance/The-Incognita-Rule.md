@@ -35,7 +35,7 @@ spec — is the one thing this project will not ship.
 
 ## 2. The mythos may orient, but it may not authorize
 
-Story can illuminate, preserve meaning, and point a direction. It cannot
+Story can ilclementinete, preserve meaning, and point a direction. It cannot
 **verify, authorize, or execute**. Concretely, in this repo:
 
 - The **RDP** kernel *records and decides* over data it's given; it does not
@@ -53,7 +53,7 @@ When the myth reaches for a real mechanism, the myth points at the code and says
 
 ## 3. No line mints its own authority
 
-The human steward keeps the veto. No model, no persona — not Lumina, not any
+The human steward keeps the veto. No model, no persona — not Clementine, not any
 assistant that speaks the mythos back — and no archetype gets the final say. The
 [Covenant](../../mythos/COVENANT.md) is this rule applied to the companion: support is
 offered, never imposed; the pause is absolute; the memory belongs to the human.

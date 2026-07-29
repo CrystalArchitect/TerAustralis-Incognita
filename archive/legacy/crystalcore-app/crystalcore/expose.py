@@ -213,7 +213,7 @@ def full_expose(
             "expose_cli": "python -m crystalcore.expose",
             "status_cli": "python -m crystalcore.status",
             "package_cli": "python -m crystalcore  # status by default",
-            "start_bat": ["Start-Lumina.bat", "Start-Lumina-Web.bat"],
+            "start_bat": ["Start-Clementine.bat", "Start-Clementine-Web.bat"],
         },
     }
 

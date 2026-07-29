@@ -11,7 +11,7 @@ def test_collect_status_shape(tmp_path: Path):
     mem = tmp_path / "mem"
     mem.mkdir()
     (mem / "config.json").write_text(
-        json.dumps({"name": "Lumina", "human_name": "Crystal", "model": "x", "provider": "ollama"}),
+        json.dumps({"name": "Clementine", "human_name": "Crystal", "model": "x", "provider": "ollama"}),
         encoding="utf-8",
     )
     (mem / "memory.json").write_text(
@@ -26,7 +26,7 @@ def test_collect_status_shape(tmp_path: Path):
     )
     data = collect_status(str(mem), repo_root=tmp_path)
     assert data["crystalcore"]["version"]
-    assert data["companion_memory"]["name"] == "Lumina"
+    assert data["companion_memory"]["name"] == "Clementine"
     assert data["companion_memory"]["counts"]["conversation"] == 1
     assert data["companion_memory"]["counts"]["facts"] == 1
     assert data["honesty"]["mesh_implemented"] is False

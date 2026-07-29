@@ -39,7 +39,7 @@ All five layers must pass before a module is considered complete.
 | `test_execute_workflow_partial_failure` | One of two components fails (retriable) | Coordinator logs failure, attempts retry | Result.status == "partial_failure" if partial |
 | `test_execute_workflow_audit_trail` | Any execution | Coordinator logs to RDP via Logging | Audit record present with task_id, status, duration |
 | `test_execute_workflow_concurrent_tasks` | 10 concurrent tasks | All execute independently without interference | All 10 tasks complete with expected results |
-| `test_scope_validation_rejects_out_of_bounds` | Caller scope: ["ai.lumina"], task requires "mesh.p2p" | Validation fails before execution | ScopeViolationError raised |
+| `test_scope_validation_rejects_out_of_bounds` | Caller scope: ["ai.clementine"], task requires "mesh.p2p" | Validation fails before execution | ScopeViolationError raised |
 
 **Mock Objects:**
 - `MockRegistry`: Preconfigured to return capabilities or raise "not found"
@@ -53,7 +53,7 @@ All five layers must pass before a module is considered complete.
 
 ### Integration Tests
 
-**Scope:** Coordinator with real Registry and Events (mocked components like Lumina)
+**Scope:** Coordinator with real Registry and Events (mocked components like Clementine)
 
 **Test Cases:**
 
@@ -72,14 +72,14 @@ All five layers must pass before a module is considered complete.
 
 ### Contract Tests
 
-**Scope:** Coordinator's contracts with external systems (Lumina, Starline, etc.)
+**Scope:** Coordinator's contracts with external systems (Clementine, Starline, etc.)
 
 **Test Cases:**
 
 | Test | Component | Scenario | Expected Behavior |
 |------|-----------|----------|---|
-| `test_lumina_request_format` | Mock Lumina | Send task with valid request format | Lumina handler accepts and responds within timeout |
-| `test_lumina_error_response` | Mock Lumina | Lumina returns error | Coordinator handles error gracefully, logs it, returns to caller |
+| `test_clementine_request_format` | Mock Clementine | Send task with valid request format | Clementine handler accepts and responds within timeout |
+| `test_clementine_error_response` | Mock Clementine | Clementine returns error | Coordinator handles error gracefully, logs it, returns to caller |
 | `test_weaver_matrix_response` | Mock Weaver | Send question, get back cross-compare results | Coordinator correctly interprets agreement counts, doesn't interpret as verdict |
 | `test_starline_consent_denial` | Mock Starline | Starline denies consent for exchange | Coordinator treats as task failure (not runtime failure) |
 | `test_rdp_witness_write` | Real or mock RDP | Write audit record | RDP acknowledges receipt and chain position |
@@ -118,9 +118,9 @@ All five layers must pass before a module is considered complete.
 
 | Test | Setup | Scenario | Assertions |
 |------|-------|----------|---|
-| `test_e2e_lumina_conversation` | Lumina service registered | User task: "query lumina" | Task executes, result contains Lumina response, audit trail complete |
-| `test_e2e_multi_component_workflow` | Lumina + Weaver + Starline registered | Task: "ask weaver, sync to starline" | All 3 components invoked correctly, results aggregated |
-| `test_e2e_component_failure_isolation` | Lumina + Weaver registered | Lumina crashes mid-task | Weaver task still completes, error logged, caller gets partial result |
+| `test_e2e_clementine_conversation` | Clementine service registered | User task: "query clementine" | Task executes, result contains Clementine response, audit trail complete |
+| `test_e2e_multi_component_workflow` | Clementine + Weaver + Starline registered | Task: "ask weaver, sync to starline" | All 3 components invoked correctly, results aggregated |
+| `test_e2e_component_failure_isolation` | Clementine + Weaver registered | Clementine crashes mid-task | Weaver task still completes, error logged, caller gets partial result |
 | `test_e2e_concurrent_users` | 5 concurrent callers | Each sends 10 tasks | All 50 tasks complete, each with correct scope/audit trail |
 | `test_e2e_audit_trail_integrity` | Any workflow | Task completes | RDP contains complete audit trail, timestamps correct, no gaps |
 
@@ -176,7 +176,7 @@ All five layers must pass before a module is considered complete.
 
 | Test | External System | Scenario | Expected |
 |------|-----------------|----------|----------|
-| `test_heartbeat_from_service` | Mock Lumina | Service sends heartbeat | Registry records timestamp, status becomes/stays online |
+| `test_heartbeat_from_service` | Mock Clementine | Service sends heartbeat | Registry records timestamp, status becomes/stays online |
 | `test_service_status_query_by_coordinator` | Mock Coordinator | Query capabilities | Returns correct ServiceReference format |
 
 **Success Criteria:**

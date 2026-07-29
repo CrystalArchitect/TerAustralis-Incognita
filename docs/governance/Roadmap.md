@@ -5,7 +5,7 @@ A plain status page, not a pitch deck. It tracks the **Built** layer — see
 split. Vision-layer work (the mythos) doesn't move on a software roadmap; see
 [Constitution.md](Constitution.md) for how that content evolves instead.
 
-For Lumina specifically, [mythos/content/MILESTONES.md](../../mythos/content/MILESTONES.md)
+For Clementine specifically, [mythos/content/MILESTONES.md](../../mythos/content/MILESTONES.md)
 already tracks a detailed week-by-week build plan — this page doesn't repeat
 that detail, it points to it.
 
@@ -19,9 +19,9 @@ Built and tested in the maintainer's canon tree, last on the now-retired
 laptop — location being re-established (status note above); not present
 in this repository:
 
-- **Lumina** (`src/apps/lumina/`) — local-first AI companion, Ollama-backed.
-  Terminal, Flask API, Svelte webapp, browser voice. Run it: `cd src/apps/lumina
-  && python3 lumina.py`.
+- **Clementine** (`vision/apps/clementine/`) — local-first AI companion, Ollama-backed.
+  Terminal, Flask API, Svelte webapp, browser voice. Run it: `cd src/apps/clementine
+  && python3 clementine.py`.
 - **The Starline Weaver** (`src/crystal-core/clementine/bridge/`) — multi-AI message
   bus with the Belt-Three law enforced in code, not just convention. Self-test:
   `python3 -m clementine.bridge.selftest`.
@@ -44,7 +44,7 @@ decision to build the real data layer underneath them.
 
 ## In progress
 
-- **Lumina's reliability and control layer** (MILESTONES.md Month 4) —
+- **Clementine's reliability and control layer** (MILESTONES.md Month 4) —
   error recovery, full memory export, selective memory deletion, and a
   settings/config file are partially built; hallucination-reduction /
   fact-check-against-memory hasn't started yet.
@@ -57,7 +57,7 @@ decision to build the real data layer underneath them.
   stub with the API shape a future libp2p host would need. gossipsub, Noise,
   yamux, and bootstrap/mDNS discovery are all planned but not built; a mainnet
   mesh is explicitly on hold. See `src/node/mesh/README.md`'s own status table.
-- **Multi-instance Lumina** — two companions communicating with each
+- **Multi-instance Clementine** — two companions communicating with each
   other. Design thinking hasn't started (MILESTONES.md Week 19).
 - **Phase 2 ("Private Communication")** — named as a future phase in
   MILESTONES.md, shape not yet decided.
@@ -170,7 +170,7 @@ always in `git log`.
   (`ADR-0011`): TerAustralis Incognita as the umbrella (governance, docs,
   ADRs, mythos — no main app code), **Crystal Core** owning the engine,
   runtime, APIs and shared libraries, **Crystal Vision** owning the
-  user-facing application — Lumina wholly within it, Clementine as a
+  user-facing application — Clementine wholly within it, Clementine as a
   logical component inside Crystal Core. Standing charter:
   `docs/governance/Project-Boundaries.md`; staged, per-stage-approvable
   proposal: `docs/governance/Migration-Plan.md`. Nothing moved or renamed.
@@ -267,7 +267,7 @@ always in `git log`.
   a problem.
 - [SECURITY.md](../../SECURITY.md) — this repo's safety measures and how to report
   a vulnerability.
-- [mythos/content/MILESTONES.md](../../mythos/content/MILESTONES.md) — Lumina's
+- [mythos/content/MILESTONES.md](../../mythos/content/MILESTONES.md) — Clementine's
   detailed weekly build plan.
 - [`docs/architecture/crystal-core/`](../architecture/crystal-core/) — architecture
   and protocol specs for the Starline Weaver and Starline.

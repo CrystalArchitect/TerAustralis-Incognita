@@ -17,7 +17,7 @@ lives") and the previously unmapped `dbt/` directory on the map. Second,
 `ADR-0011` adopted the three-project boundary model: **TerAustralis
 Incognita** as the umbrella (governance, docs, ADRs, mythos — no main app
 code), **Crystal Core** owning the engine, runtime, APIs, and shared
-libraries, **Crystal Vision** owning the user-facing application — Lumina
+libraries, **Crystal Vision** owning the user-facing application — Clementine
 wholly within it, Clementine as a logical component inside Crystal Core.
 
 ### Added
