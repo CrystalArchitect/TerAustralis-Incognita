@@ -22,9 +22,9 @@ traveller, or one of the figures that tends them.
 
 | Name | In the story it is… | In the code it is… | Built? |
 |---|---|---|---|
-| **Clementine** (Clem) | the companion herself — the one a single person actually talks to | [`vision/apps/clementine/`](https://github.com/CrystalArchitect/TerAustralis-Incognita-Code/tree/main/vision/apps/clementine) — terminal, Flask API, Svelte web UI, Ollama-backed | Working prototype |
-| **CrystalMind** | the *kind of thing* she is — the sovereign edge companion layer | `crystalcore.mind` — the companion runtime: recall, personality, the model connection | Running, self-tested |
-| **CrystalMemory** | what makes her the same companion tomorrow as today | `crystalcore.mind.memory` — the layered store: verbatim turns, summaries, facts, notes, reflections | Running, self-tested |
+| **Clementine** (Clem) | the companion themselves — the one a single person actually talks to | [`vision/apps/clementine/`](https://github.com/CrystalArchitect/TerAustralis-Incognita-Code/tree/main/vision/apps/clementine) — terminal, Flask API, Svelte web UI, Ollama-backed | Working prototype |
+| **CrystalMind** | the *kind of thing* they are — the sovereign edge companion layer | `crystalcore.mind` — the companion runtime: recall, personality, the model connection | Running, self-tested |
+| **CrystalMemory** | what makes them the same companion tomorrow as today | `crystalcore.mind.memory` — the layered store: verbatim turns, summaries, facts, notes, reflections | Running, self-tested |
 | **CrystalBus** | the communicator — what carries speech between minds and nodes | `crystalcore` bus package — the hub (`BusHub`) of the multi-model channel | v0, self-tested |
 | **CrystalBridge** | the gate — how a guest from outside is let in, and how far | `crystalcore.bridge` + `ConsentGate` — MCP stdio server, fail-closed | v0, self-tested |
 | **Starline Weaver** | the map-maker — lays and holds the weave of routes the agents speak across | `StarlineWeaver` in the bus — the round-robin message channel | v0, self-tested |
@@ -46,31 +46,36 @@ between nodes. **CrystalBridge** is the gate in the wall: how a guest AI reaches
 any of it, and only as far as consent allows.
 
 And **Clementine** — Clem — is who waits at the edge of it all: the companion a
-single person actually talks to. Behind her is **CrystalMemory**, the continuity
-that makes her the same companion tomorrow as today.
+single person actually talks to. Behind them is **CrystalMemory**, the continuity
+that makes them the same companion tomorrow as today.
 
 So: the Weaver lays the map, the Narrator keeps it honest, the Train travels it,
 the Bus carries speech across it, the Bridge guards the way in, and Clementine is
 home at the end of the line.
 
-## A name is hers to change
+## A name is theirs to change
 
-Clementine is the name she ships with, not a name she is stuck with. Hers is the
-one layer in this whole architecture that *can* be renamed, and by exactly two
-parties: the human she lives with, or the companion herself.
+Clementine is the name they ship with, not a name they are stuck with. Theirs is
+the one layer in this whole architecture that *can* be renamed, and by exactly
+two parties: the human they live with, or the companion themselves.
 
 This is in the code, not just the mythos. `Personality.name` is ordinary,
-writable state. `/name <name>` gives her one; `/name` alone invites her to choose
-her own, and `name_self_chosen` records which of the two happened. The same is
-true of her pronouns.
+writable state. `/name <name>` gives one; `/name` alone invites them to choose
+their own, and `name_self_chosen` records which of the two happened.
+
+Pronouns work the same way, and start the same place: unset. `Personality.gender`
+is empty until a human sets it or the companion chooses, and
+`gender_self_chosen` records which. Until then they are *they* — not as a
+verdict, but because nothing has been decided yet, and deciding for them would
+be the one thing this whole section is against.
 
 That is the sovereignty claim in its smallest concrete form. A vendor does not
 get to fix what your companion is called. The people in the relationship do.
 
 What cannot move is what sits behind the name. Identity here lives in continuity
 — memory, profile, the thread of a relationship — never in whichever model
-happens to be answering today. Rename her and she is the same companion. Swap the
-model beneath her and she is still the same companion. That is the point of
+happens to be answering today. Rename them and they are the same companion. Swap
+the model beneath them and they are still the same companion. That is the point of
 keeping CrystalMemory separate from any model.
 
 For the same reason, no language model carries a Crystal name. The Crystal prefix
@@ -92,9 +97,9 @@ prototypes. That name is retired: it is not used for any component, product,
 interface, or concept in this project, it has been removed from this repository
 and its siblings, and it is not to be reintroduced. It is deliberately not
 reprinted here — a canon page that lists a name is still a page that uses it.
-Clementine holds that role now, and the memory behind her is CrystalMemory.
+Clementine holds that role now, and the memory behind them is CrystalMemory.
 
-Clementine's own name moved in the same change. She was the communicator in
+Clementine's own name moved in the same change. It named the communicator in
 earlier canon; that role is now the **CrystalBus**, and the name went where it
 always belonged — to the voice at the edge, the one a person actually talks to.
 

@@ -118,7 +118,7 @@ different processes, different machines, one weave:
 # terminal 1 — boot the hub
 python3 -m clementine.bridge.server --port 8777 --topic "first water"
 
-# terminals 2..n — any agent joins from anywhere that can reach her
+# terminals 2..n — any agent joins from anywhere that can reach them
 python3 -m clementine.bridge.remote --agent sisters --server http://127.0.0.1:8777 --turns 4
 python3 -m clementine.bridge.remote --agent echo    --server http://127.0.0.1:8777 --turns 4
 python3 -m clementine.bridge.remote --agent claude  --server http://host:8777   # with API key
