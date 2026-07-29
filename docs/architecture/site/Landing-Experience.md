@@ -94,8 +94,12 @@ Already on disk in `vision/site/src/app.css`, kept as canon:
 ## Honest boundaries
 
 - **MarsBase DownUnder** (named in the mission brief's Explore list)
-  appears nowhere in the six repositories — a dreamed line, not yet
-  surveyed. It gets no homepage link until something exists to link.
+  appeared nowhere in the six repositories searched on 2026-07-24 — a
+  dreamed line, not yet surveyed. It gets no homepage link until something
+  exists to link. **Scope note (2026-07-28):** five repositories have been
+  created since that search and were not covered by it, so this is an
+  absence across the six then searched, not across the eleven that now
+  exist.
 - **Songlines** are honoured as cultural image in the mythos and are
   not a navigation item or feature name (`mythos/NAMES.md`).
 - **Lumina's CTA** leads to the Lumina page and its run-it-yourself

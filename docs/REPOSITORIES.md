@@ -8,18 +8,42 @@ This knowledge base documents the CrystalCore.OS architecture **exactly as it ex
 
 ---
 
-## The Six-Repository Constellation
+## The Constellation — eleven repositories
 
 **Status**
-- Science ✅ (verified 2026-07-24)
+- Science ✅ (count re-verified 2026-07-28; the six-repository model below was verified 2026-07-24 and remains accurate for those six)
 
 **Summary**
-The system spans six repositories: three living (active, in use), three frozen (provenance only, never edited). The three living repos form the complete canonical system today.
+The system spans **eleven** repositories. Six of them carry the model this page
+documents in detail: three living (active, in use) and three frozen (provenance
+only, never edited). The three living repos form the complete canonical system.
+
+Five more exist and are **not** described by the living/frozen model — they were
+created after it was written and have not been fitted to it:
+
+| Repository | Visibility | Created |
+|---|---|---|
+| `CrystalCore.OS` | public | 2026-07-28 |
+| `CrystalCore-AERIS` | public | 2026-07-28 |
+| `crystalcore-os-aeris-vault12` | public | 2026-07-28 |
+| `teraustralis-incognita-v2` | private | 2026-07-24 |
+| `teraustralis-v2-presentation` | private | 2026-07-28 |
+
+Categorising those five is deliberately left to the Archive's
+`knowledge-base/02-REPOSITORY-MAP.md`, which now covers all eleven. This page
+is not the canonical map and should not grow a second one.
 
 **Evidence**
 - Repository: TerAustralis-Incognita / docs/governance/Project-Boundaries.md (rewritten 2026-07-24 from same-day survey of all six)
 - Verified: direct inspection of code trees + ls-remote
 - Date: Two-repo split implemented as same-day history rewrite 2026-07-23 (per architecture-survey.md §1)
+- Count corrected 2026-07-28 from a GitHub API query returning `total_count: 11` for `user:CrystalArchitect`. Of the five additions, four were created 2026-07-28; `teraustralis-incognita-v2` was created 2026-07-24 and existed, unsurveyed, on the day the six-repository model was verified.
+
+**Why this drifted**
+"Six repositories" was true when written and was overtaken, not mistaken. The
+count carried no date, so nothing in it could go stale visibly — it simply
+became wrong while continuing to read as current. Counts of a growing thing
+belong with the date they were taken.
 
 **Discussion**
 See [ARCHITECTURE.md](ARCHITECTURE.md) for the three-project boundary model these repos implement.
@@ -274,7 +298,7 @@ Site renders *copies*, not canon directly. Publishing delay is acceptable design
 - Science ✅
 
 **Summary**
-Repository portfolio at a glance: six repositories supporting three projects (umbrella, Core, Vision) with three frozen archives for provenance.
+Repository portfolio at a glance: the six repositories this page models — three living, supporting three projects (umbrella, Core, Vision), plus three frozen archives for provenance. Five further repositories exist and are outside this model; see the constellation section above and the Archive's `02-REPOSITORY-MAP.md`.
 
 **Evidence**
 - Complete inventory: three living repos + three frozen archives
