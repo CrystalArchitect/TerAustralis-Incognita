@@ -39,7 +39,17 @@ EXCLUDED_SUBSTRINGS = ("local-snapshot",)
 # docs/governance/Migration-Plan.md rather than as link rot. Referring to
 # them is intentional: the documents describe where code went and where it
 # is going. Listed explicitly so that a *new* broken path still fails.
-KNOWN_ABSENT_ROOTS = ("src/", "packages/", "scripts/", "tests/", "corpus/")
+#
+# `vision/` and `core/` are the post-split successors of `src/`: Migration
+# Plan Stages 1-2 moved src/apps/ -> vision/apps/ and src/crystalcore/ ->
+# core/crystalcore/ in the Code repository. They were absent from this list
+# only because no document here had been updated to the new paths yet, so
+# nothing exercised them. A document that cites where the code lives *now*
+# is doing the same job as one citing where it used to.
+KNOWN_ABSENT_ROOTS = (
+    "src/", "vision/", "core/",
+    "packages/", "scripts/", "tests/", "corpus/",
+)
 
 LINK = re.compile(r'\[[^\]]*\]\(([^)\s]+)(?:\s+"[^"]*")?\)')
 
