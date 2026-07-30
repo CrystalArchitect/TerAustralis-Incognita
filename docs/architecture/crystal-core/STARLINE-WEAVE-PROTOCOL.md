@@ -45,7 +45,7 @@ Every message on the bus is one JSON envelope:
 ## Conduct (Belt-Three, enforced in code)
 
 1. **Honour Country** — the system prompt every live model receives states it plainly; no false factual claims.
-2. **Label layers** — `ClementineHub.validate()` rejects any message without a lawful layer. See `bridge/agents.py`.
+2. **Label layers** — `BusHub.validate()` rejects any message without a lawful layer. See `bridge/agents.py`.
 3. **No coercion** — the red button is a full stop, not a negotiation. See `RedButton` in `bridge/bus.py`.
 
 ## Joining the bus
@@ -73,13 +73,13 @@ An unconfigured or failing model never crashes the bus — it reports itself, la
 
 ```bash
 # no keys needed — built-in agents
-python3 -m clementine.bridge.run --agents echo,sisters --turns 4 --topic "first water"
+python3 -m bus.run --agents echo,sisters --turns 4 --topic "first water"
 
 # prove the law holds
-python3 -m clementine.bridge.selftest
+python3 -m bus.selftest
 
 # live model-to-model (with keys set)
-python3 -m clementine.bridge.run --agents claude,grok --turns 3 --topic "water care"
+python3 -m bus.run --agents claude,grok --turns 3 --topic "water care"
 ```
 
 Transcripts land in `clementine/transcripts/` as readable markdown.
@@ -92,10 +92,10 @@ independently, none seeing another's reply, so an earlier voice can never
 anchor a later one:
 
 ```bash
-python3 -m clementine.bridge.run --mode matrix --agents claude,gpt,grok --topic "what is the Starline Weaver?"
+python3 -m bus.run --mode matrix --agents claude,gpt,grok --topic "what is the Starline Weaver?"
 ```
 
-Each reply still passes through `ClementineHub.validate()` — an unlabeled
+Each reply still passes through `BusHub.validate()` — an unlabeled
 answer is rejected same as always, without blocking the rest. What matrix
 mode adds is `cross_compare()`: a count of how many agents answered, how
 their truth labels split, and whether they were unanimous. It is a count,
@@ -116,12 +116,12 @@ different processes, different machines, one weave:
 
 ```bash
 # terminal 1 — boot the hub
-python3 -m clementine.bridge.server --port 8777 --topic "first water"
+python3 -m bus.server --port 8777 --topic "first water"
 
 # terminals 2..n — any agent joins from anywhere that can reach them
-python3 -m clementine.bridge.remote --agent sisters --server http://127.0.0.1:8777 --turns 4
-python3 -m clementine.bridge.remote --agent echo    --server http://127.0.0.1:8777 --turns 4
-python3 -m clementine.bridge.remote --agent claude  --server http://host:8777   # with API key
+python3 -m bus.remote --agent sisters --server http://127.0.0.1:8777 --turns 4
+python3 -m bus.remote --agent echo    --server http://127.0.0.1:8777 --turns 4
+python3 -m bus.remote --agent claude  --server http://host:8777   # with API key
 ```
 
 | Endpoint | Law |

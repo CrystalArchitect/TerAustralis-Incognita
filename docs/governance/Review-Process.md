@@ -18,7 +18,7 @@ maintainer merges.
    npx markdownlint-cli2 "**/*.md" "#node_modules" "#archive"
    ```
    The Python syntax check, the crystal-core self-tests
-   (`clementine.bridge.selftest`, `services.selftest`,
+   (`bus.selftest`, `services.selftest`,
    `consent_transport.selftest`, `rdp.selftest`, `crystalcore.selftest`),
    and the pytest suites this section used to describe now run in
    [`TerAustralis-Incognita-Code`](https://github.com/CrystalArchitect/TerAustralis-Incognita-Code)'s

@@ -22,9 +22,9 @@ in this repository:
 - **Clementine** (`vision/apps/clementine/`) — local-first AI companion, Ollama-backed.
   Terminal, Flask API, Svelte webapp, browser voice. Run it: `cd src/apps/clementine
   && python3 clementine.py`.
-- **The Starline Weaver** (`src/crystal-core/clementine/bridge/`) — multi-AI message
+- **The Starline Weaver** (`src/crystal-core/bus/`) — multi-AI message
   bus with the Belt-Three law enforced in code, not just convention. Self-test:
-  `python3 -m clementine.bridge.selftest`.
+  `python3 -m bus.selftest`.
 - **Starline** (`src/crystal-core/consent_transport/`) — peer-to-peer consent-gated memory
   exchange over a real Noise Protocol handshake. Self-test: `python3 -m
   consent_transport.selftest`; watch it work: `python3 -m consent_transport.run demo`.
@@ -239,7 +239,7 @@ always in `git log`.
   records. `python3 -m rdp.run matrix-demo` drives the real Weaver through the
   real chain. 1 new self-test, 31/31 passing.
 - **2026-07-22** — Added matrix mode to the Starline Weaver
-  (`src/crystal-core/clementine/bridge/`): `run_matrix()` fans one question out
+  (`src/crystal-core/bus/`): `run_matrix()` fans one question out
   to every agent independently (none sees another's reply) and
   `cross_compare()` counts delivery and truth-label agreement — a count, not
   a verdict. `--mode matrix` on the existing CLI. 4 new self-tests, 7/7

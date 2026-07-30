@@ -32,7 +32,7 @@ python -m compileall -q src tests archive
 
 # Self-tests (from src/crystal-core/)
 cd src/crystal-core
-python -m clementine.bridge.selftest      # Starline Weaver
+python -m bus.selftest      # Starline Weaver
 python -m services.selftest               # Decode → Ingest → Twin pipeline
 pip install -r requirements-consenttransport.txt
 python -m consent_transport.selftest               # Starline

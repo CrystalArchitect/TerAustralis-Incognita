@@ -70,8 +70,8 @@ python3 src/crystalcore-os/crystalcore_os.py
 
 For the Starline Weaver's wire protocol, envelope schema, and conduct rules, see
 [`STARLINE-WEAVE-PROTOCOL.md`](docs/architecture/crystal-core/STARLINE-WEAVE-PROTOCOL.md);
-for the hub agent's persona and contract, see
-[`CLEMENTINE.md`](docs/architecture/crystal-core/CLEMENTINE.md). For the
+for the hub's contract and component card, see
+[`CRYSTALBUS.md`](docs/architecture/crystal-core/CRYSTALBUS.md). For the
 CrystalCore.OS terminal — its commands, nodes, and keys — see
 [`mythos/CRYSTALCORE-OS.md`](mythos/CRYSTALCORE-OS.md).
 

@@ -206,7 +206,7 @@ See: Crystal Runtime Specification v0.3, Section 4.1 (Coordinator).
 - **Clementine** (`vision/apps/clementine/`) — Local-first AI companion.
 - **Starline** (`src/crystal-core/consent_transport/`; `starline/` is a
   deprecated alias) — P2P consent-gated memory.
-- **Starline Weaver** (`src/crystal-core/clementine/bridge/`) — Multi-AI message bus.
+- **Starline Weaver** (`src/crystal-core/bus/`) — Multi-AI message bus.
 - **RDP** (`src/crystal-core/rdp/`) — Tamper-evident chain.
 
 ---
