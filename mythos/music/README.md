@@ -32,12 +32,12 @@ changed platform policy is currently enough to lose it.
 
 ## The catalogue
 
-Three works are known to exist; one has been exported. Where the **File**
+Three works are known to exist; two have been exported. Where the **File**
 column is empty, that emptiness is the point of the row.
 
 | File | Work | Lyrics | Music | Suno plan at generation | Notes |
 |---|---|---|---|---|---|
-| *not exported* | [Red Dust Axis](../content/RED-DUST-AXIS.md) | CrystalArchitect + CrystalDreamer (Grok) | Suno, version unrecorded | **unconfirmed** | |
+| [`red-dust-axis.mp3`](red-dust-axis.mp3) | [Red Dust Axis](../content/RED-DUST-AXIS.md) | CrystalArchitect + CrystalDreamer (Grok) | Suno, version unrecorded | **unconfirmed** | 3:35, MP3 VBR ~193 kbps, 48 kHz stereo. Generated 2026-05-02T19:36:19Z; Suno track id `f8502175-74c7-4cf1-adc0-16c7eb7c8cf3`. Both read from the file's own ID3 tag, not supplied by hand. |
 | [`shooting-star-girl.mp3`](shooting-star-girl.mp3) | [Shooting Star Girl](../content/SHOOTING-STAR-GIRL.md) | CrystalArchitect + CrystalDreamer (Grok) | Suno, version unrecorded | **unconfirmed** | 3:34, MP3 VBR ~191 kbps, 48 kHz stereo. Generated 2026-07-30T14:01:06Z; Suno track id `4a115658-9096-4f23-be27-779e7b3cda63`. Both read from the file's own ID3 tag, not supplied by hand. |
 | *not exported* | [Fermi's Silent Line](../content/FERMIS-SILENT-LINE.md) | CrystalArchitect + CrystalDreamer (Grok) | Suno, version unrecorded | **unconfirmed** | |
 
@@ -59,14 +59,20 @@ records what the canon already names.
   the answer cannot be recovered from the file later. Record it while it is
   still knowable.
 
-  **Why the exported track still says "unconfirmed."** There is circumstantial
+  **Why the exported tracks still say "unconfirmed."** There is circumstantial
   evidence of a paid plan: as part of Warner Music's November 2025 settlement,
-  Suno restricted audio downloads to paid accounts, and this file was both
-  generated (2026-07-30) and successfully downloaded after that change. That is
-  evidence, not proof — the restriction's exact scope and enforcement are not
-  something this repository can verify. Only the account holder can confirm the
-  plan, and until they do the honest value is "unconfirmed" rather than a
-  convenient assumption in the direction we would prefer.
+  Suno restricted audio downloads to paid accounts, and both files were
+  downloaded after that change. That is evidence, not proof — the restriction's
+  exact scope and enforcement are not something this repository can verify.
+  Only the account holder can confirm the plan, and until they do the honest
+  value is "unconfirmed" rather than a convenient assumption in the direction
+  we would prefer.
+
+  **And the answer may differ per track.** The two exported recordings were
+  generated **2026-05-02** and **2026-07-30** — nearly three months apart. A
+  subscription can start, lapse or change tier in that time, so one answer for
+  the catalogue would be a guess dressed as a fact. That is why this column
+  exists per row rather than once at the top of the page.
 - **Notes** — anything a listener or a licensee would need to know.
 
 ## Truth labels
