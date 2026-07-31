@@ -1,8 +1,14 @@
 # Provenance Timestamps — anchoring the work to Bitcoin
 
-**Status:** tooling in place, **not yet stamped**. The manifest is committed; no
-`.ots` proof exists until someone runs the stamping command from a machine with
-network access to the OpenTimestamps calendars.
+**Status:** stamped once, on 2026-07-31, and awaiting a fresh stamp.
+
+The first proof was taken that day and is archived at
+[`mythos/proofs/2026-07-31-MANIFEST.sha256.ots`](../../mythos/proofs/), beside
+the manifest it attests. It remains a true statement about that date.
+
+The work changed the same day — a recording was removed, see the truth label in
+[`mythos/music/README.md`](../../mythos/music/README.md) — so the current
+manifest has no proof yet. Run the workflow to take one.
 
 Two attempts were made from the environment this tooling was built in, on
 2026-07-31. Both failed identically — `need at least 2 attestations but
@@ -160,10 +166,20 @@ job ends once the hash is in a block.
   file no longer matches — which is the point, but it means the manifest must
   be regenerated and re-stamped after every change to the work.
 
-That last constraint is a feature. Each stamp is a dated snapshot. Keeping the
-old `.ots` files alongside the new ones builds a chain of dated states, which
-is the same accretion discipline the archive already runs on: the record of
-what was true on a date stays standing, and new records are added beside it.
+That last constraint is a feature, and the tooling now enforces it.
+
+Each stamp is a dated snapshot. When the work changes,
+[`provenance.py`](../../mythos/tools/provenance.py) archives the superseded
+proof into [`mythos/proofs/`](../../mythos/proofs/) **together with the
+manifest it attests** — a proof alone is unverifiable, so the pair is the unit
+that has to be kept — and clears the way for a fresh stamp.
+
+Both the workflow and `stamp.sh` refuse to *upgrade* a proof whose attested
+hash does not match the current manifest, and say what to run instead. That
+guard exists because the alternative failure is the worst kind available here:
+a repository that looks anchored while its current state is not. Evidence that
+has quietly stopped describing the thing it names is worse than no evidence,
+because it is trusted.
 
 ## What is covered
 
