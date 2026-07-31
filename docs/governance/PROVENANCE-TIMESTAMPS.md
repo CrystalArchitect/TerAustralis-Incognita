@@ -1,8 +1,32 @@
 # Provenance Timestamps — anchoring the work to Bitcoin
 
-**Status:** tooling in place, not yet stamped. The manifest is committed; no
-`.ots` proof exists until someone runs the stamping command from a machine
-with network access to the OpenTimestamps calendars.
+**Status:** tooling in place, **not yet stamped**. The manifest is committed; no
+`.ots` proof exists until someone runs the stamping command from a machine with
+network access to the OpenTimestamps calendars.
+
+Two attempts were made from the environment this tooling was built in, on
+2026-07-31. Both failed identically — `need at least 2 attestations but
+received 0` — because that environment's network policy rejects CONNECT to all
+four calendar pools with HTTP 403. The failure is the sandbox, not the tool or
+the manifest. Anywhere with ordinary internet access will work.
+
+### What stands in until then
+
+Nothing here is a substitute, and this section exists so nobody mistakes one
+for the other.
+
+GitHub records, server-side, when each commit was **pushed** — a timestamp
+written by a party other than the author. That is genuinely better than a git
+commit date, which the author sets and can set to anything. It is the floor
+this repository currently sits on.
+
+It is a poor ceiling. GitHub is a single company that could alter or lose those
+records; the timestamps are not cryptographically verifiable by a stranger; and
+they prove receipt by one service rather than existence in the world. A
+Bitcoin anchor has none of those weaknesses, which is the entire reason for
+preferring it.
+
+So: the work is *evidenced* today and will be *provable* after one command.
 
 ## What problem this solves
 
@@ -16,7 +40,8 @@ Two things it cannot do:
 2. **Prove it to someone who does not trust the author.** The whole history
    could be rebuilt from scratch by the person who holds the repository.
 
-For a body of creative work — 140 artworks, three songs, the written canon —
+For a body of creative work — 142 artworks, eleven recordings, the written
+canon —
 those two gaps are the whole question of priority. *I made this, and I made it
 first* is currently a claim resting on the author's word.
 
@@ -57,7 +82,16 @@ python3 mythos/tools/provenance.py --check
 ```
 
 Stamp it. **This step needs network access to the calendar servers**, which
-some sandboxed environments block:
+some sandboxed environments block. One command does the whole thing — installs
+the client if missing, refuses to stamp a stale manifest, and tells you what to
+commit:
+
+```sh
+bash mythos/tools/stamp.sh
+```
+
+Run it again an hour later and it upgrades the proof instead of making a new
+one. The equivalent by hand:
 
 ```sh
 pip install opentimestamps-client
