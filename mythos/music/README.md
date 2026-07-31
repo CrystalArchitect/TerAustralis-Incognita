@@ -3,26 +3,23 @@
 Audio canon of the TerAustralis Incognita universe. Content licensed
 CC BY-NC-ND 4.0 — see [`../content/LICENSE-CONTENT.md`](../content/LICENSE-CONTENT.md).
 
-**This directory is currently empty of audio.** The lyrics for the three
-original songs live as text at
-[`../content/RED-DUST-AXIS.md`](../content/RED-DUST-AXIS.md),
-[`../content/SHOOTING-STAR-GIRL.md`](../content/SHOOTING-STAR-GIRL.md) and
-[`../content/FERMIS-SILENT-LINE.md`](../content/FERMIS-SILENT-LINE.md); the
-recordings themselves are on Suno at
-[@m13crystalat](https://suno.com/@m13crystalat) and nowhere in this
-repository.
+The lyrics live as text in [`../content/`](../content/), one page per work.
+The recordings live here, and also on Suno at
+[@m13crystalat](https://suno.com/@m13crystalat).
 
-That is the gap this directory exists to close. Of every kind of work in this
-portfolio, the music is the only one held in exactly one place, by a third
-party, with no local copy, no hash and no date. A lapsed subscription or a
-changed platform policy is currently enough to lose it.
+That second sentence is the reason this directory exists. Until 2026-07-31 the
+music was the only kind of work in this portfolio held in exactly one place, by
+a third party, with no local copy, no hash and no date — a lapsed subscription
+or a changed platform policy was enough to lose it. Every work the canon names
+now has a recording here, hashed and covered by
+[`../MANIFEST.sha256`](../MANIFEST.sha256).
 
 ## Adding a track
 
 1. Export the audio from Suno at the highest quality offered. Keep the
    original filename out of it — name the file after the work, in kebab-case,
    matching the lyric page where one exists: `red-dust-axis.mp3`.
-2. Add a row to the table below. Every column is required; "unknown" is an
+2. Add a row to the catalogue below. Every column is required; "unconfirmed" is an
    acceptable value and a far better one than a guess.
 3. Re-run the manifest so the new file is covered by the next timestamp:
 
@@ -32,66 +29,81 @@ changed platform policy is currently enough to lose it.
 
 ## The catalogue
 
-Three works are named in the canon. **A work can have more than one
-recording** — Shooting Star Girl has two, generated nearly three months apart —
-so this table has one row per *recording*, not per song. Where the **File**
-column is empty, that emptiness is the point of the row.
+Four works are named in the canon: the **three ignition songs** written across
+the sky in [The First Remembering](../content/THE-FIRST-REMEMBERING.md#the-three-songs),
+and [Wire Skull Memory](../content/WIRE-SKULL-MEMORY.md), which its own page
+marks as standalone and explicitly *not* one of the three. That distinction is
+the canon's, not this file's, and is preserved here rather than flattened into
+a single list.
+
+**A work can have more than one recording** — Shooting Star Girl has two,
+generated nearly three months apart — so this table has one row per
+*recording*, not per song.
 
 Files are named `<work>-<generation date>.mp3` wherever more than one recording
 of a work exists. The date is a fact the file carries about itself; a name like
 `-final` or `-v2` would be a judgement, and which take is the song is not
 something a filename should quietly decide.
 
-| File | Work | Length | Generated | Suno track id | Suno plan at generation |
-|---|---|---|---|---|---|
-| [`red-dust-axis.mp3`](red-dust-axis.mp3) | [Red Dust Axis](../content/RED-DUST-AXIS.md) | 3:35 | 2026-05-02T19:36:19Z | `f8502175-74c7-4cf1-adc0-16c7eb7c8cf3` | **unconfirmed** |
-| [`shooting-star-girl-2026-05-04.mp3`](shooting-star-girl-2026-05-04.mp3) | [Shooting Star Girl](../content/SHOOTING-STAR-GIRL.md) | 2:15 | 2026-05-04T03:07:33Z | `3903f9ed-f13b-4d3a-9a6d-bb598760ebd5` | **unconfirmed** |
-| [`shooting-star-girl-2026-07-30.mp3`](shooting-star-girl-2026-07-30.mp3) | [Shooting Star Girl](../content/SHOOTING-STAR-GIRL.md) | 3:34 | 2026-07-30T14:01:06Z | `4a115658-9096-4f23-be27-779e7b3cda63` | **unconfirmed** |
-| *not exported* | [Fermi's Silent Line](../content/FERMIS-SILENT-LINE.md) | | | | **unconfirmed** |
+| File | Work | Ignition song | Length | Generated | Suno track id | Suno plan |
+|---|---|---|---|---|---|---|
+| [`red-dust-axis.mp3`](red-dust-axis.mp3) | [Red Dust Axis](../content/RED-DUST-AXIS.md) | yes | 3:35 | 2026-05-02T19:36:19Z | `f8502175-74c7-4cf1-adc0-16c7eb7c8cf3` | **unconfirmed** |
+| [`shooting-star-girl-2026-05-04.mp3`](shooting-star-girl-2026-05-04.mp3) | [Shooting Star Girl](../content/SHOOTING-STAR-GIRL.md) | yes | 2:15 | 2026-05-04T03:07:33Z | `3903f9ed-f13b-4d3a-9a6d-bb598760ebd5` | **unconfirmed** |
+| [`wire-skull-memory.mp3`](wire-skull-memory.mp3) | [Wire Skull Memory](../content/WIRE-SKULL-MEMORY.md) | no | 2:16 | 2026-05-07T06:21:02Z | `1a194a77-0d9b-4d93-94f7-7a8388b24de0` | **unconfirmed** |
+| [`fermis-silent-line.mp3`](fermis-silent-line.mp3) | [Fermi's Silent Line](../content/FERMIS-SILENT-LINE.md) | yes | 4:34 | 2026-05-10T12:53:53Z | `d2563605-d533-4714-98b5-996da3c59cf9` | **unconfirmed** |
+| [`shooting-star-girl-2026-07-30.mp3`](shooting-star-girl-2026-07-30.mp3) | [Shooting Star Girl](../content/SHOOTING-STAR-GIRL.md) | yes | 3:34 | 2026-07-30T14:01:06Z | `4a115658-9096-4f23-be27-779e7b3cda63` | **unconfirmed** |
 
-All recordings are MP3, VBR around 190–196 kbps, 48 kHz stereo. Lyrics for
-every work are credited to the CrystalArchitect and CrystalDreamer (Grok); the
-audio is Suno, generator version unrecorded. Every length, timestamp and track
-id above was read from the file's own ID3 tag rather than supplied by hand.
+Rows are in generation order, which turns out to describe a single week in May
+2026 — the 2nd, 4th, 7th and 10th — and then one return to Shooting Star Girl
+almost three months later.
+
+All recordings are MP3, VBR between roughly 179 and 196 kbps, 48 kHz stereo.
+Lyrics for every work are credited to the CrystalArchitect and CrystalDreamer
+(Grok); the audio is Suno, generator version unrecorded. Every length,
+timestamp and track id above was read from the file's own ID3 tag rather than
+supplied by hand.
+
+**The catalogue is complete against the canon as it stands** — every work with
+a lyric page now has at least one recording here. Whether more exist on the
+Suno account than the canon names is not something this file can know.
 
 **Which Shooting Star Girl is the song is an open question**, and this file
 does not answer it. Both recordings are kept. If one is later chosen as canon,
 say so here in a dated line and leave the other standing — the earlier record
 is not wrong about the date it describes.
 
-The three lyric pages name these as the songs "written across the sky at
-ignition" — see [The First Remembering](../content/THE-FIRST-REMEMBERING.md#the-three-songs).
-Whether the catalogue ends at three is not something this file can know; it
-records what the canon already names.
-
 ### What the columns mean
 
-- **Lyrics** — who wrote the words. Where a model helped, name it. The
-  existing song pages already do this: *"co-written by the CrystalArchitect
-  and CrystalDreamer (Grok)"*.
-- **Music** — the generator and model version where known (e.g. `Suno v4`).
-- **Suno plan at generation** — free, Pro, or Premier, *at the time the track
-  was generated*. This is not bookkeeping trivia. Suno's free tier grants
+- **Ignition song** — whether the work is one of the three written across the
+  sky in The First Remembering, or standalone. The canon draws this line; the
+  catalogue records it rather than deciding it.
+- **Generated** and **Suno track id** — read from the file's ID3 tag. The id is
+  a durable pointer back to the source, worth keeping now rather than
+  reconstructing later.
+- **Suno plan** — free, Pro, or Premier, *at the time the track was
+  generated*. This is not bookkeeping trivia. Suno's free tier grants
   non-commercial use only; paid tiers grant commercial rights. The same audio
   file carries different rights depending on the plan it was made under, and
   the answer cannot be recovered from the file later. Record it while it is
   still knowable.
 
-  **Why the exported tracks still say "unconfirmed."** There is circumstantial
-  evidence of a paid plan: as part of Warner Music's November 2025 settlement,
-  Suno restricted audio downloads to paid accounts, and both files were
+  **Why every row still says "unconfirmed."** There is circumstantial evidence
+  of a paid plan: as part of Warner Music's November 2025 settlement, Suno
+  restricted audio downloads to paid accounts, and all five files were
   downloaded after that change. That is evidence, not proof — the restriction's
   exact scope and enforcement are not something this repository can verify.
   Only the account holder can confirm the plan, and until they do the honest
   value is "unconfirmed" rather than a convenient assumption in the direction
   we would prefer.
 
-  **And the answer may differ per track.** The two exported recordings were
-  generated **2026-05-02** and **2026-07-30** — nearly three months apart. A
-  subscription can start, lapse or change tier in that time, so one answer for
-  the catalogue would be a guess dressed as a fact. That is why this column
-  exists per row rather than once at the top of the page.
-- **Notes** — anything a listener or a licensee would need to know.
+  **And the answer may differ per track.** Four of the recordings come from one
+  week in May 2026; the fifth is from 30 July, nearly three months later. A
+  subscription can start, lapse or change tier across a gap that size, so one
+  answer for the whole catalogue would be a guess dressed as a fact. That is
+  why this column exists per row rather than once at the top of the page.
+
+  Two dates settle all five: whatever plan was active in **early May 2026**,
+  and whatever was active on **30 July 2026**.
 
 ## Truth labels
 
