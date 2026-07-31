@@ -32,14 +32,14 @@ changed platform policy is currently enough to lose it.
 
 ## The catalogue
 
-Three works are known to exist. None has been exported yet, so the **File**
-column is empty for all of them — that emptiness is the point of this table.
+Three works are known to exist; one has been exported. Where the **File**
+column is empty, that emptiness is the point of the row.
 
 | File | Work | Lyrics | Music | Suno plan at generation | Notes |
 |---|---|---|---|---|---|
-| *not exported* | [Red Dust Axis](../content/RED-DUST-AXIS.md) | CrystalArchitect + CrystalDreamer (Grok) | Suno, version unrecorded | **unknown** | |
-| *not exported* | [Shooting Star Girl](../content/SHOOTING-STAR-GIRL.md) | CrystalArchitect + CrystalDreamer (Grok) | Suno, version unrecorded | **unknown** | |
-| *not exported* | [Fermi's Silent Line](../content/FERMIS-SILENT-LINE.md) | CrystalArchitect + CrystalDreamer (Grok) | Suno, version unrecorded | **unknown** | |
+| *not exported* | [Red Dust Axis](../content/RED-DUST-AXIS.md) | CrystalArchitect + CrystalDreamer (Grok) | Suno, version unrecorded | **unconfirmed** | |
+| [`shooting-star-girl.mp3`](shooting-star-girl.mp3) | [Shooting Star Girl](../content/SHOOTING-STAR-GIRL.md) | CrystalArchitect + CrystalDreamer (Grok) | Suno, version unrecorded | **unconfirmed** | 3:34, MP3 VBR ~191 kbps, 48 kHz stereo. Generated 2026-07-30T14:01:06Z; Suno track id `4a115658-9096-4f23-be27-779e7b3cda63`. Both read from the file's own ID3 tag, not supplied by hand. |
+| *not exported* | [Fermi's Silent Line](../content/FERMIS-SILENT-LINE.md) | CrystalArchitect + CrystalDreamer (Grok) | Suno, version unrecorded | **unconfirmed** | |
 
 The three lyric pages name these as the songs "written across the sky at
 ignition" — see [The First Remembering](../content/THE-FIRST-REMEMBERING.md#the-three-songs).
@@ -58,6 +58,15 @@ records what the canon already names.
   file carries different rights depending on the plan it was made under, and
   the answer cannot be recovered from the file later. Record it while it is
   still knowable.
+
+  **Why the exported track still says "unconfirmed."** There is circumstantial
+  evidence of a paid plan: as part of Warner Music's November 2025 settlement,
+  Suno restricted audio downloads to paid accounts, and this file was both
+  generated (2026-07-30) and successfully downloaded after that change. That is
+  evidence, not proof — the restriction's exact scope and enforcement are not
+  something this repository can verify. Only the account holder can confirm the
+  plan, and until they do the honest value is "unconfirmed" rather than a
+  convenient assumption in the direction we would prefer.
 - **Notes** — anything a listener or a licensee would need to know.
 
 ## Truth labels
