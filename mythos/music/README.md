@@ -53,11 +53,11 @@ something a filename should quietly decide.
 
 | File | Work | Canon status | Length | Generated | Suno track id | Suno plan |
 |---|---|---|---|---|---|---|
-| [`red-dust-axis.mp3`](red-dust-axis.mp3) | [Red Dust Axis](../content/RED-DUST-AXIS.md) | ignition song | 3:35 | 2026-05-02T19:36:19Z | `f8502175-74c7-4cf1-adc0-16c7eb7c8cf3` | Pro — *subject to start date* |
-| [`shooting-star-girl-2026-05-04.mp3`](shooting-star-girl-2026-05-04.mp3) | [Shooting Star Girl](../content/SHOOTING-STAR-GIRL.md) | ignition song | 2:15 | 2026-05-04T03:07:33Z | `3903f9ed-f13b-4d3a-9a6d-bb598760ebd5` | Pro — *subject to start date* |
-| [`wire-skull-memory.mp3`](wire-skull-memory.mp3) | [Wire Skull Memory](../content/WIRE-SKULL-MEMORY.md) | standalone, in canon | 2:16 | 2026-05-07T06:21:02Z | `1a194a77-0d9b-4d93-94f7-7a8388b24de0` | Pro — *subject to start date* |
-| [`fermis-silent-line.mp3`](fermis-silent-line.mp3) | [Fermi's Silent Line](../content/FERMIS-SILENT-LINE.md) | ignition song | 4:34 | 2026-05-10T12:53:53Z | `d2563605-d533-4714-98b5-996da3c59cf9` | Pro — *subject to start date* |
-| [`safari-chains.mp3`](safari-chains.mp3) | Safari Chains | **not in canon** | 3:14 | 2026-05-10T13:35:54Z | `26833d33-83f3-4606-8fcc-fd96d1ae6058` | Pro — *subject to start date* |
+| [`red-dust-axis.mp3`](red-dust-axis.mp3) | [Red Dust Axis](../content/RED-DUST-AXIS.md) | ignition song | 3:35 | 2026-05-02T19:36:19Z | `f8502175-74c7-4cf1-adc0-16c7eb7c8cf3` | **unresolved** — before the earliest visible charge |
+| [`shooting-star-girl-2026-05-04.mp3`](shooting-star-girl-2026-05-04.mp3) | [Shooting Star Girl](../content/SHOOTING-STAR-GIRL.md) | ignition song | 2:15 | 2026-05-04T03:07:33Z | `3903f9ed-f13b-4d3a-9a6d-bb598760ebd5` | **unresolved** — before the earliest visible charge |
+| [`wire-skull-memory.mp3`](wire-skull-memory.mp3) | [Wire Skull Memory](../content/WIRE-SKULL-MEMORY.md) | standalone, in canon | 2:16 | 2026-05-07T06:21:02Z | `1a194a77-0d9b-4d93-94f7-7a8388b24de0` | Pro — same day as the 7 May charge |
+| [`fermis-silent-line.mp3`](fermis-silent-line.mp3) | [Fermi's Silent Line](../content/FERMIS-SILENT-LINE.md) | ignition song | 4:34 | 2026-05-10T12:53:53Z | `d2563605-d533-4714-98b5-996da3c59cf9` | **Pro** |
+| [`safari-chains.mp3`](safari-chains.mp3) | Safari Chains | **not in canon** | 3:14 | 2026-05-10T13:35:54Z | `26833d33-83f3-4606-8fcc-fd96d1ae6058` | **Pro** |
 | [`different-parts.mp3`](different-parts.mp3) | Different Parts | **not in canon** | 3:39 | 2026-07-17T08:19:25Z | `ac20f017-f30f-4107-843f-e967f9df0d37` | **none — Pro ended 6 June** |
 | [`id-lay-it-all-down.mp3`](id-lay-it-all-down.mp3) | I'd Lay It All Down | **not in canon** | 4:15 | 2026-07-21T14:36:40Z | `4b4a881a-653d-440a-a056-29c3b85f6fa3` | **none — Pro ended 6 June** |
 | *removed 2026-07-31* | Look What You Made Me Do — *see truth label* | **not in canon** | 3:52 | 2026-07-21T14:47:48Z | `4d875adf-2547-419e-ac4d-66fa53b729c6` | **none — Pro ended 6 June** |
@@ -82,10 +82,10 @@ above was read from the file's own ID3 tag rather than supplied by hand.
 ## Uncanonised recordings
 
 `safari-chains.mp3`, `different-parts.mp3`, `id-lay-it-all-down.mp3`,
-`look-what-you-made-me-do.mp3`, `starline-rivers.mp3` and
-`dead-but-came-back-to-life.mp3` are held here and are **not part of the
-canon**. No lyric page exists for them, and they appear in no canon document —
-not in
+`starline-rivers.mp3` and `dead-but-came-back-to-life.mp3` are held here and
+are **not part of the canon**. A sixth, `look-what-you-made-me-do.mp3`, was
+also uncanonised and has since been removed — see its truth label. No lyric
+page exists for any of them, and they appear in no canon document — not in
 [The First Remembering](../content/THE-FIRST-REMEMBERING.md), not in the track
 list in [`../crystalcore-os/crystalcore_os.py`](../crystalcore-os/crystalcore_os.py).
 
@@ -134,35 +134,35 @@ is not wrong about the date it describes.
   the answer cannot be recovered from the file later. Record it while it is
   still knowable.
 
-  **What is now known.** A subscription screenshot dated 2026-07-31 shows a
-  **Suno Pro Plan, cancelled, ended 6 June 2026**. That splits the catalogue:
+  **What the records show.** Two screenshots, both dated 2026-07-31:
 
-  - The **five May recordings** (2nd to 10th) fall before the cutoff. Whether
-    they fall *inside* the Pro period depends on when it started, which the
-    screenshot does not show. If billing ran on the 6th, a subscription
-    beginning 6 May would leave the 2nd and 4th outside it. Marked
-    *subject to start date* rather than resolved.
-  - The **six July recordings** (17th onward) were generated with **no Pro
-    subscription running**. On the free tier Suno grants non-commercial use
-    only. Unless a separate licence covers them, these six should not be sold,
-    inscribed or licensed commercially.
+  - A subscription page: **Suno Pro Plan, cancelled, ended 6 June 2026**.
+  - A purchase history filtered to "Suno": **one charge, 7 May 2026, $15.00,
+    Pro Plan**.
 
-  **A retraction.** An earlier version of this file argued that all the
-  recordings were probably made on a paid plan, reasoning that Suno restricted
-  downloads to paid accounts after Warner Music's November 2025 settlement and
-  every file here was downloaded after that change.
+  Together those bracket a paid period of **7 May to 6 June 2026** — thirty
+  days, which matches a monthly cycle.
 
-  That inference is now falsified by the evidence above: six recordings were
-  generated with no Pro subscription and were downloaded anyway. Whatever the
-  download restriction actually covers, it is not the clean signal that
-  argument treated it as. The conclusion it pointed toward — *probably paid* —
-  was also wrong for those six, and in the direction that would have been
-  convenient. It is retracted here rather than deleted, because a record that
-  quietly loses its own mistakes is not a record.
+  **What that settles.** Everything generated from 7 May until 6 June was made
+  on a paid plan: Wire Skull Memory, Fermi's Silent Line and Safari Chains.
+  Everything after 6 June was not: all six July recordings.
 
-  **Still unresolved:** the Pro subscription's *start* date, which is the only
-  thing standing between the five May recordings and a settled answer. It is
-  visible in Apple's subscription history or Suno's billing page.
+  **What it does not settle, and why.** The purchase history was showing
+  **"Last 90 Days"**. Filtered on 2026-07-31 that window opens around 2 May, so
+  a charge on 7 April — the previous cycle, had there been one — would not
+  appear. One visible charge is therefore consistent with two different
+  histories: a subscription that began on 7 May, or one that had been renewing
+  for months and simply had its earlier charges outside the window.
+
+  Red Dust Axis (2 May) and the first Shooting Star Girl take (4 May) sit before
+  7 May. Under the first history they were made on the free tier; under the
+  second they were covered. Their rows say **unresolved** rather than picking
+  the reading that suits us.
+
+  **What would close it:** the same purchase history with the range widened
+  past April. One Suno charge in that view means 7 May was the beginning and
+  those two are free-tier; more than one means the subscription predates May and
+  all five are Pro.
 
 ## Truth labels
 
