@@ -40,7 +40,8 @@ Two things it cannot do:
 2. **Prove it to someone who does not trust the author.** The whole history
    could be rebuilt from scratch by the person who holds the repository.
 
-For a body of creative work — 140 artworks, three songs, the written canon —
+For a body of creative work — 142 artworks, eleven recordings, the written
+canon —
 those two gaps are the whole question of priority. *I made this, and I made it
 first* is currently a claim resting on the author's word.
 
