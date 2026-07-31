@@ -32,14 +32,32 @@ changed platform policy is currently enough to lose it.
 
 ## The catalogue
 
-Three works are known to exist; two have been exported. Where the **File**
+Three works are named in the canon. **A work can have more than one
+recording** — Shooting Star Girl has two, generated nearly three months apart —
+so this table has one row per *recording*, not per song. Where the **File**
 column is empty, that emptiness is the point of the row.
 
-| File | Work | Lyrics | Music | Suno plan at generation | Notes |
+Files are named `<work>-<generation date>.mp3` wherever more than one recording
+of a work exists. The date is a fact the file carries about itself; a name like
+`-final` or `-v2` would be a judgement, and which take is the song is not
+something a filename should quietly decide.
+
+| File | Work | Length | Generated | Suno track id | Suno plan at generation |
 |---|---|---|---|---|---|
-| [`red-dust-axis.mp3`](red-dust-axis.mp3) | [Red Dust Axis](../content/RED-DUST-AXIS.md) | CrystalArchitect + CrystalDreamer (Grok) | Suno, version unrecorded | **unconfirmed** | 3:35, MP3 VBR ~193 kbps, 48 kHz stereo. Generated 2026-05-02T19:36:19Z; Suno track id `f8502175-74c7-4cf1-adc0-16c7eb7c8cf3`. Both read from the file's own ID3 tag, not supplied by hand. |
-| [`shooting-star-girl.mp3`](shooting-star-girl.mp3) | [Shooting Star Girl](../content/SHOOTING-STAR-GIRL.md) | CrystalArchitect + CrystalDreamer (Grok) | Suno, version unrecorded | **unconfirmed** | 3:34, MP3 VBR ~191 kbps, 48 kHz stereo. Generated 2026-07-30T14:01:06Z; Suno track id `4a115658-9096-4f23-be27-779e7b3cda63`. Both read from the file's own ID3 tag, not supplied by hand. |
-| *not exported* | [Fermi's Silent Line](../content/FERMIS-SILENT-LINE.md) | CrystalArchitect + CrystalDreamer (Grok) | Suno, version unrecorded | **unconfirmed** | |
+| [`red-dust-axis.mp3`](red-dust-axis.mp3) | [Red Dust Axis](../content/RED-DUST-AXIS.md) | 3:35 | 2026-05-02T19:36:19Z | `f8502175-74c7-4cf1-adc0-16c7eb7c8cf3` | **unconfirmed** |
+| [`shooting-star-girl-2026-05-04.mp3`](shooting-star-girl-2026-05-04.mp3) | [Shooting Star Girl](../content/SHOOTING-STAR-GIRL.md) | 2:15 | 2026-05-04T03:07:33Z | `3903f9ed-f13b-4d3a-9a6d-bb598760ebd5` | **unconfirmed** |
+| [`shooting-star-girl-2026-07-30.mp3`](shooting-star-girl-2026-07-30.mp3) | [Shooting Star Girl](../content/SHOOTING-STAR-GIRL.md) | 3:34 | 2026-07-30T14:01:06Z | `4a115658-9096-4f23-be27-779e7b3cda63` | **unconfirmed** |
+| *not exported* | [Fermi's Silent Line](../content/FERMIS-SILENT-LINE.md) | | | | **unconfirmed** |
+
+All recordings are MP3, VBR around 190–196 kbps, 48 kHz stereo. Lyrics for
+every work are credited to the CrystalArchitect and CrystalDreamer (Grok); the
+audio is Suno, generator version unrecorded. Every length, timestamp and track
+id above was read from the file's own ID3 tag rather than supplied by hand.
+
+**Which Shooting Star Girl is the song is an open question**, and this file
+does not answer it. Both recordings are kept. If one is later chosen as canon,
+say so here in a dated line and leave the other standing — the earlier record
+is not wrong about the date it describes.
 
 The three lyric pages name these as the songs "written across the sky at
 ignition" — see [The First Remembering](../content/THE-FIRST-REMEMBERING.md#the-three-songs).
