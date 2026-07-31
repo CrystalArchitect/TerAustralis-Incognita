@@ -8,7 +8,11 @@ Two attempts were made from the environment this tooling was built in, on
 2026-07-31. Both failed identically — `need at least 2 attestations but
 received 0` — because that environment's network policy rejects CONNECT to all
 four calendar pools with HTTP 403. The failure is the sandbox, not the tool or
-the manifest. Anywhere with ordinary internet access will work.
+the manifest.
+
+**Anywhere with ordinary internet access will work, including GitHub's own
+runners** — which is why the stamping is also wired as a workflow that can be
+triggered from a phone browser. See *Running it* below.
 
 ### What stands in until then
 
@@ -26,7 +30,8 @@ they prove receipt by one service rather than existence in the world. A
 Bitcoin anchor has none of those weaknesses, which is the entire reason for
 preferring it.
 
-So: the work is *evidenced* today and will be *provable* after one command.
+So: the work is *evidenced* today and becomes *provable* the moment somebody
+taps Run workflow.
 
 ## What problem this solves
 
@@ -40,9 +45,8 @@ Two things it cannot do:
 2. **Prove it to someone who does not trust the author.** The whole history
    could be rebuilt from scratch by the person who holds the repository.
 
-For a body of creative work — 142 artworks, eleven recordings, the written
-canon —
-those two gaps are the whole question of priority. *I made this, and I made it
+For a body of creative work — 142 artworks, eleven recordings and the written
+canon — those two gaps are the whole question of priority. *I made this, and I made it
 first* is currently a claim resting on the author's word.
 
 Anchoring closes both, for free.
@@ -82,9 +86,30 @@ python3 mythos/tools/provenance.py --check
 ```
 
 Stamp it. **This step needs network access to the calendar servers**, which
-some sandboxed environments block. One command does the whole thing — installs
-the client if missing, refuses to stamp a stale manifest, and tells you what to
-commit:
+some sandboxed environments block. There are two ways, and the first needs no
+computer at all.
+
+### From a phone — the GitHub Actions workflow
+
+GitHub's runners can reach the calendars. `.github/workflows/stamp.yml` does
+the whole thing there and commits the proof back:
+
+> **Actions** tab → **Stamp the manifest** → **Run workflow**
+
+That is the entire procedure. No terminal, no laptop, nothing to type. It
+refuses to run against a stale manifest, and it runs again every Monday to
+upgrade the proof once its Bitcoin block is mined — doing nothing once the
+proof is complete.
+
+**One setting can block it.** The workflow needs to push the proof it creates.
+If the run fails at the last step with a `403`, the repository is configured to
+give Actions read-only access. Fix it once at
+**Settings → Actions → General → Workflow permissions → Read and write
+permissions**, then re-run. Nothing else about the workflow needs changing.
+
+### From a terminal
+
+One command, same guarantees:
 
 ```sh
 bash mythos/tools/stamp.sh
