@@ -1,6 +1,7 @@
 # Mythos Music
 
-Audio canon of the TerAustralis Incognita universe. Content licensed
+Audio of the TerAustralis Incognita universe — the canon works, and recordings
+that are not canon and are marked so. Content licensed
 CC BY-NC-ND 4.0 — see [`../content/LICENSE-CONTENT.md`](../content/LICENSE-CONTENT.md).
 
 The lyrics live as text in [`../content/`](../content/), one page per work.
@@ -12,7 +13,8 @@ music was the only kind of work in this portfolio held in exactly one place, by
 a third party, with no local copy, no hash and no date — a lapsed subscription
 or a changed platform policy was enough to lose it. Every work the canon names
 now has a recording here, hashed and covered by
-[`../MANIFEST.sha256`](../MANIFEST.sha256).
+[`../MANIFEST.sha256`](../MANIFEST.sha256) — along with three recordings the
+canon does not name, kept for the same reason and labelled as what they are.
 
 ## Adding a track
 
@@ -29,12 +31,16 @@ now has a recording here, hashed and covered by
 
 ## The catalogue
 
-Four works are named in the canon: the **three ignition songs** written across
-the sky in [The First Remembering](../content/THE-FIRST-REMEMBERING.md#the-three-songs),
+The canon names four works: the **three ignition songs** written across the sky
+in [The First Remembering](../content/THE-FIRST-REMEMBERING.md#the-three-songs),
 and [Wire Skull Memory](../content/WIRE-SKULL-MEMORY.md), which its own page
-marks as standalone and explicitly *not* one of the three. That distinction is
-the canon's, not this file's, and is preserved here rather than flattened into
-a single list.
+marks as standalone and explicitly *not* one of the three.
+
+**Three further recordings exist that the canon does not name at all.** They
+are kept here because preservation is what this directory is for, and losing
+them would be the failure it was built against. Their presence is not a claim
+that they are canon — see [Uncanonised recordings](#uncanonised-recordings)
+below.
 
 **A work can have more than one recording** — Shooting Star Girl has two,
 generated nearly three months apart — so this table has one row per
@@ -45,27 +51,45 @@ of a work exists. The date is a fact the file carries about itself; a name like
 `-final` or `-v2` would be a judgement, and which take is the song is not
 something a filename should quietly decide.
 
-| File | Work | Ignition song | Length | Generated | Suno track id | Suno plan |
+| File | Work | Canon status | Length | Generated | Suno track id | Suno plan |
 |---|---|---|---|---|---|---|
-| [`red-dust-axis.mp3`](red-dust-axis.mp3) | [Red Dust Axis](../content/RED-DUST-AXIS.md) | yes | 3:35 | 2026-05-02T19:36:19Z | `f8502175-74c7-4cf1-adc0-16c7eb7c8cf3` | **unconfirmed** |
-| [`shooting-star-girl-2026-05-04.mp3`](shooting-star-girl-2026-05-04.mp3) | [Shooting Star Girl](../content/SHOOTING-STAR-GIRL.md) | yes | 2:15 | 2026-05-04T03:07:33Z | `3903f9ed-f13b-4d3a-9a6d-bb598760ebd5` | **unconfirmed** |
-| [`wire-skull-memory.mp3`](wire-skull-memory.mp3) | [Wire Skull Memory](../content/WIRE-SKULL-MEMORY.md) | no | 2:16 | 2026-05-07T06:21:02Z | `1a194a77-0d9b-4d93-94f7-7a8388b24de0` | **unconfirmed** |
-| [`fermis-silent-line.mp3`](fermis-silent-line.mp3) | [Fermi's Silent Line](../content/FERMIS-SILENT-LINE.md) | yes | 4:34 | 2026-05-10T12:53:53Z | `d2563605-d533-4714-98b5-996da3c59cf9` | **unconfirmed** |
-| [`shooting-star-girl-2026-07-30.mp3`](shooting-star-girl-2026-07-30.mp3) | [Shooting Star Girl](../content/SHOOTING-STAR-GIRL.md) | yes | 3:34 | 2026-07-30T14:01:06Z | `4a115658-9096-4f23-be27-779e7b3cda63` | **unconfirmed** |
+| [`red-dust-axis.mp3`](red-dust-axis.mp3) | [Red Dust Axis](../content/RED-DUST-AXIS.md) | ignition song | 3:35 | 2026-05-02T19:36:19Z | `f8502175-74c7-4cf1-adc0-16c7eb7c8cf3` | **unconfirmed** |
+| [`shooting-star-girl-2026-05-04.mp3`](shooting-star-girl-2026-05-04.mp3) | [Shooting Star Girl](../content/SHOOTING-STAR-GIRL.md) | ignition song | 2:15 | 2026-05-04T03:07:33Z | `3903f9ed-f13b-4d3a-9a6d-bb598760ebd5` | **unconfirmed** |
+| [`wire-skull-memory.mp3`](wire-skull-memory.mp3) | [Wire Skull Memory](../content/WIRE-SKULL-MEMORY.md) | standalone, in canon | 2:16 | 2026-05-07T06:21:02Z | `1a194a77-0d9b-4d93-94f7-7a8388b24de0` | **unconfirmed** |
+| [`fermis-silent-line.mp3`](fermis-silent-line.mp3) | [Fermi's Silent Line](../content/FERMIS-SILENT-LINE.md) | ignition song | 4:34 | 2026-05-10T12:53:53Z | `d2563605-d533-4714-98b5-996da3c59cf9` | **unconfirmed** |
+| [`safari-chains.mp3`](safari-chains.mp3) | Safari Chains | **not in canon** | 3:14 | 2026-05-10T13:35:54Z | `26833d33-83f3-4606-8fcc-fd96d1ae6058` | **unconfirmed** |
+| [`different-parts.mp3`](different-parts.mp3) | Different Parts | **not in canon** | 3:39 | 2026-07-17T08:19:25Z | `ac20f017-f30f-4107-843f-e967f9df0d37` | **unconfirmed** |
+| [`id-lay-it-all-down.mp3`](id-lay-it-all-down.mp3) | I'd Lay It All Down | **not in canon** | 4:15 | 2026-07-21T14:36:40Z | `4b4a881a-653d-440a-a056-29c3b85f6fa3` | **unconfirmed** |
+| [`shooting-star-girl-2026-07-30.mp3`](shooting-star-girl-2026-07-30.mp3) | [Shooting Star Girl](../content/SHOOTING-STAR-GIRL.md) | ignition song | 3:34 | 2026-07-30T14:01:06Z | `4a115658-9096-4f23-be27-779e7b3cda63` | **unconfirmed** |
 
-Rows are in generation order, which turns out to describe a single week in May
-2026 — the 2nd, 4th, 7th and 10th — and then one return to Shooting Star Girl
-almost three months later.
+Rows are in generation order. Two working periods show up in it: **2–10 May
+2026**, five recordings in nine days — Safari Chains arriving forty minutes
+after Fermi's Silent Line on the same afternoon — and then **17, 21 and 30
+July**.
 
-All recordings are MP3, VBR between roughly 179 and 196 kbps, 48 kHz stereo.
-Lyrics for every work are credited to the CrystalArchitect and CrystalDreamer
-(Grok); the audio is Suno, generator version unrecorded. Every length,
-timestamp and track id above was read from the file's own ID3 tag rather than
-supplied by hand.
+All recordings are MP3, VBR between roughly 178 and 196 kbps, 48 kHz stereo.
+The audio is Suno, generator version unrecorded. Lyrics for the four canon
+works are credited on their pages to the CrystalArchitect and CrystalDreamer
+(Grok); for the three uncanonised recordings the lyric credit is not recorded
+anywhere and this file does not guess it. Every length, timestamp and track id
+above was read from the file's own ID3 tag rather than supplied by hand.
 
-**The catalogue is complete against the canon as it stands** — every work with
-a lyric page now has at least one recording here. Whether more exist on the
-Suno account than the canon names is not something this file can know.
+## Uncanonised recordings
+
+`safari-chains.mp3`, `different-parts.mp3` and `id-lay-it-all-down.mp3` are
+held here and are **not part of the canon**. No lyric page exists for them, and
+they appear in no canon document — not in
+[The First Remembering](../content/THE-FIRST-REMEMBERING.md), not in the track
+list in [`../crystalcore-os/crystalcore_os.py`](../crystalcore-os/crystalcore_os.py).
+
+Being in this folder is not what makes a work canon. A work enters the canon by
+being written into it — a page in [`../content/`](../content/), a line in a
+canon document — and that is the maintainer's decision, not a consequence of a
+file being backed up. Until then these are recordings that exist, honestly
+labelled as such.
+
+The same applies in reverse: nothing here says they *should not* be canon. The
+question is simply open, and open is what it looks like when written down.
 
 **Which Shooting Star Girl is the song is an open question**, and this file
 does not answer it. Both recordings are kept. If one is later chosen as canon,
@@ -74,9 +98,11 @@ is not wrong about the date it describes.
 
 ### What the columns mean
 
-- **Ignition song** — whether the work is one of the three written across the
-  sky in The First Remembering, or standalone. The canon draws this line; the
-  catalogue records it rather than deciding it.
+- **Canon status** — `ignition song` (one of the three in The First
+  Remembering), `standalone, in canon` (named in the canon but not one of the
+  three), or `not in canon` (no lyric page, named in no canon document). The
+  canon draws these lines; the catalogue records them rather than deciding
+  them.
 - **Generated** and **Suno track id** — read from the file's ID3 tag. The id is
   a durable pointer back to the source, worth keeping now rather than
   reconstructing later.
@@ -89,21 +115,23 @@ is not wrong about the date it describes.
 
   **Why every row still says "unconfirmed."** There is circumstantial evidence
   of a paid plan: as part of Warner Music's November 2025 settlement, Suno
-  restricted audio downloads to paid accounts, and all five files were
+  restricted audio downloads to paid accounts, and all eight files were
   downloaded after that change. That is evidence, not proof — the restriction's
   exact scope and enforcement are not something this repository can verify.
   Only the account holder can confirm the plan, and until they do the honest
   value is "unconfirmed" rather than a convenient assumption in the direction
   we would prefer.
 
-  **And the answer may differ per track.** Four of the recordings come from one
-  week in May 2026; the fifth is from 30 July, nearly three months later. A
-  subscription can start, lapse or change tier across a gap that size, so one
-  answer for the whole catalogue would be a guess dressed as a fact. That is
-  why this column exists per row rather than once at the top of the page.
+  **And the answer may differ per track.** Five recordings come from a single
+  week in May 2026; three more from 17, 21 and 30 July. A subscription can
+  start, lapse or change tier across gaps that size, so one answer for the
+  whole catalogue would be a guess dressed as a fact. That is why this column
+  exists per row rather than once at the top of the page.
 
-  Two dates settle all five: whatever plan was active in **early May 2026**,
-  and whatever was active on **30 July 2026**.
+  In practice two answers probably settle all eight: whatever plan was active
+  in **early May 2026**, and whatever was active across **mid-to-late July
+  2026**. Probably is not the same as certainly, which is why the rows stay
+  marked until someone checks.
 
 ## Truth labels
 
