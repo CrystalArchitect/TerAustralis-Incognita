@@ -32,9 +32,19 @@ changed platform policy is currently enough to lose it.
 
 ## The catalogue
 
+Three works are known to exist. None has been exported yet, so the **File**
+column is empty for all of them — that emptiness is the point of this table.
+
 | File | Work | Lyrics | Music | Suno plan at generation | Notes |
 |---|---|---|---|---|---|
-| *(none yet)* | | | | | |
+| *not exported* | [Red Dust Axis](../content/RED-DUST-AXIS.md) | CrystalArchitect + CrystalDreamer (Grok) | Suno, version unrecorded | **unknown** | |
+| *not exported* | [Shooting Star Girl](../content/SHOOTING-STAR-GIRL.md) | CrystalArchitect + CrystalDreamer (Grok) | Suno, version unrecorded | **unknown** | |
+| *not exported* | [Fermi's Silent Line](../content/FERMIS-SILENT-LINE.md) | CrystalArchitect + CrystalDreamer (Grok) | Suno, version unrecorded | **unknown** | |
+
+The three lyric pages name these as the songs "written across the sky at
+ignition" — see [The First Remembering](../content/THE-FIRST-REMEMBERING.md#the-three-songs).
+Whether the catalogue ends at three is not something this file can know; it
+records what the canon already names.
 
 ### What the columns mean
 
