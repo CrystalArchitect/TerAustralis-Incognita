@@ -13,7 +13,7 @@ music was the only kind of work in this portfolio held in exactly one place, by
 a third party, with no local copy, no hash and no date — a lapsed subscription
 or a changed platform policy was enough to lose it. Every work the canon names
 now has a recording here, hashed and covered by
-[`../MANIFEST.sha256`](../MANIFEST.sha256) — along with three recordings the
+[`../MANIFEST.sha256`](../MANIFEST.sha256) — along with four recordings the
 canon does not name, kept for the same reason and labelled as what they are.
 
 ## Adding a track
@@ -36,7 +36,7 @@ in [The First Remembering](../content/THE-FIRST-REMEMBERING.md#the-three-songs),
 and [Wire Skull Memory](../content/WIRE-SKULL-MEMORY.md), which its own page
 marks as standalone and explicitly *not* one of the three.
 
-**Three further recordings exist that the canon does not name at all.** They
+**Four further recordings exist that the canon does not name at all.** They
 are kept here because preservation is what this directory is for, and losing
 them would be the failure it was built against. Their presence is not a claim
 that they are canon — see [Uncanonised recordings](#uncanonised-recordings)
@@ -60,25 +60,26 @@ something a filename should quietly decide.
 | [`safari-chains.mp3`](safari-chains.mp3) | Safari Chains | **not in canon** | 3:14 | 2026-05-10T13:35:54Z | `26833d33-83f3-4606-8fcc-fd96d1ae6058` | **unconfirmed** |
 | [`different-parts.mp3`](different-parts.mp3) | Different Parts | **not in canon** | 3:39 | 2026-07-17T08:19:25Z | `ac20f017-f30f-4107-843f-e967f9df0d37` | **unconfirmed** |
 | [`id-lay-it-all-down.mp3`](id-lay-it-all-down.mp3) | I'd Lay It All Down | **not in canon** | 4:15 | 2026-07-21T14:36:40Z | `4b4a881a-653d-440a-a056-29c3b85f6fa3` | **unconfirmed** |
+| [`look-what-you-made-me-do.mp3`](look-what-you-made-me-do.mp3) | Look What You Made Me Do — *see truth label* | **not in canon** | 3:52 | 2026-07-21T14:47:48Z | `4d875adf-2547-419e-ac4d-66fa53b729c6` | **unconfirmed** |
 | [`shooting-star-girl-2026-07-30.mp3`](shooting-star-girl-2026-07-30.mp3) | [Shooting Star Girl](../content/SHOOTING-STAR-GIRL.md) | ignition song | 3:34 | 2026-07-30T14:01:06Z | `4a115658-9096-4f23-be27-779e7b3cda63` | **unconfirmed** |
 
 Rows are in generation order. Two working periods show up in it: **2–10 May
 2026**, five recordings in nine days — Safari Chains arriving forty minutes
 after Fermi's Silent Line on the same afternoon — and then **17, 21 and 30
-July**.
+July**, two of those eleven minutes apart on the 21st.
 
 All recordings are MP3, VBR between roughly 178 and 196 kbps, 48 kHz stereo.
 The audio is Suno, generator version unrecorded. Lyrics for the four canon
 works are credited on their pages to the CrystalArchitect and CrystalDreamer
-(Grok); for the three uncanonised recordings the lyric credit is not recorded
+(Grok); for the four uncanonised recordings the lyric credit is not recorded
 anywhere and this file does not guess it. Every length, timestamp and track id
 above was read from the file's own ID3 tag rather than supplied by hand.
 
 ## Uncanonised recordings
 
-`safari-chains.mp3`, `different-parts.mp3` and `id-lay-it-all-down.mp3` are
-held here and are **not part of the canon**. No lyric page exists for them, and
-they appear in no canon document — not in
+`safari-chains.mp3`, `different-parts.mp3`, `id-lay-it-all-down.mp3` and
+`look-what-you-made-me-do.mp3` are held here and are **not part of the canon**.
+No lyric page exists for them, and they appear in no canon document — not in
 [The First Remembering](../content/THE-FIRST-REMEMBERING.md), not in the track
 list in [`../crystalcore-os/crystalcore_os.py`](../crystalcore-os/crystalcore_os.py).
 
@@ -115,7 +116,7 @@ is not wrong about the date it describes.
 
   **Why every row still says "unconfirmed."** There is circumstantial evidence
   of a paid plan: as part of Warner Music's November 2025 settlement, Suno
-  restricted audio downloads to paid accounts, and all eight files were
+  restricted audio downloads to paid accounts, and all nine files were
   downloaded after that change. That is evidence, not proof — the restriction's
   exact scope and enforcement are not something this repository can verify.
   Only the account holder can confirm the plan, and until they do the honest
@@ -123,12 +124,12 @@ is not wrong about the date it describes.
   we would prefer.
 
   **And the answer may differ per track.** Five recordings come from a single
-  week in May 2026; three more from 17, 21 and 30 July. A subscription can
+  week in May 2026; four more from 17, 21 and 30 July. A subscription can
   start, lapse or change tier across gaps that size, so one answer for the
   whole catalogue would be a guess dressed as a fact. That is why this column
   exists per row rather than once at the top of the page.
 
-  In practice two answers probably settle all eight: whatever plan was active
+  In practice two answers probably settle all nine: whatever plan was active
   in **early May 2026**, and whatever was active across **mid-to-late July
   2026**. Probably is not the same as certainly, which is why the rows stay
   marked until someone checks.
@@ -145,6 +146,29 @@ here. A track needs a truth label if:
 - it samples, interpolates or closely models an identifiable existing work;
 - its provenance is uncertain in any way that would matter to someone
   licensing it.
+
+### `look-what-you-made-me-do.mp3` — shared title, audio unverified
+
+This recording carries the same title as a very widely known 2017 song by
+Taylor Swift.
+
+**A shared title is not, by itself, a problem.** Song titles are not protected
+by copyright in Australia or the United States; many unrelated works share one.
+Nothing about the name alone needs fixing.
+
+**What is unverified is the audio.** Nobody has confirmed whether this
+recording resembles, interpolates or models the earlier song. It was generated
+by a model, and generative music systems have been the subject of exactly that
+allegation — the litigation that produced Suno's 2025 settlements turned on
+training material and output similarity.
+
+So: listen to it against the original before this track is listed, sold,
+inscribed, or included in anything commercial. If it is plainly unrelated, note
+that here and the matter is closed. If it is not, that is worth knowing before
+someone else notices rather than after.
+
+Recorded as an open question rather than a defect, because nobody involved has
+actually checked. The label stays until they do.
 
 ## On copyright, plainly
 
