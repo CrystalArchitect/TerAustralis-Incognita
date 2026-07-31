@@ -60,7 +60,7 @@ something a filename should quietly decide.
 | [`safari-chains.mp3`](safari-chains.mp3) | Safari Chains | **not in canon** | 3:14 | 2026-05-10T13:35:54Z | `26833d33-83f3-4606-8fcc-fd96d1ae6058` | Pro — *subject to start date* |
 | [`different-parts.mp3`](different-parts.mp3) | Different Parts | **not in canon** | 3:39 | 2026-07-17T08:19:25Z | `ac20f017-f30f-4107-843f-e967f9df0d37` | **none — Pro ended 6 June** |
 | [`id-lay-it-all-down.mp3`](id-lay-it-all-down.mp3) | I'd Lay It All Down | **not in canon** | 4:15 | 2026-07-21T14:36:40Z | `4b4a881a-653d-440a-a056-29c3b85f6fa3` | **none — Pro ended 6 June** |
-| [`look-what-you-made-me-do.mp3`](look-what-you-made-me-do.mp3) | Look What You Made Me Do — *see truth label* | **not in canon** | 3:52 | 2026-07-21T14:47:48Z | `4d875adf-2547-419e-ac4d-66fa53b729c6` | **none — Pro ended 6 June** |
+| *removed 2026-07-31* | Look What You Made Me Do — *see truth label* | **not in canon** | 3:52 | 2026-07-21T14:47:48Z | `4d875adf-2547-419e-ac4d-66fa53b729c6` | **none — Pro ended 6 June** |
 | [`starline-rivers.mp3`](starline-rivers.mp3) | Starline Rivers — *shares its name with canon art* | **not in canon** | 4:24 | 2026-07-21T22:34:18Z | `0e15fcf9-4291-4de8-8418-7b4348c7fc52` | **none — Pro ended 6 June** |
 | [`shooting-star-girl-2026-07-30.mp3`](shooting-star-girl-2026-07-30.mp3) | [Shooting Star Girl](../content/SHOOTING-STAR-GIRL.md) | ignition song | 3:34 | 2026-07-30T14:01:06Z | `4a115658-9096-4f23-be27-779e7b3cda63` | **none — Pro ended 6 June** |
 | [`dead-but-came-back-to-life.mp3`](dead-but-came-back-to-life.mp3) | Dead But Came Back to Life | **not in canon** | 3:20 | 2026-07-31T04:29:35Z | `834e6d98-dfc7-46da-8cbb-210876379c00` | **none — Pro ended 6 June** |
@@ -177,28 +177,49 @@ here. A track needs a truth label if:
 - its provenance is uncertain in any way that would matter to someone
   licensing it.
 
-### `look-what-you-made-me-do.mp3` — shared title, audio unverified
+### `look-what-you-made-me-do.mp3` — removed 2026-07-31
 
-This recording carries the same title as a very widely known 2017 song by
-Taylor Swift.
+**The audio has been removed from this repository.** The catalogue row above is
+kept, because the recording existed and a record that loses its own history is
+not a record.
 
-**A shared title is not, by itself, a problem.** Song titles are not protected
-by copyright in Australia or the United States; many unrelated works share one.
-Nothing about the name alone needs fixing.
+**What was found.** This file was filed on 2026-07-31 with an open truth label:
+it shared its title with a very widely known 2017 song by Taylor Swift, and
+nobody had listened to both. A shared title is not itself a problem — titles
+carry no copyright, and unrelated works share them constantly. The audio was
+the unverified part.
 
-**What is unverified is the audio.** Nobody has confirmed whether this
-recording resembles, interpolates or models the earlier song. It was generated
-by a model, and generative music systems have been the subject of exactly that
-allegation — the litigation that produced Suno's 2025 settlements turned on
-training material and output similarity.
+The maintainer listened, the same day, and **confirmed the recording does
+relate to the earlier song**. That answers the question the label was raised
+to hold open.
 
-So: listen to it against the original before this track is listed, sold,
-inscribed, or included in anything commercial. If it is plainly unrelated, note
-that here and the matter is closed. If it is not, that is worth knowing before
-someone else notices rather than after.
+**Why removal rather than relabelling.** This repository is public and asserts
+CC BY-NC-ND 4.0 over its audio. A Creative Commons licence is a *grant* — it
+tells the world it may redistribute the file. Where a recording relates to
+someone else's composition, that grant is not the maintainer's to make. The
+copyright in *Look What You Made Me Do* sits with its writers, who include the
+writers of *I'm Too Sexy* through its interpolation.
 
-Recorded as an open question rather than a defect, because nobody involved has
-actually checked. The label stays until they do.
+That reasoning is independent of any question about whether model-generated
+audio attracts copyright of its own. The problem was never what the file is; it
+was what publishing it under this licence claimed.
+
+**What was not done.** The file remains in git history, and this repository has
+not been rewritten to erase it. Rewriting public history to remove one track
+would break the commit the Bitcoin anchor was made against, and would be a
+larger act than the situation calls for. Anyone determined can still find the
+blob; nothing at `main` serves it, and nothing here licenses it.
+
+**What the anchor says now.** `MANIFEST.sha256.ots` attests the state of this
+work on 2026-07-31, when the file was present. That attestation stays true
+about that date. The manifest has been regenerated without the file and will be
+stamped again; the two proofs sit beside each other, which is what a dated
+record is supposed to look like.
+
+**For anything measured rather than heard.** Objective features of the removed
+file, for the record: 3:52, roughly 74 BPM, reading as D major. Those diverge
+from the earlier song on every axis, which is a useful reminder that tempo and
+key comparison cannot detect interpolation. Listening could and did.
 
 ## On copyright, plainly
 

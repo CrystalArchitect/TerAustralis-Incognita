@@ -46,18 +46,35 @@ jobs:
       - name: Check the manifest is current
         run: python3 mythos/tools/provenance.py --check
 
-      - name: Stamp, or upgrade an existing proof
+      # A proof attests one exact manifest. Upgrading a proof that attests a
+      # different one would refresh evidence for work that has moved on and
+      # leave the repository looking anchored when it is not. provenance.py
+      # archives superseded proofs when the manifest changes; this is the
+      # second line, in case a manifest ever changes some other way.
+      - name: Stamp, or upgrade the proof if it still matches
         run: |
-          if [ -e mythos/MANIFEST.sha256.ots ]; then
-            echo "A proof exists - upgrading it."
+          CURRENT=$(sha256sum mythos/MANIFEST.sha256 | awk '{print $1}')
+          if [ ! -e mythos/MANIFEST.sha256.ots ]; then
+            echo "No proof yet - stamping $CURRENT"
+            ots stamp mythos/MANIFEST.sha256
+            exit 0
+          fi
+          ATTESTED=$(ots info mythos/MANIFEST.sha256.ots | sed -n 's/^File sha256 hash: //p')
+          if [ "$ATTESTED" = "$CURRENT" ]; then
+            echo "Proof matches the manifest - upgrading it."
             ots upgrade mythos/MANIFEST.sha256.ots || true
           else
-            echo "No proof yet - stamping."
-            ots stamp mythos/MANIFEST.sha256
+            echo "::error::The proof attests $ATTESTED but the manifest is $CURRENT."
+            echo "The manifest changed without the old proof being archived."
+            echo "Run: python3 mythos/tools/provenance.py  (it archives the pair)"
+            exit 1
           fi
 
       - name: Verify, for the log
         run: ots verify mythos/MANIFEST.sha256.ots || true
+
+      - name: Stage any archived proofs too
+        run: git add -A mythos/proofs 2>/dev/null || true
 
       - name: Commit the proof if it changed
         run: |

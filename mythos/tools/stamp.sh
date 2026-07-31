@@ -33,9 +33,23 @@ python3 mythos/tools/provenance.py --check || {
 }
 
 if [ -e "$MANIFEST.ots" ]; then
+  current=$(sha256sum "$MANIFEST" | awk '{print $1}')
+  attested=$(ots info "$MANIFEST.ots" | sed -n 's/^File sha256 hash: //p')
+  if [ "$attested" != "$current" ]; then
+    echo
+    echo "The existing proof attests a different manifest:"
+    echo "  proof    $attested"
+    echo "  manifest $current"
+    echo
+    echo "Upgrading it would refresh evidence for work that has moved on."
+    echo "Run this first — it archives the old proof beside the manifest it"
+    echo "actually attests, and clears the way for a fresh stamp:"
+    echo
+    echo "    python3 mythos/tools/provenance.py"
+    exit 1
+  fi
   echo
-  echo "A proof already exists at $MANIFEST.ots."
-  echo "Upgrading it instead (safe to run repeatedly):"
+  echo "A proof already exists and matches. Upgrading it (safe to repeat):"
   ots upgrade "$MANIFEST.ots" || true
   ots verify "$MANIFEST.ots" || true
   exit 0

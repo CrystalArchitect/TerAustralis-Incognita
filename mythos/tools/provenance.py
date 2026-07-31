@@ -32,10 +32,12 @@ from __future__ import annotations
 import argparse
 import hashlib
 import sys
+from datetime import date
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[2]
 MANIFEST = REPO / "mythos" / "MANIFEST.sha256"
+PROOFS = REPO / "mythos" / "proofs"
 
 # What counts as the creative work. Deliberately not the whole repository:
 # build output and dependencies are derived, and hashing them would make the
@@ -52,7 +54,8 @@ ROOTS = [
     "mythos/CRYSTALCORE-OS-KNOWLEDGE.md",
 ]
 
-EXCLUDE_PARTS = {".git", "node_modules", "build", "dist", ".svelte-kit", "__pycache__"}
+EXCLUDE_PARTS = {".git", "node_modules", "build", "dist", ".svelte-kit", "__pycache__",
+                 "proofs"}
 EXCLUDE_NAMES = {"MANIFEST.sha256", "MANIFEST.sha256.ots", ".DS_Store"}
 
 
@@ -128,6 +131,37 @@ def main() -> int:
             if old[path] != new[path]:
                 print(f"  changed  {path}")
         return 1
+
+    # A proof attests one exact manifest. If the manifest is about to change
+    # and a proof exists, that proof does not become false — it becomes a true
+    # statement about a state this file no longer describes. Upgrading it later
+    # would refresh a proof for work that has moved on, and leave the
+    # repository looking anchored when its current state is not.
+    #
+    # So the old proof is archived beside the manifest it attests, which is the
+    # only form in which it stays meaningful, and a fresh stamp is taken for
+    # the new state. Two dated proofs standing side by side is what this is
+    # supposed to look like.
+    existing = MANIFEST.read_text(encoding="utf-8") if MANIFEST.exists() else None
+    proof = MANIFEST.with_suffix(MANIFEST.suffix + ".ots")
+    if existing is not None and existing != body and proof.exists():
+        stamp_date = date.today().isoformat()
+        PROOFS.mkdir(exist_ok=True)
+        keep_manifest = PROOFS / f"{stamp_date}-MANIFEST.sha256"
+        keep_proof = PROOFS / f"{stamp_date}-MANIFEST.sha256.ots"
+        n = 2
+        while keep_manifest.exists() or keep_proof.exists():
+            keep_manifest = PROOFS / f"{stamp_date}-{n}-MANIFEST.sha256"
+            keep_proof = PROOFS / f"{stamp_date}-{n}-MANIFEST.sha256.ots"
+            n += 1
+        keep_manifest.write_text(existing, encoding="utf-8")
+        keep_proof.write_bytes(proof.read_bytes())
+        proof.unlink()
+        print(f"the work changed, so the old proof was archived as a pair:")
+        print(f"  {keep_manifest.relative_to(REPO)}")
+        print(f"  {keep_proof.relative_to(REPO)}")
+        print("it still attests the state it was made for. A fresh stamp is")
+        print("needed for this one.\n")
 
     MANIFEST.write_text(body, encoding="utf-8")
     print(f"wrote {MANIFEST.relative_to(REPO)}: {len(rows)} files")
