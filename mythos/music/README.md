@@ -13,7 +13,7 @@ music was the only kind of work in this portfolio held in exactly one place, by
 a third party, with no local copy, no hash and no date — a lapsed subscription
 or a changed platform policy was enough to lose it. Every work the canon names
 now has a recording here, hashed and covered by
-[`../MANIFEST.sha256`](../MANIFEST.sha256) — along with four recordings the
+[`../MANIFEST.sha256`](../MANIFEST.sha256) — along with five recordings the
 canon does not name, kept for the same reason and labelled as what they are.
 
 ## Adding a track
@@ -36,7 +36,7 @@ in [The First Remembering](../content/THE-FIRST-REMEMBERING.md#the-three-songs),
 and [Wire Skull Memory](../content/WIRE-SKULL-MEMORY.md), which its own page
 marks as standalone and explicitly *not* one of the three.
 
-**Four further recordings exist that the canon does not name at all.** They
+**Five further recordings exist that the canon does not name at all.** They
 are kept here because preservation is what this directory is for, and losing
 them would be the failure it was built against. Their presence is not a claim
 that they are canon — see [Uncanonised recordings](#uncanonised-recordings)
@@ -62,24 +62,27 @@ something a filename should quietly decide.
 | [`id-lay-it-all-down.mp3`](id-lay-it-all-down.mp3) | I'd Lay It All Down | **not in canon** | 4:15 | 2026-07-21T14:36:40Z | `4b4a881a-653d-440a-a056-29c3b85f6fa3` | **unconfirmed** |
 | [`look-what-you-made-me-do.mp3`](look-what-you-made-me-do.mp3) | Look What You Made Me Do — *see truth label* | **not in canon** | 3:52 | 2026-07-21T14:47:48Z | `4d875adf-2547-419e-ac4d-66fa53b729c6` | **unconfirmed** |
 | [`shooting-star-girl-2026-07-30.mp3`](shooting-star-girl-2026-07-30.mp3) | [Shooting Star Girl](../content/SHOOTING-STAR-GIRL.md) | ignition song | 3:34 | 2026-07-30T14:01:06Z | `4a115658-9096-4f23-be27-779e7b3cda63` | **unconfirmed** |
+| [`dead-but-came-back-to-life.mp3`](dead-but-came-back-to-life.mp3) | Dead But Came Back to Life | **not in canon** | 3:20 | 2026-07-31T04:29:35Z | `834e6d98-dfc7-46da-8cbb-210876379c00` | **unconfirmed** |
 
 Rows are in generation order. Two working periods show up in it: **2–10 May
 2026**, five recordings in nine days — Safari Chains arriving forty minutes
-after Fermi's Silent Line on the same afternoon — and then **17, 21 and 30
-July**, two of those eleven minutes apart on the 21st.
+after Fermi's Silent Line on the same afternoon — and then **17, 21, 30 and 31
+July**, two of those eleven minutes apart on the 21st. The last of them was
+generated on the day this directory was created.
 
 All recordings are MP3, VBR between roughly 178 and 196 kbps, 48 kHz stereo.
 The audio is Suno, generator version unrecorded. Lyrics for the four canon
 works are credited on their pages to the CrystalArchitect and CrystalDreamer
-(Grok); for the four uncanonised recordings the lyric credit is not recorded
+(Grok); for the five uncanonised recordings the lyric credit is not recorded
 anywhere and this file does not guess it. Every length, timestamp and track id
 above was read from the file's own ID3 tag rather than supplied by hand.
 
 ## Uncanonised recordings
 
-`safari-chains.mp3`, `different-parts.mp3`, `id-lay-it-all-down.mp3` and
-`look-what-you-made-me-do.mp3` are held here and are **not part of the canon**.
-No lyric page exists for them, and they appear in no canon document — not in
+`safari-chains.mp3`, `different-parts.mp3`, `id-lay-it-all-down.mp3`,
+`look-what-you-made-me-do.mp3` and `dead-but-came-back-to-life.mp3` are held
+here and are **not part of the canon**. No lyric page exists for them, and they
+appear in no canon document — not in
 [The First Remembering](../content/THE-FIRST-REMEMBERING.md), not in the track
 list in [`../crystalcore-os/crystalcore_os.py`](../crystalcore-os/crystalcore_os.py).
 
@@ -116,7 +119,7 @@ is not wrong about the date it describes.
 
   **Why every row still says "unconfirmed."** There is circumstantial evidence
   of a paid plan: as part of Warner Music's November 2025 settlement, Suno
-  restricted audio downloads to paid accounts, and all nine files were
+  restricted audio downloads to paid accounts, and all ten files were
   downloaded after that change. That is evidence, not proof — the restriction's
   exact scope and enforcement are not something this repository can verify.
   Only the account holder can confirm the plan, and until they do the honest
@@ -124,12 +127,12 @@ is not wrong about the date it describes.
   we would prefer.
 
   **And the answer may differ per track.** Five recordings come from a single
-  week in May 2026; four more from 17, 21 and 30 July. A subscription can
+  week in May 2026; five more from 17, 21, 30 and 31 July. A subscription can
   start, lapse or change tier across gaps that size, so one answer for the
   whole catalogue would be a guess dressed as a fact. That is why this column
   exists per row rather than once at the top of the page.
 
-  In practice two answers probably settle all nine: whatever plan was active
+  In practice two answers probably settle all ten: whatever plan was active
   in **early May 2026**, and whatever was active across **mid-to-late July
   2026**. Probably is not the same as certainly, which is why the rows stay
   marked until someone checks.
