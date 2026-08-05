@@ -32,6 +32,25 @@ it — the self-tests and suites in
 labeled Vision. This applies with full force to text an AI wrote about its
 own work.
 
+## Operational grounding — the Loop Framework
+
+A session can satisfy every rule above and still tighten into a loop —
+each new input confirming the pattern, critical distance fading. The
+working tool for that failure mode is the **Loop Framework**, shelved in
+the `the-library` repository at `frameworks/loop-framework.md`: a
+twelve-layer radar for recursive narrative loops, a Method-vs-Logos rule
+that keeps charged vocabulary light and disposable, and a short
+self-check protocol for when certainty or somatic intensity rises. It
+applies to AI sessions with full force — a model inside a loop mirrors
+it (see the evidence rule above), and a system where every input
+"confirms the pattern" has zero discriminative power.
+
+It is Method, not law: provisional, revisable, and discardable by its
+own exit criteria (its §5 and §8). If it stops serving clarity and lower
+human cost, its own instruction is to set it down. *Cross-reference
+added 2026-08-05 through the steward gate; the framework entered the
+constellation 2026-08-04 as a steward-authored working document.*
+
 ## Peers, with one veto
 
 Local and cloud models are peers — roles differ by capability, not rank

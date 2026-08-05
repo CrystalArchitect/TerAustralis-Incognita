@@ -37,12 +37,30 @@ it was written before `teraustralis-proposal` existed and does not yet mention
 it, so its own heading is one repository behind this page until it is re-run.
 This page is not the canonical map and should not grow a second one.
 
+A further dated observation, 2026-08-05, from a library-sync session with
+eleven repositories in scope (it could not enumerate the account, so this
+is a floor, not a count): one name is new since the twelve —
+`the-library`, created 2026-08-03, holding the Loop Framework and the
+constellation's document collection (its `records/2026-08-05-library-sync.md`
+carries the full survey). Two of the twelve now carry new GitHub names:
+the protocol pack this page's era documented as `crystalcore` now carries
+the name `TheCrystalVision`, and the codex-site repository documented as
+`The-Crystal-Vision` now carries `Clementine---Local-Soveriegn-Edge-AGI`.
+Identification is by content-correspondence — each clone's README still
+opens with its old identity — pending the id-keyed check the Archive's
+ledger prescribes (its Part 18). That ledger already records
+`crystal-vision` as renamed to `CrystalCore-Starlines-and-Dreamlines` on
+2026-07-29; commits on it continue through 2026-07-31, so the "frozen"
+classification in the Summary Matrix below is overtaken for that row.
+Categorising all of this remains the Archive map's job.
+
 **Evidence**
 - Repository: TerAustralis-Incognita / docs/governance/Project-Boundaries.md (rewritten 2026-07-24 from same-day survey of all six)
 - Verified: direct inspection of code trees + ls-remote
 - Date: Two-repo split implemented as same-day history rewrite 2026-07-23 (per architecture-survey.md §1)
 - Count corrected 2026-07-28 from a GitHub API query returning `total_count: 11` for `user:CrystalArchitect`. Of the five additions, four were created 2026-07-28; `teraustralis-incognita-v2` was created 2026-07-24 and existed, unsurveyed, on the day the six-repository model was verified.
 - Count corrected again 2026-07-29 from the same query, now returning `total_count: 12`. The addition is `teraustralis-proposal`, created 2026-07-29 10:17 UTC — a public, All-Rights-Reserved proposal package (14 files, 12 commits, sole author Crystal Arena-Turner) holding the Pilbara / Port Hedland logistics case named as an advancement priority in [TERAUSTRALIS-FRAMEWORK.md](TERAUSTRALIS-FRAMEWORK.md) §6.2. It carries its own `LICENSE`, which is **All Rights Reserved** (view-only; no copying, derivative work, or implementation without written permission) — a licence class that did not previously appear anywhere in the portfolio. [`ADR-0013`](adr/ADR-0013.md) catalogued the portfolio's licensing as at 2026-07-28 across eleven repositories and is deliberately left unedited as the record of that sweep; this repository post-dates it and was not in it.
+- Observed 2026-08-05 from a Claude Code library-sync session with eleven repositories in scope (clones on disk; no account-level query available to it): the `the-library` addition and the two renamings described above. Evidence is content-correspondence between clone READMEs/trees and the descriptions this page and the Archive recorded in July, plus git first-commit dates (`the-library`: 2026-08-03 08:42 +1000). Visibility of the new names was not determinable from clones, and the count of the whole constellation was not determinable at all — deliberately not asserted.
 
 **Why this drifted**
 "Six repositories" was true when written and was overtaken, not mistaken. The
