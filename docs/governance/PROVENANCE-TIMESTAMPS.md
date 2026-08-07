@@ -1,20 +1,25 @@
 # Provenance Timestamps — anchoring the work to Bitcoin
 
-**Status:** stamped once, on 2026-07-31, and awaiting a fresh stamp.
+**Status:** anchored to Bitcoin on 2026-07-31 via the GitHub Actions
+workflow, and awaiting a fresh stamp again after the manifest changed on
+2026-08-07.
 
-The first proof was taken that day and is archived at
-[`mythos/proofs/2026-07-31-MANIFEST.sha256.ots`](../../mythos/proofs/), beside
-the manifest it attests. It remains a true statement about that date.
+The manifest changed three times on 2026-07-31 as the work moved (a
+recording removed, then the catalogue corrected) and once more on
+2026-08-07, when new evidence about the Suno subscription dates resolved
+two rows in [`mythos/music/README.md`](../../mythos/music/README.md) from
+unresolved to settled. Each superseded proof is archived in
+[`mythos/proofs/`](../../mythos/proofs/) beside the exact manifest it
+attests — a pair for every state the work has been in, not just the
+latest one. Each remains a true statement about the date it was made.
 
-The work changed the same day — a recording was removed, see the truth label in
-[`mythos/music/README.md`](../../mythos/music/README.md) — so the current
-manifest has no proof yet. Run the workflow to take one.
+The current manifest has no proof yet. Run the workflow to take one.
 
-Two attempts were made from the environment this tooling was built in, on
-2026-07-31. Both failed identically — `need at least 2 attestations but
-received 0` — because that environment's network policy rejects CONNECT to all
-four calendar pools with HTTP 403. The failure is the sandbox, not the tool or
-the manifest.
+Three attempts have now been made from the environment this tooling was built
+in — two on 2026-07-31, one on 2026-08-07 — and all three failed identically:
+`need at least 2 attestations but received 0`, because that environment's
+network policy rejects CONNECT to all four calendar pools with HTTP 403. The
+failure is the sandbox, not the tool or the manifest.
 
 **Anywhere with ordinary internet access will work, including GitHub's own
 runners** — which is why the stamping is also wired as a workflow that can be

@@ -53,8 +53,8 @@ something a filename should quietly decide.
 
 | File | Work | Canon status | Length | Generated | Suno track id | Suno plan |
 |---|---|---|---|---|---|---|
-| [`red-dust-axis.mp3`](red-dust-axis.mp3) | [Red Dust Axis](../content/RED-DUST-AXIS.md) | ignition song | 3:35 | 2026-05-02T19:36:19Z | `f8502175-74c7-4cf1-adc0-16c7eb7c8cf3` | **unresolved** — before the earliest visible charge |
-| [`shooting-star-girl-2026-05-04.mp3`](shooting-star-girl-2026-05-04.mp3) | [Shooting Star Girl](../content/SHOOTING-STAR-GIRL.md) | ignition song | 2:15 | 2026-05-04T03:07:33Z | `3903f9ed-f13b-4d3a-9a6d-bb598760ebd5` | **unresolved** — before the earliest visible charge |
+| [`red-dust-axis.mp3`](red-dust-axis.mp3) | [Red Dust Axis](../content/RED-DUST-AXIS.md) | ignition song | 3:35 | 2026-05-02T19:36:19Z | `f8502175-74c7-4cf1-adc0-16c7eb7c8cf3` | **none — before Pro began 7 May** |
+| [`shooting-star-girl-2026-05-04.mp3`](shooting-star-girl-2026-05-04.mp3) | [Shooting Star Girl](../content/SHOOTING-STAR-GIRL.md) | ignition song | 2:15 | 2026-05-04T03:07:33Z | `3903f9ed-f13b-4d3a-9a6d-bb598760ebd5` | **none — before Pro began 7 May** |
 | [`wire-skull-memory.mp3`](wire-skull-memory.mp3) | [Wire Skull Memory](../content/WIRE-SKULL-MEMORY.md) | standalone, in canon | 2:16 | 2026-05-07T06:21:02Z | `1a194a77-0d9b-4d93-94f7-7a8388b24de0` | Pro — same day as the 7 May charge |
 | [`fermis-silent-line.mp3`](fermis-silent-line.mp3) | [Fermi's Silent Line](../content/FERMIS-SILENT-LINE.md) | ignition song | 4:34 | 2026-05-10T12:53:53Z | `d2563605-d533-4714-98b5-996da3c59cf9` | **Pro** |
 | [`safari-chains.mp3`](safari-chains.mp3) | Safari Chains | **not in canon** | 3:14 | 2026-05-10T13:35:54Z | `26833d33-83f3-4606-8fcc-fd96d1ae6058` | **Pro** |
@@ -106,11 +106,11 @@ labelled as such.
 The same applies in reverse: nothing here says they *should not* be canon. The
 question is simply open, and open is what it looks like when written down.
 
-**Six recordings are very likely non-commercial.** The July tracks were
-generated after the Pro subscription ended on 6 June 2026 — see the plan
-column and the note below it. That includes both `starline-rivers.mp3` and the
-later Shooting Star Girl take. Nothing about preservation changes; what changes
-is what may be done with them.
+**Eight recordings are non-commercial.** The six July tracks were generated
+after the Pro subscription ended on 6 June 2026, and Red Dust Axis and the
+first Shooting Star Girl take were generated before it began on 7 May — see
+the plan column and the note below it. Nothing about preservation changes;
+what changes is what may be done with them.
 
 **Which Shooting Star Girl is the song is an open question**, and this file
 does not answer it. Both recordings are kept. If one is later chosen as canon,
@@ -134,35 +134,26 @@ is not wrong about the date it describes.
   the answer cannot be recovered from the file later. Record it while it is
   still knowable.
 
-  **What the records show.** Two screenshots, both dated 2026-07-31:
+  **What the records show.** Three screenshots, order-detail receipts pulled
+  directly from Apple's purchase history:
 
-  - A subscription page: **Suno Pro Plan, cancelled, ended 6 June 2026**.
-  - A purchase history filtered to "Suno": **one charge, 7 May 2026, $15.00,
-    Pro Plan**.
+  - A subscription page (2026-07-31): **Suno Pro Plan, cancelled, ended
+    6 June 2026**.
+  - Order `MS2QMWQ5BD`, **7 May 2026, 4:52pm**: Suno Pro Plan, **"Init.
+    Subscription"**, $15.00.
+  - Order `MS2S00Y490`, **8 Aug 2026, 6:06am**: Suno Pro Plan, "Subscription
+    Renewal", $15.00 — the subscription resumed and is renewing monthly as of
+    this writing.
 
-  Together those bracket a paid period of **7 May to 6 June 2026** — thirty
-  days, which matches a monthly cycle.
-
-  **What that settles.** Everything generated from 7 May until 6 June was made
-  on a paid plan: Wire Skull Memory, Fermi's Silent Line and Safari Chains.
-  Everything after 6 June was not: all six July recordings.
-
-  **What it does not settle, and why.** The purchase history was showing
-  **"Last 90 Days"**. Filtered on 2026-07-31 that window opens around 2 May, so
-  a charge on 7 April — the previous cycle, had there been one — would not
-  appear. One visible charge is therefore consistent with two different
-  histories: a subscription that began on 7 May, or one that had been renewing
-  for months and simply had its earlier charges outside the window.
-
-  Red Dust Axis (2 May) and the first Shooting Star Girl take (4 May) sit before
-  7 May. Under the first history they were made on the free tier; under the
-  second they were covered. Their rows say **unresolved** rather than picking
-  the reading that suits us.
-
-  **What would close it:** the same purchase history with the range widened
-  past April. One Suno charge in that view means 7 May was the beginning and
-  those two are free-tier; more than one means the subscription predates May and
-  all five are Pro.
+  **What that settles.** "Init. Subscription" is Apple's own label for a
+  plan's *first* charge, not a renewal — this is not an inference from a time
+  window, it is what the receipt itself says. The Pro period therefore began
+  on 7 May 2026 and ended 6 June 2026, thirty days later, matching the
+  cancellation record. Everything generated in that window was made on a paid
+  plan: Wire Skull Memory, Fermi's Silent Line, Safari Chains. Everything
+  outside it was not: Red Dust Axis and the first Shooting Star Girl take (both
+  before 7 May), and all six July recordings (after 6 June). All five rows in
+  the table are resolved; none remain open.
 
 ## Truth labels
 
