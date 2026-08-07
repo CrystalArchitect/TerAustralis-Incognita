@@ -146,6 +146,10 @@ CC BY-NC-ND 4.0 — see `../content/LICENSE-CONTENT.md`.
 | `desert-flight-path.jpeg` | *AI-generated (Grok Imagine)* — A light aircraft crosses a red desert sky above a lone grazing animal and a curving dirt track |
 | `desert-water-tower.jpeg` | *AI-generated (Grok Imagine)* — A circular water-tower installation stands alone on red desert ground beneath a rising moon |
 | `lattice-motion.mp4` | Motion piece — thirty seconds, AI-generated. The only moving image in the collection |
+| `rocket-in-the-red-night.jpeg` | *AI-generated (Grok, received 2026-08-07)* — The lone rocket standing on the red ground under the southern stars, the flag on its fairing, a launch glow on the horizon |
+| `ring-city-of-the-desert.jpeg` | *AI-generated (Grok, received 2026-08-07)* — The great ring standing over the desert settlement, the violet tower at its axis, lights threading the dark country |
+| `starline-network-over-australia.jpeg` | *AI-generated (Grok, received 2026-08-07; carries the Grok Imagine EXIF Signature watermark)* — The continent in red, the crystal at its heart, dragons in attendance, the seven nodes pinned. The render's own legend text is AI-garbled ("Sunwash Atain" and similar) — the node list in [`../CRYSTALCORE-OS.md`](../CRYSTALCORE-OS.md) stays authoritative |
+| `helix-over-the-earth.jpeg` | *AI-generated (Grok, received 2026-08-07)* — Glittering helices over the Earth, lettered bases glowing against the nebula |
 
 **Truth label (Vision):** this art is the project's own mythic narrative. Where a
 real person's name or likeness appears — whether as a name, a silhouette, or a
@@ -208,6 +212,12 @@ What each part rests on differs, and the difference is worth keeping visible:
 - **The other 106 rest on the maintainer's confirmation**, given by batch on
   2026-07-28: the 21 images added in commit `df38ca8`, and the 87 unmarked images
   from the squashed root commit `9cb42a3`.
+
+Four rows added 2026-08-07 (supplied by the maintainer in-session, from
+their Grok session) keep the coverage complete on the same split:
+`starline-network-over-australia.jpeg` carries the Grok Imagine EXIF
+Signature watermark described above; the other three are bare JFIF with
+no provenance metadata and rest on the maintainer's in-session supply.
 
 No technical signal separates the two groups. 114 files carry only boilerplate EXIF
 with no `Software`, `Creator` or `Artist` field; 21 have no EXIF at all; and JPEG
