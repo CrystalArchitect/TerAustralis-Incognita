@@ -51,10 +51,19 @@ and claims describe the repositories *as they were on 29 July 2026* and are
 deliberately left unfixed — the vault12 README's own status table, for
 instance, is a claim about that date, not this one.
 
-The retired name recorded in [`mythos/NAMES.md`](../../../mythos/NAMES.md)
-does not appear anywhere in this material; it was checked before the rescue
-was committed. The edge companion is named as Lumina throughout, which is a
-current name.
+**Corrected 2026-08-09, the evening after the rescue.** The paragraph that
+stood here claimed the retired name recorded in
+[`mythos/NAMES.md`](../../../mythos/NAMES.md) was absent from this material,
+and called the edge companion's name here current. That was exactly
+backwards, and the maintainer caught it. The name this material uses for
+the edge companion throughout **is** the retired name: the check behind the
+original sentence tested a guess at which string was retired, when the
+ledger's own description — the edge companion's early name — pointed
+straight at the name on nearly every page here. The material itself stays
+exactly as rescued, per this folder's rules: a retired name inside a frozen
+29 July document is history, not reintroduction. Current canon: Clementine
+holds the role, and the ledger entry — deliberately unprinted there and
+here — is the authority.
 
 ## One decision this rescue left open — since made
 

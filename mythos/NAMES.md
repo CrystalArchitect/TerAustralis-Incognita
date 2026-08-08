@@ -118,4 +118,18 @@ Clementine's own name moved in the same change. It named the communicator in
 earlier canon; that role is now the **CrystalBus**, and the name went where it
 always belonged — to the voice at the edge, the one a person actually talks to.
 
+**Amendment, 2026-08-09.** The removal claim above was written broader than
+the truth, and a check tonight measured the gap. What remains, and remains
+deliberately: legacy data-migration identifiers in
+`TerAustralis-Incognita-Code` — constants, ignore rules, and one line of
+help text that let an early install's memory and profile folders still
+load, because renaming directories on other people's machines is not this
+project's to do — together with the status notes there that document the
+rename itself as history. The frozen rescue material in `archive/` also
+carries the name throughout, and stays exactly as rescued: a retired name
+inside a frozen document is history, not reintroduction. What was not
+deliberate: one canon page, [CREDITS.md](content/CREDITS.md), printed the
+name in a lineage note until tonight — corrected at the maintainer's word,
+and this page still does not print it.
+
 *Non Solus.*
