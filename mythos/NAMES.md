@@ -92,6 +92,21 @@ claimed as a component name. "Starline" and "Dreamline" are this project's own
 coinages; "Dreamline" is canon here (Starlines & Dreamlines), distinct from
 "Dreamtime."
 
+**The cluster is the Pleiades.** M45, in Taurus, some 440 light-years out —
+the astronomical name, and the one this project uses in canon, in art, and in
+anything public-facing. *Seven Sisters* is the common name for the same stars,
+and here it carries particular weight: it names a living Aboriginal Songline
+lineage, among many traditions worldwide that saw sisters in those stars. It
+stays in [`research/seven-sisters/`](../research/seven-sisters/README.md),
+where the material engages that lineage directly, with custodian language and
+its own audit log. It is not used as a waypoint, component, or motif name
+anywhere else.
+
+The stars belong to everyone; the Songline does not. On this continent the two
+names are not interchangeable, and the decision here is to say Pleiades and
+mean the cluster — same reasoning that made Starline and Dreamline this
+project's own words rather than borrowed ones.
+
 **A retired name.** The edge companion carried a different name through the early
 prototypes. That name is retired: it is not used for any component, product,
 interface, or concept in this project, it has been removed from this repository
