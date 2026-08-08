@@ -39,6 +39,7 @@ holds verbatim:
 | @_Miss_Triss | "I'm so in ❤️‍🔥🔥🫶" and, to the follow-up, "Yes 💯 🔥" | Screenshots received in session 2026-08-08: both replies to @M13CrystalAT, handle and words visible |
 | @zpfTechnologies | "Yes" | Screenshot received in session 2026-08-08: the full post view, 12:12 pm · 8/8/2026, handle and words visible |
 | @ponzibaron | "yes, I'd be honored. thank you! i always look forward to and enjoy your posts (art the art they produce)" | Screenshot received in session 2026-08-08: reply to @M13CrystalAT, handle and words visible |
+| @kelpykelz | "I'm in" | Screenshot received in session 2026-08-08: reply to the invitation post, timestamped 7:32 pm 8/8/2026, handle and words visible |
 
 Entries that predate this ledger — @catillaice, @kisalay_, @pacartcollect,
 @ouadi4maakoul — stand on the site's Join page by agreements recorded at the
