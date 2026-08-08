@@ -9,10 +9,13 @@ recording removed, then the catalogue corrected), twice on 2026-08-07 —
 first when new evidence about the Suno subscription dates resolved two
 rows in [`mythos/music/README.md`](../../mythos/music/README.md) from
 unresolved to settled, then when four artworks were added to
-[`mythos/art/`](../../mythos/art/README.md) — and again on 2026-08-08,
+[`mythos/art/`](../../mythos/art/README.md) — and twice on 2026-08-08: first
 when seven recordings were added (six Suno "Remaster" takes and Story
-as Bridge, delivered in two batches) and five files were renamed to
-carry their generation dates. Each superseded proof is archived in
+as Bridge) and five files were renamed to carry their generation
+dates, then when two further new works arrived (Random Topic, Ferry
+Slip) alongside a custody note recording that the platform copies of
+the non-commercial tracks were deleted, leaving this repository their
+only home. Each superseded proof is archived in
 [`mythos/proofs/`](../../mythos/proofs/) beside the exact manifest it
 attests — a pair for every state the work has been in, not just the
 latest one. Each remains a true statement about the date it was made.

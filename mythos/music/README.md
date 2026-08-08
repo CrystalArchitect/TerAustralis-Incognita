@@ -5,15 +5,16 @@ that are not canon and are marked so. Content licensed
 CC BY-NC-ND 4.0 — see [`../content/LICENSE-CONTENT.md`](../content/LICENSE-CONTENT.md).
 
 The lyrics live as text in [`../content/`](../content/), one page per work.
-The recordings live here, and also on Suno at
-[@m13crystalat](https://suno.com/@m13crystalat).
+The recordings live here, and — for the commercially-licensed ones — also on
+Suno at [@m13crystalat](https://suno.com/@m13crystalat); see the custody note
+below the rights split.
 
 That second sentence is the reason this directory exists. Until 2026-07-31 the
 music was the only kind of work in this portfolio held in exactly one place, by
 a third party, with no local copy, no hash and no date — a lapsed subscription
 or a changed platform policy was enough to lose it. Every work the canon names
 now has a recording here, hashed and covered by
-[`../MANIFEST.sha256`](../MANIFEST.sha256) — along with ten recordings the
+[`../MANIFEST.sha256`](../MANIFEST.sha256) — along with twelve recordings the
 canon does not name, kept for the same reason and labelled as what they are.
 
 ## Adding a track
@@ -36,7 +37,7 @@ in [The First Remembering](../content/THE-FIRST-REMEMBERING.md#the-three-songs),
 and [Wire Skull Memory](../content/WIRE-SKULL-MEMORY.md), which its own page
 marks as standalone and explicitly *not* one of the three.
 
-**Ten further recordings — of seven works — exist that the canon does not
+**Twelve further recordings — of nine works — exist that the canon does not
 name as songs.** They
 are kept here because preservation is what this directory is for, and losing
 them would be the failure it was built against. Their presence is not a claim
@@ -80,19 +81,22 @@ the date, per the rule above.
 | [`dead-but-came-back-to-life-2026-08-07.mp3`](dead-but-came-back-to-life-2026-08-07.mp3) | Dead But Came Back to Life | **not in canon** | 3:19 | 2026-08-07T22:16:35Z | `88905868-32ab-4362-bfed-6686664b3767` | **Pro — resumed plan** |
 | [`id-lay-it-all-down-2026-08-07.mp3`](id-lay-it-all-down-2026-08-07.mp3) | I'd Lay It All Down | **not in canon** | 4:15 | 2026-08-07T22:17:21Z | `45fa06ff-ce15-4a0d-8a49-610204883109` | **Pro — resumed plan** |
 | [`story-as-bridge.mp3`](story-as-bridge.mp3) | Story as Bridge | **not in canon** | 4:22 | 2026-08-07T22:51:32Z | `a9d5f0c8-4500-4b19-a24f-3c37f852c336` | **Pro — resumed plan** |
+| [`random-topic.mp3`](random-topic.mp3) | Random Topic | **not in canon** | 3:34 | 2026-08-08T00:12:00Z | `eb9c732f-687d-4114-9bec-ee72eec990c1` | **Pro — resumed plan** |
+| [`ferry-slip.mp3`](ferry-slip.mp3) | Ferry Slip | **not in canon** | 3:46 | 2026-08-08T00:14:44Z | `a2ca7335-4bb1-432f-a14f-f9e0b7c4ece1` | **Pro — resumed plan** |
 
 Rows are in generation order. Three working periods show up in it: **2–10 May
 2026**, five recordings in nine days — Safari Chains arriving forty minutes
 after Fermi's Silent Line on the same afternoon; **17, 21, 30 and 31 July** —
 the 21st alone produced three, and the 31st's recording was generated on the
-morning this directory was created; and **the evening of 7 August (UTC)**,
-seven recordings in thirty-seven minutes — six of them Suno "Remaster"
-takes of works already held, plus one new work, Story as Bridge — beginning eight
-minutes after the subscription's renewal charge, read in the maintainer's
-timezone (see the rights note below).
+morning this directory was created; and **the evening of 7 August into the
+first minutes of 8 August (UTC)** — nine recordings in two hours: six Suno
+"Remaster" takes of works already held and three new works (Story as Bridge,
+Random Topic, Ferry Slip), beginning eight minutes after the subscription's
+renewal charge, read in the maintainer's timezone (see the rights note
+below).
 
 All recordings are MP3, VBR between roughly 175 and 196 kbps, 48 kHz stereo.
-The audio is Suno, generator version unrecorded. The seven 2026-08-07 files
+The audio is Suno, generator version unrecorded. The nine 2026-08-07/08 files
 carry fuller tags than the earlier exports — title, artist, embedded lyrics,
 cover art and a C2PA manifest — a fact about Suno's export pipeline on that
 date, recorded because provenance metadata is exactly what this catalogue is
@@ -112,8 +116,9 @@ above was read from the file's own ID3 tag rather than supplied by hand.
 `safari-chains.mp3`, `different-parts.mp3`, both takes of I'd Lay It All
 Down, both takes of Starline Rivers, both takes of Dead But Came Back to
 Life,
-`the-girl-with-the-stars-in-her-chest.mp3` and `story-as-bridge.mp3` are
-held here and are **not part of the canon**. Another,
+`the-girl-with-the-stars-in-her-chest.mp3`, `story-as-bridge.mp3`,
+`random-topic.mp3` and `ferry-slip.mp3` are held here and are **not part of
+the canon**. Another,
 `look-what-you-made-me-do.mp3`, was also uncanonised and has since been
 removed — see its truth label.
 
@@ -143,13 +148,30 @@ labelled as such.
 The same applies in reverse: nothing here says they *should not* be canon. The
 question is simply open, and open is what it looks like when written down.
 
-**Seven held recordings are non-commercial; ten carry commercial rights.**
+**Seven held recordings are non-commercial; twelve carry commercial rights.**
 The July tracks were generated after the first Pro period ended on 6 June
 2026, and Red Dust Axis and the first Shooting Star Girl take were generated
 before it began on 7 May — see the plan column and the note below it. The
-three mid-May recordings fall inside the first Pro period, and the seven
-2026-08-07 recordings were generated under the resumed Pro plan. Nothing
+three mid-May recordings fall inside the first Pro period, and the nine
+recordings of 7–8 August were generated under the resumed Pro plan. Nothing
 about preservation changes; what changes is what may be done with them.
+
+**Custody note, 2026-08-08.** The maintainer reports deleting from Suno the
+tracks that cannot be used commercially. For the non-commercial recordings,
+this directory now holds the only copy in existence — the failure this
+directory was built against arrived from the other direction, and the
+archive held. One recording was lost before it could be preserved: the
+original, pre-Remaster take of The girl with the stars in her chest was
+deleted on the platform and had never been exported. Its Remaster is the
+only surviving recording of that work, and this line is that original's
+only record.
+
+**An open question, recorded rather than guessed.** Five of the six
+Remaster takes derive from originals generated on the free tier. Whether a
+remaster generated under a paid plan carries full commercial rights when
+its source generation did not is a question of Suno's terms this catalogue
+cannot settle from here. The plan column records the plan that was running
+— a fact — and this note records the question.
 
 **Which Shooting Star Girl is the song is an open question**, and this file
 does not answer it. Both recordings are kept. If one is later chosen as canon,
@@ -197,8 +219,8 @@ is not wrong about the date it describes.
   **The resumed plan covers the August batch.** The renewal order
   `MS2S00Y490` reads 8 Aug 2026, 6:06am in the maintainer's local time —
   which is 2026-08-07T22:06Z in AWST (UTC+8), where this project lives. The
-  seven 2026-08-07 generations run 22:14:45Z to 22:51:32Z: the first began
-  eight minutes after the charge. Those seven rows are therefore recorded as
+  nine generations run 2026-08-07T22:14:45Z to 2026-08-08T00:14:44Z: the
+  first began eight minutes after the charge. Those nine rows are therefore recorded as
   made on the resumed Pro plan. If the receipt's timezone is ever shown to
   be something other than AWST, the charge still precedes the generations in
   any Australian timezone, so the conclusion holds.
