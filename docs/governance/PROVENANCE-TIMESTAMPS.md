@@ -10,9 +10,9 @@ first when new evidence about the Suno subscription dates resolved two
 rows in [`mythos/music/README.md`](../../mythos/music/README.md) from
 unresolved to settled, then when four artworks were added to
 [`mythos/art/`](../../mythos/art/README.md) — and again on 2026-08-08,
-when five recordings were added (four Suno "Remaster" takes and Story
-as Bridge) and three files were renamed to carry their generation
-dates. Each superseded proof is archived in
+when seven recordings were added (six Suno "Remaster" takes and Story
+as Bridge, delivered in two batches) and five files were renamed to
+carry their generation dates. Each superseded proof is archived in
 [`mythos/proofs/`](../../mythos/proofs/) beside the exact manifest it
 attests — a pair for every state the work has been in, not just the
 latest one. Each remains a true statement about the date it was made.
