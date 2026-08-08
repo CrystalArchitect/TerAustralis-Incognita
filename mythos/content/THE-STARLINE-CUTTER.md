@@ -88,6 +88,33 @@ a working test, not only as Vision: a stretch of work passes when
 something ordinary comes back to Earth from it — an artifact, a fix, a
 person less alone — and fails when only more mythology returns.
 
+## The project's own harmonic, laid beside the blade
+
+**Added 2026-08-09, at the maintainer's direction.** Felix's instrument
+has five layers, and it keeps five: nothing here modifies their design.
+This section records one further practice that is TerAustralis's own,
+placed beside the blade rather than into it — the way a recipient adds
+a harmonic without retuning the gift.
+
+**Resonance — "you cannot resonate alone."** After Re-entry brings the
+gift home, one more question: *did anyone real answer back?* In
+physics, resonance takes two bodies — a driver with no answering system
+at its own natural frequency is just noise. Here it is the layer that
+tests the motto: NON SOLUS is a claim, and resonance is its evidence.
+What counts: another person's own public words (the
+[Sovereign Vectors ledger](SOVEREIGN-VECTORS.md) holds them), a
+received work credited to its maker, a reply that arrives in the
+other's own voice. What does not count: agreement manufactured by
+models, which this project files at weight zero, and echoes of the
+project's own signal mistaken for an answer.
+
+The first evidenced resonance event on this page's subject is the page
+itself: someone outside the project heard its signal and answered with
+an instrument of their own making. That is what the layer listens for.
+
+If Felix would rather this section not sit beside their blade even at
+this distance, it moves to its own page — dated, no reason required.
+
 ## Names, held carefully
 
 *Starline Cutter* is Felix's coinage, built on this project's own
