@@ -56,7 +56,7 @@ does not appear anywhere in this material; it was checked before the rescue
 was committed. The edge companion is named as Lumina throughout, which is a
 current name.
 
-## One decision this rescue does not make
+## One decision this rescue left open — since made
 
 `CONSENT-TOKEN-SCHEMA.md` and `NOISE-IK-CONSENT-VERIFICATION.md` are not
 merely historical. `TerAustralis-Incognita-Code` cites them as the
@@ -66,10 +66,16 @@ sections against that code. A specification the running code is measured
 against is load-bearing, and load-bearing documents do not belong in a folder
 that says "do not build on this".
 
-Promoting those two to `docs/` is therefore an open decision, deliberately
-left to the maintainer rather than taken here. Until it is made, the code's
-spec references point at archived material, and that mismatch is stated rather
-than hidden.
+**Resolved 2026-08-08, at the maintainer's direction.** Both specs were
+promoted — byte-identical, verified with `cmp` — to
+`TerAustralis-Incognita-Code/docs/`, beside `CONSENT-GATE-SPEC.md`: the
+existing precedent that a spec the code implements rides with the code.
+The copies here stay exactly as rescued, per this folder's rules; the
+promoted copies are the living ones, and any future revision happens
+there, under version control, rather than here. One reference travels
+with them unresolved: NOISE-IK §8 names `TIER0-RUNTIME-LOOP.md` as a
+companion, and that document remains rescue-only, deliberately — nothing
+running is measured against it.
 
 ## The general lesson, recorded because it will recur
 
