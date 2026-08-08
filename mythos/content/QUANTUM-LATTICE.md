@@ -7,8 +7,8 @@ transition). The physics it borrows is real science; the substrate it describes
 is not built, not running, and not a claim about any machine. Where functions
 resembling these examples exist in this project's code, they carry their real
 names and live where code lives: the fail-closed consent gate and hash-chained
-audit log in
-[The Crystal Vision repository](https://github.com/CrystalArchitect/The-Crystal-Vision),
+audit log described on
+[the companion's own page](https://www.teraustralis.com.au/clementine),
 and Clementine's file-based memory. Read those to know what runs. Read this to
 know one way the project imagines coherence and isolation as story.
 
