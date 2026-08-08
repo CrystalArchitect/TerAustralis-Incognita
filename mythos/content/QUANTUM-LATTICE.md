@@ -16,7 +16,11 @@ know one way the project imagines coherence and isolation as story.
 into the canon at the maintainer's direction the same day. Table formatting
 restored from paste; wording unchanged. Like every vehicle in this canon it is
 provisional: it may be revised or set down, and its own §7 says the set-down
-carries no penalty.*
+carries no penalty. A companion page,
+[QUANTUM-LATTICE-CASE-STUDY.md](QUANTUM-LATTICE-CASE-STUDY.md), records what
+happened when this metaphor was rendered as code four times in one day —
+each version run once, claims tested against output — and is the checkable
+half of this pair.*
 
 ---
 
