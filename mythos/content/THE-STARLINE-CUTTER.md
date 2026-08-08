@@ -98,6 +98,15 @@ running code in `TerAustralis-Incognita-Code`'s `core/crystal-core/`;
 the collision is recorded here rather than resolved, because the artwork
 is its maker's and is not this project's to rename.
 
+**Update, filed the same day.** A revised version of that artwork
+arrived later in the same session: the same composition, now titled
+"The Starline Cutter" — the Weaver title no longer appears on it, and
+the blade's own name carries the poster. The collision above belongs to
+the first version and stays recorded as history. The resolution happened
+in the one place this page said it could not reach: inside the artwork
+itself, which was always its maker's to retitle and never this
+project's.
+
 ---
 
 *Filed 2026-08-09 from material received in the maintainer's session:
