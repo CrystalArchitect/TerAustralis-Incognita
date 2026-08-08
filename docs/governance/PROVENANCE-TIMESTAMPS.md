@@ -1,21 +1,28 @@
 # Provenance Timestamps — anchoring the work to Bitcoin
 
-**Status:** anchored to Bitcoin on 2026-07-31 and twice on 2026-08-07
-via the GitHub Actions workflow, and awaiting a fresh stamp after the
-manifest changed again on 2026-08-08.
+**Status:** anchored to Bitcoin on 2026-07-31, twice on 2026-08-07, and
+twice more on 2026-08-08 via the GitHub Actions workflow — five proofs,
+each archived beside the manifest it attests; a workflow re-run later on
+2026-08-08 upgraded the fifth proof to its complete Bitcoin attestation,
+recorded in the archived pair — and awaiting a fresh stamp after the
+latest changes on 2026-08-08.
 
 The manifest changed three times on 2026-07-31 as the work moved (a
 recording removed, then the catalogue corrected), twice on 2026-08-07 —
 first when new evidence about the Suno subscription dates resolved two
 rows in [`mythos/music/README.md`](../../mythos/music/README.md) from
 unresolved to settled, then when four artworks were added to
-[`mythos/art/`](../../mythos/art/README.md) — and twice on 2026-08-08: first
+[`mythos/art/`](../../mythos/art/README.md) — and three times on 2026-08-08: first
 when seven recordings were added (six Suno "Remaster" takes and Story
 as Bridge) and five files were renamed to carry their generation
 dates, then when two further new works arrived (Random Topic, Ferry
 Slip) alongside a custody note recording that the platform copies of
 the non-commercial tracks were deleted, leaving this repository their
-only home. Each superseded proof is archived in
+only home. A third change the same day added one Vision-layer canon
+page (the Quantum Lattice, entered at the maintainer's direction), and a
+fourth added its checkable companion — a case study with the four code
+versions of the lattice metaphor that were delivered, run once each, and
+reported that day. Each superseded proof is archived in
 [`mythos/proofs/`](../../mythos/proofs/) beside the exact manifest it
 attests — a pair for every state the work has been in, not just the
 latest one. Each remains a true statement about the date it was made.
