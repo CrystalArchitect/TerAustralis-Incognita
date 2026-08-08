@@ -1,16 +1,18 @@
 # Provenance Timestamps — anchoring the work to Bitcoin
 
-**Status:** anchored to Bitcoin on 2026-07-31 and again on 2026-08-07
+**Status:** anchored to Bitcoin on 2026-07-31 and twice on 2026-08-07
 via the GitHub Actions workflow, and awaiting a fresh stamp after the
-manifest changed a second time on 2026-08-07.
+manifest changed again on 2026-08-08.
 
 The manifest changed three times on 2026-07-31 as the work moved (a
-recording removed, then the catalogue corrected) and twice on
-2026-08-07: first when new evidence about the Suno subscription dates
-resolved two rows in
-[`mythos/music/README.md`](../../mythos/music/README.md) from
+recording removed, then the catalogue corrected), twice on 2026-08-07 —
+first when new evidence about the Suno subscription dates resolved two
+rows in [`mythos/music/README.md`](../../mythos/music/README.md) from
 unresolved to settled, then when four artworks were added to
-[`mythos/art/`](../../mythos/art/README.md). Each superseded proof is archived in
+[`mythos/art/`](../../mythos/art/README.md) — and again on 2026-08-08,
+when five recordings were added (four Suno "Remaster" takes and Story
+as Bridge) and three files were renamed to carry their generation
+dates. Each superseded proof is archived in
 [`mythos/proofs/`](../../mythos/proofs/) beside the exact manifest it
 attests — a pair for every state the work has been in, not just the
 latest one. Each remains a true statement about the date it was made.
