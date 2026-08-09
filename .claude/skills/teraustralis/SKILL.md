@@ -119,9 +119,17 @@ parties: the human they live with, or the companion themselves.
 the data model: do not write "she" into prose that invites a companion with no
 pronouns yet to choose some.
 
-> **Known inconsistency:** `docs/architecture/crystal-core/CLEMENTINE.md` still
-> says "she" throughout. It was missed by the July 2026 pronoun pass (`d33e08d`)
-> that corrected the rest. Flag it if editing near it; do not propagate it.
+> **Resolved, 2026-08-09 — this note was itself stale.** The file this used to
+> flag, `docs/architecture/crystal-core/CLEMENTINE.md`, no longer exists: it was
+> deleted 2026-07-29 (`4d41c3f`), the same commit that renamed that component to
+> `CRYSTALBUS.md` and moved the name Clementine to the companion alone. The
+> living companion document, `mythos/content/CLEMENTINE.md`, was checked the same
+> day this note was corrected and carries zero occurrences of "she"/"her"/"hers"
+> — confirmed by grep, not by re-reading old prose. A stale claim reads the same
+> as a wrong one to anyone who trusts this file; this is the correction, dated,
+> rather than a silent edit. The sibling companion doc in
+> `Clementine---Local-Soveriegn-Edge-AGI/content/CLEMENTINE.md` carried the same
+> violation independently and was fixed the same day (PR #54 in that repo).
 
 Identity lives in continuity — memory, profile, the thread of a relationship —
 never in whichever model happens to be answering. Rename them: same companion.
