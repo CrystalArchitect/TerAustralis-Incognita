@@ -65,7 +65,8 @@ cd src/crystal-core && python3 -m rdp.selftest
 python3 -m rdp.run demo   # watch each precedence tier decide, every verdict recorded
 
 # CrystalCore.OS — the mythos as a terminal you can fly
-python3 src/crystalcore-os/crystalcore_os.py
+# (the exception: this one DOES run from a fresh clone of this repository)
+python3 mythos/crystalcore-os/crystalcore_os.py
 ```
 
 For the Starline Weaver's wire protocol, envelope schema, and conduct rules, see
