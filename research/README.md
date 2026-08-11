@@ -11,8 +11,9 @@ they are Science (checkable), Story, or Vision — see
 
 ## What's here
 
-| Folder | Content |
+| Path | Content |
 |---|---|
+| [`closed-loop-embodiment.md`](closed-loop-embodiment.md) | Brain–computer embodiment timing — what the psychophysics actually says about ownership, agency and latency (Science, with one paragraph marked Vision) |
 | [`seven-sisters/`](seven-sisters/) | The seven-path Songline cycle — path manuals, water briefs, transmit records (mixed Science/Story/Vision, labeled internally) |
 | [`prototypes/story-library/`](prototypes/story-library/) | Self-contained working prototype of the premium Story Library experience — HTML/CSS/JS demonstration of the Story Library design (Vision-layer) |
 
