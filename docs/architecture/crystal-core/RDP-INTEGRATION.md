@@ -24,7 +24,7 @@ are separate from RDP:
 
 | Mechanism | Where | What it does |
 |---|---|---|
-| **CrystalBridge ConsentGate** | [`src/crystalcore/gate.py`](../../../src/crystalcore/gate.py) | Fail-closed gate; four checks in order — approval → permission → scope → provenance. Every decision audited ([`src/crystalcore/audit.py`](../../../src/crystalcore/audit.py)). |
+| **CrystalBridge ConsentGate** | [`src/crystalcore/gate.py`](../../../src/crystalcore/gate.py) | Fail-closed gate; five doors in order — revocation → approval → provenance → permission → scope. Every decision audited ([`src/crystalcore/audit.py`](../../../src/crystalcore/audit.py)). |
 | **Consent Transport consent** | [`consent_transport/consent.py`](../../../src/crystal-core/consent_transport/consent.py) | Signed `ConsentReceipt`s; `is_granted()`. Revocation stops *future* requests at once; it cannot retract data a peer already holds, and says so. |
 | **The Covenant** | [`../../../mythos/COVENANT.md`](../../../mythos/COVENANT.md) | The five commitments those gates exist to keep. |
 
