@@ -25,6 +25,10 @@
       "pattern": "^https://github\\.com/CrystalArchitect/TerAustralis-Incognita-Code"
     },
     {
+      "comment": "This repository's own root URL (mythos/content/CREDITS.md). Failed with Status: 0 - no response at all, not even a 4xx - on PR #113 CI run 31646247517/job 94280365499 (2026-08-12), while markdownlint (182 files) and the internal-links checker (784 links) both passed clean in the same run. A repo's own GitHub URL cannot be genuinely dead; this is the checker's unauthenticated-crawler-vs-github.com failure mode already documented twice below (the settings-page and TerAustralis-Incognita-Code patterns), just against a page this checker had not previously been asked to fetch.",
+      "pattern": "^https://github\\.com/CrystalArchitect/TerAustralis-Incognita$"
+    },
+    {
       "comment": "GitHub repo settings pages (docs/guides/Access.md points admins at Settings > Access): served only to authenticated admins, so an anonymous checker gets 404 regardless of whether the URL is correct. Verified on CI run 30053981478 (2026-07-24). The admin who follows the guide is the verification.",
       "pattern": "^https://github\\.com/[^/]+/[^/]+/settings/"
     },
