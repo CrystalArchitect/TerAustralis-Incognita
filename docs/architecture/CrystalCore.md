@@ -46,11 +46,14 @@ Four components, stdlib-only except where real cryptography is required:
 ## CrystalBridge (`src/crystalcore/`)
 
 CrystalBridge: the MCP stdio server that lets a guest AI meet Clementine —
-fail-closed. Every tool call passes four checks in order (approval →
-permission → scope → provenance, `gate.py`) and lands in an append-only
-audit log (`audit.py`). Guest grants live in
-`src/profiles/<name>/bridge_config.json`. Guide:
-[`docs/guides/MCP-Guest.md`](../guides/MCP-Guest.md).
+fail-closed. Every tool call passes five doors in order (revocation →
+approval → provenance → permission → scope, `gate.py`) and lands in an
+append-only audit log (`audit.py`). Scope is applied after `check()`
+allows, inside `require_scope()`, for tools that touch memory. Guest
+grants live in `src/profiles/<name>/bridge_config.json`. Guide:
+[`docs/guides/MCP-Guest.md`](../guides/MCP-Guest.md). The check-order
+that used to print here (approval → permission → scope → provenance) was
+a leftover of the two-check era; the code never ran it that way.
 
 ## Why three, not one
 
