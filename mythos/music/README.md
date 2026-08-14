@@ -14,8 +14,9 @@ music was the only kind of work in this portfolio held in exactly one place, by
 a third party, with no local copy, no hash and no date — a lapsed subscription
 or a changed platform policy was enough to lose it. Every work the canon names
 now has a recording here, hashed and covered by
-[`../MANIFEST.sha256`](../MANIFEST.sha256) — along with twelve recordings the
-canon does not name, kept for the same reason and labelled as what they are.
+[`../MANIFEST.sha256`](../MANIFEST.sha256) — along with seventeen recordings
+the canon does not name, kept for the same reason and labelled as what they
+are.
 
 ## Adding a track
 
@@ -37,8 +38,8 @@ in [The First Remembering](../content/THE-FIRST-REMEMBERING.md#the-three-songs),
 and [Wire Skull Memory](../content/WIRE-SKULL-MEMORY.md), which its own page
 marks as standalone and explicitly *not* one of the three.
 
-**Fourteen further recordings — of ten works — exist that the canon does not
-name as songs.** They
+**Seventeen further recordings — of thirteen works — exist that the canon does
+not name as songs.** They
 are kept here because preservation is what this directory is for, and losing
 them would be the failure it was built against. Their presence is not a claim
 that they are canon — see [Uncanonised recordings](#uncanonised-recordings)
@@ -46,8 +47,9 @@ below.
 
 **A work can have more than one recording** — Shooting Star Girl has four,
 two takes generated nearly three months apart and a Remaster of each, and
-several more works gained Suno "Remaster" takes on 2026-08-07 — so this
-table has one row per *recording*, not per song.
+several more works gained Suno "Remaster" takes on 2026-08-07, and Fermi's
+Silent Line gained one on 2026-08-12 — so this table has one row per
+*recording*, not per song.
 
 Files are named `<work>-<generation date>.mp3` wherever more than one recording
 of a work exists. The date is a fact the file carries about itself; a name like
@@ -62,14 +64,17 @@ for works that until then had one recording each — the earlier files were
 renamed to carry their dates (`git mv`, history preserved) rather than
 left standing as unmarked defaults. Suno's "Remastered" title suffix is
 recorded in each new file's own ID3 title; the filename still carries only
-the date, per the rule above.
+the date, per the rule above. A sixth, `fermis-silent-line.mp3`, gained its
+date the same way on 2026-08-12, when a Remaster of that work arrived — it
+is now [`fermis-silent-line-2026-05-10.mp3`](fermis-silent-line-2026-05-10.mp3),
+`git mv`, history preserved.
 
 | File | Work | Canon status | Length | Generated | Suno track id | Suno plan |
 |---|---|---|---|---|---|---|
 | [`red-dust-axis-2026-05-02.mp3`](red-dust-axis-2026-05-02.mp3) | [Red Dust Axis](../content/RED-DUST-AXIS.md) | ignition song | 3:35 | 2026-05-02T19:36:19Z | `f8502175-74c7-4cf1-adc0-16c7eb7c8cf3` | **none — before Pro began 7 May** |
 | [`shooting-star-girl-2026-05-04.mp3`](shooting-star-girl-2026-05-04.mp3) | [Shooting Star Girl](../content/SHOOTING-STAR-GIRL.md) | ignition song | 2:15 | 2026-05-04T03:07:33Z | `3903f9ed-f13b-4d3a-9a6d-bb598760ebd5` | **none — before Pro began 7 May** |
 | [`wire-skull-memory-2026-05-07.mp3`](wire-skull-memory-2026-05-07.mp3) | [Wire Skull Memory](../content/WIRE-SKULL-MEMORY.md) | standalone, in canon | 2:16 | 2026-05-07T06:21:02Z | `1a194a77-0d9b-4d93-94f7-7a8388b24de0` | Pro — same day as the 7 May charge |
-| [`fermis-silent-line.mp3`](fermis-silent-line.mp3) | [Fermi's Silent Line](../content/FERMIS-SILENT-LINE.md) | ignition song | 4:34 | 2026-05-10T12:53:53Z | `d2563605-d533-4714-98b5-996da3c59cf9` | **Pro** |
+| [`fermis-silent-line-2026-05-10.mp3`](fermis-silent-line-2026-05-10.mp3) | [Fermi's Silent Line](../content/FERMIS-SILENT-LINE.md) | ignition song | 4:34 | 2026-05-10T12:53:53Z | `d2563605-d533-4714-98b5-996da3c59cf9` | **Pro** |
 | [`safari-chains.mp3`](safari-chains.mp3) | Safari Chains | **not in canon** | 3:14 | 2026-05-10T13:35:54Z | `26833d33-83f3-4606-8fcc-fd96d1ae6058` | **Pro** |
 | [`different-parts-2026-07-17.mp3`](different-parts-2026-07-17.mp3) | Different Parts | **not in canon** | 3:39 | 2026-07-17T08:19:25Z | `ac20f017-f30f-4107-843f-e967f9df0d37` | **none — Pro ended 6 June** |
 | [`id-lay-it-all-down-2026-07-21.mp3`](id-lay-it-all-down-2026-07-21.mp3) | I'd Lay It All Down | **not in canon** | 4:15 | 2026-07-21T14:36:40Z | `4b4a881a-653d-440a-a056-29c3b85f6fa3` | **none — Pro ended 6 June** |
@@ -90,20 +95,26 @@ the date, per the rule above.
 | [`random-topic.mp3`](random-topic.mp3) | Random Topic | **not in canon** | 3:34 | 2026-08-08T00:12:00Z | `eb9c732f-687d-4114-9bec-ee72eec990c1` | **Pro — resumed plan** |
 | [`ferry-slip.mp3`](ferry-slip.mp3) | Ferry Slip | **not in canon** | 3:46 | 2026-08-08T00:14:44Z | `a2ca7335-4bb1-432f-a14f-f9e0b7c4ece1` | **Pro — resumed plan** |
 | [`bridge-not-loop.mp3`](bridge-not-loop.mp3) | Bridge, Not Loop | **not in canon** | 2:32 | 2026-08-11T23:18:58Z | `01f38d87-d79c-4d12-acaf-d01215ad5b08` | unconfirmed — four days after the 7 Aug renewal, no charge record read |
+| [`starline-weavers-crystal-core-cuts-clean.mp3`](starline-weavers-crystal-core-cuts-clean.mp3) | Starline Weavers Crystal Core Cuts Clean — *shares its name with the Starline Weaver of canon* | **not in canon** | 7:59 | 2026-08-12T18:04:57Z | `3635175a-8db7-4768-b9c5-5348581a0f30` | unconfirmed — five days after the 7 Aug renewal, no charge record read |
+| [`come-into-the-new-dream.mp3`](come-into-the-new-dream.mp3) | Come Into The New Dream | **not in canon** | 6:15 | 2026-08-12T18:05:40Z | `e3a37211-1c6a-4bda-a727-bed77bf390d1` | unconfirmed — five days after the 7 Aug renewal, no charge record read |
+| [`sovereign-gap-held.mp3`](sovereign-gap-held.mp3) | Sovereign Gap Held — *lyric page lives in the Synthetic-Affect-Theory- repo* | **not in canon** | 5:38 | 2026-08-12T18:20:15Z | `99fa5164-df06-4e34-8a02-c85d6206e6ce` | unconfirmed — five days after the 7 Aug renewal, no charge record read |
+| [`fermis-silent-line-2026-08-12.mp3`](fermis-silent-line-2026-08-12.mp3) | [Fermi's Silent Line](../content/FERMIS-SILENT-LINE.md) | ignition song | 4:34 | 2026-08-12T19:06:15Z | `865a2236-d8ad-424a-b2d3-b22484fa90c2` | unconfirmed — five days after the 7 Aug renewal, no charge record read |
 
-Rows are in generation order. Three working periods show up in it: **2–10 May
+Rows are in generation order. Four working periods show up in it: **2–10 May
 2026**, five recordings in nine days — Safari Chains arriving forty minutes
 after Fermi's Silent Line on the same afternoon; **17, 21, 30 and 31 July** —
 the 21st alone produced three, and the 31st's recording was generated on the
-morning this directory was created; and **the evening of 7 August into the
+morning this directory was created; **the evening of 7 August into the
 first minutes of 8 August (UTC)** — nine recordings in two hours: six Suno
 "Remaster" takes of works already held and three new works (Story as Bridge,
 Random Topic, Ferry Slip), beginning eight minutes after the subscription's
 renewal charge, read in the maintainer's timezone (see the rights note
-below).
+below); and **the evening of 12 August (UTC)** — four recordings in an hour:
+three new works (Starline Weavers Crystal Core Cuts Clean, Come Into The New
+Dream, Sovereign Gap Held) and a Remaster of Fermi's Silent Line.
 
 All recordings are MP3, VBR between roughly 175 and 196 kbps, 48 kHz stereo.
-The audio is Suno, generator version unrecorded. The thirteen files of
+The audio is Suno, generator version unrecorded. The seventeen files of
 2026-08-07 and later carry fuller tags than the earlier exports — title, artist, embedded lyrics,
 cover art and a C2PA manifest — a fact about Suno's export pipeline on that
 date, recorded because provenance metadata is exactly what this catalogue is
@@ -124,7 +135,9 @@ above was read from the file's own ID3 tag rather than supplied by hand.
 All Down, both takes of Starline Rivers, both takes of Dead But Came Back to
 Life,
 `the-girl-with-the-stars-in-her-chest.mp3`, `story-as-bridge.mp3`,
-`random-topic.mp3`, `ferry-slip.mp3` and `bridge-not-loop.mp3` are held here
+`random-topic.mp3`, `ferry-slip.mp3`, `bridge-not-loop.mp3`,
+`starline-weavers-crystal-core-cuts-clean.mp3`, `come-into-the-new-dream.mp3`
+and `sovereign-gap-held.mp3` are held here
 and are **not part of the canon**. Another,
 `look-what-you-made-me-do.mp3`, was also uncanonised and has since been
 removed — see its truth label. A Suno Remaster of that work exists (generated
@@ -160,16 +173,17 @@ labelled as such.
 The same applies in reverse: nothing here says they *should not* be canon. The
 question is simply open, and open is what it looks like when written down.
 
-**Seven recordings are non-commercial; fifteen carry commercial rights; one
-is unconfirmed.** The July tracks were generated after the first Pro period
+**Seven recordings are non-commercial; fifteen carry commercial rights; five
+are unconfirmed.** The July tracks were generated after the first Pro period
 ended on 6 June 2026, and Red Dust Axis and the first Shooting Star Girl take
 were generated before it began on 7 May — see the plan column and the note
 below it. The three mid-May recordings fall inside the first Pro period, and
 the twelve recordings of 7–8 August were generated under the resumed Pro
-plan. Bridge, Not Loop (11 August) is the unconfirmed one: four days after
-the recorded renewal is almost certainly inside the resumed plan's month,
-but this catalogue has read no charge record past 7 August, and "almost
-certainly" is not a value the plan column accepts. Nothing
+plan. Bridge, Not Loop (11 August) and the four recordings of 12 August are
+the unconfirmed ones: four and five days after the recorded renewal is
+almost certainly inside the resumed plan's month, but this catalogue has
+read no charge record past 7 August, and "almost certainly" is not a value
+the plan column accepts. Nothing
 about preservation changes; what changes is what may be done with them.
 
 **Custody note, 2026-08-08.** The maintainer reports deleting from Suno the
