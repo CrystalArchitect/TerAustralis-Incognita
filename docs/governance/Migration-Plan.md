@@ -199,7 +199,10 @@ one of these is true:** release cadences diverge; a licensing split
 becomes real (revisiting ADR-0010); external contributors need scoping to
 one side; or CI/product surfaces diverge enough to fight each other.
 Until then: one repository, two top-level areas, the dependency rule
-enforced in review.
+enforced in review. Creating the split, if those criteria ever fire, is
+also a new GitHub repository — gated by [`ADR-0015`](../adr/ADR-0015.md).
+This plan does not mint repos on its own.
+
 
 **Clementine framework split — "strong reason" operationalized.** Extract the
 CrystalCore Framework from Clementine into Crystal Core only when at least one

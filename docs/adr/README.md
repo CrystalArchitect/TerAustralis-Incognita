@@ -21,7 +21,8 @@ decision needs one, how one is accepted — is in
 | [ADR-0011](ADR-0011.md) | Adopt the three-project boundary model — umbrella, Crystal Core, Crystal Vision | Accepted |
 | [ADR-0012](ADR-0012.md) | Site visual-token layer now; domain restructure deferred behind triggers | Proposed |
 | [ADR-0013](ADR-0013.md) | Extend uniform CC BY-NC-ND 4.0 across the whole portfolio; retire Apache-2.0 and the unlicensed repositories | Accepted |
-| [ADR-0014](ADR-0014.md) | Grok Build takes the Repository Engineer seat; Claude retained as history | Proposed |
+| [ADR-0014](ADR-0014.md) | Grok Build takes the Repository Engineer seat; Claude retained as history | Accepted |
+| [ADR-0015](ADR-0015.md) | Stop growing the constellation — no new GitHub repository without an ADR | Proposed |
 
 ## Template
 

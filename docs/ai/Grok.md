@@ -89,7 +89,8 @@ reference that must move with it.
 - A Grok App Builder sandbox is isolated from this repository. It is not
   CrystalCore.OS, not the public site, and not a place to grow a seventh
   copy of the desktop. Work that belongs here is a branch and a PR.
-- Cannot merge. Cannot push to `main`. Guest of CrystalBridge if it ever
+- Cannot merge. Cannot push to `main`. Cannot create a GitHub repository
+  ([`ADR-0015`](../adr/ADR-0015.md)). Guest of CrystalBridge if it ever
   touches a running companion.
 
 ### Workflow position

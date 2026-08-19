@@ -100,6 +100,9 @@ Dated so this section ages honestly — newest first, and it's fine to trim
 older entries once they're no longer useful context; the full history is
 always in `git log`.
 
+- **2026-08-20** — Stop growing the constellation (`ADR-0015`). Nineteen
+  repositories measured. No new GitHub repository without an ADR. Next
+  work lands in an existing living repo. Proposed until this PR merges.
 - **2026-08-20** — Domain and name collision, measured then patched.
   Apex `teraustralis.com.au` is a GitHub Pages 301 to www, not a 404;
   www serves the Code repo's SvelteKit build. GitHub slug is already

@@ -42,6 +42,7 @@ Midstream seat as of 2026-08-20: Grok Build, not Claude
 | Mythos or art generation | Grok | Recommended | Cultural-respect boundaries apply in full — [`Grok-Agent.md`](../agents/Grok-Agent.md) §A |
 | Bug fix / small, scoped code change | Grok Build | Recommended | Still a PR, still CI, still reviewed — just not extra scrutiny beyond that |
 | Naming or responsibility decisions | ChatGPT → Grok Build | Required | Gets an ADR, not just a decision — [`Decision-Records.md`](../governance/Decision-Records.md) |
+| New GitHub repository | ChatGPT → maintainer | Required | Default is **no**. Lands in an existing living repo unless a new ADR names why it cannot ([`ADR-0015`](../adr/ADR-0015.md)). Grok Build does not create repositories |
 
 GitHub isn't a row here — it's not a competing option, it's where every row
 ends up ([`GitHub.md`](GitHub.md)).
