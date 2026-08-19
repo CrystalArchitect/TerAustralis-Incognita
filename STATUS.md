@@ -1,6 +1,6 @@
 # STATUS
 
-Last updated: 2026-07-27
+Last updated: 2026-08-20
 
 Full knowledge-base reconstruction: `knowledge-base/00-INDEX.md` in
 CrystalCore.OS-the-Crystal-Architecture-Archive.
@@ -80,6 +80,19 @@ Nothing new at this tier in this repository; see the system ledger.
   described `TerAustralis-Incognita`, which correctly deploys nothing;
   the site is published from `TerAustralis-Incognita-Code`, which owns
   the CNAME.
+
+  **Re-measured 2026-08-20 (this session, from outside):**
+  `https://teraustralis.com.au` returns GitHub Pages **301** to
+  `https://www.teraustralis.com.au/`; www returns **200** with the
+  SvelteKit build (`_app/immutable/*`, last-modified 2026-08-18).
+  Code Pages settings: `cname=www.teraustralis.com.au`,
+  `build_type=workflow`, TLS covers both apex and www. Apex is not a
+  404 today. The remaining public collision was this umbrella's
+  leftover Jekyll Pages at
+  `https://crystalarchitect.github.io/TerAustralis-Incognita/`
+  (`build_type=legacy`, `cname=null`) rendering the README with the
+  drifted double-*a* GitHub description. `index.html` at this repo
+  root now points at www instead.
 
   A caution recorded from getting this wrong once: PR #70's link check
   hit that same URL at 20:36 and got a 404, midway through the 20:33

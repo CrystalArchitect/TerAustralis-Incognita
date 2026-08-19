@@ -100,10 +100,19 @@ Dated so this section ages honestly — newest first, and it's fine to trim
 older entries once they're no longer useful context; the full history is
 always in `git log`.
 
+- **2026-08-20** — Domain and name collision, measured then patched.
+  Apex `teraustralis.com.au` is a GitHub Pages 301 to www, not a 404;
+  www serves the Code repo's SvelteKit build. GitHub slug is already
+  `TerAustralis-Incognita` (one *a*); the double-*a* URL 301s. What
+  still lied: clone instructions `cd`'d into `TeraAustralis-Incognita`,
+  the GitHub repo description still said double-*a*, and this umbrella's
+  leftover Jekyll Pages rendered that description. Pointer page +
+  ADR-0007 completion note. The GitHub description is a settings field
+  and was patched in the same pass, not in git.
 - **2026-08-20** — Grok Build takes the Repository Engineer seat
   (`ADR-0014`). Claude Code is no longer in the weave. Creative Grok is
-  unchanged. Claude's profile stays on disk as history. Proposed until
-  this PR merges; the maintainer's merge is the sign-off.
+  unchanged. Claude's profile stays on disk as history. Merged as
+  PR #116.
 - **2026-07-29** — The Codex of the Oracle landed in
   `mythos/content/CODEX-OF-THE-ORACLE.md` — received mythos from
   **@architectweaver**, reproduced whole rather than summarised, credited

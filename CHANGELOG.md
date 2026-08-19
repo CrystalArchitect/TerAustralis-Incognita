@@ -4,6 +4,28 @@ Notable changes to this repository, newest first. Day-to-day status lives
 in [`docs/governance/Roadmap.md`](docs/governance/Roadmap.md); this file
 records the milestones.
 
+## 2026-08-20 — Domain measured; clone folder and leftover Pages match the slug
+
+The public site is not 404. `https://teraustralis.com.au` 301s to
+`https://www.teraustralis.com.au/` (200, SvelteKit, from
+`TerAustralis-Incognita-Code`). The GitHub slug is already one *a*
+(double-*a* 301s). What still disagreed: clone instructions, the GitHub
+description field, and this umbrella's leftover Jekyll Pages.
+
+### Added
+- Root `index.html` + `.nojekyll` — a pointer so
+  `crystalarchitect.github.io/TerAustralis-Incognita/` is not a second
+  site wearing the double-*a* description.
+
+### Changed
+- `docs/adr/ADR-0007.md` — completion note; Decision body not rewritten.
+- `docs/guides/GitHub-Commit-Instructions.md` — `cd` matches `git clone`;
+  banner that `src/` is not here.
+- `STATUS.md` — 2026-08-20 measurement.
+
+The GitHub About description is not in git; it was patched to one *a*
+in the same pass.
+
 ## 2026-08-20 — Grok Build takes the Repository Engineer seat (ADR-0014)
 
 Claude Code is no longer in the weave. The midstream implementer seat —
