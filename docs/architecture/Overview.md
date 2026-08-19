@@ -38,6 +38,13 @@ tamper-evident hash chain plus an explainable decision engine), the
 
 One law repeats at every boundary: **nothing moves without explicit,
 revocable consent, and refusal is the default.** The Covenant
+is the spec; the code is the enforcement.
+
+Control of the *constellation* (nineteen repositories, identity loop,
+incoming X/foreign variety) is mapped in
+[`CYBERNETICS-VSM.md`](CYBERNETICS-VSM.md) — VSM, second-order identity,
+information diet. Model, not a new OS mode.
+
 ([`mythos/COVENANT.md`](../../mythos/COVENANT.md)) states it for
 conversation; `consent_transport/consent.py` applies it to data;
 `src/crystalcore/gate.py` applies it to guest access. RDP *records* what the

@@ -4,6 +4,14 @@ Notable changes to this repository, newest first. Day-to-day status lives
 in [`docs/governance/Roadmap.md`](docs/governance/Roadmap.md); this file
 records the milestones.
 
+## 2026-08-20 — Cybernetics of CrystalCore (VSM, identity, diet)
+
+Beer / Ashby / second-order identity, applied to the nineteen and the
+keys. Model, not a Systems Mode desktop.
+
+### Added
+- `docs/architecture/CYBERNETICS-VSM.md`
+
 ## 2026-08-20 — Ink honesty + SourceCode as external peer (ADR-0016)
 
 Five lying surfaces from the post-#118 audit, plus a neighbor that is

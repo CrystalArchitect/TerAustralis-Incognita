@@ -100,6 +100,10 @@ Dated so this section ages honestly — newest first, and it's fine to trim
 older entries once they're no longer useful context; the full history is
 always in `git log`.
 
+- **2026-08-20** — Cybernetics note: VSM of the nineteen, second-order
+  identity (1984-byte hybrid key as independent reference), information
+  diet (Ashby). `docs/architecture/CYBERNETICS-VSM.md`. Model, not a
+  new OS mode.
 - **2026-08-20** — Ink honesty + SourceCode as external peer
   (`ADR-0016`). Neighbor recorded; engines not fused. `ADR-0015`
   stamped Accepted (PR #118). `-Code` marked public in the charter.
