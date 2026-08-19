@@ -4,6 +4,21 @@ Notable changes to this repository, newest first. Day-to-day status lives
 in [`docs/governance/Roadmap.md`](docs/governance/Roadmap.md); this file
 records the milestones.
 
+## 2026-08-20 — Ink honesty + SourceCode as external peer (ADR-0016)
+
+Five lying surfaces from the post-#118 audit, plus a neighbor that is
+not a twentieth repo.
+
+### Added
+- `docs/adr/ADR-0016.md` — `samuelsalmon3/SourceCode` is an external
+  peer. No vendor, no submodule, no CrystalBridge guest until minted.
+- `docs/architecture/peers/SourceCode.md` — measured card.
+
+### Changed
+- `ADR-0015` marked Accepted (merged as PR #118).
+- `Project-Boundaries.md` — `-Code` is public, not private.
+- `docs/guides/Access.md` — external-peer row.
+
 ## 2026-08-20 — Stop growing the constellation (ADR-0015)
 
 Nineteen GitHub repositories under CrystalArchitect. Six archived. A v2

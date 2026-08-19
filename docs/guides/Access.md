@@ -70,3 +70,14 @@ Approve them in `src/profiles/default/bridge_config.json`.
 - Guest wiring: `MCP-Guest.md`
 - Clementine core: `Clementine/`
 - Boot Lattice: `.\scripts\boot-lattice.ps1`
+
+---
+
+## External peers (not GitHub collaborators, not MCP guests)
+
+| Peer | Path | What they get |
+|------|------|----------------|
+| [samuelsalmon3/SourceCode](https://github.com/samuelsalmon3/SourceCode) | Documented neighbor ([`ADR-0016`](../adr/ADR-0016.md), [peer card](../architecture/peers/SourceCode.md)) | Recognition only. No CrystalBridge token. No memory. No tools. |
+
+A mint (`--mint-token`) is a maintainer act. Until then the gate is closed.
+
