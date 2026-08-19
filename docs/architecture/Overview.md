@@ -44,6 +44,11 @@ conversation; `consent_transport/consent.py` applies it to data;
 others decide — it never decides for them
 ([`crystal-core/RDP-INTEGRATION.md`](crystal-core/RDP-INTEGRATION.md)).
 
+Control of the *constellation* (nineteen repositories, identity loop,
+incoming X/foreign variety) is mapped in
+[`CYBERNETICS-VSM.md`](CYBERNETICS-VSM.md) — VSM, second-order identity,
+information diet. Model, not a new OS mode.
+
 ## The dreamed edges
 
 Marked as Vision, per the
