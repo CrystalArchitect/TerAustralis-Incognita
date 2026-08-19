@@ -4,14 +4,19 @@ A short quick-reference for getting a change committed cleanly. The full rules
 live in [`CONTRIBUTING.md`](../../CONTRIBUTING.md) — read that first; this page
 just collects the commands.
 
-This is a single monorepo (`CrystalArchitect/teraaustralis-incognita`), not a
-flat collection of files. Everything below runs from the repo root.
+> **Status (2026-08-20):** this repository is the umbrella — docs, ADRs,
+> mythos. There is no `src/` here. The GitHub slug is
+> `CrystalArchitect/TerAustralis-Incognita` (one *a*). Python self-tests
+> belong in
+> [`TerAustralis-Incognita-Code`](https://github.com/CrystalArchitect/TerAustralis-Incognita-Code).
+> CI on this repository is markdown lint and link check, not the Python
+> suites below.
 
 ## One-time setup
 
 ```bash
 git clone https://github.com/CrystalArchitect/TerAustralis-Incognita.git
-cd TeraAustralis-Incognita
+cd TerAustralis-Incognita
 ```
 
 ## Before you push: run the checks CI runs
