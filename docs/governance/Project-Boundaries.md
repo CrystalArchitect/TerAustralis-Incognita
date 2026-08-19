@@ -141,6 +141,16 @@ happens.
 - **Site copy of new canon** — The First Remembering is canonical but
   not yet copied into the site content set.
 
+## Repositories, 2026-08-20
+
+The six-repo survey above is the 2026-07-24 measurement and is left as
+written. GitHub search `user:CrystalArchitect` on 2026-08-20 returned
+**19** repositories (6 public living, 7 private living, 6 archived).
+The landing table and the "no new repository" gate are
+[`ADR-0015`](../adr/ADR-0015.md). This charter's Stage 3 open decision
+(whether to split `-Code`) is unchanged; creating the split still takes
+that ADR *and* ADR-0015.
+
 ## Amendment
 
 Changes to this charter take a new ADR

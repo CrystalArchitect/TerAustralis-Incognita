@@ -4,6 +4,22 @@ Notable changes to this repository, newest first. Day-to-day status lives
 in [`docs/governance/Roadmap.md`](docs/governance/Roadmap.md); this file
 records the milestones.
 
+## 2026-08-20 — Stop growing the constellation (ADR-0015)
+
+Nineteen GitHub repositories under CrystalArchitect. Six archived. A v2
+stalled fifteen days. SAT already has a dedicated repo. New folders have
+been cheaper than finishing the old ones.
+
+### Added
+- `docs/adr/ADR-0015.md` — no new GitHub repository without an ADR;
+  landing table for next work.
+
+### Changed
+- Agent instructions (Grok Build, AGENTS.md, Decision-Matrix) now name
+  the gate. `Project-Boundaries.md` records the 19-count beside the
+  2026-07-24 six-repo survey, which is left as written.
+- `ADR-0014` marked Accepted (merged as PR #116).
+
 ## 2026-08-20 — Domain measured; clone folder and leftover Pages match the slug
 
 The public site is not 404. `https://teraustralis.com.au` 301s to

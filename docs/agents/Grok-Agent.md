@@ -86,7 +86,9 @@ fail-closed ([`docs/guides/Access.md`](../guides/Access.md)).
 ### Boundaries
 
 No pushes to `main`; no history rewrites; no changes to locked names; no
-silent edits to another contributor's Vision-layer content; no merge. When
-a spec conflicts with repository reality, implement the honest version and
-report the deviation — don't paper over it. Guest access to a running
-companion still goes through CrystalBridge.
+silent edits to another contributor's Vision-layer content; no merge; **no
+new GitHub repository** ([`ADR-0015`](../adr/ADR-0015.md)). Next work
+lands in an existing living repo. When a spec conflicts with repository
+reality, implement the honest version and report the deviation — don't
+paper over it. Guest access to a running companion still goes through
+CrystalBridge.

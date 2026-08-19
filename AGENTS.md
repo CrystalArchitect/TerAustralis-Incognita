@@ -17,6 +17,9 @@ repository architecture (map: `docs/architecture/SystemMap.md`).
 4. New AI tool used → name it in your PR description (the PR template
    asks). Full rules: `docs/governance/AI-Governance.md`.
 5. Cultural respect: no false sacred; fire-circle ethic (`mythos/NAMES.md`).
+6. No new GitHub repository without an ADR (`docs/adr/ADR-0015.md`). Next
+   work lands in Code, Clementine, the proposal, or this umbrella — not a
+   twentieth repo.
 
 ## Your role
 
