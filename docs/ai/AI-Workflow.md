@@ -9,24 +9,25 @@ that bind all of it are in
 
 Each tool has a profile in this folder; each agent has operating
 instructions in [`docs/agents/`](../agents/). For the assembled picture —
-all six roles in one table, how they connect, and what's proposed but not
-built — start with [`AI-Architecture.md`](AI-Architecture.md).
+roles in one table, how they connect, and what's proposed but not built —
+start with [`AI-Architecture.md`](AI-Architecture.md). Midstream seat:
+[`ADR-0014`](../adr/ADR-0014.md).
 
 ## The flows
 
 **Architecture** — design before code:
 
-> ChatGPT (design, spec) → Claude (implement across the repo) → GitHub (PR,
+> ChatGPT (design, spec) → Grok Build (implement across the repo) → GitHub (PR,
 > CI, review)
 
 **Engineering** — when the problem is mathematical or algorithmic:
 
 > DeepSeek (analysis, algorithms) → ChatGPT (integrate into the design) →
-> Claude (implement) → GitHub (PR, CI, review)
+> Grok Build (implement) → GitHub (PR, CI, review)
 
 **Documentation**:
 
-> ChatGPT (structure, drafting) → Claude (generate and place across the
+> ChatGPT (structure, drafting) → Grok Build (generate and place across the
 > tree) → GitHub (PR, review)
 
 **Knowledge** — digesting large material into the repo:
@@ -39,6 +40,9 @@ built — start with [`AI-Architecture.md`](AI-Architecture.md).
 > Grok (divergent ideas) → ChatGPT (select, shape) → architecture (or the
 > compost heap — most ideas don't survive, which is the point)
 
+Grok (Creative Exploration) and Grok Build (Repository Engineer) are
+different seats. Brainstorming does not skip ChatGPT and land as a PR.
+
 ## What the flows mean in practice
 
 - Every flow **ends at the repository through a pull request** — no AI's
@@ -48,7 +52,8 @@ built — start with [`AI-Architecture.md`](AI-Architecture.md).
   small; *skipping review is never fine.*
 - Handoffs happen through artifacts (a spec, a diff, a doc), not vibes —
   the receiving tool should be able to work from what's on disk.
-- Every PR names the tools that touched it.
+- Every PR names the tools that touched it. Name **Grok Build** when the
+  implementer was Grok Build, not "Grok".
 
 ## The standing caution
 

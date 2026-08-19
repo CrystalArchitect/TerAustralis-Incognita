@@ -7,6 +7,9 @@ picks the recommended tool, and decides — no runtime, no automation, no new
 failure mode. If it proves useful in practice, a coded version can route to
 the same table later; until then, the table *is* the orchestrator.
 
+Midstream seat as of 2026-08-20: Grok Build, not Claude
+([`ADR-0014`](../adr/ADR-0014.md)).
+
 ## How to read this
 
 - **Recommended AI** — who's best positioned by role and strength (see each
@@ -28,20 +31,22 @@ the same table later; until then, the table *is* the orchestrator.
 
 | Task | Recommended AI | Human review | Notes |
 |---|---|---|---|
-| Repository structure / multi-file refactor | Claude | Required | Verify against the real tree, not a remembered one — [`Claude.md`](Claude.md) |
+| Repository structure / multi-file refactor | Grok Build | Required | Verify against the real tree, not a remembered one — [`Grok.md`](Grok.md) §2 |
 | New software architecture / system design | ChatGPT | Required | Specs can be plausible but ungrounded — check against repo reality before implementing |
-| Documentation structure or drafting | ChatGPT → Claude | Required | ChatGPT drafts structure, Claude places and cross-links it across the tree |
+| Documentation structure or drafting | ChatGPT → Grok Build | Required | ChatGPT drafts structure, Grok Build places and cross-links it across the tree |
 | Mathematical modeling / algorithm design | DeepSeek | Required | Analysis, not measurement — gets a test when it lands in code |
 | Large-document or corpus synthesis | Gemini | Recommended | Synthesis can smooth over a contradiction that mattered — treat findings as leads |
 | Image / diagram interpretation | Gemini | Recommended | States what's depicted, kept separate from what it means |
 | Cross-document consistency check | Gemini | Recommended | Findings are "X says A, Y says B," not verdicts, unless code settles it |
 | Creative brainstorming / alternative framings | Grok | Recommended | Diverges on purpose — filtering is the next step, not this one |
-| Mythos or art generation | Grok | Recommended | Cultural-respect boundaries apply in full — [`Grok-Agent.md`](../agents/Grok-Agent.md) |
-| Bug fix / small, scoped code change | Claude | Recommended | Still a PR, still CI, still reviewed — just not extra scrutiny beyond that |
-| Naming or responsibility decisions | ChatGPT → Claude | Required | Gets an ADR, not just a decision — [`Decision-Records.md`](../governance/Decision-Records.md) |
+| Mythos or art generation | Grok | Recommended | Cultural-respect boundaries apply in full — [`Grok-Agent.md`](../agents/Grok-Agent.md) §A |
+| Bug fix / small, scoped code change | Grok Build | Recommended | Still a PR, still CI, still reviewed — just not extra scrutiny beyond that |
+| Naming or responsibility decisions | ChatGPT → Grok Build | Required | Gets an ADR, not just a decision — [`Decision-Records.md`](../governance/Decision-Records.md) |
 
 GitHub isn't a row here — it's not a competing option, it's where every row
 ends up ([`GitHub.md`](GitHub.md)).
+
+Claude is not a row here. The historical profile is [`Claude.md`](Claude.md).
 
 ## Using this before it's code
 

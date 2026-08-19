@@ -4,6 +4,23 @@ Notable changes to this repository, newest first. Day-to-day status lives
 in [`docs/governance/Roadmap.md`](docs/governance/Roadmap.md); this file
 records the milestones.
 
+## 2026-08-20 — Grok Build takes the Repository Engineer seat (ADR-0014)
+
+Claude Code is no longer in the weave. The midstream implementer seat —
+take a spec, make the tree match it, open a PR — moves to **Grok Build**.
+Creative Grok (diverge, mythos, art) is a separate seat and is unchanged.
+Claude's profile and agent instructions stay on disk as history. No locked
+name changed. No new repository.
+
+### Added
+- `docs/adr/ADR-0014.md` — the seat swap, including the sandbox-is-not-the-estate rule.
+
+### Changed
+- `docs/ai/Grok.md` and `docs/agents/Grok-Agent.md` now describe two seats.
+- `docs/ai/Claude.md` and `docs/agents/Claude-Agent.md` marked historical.
+- `AI-Architecture.md`, `AI-Workflow.md`, `Decision-Matrix.md`, ChatGPT and
+  DeepSeek profiles, `AGENTS.md`, this changelog, and the ADR index.
+
 ## 2026-07-23 — Docs synced to repository reality; three-project boundaries adopted (ADR-0011)
 
 Two ordered commits, one decision. First, the entry-point documentation

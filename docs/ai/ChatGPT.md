@@ -30,9 +30,10 @@ system in view while writing the next concrete spec.
 
 ## Workflow position
 
-Upstream. ChatGPT specs → Claude implements → GitHub reviews
-([`AI-Workflow.md`](AI-Workflow.md)). Its output enters the repo only
-through that path; specs that skip implementation-reality checks get
-corrected in review, and the corrected version becomes canon.
+Upstream. ChatGPT specs → Grok Build implements → GitHub reviews
+([`AI-Workflow.md`](AI-Workflow.md), [`ADR-0014`](../adr/ADR-0014.md)).
+Its output enters the repo only through that path; specs that skip
+implementation-reality checks get corrected in review, and the corrected
+version becomes canon.
 
 Operating instructions: [`docs/agents/ChatGPT-Agent.md`](../agents/ChatGPT-Agent.md).

@@ -1,20 +1,26 @@
 # AI architecture — the whole picture
 
-The six pages in this folder each describe one tool. This page is the
+The pages in this folder each describe one tool. This page is the
 assembly instructions: how the roles relate, what connects them today, and
 what's proposed but not yet real. Read this first if you're new; read the
 individual profiles for depth.
+
+The midstream seat moved on 2026-08-20: see [`ADR-0014`](../adr/ADR-0014.md).
 
 ## The roles at a glance
 
 | Tool | Role | One line |
 |---|---|---|
 | [ChatGPT](ChatGPT.md) | Chief Systems Architect | Turns intent into specs others can build from |
-| [Claude](Claude.md) | Repository Engineer | Implements specs across the real tree, through PRs |
+| [Grok Build](Grok.md) | Repository Engineer | Implements specs across the real tree, through PRs |
 | [DeepSeek](DeepSeek.md) | Research & Engineering Specialist | Mathematics, algorithms, analysis with rigor |
 | [Gemini](Gemini.md) | Knowledge & Multimodal Specialist | Reads wide — large documents, images, consistency |
 | [Grok](Grok.md) | Creative Exploration | Diverges first; ideas and art, filtered later |
 | [GitHub](GitHub.md) | Development Platform | Not an AI — where every flow ends and becomes canon |
+| [Claude](Claude.md) | Repository Engineer (historical) | Held the midstream seat until 2026-08-20; retained as record |
+
+Grok and Grok Build are two seats in one family, not one job. Mixing them
+is how a session invents instead of implementing.
 
 ## How they connect today
 
@@ -25,13 +31,13 @@ in [`AI-Workflow.md`](AI-Workflow.md). In outline:
 ```
    DeepSeek ─┐
              ▼
-   Gemini ─▶ ChatGPT ─▶ Claude ─▶ GitHub ─▶ (merged: canon)
+   Gemini ─▶ ChatGPT ─▶ Grok Build ─▶ GitHub ─▶ (merged: canon)
              ▲
    Grok ─────┘
 ```
 
-ChatGPT is the hub every design-shaped flow passes through before Claude
-touches the tree; GitHub is the hub every flow passes through before
+ChatGPT is the hub every design-shaped flow passes through before Grok
+Build touches the tree; GitHub is the hub every flow passes through before
 anything counts. Nothing left of GitHub is canon on its own — see
 [`AI-Workflow.md`](AI-Workflow.md#what-the-flows-mean-in-practice).
 
@@ -84,7 +90,7 @@ Human Review            (the veto stays here — always)
 ```
 
 — which is *how* a request gets routed once it reaches the orchestrator,
-distinct from the six-node diagram above showing *what* it routes between.
+distinct from the diagram above showing *what* it routes between.
 This would be a real addition to the Lattice's designed-but-unbuilt
 machinery ([`docs/architecture/Lattice.md`](../architecture/Lattice.md))
 rather than a restatement of it: the Lattice's Weave Map registers nodes,

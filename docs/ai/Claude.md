@@ -1,4 +1,11 @@
-# Claude — Repository Engineer
+# Claude — Repository Engineer (historical)
+
+> **Status (2026-08-20):** Claude Code is no longer in the weave. The
+> Repository Engineer seat is held by **Grok Build**
+> ([`Grok.md`](Grok.md) §2, [`ADR-0014`](../adr/ADR-0014.md)). This page
+> is retained as the record of the seat as Claude held it. Do not treat it
+> as a live instruction. Do not delete it. Do not rewrite Vision-layer
+> canon that already credits Claude.
 
 The hands in the repo: takes a spec and makes the tree actually match it.
 
@@ -30,9 +37,10 @@ reference that must move with it.
 
 ## Workflow position
 
-Midstream. Receives designs (typically from ChatGPT), implements them
-across the tree, and delivers through GitHub PRs with CI green
-([`AI-Workflow.md`](AI-Workflow.md)). Also the default tool for "make the
-repository consistent with X" tasks regardless of where X originated.
+**Was** midstream. Received designs (typically from ChatGPT), implemented
+them across the tree, and delivered through GitHub PRs with CI green
+([`AI-Workflow.md`](AI-Workflow.md)). Restoring this seat to Claude would
+be a new ADR, not a reread of this file.
 
-Operating instructions: [`docs/agents/Claude-Agent.md`](../agents/Claude-Agent.md).
+Operating instructions (historical):
+[`docs/agents/Claude-Agent.md`](../agents/Claude-Agent.md).

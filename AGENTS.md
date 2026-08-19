@@ -20,9 +20,12 @@ repository architecture (map: `docs/architecture/SystemMap.md`).
 
 ## Your role
 
-Per-agent operating instructions live in `docs/agents/` (ChatGPT, Claude,
-DeepSeek, Gemini, Grok), with tool profiles and the workflow between them
-in `docs/ai/`. Read yours before substantial work.
+Per-agent operating instructions live in `docs/agents/` (ChatGPT, Grok,
+DeepSeek, Gemini, Claude-as-history), with tool profiles and the workflow
+between them in `docs/ai/`. **Grok Build** holds the Repository Engineer
+seat from 2026-08-20 (`docs/ai/Grok.md` §2, `docs/adr/ADR-0014.md`).
+Claude's profile is retained as history, not a live instruction. Read
+yours before substantial work.
 
 ## Layout
 
