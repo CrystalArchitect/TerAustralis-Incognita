@@ -104,7 +104,7 @@ trees and git histories.)*
 | Repository | Role |
 |---|---|
 | `CrystalArchitect/TerAustralis-Incognita` (this repo) | The umbrella: governance, ADRs, architecture docs, research, provenance mirrors under `archive/`, and `mythos/` — **the** canon home (Codex, Apocryphon, The First Remembering, the crystalcore-os terminal). |
-| `CrystalArchitect/TerAustralis-Incognita-Code` (private) | The software, per Migration-Plan Stages 1–2: `core/` (engine — protocol pack with Clementine, CrystalBridge, mesh stub, SDK) and `vision/` (application — Clementine, voicebox, demo shells, **the site source**). Full CI; carries the Pages deploy and `CNAME`. |
+| `CrystalArchitect/TerAustralis-Incognita-Code` (public) | The software, per Migration-Plan Stages 1–2: `core/` (engine — protocol pack with Clementine, CrystalBridge, mesh stub, SDK) and `vision/` (application — Clementine, voicebox, demo shells, **the site source**). Full CI; carries the Pages deploy and `CNAME`. |
 | `CrystalArchitect/CrystalCore.OS-the-Crystal-Architecture-Archive` | The system ledger: one fleet-wide `STATUS.md` — state, receipts, known unknowns across all repositories. Deliberately small. |
 
 **Frozen provenance** — checkpointed 2026-07-17 (the laptop hand-off),
@@ -147,7 +147,9 @@ The six-repo survey above is the 2026-07-24 measurement and is left as
 written. GitHub search `user:CrystalArchitect` on 2026-08-20 returned
 **19** repositories (6 public living, 7 private living, 6 archived).
 The landing table and the "no new repository" gate are
-[`ADR-0015`](../adr/ADR-0015.md). This charter's Stage 3 open decision
+[`ADR-0015`](../adr/ADR-0015.md).
+External peer (not in the 19): [`SourceCode`](../architecture/peers/SourceCode.md)
+([`ADR-0016`](../adr/ADR-0016.md)) — recognition, not a twentieth repo. This charter's Stage 3 open decision
 (whether to split `-Code`) is unchanged; creating the split still takes
 that ADR *and* ADR-0015.
 

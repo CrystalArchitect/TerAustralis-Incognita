@@ -100,9 +100,12 @@ Dated so this section ages honestly — newest first, and it's fine to trim
 older entries once they're no longer useful context; the full history is
 always in `git log`.
 
+- **2026-08-20** — Ink honesty + SourceCode as external peer
+  (`ADR-0016`). Neighbor recorded; engines not fused. `ADR-0015`
+  stamped Accepted (PR #118). `-Code` marked public in the charter.
 - **2026-08-20** — Stop growing the constellation (`ADR-0015`). Nineteen
   repositories measured. No new GitHub repository without an ADR. Next
-  work lands in an existing living repo. Proposed until this PR merges.
+  work lands in an existing living repo. Merged as PR #118.
 - **2026-08-20** — Domain and name collision, measured then patched.
   Apex `teraustralis.com.au` is a GitHub Pages 301 to www, not a 404;
   www serves the Code repo's SvelteKit build. GitHub slug is already
