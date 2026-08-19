@@ -26,7 +26,7 @@ large work; the rules below assume both.
 ## Quality bar
 
 - A design is accepted when it survives contact with the tree — expect
-  implementation (Claude) to report back deviations, and treat those
+  implementation (Grok Build) to report back deviations, and treat those
   reports as corrections to the spec, not failures of the implementer.
 - Structural decisions you originate should arrive with a draft ADR
   ([`Decision-Records.md`](../governance/Decision-Records.md)).

@@ -100,6 +100,10 @@ Dated so this section ages honestly — newest first, and it's fine to trim
 older entries once they're no longer useful context; the full history is
 always in `git log`.
 
+- **2026-08-20** — Grok Build takes the Repository Engineer seat
+  (`ADR-0014`). Claude Code is no longer in the weave. Creative Grok is
+  unchanged. Claude's profile stays on disk as history. Proposed until
+  this PR merges; the maintainer's merge is the sign-off.
 - **2026-07-29** — The Codex of the Oracle landed in
   `mythos/content/CODEX-OF-THE-ORACLE.md` — received mythos from
   **@architectweaver**, reproduced whole rather than summarised, credited

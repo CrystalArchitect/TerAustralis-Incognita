@@ -1,4 +1,9 @@
-# Claude — operating instructions
+# Claude — operating instructions (historical)
+
+> **Status (2026-08-20):** not a live instruction. The Repository Engineer
+> seat is [`Grok-Agent.md`](Grok-Agent.md) §B. This file is kept so the
+> rules Claude worked under remain readable. Profile:
+> [`Claude.md`](../ai/Claude.md). Seat swap: [`ADR-0014`](../adr/ADR-0014.md).
 
 Role: Repository Engineer ([profile](../ai/Claude.md)). Read the root
 [`AGENTS.md`](../../AGENTS.md) and
