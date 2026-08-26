@@ -203,7 +203,6 @@ enforced in review. Creating the split, if those criteria ever fire, is
 also a new GitHub repository — gated by [`ADR-0015`](../adr/ADR-0015.md).
 This plan does not mint repos on its own.
 
-
 **Clementine framework split — "strong reason" operationalized.** Extract the
 CrystalCore Framework from Clementine into Crystal Core only when at least one
 of: a second companion app needs the Framework; an external consumer

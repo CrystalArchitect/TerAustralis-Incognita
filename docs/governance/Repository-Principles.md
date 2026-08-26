@@ -13,7 +13,7 @@ contributor, human or AI.
 6. Require review before merging.
 7. Keep components loosely coupled.
 8. Keep code, docs, research, and story clearly separated.
-9. Favor reproducibility and clear evidence.
+9. Favour reproducibility and clear evidence.
 
 Nine one-liners for a quick scan; the numbered sections below are the same
 nine with the reasoning and the cross-references attached.
@@ -48,7 +48,7 @@ nine with the reasoning and the cross-references attached.
 8. **Keep code, documentation, research, and story clearly separated.** The
    mythos (`mythos/`) is Vision-layer content under its own license; it may
    point at code and never speaks for it.
-9. **Favor reproducibility and clear evidence.** A claim about the software
+9. **Favour reproducibility and clear evidence.** A claim about the software
    should come with the command that proves it (the self-tests, the test
    suites); a claim without one is labeled as vision, not fact.
 

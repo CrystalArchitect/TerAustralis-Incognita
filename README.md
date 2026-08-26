@@ -163,7 +163,7 @@ Useful places to start, roughly in order of how load-bearing they are:
   negotiation — see [`docs/ATTRIBUTIONS.md`](docs/ATTRIBUTIONS.md). A
   differentiated per-package model (AGPL v3 / Proprietary / Dual /
   CC BY-NC-ND) was implemented in `packages/` and then deliberately
-  reverted in favor of this uniform, simpler license — see
+  reverted in favour of this uniform, simpler license — see
   [`ADR-0010`](docs/adr/ADR-0010.md).
 - **Roadmap:** [`Roadmap.md`](docs/governance/Roadmap.md) — what's built,
   what's in progress, and what hasn't started yet.
