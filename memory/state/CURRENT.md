@@ -1,111 +1,83 @@
-# CURRENT — Repository State Snapshot
+# CURRENT
 
-**Last updated:** 2026-08-27 (session: memory-bootstrap-peiyva)  
-**Basis:** `STATUS.md` (last updated 2026-08-20)  
-**Authority:** See primary source for latest state
+Working picture of **this** repository. Overwrite at each checkpoint.
+If this file disagrees with [`STATUS.md`](../../STATUS.md) or a newer
+canonical source, the canonical source wins — then fix this file.
 
-## What's running (executable code)
+**As of:** 2026-08-28
+**STATUS.md last updated:** 2026-08-20
+**Main SHA this branch was cut from:** `bdddf0cdf4c2e47f7d517aaf9edbf1a9ba928b08`
 
-- **CrystalCore.OS terminal** — `mythos/crystalcore-os/crystalcore_os.py`
-  - Status: **Running** (verified 2026-07-27)
-  - Boots from source, plays to First Gate, saves/resumes from fresh clone
-  - Stdlib-only, no external dependencies
-  - Command: `python3 mythos/crystalcore-os/crystalcore_os.py`
+## Now
 
-- **Research prototypes** — `research/prototypes/story-library`
-  - Status: **Running** (verified 2026-07-24)
-  - Self-contained HTML, no build step
-  - Renders in headless browser
-  - Reference implementation for production SvelteKit version
+| Item | Label | Source |
+|---|---|---|
+| This git is the umbrella (canon, governance, mythos). No main app code. | Built (as a docs repo) | ADR-0011, STATUS, README |
+| `src/` is **not** in this git and never was | Built (negative fact) | README status note, SystemMap |
+| Public site is live from `TerAustralis-Incognita-Code` (www 200, apex 301) | Built, measured 2026-08-20 | STATUS |
+| CrystalCore.OS mythos terminal runs from a fresh clone of *this* repo | Vision software that runs | STATUS, README Quick start |
+| Lattice-delta / Weave-Map / gate board | Designed, **not built** | Constitution implementation note |
+| Grok Build holds the Repository Engineer seat | Built (governance) | ADR-0014, AGENTS.md |
+| Claude Code is not in the weave; profile retained as history | Built (governance) | ADR-0014, `docs/ai/Claude.md` |
+| No new GitHub repository without an ADR | Built (governance) | ADR-0015 |
+| `samuelsalmon3/SourceCode` is an external peer, not a module | Vision until ADR-0016 merges | ADR-0016 **Proposed** |
+| License: uniform CC BY-NC-ND 4.0 | Built (legal) | ADR-0010, ADR-0013 |
+| Locked names: TerAustralis Incognita · CrystalVision · CrystalCore.Lattice | Built (law) | Constitution §1 |
+| Songline is never a component name | Built (law) | NAMES.md, Indigenous-Data-Sovereignty.md |
+| This memory protocol | Docs / process, **unmerged** on this branch | this PR |
 
-- **CI on main**
-  - Status: **Green** (run 2026-07-23)
-  - Honest scope: src/ tests skipped (code moved to separate repos)
-  - Coverage: dbt project, architecture tests, governance validation
+## Seats
 
-## What's built, not running
+- **Maintainer / human veto:** Crystal. Unchanged.
+- **Repository Engineer:** Grok Build. Boundaries travel with the seat:
+  no push to `main`, no history rewrite, no locked-name changes, no
+  silent edits to another contributor's Vision-layer content, no merge.
+- **Creative Grok:** separate seat. Does not implement.
+- **Claude Code:** historical. A session that runs anyway follows
+  [`CLAUDE.md`](../../CLAUDE.md) and writes back here. That is not a seat
+  restore.
 
-- **dbt/crystalcore_emotion_warehouse** — Full dbt project
-  - Status: **Built** (complete)
-  - Staging/mart models, macros, tests exist
-  - No warehouse configured, no runtime execution
-  - Designed but not integrated
+## What you can run from a clone of *this* repo
 
-- **archive/** — Legacy code
-  - Status: **Built** (versioned)
-  - crystalcore-v0.13, clementine.py (local-snapshot-2026-07-17)
-  - Read-only for provenance; do not build on it
+From STATUS and README:
 
-## What's document (spec/architecture/vision)
+- `python3 mythos/crystalcore-os/crystalcore_os.py` — mythos terminal
+- `research/prototypes/story-library` — self-contained HTML
+- CI on main: markdown lint and links. Python tests live in `-Code`.
 
-- **docs/** — Architecture, governance, AI workflow, guides, ADRs
-  - Status: **Built/Current** (continuously updated)
-  - Authority: Primary canon for project rules
+Clementine, Starline Weaver, Consent Transport, RDP, CrystalBridge
+self-tests: described for the code tree / `-Code`. They will **not** run
+from a fresh clone of this umbrella.
 
-- **mythos/** — Crystal universe canon, art, tools, outer lore
-  - Status: **Vision + Built** (stable; vision content marked)
-  - 88 pieces of art, Codex, Apocryphon, Starline Transmissions
+## dbt
 
-- **research/seven-sisters** — Research cycle (WATER-BRIEF, TRANSMIT-LOG)
-  - Status: **Exploratory** (not production)
+`dbt/crystalcore_emotion_warehouse` exists here as a full dbt project.
+No warehouse is configured. Not executed (STATUS). Treat as **Built, not
+currently running** / **Unknown** as a data product.
 
-## What's designed, not built
+## Site pipeline
 
-- **Story Library production components** — SvelteKit/React
-  - Status: **Designed** (prototype exists)
-  - Spec: reference implementation in `research/prototypes/story-library`
-  - Code: not in this repository
+```
+mythos/ (this repo, canonical)
+  → manual copy → vision/site/src/content/ (Code)
+  → deploy.yml → GitHub Pages → www.teraustralis.com.au
+```
 
-- **Workflow prompt kits** — `mythos/tools/` (daily-digest, signal-scanner)
-  - Status: **Designed** (written as kits)
-  - Wiring: to be implemented
+New canon is not public until the copy step happens. That sync method is
+still an open decision.
 
-- **Runtime Testing Specifications** — `docs/architecture/`
-  - Status: **Designed** (spec exists)
-  - Built coverage: 4 passing suites (partial subset of spec)
+## Do not do
 
-## Where the code actually lives
+- Do not create a twentieth GitHub repository (ADR-0015).
+- Do not merge this branch. The maintainer merges.
+- Do not amend the Constitution, locked names, or NAMES.md without
+  Crystal's explicit approval.
+- Do not promote ADR-0012 or ADR-0016 to Accepted until they merge.
+- Do not put personal-layer material in this file ([`PRIVACY.md`](../PRIVACY.md)).
+- Do not treat a Grok App Builder sandbox as CrystalCore.OS or as the estate.
 
-**This repository contains:**
-- Governance, architecture, documentation
-- Mythos content, vision, art
-- dbt project (unexecuted)
-- Archive (read-only)
-- **NOT:** `src/` (code tree moved)
+## Unverified from this session
 
-**Code now lives in:**
-- `TerAustralis-Incognita-Code` (apps, site, protocol implementations)
-- `TerAustralis-Incognita-Clementine` (companion)
-- Other repos per migration plan
-
-See `docs/architecture/SystemMap.md` and `docs/governance/Migration-Plan.md` for full detail.
-
-## Known issues / uncertainties
-
-### Resolved
-- **Domain status** (2026-08-20): www.teraustralis.com.au is live, serving SvelteKit build (last-modified 2026-08-18). Code Pages builds from TerAustralis-Incognita-Code.
-
-### Unknowns
-- None currently tracked. See `memory/state/OPEN-QUESTIONS.md` for blockers.
-
-## CI/CD status
-
-- **GitHub Pages**: CrystalCore.OS terminal renders at `crystalcore-os` path (verify by deploy probe)
-- **Workflows**: Checked 2026-07-23, green. No breaking changes expected.
-- **Link checker**: May falsely report failures during deploy races; retry probe is authoritative
-
-## Summary
-
-**The repository is a knowledge/governance/vision hub, not a code repository.**
-
-- Production code: built, running in separate repos
-- Specifications: designed and complete
-- Governance: stable and canonical
-- Art/mythos: stable content, new work can be added
-- Clementine's memory system: designed, partially implemented (see `mythos/content/MEMORY.md`)
-
----
-
-**For full context, read `STATUS.md` at the repository root.**
-
-This is a memory snapshot. Authority remains with the primary source.
+Facts offered in chat or in an external dossier that were **not** written
+here because they are not on disk, or because PRIVACY forbids them, are
+listed in the PR body — not in this file.

@@ -1,73 +1,50 @@
-# CLAUDE.md — TerAustralis-Incognita Session Bootstrap
+# CLAUDE.md — Claude Code memory protocol
 
-**Every Claude Code session must read this file first.**
+This file is navigational. It is not the project. Do not dump canon here.
 
-## Before you do anything
+Claude Code is **not** the live Repository Engineer seat. That seat is **Grok Build** ([`docs/adr/ADR-0014.md`](docs/adr/ADR-0014.md)). Claude's profile stays on disk as history ([`docs/ai/Claude.md`](docs/ai/Claude.md)). This protocol exists so that **if** a Claude Code session runs, it reads and writes durable memory instead of improvising from chat.
 
-1. **Read** `memory/CORE.md` (essential facts)
-2. **Read** `memory/state/CURRENT.md` (repository state right now)
-3. **Use** `memory/INDEX.md` for task-specific navigation
+## Authority (highest first)
 
-Then check the repository canon files referenced in INDEX.md.
+1. Canonical source / locked canon
+2. Verified repository memory (`memory/`)
+3. Current working context
+4. Hypotheses / assumptions
 
-## Authority hierarchy (highest to lowest)
+If memory conflicts with newer canonical source, follow the canonical source and record the conflict in `memory/`.
 
-1. **Canonical repository source** — `docs/`, `mythos/`, locked names in Constitution
-2. **Verified repository memory** — `memory/` files backed by evidence
-3. **Your current working context** — the chat, the diff, the branch state
-4. **Hypotheses / assumptions** — things labeled as unverified or speculative
+Locked names, the Constitution, and existing canon are **not** editable without Crystal's explicit approval ([`docs/governance/Constitution.md`](docs/governance/Constitution.md) §1, §8).
 
-When memory conflicts with newer canonical source: follow the canonical source and record the conflict in `memory/evidence/CONFLICTS.md`.
+## Every session
 
-## The read-write protocol
+1. **Read** [`memory/CORE.md`](memory/CORE.md) and [`memory/state/CURRENT.md`](memory/state/CURRENT.md) at startup.
+2. **Retrieve** task-specific files via [`memory/INDEX.md`](memory/INDEX.md). Do not load the whole tree by default.
+3. Treat canonical repository source and locked canon as higher authority than memory summaries.
+4. Preserve **Built / Vision / Unknown** distinctions under the Incognita Rule ([`docs/governance/The-Incognita-Rule.md`](docs/governance/The-Incognita-Rule.md)). Surveyed vs dreamed. Never let a dreamed line pretend it was measured.
+5. Never invent canon. Never promote a hypothesis into a verified fact without evidence on disk.
+6. If memory conflicts with newer canonical source, follow the canonical source and record the conflict.
+7. **Before ending or checkpointing meaningful work**, update the relevant memory files — especially [`memory/state/CURRENT.md`](memory/state/CURRENT.md), [`memory/DECISIONS.md`](memory/DECISIONS.md), [`memory/OPEN-QUESTIONS.md`](memory/OPEN-QUESTIONS.md), and [`memory/MILESTONES.md`](memory/MILESTONES.md).
+8. Never modify locked names, the Constitution, or existing canon without Crystal's explicit approval.
 
-This memory system is **not** read-only. Before ending or checkpointing meaningful work:
+## Write-back (required)
 
-- [ ] Update `memory/state/CURRENT.md` if repository state changed
-- [ ] Update `memory/state/DECISIONS.md` if a decision was made
-- [ ] Update `memory/state/OPEN-QUESTIONS.md` if blockers appeared/resolved
-- [ ] Update `memory/state/MILESTONES.md` if progress moved
-- [ ] Update `memory/projects/*/CURRENT.md` for active projects you touched
-- [ ] Record any new verified facts in `memory/evidence/VERIFIED.md`
-- [ ] Record conflicts in `memory/evidence/CONFLICTS.md`
-- [ ] Update `memory/collaboration/CONTEXT-PACK.md` if future sessions need to know
+This is a read-**and**-write protocol, not a startup reader.
 
-**Mark updates with date and your session ID** so they can be audited.
+| Event | Write to |
+|---|---|
+| Confirmed decision (merged ADR, maintainer ruling on disk) | [`memory/DECISIONS.md`](memory/DECISIONS.md) — summary plus pointer; the ADR remains the record |
+| New open question | [`memory/OPEN-QUESTIONS.md`](memory/OPEN-QUESTIONS.md) |
+| Landed milestone | [`memory/MILESTONES.md`](memory/MILESTONES.md) and, if it changes "now", [`memory/state/CURRENT.md`](memory/state/CURRENT.md) |
+| Session-end state | [`memory/state/CURRENT.md`](memory/state/CURRENT.md) |
+| Privacy-sensitive material offered in chat | Do **not** write it. See [`memory/PRIVACY.md`](memory/PRIVACY.md) |
 
-## What you must preserve
+Lodge only what is confirmed. Do not shotgun chat into `memory/`. A model agreeing with you is not evidence ([Incognita Rule](docs/governance/The-Incognita-Rule.md) §4).
 
-- **Built / Vision / Unknown distinctions** (Incognita Rule §1–2)
-- **Locked names** (Constitution §1: TerAustralis Incognita, CrystalVision, CrystalCore.Lattice)
-- **The Constitution and governance files** — never modify without Crystal's explicit approval
-- **Privacy boundaries** — do not expose SAT/CrystalCore internals, Operator Frame, DUR tokens, private lattice fields
-- **Crystal's veto** — the human maintainer (Crystal Arena-Turner) has final authority
+## Map
 
-## What you must never do
+- Protocol home: [`memory/README.md`](memory/README.md)
+- Retrieval: [`memory/INDEX.md`](memory/INDEX.md)
+- Privacy floor: [`memory/PRIVACY.md`](memory/PRIVACY.md)
+- Agent rules for every model: [`AGENTS.md`](AGENTS.md)
 
-- Invent canon or promote hypotheses to verified facts without evidence
-- Modify locked names or the Constitution without explicit approval
-- Blur the line between Built code and Vision narrative
-- Treat AI agreement as proof (Incognita Rule §4)
-- Work on `main` — use your designated branch
-- Delete or destructively reorganize existing corpus without reason
-
-## If you're unsure
-
-1. Check `memory/INDEX.md` for what to read
-2. Read the relevant canonical source
-3. Ask yourself: "Is this a Built fact or a Vision statement?"
-4. If still unsure: mark it as Unknown/Hypothesis, link to the source, and let it stand
-
-## Quick links
-
-- **Governance**: `docs/governance/Constitution.md`, `docs/governance/AI-Governance.md`
-- **Repository state**: `STATUS.md`
-- **Roadmap & priorities**: `docs/governance/Roadmap.md`
-- **AI workflow**: `docs/ai/AI-Workflow.md`
-- **This session's task**: See your prompt or `memory/collaboration/CONTEXT-PACK.md`
-
----
-
-**Disk is canon. Chat is not. Memory is navigation.**
-
-See `memory/README.md` for the full system design.
+*Non Solus.*

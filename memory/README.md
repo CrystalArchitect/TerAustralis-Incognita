@@ -1,107 +1,69 @@
-# Repository Memory System
+# memory/ — durable Claude Code memory
 
-**Status: BUILT** — This memory system is durable, persistent, and maintained by all Claude Code sessions.
+**Status:** Docs / governance. This directory is a working map, not canon.
 
-## What this is
+Canon lives in `docs/governance/`, `docs/adr/`, `mythos/`, and the other
+repository sources this folder points at. Memory **summarises and dates**.
+If a summary here disagrees with a canonical file, the canonical file wins
+and the conflict is recorded.
 
-A repository-wide memory system designed for Claude Code sessions to maintain durable context across multiple sessions without relying on chat history.
+Root instruction: [`../CLAUDE.md`](../CLAUDE.md).
 
-**This is NOT:**
-- Clementine's memory system (see `mythos/content/MEMORY.md` for the AI companion's architecture)
-- A replacement for disk-based canon (repository files are primary)
-- A substitute for reading governance and architecture documents
-- A tool for storing invented facts or hypotheses as verified truth
+## Why this exists
 
-**This IS:**
-- A navigation and state-tracking system
-- A way for future sessions to understand the repository quickly
-- A living record of decisions, blockers, and progress
-- A place to record what we know vs. what we're unsure about
+Claude sessions are scoped. Anything that matters must land on disk
+([`docs/ai/Claude.md`](../docs/ai/Claude.md): "disk is canon, chat is not").
+This folder is the write-back surface for confirmed decisions, open
+questions, milestones, and the current working picture — so the next
+session does not have to reconstruct them from chat.
 
-## Structure
+It does **not** restore the Repository Engineer seat. That seat is Grok
+Build ([`docs/adr/ADR-0014.md`](../docs/adr/ADR-0014.md)).
 
-### Core navigation
-- **`CORE.md`** — Minimal essential facts (read first)
-- **`INDEX.md`** — Where to read for what (navigation map)
+## Protocol
 
-### Living state
-- **`state/CURRENT.md`** — Repository state snapshot (updated each session)
-- **`state/DECISIONS.md`** — Dated decisions affecting work
-- **`state/OPEN-QUESTIONS.md`** — Blockers and unknowns
-- **`state/MILESTONES.md`** — Project progress
+**Read at startup**
 
-### Collaboration
-- **`collaboration/AI-HANDOFF.md`** — How AI agents work together
-- **`collaboration/CONTEXT-PACK.md`** — Essential context for next session
-- **`collaboration/EXTERNAL-RELATIONSHIPS.md`** — Partnerships and boundaries
+1. [`CORE.md`](CORE.md) — locked names, purpose, Incognita Rule, cultural floor
+2. [`state/CURRENT.md`](state/CURRENT.md) — what is true *now*
 
-### Evidence
-- **`evidence/VERIFIED.md`** — Facts confirmed by running code or checking sources
-- **`evidence/HYPOTHESES.md`** — Plausible but unverified claims
-- **`evidence/CONFLICTS.md`** — Places where sources disagree
+**Retrieve by task** — [`INDEX.md`](INDEX.md)
 
-### Projects
-- **`projects/README.md`** — Index of active projects only (no empty stubs)
-- **`projects/PROJECT-NAME/`** — Per-project memory (CURRENT, PLAN, DECISIONS, OPEN-QUESTIONS, HANDOFF)
+**Write before ending meaningful work**
 
-## How to use it
+- [`DECISIONS.md`](DECISIONS.md)
+- [`OPEN-QUESTIONS.md`](OPEN-QUESTIONS.md)
+- [`MILESTONES.md`](MILESTONES.md)
+- [`state/CURRENT.md`](state/CURRENT.md)
 
-**On arrival (every session):**
-1. Read `CORE.md`
-2. Read `state/CURRENT.md`
-3. Use `INDEX.md` to find what else you need
-4. Read the canonical source referenced
+**Never write** — [`PRIVACY.md`](PRIVACY.md)
 
-**Before leaving (every session):**
-- Update `state/CURRENT.md` if repository state changed
-- Update `state/DECISIONS.md` if decisions were made
-- Update `state/OPEN-QUESTIONS.md` if blockers changed
-- Update `state/MILESTONES.md` if progress moved
-- Record verified facts in `evidence/VERIFIED.md`
-- Record conflicts in `evidence/CONFLICTS.md`
-- Update project directories if active projects touched
+## Labels (do not collapse)
 
-**Marking updates:**
-Always include date (YYYY-MM-DD) and session ID when recording new information, so updates can be audited.
+| Memory label | Incognita Rule | Belt-Three ([`CONTRIBUTING.md`](../CONTRIBUTING.md)) |
+|---|---|---|
+| **Built** | Surveyed — running, tested, or checkable against the world | Science |
+| **Vision** | Dreamed — mythos, art, speculative framing, labeled as such | Story and Vision |
+| **Unknown** | Preserve the uncertainty. Docs never outpace code | Honest gap; not a third cosmology |
 
-## Authority and validation
+Unknown is not a license to invent a shoreline. See
+[`The-Incognita-Rule.md`](../docs/governance/The-Incognita-Rule.md).
 
-Memory files **point to** authoritative sources; they do not replace them.
+## Authority
 
-When memory conflicts with canonical repository source:
-1. Follow the canonical source
-2. Record the conflict in `evidence/CONFLICTS.md`
-3. Update the memory to match
+Canonical source / locked canon **>** this folder **>** current working
+context **>** hypotheses.
 
-Use the **authority hierarchy** from `CLAUDE.md`:
-1. Canonical source > 2. Verified memory > 3. Working context > 4. Hypotheses
+## Files
 
-## Privacy and scope
+| File | Role |
+|---|---|
+| [`CORE.md`](CORE.md) | Slow-changing identity. Rarely edited. |
+| [`INDEX.md`](INDEX.md) | Retrieval map into the real tree. |
+| [`PRIVACY.md`](PRIVACY.md) | What never enters git memory. |
+| [`DECISIONS.md`](DECISIONS.md) | Pointers at ADRs. Not a second ADR log. |
+| [`OPEN-QUESTIONS.md`](OPEN-QUESTIONS.md) | Live gates. |
+| [`MILESTONES.md`](MILESTONES.md) | Recently landed, dated. |
+| [`state/CURRENT.md`](state/CURRENT.md) | Working picture. Overwritten each checkpoint. |
 
-**Protected:**
-- SAT/CrystalCore internals (may reference, never expose)
-- Operator Frame implementation details
-- DUR tokens, private lattice fields
-- Household details, living-person modeling
-- Credentials and secrets
-
-**Public:**
-- Architecture, decision logs, governance
-- Roadmap and project status
-- Built code specifications
-- Vision and mythos content
-
-## Maintenance
-
-This system is maintained by every Claude Code session that touches it:
-- Create new records as needed
-- Update existing records before finishing work
-- Mark all updates with date and session ID
-- Preserve the Built/Vision/Unknown distinction always
-- Link to authoritative sources, don't copy them
-
-Never modify locked names, the Constitution, or governance files without Crystal's explicit approval.
-
----
-
-**See `CLAUDE.md` at the repository root for the full session bootstrap protocol.**
+*Non Solus.*
