@@ -20,6 +20,7 @@ claim below could not be checked against a file, it says so.
 | Three-project ownership (umbrella / Crystal Core / Crystal Vision) | [`docs/governance/Project-Boundaries.md`](../docs/governance/Project-Boundaries.md) | Adopted by ADR-0011; component→project table here, not re-derived elsewhere |
 | Indigenous knowledge boundary | [`docs/governance/Indigenous-Data-Sovereignty.md`](../docs/governance/Indigenous-Data-Sovereignty.md) + [`mythos/NAMES.md`](../mythos/NAMES.md) | Two files, one rule: no Songline knowledge in any model/index without FPIC; Songline is never a component name |
 | AI collaboration rules | [`docs/governance/AI-Governance.md`](../docs/governance/AI-Governance.md) | Binding; `docs/ai/AI-Workflow.md` is the *practiced* flow, not the rule itself |
+| CMX / Ovaro / Continuum external boundary | [`DECISIONS.md`](DECISIONS.md) "Direct maintainer decisions recorded in memory (not ADRs)," 2026-08-28 | Current, explicit, Crystal-authored — not an ADR, not a rediscovered older source. Detail: [`collaboration/EXTERNAL-RELATIONSHIPS.md`](collaboration/EXTERNAL-RELATIONSHIPS.md) |
 
 ## Repository state (what's real, right now)
 
@@ -78,11 +79,10 @@ twentieth repository without a new ADR.
 - **`crystalcore` / `crystal-core` / `runtime` vocabulary** — three
   systems share vocabulary, not code; no decision recorded on whether to
   integrate or keep separate. See [`OPEN-QUESTIONS.md`](OPEN-QUESTIONS.md).
-- **Ovaro / Continuum / CMX boundary** — instructed as a durable rule,
-  zero on-disk citation found. See
-  [`collaboration/EXTERNAL-RELATIONSHIPS.md`](collaboration/EXTERNAL-RELATIONSHIPS.md)
-  for the full provenance caveat. Do not promote this into the governance
-  table above until a citation exists.
+- **Ovaro / Continuum / CMX boundary** — **RESOLVED 2026-08-28.** Recorded
+  as a direct, dated, Crystal-authored decision in
+  [`DECISIONS.md`](DECISIONS.md); no longer an open gap. See
+  [`collaboration/EXTERNAL-RELATIONSHIPS.md`](collaboration/EXTERNAL-RELATIONSHIPS.md).
 - **SAT / Operator Frame / DUR** — named as protected categories by
   instruction; zero specification found anywhere in this repository. See
   [`PRIVACY.md`](PRIVACY.md) and [`evidence/HYPOTHESES.md`](evidence/HYPOTHESES.md).
@@ -98,7 +98,7 @@ ONLY · REQUIRES CRYSTAL DECISION · DO NOT TOUCH.
 | Old "MEMORY.md" (Clementine's own 4-layer runtime memory design) | [`mythos/content/MEMORY.md`](../mythos/content/MEMORY.md) | **KEEP CURRENT, DO NOT CONFLATE.** This is *companion runtime* memory architecture, a different concept from this `memory/` folder (Claude Code *session* memory). Neither redefines the other; this map does not attempt to merge them. |
 | AI architecture/workflow docs | [`docs/ai/`](../docs/ai/) (9 files: AI-Workflow, AI-Architecture, Decision-Matrix, and one profile per model) | **KEEP CURRENT.** Actively cited by [`collaboration/AI-HANDOFF.md`](collaboration/AI-HANDOFF.md); no duplicate or superseded copies found elsewhere. |
 | Archived local-machine snapshot (2026-07-17) | [`archive/2026/local-snapshot-2026-07-17/`](../archive/2026/local-snapshot-2026-07-17/) | **KEEP HISTORICAL, DO NOT TOUCH.** Old repo-root README, GOVERNANCE.md, MILESTONES.md, BRIDGE.md, CLEMENTINE.md are a full historical self-description of a since-superseded repo layout (Apache-2.0 code license, pre-rename project framing). Provenance only, per `archive/README`'s own rule — not rewritten for this pass, consistent with that rule. Contains a visible ABN in plain text; `PRIVACY.md` already forbids copying it into `memory/`, and this pass didn't. |
-| Two archived `crystalcore` package generations | `archive/2026/local-snapshot-2026-07-17/crystalcore/` vs `crystalcore-v0.13/` | **DO NOT TOUCH — logged, not resolved.** See [`evidence/CONFLICTS.md`](evidence/CONFLICTS.md). |
+| Two archived `crystalcore` package generations | `archive/2026/local-snapshot-2026-07-17/crystalcore/` vs `crystalcore-v0.13/` | **RESOLVED 2026-08-28 — accepted as currently organized, no rewrite.** Crystal's decision: preserve as historical context; do not modify archive material merely for stylistic consistency. See [`evidence/CONFLICTS.md`](evidence/CONFLICTS.md). |
 | Duplicate root-level vs. `state/`-level memory files (`DECISIONS.md`, `OPEN-QUESTIONS.md`, `MILESTONES.md`) | was: `memory/*.md` + `memory/state/*.md` | **RESOLVED, 2026-08-28.** The `memory/state/` copies were orphaned duplicates from an earlier, less-grounded pass and have been deleted; `CLAUDE.md`'s write-back table already pointed at the root-level trio plus `state/CURRENT.md`, which is now the only arrangement on disk. |
 
 **Not inspected this pass, deliberately:** the full `docs/architecture/`,

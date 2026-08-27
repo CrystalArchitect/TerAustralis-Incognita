@@ -33,6 +33,22 @@ dated bullet and update [`state/CURRENT.md`](state/CURRENT.md).
   added three explicit `CLAUDE.md` rules (permission ≠ readability, AI
   inference ≠ Crystal's decision, update this file on a durable
   correction) that the governing spec required but the prior pass missed.
+- Same-day, Crystal's direct approval on PR #123: three items the
+  reconciliation pass had flagged as requiring her decision, resolved.
+  (1) CMX/Ovaro/Continuum boundary — approved, recorded as a current,
+  dated, Crystal-authored decision in `DECISIONS.md` "Direct maintainer
+  decisions recorded in memory," **not** a rediscovered older source;
+  `EXTERNAL-RELATIONSHIPS.md` and `CANON-MAP.md` updated to cite it. (2)
+  Archive framing (`crystalcore/` vs `crystalcore-v0.13/` recovery notes)
+  — accepted as currently organized, no repo-wide rewrite; moved from
+  Open to Resolved in `evidence/CONFLICTS.md`; struck from
+  `OPEN-QUESTIONS.md`'s held-open table with a note that
+  `docs/OPEN-DECISIONS.md` itself (canonical, Repository Engineer scope)
+  hasn't been synced to match — logged, not silently hidden. (3) No
+  `memory/projects/repository-memory-bootstrap/` subdirectory — bootstrap
+  concludes as foundational infrastructure, not an ongoing active
+  project; completion marking deferred to the post-merge commit per
+  Crystal's own sequencing ("mark complete once merged").
 
 ## 2026-08-20 (CHANGELOG + Roadmap cluster)
 

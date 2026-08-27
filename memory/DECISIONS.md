@@ -46,3 +46,35 @@ file. Do not rewrite Accepted ADRs. A reversed decision gets a new ADR.
 Starline taxonomy (three meanings) has **no ADR yet**. See
 [`OPEN-QUESTIONS.md`](OPEN-QUESTIONS.md). Do not mint component names that
 use **Songline**.
+
+## Direct maintainer decisions recorded in memory (not ADRs)
+
+These did not go through the ADR process
+([`Decision-Records.md`](../docs/governance/Decision-Records.md)) — they
+are recorded here because the maintainer gave them directly, in session,
+as durable rulings for this memory protocol to carry. Say so plainly: a
+decision recorded here is **current, dated, Crystal-authored** — never
+represent it as a rediscovered older repository source, and never let it
+imply an ADR exists when it doesn't.
+
+**2026-08-28** — CMX / Ovaro / Continuum external boundary · Recorded by
+Crystal Arena-Turner directly, resolving the "no on-disk citation" gap
+[`collaboration/EXTERNAL-RELATIONSHIPS.md`](collaboration/EXTERNAL-RELATIONSHIPS.md)
+had flagged in PR #123 · **Authority: current explicit Crystal-authored
+repository decision, not a rediscovered historical citation.**
+
+> Ovaro is CMX's agency/shopfront relationship. Continuum is CMX's
+> separate product. TerAustralis / SAT / CrystalCore remain Crystal's
+> work. Collaboration or architectural similarity does not imply merger,
+> ownership, licence, identity, or authority. Readability or access does
+> not imply permission. Silence does not imply permission. The
+> plain-language "authority ≠ capability" acknowledgement remains limited
+> to its written scope and credit, and does **not** grant SAT internals,
+> Operator Frame internals, DUR, token/revocation mechanics, lattice
+> internals, or private specification material.
+
+Memory note: [`collaboration/EXTERNAL-RELATIONSHIPS.md`](collaboration/EXTERNAL-RELATIONSHIPS.md)
+now cites this entry as its repository authority for the Ovaro/Continuum/CMX
+boundary specifically. It does **not** newly authorize anything about SAT,
+Operator Frame, DUR, or lattice internals — those stay protected/out of
+scope with no on-disk specification, per [`PRIVACY.md`](PRIVACY.md).

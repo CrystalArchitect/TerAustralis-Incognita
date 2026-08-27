@@ -56,9 +56,9 @@ sources disagree? record it, don't silently pick one).
 
 **How AI tools hand off work** — [`collaboration/AI-HANDOFF.md`](collaboration/AI-HANDOFF.md).
 **Fast session orientation** — [`collaboration/CONTEXT-PACK.md`](collaboration/CONTEXT-PACK.md).
-**Boundaries with things outside this repository** — [`collaboration/EXTERNAL-RELATIONSHIPS.md`](collaboration/EXTERNAL-RELATIONSHIPS.md)
-(read its provenance warning before treating anything on that page as
-repository canon).
+**Boundaries with things outside this repository** — [`collaboration/EXTERNAL-RELATIONSHIPS.md`](collaboration/EXTERNAL-RELATIONSHIPS.md),
+authority recorded in [`DECISIONS.md`](DECISIONS.md) "Direct maintainer
+decisions."
 
 ## Labels (do not collapse)
 

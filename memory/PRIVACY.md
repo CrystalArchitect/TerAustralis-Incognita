@@ -32,10 +32,13 @@ open-web dossier, or in a paste:
   `research/` trees (checked). Naming a category to hold the boundary is
   fine; do not reproduce internals, and do not write speculative detail
   about them into `memory/evidence/HYPOTHESES.md` — protected/out of scope
-  is a different status than hypothesis. See
-  [`collaboration/EXTERNAL-RELATIONSHIPS.md`](collaboration/EXTERNAL-RELATIONSHIPS.md)
-  for the same provenance caveat applied to the Ovaro/Continuum/CMX
-  boundary.
+  is a different status than hypothesis. This stays true even though the
+  related Ovaro/Continuum/CMX external boundary
+  ([`collaboration/EXTERNAL-RELATIONSHIPS.md`](collaboration/EXTERNAL-RELATIONSHIPS.md))
+  is now recorded with authority in [`DECISIONS.md`](DECISIONS.md) — that
+  decision covers the CMX relationship boundary only, and explicitly does
+  **not** extend to SAT, Operator Frame, DUR, or lattice internals, which
+  remain unspecified here.
 
 A public-footprint dossier is **not** a repository source. Receipt of a
 letter by an agency is not a partnership. Mythic writing the maintainer

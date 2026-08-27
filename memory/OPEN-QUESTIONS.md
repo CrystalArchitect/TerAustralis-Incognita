@@ -25,7 +25,26 @@ Do not close a gate from chat.
 | Tier 2: `crystalcore` / `crystal-core` / `runtime` | Three systems share vocabulary but not code. Intentionally separate, or integrate? Decision needed. Paths describe the **code** tree, not this git. | Vision |
 | Tier 2: Starline taxonomy | Three meanings, no ADR yet. See below. | Vision |
 | Tier 2: 0.7.0 vs 0.13.4 fork | Clementine Framework forked 0.7.0; 0.13.4 extras unreconciled in frozen `The-Crystal-Vision`. | Vision |
-| Tier 3: archive recovery contradiction | `archive/2026/local-snapshot-2026-07-17/README-SNAPSHOT.md` vs sibling `crystalcore-v0.13/RECOVERY-STATUS.md` disagree on `status.py` and SpaceXAI provider. Fuller treatment, incl. why this is more a generational-supersession framing gap than a hard factual conflict: [`evidence/CONFLICTS.md`](evidence/CONFLICTS.md). | Drift |
+
+## Struck 2026-08-28 (resolved by direct maintainer decision)
+
+**Tier 3: archive recovery contradiction** — `docs/OPEN-DECISIONS.md`'s own
+Tier 3 row recommends reconciling
+`archive/2026/local-snapshot-2026-07-17/README-SNAPSHOT.md` against
+sibling `crystalcore-v0.13/RECOVERY-STATUS.md`. Crystal reviewed this
+directly and decided: accept the archive as currently organized, no
+rewrite — a minor wording inconsistency in historical material that
+doesn't create operational ambiguity. Full reasoning:
+[`evidence/CONFLICTS.md`](evidence/CONFLICTS.md) "Resolved."
+
+**Note on canonical sync:** this is a maintainer decision exercised on its
+own standing authority — it doesn't need `docs/OPEN-DECISIONS.md`'s
+agreement to be valid. But `docs/OPEN-DECISIONS.md` itself has **not**
+been edited to match (out of scope for a memory-protocol session; that's
+Repository Engineer work). Until someone closes that loop there,
+`docs/OPEN-DECISIONS.md` will keep listing this as an open Tier 3
+recommendation even though it's resolved here. That's a known, logged
+gap, not an oversight.
 
 ## Starline — three meanings (no taxonomy ADR)
 

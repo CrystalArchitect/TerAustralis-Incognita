@@ -1,53 +1,50 @@
 # EXTERNAL-RELATIONSHIPS — boundaries with things outside this repository
 
-**Status:** Docs / governance. **Provenance warning:** unlike most of
-`memory/`, the core claim on this page has **no on-disk citation found in
-this repository** as of 2026-08-28 (checked: `docs/`, `mythos/`,
-`research/`, root files — zero matches for "Ovaro," "Continuum," or "CMX"
-outside this memory folder). It is recorded here because the maintainer
-has directly instructed, in session, that this boundary be preserved as a
-durable rule. Per [`../PRIVACY.md`](../PRIVACY.md)'s own standard, an
-instruction like this is not the same thing as a verified repository fact
-— treat the boundary rule itself as directive/asserted, not as citable
-evidence, until it lands in a canonical file (ADR, governance doc, or
-`NOTICE`).
+**Status:** Docs / governance. **Authority:**
+[`../DECISIONS.md`](../DECISIONS.md) "Direct maintainer decisions recorded
+in memory (not ADRs)," 2026-08-28 — a current, explicit, Crystal-authored
+decision. This is **not** a rediscovered older repository source; no such
+source exists, and this page does not claim otherwise. It resolves the
+provenance gap an earlier version of this page had flagged (checked
+2026-08-28: zero matches for "Ovaro," "Continuum," or "CMX" anywhere in
+`docs/`, `mythos/`, `research/` outside this memory folder — that absence
+is why the decision was recorded directly rather than pointed at).
 
-## The boundary, as instructed
+## The boundary
 
-- **Ovaro** — described as CMX's agency/shopfront. Separate from
+- **Ovaro** — CMX's agency/shopfront relationship. Separate from
   TerAustralis Incognita.
-- **Continuum** — described as CMX's separate product. Separate from
-  TerAustralis Incognita.
-- **TerAustralis / SAT / CrystalCore** — the maintainer's own work,
+- **Continuum** — CMX's separate product. Separate from TerAustralis
+  Incognita.
+- **TerAustralis / SAT / CrystalCore** — remain the maintainer's own work,
   distinct from both of the above.
 
-Consequences of the boundary, as instructed:
+Consequences:
 
-- Architectural similarity between systems does not imply merger,
-  ownership, or shared permission.
-- Access to something readable does not imply permission to use it beyond
-  its granted scope.
-- Silence is not permission.
-- A scoped, plain-language distinction ("authority ≠ capability") may be
-  used only per whatever written permission already exists, credited to
-  the maintainer / TerAustralis Incognita, and that permission does not
-  extend to SAT internals.
+- Collaboration or architectural similarity does not imply merger,
+  ownership, licence, identity, or authority.
+- Readability or access does not imply permission.
+- Silence does not imply permission.
+- The plain-language "authority ≠ capability" acknowledgement remains
+  limited to its written scope and credit (to the maintainer /
+  TerAustralis Incognita). It does **not** extend to SAT internals,
+  Operator Frame internals, DUR, token/revocation mechanics, or lattice
+  internals.
 
 ## What this page deliberately does not do
 
-- It does not reproduce SAT, Operator Frame, or DUR internals — those are
-  named only as protected categories in [`../PRIVACY.md`](../PRIVACY.md),
-  never described here.
+- It does not reproduce SAT, Operator Frame, DUR, or lattice internals —
+  those stay protected/out of scope with no on-disk specification, per
+  [`../PRIVACY.md`](../PRIVACY.md) and
+  [`../evidence/HYPOTHESES.md`](../evidence/HYPOTHESES.md)'s caution that
+  protected-out-of-scope is a different status than hypothesis.
 - It does not restate the Songline / cultural-respect boundary — that is
-  already covered, with citations, in [`../CORE.md`](../CORE.md) under
-  "Cultural respect," sourced from Constitution §5,
-  `Indigenous-Data-Sovereignty.md`, and `mythos/NAMES.md`. Duplicating it
-  here would risk the two copies drifting.
+  already covered, with its own citations, in [`../CORE.md`](../CORE.md)
+  under "Cultural respect."
 
-## If you find an on-disk source for this boundary
+## If this boundary is later formalized in an ADR or governance doc
 
-Update the provenance warning above, add the citation, and this page's
-status can move from "directive, no citation" to "directive, evidenced."
-Until then, do not present this page's claims as repository canon in
-`CORE.md` or elsewhere — canon there is reserved for what a real file on
-disk says.
+Update the authority line above to cite that file instead, and note here
+that the memory-recorded decision was superseded by the on-disk one — the
+memory entry in `DECISIONS.md` stays as written (decisions aren't
+rewritten; a change gets a new entry).
