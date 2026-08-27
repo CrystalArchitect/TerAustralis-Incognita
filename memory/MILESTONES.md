@@ -11,11 +11,30 @@ dated bullet and update [`state/CURRENT.md`](state/CURRENT.md).
 
 **Sourced:** 2026-08-28. Newest first.
 
-## 2026-08-28 — this branch (unmerged)
+## 2026-08-28 — merged to `main` (PR #123)
+
+- **Memory Bootstrap: COMPLETE.** PR #123 merged at `3ba08fdcb4e88f5386949bc3cd35a28dcd597fab`,
+  authorized explicitly by Crystal Arena-Turner in session. Root
+  `CLAUDE.md` and the full `memory/` tree are now live repository
+  infrastructure — the durable Claude Code protocol future sessions land
+  on, not a proposal awaiting review. Independently verified post-merge
+  from a clean clone of `main` (not the working branch): all 17
+  memory-tree files present, 0 broken links, 0 markdownlint issues,
+  credential grep clean, and a 13-question cold-start trace (authority,
+  read-order, Built/Vision/Unknown, decisions, blockers, privacy,
+  external boundaries, conflicts, write-back triggers, continuity without
+  chat) answerable from disk alone.
+- This work happened in three passes plus Crystal's direct decisions —
+  full detail in the entries immediately below, left as written since
+  they're the accurate record of how this landed, not tidied after the
+  fact.
 
 - Claude Code **read-and-write** memory protocol: root `CLAUDE.md` +
   `memory/`. Does not restore the Repository Engineer seat (ADR-0014).
   Does not amend the Constitution. **Not on `main` until Crystal merges.**
+  *(True when written, earlier the same day — superseded a few entries up
+  by the actual merge. Left as written rather than edited; that's this
+  file's own convention.)*
 - Same-day reconciliation pass, same branch: two earlier implementation
   passes had been merged together, leaving orphaned duplicate state files
   and a handful of ungrounded claims. Fixed: deleted

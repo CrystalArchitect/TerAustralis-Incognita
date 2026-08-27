@@ -4,21 +4,21 @@ Working picture of **this** repository. Overwrite at each checkpoint.
 If this file disagrees with [`STATUS.md`](../../STATUS.md) or a newer
 canonical source, the canonical source wins — then fix this file.
 
-**As of:** 2026-08-28 (reconciliation pass)
+**As of:** 2026-08-28 (post-merge status update)
 **STATUS.md last updated:** 2026-08-20
-**Main SHA this branch was cut from:** `bdddf0cdf4c2e47f7d517aaf9edbf1a9ba928b08`
+**This memory protocol landed on `main` at:** `3ba08fdcb4e88f5386949bc3cd35a28dcd597fab`
+(PR #123, merged with Crystal Arena-Turner's explicit authorization)
 
-**This pass (same day, same branch):** the memory tree carried orphaned
-duplicate state files (`memory/state/{DECISIONS,OPEN-QUESTIONS,MILESTONES}.md`,
-from an earlier, less-grounded implementation pass merged alongside this
-one) and several `memory/collaboration/` and `memory/evidence/` files with
-unverified or fabricated citations (a nonexistent "DUR specification"
-reference has been removed; "Ovaro/Continuum/CMX" content is now marked
-with an explicit no-on-disk-citation warning rather than presented as
-canon). Duplicates deleted, citations corrected, all files wired into
-`README.md`/`INDEX.md` navigation, and a new `CANON-MAP.md` added. See
-`CHANGELOG`-style detail in [`../MILESTONES.md`](../MILESTONES.md) and the
-process note in [`../evidence/CONFLICTS.md`](../evidence/CONFLICTS.md).
+**History (same day):** the memory tree carried orphaned duplicate state
+files from an earlier, less-grounded implementation pass, and a handful
+of unverified or fabricated citations (a nonexistent "DUR specification"
+reference; an Ovaro/Continuum/CMX boundary with no on-disk source at the
+time). A reconciliation pass fixed both, then Crystal reviewed and
+directly resolved the three items that reconciliation had flagged as
+requiring her decision — recorded in
+[`../DECISIONS.md`](../DECISIONS.md) "Direct maintainer decisions" and
+[`../evidence/CONFLICTS.md`](../evidence/CONFLICTS.md). Full account:
+[`../MILESTONES.md`](../MILESTONES.md).
 
 ## Now
 
@@ -36,7 +36,8 @@ process note in [`../evidence/CONFLICTS.md`](../evidence/CONFLICTS.md).
 | License: uniform CC BY-NC-ND 4.0 | Built (legal) | ADR-0010, ADR-0013 |
 | Locked names: TerAustralis Incognita · CrystalVision · CrystalCore.Lattice | Built (law) | Constitution §1 |
 | Songline is never a component name | Built (law) | NAMES.md, Indigenous-Data-Sovereignty.md |
-| This memory protocol | Docs / process, **unmerged** on this branch | this PR |
+| This memory protocol (root `CLAUDE.md` + `memory/`) | Built (docs / process), **live on `main`** | PR #123, merged 2026-08-28 |
+| CMX/Ovaro/Continuum external boundary | Built (governance, memory-recorded) | `memory/DECISIONS.md` "Direct maintainer decisions," 2026-08-28 |
 
 ## Seats
 
@@ -81,7 +82,10 @@ still an open decision.
 ## Do not do
 
 - Do not create a twentieth GitHub repository (ADR-0015).
-- Do not merge this branch. The maintainer merges.
+- Do not merge a PR on your own initiative. The maintainer merges, or
+  gives explicit, dated, in-session authorization to do so — as happened
+  for PR #123 (2026-08-28). That authorization was specific to that PR,
+  not a standing grant.
 - Do not amend the Constitution, locked names, or NAMES.md without
   Crystal's explicit approval.
 - Do not promote ADR-0012 or ADR-0016 to Accepted until they merge.
