@@ -19,12 +19,16 @@ Locked names, the Constitution, and existing canon are **not** editable without 
 
 1. **Read** [`memory/CORE.md`](memory/CORE.md) and [`memory/state/CURRENT.md`](memory/state/CURRENT.md) at startup.
 2. **Retrieve** task-specific files via [`memory/INDEX.md`](memory/INDEX.md). Do not load the whole tree by default.
-3. Treat canonical repository source and locked canon as higher authority than memory summaries.
-4. Preserve **Built / Vision / Unknown** distinctions under the Incognita Rule ([`docs/governance/The-Incognita-Rule.md`](docs/governance/The-Incognita-Rule.md)). Surveyed vs dreamed. Never let a dreamed line pretend it was measured.
-5. Never invent canon. Never promote a hypothesis into a verified fact without evidence on disk.
-6. If memory conflicts with newer canonical source, follow the canonical source and record the conflict.
-7. **Before ending or checkpointing meaningful work**, update the relevant memory files — especially [`memory/state/CURRENT.md`](memory/state/CURRENT.md), [`memory/DECISIONS.md`](memory/DECISIONS.md), [`memory/OPEN-QUESTIONS.md`](memory/OPEN-QUESTIONS.md), and [`memory/MILESTONES.md`](memory/MILESTONES.md).
-8. Never modify locked names, the Constitution, or existing canon without Crystal's explicit approval.
+3. **Identify the relevant project**, if any, via [`memory/projects/README.md`](memory/projects/README.md). Read that project's own `CURRENT.md` / `DECISIONS.md` / `PLAN.md` / `OPEN-QUESTIONS.md` / `HANDOFF.md` only where one exists — most work has none and uses the root state files instead.
+4. Treat canonical repository source and locked canon as higher authority than memory summaries.
+5. Preserve **Built / Vision / Unknown** distinctions under the Incognita Rule ([`docs/governance/The-Incognita-Rule.md`](docs/governance/The-Incognita-Rule.md)). Surveyed vs dreamed. Never let a dreamed line pretend it was measured.
+6. Never invent canon. Never promote a hypothesis into a verified fact without evidence on disk.
+7. If memory conflicts with newer canonical source, follow the canonical source and record the conflict.
+8. **Before ending or checkpointing meaningful work**, update the relevant memory files — especially [`memory/state/CURRENT.md`](memory/state/CURRENT.md), [`memory/DECISIONS.md`](memory/DECISIONS.md), [`memory/OPEN-QUESTIONS.md`](memory/OPEN-QUESTIONS.md), and [`memory/MILESTONES.md`](memory/MILESTONES.md).
+9. Never modify locked names, the Constitution, or existing canon without Crystal's explicit approval.
+10. Readable is not the same as permitted. Access to a file does not widen what you're authorized to do with it or claim about it.
+11. An AI's inference, however confident, is not Crystal's decision. Only a merged PR, an on-disk ruling, or Crystal saying so directly counts as one.
+12. If Crystal corrects something and the correction is durable, update the memory file it affects — and this file too, if the correction changes the protocol itself.
 
 ## Write-back (required)
 
@@ -43,7 +47,8 @@ Lodge only what is confirmed. Do not shotgun chat into `memory/`. A model agreei
 ## Map
 
 - Protocol home: [`memory/README.md`](memory/README.md)
-- Retrieval: [`memory/INDEX.md`](memory/INDEX.md)
+- Retrieval (what to read for a task): [`memory/INDEX.md`](memory/INDEX.md)
+- Authority (which file has final say over a concept): [`memory/CANON-MAP.md`](memory/CANON-MAP.md)
 - Privacy floor: [`memory/PRIVACY.md`](memory/PRIVACY.md)
 - Agent rules for every model: [`AGENTS.md`](AGENTS.md)
 

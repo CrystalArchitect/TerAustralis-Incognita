@@ -25,6 +25,17 @@ open-web dossier, or in a paste:
 - Appointment language (stars, people, or agencies appointing the
   maintainer to a role this project does not hold)
 - Secrets, API keys, tokens, `.env` contents
+- SAT-related internals, Operator Frame internals, DUR/token mechanics,
+  private lattice fields — protected **if encountered**, per direct
+  maintainer instruction. As of 2026-08-28 none of these have a
+  specification anywhere in this repository's `docs/`, `mythos/`, or
+  `research/` trees (checked). Naming a category to hold the boundary is
+  fine; do not reproduce internals, and do not write speculative detail
+  about them into `memory/evidence/HYPOTHESES.md` — protected/out of scope
+  is a different status than hypothesis. See
+  [`collaboration/EXTERNAL-RELATIONSHIPS.md`](collaboration/EXTERNAL-RELATIONSHIPS.md)
+  for the same provenance caveat applied to the Ovaro/Continuum/CMX
+  boundary.
 
 A public-footprint dossier is **not** a repository source. Receipt of a
 letter by an agency is not a partnership. Mythic writing the maintainer

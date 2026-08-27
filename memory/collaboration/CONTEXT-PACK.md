@@ -1,82 +1,83 @@
-# CONTEXT-PACK — Essential Context for New Sessions
+# CONTEXT-PACK — session bootstrap, one page
 
-**Last updated:** 2026-08-27 (session: memory-bootstrap-peiyva)  
-**Purpose:** Bootstrap context for Claude Code sessions starting work on this project
+**Status:** Docs / governance. A fast-start supplement to
+[`CORE.md`](../CORE.md) and [`state/CURRENT.md`](../state/CURRENT.md), not a
+replacement for them. If this page and either of those disagree, they win.
 
-## What we're building
+## What this project is, in one paragraph
 
-**TerAustralis Incognita** — A sovereign, local-first AI platform combining visionary narrative with working software. Two layers: Crystal universe mythos (vision/story) and executable code (moved to separate repos). No pretense; things labeled honestly (Built/Vision/Partial/Planned/Unknown).
+**TerAustralis Incognita** (this repository) is the umbrella: governance,
+ADRs, architecture documentation, the mythos, research, and the archive —
+no main application code
+([`Project-Boundaries.md`](../../docs/governance/Project-Boundaries.md),
+ADR-0011). Working software (Clementine, the Starline Weaver, Starline,
+CrystalBridge) lives in sibling repositories, chiefly
+`TerAustralis-Incognita-Code`. Two things are kept honestly separate here:
+Built (running, tested, checkable) and Vision (mythos, art, speculative
+framing) — the Incognita Rule.
 
 ## Current branch and work
 
-**Active branch:** `claude/memory-system-bootstrap-peiyva`
+**Branch:** `claude/memory-system-bootstrap-peiyva` — **not on `main`**,
+open as PR #123, unmerged.
 
-**Current work:** Repository Memory Bootstrap
-- Creating durable memory system for Claude Code sessions
-- Establishes read-write memory protocol (sessions read CORE/CURRENT at startup, update state before ending)
-- Preserves Built/Vision distinction per Incognita Rule
-- Implements authority hierarchy: Canonical source > verified memory > working context > hypotheses
-- Status: 9 core files created; finalizing 6 supporting files; preparing PR for Crystal's review
+**What it's building:** this `memory/` tree and root `CLAUDE.md` — a
+read-and-write durable memory protocol for Claude Code sessions, per
+[`CLAUDE.md`](../../CLAUDE.md). It does not restore the Repository Engineer
+seat (`ADR-0014`) and does not amend the Constitution.
 
-**Next session:** Finish remaining memory files, verify links/privacy, commit, push, open PR.
+**For the live state of this specific work** (checkpoint, blockers, next
+action): see [`../projects/README.md`](../projects/README.md), which
+points at this project's own memory if a project subdirectory exists for
+it at the time you're reading this.
 
-## Known gotchas and blockers
+## Never do these
 
-**Never do these:**
-- Modify locked names (TerAustralis Incognita, CrystalVision, CrystalCore.Lattice) without Constitution amendment
-- Edit Constitution, AI-Governance, or Incognita Rule without explicit approval
-- Delete or repoint `mythos/` or `docs/` files (they are read-only canon)
-- Invent facts or promote hypotheses to verified status without evidence
-- Work on main branch (use feature branches only)
+- Modify locked names (**TerAustralis Incognita**, **CrystalVision**,
+  **CrystalCore.Lattice**) without a Constitution §8 amendment.
+- Edit the Constitution, Incognita Rule, or existing ADRs as if they were
+  drafts.
+- Rewrite `mythos/` Vision-layer content that already credits another
+  contributor.
+- Push to `main`, rewrite history, or merge this or any PR — the
+  maintainer merges.
+- Invent a fact and write it to memory because it sounds plausible. If it
+  is not on disk (this repo or a sibling named by an ADR), it is
+  unverified — see [`../PRIVACY.md`](../PRIVACY.md).
+- Create a new GitHub repository without an ADR (`ADR-0015`).
 
-**Privacy boundaries:**
-- SAT/CrystalCore internals are protected; may reference, never expose internals
-- Operator Frame details stay private
-- DUR tokens, private lattice fields, credentials: never commit
-- Ovaro and Continuum are separate systems; keep them separate
+## Privacy — read the actual floor, don't guess
 
-**Repository structure (immutable):**
-- `docs/` — Governance, architecture, guides (read-only)
-- `mythos/` — Crystal universe content (read-only)
-- `research/` — Exploratory work (safe to modify)
-- `dbt/` — Emotion warehouse template (safe to modify)
-- `archive/` — Provenance only (read-only)
-- `src/` — NOT in this repo (moved to separate repos)
+[`../PRIVACY.md`](../PRIVACY.md) is the binding list of what never enters
+git memory (personal/family/medical/legal detail, private messages,
+credentials, appointment language). It also names categories that must
+stay protected **if encountered**, even though they have no on-disk
+specification in this repository: SAT-related internals, Operator Frame
+internals, DUR/token mechanics, private lattice fields. Naming a protected
+concept to establish a boundary is fine; reproducing its mechanics is not.
+Do not confuse "protected, out of scope" with "hypothesis" — see
+[`../evidence/HYPOTHESES.md`](../evidence/HYPOTHESES.md)'s own caution on
+this.
 
-## What to read immediately
+## What to read, in order
 
-1. **CLAUDE.md** (root) — Read-write memory protocol and authority hierarchy
-2. **memory/CORE.md** — 114-line essential facts about the project
-3. **memory/INDEX.md** — Navigation map (what to read for what)
-4. **memory/state/CURRENT.md** — Current repository state snapshot
-
-For substantive work:
-- `docs/governance/Constitution.md` — Binding law
-- `docs/governance/AI-Governance.md` — How AI systems work with this repo
-- `docs/ai/AI-Workflow.md` — AI collaboration workflows
+1. [`../../CLAUDE.md`](../../CLAUDE.md) — the protocol itself
+2. [`../CORE.md`](../CORE.md) — locked names, purpose, Incognita Rule
+3. [`../state/CURRENT.md`](../state/CURRENT.md) — what is true *now*
+4. [`../INDEX.md`](../INDEX.md) — retrieval map for anything task-specific
+5. This page, for a faster orientation than re-deriving it from the above
 
 ## What to do if you're unsure
 
-1. **About authority:** Read Constitution (§1–8), AI-Governance, and Incognita Rule. Disk is canon. Crystal has final veto.
-
-2. **About what's Built vs. Vision:** Check `memory/state/CURRENT.md` and `STATUS.md`. When sources conflict, canonical repository source wins.
-
-3. **About privacy:** Anything mentioning SAT, CrystalCore internals, DUR, Operator Frame, or credentials — keep in `memory/private/` or reference only, never expose details. Ask if unsure.
-
-4. **About project state:** Read `memory/state/` files (DECISIONS, OPEN-QUESTIONS, MILESTONES, CURRENT) and check `docs/governance/Roadmap.md` for priorities.
-
-5. **About AI collaboration:** Read `memory/collaboration/AI-HANDOFF.md` for current seat assignments, then `docs/ai/AI-Workflow.md` for protocol. Every PR names the tools that touched it.
-
-6. **Before ending work:** Update `memory/state/CURRENT.md` and relevant decision/milestone files with your session's changes. Mark date and session ID. Never modify governance files without approval.
-
-## Links to fuller documentation
-
-- Governance: `docs/governance/` (Constitution, AI-Governance, Incognita Rule, Roadmap)
-- Architecture: `docs/architecture/` (SystemMap, lattice design, protocol specs)
-- AI workflow: `docs/ai/` (AI-Workflow.md, agent instructions)
-- Project state: `STATUS.md`, `CHANGELOG.md`
-- Mythos: `mythos/` (vision, art, content)
-
----
-
-**For the full memory protocol, see CLAUDE.md at repository root.**
+- **About authority:** disk canon outranks this memory folder, which
+  outranks working context, which outranks a hypothesis. See
+  [`../README.md`](../README.md) "Authority."
+- **About Built vs. Vision:** check `state/CURRENT.md` and
+  [`../../STATUS.md`](../../STATUS.md) before asserting either label.
+- **About whether something is a decision:** an ADR is Accepted only once
+  its PR merges ([`Decision-Records.md`](../../docs/governance/Decision-Records.md)).
+  A draft or Proposed ADR is not law — see [`../DECISIONS.md`](../DECISIONS.md).
+- **Before ending work:** did project state, a decision, a blocker, or the
+  plan change? If yes, write it back per [`CLAUDE.md`](../../CLAUDE.md)'s
+  write-back table before finishing. If no, don't touch memory just to
+  have touched it.

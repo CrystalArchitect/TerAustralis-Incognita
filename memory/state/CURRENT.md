@@ -4,9 +4,21 @@ Working picture of **this** repository. Overwrite at each checkpoint.
 If this file disagrees with [`STATUS.md`](../../STATUS.md) or a newer
 canonical source, the canonical source wins — then fix this file.
 
-**As of:** 2026-08-28
+**As of:** 2026-08-28 (reconciliation pass)
 **STATUS.md last updated:** 2026-08-20
 **Main SHA this branch was cut from:** `bdddf0cdf4c2e47f7d517aaf9edbf1a9ba928b08`
+
+**This pass (same day, same branch):** the memory tree carried orphaned
+duplicate state files (`memory/state/{DECISIONS,OPEN-QUESTIONS,MILESTONES}.md`,
+from an earlier, less-grounded implementation pass merged alongside this
+one) and several `memory/collaboration/` and `memory/evidence/` files with
+unverified or fabricated citations (a nonexistent "DUR specification"
+reference has been removed; "Ovaro/Continuum/CMX" content is now marked
+with an explicit no-on-disk-citation warning rather than presented as
+canon). Duplicates deleted, citations corrected, all files wired into
+`README.md`/`INDEX.md` navigation, and a new `CANON-MAP.md` added. See
+`CHANGELOG`-style detail in [`../MILESTONES.md`](../MILESTONES.md) and the
+process note in [`../evidence/CONFLICTS.md`](../evidence/CONFLICTS.md).
 
 ## Now
 

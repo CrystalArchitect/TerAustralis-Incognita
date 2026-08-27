@@ -13,6 +13,11 @@ at startup. Paths are relative to `memory/`.
 | Locked names, Incognita Rule, cultural floor | [`CORE.md`](CORE.md) |
 | What is true *now* | [`state/CURRENT.md`](state/CURRENT.md) |
 | What never enters git | [`PRIVACY.md`](PRIVACY.md) |
+| Which file has final say over a concept (vs. what to read for a task) | [`CANON-MAP.md`](CANON-MAP.md) |
+| Whether this work has its own project memory | [`projects/README.md`](projects/README.md) |
+| Fast session bootstrap (one page, faster than re-deriving from CORE+CURRENT) | [`collaboration/CONTEXT-PACK.md`](collaboration/CONTEXT-PACK.md) |
+| How AI tools hand off work to each other | [`collaboration/AI-HANDOFF.md`](collaboration/AI-HANDOFF.md) |
+| Is this claim verified, a hypothesis, or a source conflict? | [`evidence/VERIFIED.md`](evidence/VERIFIED.md) · [`evidence/HYPOTHESES.md`](evidence/HYPOTHESES.md) · [`evidence/CONFLICTS.md`](evidence/CONFLICTS.md) |
 
 ## Governance and law
 

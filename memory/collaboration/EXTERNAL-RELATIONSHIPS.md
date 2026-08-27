@@ -1,50 +1,53 @@
-# EXTERNAL-RELATIONSHIPS — Partnerships and Dependencies
+# EXTERNAL-RELATIONSHIPS — boundaries with things outside this repository
 
-**Status: BUILT** — These relationships are documented in repository canon and governance files.
+**Status:** Docs / governance. **Provenance warning:** unlike most of
+`memory/`, the core claim on this page has **no on-disk citation found in
+this repository** as of 2026-08-28 (checked: `docs/`, `mythos/`,
+`research/`, root files — zero matches for "Ovaro," "Continuum," or "CMX"
+outside this memory folder). It is recorded here because the maintainer
+has directly instructed, in session, that this boundary be preserved as a
+durable rule. Per [`../PRIVACY.md`](../PRIVACY.md)'s own standard, an
+instruction like this is not the same thing as a verified repository fact
+— treat the boundary rule itself as directive/asserted, not as citable
+evidence, until it lands in a canonical file (ADR, governance doc, or
+`NOTICE`).
 
-## Separate systems (keep distinct)
+## The boundary, as instructed
 
-### Ovaro
-- **What:** CMX's agency and shopfront (separate from TerAustralis Incognita)
-- **Relationship:** Commercial distribution arm; not the vision work
-- **Governance:** Separate repository, separate authority
-- **Reference:** See `docs/governance/Project-Boundaries.md` for in-scope/out-of-scope
+- **Ovaro** — described as CMX's agency/shopfront. Separate from
+  TerAustralis Incognita.
+- **Continuum** — described as CMX's separate product. Separate from
+  TerAustralis Incognita.
+- **TerAustralis / SAT / CrystalCore** — the maintainer's own work,
+  distinct from both of the above.
 
-### Continuum
-- **What:** CMX product (separate from TerAustralis Incognita)
-- **Relationship:** Separate product line; not part of this project
-- **Governance:** Separate repository, separate authority
-- **Reference:** See `docs/governance/Project-Boundaries.md`
+Consequences of the boundary, as instructed:
 
-### TerAustralis Incognita
-- **What:** This project — vision + working code
-- **Separate from:** Ovaro, Continuum
-- **Authority:** Crystal Arena-Turner (human), Constitution (binding law)
+- Architectural similarity between systems does not imply merger,
+  ownership, or shared permission.
+- Access to something readable does not imply permission to use it beyond
+  its granted scope.
+- Silence is not permission.
+- A scoped, plain-language distinction ("authority ≠ capability") may be
+  used only per whatever written permission already exists, credited to
+  the maintainer / TerAustralis Incognita, and that permission does not
+  extend to SAT internals.
 
-## Cultural and metaphorical relationships
+## What this page deliberately does not do
 
-### Songlines (Australian Indigenous knowledge system)
-- **How used:** Metaphor for knowledge structure and ontology in CrystalCore.Lattice
-- **NOT:** Appropriation of Aboriginal cultural property
-- **Respect:** Songlines are a metaphor for how we think about memory and connection, not a claim to Indigenous knowledge or sovereignty
-- **Reference:** See `mythos/` for how the metaphor is deployed in vision work
+- It does not reproduce SAT, Operator Frame, or DUR internals — those are
+  named only as protected categories in [`../PRIVACY.md`](../PRIVACY.md),
+  never described here.
+- It does not restate the Songline / cultural-respect boundary — that is
+  already covered, with citations, in [`../CORE.md`](../CORE.md) under
+  "Cultural respect," sourced from Constitution §5,
+  `Indigenous-Data-Sovereignty.md`, and `mythos/NAMES.md`. Duplicating it
+  here would risk the two copies drifting.
 
-## Public permissions and licenses
+## If you find an on-disk source for this boundary
 
-- **Repository:** Licensed under terms in root LICENSE and CONDUCT files
-- **Attribution:** All AI-generated content credited to Claude (version, session) per `docs/governance/AI-Governance.md`
-- **Code:** Moved to separate repos per Migration Plan; each follows its own licensing
-- **Content:** Mythos content, art, and governance documents follow the repository license
-
-## External partnerships (none currently active)
-
-No active partnerships with external organizations are currently documented.
-
-**If a partnership develops:**
-1. Document it here with status, scope, and authority
-2. Update `docs/governance/Project-Boundaries.md` if scope changes
-3. Ensure Crystal approves before committing
-
----
-
-**For governance and boundary questions, see `docs/governance/Project-Boundaries.md` and `docs/governance/Constitution.md` (§8 on external relationships).**
+Update the provenance warning above, add the citation, and this page's
+status can move from "directive, no citation" to "directive, evidenced."
+Until then, do not present this page's claims as repository canon in
+`CORE.md` or elsewhere — canon there is reserved for what a real file on
+disk says.

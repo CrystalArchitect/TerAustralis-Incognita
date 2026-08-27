@@ -16,6 +16,23 @@ dated bullet and update [`state/CURRENT.md`](state/CURRENT.md).
 - Claude Code **read-and-write** memory protocol: root `CLAUDE.md` +
   `memory/`. Does not restore the Repository Engineer seat (ADR-0014).
   Does not amend the Constitution. **Not on `main` until Crystal merges.**
+- Same-day reconciliation pass, same branch: two earlier implementation
+  passes had been merged together, leaving orphaned duplicate state files
+  and a handful of ungrounded claims. Fixed: deleted
+  `memory/state/{DECISIONS,OPEN-QUESTIONS,MILESTONES}.md` (superseded by
+  the root-level, ADR-cited versions this file lives in); removed a
+  fabricated citation to a nonexistent "DUR specification" from
+  `evidence/HYPOTHESES.md`; added an explicit no-on-disk-citation warning
+  to `collaboration/EXTERNAL-RELATIONSHIPS.md` rather than presenting the
+  Ovaro/Continuum/CMX boundary as verified canon; logged a real,
+  previously-unrecorded archive framing tension in `evidence/CONFLICTS.md`
+  (cross-referenced from this file's own Tier 3 entry); added
+  `CANON-MAP.md` (authority map, distinct from `INDEX.md`'s retrieval
+  map); wired `collaboration/`, `evidence/`, and `projects/` into
+  `README.md` and `INDEX.md`, which previously didn't reference them; and
+  added three explicit `CLAUDE.md` rules (permission ≠ readability, AI
+  inference ≠ Crystal's decision, update this file on a durable
+  correction) that the governing spec required but the prior pass missed.
 
 ## 2026-08-20 (CHANGELOG + Roadmap cluster)
 

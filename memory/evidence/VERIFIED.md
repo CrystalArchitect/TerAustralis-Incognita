@@ -1,56 +1,51 @@
-# VERIFIED — Facts Confirmed by Running Code or Checking Reality
+# VERIFIED — claims with a checkable evidence trail
 
-**Status: BUILT** — These facts have been verified by code execution, live checks, or repository inspection.
+**Status:** Docs / governance. This file exists for a narrower purpose than
+[`../MILESTONES.md`](../MILESTONES.md) or [`../state/CURRENT.md`](../state/CURRENT.md):
+those two track the *working picture* and *dated landings*; this one
+tracks the **evidence chain** behind a claim — what was actually run or
+measured, not just asserted. Where the claim is already dated and sourced
+in those two files, this file points rather than repeats.
 
-## Executable code
+**Format:** `Claim · Evidence · Verified date · Reference`
 
-**CrystalCore.OS terminal boots from source**
-- Claim: `mythos/crystalcore-os/crystalcore_os.py` is runnable
-- Evidence: Executed 2026-07-27; boots, plays to open First Gate, saves/resumes from fresh clone
-- Command: `python3 mythos/crystalcore-os/crystalcore_os.py`
-- Status: Verified, stdlib-only, no external dependencies
-- Reference: `STATUS.md` (2026-08-20)
+## Executable, verified by running it
 
-**Story Library prototype renders in headless browser**
-- Claim: `research/prototypes/story-library` is self-contained HTML with no build step
-- Evidence: Verified 2026-07-24 by rendering in headless browser
-- Status: Verified, reference implementation for production SvelteKit version
-- Reference: `STATUS.md` (2026-08-20)
+- CrystalCore.OS mythos terminal boots from a fresh clone and runs to the
+  open First Gate, stdlib-only · Verified 2026-07-27 by execution
+  (`python3 mythos/crystalcore-os/crystalcore_os.py`) · [`../../STATUS.md`](../../STATUS.md),
+  [`../MILESTONES.md`](../MILESTONES.md)
+- Story Library prototype is self-contained HTML/CSS/JS, no build step ·
+  Verified 2026-07-24 by rendering in a headless browser ·
+  [`../../STATUS.md`](../../STATUS.md)
+- `crystalcore-v0.13/` package (archive) imports and all 44 `__all__`
+  exports resolve under Python 3.12; the two entry points import against
+  it and the Flask app builds 15 routes · Verified 2026-07-17, recorded in
+  the snapshot itself · [`../../archive/2026/local-snapshot-2026-07-17/crystalcore-v0.13/RECOVERY-STATUS.md`](../../archive/2026/local-snapshot-2026-07-17/crystalcore-v0.13/RECOVERY-STATUS.md)
+  — archive provenance only, do not build on it.
 
-**CI on main passes**
-- Claim: GitHub Actions CI runs green on main branch
-- Evidence: Run 2026-07-23 succeeded with honest scope (src/ tests skipped because code moved)
-- Status: Verified, green
-- Coverage: dbt project, architecture tests, governance validation
-- Reference: `.github/workflows/` (actual runs visible in GitHub Actions)
+## Measured, verified by probing it
 
-## Live infrastructure
+- `www.teraustralis.com.au` serves a SvelteKit build (last-modified
+  2026-08-18), and the bare apex 301-redirects to it rather than 404ing ·
+  Verified 2026-08-20 at three separate probe times · [`../OPEN-QUESTIONS.md`](../OPEN-QUESTIONS.md)
+  "STATUS known unknowns"
+- GitHub search `user:CrystalArchitect` returned 19 repositories (6 public
+  living, 7 private living, 6 archived) · Measured 2026-08-20 ·
+  [`../../docs/adr/ADR-0015.md`](../../docs/adr/ADR-0015.md)
 
-**Domain www.teraustralis.com.au is live and serving SvelteKit**
-- Claim: Public website at www.teraustralis.com.au returns 200
-- Evidence: Probed 2026-08-20 at 20:28, 20:33, 20:39 UTC; all returned 200 with SvelteKit build
-- Last-modified: 2026-08-18 (SvelteKit build artifact)
-- Status: Verified, live
-- Built from: TerAustralis-Incognita-Code repository (Pages configuration)
-- Reference: `STATUS.md` / `OPEN-QUESTIONS.md` (resolved 2026-08-20)
+## Governance, verified by the merge itself
 
-## Code location and migration
+- An ADR is Accepted only once its carrying PR merges — this is itself
+  verifiable by checking the status column in
+  [`../../docs/adr/README.md`](../../docs/adr/README.md) against each
+  ADR's own header. Two ADRs are currently **Proposed**, not Accepted:
+  `ADR-0012`, `ADR-0016`. See [`../DECISIONS.md`](../DECISIONS.md).
 
-**Source code moved from this repository to separate repos**
-- Claim: `src/` directory no longer exists in TerAustralis-Incognita; code is in TerAustralis-Incognita-Code and TerAustralis-Incognita-Clementine
-- Evidence: Migration completed per Migration-Plan stages 1–2; repository checked 2026-07-23
-- Status: Verified, complete
-- Details: Executable code moved; governance, architecture, mythos remain in TerAustralis-Incognita
-- Reference: `docs/governance/Migration-Plan.md`, `docs/architecture/SystemMap.md`, `STATUS.md`
+## What this file is not
 
-## Repository structure
-
-**Repository is knowledge/governance/vision hub, not code repository**
-- Claim: This repository contains documentation, governance, mythos, and architecture specs; no executable code besides mythos terminals and prototypes
-- Evidence: Inspected 2026-08-20; verified all code in separate repos
-- Status: Verified
-- Reference: `STATUS.md`, `docs/governance/Project-Boundaries.md`, `docs/architecture/SystemMap.md`
-
----
-
-**For unverified but plausible claims, see `HYPOTHESES.md`. For conflicts between sources, see `CONFLICTS.md`.**
+Not a second copy of `STATUS.md`, `CHANGELOG.md`, or `Roadmap.md`
+"Recently landed" — those remain canonical for the full list. This file
+holds only claims worth flagging because *how* they were verified matters
+(ran it / measured it / checked the merge), which is the detail a plain
+status line usually drops.

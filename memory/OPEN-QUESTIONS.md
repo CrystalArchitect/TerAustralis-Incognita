@@ -25,7 +25,7 @@ Do not close a gate from chat.
 | Tier 2: `crystalcore` / `crystal-core` / `runtime` | Three systems share vocabulary but not code. Intentionally separate, or integrate? Decision needed. Paths describe the **code** tree, not this git. | Vision |
 | Tier 2: Starline taxonomy | Three meanings, no ADR yet. See below. | Vision |
 | Tier 2: 0.7.0 vs 0.13.4 fork | Clementine Framework forked 0.7.0; 0.13.4 extras unreconciled in frozen `The-Crystal-Vision`. | Vision |
-| Tier 3: archive recovery contradiction | `archive/2026/local-snapshot-2026-07-17/README-SNAPSHOT.md` vs sibling `crystalcore-v0.13/RECOVERY-STATUS.md` disagree on `status.py` and SpaceXAI provider. | Drift |
+| Tier 3: archive recovery contradiction | `archive/2026/local-snapshot-2026-07-17/README-SNAPSHOT.md` vs sibling `crystalcore-v0.13/RECOVERY-STATUS.md` disagree on `status.py` and SpaceXAI provider. Fuller treatment, incl. why this is more a generational-supersession framing gap than a hard factual conflict: [`evidence/CONFLICTS.md`](evidence/CONFLICTS.md). | Drift |
 
 ## Starline — three meanings (no taxonomy ADR)
 
