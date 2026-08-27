@@ -30,6 +30,9 @@ seat from 2026-08-20 (`docs/ai/Grok.md` §2, `docs/adr/ADR-0014.md`).
 Claude's profile is retained as history, not a live instruction. Read
 yours before substantial work.
 
+If a Claude Code session is used anyway, follow root `CLAUDE.md` (read-and-write
+`memory/` protocol). That does not restore the Repository Engineer seat.
+
 ## Layout
 
 In this repository (git):
@@ -41,6 +44,7 @@ In this repository (git):
 - `dbt/` — the emotion-warehouse dbt project
 - `examples/`, `assets/` — curated demo index, branding
 - `archive/` — provenance only; never build on it
+- `CLAUDE.md` + `memory/` — Claude Code session protocol (when used)
 
 Described in the docs but **not in this repository** — the code's
 location is being re-established after the maintainer's laptop was
