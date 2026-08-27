@@ -18,18 +18,19 @@ framing) — the Incognita Rule.
 
 ## Current branch and work
 
-**Branch:** `claude/memory-system-bootstrap-peiyva` — **not on `main`**,
-open as PR #123, unmerged.
+This page doesn't name a specific branch or task — that would go stale
+the moment it merges (as it did for the memory-bootstrap work itself,
+PR #123, merged 2026-08-28). For what's actually in flight right now:
 
-**What it's building:** this `memory/` tree and root `CLAUDE.md` — a
-read-and-write durable memory protocol for Claude Code sessions, per
-[`CLAUDE.md`](../../CLAUDE.md). It does not restore the Repository Engineer
-seat (`ADR-0014`) and does not amend the Constitution.
+- **Repository-wide current picture:** [`../state/CURRENT.md`](../state/CURRENT.md)
+- **What's genuinely active in this repository specifically** (evidence-gated,
+  not assumed): [`../projects/README.md`](../projects/README.md)
+- **Your own branch, if you're mid-task:** `git status` / `git log` — this
+  file can't know that in advance.
 
-**For the live state of this specific work** (checkpoint, blockers, next
-action): see [`../projects/README.md`](../projects/README.md), which
-points at this project's own memory if a project subdirectory exists for
-it at the time you're reading this.
+This memory protocol itself (root `CLAUDE.md` + this `memory/` tree) is
+now live infrastructure, not in-progress work — see
+[`../MILESTONES.md`](../MILESTONES.md) 2026-08-28 for how it landed.
 
 ## Never do these
 
