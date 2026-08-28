@@ -2,104 +2,71 @@
 
 **Collective intelligence with individual sovereignty.**
 
-This repository is two things at once, kept honestly separate:
+This repository is the **umbrella**: governance, architecture, the mythos, research, and the archive. The working software lives in sibling repositories, chiefly **[`TerAustralis-Incognita-Code`](https://github.com/CrystalArchitect/TerAustralis-Incognita-Code)**.
 
-1. **Working software** — a local-first AI companion, a multi-AI message bus,
-   a peer-to-peer sovereign networking protocol, and the tests that prove
-   each one does what it claims.
-2. **A mythos** — the Crystal universe: a story, told in text and art, about
-   why any of this is worth building.
+> **System map:** see the **[Crystal Architecture Archive](https://github.com/CrystalArchitect/CrystalCore.OS-the-Crystal-Architecture-Archive/blob/main/knowledge-base/00-INDEX.md)** — a single source of truth for the whole constellation, which repos hold which pieces, and the runnable state of each. This umbrella repo contains canon, ADRs, and vision; the Archive ledger answers "what's running, what's built but dormant, and what's designed only."
 
-Nothing here pretends to be more built than it is. Where the two meet, the
-code is the source of truth and the story says so.
+## What you can run right now
 
-> **Repository status (2026-07-23):** the `src/` tree this README describes
-> is **not in this GitHub repository** — it has never been in its git
-> history. Its last known home was the maintainer's now-retired laptop;
-> its current location is being re-established (a dated copy sits in
-> `archive/2026/local-snapshot-2026-07-17/`).
-> Full explanation:
-> [`docs/architecture/SystemMap.md`](docs/architecture/SystemMap.md#where-the-code-actually-lives).
-> Project boundaries and the staged plan for closing this gap:
-> [`Project-Boundaries.md`](docs/governance/Project-Boundaries.md) ·
-> [`Migration-Plan.md`](docs/governance/Migration-Plan.md) ([`ADR-0011`](docs/adr/ADR-0011.md)).
-
-## What's real vs. what's vision
-
-| Layer | Meaning | Where |
-|---|---|---|
-| **Built** | Running code, with tests you can execute yourself | `src/` ✱ |
-| **Vision** | Narrative, art, and speculative framing — labeled as such | `mythos/` |
-
-✱ Described tree; not in this repository — see the status note above.
-
-This split is load-bearing, not decorative — see `mythos/COVENANT.md` and
-[`docs/architecture/crystal-core/STARLINE.md`](docs/architecture/crystal-core/STARLINE.md)
-for what that discipline actually means in practice, and
-[`The-Incognita-Rule.md`](docs/governance/The-Incognita-Rule.md) for the principle
-behind it: mark which lines are dreamed and which are surveyed, and never let a
-dreamed line pretend it was measured.
-
-For what's built, in progress, or not yet started, see
-[Roadmap.md](docs/governance/Roadmap.md).
-
-## Quick start
-
-Five things you can run right now and watch work — *from the local code
-tree; these commands will not run from a fresh clone of this repository
-(status note above):*
+Two things execute from this repository alone (stdlib-only, no dependencies):
 
 ```bash
-# Clementine — the sovereign companion (local-first, Ollama-backed)
-cd src/apps/clementine && python3 clementine.py
-
-# The Starline Weaver — multi-AI message bus, Belt-Three law enforced in code
-cd src/crystal-core && python3 -m clementine.bridge.selftest
-
-# Consent Transport — peer-to-peer sovereign memory exchange (real Noise Protocol handshake)
-cd src/crystal-core && pip install -r requirements-consenttransport.txt && python3 -m consent_transport.selftest
-python3 -m consent_transport.run demo   # watch it: pair, deny, grant, exchange, revoke, deny
-
-# RDP — tamper-evident record kernel + explainable decision engine
-cd src/crystal-core && python3 -m rdp.selftest
-python3 -m rdp.run demo   # watch each precedence tier decide, every verdict recorded
-
 # CrystalCore.OS — the mythos as a terminal you can fly
-# (the exception: this one DOES run from a fresh clone of this repository)
 python3 mythos/crystalcore-os/crystalcore_os.py
+
+# Story Library prototype — self-contained HTML
+# (open in a browser, e.g. from research/prototypes/story-library/)
 ```
 
-For the Starline Weaver's wire protocol, envelope schema, and conduct rules, see
-[`STARLINE-WEAVE-PROTOCOL.md`](docs/architecture/crystal-core/STARLINE-WEAVE-PROTOCOL.md);
-for the hub's contract and component card, see
-[`CRYSTALBUS.md`](docs/architecture/crystal-core/CRYSTALBUS.md). For the
-CrystalCore.OS terminal — its commands, nodes, and keys — see
-[`mythos/CRYSTALCORE-OS.md`](mythos/CRYSTALCORE-OS.md).
+**Everything else** — Clementine, the Starline Weaver, Consent Transport, RDP, CrystalBridge — lives in **[`TerAustralis-Incognita-Code`](https://github.com/CrystalArchitect/TerAustralis-Incognita-Code)** with its own quick start, tests, and security spec.
 
-## Repo map
+## What's in this repository
 
-The repository follows the **CrystalCore OS v1.0 architecture** (adopted
-2026-07-23 — [`ADR-0001`](docs/adr/ADR-0001.md); full map in
-[`docs/architecture/SystemMap.md`](docs/architecture/SystemMap.md)):
+| Folder | What it is | Status |
+|---|---|---|
+| `docs/` | ADRs, governance stack, architecture canon | Built (docs) |
+| `mythos/` | Content, art, the Codex, the Apocryphon, Starline Transmissions, CrystalCore.OS terminal | Vision (narrative + runnable shell) |
+| `research/` | Exploratory work, Story Library prototype, Seven Sisters cycle | Built (prototype only) |
+| `archive/` | Legacy code, provenance only — do not build on | Built (superseded) |
+
+**The Incognita Rule** (governing principle): we mark which lines are surveyed (code that runs and tests pass) and which are dreamed (story, vision, design). They are kept honestly separate — see [`The-Incognita-Rule.md`](docs/governance/The-Incognita-Rule.md).
+
+## The working system
+
+See the **[CrystalCore.OS Architecture Archive](https://github.com/CrystalArchitect/CrystalCore.OS-the-Crystal-Architecture-Archive)** for:
+- A ledger of what's Running, Built-not-running, Documented, Designed, or Concept-only
+- Wire protocols (Starline Weaver, Consent Transport, RDP)
+- Security specs for the consent gate and message bus
+- Quick start commands that actually work (they're in the code repo)
+
+For this repository's governance, roadmap, and decisions, see:
+- **[Roadmap](docs/governance/Roadmap.md)** — what's in progress or blocked
+- **[ADRs](docs/adr/)** — why architecture choices were made
+- **[Project Boundaries](docs/governance/Project-Boundaries.md)** and **[Migration Plan](docs/governance/Migration-Plan.md)** — how the repos are split
+
+## Repository structure
+
+**In this repo:**
 
 | Path | What it is |
 |---|---|
-| `vision/apps/clementine/` ✱ | The companion — CrystalCore framework package, terminal, Flask API, Svelte webapp, browser voice |
-| `src/apps/voicebox/` ✱ | Local MCP server giving Claude Code a spoken voice on your machine |
-| `src/apps/crystal-interface/`, `src/apps/vision-web/` ✱ | Demo shells (simulated data, Authority HOLD — not production) |
-| `src/crystal-core/` ✱ | The protocol pack — Starline Weaver (`clementine/bridge/`), Decode→Ingest→Twin pipeline (`services/`), Consent Transport (`consent_transport/`), RDP record kernel (`rdp/`) |
-| `src/crystalcore/` ✱ | CrystalBridge — the MCP consent gate (fail-closed by design) |
-| `src/crystalcore-os/` ✱ | The mythos terminal (Vision-layer code) |
-| `src/site/` ✱ | The SvelteKit site for teraustralis.com.au |
-| `src/sdk/typescript/`, `src/node/mesh/` ✱ | Client SDK and an in-process mesh scaffold |
-| `dbt/crystalcore_emotion_warehouse/` | The emotion-warehouse dbt project (see [`docs/DBT_WAREHOUSE_INTEGRATION.md`](docs/DBT_WAREHOUSE_INTEGRATION.md)) |
-| `docs/` | Documentation — vision, architecture, governance, AI collaboration, guides, ADRs |
-| `research/` | Exploratory work, including the Seven Sisters cycle — not production |
-| `mythos/` | The Crystal universe canon — Codex, Apocryphon, the Book of the Sovereign Key, the Starline Transmissions, 88 pieces of art, the outer-world lore (`teraustralis/`) |
-| `archive/` | Superseded code kept for provenance — not maintained, do not build on it |
+| `docs/` | ADRs, governance, architecture canon, guides, contributing rules |
+| `mythos/` | Crystal universe canon (Codex, Apocryphon, Starline Transmissions, 88 pieces of art), CrystalCore.OS terminal, outer-world lore |
+| `research/` | Exploratory work: Story Library prototype, Seven Sisters cycle, research notes |
+| `archive/` | Legacy code (crystalcore-v0.13, local-snapshot-2026-07-17) — frozen for provenance |
+| `dbt/` | The emotion-warehouse dbt project (not executed; see [`docs/DBT_WAREHOUSE_INTEGRATION.md`](docs/DBT_WAREHOUSE_INTEGRATION.md)) |
 
-✱ In the described local tree, not in this repository — see the status
-note at the top of this README.
+**In [`TerAustralis-Incognita-Code`](https://github.com/CrystalArchitect/TerAustralis-Incognita-Code)** (the actual running system):
+
+| Component | What it is |
+|---|---|
+| Clementine | Local-first AI companion (Ollama-backed, JSON memory, Flask + Svelte UI) |
+| Starline Weaver | Multi-AI message bus with Belt-Three consent law enforced in code |
+| Consent Transport | Peer-to-peer sovereign memory exchange (Noise Protocol + ML-KEM-768 spec) |
+| RDP | Tamper-evident record kernel + decision ledger |
+| CrystalBridge | MCP consent gate (fail-closed by design) |
+| SvelteKit site | Production website deployed to teraustralis.com.au |
+| Client SDK | TypeScript/Node.js bindings |
 
 **Why `mythos/` sits at the top level instead of under `docs/`:** code and
 content are administratively separate license areas — `LICENSE-CONTENT.md`
@@ -112,14 +79,7 @@ with no need to open a file to find out which rule applies. Full reasoning:
 
 ## The Covenant
 
-Clementine's core prompt (`core/crystalcore/mind/companion.py`) carries
-five binding rules, written out in full in `mythos/COVENANT.md`: no influence
-without explicit direction, an absolute and instant pause, memory that
-belongs entirely to the human, support that's offered rather than imposed,
-and restraint as its own form of respect. Consent Transport's consent model
-(`src/crystal-core/consent_transport/consent.py`) is the same law applied to data instead
-of conversation — nothing moves without a grant, and revocation takes effect
-on the very next request.
+Clementine's core rules are written in [`mythos/COVENANT.md`](mythos/COVENANT.md): no influence without explicit direction, an absolute and instant pause, memory that belongs entirely to the human, support that's offered rather than imposed, and restraint as its own form of respect. Consent Transport applies the same law to data instead of conversation — nothing moves without a grant, and revocation takes effect on the very next request. See the **[Code repo's SECURITY.md](https://github.com/CrystalArchitect/TerAustralis-Incognita-Code/blob/main/core/crystal-core/SECURITY.md)** for implementation detail.
 
 ## Mythos
 
@@ -136,14 +96,14 @@ every PR names the tools that helped produce it.
 
 ## How to contribute
 
-Useful places to start, roughly in order of how load-bearing they are:
+**In this repository:**
+- **Docs** — architecture notes, governance clarity, guides for the system as a whole
+- **Mythos** — the Codex, the Apocryphon, the Starline Transmissions, visual art, outer-world lore
+- **Design** — diagrams, interface concepts, visual storytelling
 
-- **Code** — Clementine, the Starline Weaver, Starline, CrystalBridge: fixes,
-  features, tests.
-- **Docs** — architecture notes, clearer guides, filling gaps in what's here.
-- **Mythos** — the Codex, the Apocryphon, the Starline Transmissions, and the
-  art that goes with them.
-- **Design** — diagrams, interface concepts, visual storytelling.
+**In [`TerAustralis-Incognita-Code`](https://github.com/CrystalArchitect/TerAustralis-Incognita-Code):**
+- **Code** — Clementine, the Starline Weaver, Consent Transport, RDP, CrystalBridge: features, fixes, tests
+- **Architecture** — protocol design, security review, benchmarking
 
 ## Contributing, security, license
 
