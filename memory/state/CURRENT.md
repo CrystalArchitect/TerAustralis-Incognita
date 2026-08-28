@@ -4,7 +4,7 @@ Working picture of **this** repository. Overwrite at each checkpoint.
 If this file disagrees with [`STATUS.md`](../../STATUS.md) or a newer
 canonical source, the canonical source wins — then fix this file.
 
-**As of:** 2026-08-28 (post-merge status update)
+**As of:** 2026-08-28 (frameworks retrieval map on this branch; not on `main` until merged)
 **STATUS.md last updated:** 2026-08-20
 **This memory protocol landed on `main` at:** `3ba08fdcb4e88f5386949bc3cd35a28dcd597fab`
 (PR #123, merged with Crystal Arena-Turner's explicit authorization)
@@ -38,6 +38,7 @@ requiring her decision — recorded in
 | Songline is never a component name | Built (law) | NAMES.md, Indigenous-Data-Sovereignty.md |
 | This memory protocol (root `CLAUDE.md` + `memory/`) | Built (docs / process), **live on `main`** | PR #123, merged 2026-08-28 |
 | CMX/Ovaro/Continuum external boundary | Built (governance, memory-recorded) | `memory/DECISIONS.md` "Direct maintainer decisions," 2026-08-28 |
+| Frameworks retrieval map (`memory/FRAMEWORKS.md`) | Docs / process. **On this PR, not `main` until merged.** Points; does not dump Drive papers. | this branch, 2026-08-28 |
 
 ## Seats
 

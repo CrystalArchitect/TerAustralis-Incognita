@@ -49,6 +49,7 @@ Lodge only what is confirmed. Do not shotgun chat into `memory/`. A model agreei
 - Protocol home: [`memory/README.md`](memory/README.md)
 - Retrieval (what to read for a task): [`memory/INDEX.md`](memory/INDEX.md)
 - Authority (which file has final say over a concept): [`memory/CANON-MAP.md`](memory/CANON-MAP.md)
+- Named frameworks / skills / Drive papers: [`memory/FRAMEWORKS.md`](memory/FRAMEWORKS.md)
 - Privacy floor: [`memory/PRIVACY.md`](memory/PRIVACY.md)
 - Agent rules for every model: [`AGENTS.md`](AGENTS.md)
 

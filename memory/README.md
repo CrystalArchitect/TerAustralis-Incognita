@@ -83,6 +83,7 @@ context **>** hypotheses.
 | [`CORE.md`](CORE.md) | Slow-changing identity. Rarely edited. |
 | [`INDEX.md`](INDEX.md) | Retrieval map into the real tree — what to read for a task. |
 | [`CANON-MAP.md`](CANON-MAP.md) | Authority map — which file has final say over a concept, and known overlaps/gaps. |
+| [`FRAMEWORKS.md`](FRAMEWORKS.md) | Named frameworks, skills, Drive papers — pointers only. |
 | [`PRIVACY.md`](PRIVACY.md) | What never enters git memory. |
 | [`DECISIONS.md`](DECISIONS.md) | Pointers at ADRs. Not a second ADR log. |
 | [`OPEN-QUESTIONS.md`](OPEN-QUESTIONS.md) | Live gates. |
