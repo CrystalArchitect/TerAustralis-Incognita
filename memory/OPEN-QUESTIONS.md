@@ -65,22 +65,33 @@ Recommendation on disk: disambiguate the way ADR-0004 disambiguated
 [`mythos/NAMES.md`](../mythos/NAMES.md)). Replacement names are left to
 the maintainer.
 
-## Starline Arsenal — 14–25 not yet reconciled against Grok's own text
+## Starline Arsenal — 14–25 verification gate: struck 2026-08-29 (resolved)
 
-Crystal reported Grok's parallel `starline-arsenal` skill (lives only in
-Grok's own runtime, `/home/workdir/.grok/skills/`, never written to Drive
-or GitHub) had grown to ~21 models. That text could not be retrieved
-(Grok session out of tokens) and no copy of it exists in Drive, GitHub,
-or any note file searched 2026-08-29. With Crystal's explicit approval,
-models 14–25 were drafted fresh by Claude Code instead — 8 proposed,
-4 named directly by Crystal (Recursion, Inference, Rhetoric, Persuasion)
-— in the same template as 01–13. **Label: Vision/drafted, not verified.**
+Previously recorded as: Grok's parallel `starline-arsenal` skill had
+reportedly grown to ~21 models, its text unretrievable, and models 14–25
+were drafted fresh by Claude Code without a source to check against.
+**That framing turned out to be incomplete.** A later session searched
+Google Drive directly and found not Grok's runtime skill, but two
+independent Claude-authored lineages already sitting there: a 25-model
+line (`Starline Arsenal Models/` folder, v2.0.0) and a separate 21-model
+line (`starline-arsenal.md`, v1.3.0), neither aware of the other and
+overlapping on two models (Rhetoric, Persuasion) under matching names.
 
-Gate: if Grok's own model list ever surfaces (pasted, exported, or
-written to Drive per the standing `KIT_HUB_SAVE_SKILL.md` save rule),
-reconcile names, groupings, and registers against it here, and correct
-`SKILL.md` / `INDEX.md` / the affected `models/*.md` files to match. Do
-not assume the drafted 12 match Grok's wording until checked.
+Fetched and diffed directly: the previously-drafted models 14–25 match
+the 25-model Drive line's text exactly, file for file. The verification
+gate is satisfied — not because Grok's text surfaced, but because the
+actual Drive source was found and checked. The 6 models unique to the
+21-model line (Heuristic, Miscalibration, Regression to the Mean,
+Better-Than-Average, Parable, Philology) were added as 26–31, giving one
+canonical 31-model v3.0.0. The 21-model line's dated "Field card" entries
+referencing a specific real situation and person were excluded from the
+merge per [`PRIVACY.md`](PRIVACY.md) — those are operational notes, not
+general model content.
+
+No open gate remains for this skill's model content. If Grok's own
+runtime skill text ever does surface separately, treat it as a fresh
+input to check against this now-31-model version, not as unfinished
+business this entry was waiting on.
 
 ## ADRs still Proposed
 

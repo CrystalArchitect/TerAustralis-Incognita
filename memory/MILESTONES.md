@@ -11,6 +11,22 @@ dated bullet and update [`state/CURRENT.md`](state/CURRENT.md).
 
 **Sourced:** 2026-08-28. Newest first.
 
+## 2026-08-29 — Starline Arsenal reconciled 25 → 31, verification gate resolved
+
+- The verification gate opened when models 14–25 landed (PR #130,
+  logged in `OPEN-QUESTIONS.md`) is resolved: the source was two
+  independent Claude-authored lineages in Google Drive, not Grok's
+  runtime skill as first believed. Models 14–25 confirmed identical
+  file-for-file against the 25-model Drive line.
+- 6 models unique to a separate 21-model Drive line — Heuristic,
+  Miscalibration, Regression to the Mean, Better-Than-Average, Parable,
+  Philology — merged in as `models/26-heuristic.md` through
+  `models/31-philology.md`.
+- That line's dated "Field card" entries (a specific real situation and
+  person) excluded from the merge per `PRIVACY.md`.
+- `SKILL.md` / `INDEX.md` updated to 31 models, version 2.0.0 → 3.0.0.
+- On branch, not yet merged.
+
 ## 2026-08-29 — memory-state model, design hypothesis (PR #131)
 
 - `memory/MEMORY-STATE-MODEL.md` added: a working-paper framework for
