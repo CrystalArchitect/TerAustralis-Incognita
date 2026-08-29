@@ -66,8 +66,12 @@ separated by confidence:
 |---|---|---|
 | "Grammar" → "grimoire" | **Historically real** | Old French *grimoire* derives directly from *grammaire* (grammar). In the medieval period, unreadable Latin/learned texts seemed magical to the illiterate, so "grammar" narrowed to "book of incomprehensible/occult knowledge" and became "grimoire." Not folk etymology. |
 | "Spell" (letters) / "spell" (incantation) | **Shared root, not identical words** | Both trace to a Germanic root about speech/telling (Old English *spellian*, "to tell"; *spell*, "story, discourse" — this is the direct ancestor of the magic sense). The letter-arranging sense entered English later via Old French *espeler*, from a cousin Germanic root. Cousins, not twins — the "striking coincidence" framing overstates a real but partial connection. |
-| "Government" = "govern" + "ment" (mind) | **False etymology — homophone only** | "Govern" is from Latin *gubernare* (to steer — same root as "cybernetics"). "-ment" is a French/Latin action/result suffix, etymologically unrelated to "mind" (Old English *gemynd*, a wholly separate root). This is wordplay in Modern English only, not history. Anyone asserting this as literal fact is wrong; it can still be used deliberately as a rhetorical device, labeled as such. |
+| "Government" = "govern" + "ment" (mind) — the fuller source claim is *gubernare* + *mentis* | **False etymology on both versions** | "Govern" is genuinely from Latin *gubernare* (to steer — same root as "cybernetics"). But "-ment" is a French/Latin action/result-forming suffix from Latin *-mentum*, a completely different Latin root from *mens/mentis* ("mind") — they only sound alike. Whether stated loosely ("govern the mind") or more precisely ("gubernare + mentis"), the mind-connection is invented, not documented. |
 | "Mortgage" = "death pledge" | **Historically real** | Old French *mort gage* ("dead pledge"): *mort* from Latin *mortuus* ("dead"), *gage* = pledge. Medieval law distinguished a "dead pledge" (the land yields no benefit to the lender during the loan; the pledge "dies" when the debt is paid or the property forfeited) from a "living pledge" (*vif gage*, where the lender could use the land's income to pay down the debt). The dead-pledge structure is the one that survived into modern mortgages. Confirmed on etymonline and multiple independent sources — this one holds up completely. |
+| "Pharmacy" = *pharmakeia* (sorcery/poison) | **Historically real** | Greek *pharmakeia* genuinely spanned medicine, poison, and magic/sorcery in one word — the ambiguity was real to ancient Greek usage, not invented. It's the direct ancestor of "pharmacy" and "pharmaceutical." One of the more solid claims in this material. |
+| "Person" = *persona* (Latin theatrical/legal mask) | **Historically real** | *Persona* meant an actor's mask in Latin theater, extended to mean the character/role played, and later a legal or social role/entity (the origin of "legal person" in law). Well-documented, uncontroversial. |
+| "Understand" = "to stand under" (implying subordination to authority) | **Compound is real; the "subordination" gloss is not supported** | Old English *understandan* is genuinely "under" + "standan." But etymologists (etymonline, OED, Oxford's own blog on the word) agree the "under" here likely used an older sense meaning "among, between" — not "beneath." The likely original image is "to stand among/between things in order to discern them," not "to stand in submission beneath an authority." Even specialist sources call the exact motivation an open etymological mystery — but "subordination to authority" is a reading imposed after the fact, not the documented one. |
+| "Human" = "god-man" | **False — and inverts the real meaning** | Latin *humanus* traces to a Proto-Indo-European root meaning "earthling, earthly being" — specifically *as opposed to* the gods (from the root for "earth"). The real etymology contrasts humans with gods; it does not combine them. This is the clearest fabrication in the set. |
 
 The general lesson: morphology (what a word looks like it's built from)
 and etymology (where it actually came from) are different questions.
@@ -141,13 +145,21 @@ that shouldn't be flattened together:
   source.
 
 **Net finding:** none of the three videos were reviewed first-hand (network
-access to the video hosts is blocked from this session). Every claim
-checked from the provided summaries splits cleanly into: real and
-verifiable (mortgage, cymatics-as-physics, RAS-as-structure,
-songlines-as-tradition), real but exaggerated (RAS-as-programming-command),
-or checked and false (government/mind-control, Emoto water crystals,
-Gosford Glyphs, 1946 education-reform claim, "Out of Australia" as
-established science). That mix — true claims and false claims delivered
+access to the video hosts is blocked from this session; a fuller,
+timestamped content outline was later provided and used in place of a
+transcript). Every claim checked splits cleanly into: real and
+verifiable (mortgage, pharmacy/*pharmakeia*, person/*persona*,
+cymatics-as-physics, RAS-as-structure, songlines-as-tradition), real but
+exaggerated or partially supported (RAS-as-programming-command,
+understand/"stand under" — real compound, unsupported "subordination"
+gloss), or checked and false (government/mind-control on both the loose
+and the more specific *gubernare*+*mentis* phrasing, human/"god-man",
+Emoto water crystals, Gosford Glyphs, 1946 education-reform claim, "Out
+of Australia" as established science). Of the six specific word-origin
+claims in the etymology table, three are simply true (mortgage,
+pharmacy, person), one is a real compound carrying an invented gloss
+(understand), and two are false (government, human). That mix — true
+claims and false claims delivered
 at the same confidence level — is itself the mechanism this document is
 about: a listener has no cue from tone alone for which is which.
 
