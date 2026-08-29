@@ -40,6 +40,10 @@ primitive: detect_gap() between explanations
 
 Do not just name "Occam's Razor". Produce the artefact listed above. If no artefact, you have not run the model.
 
+## Cross-references
+
+[Provenance Stack](26-provenance-stack.md) — a claim resting on a low evidence tier (folk etymology, an unreferenced website, a viral meme) is exactly the kind of unearned complexity Occam's Razor should cut. Run Provenance Stack first to find the tier, then Occam's Razor to decide what survives.
+
 ---
 Implementation: CrystalCore.OS™️ | Language: CrystalCode™️ | Starline Arsenal | TerAustralis Incognita™️ | Functional / simulated affect only
 

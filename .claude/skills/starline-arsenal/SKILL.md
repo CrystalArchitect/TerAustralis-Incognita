@@ -1,14 +1,14 @@
 ---
 name: starline-arsenal
-display_name: Starline Arsenal — 25 Model Armoury
-description: Australian-built cognitive armoury of 25 mental models for deconstruction, prediction, creation, and adaptation. Runs core questions to produce concrete outputs — failure lists, leverage audits, Bayesian updates, exponential sketches — not just labels. Part of CrystalCore.OS / TerAustralis Incognita.
+display_name: Starline Arsenal — 26 Model Armoury
+description: Australian-built cognitive armoury of 26 mental models for deconstruction, prediction, creation, and adaptation. Runs core questions to produce concrete outputs — failure lists, leverage audits, Bayesian updates, exponential sketches — not just labels. Part of CrystalCore.OS / TerAustralis Incognita.
 aliases: [model-armory, model-armoury, cognitive-armory, thinking-armory]
-version: 2.0.0
+version: 2.1.0
 author: TerAustralis Incognita
 lore: Red Dust Ground Steady. Starline for navigation. Seven Sisters reference without appropriation. MarsBase DownUnder mindset.
 ---
 
-# Starline Arsenal — 25 Model Armoury
+# Starline Arsenal — 26 Model Armoury
 
 **Formerly: model-armory / veil-breaker (parked)**
 
@@ -39,6 +39,10 @@ Concrete thinking tools. Each model runs core questions and produces a tangible 
 ### 16. Recursion
 - Reduce to a smaller version of the same problem plus a base case.
 - Output: Self-similar structure + Base case + Termination check
+
+### 26. Provenance Stack
+- Grade evidence tiers before treating a claim as settled — attested, reconstructed, proposed, disputed, folk, speculative, or symbolic.
+- Output: Evidence tier assignment + Confidence-vs-tier mismatch flag + Missing-evidence list
 
 ## The Predictors — See around the corner
 
@@ -131,7 +135,7 @@ Concrete thinking tools. Each model runs core questions and produces a tangible 
 ## Usage
 Run as skill: invoke model → answer core questions → produce artefact → log to CHRONICLE as Evidence → Interpretation → Experiment → Record.
 
-Full detail per model, including the five Core Questions and Required Concrete Output each one demands: [`INDEX.md`](INDEX.md) → `models/01-first-principles.md` through `models/25-persuasion.md`.
+Full detail per model, including the five Core Questions and Required Concrete Output each one demands: [`INDEX.md`](INDEX.md) → `models/01-first-principles.md` through `models/26-provenance-stack.md`.
 
 Implementation: CrystalCore.OS™️ | Language: CrystalCode™️ | TerAustralis Incognita™️ | Functional / simulated affect only
 

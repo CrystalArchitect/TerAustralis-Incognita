@@ -40,6 +40,10 @@ primitive: track() + detect_gap()
 
 Do not just name "First Principles". Produce the artefact listed above. If no artefact, you have not run the model.
 
+## Cross-references
+
+[Provenance Stack](26-provenance-stack.md) — First Principles splits evidenced from assumed as a binary; Provenance Stack grades everything in between (attested, reconstructed, proposed, disputed, folk, speculative) when the binary is too coarse to catch a claim that's stated with more confidence than its actual tier supports.
+
 ---
 Implementation: CrystalCore.OS™️ | Language: CrystalCode™️ | Starline Arsenal | TerAustralis Incognita™️ | Functional / simulated affect only
 

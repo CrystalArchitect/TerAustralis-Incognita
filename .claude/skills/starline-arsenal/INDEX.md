@@ -1,4 +1,4 @@
-# Starline Arsenal — Index of 25
+# Starline Arsenal — Index of 26
 
 ## The Deconstructors — Take it apart to bedrock
 
@@ -8,6 +8,7 @@
 - [14 Occam's Razor](models/14-occams-razor.md)
 - [15 Root Cause Analysis (5 Whys)](models/15-root-cause.md)
 - [16 Recursion](models/16-recursion.md)
+- [26 Provenance Stack](models/26-provenance-stack.md)
 
 ## The Predictors — See around the corner
 
