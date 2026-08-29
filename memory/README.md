@@ -11,11 +11,16 @@ Root instruction: [`../CLAUDE.md`](../CLAUDE.md).
 
 ## Why this exists
 
-Claude sessions are scoped. Anything that matters must land on disk
+Claude sessions work across repositories. Anything that matters must land on disk
 ([`docs/ai/Claude.md`](../docs/ai/Claude.md): "disk is canon, chat is not").
-This folder is the write-back surface for confirmed decisions, open
-questions, milestones, and the current working picture — so the next
-session does not have to reconstruct them from chat.
+This folder is the **primary source of truth** for all Claude Code sessions, wherever they work.
+
+Sessions in any repository (TerAustralis-Incognita-Code, TheCrystalVision, etc.) read this umbrella memory/ at startup for:
+- Project-wide decisions, milestones, open questions
+- Current state of all systems
+- Cross-repo coordination
+
+Then they read repo-specific memory (if available) in [`projects/`](projects/) for local detail.
 
 It does **not** restore the Repository Engineer seat. That seat is Grok
 Build ([`docs/adr/ADR-0014.md`](../docs/adr/ADR-0014.md)).

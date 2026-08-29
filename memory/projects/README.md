@@ -1,29 +1,27 @@
-# PROJECTS — active project memory, evidence-gated
+# PROJECTS — cross-repo state and evidence-gated activity
 
-**Status:** Docs / governance. This file is both the index and the entry
-point — a separate `INDEX.md` was deliberately not created here, because
-zero projects currently qualify for a subdirectory and a second index
-would just be a stub disagreeing with nothing. Add one back if this file
-ever needs to split.
+**Status:** Docs / governance. This directory tracks state for Claude Code sessions working across the project's repositories.
 
-## What qualifies for a project subdirectory
+## Cross-repo memory model
 
-Evidence, not a folder existing: a current status doc, recent commits, an
-explicit plan, an open branch or PR, or the maintainer naming it active.
-Per [`Project-Boundaries.md`](../../docs/governance/Project-Boundaries.md),
-this repository (the umbrella) owns **no main application code** —
-Clementine, the Starline Weaver, Starline, and CrystalBridge are real,
-active, *built* systems, but they live and move in
-`TerAustralis-Incognita-Code` and sibling repos, not here. Their status is
-already tracked precisely in [`../MILESTONES.md`](../MILESTONES.md),
-[`../state/CURRENT.md`](../state/CURRENT.md), and
-[`../OPEN-QUESTIONS.md`](../OPEN-QUESTIONS.md) "Designed, not built" — this
-file does not re-derive that picture. Restating it here would just be a
-second copy drifting from the first.
+This umbrella repository's `memory/` is the **primary source of truth** for all Claude sessions. Sessions working in other repos (e.g., TerAustralis-Incognita-Code, TheCrystalVision) read umbrella memory/ at startup and write back to it.
 
-## Active in this repository, right now
+When a session works in a specific repo, it reads:
+1. Umbrella state: [`../state/CURRENT.md`](../state/CURRENT.md), [`../DECISIONS.md`](../DECISIONS.md), etc.
+2. Repo-specific state: `<repo>/CURRENT.md`, `<repo>/DECISIONS.md`, etc. (if the repo has a subdirectory here)
 
-None. See "Recently concluded" below and "Not active here" further down.
+## What qualifies for a repo subdirectory
+
+Evidence, not a folder existing: active work, recent commits, open branches or PRs, or the maintainer naming it active. A repo gets its own directory **only if** its state is substantial enough to warrant separation from umbrella files.
+
+Per [`../../docs/governance/Project-Boundaries.md`](../../docs/governance/Project-Boundaries.md), this umbrella owns no main application code — Clementine, Starline Weaver, and related systems live in `TerAustralis-Incognita-Code` and sibling repos. Their status is tracked in this directory AND in umbrella-level [`../MILESTONES.md`](../MILESTONES.md), [`../state/CURRENT.md`](../state/CURRENT.md), [`../OPEN-QUESTIONS.md`](../OPEN-QUESTIONS.md).
+
+## Active repositories
+
+| Repo | Directory | Status | Track via |
+|---|---|---|---|
+| TerAustralis-Incognita-Code | `Code/` | Active | umbrella + repo-specific |
+| TheCrystalVision | `TheCrystalVision/` | Active | umbrella + repo-specific |
 
 ## Recently concluded
 
