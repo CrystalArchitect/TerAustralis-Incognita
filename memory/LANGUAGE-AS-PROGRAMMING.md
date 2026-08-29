@@ -67,6 +67,7 @@ separated by confidence:
 | "Grammar" → "grimoire" | **Historically real** | Old French *grimoire* derives directly from *grammaire* (grammar). In the medieval period, unreadable Latin/learned texts seemed magical to the illiterate, so "grammar" narrowed to "book of incomprehensible/occult knowledge" and became "grimoire." Not folk etymology. |
 | "Spell" (letters) / "spell" (incantation) | **Shared root, not identical words** | Both trace to a Germanic root about speech/telling (Old English *spellian*, "to tell"; *spell*, "story, discourse" — this is the direct ancestor of the magic sense). The letter-arranging sense entered English later via Old French *espeler*, from a cousin Germanic root. Cousins, not twins — the "striking coincidence" framing overstates a real but partial connection. |
 | "Government" = "govern" + "ment" (mind) | **False etymology — homophone only** | "Govern" is from Latin *gubernare* (to steer — same root as "cybernetics"). "-ment" is a French/Latin action/result suffix, etymologically unrelated to "mind" (Old English *gemynd*, a wholly separate root). This is wordplay in Modern English only, not history. Anyone asserting this as literal fact is wrong; it can still be used deliberately as a rhetorical device, labeled as such. |
+| "Mortgage" = "death pledge" | **Historically real** | Old French *mort gage* ("dead pledge"): *mort* from Latin *mortuus* ("dead"), *gage* = pledge. Medieval law distinguished a "dead pledge" (the land yields no benefit to the lender during the loan; the pledge "dies" when the debt is paid or the property forfeited) from a "living pledge" (*vif gage*, where the lender could use the land's income to pay down the debt). The dead-pledge structure is the one that survived into modern mortgages. Confirmed on etymonline and multiple independent sources — this one holds up completely. |
 
 The general lesson: morphology (what a word looks like it's built from)
 and etymology (where it actually came from) are different questions.
@@ -75,32 +76,80 @@ grimoire" happens to be real; "govern/mind" happens not to be. Neither
 outcome was obvious in advance, which is the argument for checking
 rather than assuming.
 
-## Unverified claim, investigated: "language removal after 1946"
+## Source-identified investigation
 
-A chat source cited a video with a chapter titled "Language Removal
-After 1946" (timestamp only, no transcript or URL was provided — this
-claim has not been checked against its actual source). A web search for
-any documented "1946 dictionary/sacred-language removal" event found no
-match to that specific framing.
+Three videos were named as sources (title, channel, and a
+viewer-provided content summary — **not** a transcript; the video hosts
+are blocked from this session's network egress and could not be fetched
+directly, so nothing below is a first-hand check of the video itself,
+only of the claims as summarized). Each claim was checked independently
+of the source's framing.
 
-What the search did surface is a real, separate, well-documented episode
-that plausibly gets folded into claims like this one: **Basic English**,
-C. K. Ogden's 1930 project restricting English to an ~850-word
-vocabulary for international communication. Churchill publicly endorsed
-it in a 1943 Harvard speech; the Basic English Foundation was formally
-established in 1947 with UK Ministry of Education involvement; it wound
-down by the 1960s. That is a real, voluntary, publicly announced
-*promotion* of a simplified vocabulary subset for teaching and diplomacy
-— not a suppression or removal of existing language, and not secret.
+**Video 1 & 3 — channel "Philosophical Essence"** ("This Ancient
+Manuscript Reveals EXACTLY How Language Controls Your Reality"; "This
+Professor Reveals How Your Energy Controls the Universe"). A large
+channel (600k+ subscribers, 34M+ views in 17 months per its own
+about-page) whose own description states its content is "for
+educational and entertainment purposes only, with critical thinking and
+independent research encouraged" — i.e., the channel itself does not
+claim to be a factual/scholarly source. That disclaimer matters and
+should be kept attached to any claim sourced from it.
 
-**Status: unverified as stated.** The "1946... sacred language removed"
-framing does not match any documented event found. Basic English is
-close in era and theme (international vocabulary engineering by
-prominent political figures) and is a plausible source of the
-association, but nothing found confirms it's what the video is actually
-referring to, since the video's own content hasn't been reviewed. If a
-transcript or source URL becomes available, re-check against it directly
-rather than against this inference.
+| Claim (as summarized) | Status | Finding |
+|---|---|---|
+| "1946 educational reforms removed rhetoric and classical language studies" | **Not corroborated** | No documented 1946 reform matching this was found. What *is* real: a slow, decades-long decline in American classical education (Greek/Latin) beginning around 1910–1920s (Abraham Flexner publicly called for de-emphasizing classics in 1916) — a gradual curricular shift, not a specific 1946 event, and not framed anywhere found as deliberately suppressing "awareness of linguistic influence." The only genuine "1946 + education reform" hit in search was the unrelated 1946 US Education Mission to occupied Japan. |
+| "Mortgage means 'death pledge'" | **Historically real** | Confirmed independently — see etymology table above. This is presented in the source material as an example of "hidden etymology" alongside "government = mind control," but only one of those two is actually true; see next row. |
+| "Government means mind control" | **False etymology** | Already checked above — a Modern English homophone, not history. The source material presents this with the same confidence as the (true) mortgage claim, which is itself a demonstration of the exact failure mode this document warns about: true and false word-origin claims delivered in the same tone read as equally credible. |
+| Cymatics / Hebrew letters as "cosmic building blocks" (Kabbalah) | **Real tradition, not an empirical claim** | Kabbalistic letter-mysticism is a genuine, well-documented religious/mystical tradition. Cymatics (sound vibration producing visible patterns in physical media like sand or fluid) is real physics. Treating the two as the *same phenomenon* — that spoken language structures matter the way cymatics patterns form — is an unsupported leap from a religious framework onto a physical one. Label the tradition as real; the causal claim as unverified. |
+| Reticular Activating System (RAS) "treats spoken declarations as direct commands" | **Real structure, exaggerated mechanism** | The RAS is a real brainstem structure involved in arousal and selective attention (it's part of why your own name stands out in a noisy room). The specific claim that spoken "I am" statements reprogram it as literal commands is a popular self-help extrapolation well beyond what's established in neuroscience — not fabricated from nothing, but overstated. |
+| Dr. Masaru Emoto's water-crystal experiments | **Pseudoscience — actively debunked** | Never published in a peer-reviewed journal with adequate methodology. Emoto was not a water chemist or physicist. A published double-blind replication attempt (Radin et al., *Explore*, 2006, PubMed 16979104) found no effect. This one isn't "unverified" — it's checked and it fails. Citing it as evidence should be treated as a factual error in the source, not a live open question. |
+
+**Video 2 — "4biddenknowledge Podcast Network," hosted by Billy Carson**
+("Seven Sisters Myth Decoded"). This one needs a different kind of
+caution than the others, because it mixes two categories of material
+that shouldn't be flattened together:
+
+- **The Aboriginal oral tradition content itself** (Seven Sisters/Pleiades
+  star lore, songlines functioning simultaneously as navigation, moral
+  teaching, and astronomical record, shared across ~500 language groups)
+  is consistent with what's documented in Indigenous-studies literature
+  generally. This repository already has standing rules about handling
+  this kind of material — see [`docs/governance/Indigenous-Data-Sovereignty.md`](../docs/governance/Indigenous-Data-Sovereignty.md)
+  and [`mythos/NAMES.md`](../mythos/NAMES.md) — and nothing here
+  overrides them. Songlines as cultural/navigational reality, described
+  by the people whose tradition it is (the summary names an Aboriginal
+  Elder, Trudy, as a direct participant), is not the same category of
+  claim as the items below.
+- **The "Gosford Glyphs"**, named in the summary as a "megalithic site,"
+  are a confirmed hoax. Egyptologists (Macquarie University's Dr.
+  Ockinga, among others) date the carvings to the 1920s, likely made
+  during the wave of public interest following Tutankhamun's 1922
+  discovery; they mix Egyptian symbols from eras thousands of years
+  apart and include un-Egyptian imagery. Documented as fake since at
+  least 2010 (*Encyclopedia of Dubious Archaeology*). Treating this
+  alongside genuine oral tradition, in the same breath, is exactly the
+  fact/interpretation collapse this document argues against.
+- **The host's framing** ("world's oldest continuous lineage and
+  foundational root for human civilization" — an "Out of Australia"
+  claim) runs counter to the mainstream, evidence-based "Out of Africa"
+  model of human origins and is not supported in peer-reviewed
+  archaeology or genetics. Independent research also finds Billy Carson
+  holds no advanced degrees in archaeology or Egyptology, is criticized
+  for unverifiable citations and selective evidence, and monetizes this
+  content through 4biddenknowledge Inc.'s books, documentaries, and paid
+  seminars — standard markers of a promotional rather than scholarly
+  source.
+
+**Net finding:** none of the three videos were reviewed first-hand (network
+access to the video hosts is blocked from this session). Every claim
+checked from the provided summaries splits cleanly into: real and
+verifiable (mortgage, cymatics-as-physics, RAS-as-structure,
+songlines-as-tradition), real but exaggerated (RAS-as-programming-command),
+or checked and false (government/mind-control, Emoto water crystals,
+Gosford Glyphs, 1946 education-reform claim, "Out of Australia" as
+established science). That mix — true claims and false claims delivered
+at the same confidence level — is itself the mechanism this document is
+about: a listener has no cue from tone alone for which is which.
 
 ## The anti-loop
 
