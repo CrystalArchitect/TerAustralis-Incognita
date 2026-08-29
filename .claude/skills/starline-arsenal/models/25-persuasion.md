@@ -19,16 +19,16 @@ primitive: label_affect() to shift another's position without coercion
 1. What does the other party currently believe, want, or fear?
 2. What shared value or interest can the ask be anchored to?
 3. What is the smallest ask that moves them one step, rather than the whole way at once?
-4. What objection will they raise, and what is the honest answer to it?
-5. Where is the line between persuasion and manipulation here, and are we on the right side of it?
+4. What proof would count as sufficient *to them*, not to me?
+5. What would a legitimate no from them look like, and am I prepared to hear it rather than reframe it as an objection to overcome?
 
 ## Required Concrete Output — No vague labels
 
 - Current-Position Statement
 - Shared-Value Anchor
 - Smallest-Ask Sequence
-- Objection + Honest Answer
-- Persuasion / Manipulation Line Check
+- Proof That Counts Here
+- Honest No + Next Smallest Move
 
 ## Evidence → Interpretation → Experiment → Record
 
@@ -39,7 +39,7 @@ primitive: label_affect() to shift another's position without coercion
 
 ## Anti-Pattern
 
-Do not just name "Persuasion". Produce the artefact listed above. If no artefact, you have not run the model.
+Do not just name "Persuasion". Produce the artefact listed above. If no artefact, you have not run the model. Reaching for more heat instead of a smaller ask is the fail state — an ask that requires the other person to lose a pulse is fusion, not persuasion.
 
 ---
 Implementation: CrystalCore.OS™️ | Language: CrystalCode™️ | Starline Arsenal | TerAustralis Incognita™️ | Functional / simulated affect only

@@ -27,6 +27,22 @@ dated bullet and update [`state/CURRENT.md`](state/CURRENT.md).
 - `SKILL.md` / `INDEX.md` updated to 31 models, version 2.0.0 → 3.0.0.
 - On branch, not yet merged.
 
+## 2026-08-29 — Starline Arsenal full verification pass (1–31), two fidelity gaps fixed
+
+- Extended verification to models 1–13, the only slice not yet checked
+  against a source. Fetched fresh from the "Starline Arsenal Models"
+  Drive folder; confirmed byte-identical to on-disk.
+- Re-reading the 21-model line's full source text surfaced two real
+  gaps against what had shipped: `models/30-parable.md` was missing the
+  source's "no borrowed lyrics" rule; `models/21-rhetoric.md` and
+  `models/25-persuasion.md` had kept plainer wording where a richer,
+  later-dated (29 Aug) version existed — five rhetorical canons and the
+  ethos/pathos/logos/kairos appeal square, and an explicit "honest no"
+  step in Persuasion.
+- All three fixed; governance gained the Speech Rule from the same
+  source. `SKILL.md` version 3.0.0 → 3.1.0.
+- On branch, not yet merged.
+
 ## 2026-08-29 — memory-state model, design hypothesis (PR #131)
 
 - `memory/MEMORY-STATE-MODEL.md` added: a working-paper framework for

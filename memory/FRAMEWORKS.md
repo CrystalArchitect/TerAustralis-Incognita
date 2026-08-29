@@ -20,7 +20,7 @@ create a GitHub repository for a framework (ADR-0015).
 | CrystalCore Framework (companion package) | Built in the *code* tree, not this git | Travels with Clementine (`core/crystalcore/mind/` described; lives in `-Code`) | Extract it until Stage 3 gates fire |
 | one-but-many-field | Skill / book | `.claude/skills/one-but-many-field/` (not in this git yet; see "Kit skills" section below) | Collapse "one" and "many" into a single node |
 | field-test | Skill | `.claude/skills/field-test/` (not in this git yet; see "Kit skills" section below) | |
-| starline-arsenal | Skill, v3.0.0, 31 models (was 13) | [`.claude/skills/starline-arsenal/`](../.claude/skills/starline-arsenal/) | Use Songline as a component name |
+| starline-arsenal | Skill, v3.1.0, 31 models (was 13), all 31 verified against a Drive source | [`.claude/skills/starline-arsenal/`](../.claude/skills/starline-arsenal/) | Use Songline as a component name |
 | teraustralis (Claude Code skill) | Skill | [`.claude/skills/teraustralis/`](../.claude/skills/teraustralis/) | |
 | Memory-state model (Fact/Interpretation/Inheritance/Revision/Vision/Unknown; Bridge/Carry/Rewrite operators) | Vision — design hypothesis, not implemented | [`MEMORY-STATE-MODEL.md`](MEMORY-STATE-MODEL.md) | Treat as schema or enforcement; it's neither yet |
 | Cross-AI memory architecture (Individual/Collective/Starline Arsenal/SAT four-layer sketch) | Vision — design hypothesis, not implemented | [`CROSS-AI-MEMORY-ARCHITECTURE.md`](CROSS-AI-MEMORY-ARCHITECTURE.md) | Confuse with this repo's own Claude Code memory protocol (`CLAUDE.md` + `memory/`) — they are different systems |

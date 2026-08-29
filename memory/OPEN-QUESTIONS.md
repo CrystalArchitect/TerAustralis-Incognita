@@ -93,6 +93,19 @@ runtime skill text ever does surface separately, treat it as a fresh
 input to check against this now-31-model version, not as unfinished
 business this entry was waiting on.
 
+**Full verification pass, 2026-08-29:** on request, extended verification
+to all 31 models, not just 14–25. Models 1–13 (pre-dating both Drive
+lineages) fetched fresh from the "Starline Arsenal Models" Drive folder
+and confirmed byte-identical to the on-disk files. This pass also caught
+two real fidelity gaps against the 21-model line's own text, both now
+fixed in `models/30-parable.md`, `models/21-rhetoric.md`, and
+`models/25-persuasion.md` (SKILL.md v3.0.0 → 3.1.0): a missing "no
+borrowed lyrics" rule on Parable, and a plainer Rhetoric/Persuasion
+version kept where the 21-model line had a richer, later-dated (29 Aug)
+alternative (five canons + kairos; explicit "honest no"). All 31 models
+are now checked against a Drive source or, for the three just listed,
+corrected to match the more complete one. Nothing outstanding.
+
 ## ADRs still Proposed
 
 | ADR | Why it is not law |

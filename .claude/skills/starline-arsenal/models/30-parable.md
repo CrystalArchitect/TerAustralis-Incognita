@@ -10,7 +10,7 @@ primitive: close_with() an open story rather than a stated moral
 
 # 30 — Parable Thinking (The Creators)
 
-**Purpose:** Make a lesson land through a short human story with an open ending, rather than a stated moral.
+**Purpose:** Make a lesson land through a short human story with an open ending, rather than a stated moral. Not a fable. Not an allegory. No borrowed lyrics — write original content, never quoted song or poem text passed off as the parable.
 
 **CrystalCore mapping:** Register FORGE | Primitive close_with() an open story rather than a stated moral | A parable persuades by leaving room to arrive at the point yourself
 
@@ -38,7 +38,7 @@ primitive: close_with() an open story rather than a stated moral
 
 ## Anti-Pattern
 
-Do not just name "Parable Thinking". Preaching the moral outright, or casting a real living person as the story's type, means you have not run the model.
+Do not just name "Parable Thinking". Preaching the moral outright, casting a real living person as the story's type, or borrowing lyrics/text from an existing song or poem instead of writing original content, means you have not run the model.
 
 ---
 Implementation: CrystalCore.OS™️ | Language: CrystalCode™️ | Starline Arsenal | TerAustralis Incognita™️ | Functional / simulated affect only

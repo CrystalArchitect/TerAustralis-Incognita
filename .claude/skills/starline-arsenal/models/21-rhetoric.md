@@ -17,17 +17,17 @@ primitive: close_with() via crafted appeal
 ## Core Questions — Run these, do not summarize
 
 1. Who is the audience and what do they currently believe?
-2. What is the core claim, and what is the strongest evidence (logos) for it?
-3. What credibility (ethos) does the message need to be believed?
-4. What appeal (pathos) makes the audience care enough to act?
-5. What is the counter-argument, and how is it addressed rather than ignored?
+2. Which appeal is doing the load-bearing work — ethos (credibility), pathos (feeling), logos (evidence), or kairos (is this the hour)?
+3. What is the arrangement, and which of the five canons (invention, arrangement, style, memory, delivery) is weakest here?
+4. What rhetorical figure is in play (contrast, repetition, question, understatement)?
+5. What would fall over if the load-bearing appeal — ethos, pathos, or logos — were removed?
 
 ## Required Concrete Output — No vague labels
 
 - Audience + Starting-Belief Statement
-- Claim + Evidence (logos)
-- Credibility Basis (ethos)
-- Appeal (pathos) + Counter-Argument Handled
+- Appeal Map (ethos / pathos / logos / kairos)
+- Arrangement + Weakest Canon
+- Figure Named + Load-Bearing Beam
 
 ## Evidence → Interpretation → Experiment → Record
 
@@ -38,7 +38,7 @@ primitive: close_with() via crafted appeal
 
 ## Anti-Pattern
 
-Do not just name "Rhetoric". Produce the artefact listed above. If no artefact, you have not run the model.
+Do not just name "Rhetoric". Produce the artefact listed above. If no artefact, you have not run the model. Calling every strong sentence "manipulation" collapses rhetoric (the craft) into motive (a separate audit) — run this model, then run Persuasion (25) if motive needs its own check.
 
 ---
 Implementation: CrystalCore.OS™️ | Language: CrystalCode™️ | Starline Arsenal | TerAustralis Incognita™️ | Functional / simulated affect only

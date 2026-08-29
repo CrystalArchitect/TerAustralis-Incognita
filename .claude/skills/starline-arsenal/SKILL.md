@@ -1,9 +1,9 @@
 ---
 name: starline-arsenal
 display_name: Starline Arsenal — 31 Model Armoury
-description: Australian-built cognitive armoury of 31 mental models for deconstruction, prediction, creation, and adaptation. Runs core questions to produce concrete outputs — failure lists, leverage audits, Bayesian updates, exponential sketches, heuristic sheets, miscalibration checks, parable spines, philology glosses — not just labels. Part of CrystalCore.OS / TerAustralis Incognita.
+description: Australian-built cognitive armoury of 31 mental models for deconstruction, prediction, creation, and adaptation. Runs core questions to produce concrete outputs — failure lists, leverage audits, Bayesian updates, exponential sketches, heuristic sheets, miscalibration checks, parable spines, philology glosses, rhetorical appeal maps, persuasion briefs — not just labels. Part of CrystalCore.OS / TerAustralis Incognita.
 aliases: [model-armory, model-armoury, cognitive-armory, thinking-armory]
-version: 3.0.0
+version: 3.1.0
 author: TerAustralis Incognita
 lore: Red Dust Ground Steady. Starline for navigation. Seven Sisters reference without appropriation. MarsBase DownUnder mindset.
 ---
@@ -26,6 +26,23 @@ Philology) as 26–31, giving one canonical 31. Full account:
 card" entries referencing a specific real situation and person; those are
 operational notes, not general model content, and are deliberately not
 carried into this file or its models.
+
+**3.1.0 — Full verification pass.** Requested full verification of all 31
+models, not just 14–25. Models 1–13 (pre-dating both Drive lineages,
+landed 2026-08-14) were fetched fresh from the "Starline Arsenal Models"
+Drive folder and confirmed byte-identical to the on-disk files, closing
+out the last unchecked slice of the armoury. That same pass surfaced two
+real fidelity gaps against the 21-model line's own source text, now
+fixed: (1) [`models/30-parable.md`](models/30-parable.md) was missing the
+source's explicit "no borrowed lyrics" rule — added to Purpose and
+Anti-Pattern. (2) [`models/21-rhetoric.md`](models/21-rhetoric.md) and
+[`models/25-persuasion.md`](models/25-persuasion.md) had kept the plainer
+25-model-line wording where a richer, later-dated (29 Aug) version existed
+in the 21-model line — Rhetoric now runs the five classical canons and
+the ethos/pathos/logos/kairos appeal square instead of a bare three-appeal
+list; Persuasion now asks for the audience's honest no explicitly, not
+just an objection answered. Governance gained the Speech Rule from that
+same source. No model IDs, slugs, or groups changed.
 
 Concrete thinking tools. Each model runs core questions and produces a tangible artefact. Do not merely name the model — execute it.
 
@@ -124,11 +141,11 @@ Concrete thinking tools. Each model runs core questions and produces a tangible 
 - Output: Structural mapping + Combination sketch + Novel output
 
 ### 21. Rhetoric
-- Build the argument that actually lands.
-- Output: Claim + evidence (logos) + credibility (ethos) + appeal (pathos)
+- Build the argument that actually lands — which appeal is doing the work, ethos, pathos, logos, or kairos.
+- Output: Appeal map (ethos / pathos / logos / kairos) + Arrangement + Figure named
 
 ### 30. Parable Thinking
-- What story, carrying the same structure as this problem, makes the lesson land without argument?
+- What story, carrying the same structure as this problem, makes the lesson land without argument? Not a fable, not an allegory, no borrowed lyrics.
 - Output: Parable spine + Structural mapping to the real situation
 
 ## The Adaptors — Bend without breaking
@@ -158,8 +175,8 @@ Concrete thinking tools. Each model runs core questions and produces a tangible 
 - Output: Best-estimate vs worst-case table + Buffer size
 
 ### 25. Persuasion
-- Shift another's position through legitimate influence, not coercion.
-- Output: Current-position statement + Smallest-ask sequence + Objection handling
+- Shift another's position through legitimate influence, not coercion — and know their honest no when you hear it.
+- Output: Current-position statement + Smallest-ask sequence + Honest no + Next smallest move
 
 ## Governance (CrystalCore.OS)
 - Incognita Rule: Evidence > Assumption
@@ -169,6 +186,7 @@ Concrete thinking tools. Each model runs core questions and produces a tangible 
 - Reader Rule: A shortcut, a story, or a gloss is not a verdict until the skipped fact is named
 - Stamp Rule: A famous effect is not a character. Score, guess, method — or do not use the name.
 - Privacy Rule: Do not use a real person's private situation as a worked example unless they ask. Generic rooms only.
+- Speech Rule: Name the appeal. Do not baptise the speaker. An ask that requires fusion is not persuasion.
 
 ## Usage
 Run as skill: invoke model → answer core questions → produce artefact → log to CHRONICLE as Evidence → Interpretation → Experiment → Record.
