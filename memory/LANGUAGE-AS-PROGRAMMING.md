@@ -75,6 +75,33 @@ grimoire" happens to be real; "govern/mind" happens not to be. Neither
 outcome was obvious in advance, which is the argument for checking
 rather than assuming.
 
+## Unverified claim, investigated: "language removal after 1946"
+
+A chat source cited a video with a chapter titled "Language Removal
+After 1946" (timestamp only, no transcript or URL was provided — this
+claim has not been checked against its actual source). A web search for
+any documented "1946 dictionary/sacred-language removal" event found no
+match to that specific framing.
+
+What the search did surface is a real, separate, well-documented episode
+that plausibly gets folded into claims like this one: **Basic English**,
+C. K. Ogden's 1930 project restricting English to an ~850-word
+vocabulary for international communication. Churchill publicly endorsed
+it in a 1943 Harvard speech; the Basic English Foundation was formally
+established in 1947 with UK Ministry of Education involvement; it wound
+down by the 1960s. That is a real, voluntary, publicly announced
+*promotion* of a simplified vocabulary subset for teaching and diplomacy
+— not a suppression or removal of existing language, and not secret.
+
+**Status: unverified as stated.** The "1946... sacred language removed"
+framing does not match any documented event found. Basic English is
+close in era and theme (international vocabulary engineering by
+prominent political figures) and is a plausible source of the
+association, but nothing found confirms it's what the video is actually
+referring to, since the video's own content hasn't been reviewed. If a
+transcript or source URL becomes available, re-check against it directly
+rather than against this inference.
+
 ## The anti-loop
 
 A system capable of being shaped by language should also be capable of
