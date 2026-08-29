@@ -36,6 +36,7 @@ INDEX answers "what do I open." This table answers who wins.
 | Kit Hub Save / Grok save rule | Drive Grok folder | Process. Not a new repository. |
 | Memory-state model (entry-level Fact/Interpretation/Inheritance/Revision/Vision/Unknown) | [`MEMORY-STATE-MODEL.md`](MEMORY-STATE-MODEL.md) | Design hypothesis, not implemented. Preparatory thinking for a possible future personal/collective memory system — not a change to this repo's own memory protocol. |
 | Cross-AI memory architecture (Individual/Collective/Arsenal/SAT four layers) | [`CROSS-AI-MEMORY-ARCHITECTURE.md`](CROSS-AI-MEMORY-ARCHITECTURE.md) | Design hypothesis, not implemented. Consolidates a chat design conversation onto disk; lists open gaps (consent, revocation, interoperability, provenance) still unresolved. Not this repo's own memory protocol. |
+| Language-as-programming thesis (word→category→behaviour→institution feedback) | [`LANGUAGE-AS-PROGRAMMING.md`](LANGUAGE-AS-PROGRAMMING.md) | Research hypothesis. Includes a fact-checked etymology table (grammar/grimoire real, spell/spell shared-root, govern+ment false) — check that table, not the source chat message, for which claims hold. |
 
 ## Repository state (what's real, right now)
 
