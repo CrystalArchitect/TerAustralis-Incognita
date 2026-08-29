@@ -34,6 +34,7 @@ INDEX answers "what do I open." This table answers who wins.
 | Number Collision method | Drive working paper (28 Aug 2026) | Not git. Worked numerology objects stay on Drive. See [`FRAMEWORKS.md`](FRAMEWORKS.md). |
 | Loop Framework | `the-library` `frameworks/loop-framework.md` | Method, not law. This git only cites it from [`AI-Governance.md`](../docs/governance/AI-Governance.md). |
 | Kit Hub Save / Grok save rule | Drive Grok folder | Process. Not a new repository. |
+| Memory-state model (entry-level Fact/Interpretation/Inheritance/Revision/Vision/Unknown) | [`MEMORY-STATE-MODEL.md`](MEMORY-STATE-MODEL.md) | Design hypothesis, not implemented. Preparatory thinking for a possible future personal/collective memory system — not a change to this repo's own memory protocol. |
 
 ## Repository state (what's real, right now)
 
