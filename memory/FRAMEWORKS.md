@@ -23,6 +23,7 @@ create a GitHub repository for a framework (ADR-0015).
 | starline-arsenal | Skill | [`.claude/skills/starline-arsenal/`](../.claude/skills/starline-arsenal/) | Use Songline as a component name |
 | teraustralis (Claude Code skill) | Skill | [`.claude/skills/teraustralis/`](../.claude/skills/teraustralis/) | |
 | Memory-state model (Fact/Interpretation/Inheritance/Revision/Vision/Unknown; Bridge/Carry/Rewrite operators) | Vision — design hypothesis, not implemented | [`MEMORY-STATE-MODEL.md`](MEMORY-STATE-MODEL.md) | Treat as schema or enforcement; it's neither yet |
+| Cross-AI memory architecture (Individual/Collective/Starline Arsenal/SAT four-layer sketch) | Vision — design hypothesis, not implemented | [`CROSS-AI-MEMORY-ARCHITECTURE.md`](CROSS-AI-MEMORY-ARCHITECTURE.md) | Confuse with this repo's own Claude Code memory protocol (`CLAUDE.md` + `memory/`) — they are different systems |
 
 The Vision-layer TerAustralis Framework page still writes "Songline-to-Starline"
 as *cultural image inside a dreamed spec*. [`mythos/NAMES.md`](../mythos/NAMES.md)
