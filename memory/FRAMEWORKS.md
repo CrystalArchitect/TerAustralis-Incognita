@@ -18,8 +18,8 @@ create a GitHub repository for a framework (ADR-0015).
 | TerAustralis Framework Specification v0.1 | **Vision** — protocol fiction | [`docs/TERAUSTRALIS-FRAMEWORK.md`](../docs/TERAUSTRALIS-FRAMEWORK.md) | Treat Edge AGI / AERIS / Southern Node as surveyed software |
 | Belt-Three + Incognita Rule | Built (honesty law) | [`CONTRIBUTING.md`](../CONTRIBUTING.md), [`The-Incognita-Rule.md`](../docs/governance/The-Incognita-Rule.md) | Let a dreamed line wear surveyed ink |
 | CrystalCore Framework (companion package) | Built in the *code* tree, not this git | Travels with Clementine (`core/crystalcore/mind/` described; lives in `-Code`) | Extract it until Stage 3 gates fire |
-| one-but-many-field | Skill / book | [`.claude/skills/one-but-many-field/`](../.claude/skills/one-but-many-field/) | Collapse "one" and "many" into a single node |
-| field-test | Skill | [`.claude/skills/field-test/`](../.claude/skills/field-test/) | |
+| one-but-many-field | Skill / book | `.claude/skills/one-but-many-field/` (not in this git yet; see "Kit skills" section below) | Collapse "one" and "many" into a single node |
+| field-test | Skill | `.claude/skills/field-test/` (not in this git yet; see "Kit skills" section below) | |
 | starline-arsenal | Skill | [`.claude/skills/starline-arsenal/`](../.claude/skills/starline-arsenal/) | Use Songline as a component name |
 | teraustralis (Claude Code skill) | Skill | [`.claude/skills/teraustralis/`](../.claude/skills/teraustralis/) | |
 
