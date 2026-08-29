@@ -117,6 +117,54 @@ mythic_association:
   status: VISION_ONLY
 ```
 
+```yaml
+term: "Roman numerals (letters standing for numbers)"
+modern_meaning:
+  gloss: "I, V, X, L, C, D, M used as numeral symbols"
+  source: OED
+earliest_attestation:
+  form: "Etruscan/early Roman tally notches, later mapped onto Latin letters"
+  date: "attested from Roman Republic-era inscriptions onward"
+  source: "epigraphic record (inscriptions, monuments); standard scholarly account, e.g. Menninger, Number Words and Number Symbols"
+source_language:
+  language: Latin / Etruscan
+  form: "I V X L C D M"
+  gloss: "letters reused as number-symbols; C and M reinforced by centum (\"hundred\") and mille (\"thousand\"), not derived from them"
+proto_root:
+  status: not applicable — this is a notation system, not a word derivation
+scholarly_status: "established: Roman numerals genuinely are letters doing double duty as numbers. This is documented fact, not interpretation."
+alternative_etymologies:
+  - claim: "the letter-number overlap was designed as a hidden code / cipher"
+    status: FOLK
+    finding: "no scholarly source supports intentional cipher-design; the overlap is a practical notation convention that evolved over centuries, reinforced after the fact by association with number-words like centum/mille"
+confidence: high (Tier A+/A — this is one of the best-attested claims in this document)
+interpretation:
+  status: separate
+mythic_association:
+  status: VISION_ONLY
+```
+
+## Letters as numbers — where the Crystal Equation sits on this stack
+
+Crystal asked for the Crystal Equation and its Roman-numeral / letters-as-numbers
+framework to be cross-referenced here. Three genuinely different things get
+called "letters are numbers," and they sit at different tiers:
+
+| Claim | Tier | Verdict |
+|---|---|---|
+| Roman numerals: I/V/X/L/C/D/M are literally letters reused as numbers | A+/A, attested | True — see evidence card above |
+| Gematria (Hebrew) / isopsephy (Greek): assigning numeric values to letters is a real, ancient, attested practice | A, attested practice | The *practice* existed and is documented (e.g. isopsephy graffiti at Pompeii, rabbinic gematria) |
+| A specific gematria/isopsephy "hidden meaning" derived from a word's number value (e.g. "this word equals that word, therefore X is true") | V, Vision | Interpretive, not a linguistic-history fact — the practice is real, the specific meaning drawn from it is symbolic |
+| The Crystal Equation's own letter↔number correspondence system | V, Vision | This is Crystal's own creative/personal framework, not a claim about attested linguistic or numerical history. It belongs on this stack the same way the abracadabra and government mythic associations do — legitimate as meaning, explicitly not filed as fact. Its actual mapping isn't reproduced here (it lives outside this repo); this entry exists so it's never treated as if it were the same tier as the Roman-numeral fact above. |
+
+The through-line: "letters can be numbers, numbers can be letters" is true
+as a general statement — Roman numerals prove it outright, gematria/isopsephy
+prove the practice is old and real. What doesn't follow automatically is that
+any *specific* letter-number reading (ancient or the Crystal Equation's own)
+is a demonstrated fact rather than an interpretation. Tier A+ evidence that
+the notation exists is not tier A+ evidence for what a specific reading of it
+means.
+
 ## Worked findings from tonight's source material
 
 Full prose account and video-source context:
@@ -134,6 +182,8 @@ tier:
 | Government = govern + "mind" | A (govern) / D (mind-compound) | "Govern" real; "mind" connection false |
 | Human = "god-man" | D | False, and inverts the real PIE root ("earthling," opposed to gods) |
 | Abracadabra ← Aramaic "I will create as I speak" | C/DISPUTED | Genuinely unresolved, not simply true or false |
+| Roman numerals = letters reused as numbers | A+/A | True — see worked evidence card above |
+| Gematria/isopsephy = letters assigned numeric values | A (practice) / V (any specific "hidden meaning" reading, including the Crystal Equation's) | The practice is real and old; a specific meaning drawn from it is interpretation, not history |
 
 The pattern worth naming: true and false claims were delivered at
 identical confidence in the source material. Tone carries no signal for
