@@ -11,6 +11,24 @@ dated bullet and update [`state/CURRENT.md`](state/CURRENT.md).
 
 **Sourced:** 2026-08-28. Newest first.
 
+## 2026-08-29 — memory-state model, design hypothesis (PR #131)
+
+- `memory/MEMORY-STATE-MODEL.md` added: a working-paper framework for
+  labeling individual memory entries (Fact/Interpretation/Inheritance/
+  Revision/Vision/Unknown) and the operations that can be performed on
+  them (Bridge/Carry/Rewrite). Explicitly not implemented — no schema,
+  storage engine, or sync mechanism exists. Preparatory design thinking
+  for a possible future personal/collective memory system discussed in
+  chat, not a change to this repo's own Claude Code memory protocol.
+  Pointers added to `FRAMEWORKS.md` and `CANON-MAP.md`, same status as
+  the Loop Framework and Number Collision Framework entries there.
+- Same PR fixed a pre-existing CI failure on `main`: `TheCrystalVision`
+  is a private repo, so its links 404 to `markdown-link-check`'s
+  anonymous requests. Extended the existing `TerAustralis-Incognita-Code`
+  ignore-pattern convention in `.github/markdown-link-check-config.json`
+  to cover it.
+- **MERGED to main** at `5994150` (2026-08-29 11:46 UTC).
+
 ## 2026-08-28 — frameworks retrieval map (this PR)
 
 - `memory/FRAMEWORKS.md`: retrieval map of named frameworks, Claude Code
