@@ -4,12 +4,12 @@ Working picture of **this** repository. Overwrite at each checkpoint.
 If this file disagrees with [`STATUS.md`](../../STATUS.md) or a newer
 canonical source, the canonical source wins — then fix this file.
 
-**As of:** 2026-08-29 (cross-repo memory model restructured; umbrella memory is now primary source for all Claude sessions)
+**As of:** 2026-08-29 (cross-repo memory model restructured and merged; umbrella memory is now primary source for all Claude sessions — PR #129 merged to main)
 **STATUS.md last updated:** 2026-08-20
 **This memory protocol landed on `main` at:** `3ba08fdcb4e88f5386949bc3cd35a28dcd597fab`
 (PR #123, merged with Crystal Arena-Turner's explicit authorization)
 
-**This session:** Restructured memory for cross-repo work. Umbrella memory/ is now the primary source of truth for all Claude sessions across TerAustralis-Incognita-Code, TheCrystalVision, and other repos. Sessions read umbrella state at startup, then read repo-specific state if available. CLAUDE.md and memory/projects/ updated accordingly.
+**This session:** Restructured memory for cross-repo work. Umbrella memory/ is now the primary source of truth for all Claude sessions across TerAustralis-Incognita-Code, TheCrystalVision, and other repos. Sessions read umbrella state at startup, then read repo-specific state if available. CLAUDE.md and memory/projects/ updated accordingly. **MERGED to main via PR #129** (2026-08-29 01:52 UTC).
 
 **Previous sessions:** (1) Emergency: reverted one-but-many-field content from public main (PR #127). (2) Secured in private TheCrystalVision repo. (3) Simplified README for onboarding clarity (PR #128, draft). (4) Memory bootstrap completed and merged to main (PR #123, dated 2026-08-28).
 
