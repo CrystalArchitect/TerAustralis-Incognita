@@ -24,6 +24,7 @@ create a GitHub repository for a framework (ADR-0015).
 | teraustralis (Claude Code skill) | Skill | [`.claude/skills/teraustralis/`](../.claude/skills/teraustralis/) | |
 | Memory-state model (Fact/Interpretation/Inheritance/Revision/Vision/Unknown; Bridge/Carry/Rewrite operators) | Vision — design hypothesis, not implemented | [`MEMORY-STATE-MODEL.md`](MEMORY-STATE-MODEL.md) | Treat as schema or enforcement; it's neither yet |
 | Cross-AI memory architecture (Individual/Collective/Starline Arsenal/SAT four-layer sketch) | Vision — design hypothesis, not implemented | [`CROSS-AI-MEMORY-ARCHITECTURE.md`](CROSS-AI-MEMORY-ARCHITECTURE.md) | Confuse with this repo's own Claude Code memory protocol (`CLAUDE.md` + `memory/`) — they are different systems |
+| Language-as-programming (word→category→institution feedback loop; fact-checked etymology appendix) | Vision — research hypothesis, not proven | [`LANGUAGE-AS-PROGRAMMING.md`](LANGUAGE-AS-PROGRAMMING.md) | Treat as evidence that any institution practices "mind control" — the doc explicitly supports only the weaker, contestable claim of influence |
 
 The Vision-layer TerAustralis Framework page still writes "Songline-to-Starline"
 as *cultural image inside a dreamed spec*. [`mythos/NAMES.md`](../mythos/NAMES.md)
