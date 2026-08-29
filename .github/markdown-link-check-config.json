@@ -25,7 +25,7 @@
       "pattern": "^https://github\\.com/CrystalArchitect/TerAustralis-Incognita-Code"
     },
     {
-      "comment": "Links to the TheCrystalVision repository, which is also private (same failure mode as TerAustralis-Incognita-Code immediately above): GitHub returns 404 to this checker's anonymous requests regardless of whether the repo/file exists. First caught failing CI on main at commit 61381cb (PR #129 merge, 2026-08-29) via memory/projects/TheCrystalVision/README.md. Re-enable if that repo ever goes public.",
+      "comment": "Links to the TheCrystalVision repository, which is also private (same failure mode as TerAustralis-Incognita-Code immediately above): GitHub returns 404 to this checker's anonymous requests regardless of whether the repo/file exists. First caught failing CI on main at commit 61381cb (PR #129 merge, 2026-08-29) via memory/projects/TheCrystalVision/README.md; independently re-caught the same day on this PR's branch (CI run 33250591338/job 99095466437) after merging that commit in. Confirmed private via API 2026-08-29. Re-enable if that repo ever goes public.",
       "pattern": "^https://github\\.com/CrystalArchitect/TheCrystalVision"
     },
     {

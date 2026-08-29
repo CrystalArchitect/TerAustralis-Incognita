@@ -65,6 +65,23 @@ Recommendation on disk: disambiguate the way ADR-0004 disambiguated
 [`mythos/NAMES.md`](../mythos/NAMES.md)). Replacement names are left to
 the maintainer.
 
+## Starline Arsenal — 14–25 not yet reconciled against Grok's own text
+
+Crystal reported Grok's parallel `starline-arsenal` skill (lives only in
+Grok's own runtime, `/home/workdir/.grok/skills/`, never written to Drive
+or GitHub) had grown to ~21 models. That text could not be retrieved
+(Grok session out of tokens) and no copy of it exists in Drive, GitHub,
+or any note file searched 2026-08-29. With Crystal's explicit approval,
+models 14–25 were drafted fresh by Claude Code instead — 8 proposed,
+4 named directly by Crystal (Recursion, Inference, Rhetoric, Persuasion)
+— in the same template as 01–13. **Label: Vision/drafted, not verified.**
+
+Gate: if Grok's own model list ever surfaces (pasted, exported, or
+written to Drive per the standing `KIT_HUB_SAVE_SKILL.md` save rule),
+reconcile names, groupings, and registers against it here, and correct
+`SKILL.md` / `INDEX.md` / the affected `models/*.md` files to match. Do
+not assume the drafted 12 match Grok's wording until checked.
+
 ## ADRs still Proposed
 
 | ADR | Why it is not law |
