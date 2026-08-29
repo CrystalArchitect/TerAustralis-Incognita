@@ -4,7 +4,7 @@ Working picture of **this** repository. Overwrite at each checkpoint.
 If this file disagrees with [`STATUS.md`](../../STATUS.md) or a newer
 canonical source, the canonical source wins — then fix this file.
 
-**As of:** 2026-08-29 (cross-repo memory model restructured, umbrella memory now primary source for all Claude sessions; Starline Arsenal expanded 13 → 25 models)
+**As of:** 2026-08-29 (cross-repo memory model restructured and merged to main via PR #129; Starline Arsenal expanded 13 → 25 models on this branch; memory-state model design hypothesis added on a separate branch, not yet merged)
 **STATUS.md last updated:** 2026-08-20
 **This memory protocol landed on `main` at:** `3ba08fdcb4e88f5386949bc3cd35a28dcd597fab`
 (PR #123, merged with Crystal Arena-Turner's explicit authorization)
@@ -13,7 +13,9 @@ canonical source, the canonical source wins — then fix this file.
 
 **Session 2026-08-29 (cont., this branch):** Crystal directed an expansion of the Starline Arsenal from 13 to 25 models, confirming Grok's parallel `starline-arsenal` skill (living only in Grok's own runtime, `/home/workdir/.grok/skills/`, not on Drive or GitHub) had grown past 13 with no write-back yet performed. The exact wording of Grok's additional models could not be retrieved (Grok session out of tokens); Crystal explicitly approved drafting 12 new model cards in the same template — 8 proposed by Claude (Occam's Razor, Root Cause Analysis/5 Whys, Game Theory, Circle of Competence, Analogical/Combinatorial Thinking, OODA Loop, Antifragility, Margin of Safety) plus 4 Crystal named directly (Recursion, Inference, Rhetoric, Persuasion). Added as `models/14-occams-razor.md` through `models/25-persuasion.md`, following the existing 6-part card template (Purpose, CrystalCore mapping, 5 Core Questions, Required Concrete Output, Evidence→Interpretation→Experiment→Record, Anti-Pattern). `INDEX.md` and `SKILL.md` updated to 25 total, version bumped 1.0.0 → 2.0.0. **Label: Vision/drafted, not verified against Grok's actual wording** — if Grok's own 21-model text later surfaces, reconcile names/registers against it per the Incognita Rule and record any conflict here.
 
-**Session 2026-08-29 (main, merged in):** Restructured memory for cross-repo work. Umbrella memory/ is now the primary source of truth for all Claude sessions across TerAustralis-Incognita-Code, TheCrystalVision, and other repos. Sessions read umbrella state at startup, then read repo-specific state if available. CLAUDE.md and memory/projects/ updated accordingly.
+**Session 2026-08-29 (a, merged to main via PR #129):** Restructured memory for cross-repo work. Umbrella memory/ is now the primary source of truth for all Claude sessions across TerAustralis-Incognita-Code, TheCrystalVision, and other repos. Sessions read umbrella state at startup, then read repo-specific state if available. CLAUDE.md and memory/projects/ updated accordingly.
+
+**Session 2026-08-29 (b, merged to main via PR #131):** Added [`../MEMORY-STATE-MODEL.md`](../MEMORY-STATE-MODEL.md) — a design hypothesis for how individual memory entries could be labeled (Fact/Interpretation/Inheritance/Revision/Vision/Unknown) and manipulated (Bridge/Carry/Rewrite), for a possible future personal/collective memory system discussed in chat but not yet designed on disk. Explicitly not implemented, not a schema, not a change to this repo's existing memory protocol. Pointers added to `FRAMEWORKS.md` and `CANON-MAP.md`.
 
 **Previous sessions:** (1) Emergency: reverted one-but-many-field content from public main (PR #127). (2) Secured in private TheCrystalVision repo. (3) Simplified README for onboarding clarity (PR #128, draft). (4) Memory bootstrap completed and merged to main (PR #123, dated 2026-08-28).
 
