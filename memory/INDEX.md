@@ -18,6 +18,19 @@ at startup. Paths are relative to `memory/`.
 | Fast session bootstrap (one page, faster than re-deriving from CORE+CURRENT) | [`collaboration/CONTEXT-PACK.md`](collaboration/CONTEXT-PACK.md) |
 | How AI tools hand off work to each other | [`collaboration/AI-HANDOFF.md`](collaboration/AI-HANDOFF.md) |
 | Is this claim verified, a hypothesis, or a source conflict? | [`evidence/VERIFIED.md`](evidence/VERIFIED.md) · [`evidence/HYPOTHESES.md`](evidence/HYPOTHESES.md) · [`evidence/CONFLICTS.md`](evidence/CONFLICTS.md) |
+| Named frameworks, skills, Drive papers | [`FRAMEWORKS.md`](FRAMEWORKS.md) |
+
+## Frameworks and methods
+
+Pointers only. The papers stay where they live.
+
+| Need | File |
+|---|---|
+| Retrieval map (git + sibling + Drive) | [`FRAMEWORKS.md`](FRAMEWORKS.md) |
+| CrystalCore naming taxonomy | [`../docs/vision/CrystalCore.md`](../docs/vision/CrystalCore.md) · [`../docs/adr/ADR-0004.md`](../docs/adr/ADR-0004.md) |
+| TerAustralis Framework spec (Vision) | [`../docs/TERAUSTRALIS-FRAMEWORK.md`](../docs/TERAUSTRALIS-FRAMEWORK.md) |
+| Loop Framework (Method, not law) | [`../docs/governance/AI-Governance.md`](../docs/governance/AI-Governance.md) — paper in `the-library` |
+| Number Collision (Drive working paper) | [`FRAMEWORKS.md`](FRAMEWORKS.md) "On Google Drive" — do not copy the paper here |
 
 ## Governance and law
 
@@ -98,7 +111,7 @@ at startup. Paths are relative to `memory/`.
 | Grok (Creative + Grok Build) | [`../docs/ai/Grok.md`](../docs/ai/Grok.md) · [`../docs/agents/Grok-Agent.md`](../docs/agents/Grok-Agent.md) |
 | Claude (historical) | [`../docs/ai/Claude.md`](../docs/ai/Claude.md) · [`../docs/agents/Claude-Agent.md`](../docs/agents/Claude-Agent.md) |
 | ChatGPT / DeepSeek / Gemini | [`../docs/ai/`](../docs/ai/) · [`../docs/agents/`](../docs/agents/) |
-| Claude Code skills in this repo | [`../.claude/skills/`](../.claude/skills/) (`starline-arsenal`, `teraustralis`) |
+| Claude Code skills in this repo | [`../.claude/skills/`](../.claude/skills/) (`field-test`, `one-but-many-field`, `starline-arsenal`, `teraustralis`) |
 
 ## Sibling repositories (do not create a twentieth)
 

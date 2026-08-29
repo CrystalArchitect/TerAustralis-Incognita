@@ -11,6 +11,16 @@ dated bullet and update [`state/CURRENT.md`](state/CURRENT.md).
 
 **Sourced:** 2026-08-28. Newest first.
 
+## 2026-08-28 — frameworks retrieval map (this PR)
+
+- `memory/FRAMEWORKS.md`: retrieval map of named frameworks, Claude Code
+  skills, sibling-repo methods, and Drive papers. Points; does not dump
+  Drive papers or invent a new framework. Number Collision stays on Drive.
+  Loop Framework stays in `the-library`; this git only cites it.
+  **Not on `main` until Crystal merges.**
+- Wired into `INDEX.md`, `CANON-MAP.md`, `README.md`, `CLAUDE.md` Map,
+  and `state/CURRENT.md`.
+
 ## 2026-08-28 — merged to `main` (PR #123)
 
 - **Memory Bootstrap: COMPLETE.** PR #123 merged at `3ba08fdcb4e88f5386949bc3cd35a28dcd597fab`,

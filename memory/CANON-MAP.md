@@ -22,6 +22,19 @@ claim below could not be checked against a file, it says so.
 | AI collaboration rules | [`docs/governance/AI-Governance.md`](../docs/governance/AI-Governance.md) | Binding; `docs/ai/AI-Workflow.md` is the *practiced* flow, not the rule itself |
 | CMX / Ovaro / Continuum external boundary | [`DECISIONS.md`](DECISIONS.md) "Direct maintainer decisions recorded in memory (not ADRs)," 2026-08-28 | Current, explicit, Crystal-authored — not an ADR, not a rediscovered older source. Detail: [`collaboration/EXTERNAL-RELATIONSHIPS.md`](collaboration/EXTERNAL-RELATIONSHIPS.md) |
 
+## Frameworks and methods
+
+INDEX answers "what do I open." This table answers who wins.
+
+| Concept | Sole authority | Notes |
+|---|---|---|
+| Named-framework *retrieval* (where is the paper?) | [`FRAMEWORKS.md`](FRAMEWORKS.md) | Pointers only. Does not become the paper. |
+| CrystalCore naming taxonomy | [`docs/vision/CrystalCore.md`](../docs/vision/CrystalCore.md), locked by [`ADR-0004`](../docs/adr/ADR-0004.md) | Already listed under Architecture. Restated here so a session looking for "framework" does not treat the 2026-07-04 Drive paper as current names. |
+| TerAustralis Framework Specification v0.1 | [`docs/TERAUSTRALIS-FRAMEWORK.md`](../docs/TERAUSTRALIS-FRAMEWORK.md) | Vision — protocol fiction. NAMES.md still wins for software names. |
+| Number Collision method | Drive working paper (28 Aug 2026) | Not git. Worked numerology objects stay on Drive. See [`FRAMEWORKS.md`](FRAMEWORKS.md). |
+| Loop Framework | `the-library` `frameworks/loop-framework.md` | Method, not law. This git only cites it from [`AI-Governance.md`](../docs/governance/AI-Governance.md). |
+| Kit Hub Save / Grok save rule | Drive Grok folder | Process. Not a new repository. |
+
 ## Repository state (what's real, right now)
 
 | Concept | Sole authority | Notes |
