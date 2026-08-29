@@ -25,6 +25,10 @@
       "pattern": "^https://github\\.com/CrystalArchitect/TerAustralis-Incognita-Code"
     },
     {
+      "comment": "Links to the TheCrystalVision repository, which is also private (same failure mode as TerAustralis-Incognita-Code immediately above): GitHub returns 404 to this checker's anonymous requests regardless of whether the repo/file exists. First caught failing CI on main at commit 61381cb (PR #129 merge, 2026-08-29) via memory/projects/TheCrystalVision/README.md. Re-enable if that repo ever goes public.",
+      "pattern": "^https://github\\.com/CrystalArchitect/TheCrystalVision"
+    },
+    {
       "comment": "This repository's own root URL (mythos/content/CREDITS.md). Failed with Status: 0 - no response at all, not even a 4xx - on PR #113 CI run 31646247517/job 94280365499 (2026-08-12), while markdownlint (182 files) and the internal-links checker (784 links) both passed clean in the same run. A repo's own GitHub URL cannot be genuinely dead; this is the checker's unauthenticated-crawler-vs-github.com failure mode already documented twice below (the settings-page and TerAustralis-Incognita-Code patterns), just against a page this checker had not previously been asked to fetch.",
       "pattern": "^https://github\\.com/CrystalArchitect/TerAustralis-Incognita$"
     },
