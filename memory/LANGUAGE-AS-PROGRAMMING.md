@@ -73,6 +73,7 @@ separated by confidence:
 | "Understand" = "to stand under" (implying subordination to authority) | **Compound is real; the "subordination" gloss is not supported** | Old English *understandan* is genuinely "under" + "standan." But etymologists (etymonline, OED, Oxford's own blog on the word) agree the "under" here likely used an older sense meaning "among, between" — not "beneath." The likely original image is "to stand among/between things in order to discern them," not "to stand in submission beneath an authority." Even specialist sources call the exact motivation an open etymological mystery — but "subordination to authority" is a reading imposed after the fact, not the documented one. |
 | "Human" = "god-man" | **False — and inverts the real meaning** | Latin *humanus* traces to a Proto-Indo-European root meaning "earthling, earthly being" — specifically *as opposed to* the gods (from the root for "earth"). The real etymology contrasts humans with gods; it does not combine them. This is the clearest fabrication in the set. |
 | "Abracadabra" from Aramaic "avra k'dabra" = "I will create as I speak" (seen on a thumbnail for a fourth "Philosophical Essence" video, "This Ancient Code Reveals EXACTLY How Your Words Control Reality") | **Genuinely contested — not simply true or false** | This is the most popular etymology theory and appears in serious sources, but the *Oxford English Dictionary* states plainly that no documentation supports any proposed origin, and the phrase appears in no actual ancient Aramaic or Hebrew text. At least one Aramaic linguist argues it isn't Aramaic at all, and traces the modern popularity of this specific gloss to an early internet forum discussion — meaning the "ancient scholarly" version may itself be recent folklore. The word's real first appearance in writing is a 2nd-century Roman medical text (Serenus Sammonicus), prescribing it as a healing charm — genuinely old, but not confirmed Aramaic. The thumbnail's "Aramaic (before Hebrew)" framing also oversimplifies: the two are separate, related Semitic languages that developed in parallel, not a strict predecessor/successor pair. |
+| "Universe" = "uni" + "verse" = "one song, one truth" (same thumbnail as above, text sits directly under "UNI-VERSE" with the halves visually split) | **Partly real, partly loose extension, partly unsupported** | The split itself is genuine: Latin *universum*, from *unus* ("one") + *versus* (past participle of *vertere*, "to turn") — literally "turned into one." There's also a real, documented connection to "verse" as in poetry/song: English "verse" comes from the same Latin *versus*, via the image of a plow "turning" at the end of a line (a furrow's "turn" became a written line's "turn"). So "universe" and "verse" (song/poem) do share one ancestor — not invented. But "-verse" inside "universe" itself means *turn*, not *song*; "song" is a later, separate extension of the sibling word. And "one truth" isn't etymological at all — nothing in the word's history supports it; it's a spiritual gloss added on top of a real linguistic coincidence. |
 
 The general lesson: morphology (what a word looks like it's built from)
 and etymology (where it actually came from) are different questions.
@@ -80,6 +81,15 @@ Collapsing them produces confident-sounding false claims — "grammar/
 grimoire" happens to be real; "govern/mind" happens not to be. Neither
 outcome was obvious in advance, which is the argument for checking
 rather than assuming.
+
+**Cultural reference, not etymology:** the "one but many" shape of the
+universe/verse wordplay above prompted a comparison to "I Am Australian"
+(Bruce Woodley, The Seekers, and Dobe Newton, The Bushwackers) — a
+well-known Australian song built around a single identity drawn from
+many origins. That's a genuine thematic echo, not a linguistic one: the
+song wasn't written with "universe" etymology in mind, and nothing
+historically connects them. Two separate things sharing a shape. Noted
+here as a cultural reference point only; lyrics are not reproduced.
 
 ## Source-identified investigation
 
