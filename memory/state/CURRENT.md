@@ -4,12 +4,14 @@ Working picture of **this** repository. Overwrite at each checkpoint.
 If this file disagrees with [`STATUS.md`](../../STATUS.md) or a newer
 canonical source, the canonical source wins — then fix this file.
 
-**As of:** 2026-08-28 (post-merge status update)
+**As of:** 2026-08-29 (Claude Code session review)
 **STATUS.md last updated:** 2026-08-20
 **This memory protocol landed on `main` at:** `3ba08fdcb4e88f5386949bc3cd35a28dcd597fab`
 (PR #123, merged with Crystal Arena-Turner's explicit authorization)
 
-**History (same day):** the memory tree carried orphaned duplicate state
+**Session 2026-08-29:** Claude Code reviewed Starline Arsenal models (all 13 landing in `.claude/skills/starline-arsenal/` since 2026-08-14, committed in bda45cc). Confirmed complete 4-group structure (Deconstructors, Predictors, Creators, Adaptors) with 13 models total. Files already properly indexed and wired as Claude Code skill. No changes to repository state from this review.
+
+**History (2026-08-28):** the memory tree carried orphaned duplicate state
 files from an earlier, less-grounded implementation pass, and a handful
 of unverified or fabricated citations (a nonexistent "DUR specification"
 reference; an Ovaro/Continuum/CMX boundary with no on-disk source at the
