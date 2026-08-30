@@ -43,6 +43,22 @@ dated bullet and update [`state/CURRENT.md`](state/CURRENT.md).
   source. `SKILL.md` version 3.0.0 → 3.1.0.
 - On branch, not yet merged.
 
+## 2026-08-29 — Provenance Stack absorbed from a concurrent PR, collision avoided
+
+- A separate session's PR #138 independently added a 26th model
+  ("Provenance Stack") plus `memory/ETYMOLOGY-STACK.md` on top of the old
+  25-model `main`, unaware this branch already used 26–31 for six other
+  models — the same collision shape as PR #130 earlier the same day.
+- Absorbed directly onto this branch rather than left to conflict:
+  `ETYMOLOGY-STACK.md` added as-is; the model renumbered to
+  `models/32-provenance-stack.md`, content unchanged apart from the
+  renumber; the same four proposed cross-references added (First
+  Principles, Occam's Razor, Circle of Competence, Inference).
+- `SKILL.md` / `INDEX.md` bumped 31 → 32 models, version 3.1.0 → 3.2.0.
+- PR #138 left untouched — different session's PR, not pushed to or
+  closed; expected to become redundant once this branch merges.
+- On branch, not yet merged.
+
 ## 2026-08-29 — memory-state model, design hypothesis (PR #131)
 
 - `memory/MEMORY-STATE-MODEL.md` added: a working-paper framework for

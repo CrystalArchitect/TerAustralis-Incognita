@@ -1,4 +1,4 @@
-# Starline Arsenal — Index of 31
+# Starline Arsenal — Index of 32
 
 ## The Deconstructors
 
@@ -9,6 +9,7 @@
 - [15 Root Cause Analysis (5 Whys)](models/15-root-cause.md)
 - [16 Recursion](models/16-recursion.md)
 - [31 Philology](models/31-philology.md)
+- [32 Provenance Stack](models/32-provenance-stack.md)
 
 ## The Predictors
 

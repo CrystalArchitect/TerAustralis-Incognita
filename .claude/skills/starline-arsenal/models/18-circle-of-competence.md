@@ -40,6 +40,10 @@ primitive: track() domain boundary
 
 Do not just name "Circle of Competence". Produce the artefact listed above. If no artefact, you have not run the model.
 
+## Cross-references
+
+[Provenance Stack](32-provenance-stack.md) — Circle of Competence grades your own standing to judge a claim; Provenance Stack grades the claim's source independent of who's judging it. Run both when the honest answer might be "I'm qualified to assess this, but the underlying source still isn't."
+
 ---
 Implementation: CrystalCore.OS™️ | Language: CrystalCode™️ | Starline Arsenal | TerAustralis Incognita™️ | Functional / simulated affect only
 

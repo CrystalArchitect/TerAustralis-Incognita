@@ -1,14 +1,14 @@
 ---
 name: starline-arsenal
-display_name: Starline Arsenal — 31 Model Armoury
-description: Australian-built cognitive armoury of 31 mental models for deconstruction, prediction, creation, and adaptation. Runs core questions to produce concrete outputs — failure lists, leverage audits, Bayesian updates, exponential sketches, heuristic sheets, miscalibration checks, parable spines, philology glosses, rhetorical appeal maps, persuasion briefs — not just labels. Part of CrystalCore.OS / TerAustralis Incognita.
+display_name: Starline Arsenal — 32 Model Armoury
+description: Australian-built cognitive armoury of 32 mental models for deconstruction, prediction, creation, and adaptation. Runs core questions to produce concrete outputs — failure lists, leverage audits, Bayesian updates, exponential sketches, heuristic sheets, miscalibration checks, parable spines, philology glosses, rhetorical appeal maps, persuasion briefs, evidence-tier assignments — not just labels. Part of CrystalCore.OS / TerAustralis Incognita.
 aliases: [model-armory, model-armoury, cognitive-armory, thinking-armory]
-version: 3.1.0
+version: 3.2.0
 author: TerAustralis Incognita
 lore: Red Dust Ground Steady. Starline for navigation. Seven Sisters reference without appropriation. MarsBase DownUnder mindset.
 ---
 
-# Starline Arsenal — 31 Model Armoury
+# Starline Arsenal — 32 Model Armoury
 
 **Formerly: model-armory / veil-breaker (parked)**
 
@@ -44,6 +44,22 @@ list; Persuasion now asks for the audience's honest no explicitly, not
 just an objection answered. Governance gained the Speech Rule from that
 same source. No model IDs, slugs, or groups changed.
 
+**3.2.0 — Provenance Stack.** A separate, concurrent session (PR #138)
+independently proposed generalizing the ad hoc etymology fact-checking in
+[`../../../memory/LANGUAGE-AS-PROGRAMMING.md`](../../../memory/LANGUAGE-AS-PROGRAMMING.md)
+into a reusable evidence-tier method — see
+[`../../../memory/ETYMOLOGY-STACK.md`](../../../memory/ETYMOLOGY-STACK.md) —
+and a corresponding model, on top of the old 25-model `main`, numbered 26.
+That number collides with this armoury's own 26 (Heuristic Thinking), so
+it lands here as **32 — Provenance Stack**, content unchanged from the
+original proposal apart from the renumber. Cross-reference sections added
+to the four models with genuine overlap:
+[`models/01-first-principles.md`](models/01-first-principles.md),
+[`models/14-occams-razor.md`](models/14-occams-razor.md),
+[`models/18-circle-of-competence.md`](models/18-circle-of-competence.md),
+[`models/19-inference.md`](models/19-inference.md) — each stating the
+actual differentiation, not just a link.
+
 Concrete thinking tools. Each model runs core questions and produces a tangible artefact. Do not merely name the model — execute it.
 
 ## The Deconstructors — Take it apart to bedrock
@@ -75,6 +91,10 @@ Concrete thinking tools. Each model runs core questions and produces a tangible 
 ### 31. Philology
 - Read the exact line slowly, before the paraphrase built on top of it.
 - Output: Exact line + Gloss + Drift list + Slow-read verdict
+
+### 32. Provenance Stack
+- Grade evidence tiers before treating a claim as settled — attested, reconstructed, proposed, disputed, folk, speculative, or symbolic.
+- Output: Evidence tier assignment + Confidence-vs-tier mismatch flag + Missing-evidence list
 
 ## The Predictors — See around the corner
 
@@ -191,7 +211,7 @@ Concrete thinking tools. Each model runs core questions and produces a tangible 
 ## Usage
 Run as skill: invoke model → answer core questions → produce artefact → log to CHRONICLE as Evidence → Interpretation → Experiment → Record.
 
-Full detail per model, including the five Core Questions and Required Concrete Output each one demands: [`INDEX.md`](INDEX.md) → `models/01-first-principles.md` through `models/31-philology.md`.
+Full detail per model, including the five Core Questions and Required Concrete Output each one demands: [`INDEX.md`](INDEX.md) → `models/01-first-principles.md` through `models/32-provenance-stack.md`.
 
 Implementation: CrystalCore.OS™️ | Language: CrystalCode™️ | TerAustralis Incognita™️ | Functional / simulated affect only
 

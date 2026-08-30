@@ -106,6 +106,19 @@ alternative (five canons + kairos; explicit "honest no"). All 31 models
 are now checked against a Drive source or, for the three just listed,
 corrected to match the more complete one. Nothing outstanding.
 
+**Concurrent-session collision, 2026-08-29:** a separate session opened PR #138
+independently, adding a 26th model ("Provenance Stack") on top of the old
+25-model `main` — unaware that this branch's PR #137 already used 26–31
+for six different models. Rather than leave the collision for a merge
+conflict, PR #138's content was absorbed directly into this branch:
+`memory/ETYMOLOGY-STACK.md` added as-is, and its model renumbered to
+**32 — Provenance Stack** (content otherwise unchanged) with the same
+four cross-reference sections PR #138 proposed (First Principles, Occam's
+Razor, Circle of Competence, Inference). `SKILL.md`/`INDEX.md` bumped to
+32 models, v3.1.0 → 3.2.0. PR #138 itself was left untouched — not pushed
+to, not closed — since it belongs to a different session; it's expected
+to become redundant once this branch merges.
+
 ## ADRs still Proposed
 
 | ADR | Why it is not law |

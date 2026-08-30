@@ -20,11 +20,12 @@ create a GitHub repository for a framework (ADR-0015).
 | CrystalCore Framework (companion package) | Built in the *code* tree, not this git | Travels with Clementine (`core/crystalcore/mind/` described; lives in `-Code`) | Extract it until Stage 3 gates fire |
 | one-but-many-field | Skill / book | `.claude/skills/one-but-many-field/` (not in this git yet; see "Kit skills" section below) | Collapse "one" and "many" into a single node |
 | field-test | Skill | `.claude/skills/field-test/` (not in this git yet; see "Kit skills" section below) | |
-| starline-arsenal | Skill, v3.1.0, 31 models (was 13), all 31 verified against a Drive source | [`.claude/skills/starline-arsenal/`](../.claude/skills/starline-arsenal/) | Use Songline as a component name |
+| starline-arsenal | Skill, v3.2.0, 32 models (was 13), all 31 verified against a Drive source, 32nd (Provenance Stack) absorbed from a concurrent PR | [`.claude/skills/starline-arsenal/`](../.claude/skills/starline-arsenal/) | Use Songline as a component name |
 | teraustralis (Claude Code skill) | Skill | [`.claude/skills/teraustralis/`](../.claude/skills/teraustralis/) | |
 | Memory-state model (Fact/Interpretation/Inheritance/Revision/Vision/Unknown; Bridge/Carry/Rewrite operators) | Vision — design hypothesis, not implemented | [`MEMORY-STATE-MODEL.md`](MEMORY-STATE-MODEL.md) | Treat as schema or enforcement; it's neither yet |
 | Cross-AI memory architecture (Individual/Collective/Starline Arsenal/SAT four-layer sketch) | Vision — design hypothesis, not implemented | [`CROSS-AI-MEMORY-ARCHITECTURE.md`](CROSS-AI-MEMORY-ARCHITECTURE.md) | Confuse with this repo's own Claude Code memory protocol (`CLAUDE.md` + `memory/`) — they are different systems |
 | Language-as-programming (word→category→institution feedback loop; fact-checked etymology appendix) | Vision — research hypothesis, not proven | [`LANGUAGE-AS-PROGRAMMING.md`](LANGUAGE-AS-PROGRAMMING.md) | Treat as evidence that any institution practices "mind control" — the doc explicitly supports only the weaker, contestable claim of influence |
+| Etymology Stack (10-tier evidence-grading method for word-origin claims; generalizes the fact-checking above) | Vision — methodology, not implemented as code | [`ETYMOLOGY-STACK.md`](ETYMOLOGY-STACK.md) | Treat a symbolic/Vision-tier reading (e.g. gematria, the Crystal Equation) as the same tier as an attested fact (e.g. Roman numerals) |
 
 **Starline Arsenal 13 → 31 merge (2026-08-29):** two independent expansions
 of the original 13-model armoury existed in parallel in Google Drive without
