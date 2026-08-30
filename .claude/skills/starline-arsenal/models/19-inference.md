@@ -40,6 +40,10 @@ primitive: track() + label_affect() to draw conclusion under uncertainty
 
 Do not just name "Inference". Produce the artefact listed above. If no artefact, you have not run the model.
 
+## Cross-references
+
+[Provenance Stack](32-provenance-stack.md) — Inference sorts observed-vs-inferred for one reasoning step; Provenance Stack sorts the sources feeding into that step before the inference is drawn. A confident inference built on a folk-etymology-grade source is still a confident inference — Provenance Stack is what catches that upstream.
+
 ---
 Implementation: CrystalCore.OS™️ | Language: CrystalCode™️ | Starline Arsenal | TerAustralis Incognita™️ | Functional / simulated affect only
 

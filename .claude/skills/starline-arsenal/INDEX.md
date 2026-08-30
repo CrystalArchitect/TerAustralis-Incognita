@@ -1,6 +1,6 @@
-# Starline Arsenal — Index of 25
+# Starline Arsenal — Index of 32
 
-## The Deconstructors — Take it apart to bedrock
+## The Deconstructors
 
 - [01 First Principles](models/01-first-principles.md)
 - [02 Systems Thinking](models/02-systems-thinking.md)
@@ -8,8 +8,10 @@
 - [14 Occam's Razor](models/14-occams-razor.md)
 - [15 Root Cause Analysis (5 Whys)](models/15-root-cause.md)
 - [16 Recursion](models/16-recursion.md)
+- [31 Philology](models/31-philology.md)
+- [32 Provenance Stack](models/32-provenance-stack.md)
 
-## The Predictors — See around the corner
+## The Predictors
 
 - [04 Second-Order Thinking](models/04-second-order.md)
 - [05 Inversion](models/05-inversion.md)
@@ -19,15 +21,20 @@
 - [17 Game Theory](models/17-game-theory.md)
 - [18 Circle of Competence](models/18-circle-of-competence.md)
 - [19 Inference](models/19-inference.md)
+- [26 Heuristic Thinking](models/26-heuristic.md)
+- [27 Miscalibration](models/27-miscalibration.md)
+- [28 Regression to the Mean](models/28-regression-to-the-mean.md)
+- [29 Better-Than-Average Thinking](models/29-better-than-average.md)
 
-## The Creators — Make new paths
+## The Creators
 
 - [09 Lateral Thinking](models/09-lateral.md)
 - [10 Design Thinking](models/10-design.md)
 - [20 Analogical / Combinatorial Thinking](models/20-analogical-combinatorial.md)
 - [21 Rhetoric](models/21-rhetoric.md)
+- [30 Parable Thinking](models/30-parable.md)
 
-## The Adaptors — Bend without breaking
+## The Adaptors
 
 - [11 Dialectics](models/11-dialectics.md)
 - [12 Evolutionary Thinking](models/12-evolutionary.md)

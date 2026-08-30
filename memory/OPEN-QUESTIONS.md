@@ -65,22 +65,59 @@ Recommendation on disk: disambiguate the way ADR-0004 disambiguated
 [`mythos/NAMES.md`](../mythos/NAMES.md)). Replacement names are left to
 the maintainer.
 
-## Starline Arsenal — 14–25 not yet reconciled against Grok's own text
+## Starline Arsenal — 14–25 verification gate: struck 2026-08-29 (resolved)
 
-Crystal reported Grok's parallel `starline-arsenal` skill (lives only in
-Grok's own runtime, `/home/workdir/.grok/skills/`, never written to Drive
-or GitHub) had grown to ~21 models. That text could not be retrieved
-(Grok session out of tokens) and no copy of it exists in Drive, GitHub,
-or any note file searched 2026-08-29. With Crystal's explicit approval,
-models 14–25 were drafted fresh by Claude Code instead — 8 proposed,
-4 named directly by Crystal (Recursion, Inference, Rhetoric, Persuasion)
-— in the same template as 01–13. **Label: Vision/drafted, not verified.**
+Previously recorded as: Grok's parallel `starline-arsenal` skill had
+reportedly grown to ~21 models, its text unretrievable, and models 14–25
+were drafted fresh by Claude Code without a source to check against.
+**That framing turned out to be incomplete.** A later session searched
+Google Drive directly and found not Grok's runtime skill, but two
+independent Claude-authored lineages already sitting there: a 25-model
+line (`Starline Arsenal Models/` folder, v2.0.0) and a separate 21-model
+line (`starline-arsenal.md`, v1.3.0), neither aware of the other and
+overlapping on two models (Rhetoric, Persuasion) under matching names.
 
-Gate: if Grok's own model list ever surfaces (pasted, exported, or
-written to Drive per the standing `KIT_HUB_SAVE_SKILL.md` save rule),
-reconcile names, groupings, and registers against it here, and correct
-`SKILL.md` / `INDEX.md` / the affected `models/*.md` files to match. Do
-not assume the drafted 12 match Grok's wording until checked.
+Fetched and diffed directly: the previously-drafted models 14–25 match
+the 25-model Drive line's text exactly, file for file. The verification
+gate is satisfied — not because Grok's text surfaced, but because the
+actual Drive source was found and checked. The 6 models unique to the
+21-model line (Heuristic, Miscalibration, Regression to the Mean,
+Better-Than-Average, Parable, Philology) were added as 26–31, giving one
+canonical 31-model v3.0.0. The 21-model line's dated "Field card" entries
+referencing a specific real situation and person were excluded from the
+merge per [`PRIVACY.md`](PRIVACY.md) — those are operational notes, not
+general model content.
+
+No open gate remains for this skill's model content. If Grok's own
+runtime skill text ever does surface separately, treat it as a fresh
+input to check against this now-31-model version, not as unfinished
+business this entry was waiting on.
+
+**Full verification pass, 2026-08-29:** on request, extended verification
+to all 31 models, not just 14–25. Models 1–13 (pre-dating both Drive
+lineages) fetched fresh from the "Starline Arsenal Models" Drive folder
+and confirmed byte-identical to the on-disk files. This pass also caught
+two real fidelity gaps against the 21-model line's own text, both now
+fixed in `models/30-parable.md`, `models/21-rhetoric.md`, and
+`models/25-persuasion.md` (SKILL.md v3.0.0 → 3.1.0): a missing "no
+borrowed lyrics" rule on Parable, and a plainer Rhetoric/Persuasion
+version kept where the 21-model line had a richer, later-dated (29 Aug)
+alternative (five canons + kairos; explicit "honest no"). All 31 models
+are now checked against a Drive source or, for the three just listed,
+corrected to match the more complete one. Nothing outstanding.
+
+**Concurrent-session collision, 2026-08-29:** a separate session opened PR #138
+independently, adding a 26th model ("Provenance Stack") on top of the old
+25-model `main` — unaware that this branch's PR #137 already used 26–31
+for six different models. Rather than leave the collision for a merge
+conflict, PR #138's content was absorbed directly into this branch:
+`memory/ETYMOLOGY-STACK.md` added as-is, and its model renumbered to
+**32 — Provenance Stack** (content otherwise unchanged) with the same
+four cross-reference sections PR #138 proposed (First Principles, Occam's
+Razor, Circle of Competence, Inference). `SKILL.md`/`INDEX.md` bumped to
+32 models, v3.1.0 → 3.2.0. PR #138 itself was left untouched — not pushed
+to, not closed — since it belongs to a different session; it's expected
+to become redundant once this branch merges.
 
 ## ADRs still Proposed
 

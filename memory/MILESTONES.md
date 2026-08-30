@@ -11,6 +11,54 @@ dated bullet and update [`state/CURRENT.md`](state/CURRENT.md).
 
 **Sourced:** 2026-08-28. Newest first.
 
+## 2026-08-29 — Starline Arsenal reconciled 25 → 31, verification gate resolved
+
+- The verification gate opened when models 14–25 landed (PR #130,
+  logged in `OPEN-QUESTIONS.md`) is resolved: the source was two
+  independent Claude-authored lineages in Google Drive, not Grok's
+  runtime skill as first believed. Models 14–25 confirmed identical
+  file-for-file against the 25-model Drive line.
+- 6 models unique to a separate 21-model Drive line — Heuristic,
+  Miscalibration, Regression to the Mean, Better-Than-Average, Parable,
+  Philology — merged in as `models/26-heuristic.md` through
+  `models/31-philology.md`.
+- That line's dated "Field card" entries (a specific real situation and
+  person) excluded from the merge per `PRIVACY.md`.
+- `SKILL.md` / `INDEX.md` updated to 31 models, version 2.0.0 → 3.0.0.
+- On branch, not yet merged.
+
+## 2026-08-29 — Starline Arsenal full verification pass (1–31), two fidelity gaps fixed
+
+- Extended verification to models 1–13, the only slice not yet checked
+  against a source. Fetched fresh from the "Starline Arsenal Models"
+  Drive folder; confirmed byte-identical to on-disk.
+- Re-reading the 21-model line's full source text surfaced two real
+  gaps against what had shipped: `models/30-parable.md` was missing the
+  source's "no borrowed lyrics" rule; `models/21-rhetoric.md` and
+  `models/25-persuasion.md` had kept plainer wording where a richer,
+  later-dated (29 Aug) version existed — five rhetorical canons and the
+  ethos/pathos/logos/kairos appeal square, and an explicit "honest no"
+  step in Persuasion.
+- All three fixed; governance gained the Speech Rule from the same
+  source. `SKILL.md` version 3.0.0 → 3.1.0.
+- On branch, not yet merged.
+
+## 2026-08-29 — Provenance Stack absorbed from a concurrent PR, collision avoided
+
+- A separate session's PR #138 independently added a 26th model
+  ("Provenance Stack") plus `memory/ETYMOLOGY-STACK.md` on top of the old
+  25-model `main`, unaware this branch already used 26–31 for six other
+  models — the same collision shape as PR #130 earlier the same day.
+- Absorbed directly onto this branch rather than left to conflict:
+  `ETYMOLOGY-STACK.md` added as-is; the model renumbered to
+  `models/32-provenance-stack.md`, content unchanged apart from the
+  renumber; the same four proposed cross-references added (First
+  Principles, Occam's Razor, Circle of Competence, Inference).
+- `SKILL.md` / `INDEX.md` bumped 31 → 32 models, version 3.1.0 → 3.2.0.
+- PR #138 left untouched — different session's PR, not pushed to or
+  closed; expected to become redundant once this branch merges.
+- On branch, not yet merged.
+
 ## 2026-08-29 — memory-state model, design hypothesis (PR #131)
 
 - `memory/MEMORY-STATE-MODEL.md` added: a working-paper framework for
