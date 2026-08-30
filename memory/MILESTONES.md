@@ -11,6 +11,20 @@ dated bullet and update [`state/CURRENT.md`](state/CURRENT.md).
 
 **Sourced:** 2026-08-28. Newest first.
 
+## 2026-08-30 — Provenance Log started (non-etymology evidence cards)
+
+- [`memory/PROVENANCE-LOG.md`](PROVENANCE-LOG.md) added: the
+  general-purpose sibling of `ETYMOLOGY-STACK.md`, for Provenance
+  Stack (Starline Arsenal 32) evidence cards on claims that aren't
+  about word origins — health/science-adjacent marketing, viral
+  claims, etc. First worked card: "structured / EZ water," tiering
+  Gerald Pollack's exclusion-zone observation (A−, real but disputed
+  and unreplicated) apart from the H₃O₂ structural claim (D, rejected
+  by chemists) and the wellness-marketing extension to whole-body
+  hydration and fascia signaling (D/C, unsupported).
+- Wired into `memory/FRAMEWORKS.md`.
+- On branch, not yet merged.
+
 ## 2026-08-29 — Starline Arsenal reconciled 25 → 31, verification gate resolved
 
 - The verification gate opened when models 14–25 landed (PR #130,
