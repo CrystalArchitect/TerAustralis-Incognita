@@ -25,7 +25,7 @@ dated bullet and update [`state/CURRENT.md`](state/CURRENT.md).
 - That line's dated "Field card" entries (a specific real situation and
   person) excluded from the merge per `PRIVACY.md`.
 - `SKILL.md` / `INDEX.md` updated to 31 models, version 2.0.0 → 3.0.0.
-- On branch, not yet merged.
+- **Merged to main via PR #137** (2026-08-30 03:01 UTC).
 
 ## 2026-08-29 — Starline Arsenal full verification pass (1–31), two fidelity gaps fixed
 
@@ -41,7 +41,7 @@ dated bullet and update [`state/CURRENT.md`](state/CURRENT.md).
   step in Persuasion.
 - All three fixed; governance gained the Speech Rule from the same
   source. `SKILL.md` version 3.0.0 → 3.1.0.
-- On branch, not yet merged.
+- **Merged to main via PR #137** (2026-08-30 03:01 UTC).
 
 ## 2026-08-29 — Provenance Stack absorbed from a concurrent PR, collision avoided
 
@@ -56,8 +56,10 @@ dated bullet and update [`state/CURRENT.md`](state/CURRENT.md).
   Principles, Occam's Razor, Circle of Competence, Inference).
 - `SKILL.md` / `INDEX.md` bumped 31 → 32 models, version 3.1.0 → 3.2.0.
 - PR #138 left untouched — different session's PR, not pushed to or
-  closed; expected to become redundant once this branch merges.
-- On branch, not yet merged.
+  closed.
+- **Merged to main via PR #137** (2026-08-30 03:01 UTC). PR #138 now
+  shows a real merge conflict (`mergeable_state: dirty`) against the new
+  `main`, as expected — resolving or closing it is the maintainer's call.
 
 ## 2026-08-29 — memory-state model, design hypothesis (PR #131)
 
