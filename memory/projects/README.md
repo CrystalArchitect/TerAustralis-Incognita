@@ -23,6 +23,12 @@ Per [`../../docs/governance/Project-Boundaries.md`](../../docs/governance/Projec
 | TerAustralis-Incognita-Code | `Code/` | Active | umbrella + repo-specific |
 | TheCrystalVision | `TheCrystalVision/` | Active | umbrella + repo-specific |
 
+Non-repo tracked project (public accountability, not code):
+
+| Project | Directory | Status | Track via |
+|---|---|---|---|
+| 90-Day Public Roadmap (Aug 30 → Nov 28, 2026) | [`90-Day-Roadmap/`](90-Day-Roadmap/) | Active, nothing shipped yet | [`90-Day-Roadmap/CURRENT.md`](90-Day-Roadmap/CURRENT.md) |
+
 ## Recently concluded
 
 ### Repository Memory Bootstrap — COMPLETE 2026-08-28
