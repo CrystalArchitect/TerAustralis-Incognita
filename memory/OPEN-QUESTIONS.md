@@ -119,6 +119,46 @@ Razor, Circle of Competence, Inference). `SKILL.md`/`INDEX.md` bumped to
 to, not closed — since it belongs to a different session; it's expected
 to become redundant once this branch merges.
 
+## Starline Arsenal — public-facing "Erisian Blade" / Collaboration Protocol, external to this repo
+
+A different AI session (working from public X posts, apparently xAI/Grok)
+described a "Starline Arsenal" it found there as "Thirteen Blades of
+Thought" organized around DECONSTRUCT · PREDICT · CREATE · ADAPT, paired
+with an "Erisian Blade" that "cuts claims, narratives, and identity
+armor." That session couldn't find a formal spec and asked how to
+proceed. Reconciled here rather than left as a mystery:
+
+- **The four-verb structure is not a different framework — it's this
+  one.** This repo's Starline Arsenal has always been organized into
+  exactly those four groups (The Deconstructors, The Predictors, The
+  Creators, The Adaptors), and it started at 13 models before this
+  session expanded it to 25, then 31, then 32 (see the entries above and
+  in `MILESTONES.md`). "Thirteen Blades" almost certainly names the
+  original 13-model state, described in the mythic/public register X
+  posts use rather than this repo's technical-spec register.
+- **"Erisian Blade" is confirmed real**, not an inference: Crystal
+  shared two branded infographics in chat (2026-08-30) — one applying an
+  "Erisian Blade: Masaru Emoto" evidence-tier critique to the water-
+  crystal claims already covered in `LANGUAGE-AS-PROGRAMMING.md`, and one
+  titled "Collaboration Protocol: Share · Blade · Build" defining three
+  interaction modes (Share = no audit required, Blade = stress-test the
+  claim, Build = move forward from convergence), a response order
+  (convergence → refinement → next steps), core rules ("the blade cuts
+  claims, not claimants"; "if we've converged, stop cutting and start
+  building"), and a scripted de-escalation "repair move." Both are real,
+  formatted artifacts, not summarized secondhand.
+- **What's still unconfirmed:** whether Erisian Blade is formally a
+  Starline Arsenal model (a 33rd, unlisted one, or a variant of
+  Provenance Stack), a separate-but-related persona in the same circle,
+  or something else structurally distinct that just shares vocabulary
+  and method. Nothing in this repo's own `.claude/skills/starline-arsenal/`
+  currently names "Erisian Blade" or the Share/Blade/Build protocol. Not
+  merged into the skill itself pending Crystal's confirmation of which of
+  those it actually is.
+
+**Label: Vision/external — confirmed to exist (image evidence), not yet
+reconciled into this repo's own Starline Arsenal spec.**
+
 ## ADRs still Proposed
 
 | ADR | Why it is not law |

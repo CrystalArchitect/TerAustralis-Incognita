@@ -26,6 +26,7 @@ create a GitHub repository for a framework (ADR-0015).
 | Cross-AI memory architecture (Individual/Collective/Starline Arsenal/SAT four-layer sketch) | Vision — design hypothesis, not implemented | [`CROSS-AI-MEMORY-ARCHITECTURE.md`](CROSS-AI-MEMORY-ARCHITECTURE.md) | Confuse with this repo's own Claude Code memory protocol (`CLAUDE.md` + `memory/`) — they are different systems |
 | Language-as-programming (word→category→institution feedback loop; fact-checked etymology appendix) | Vision — research hypothesis, not proven | [`LANGUAGE-AS-PROGRAMMING.md`](LANGUAGE-AS-PROGRAMMING.md) | Treat as evidence that any institution practices "mind control" — the doc explicitly supports only the weaker, contestable claim of influence |
 | Etymology Stack (10-tier evidence-grading method for word-origin claims; generalizes the fact-checking above) | Vision — methodology, not implemented as code | [`ETYMOLOGY-STACK.md`](ETYMOLOGY-STACK.md) | Treat a symbolic/Vision-tier reading (e.g. gematria, the Crystal Equation) as the same tier as an attested fact (e.g. Roman numerals) |
+| Provenance Log (same evidence-tier method, generalized to non-etymology claims — health, science-adjacent marketing, viral claims) | Vision — methodology log, worked examples only | [`PROVENANCE-LOG.md`](PROVENANCE-LOG.md) | Filing a non-language claim into `ETYMOLOGY-STACK.md` instead — that file stays word-origin-specific |
 
 **Starline Arsenal 13 → 31 merge (2026-08-29):** two independent expansions
 of the original 13-model armoury existed in parallel in Google Drive without

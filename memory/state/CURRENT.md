@@ -53,6 +53,7 @@ requiring her decision — recorded in
 | This memory protocol (root `CLAUDE.md` + `memory/`) | Built (docs / process), **live on `main`** | PR #123, merged 2026-08-28 |
 | CMX/Ovaro/Continuum external boundary | Built (governance, memory-recorded) | `memory/DECISIONS.md` "Direct maintainer decisions," 2026-08-28 |
 | Frameworks retrieval map (`memory/FRAMEWORKS.md`) | Docs / process. **On this PR, not `main` until merged.** Points; does not dump Drive papers. | this branch, 2026-08-28 |
+| 90-Day Public Roadmap (Aug 30 → Nov 28, 2026), Crystal's public accountability plan | Vision/commitment, nothing shipped yet | `memory/projects/90-Day-Roadmap/`, 2026-08-30 |
 
 ## Seats
 
