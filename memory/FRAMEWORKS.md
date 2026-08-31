@@ -61,6 +61,12 @@ Do not copy these papers' worked examples or personal-layer objects into
 | Stellar fusion + CMB note | Working note | [STELLAR_FUSION_AND_CMB.txt](https://drive.google.com/file/d/1XoabCBnbs62gPlvDqQlrOROQYS9sAsOf/view) |
 | Claude Code memory protocol (Drive door) | Process | [folder](https://drive.google.com/drive/folders/1kA0WS9lDYaZHoP1Hg1Y_6HfKLaIWB67k) — GitHub remains canon |
 | CrystalCore.OS — Sovereign Edge AGI Framework | Historical Drive paper (2026-07-04). **Vision**. Current CrystalCore *names* still ADR-0004. GitHub URLs inside the paper are superseded. | [Doc](https://docs.google.com/document/d/1DG0iVlMB24X1HBbden7IWi-Xl2RokyziBreuC7oXF_g/edit) |
+| Number Collision 60-second probe (2026-08-31) | Prototype of the v1.0 paper. **Not a new framework.** | [NUMBER-COLLISION-PROBE.md](https://drive.google.com/file/d/1G9Gdt1lHml9y4wHQp_AJjaCYTzpXi1YY/view) · [folder](https://drive.google.com/drive/folders/10ReK84rym3xK0d9qqbOW98yt9rc3229b) |
+| Dual-clock sounding | Prototype of CICH dual-clock / Starline as method | [DUAL-CLOCK-SOUNDING.md](https://drive.google.com/file/d/1iCerrlD94_NEOivUuIkFLpY1HDlShITa/view) |
+| Loop Framework Drive copy | Preservation copy of `the-library` paper. Method, not law. | [LOOP-FRAMEWORK.md](https://drive.google.com/file/d/1wT8c5teyKGicHClDbjRU0IwY0ZZJOK7U/view) |
+| Stories, songs, workshop images (2026-08-31 save) | Process / archive. GitHub remains hashed canon for music. | [stories-and-songs](https://drive.google.com/drive/folders/1Hbq9ZccTCIXkrC1d5eftJPI-MFB-6p1m) · [workshop-images](https://drive.google.com/drive/folders/1yyNwc1csSPndv6GKmf75oiPTILRxbbzA) · [receipt](https://drive.google.com/file/d/18fjCx9pFY2d8ZSKIwWjG8GGdbUZea3vT/view) |
+
+**2026-08-31 prototypes (Drive only).** Collision Probe, Dual-clock sounding, and the Loop Drive copy are runnable field-manuals of frameworks already named above. They are not new named frameworks. Map: [FRAMEWORKS-PROTOTYPES.md](https://drive.google.com/file/d/1fGEBiE3tOLD7X48YwYUt7Yig5Q0VClsq/view).
 
 Number Collision one-line: **same table, same operation, same total — not
 the same thing.** Collision is not a link. Story is a bridge; land in
