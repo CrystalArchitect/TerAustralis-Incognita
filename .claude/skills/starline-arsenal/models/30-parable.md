@@ -2,13 +2,13 @@
 id: 30
 slug: parable
 name: Parable Thinking
-group: The Creators
+group: The Readers
 arsenal: starline-arsenal
 register: FORGE
 primitive: close_with() an open story rather than a stated moral
 ---
 
-# 30 — Parable Thinking (The Creators)
+# 30 — Parable Thinking (The Readers)
 
 **Purpose:** Make a lesson land through a short human story with an open ending, rather than a stated moral. Not a fable. Not an allegory. No borrowed lyrics — write original content, never quoted song or poem text passed off as the parable.
 

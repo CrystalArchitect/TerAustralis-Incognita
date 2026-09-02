@@ -11,6 +11,32 @@ dated bullet and update [`state/CURRENT.md`](state/CURRENT.md).
 
 **Sourced:** 2026-08-28. Newest first.
 
+## 2026-09-02 — Starline Arsenal corrected to six wings, sourced to Grok self-correction
+
+- Directed Drive audit ("fix our memory issues") surfaced a new source:
+  a Grok session's own correction card in Drive's "CVSC" collection
+  (dated 2026-09-01) states directly that the real working Starline
+  Arsenal is "21 models v1.3.0... across Deconstruct, Predict, Create,
+  Adapt, Read, Speak wings" and that the public four-verb framing is "a
+  poster slogan, not the full kit."
+- This confirms the 21-model Drive lineage reconciled into this armoury
+  at v3.0.0 (2026-08-29) was the right source, and reveals a real defect
+  in how that merge was done: the source's six group headers were
+  flattened into the original four, filing Readers/Speakers content
+  under the wrong groups.
+- Fixed: `models/26-heuristic.md`, `models/30-parable.md`,
+  `models/31-philology.md` moved to **The Readers**;
+  `models/21-rhetoric.md`, `models/25-persuasion.md` moved to **The
+  Speakers**. `SKILL.md`/`INDEX.md` restructured to match. No model IDs,
+  slugs, or content changed — only group assignment. Version 3.2.0 → 3.3.0.
+- Same source card doesn't mention "Erisian Blade" anywhere, despite
+  correcting the public framing in detail — real (not conclusive)
+  evidence it's a separate tool, not an unlisted 33rd model. Recorded in
+  `OPEN-QUESTIONS.md`, still open pending Crystal's confirmation.
+- `memory/FRAMEWORKS.md` updated (version bump, new CVSC pointer row —
+  the Drive archive this correction card came from, not imported here).
+- On branch, not yet merged.
+
 ## 2026-08-30 — Provenance Log started (non-etymology evidence cards)
 
 - [`memory/PROVENANCE-LOG.md`](PROVENANCE-LOG.md) added: the

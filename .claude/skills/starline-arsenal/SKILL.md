@@ -1,9 +1,9 @@
 ---
 name: starline-arsenal
 display_name: Starline Arsenal — 32 Model Armoury
-description: Australian-built cognitive armoury of 32 mental models for deconstruction, prediction, creation, and adaptation. Runs core questions to produce concrete outputs — failure lists, leverage audits, Bayesian updates, exponential sketches, heuristic sheets, miscalibration checks, parable spines, philology glosses, rhetorical appeal maps, persuasion briefs, evidence-tier assignments — not just labels. Part of CrystalCore.OS / TerAustralis Incognita.
+description: Australian-built cognitive armoury of 32 mental models across six wings — deconstruction, prediction, creation, adaptation, reading, and speech. Runs core questions to produce concrete outputs — failure lists, leverage audits, Bayesian updates, exponential sketches, heuristic sheets, miscalibration checks, parable spines, philology glosses, rhetorical appeal maps, persuasion briefs, evidence-tier assignments — not just labels. Part of CrystalCore.OS / TerAustralis Incognita.
 aliases: [model-armory, model-armoury, cognitive-armory, thinking-armory]
-version: 3.2.0
+version: 3.3.0
 author: TerAustralis Incognita
 lore: Red Dust Ground Steady. Starline for navigation. Seven Sisters reference without appropriation. MarsBase DownUnder mindset.
 ---
@@ -60,6 +60,27 @@ to the four models with genuine overlap:
 [`models/19-inference.md`](models/19-inference.md) — each stating the
 actual differentiation, not just a link.
 
+**3.3.0 — Six wings, not four.** A Grok session's own correction card
+(Google Drive, "CVSC" collection, 2026-09-01) confirms directly: "Starline
+Arsenal working kit is 21 models v1.3.0, not only the public four-verb
+slogan" — the four-verb DECONSTRUCT/PREDICT/CREATE/ADAPT framing seen in
+public X posts is a poster slogan, not the full taxonomy. The 21-model
+Drive source this armoury was reconciled from in 3.0.0 already carried
+six group headers — Deconstructors, Predictors, Creators, Adaptors,
+**Readers**, **Speakers** — but the 3.0.0 merge filed Readers/Speakers
+content under the original four groups instead of preserving the wings.
+Fixed here: [`models/26-heuristic.md`](models/26-heuristic.md),
+[`models/30-parable.md`](models/30-parable.md), and
+[`models/31-philology.md`](models/31-philology.md) move to **The
+Readers**; [`models/21-rhetoric.md`](models/21-rhetoric.md) and
+[`models/25-persuasion.md`](models/25-persuasion.md) move to **The
+Speakers**. Model IDs, slugs, and content unchanged — only `group`
+frontmatter, in-file headers, `INDEX.md`, and this file's section
+structure. Same source card, notably, does not mention "Erisian Blade" as
+part of Starline Arsenal at all — weak evidence toward it being a
+separate persona/tool rather than an unlisted 33rd model; see
+`../../../memory/OPEN-QUESTIONS.md`.
+
 Concrete thinking tools. Each model runs core questions and produces a tangible artefact. Do not merely name the model — execute it.
 
 ## The Deconstructors — Take it apart to bedrock
@@ -87,10 +108,6 @@ Concrete thinking tools. Each model runs core questions and produces a tangible 
 ### 16. Recursion
 - Reduce to a smaller version of the same problem plus a base case.
 - Output: Self-similar structure + Base case + Termination check
-
-### 31. Philology
-- Read the exact line slowly, before the paraphrase built on top of it.
-- Output: Exact line + Gloss + Drift list + Slow-read verdict
 
 ### 32. Provenance Stack
 - Grade evidence tiers before treating a claim as settled — attested, reconstructed, proposed, disputed, folk, speculative, or symbolic.
@@ -130,10 +147,6 @@ Concrete thinking tools. Each model runs core questions and produces a tangible 
 - Draw the conclusion the evidence supports, and name which kind.
 - Output: Observed vs inferred split + Inference type + Confidence
 
-### 26. Heuristic Thinking
-- Name the mental shortcut in play — availability, representativeness, anchoring — before trusting the snap judgment.
-- Output: Heuristic sheet + Bias family named + Debias check
-
 ### 27. Miscalibration
 - Score, guess, and method are three different objects; a famous effect is not a character.
 - Output: Miscalibration sheet + Confidence-vs-accuracy gap
@@ -160,14 +173,6 @@ Concrete thinking tools. Each model runs core questions and produces a tangible 
 - Borrow a structure from one domain, recombine into another.
 - Output: Structural mapping + Combination sketch + Novel output
 
-### 21. Rhetoric
-- Build the argument that actually lands — which appeal is doing the work, ethos, pathos, logos, or kairos.
-- Output: Appeal map (ethos / pathos / logos / kairos) + Arrangement + Figure named
-
-### 30. Parable Thinking
-- What story, carrying the same structure as this problem, makes the lesson land without argument? Not a fable, not an allegory, no borrowed lyrics.
-- Output: Parable spine + Structural mapping to the real situation
-
 ## The Adaptors — Bend without breaking
 
 ### 11. Dialectics
@@ -193,6 +198,26 @@ Concrete thinking tools. Each model runs core questions and produces a tangible 
 ### 24. Margin of Safety
 - Build in the buffer that survives being wrong.
 - Output: Best-estimate vs worst-case table + Buffer size
+
+## The Readers — Make meaning without closing the book
+
+### 26. Heuristic Thinking
+- Name the mental shortcut in play — availability, representativeness, anchoring — before trusting the snap judgment.
+- Output: Heuristic sheet + Bias family named + Debias check
+
+### 30. Parable Thinking
+- What story, carrying the same structure as this problem, makes the lesson land without argument? Not a fable, not an allegory, no borrowed lyrics.
+- Output: Parable spine + Structural mapping to the real situation
+
+### 31. Philology
+- Read the exact line slowly, before the paraphrase built on top of it.
+- Output: Exact line + Gloss + Drift list + Slow-read verdict
+
+## The Speakers — Move a mind without owning it
+
+### 21. Rhetoric
+- Build the argument that actually lands — which appeal is doing the work, ethos, pathos, logos, or kairos.
+- Output: Appeal map (ethos / pathos / logos / kairos) + Arrangement + Figure named
 
 ### 25. Persuasion
 - Shift another's position through legitimate influence, not coercion — and know their honest no when you hear it.
