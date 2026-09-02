@@ -1,4 +1,4 @@
-# Starline Arsenal — Index of 32
+# Starline Arsenal — Index of 43
 
 ## The Deconstructors
 
@@ -43,5 +43,18 @@
 - [23 Antifragility](models/23-antifragility.md)
 - [24 Margin of Safety](models/24-margin-of-safety.md)
 - [25 Persuasion](models/25-persuasion.md)
+
+## The Infrastructure Engines
+
+- [34 Telemetry & Observability](models/34-telemetry-obs.md)
+- [35 Vector Storage & Retrieval](models/35-vector-persist.md)
+- [36 Sandbox Containment & Security](models/36-sandbox-wall.md)
+- [37 Background Task Queueing](models/37-cron-queue.md)
+- [38 API Gateway & Routing](models/38-api-router.md)
+- [39 UX Rendering & Dashboards](models/39-ux-render.md)
+- [40 Runtime Core & Execution](models/40-runtime-core.md)
+- [41 Stress Testing & Regression](models/41-stress-unit.md)
+- [42 Database Sharding & Scaling](models/42-cluster-shard.md)
+- [43 Hardware Abstraction Layer](models/43-hw-abstraction.md)
 
 **All rights reserved.** TerAustralis Incognita™️ — ABN 70 741 068 059
