@@ -1,4 +1,4 @@
-# Starline Arsenal — Index of 43
+# Starline Arsenal — Index of 42
 
 ## The Deconstructors
 
