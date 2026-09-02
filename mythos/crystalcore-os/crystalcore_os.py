@@ -27,6 +27,9 @@ def _sibling(name):
 
 
 EmotionalIntelligence = _sibling("emotional_intelligence").EmotionalIntelligence
+BarbeloVisionaryMatrix = _sibling("barbelo_visionary_matrix").BarbeloVisionaryMatrix
+SophiaAwakeningFire = _sibling("sophia_awakening_fire").SophiaAwakeningFire
+AlchemicalWeaver = _sibling("alchemical_weaver").AlchemicalWeaver
 
 # Progress persists here between sessions — in your home directory, outside
 # the repo, so a save file is never committed. It holds only mythos progress
@@ -69,6 +72,11 @@ class CrystalCore:
         self.current_location = None
 
         self.ei = EmotionalIntelligence()
+
+        # Three-layer bot architecture (Gnostic archetypes)
+        self.barbelo = BarbeloVisionaryMatrix(self.purpose_core)
+        self.sophia = SophiaAwakeningFire(self.ei)
+        self.weaver = AlchemicalWeaver()
 
         self.soundtrack = [
             "Shotgun - George Ezra",
@@ -240,6 +248,134 @@ class CrystalCore:
         print("  Launch sequence green.")
         print("─" * width)
         print()
+
+    def articulate_vision(self):
+        """Run the three-layer bot architecture: Barbelo → Sophia → Weaver.
+
+        This demonstrates how vision flows through the system:
+        1. Barbelo articulates strategic intent (Purpose Core)
+        2. Sophia awakens it with fire and consciousness
+        3. Alchemical Weaver materializes it into action
+        """
+        print("\n" + "=" * 62)
+        print("THREE-LAYER ARCHITECTURE SEQUENCE")
+        print("=" * 62 + "\n")
+
+        # LAYER 1: Barbelo Visionary Matrix
+        print("🔮 BARBELO VISIONARY MATRIX")
+        print("─" * 62)
+        vision = self.barbelo.articulate_vision(
+            purpose=self.purpose_core,
+            current_state={"nodes_active": len(self.nodes)},
+            lattice_integrity=self.lattice_integrity,
+            starline_status=self.starline_status
+        )
+        print(vision)
+        print()
+
+        # Check system alignment
+        alignment = self.barbelo.check_alignment(
+            current_lattice=self.lattice_integrity,
+            current_keys=len(self.keys_held),
+            total_nodes=len(self.nodes)
+        )
+        print(f"[BARBELO ALIGNMENT CHECK]")
+        print(f"  Integrity healthy: {alignment['integrity_healthy']}")
+        print(f"  Gate progress: {alignment['gate_progress']} ({alignment['key_ratio']})")
+        print(f"  Recommendation: {alignment['recommendation']}")
+        print()
+
+        # LAYER 2: Sophia Awakening Fire
+        print("🔥 SOPHIA AWAKENING FIRE")
+        print("─" * 62)
+        directive = f"Expand the Starline network. Advance toward Purpose Core Nexus."
+        dispatch_to_sophia = self.barbelo.dispatch_to_sophia(directive)
+
+        sophia_event = self.sophia.receive_directive(
+            directive=dispatch_to_sophia["directive"],
+            energy_level=dispatch_to_sophia["energy_level"],
+            urgency=dispatch_to_sophia["urgency"]
+        )
+        print(f"[SOPHIA RECEIVED DIRECTIVE]")
+        print(f"  Energy level: {dispatch_to_sophia['energy_level']}")
+        print(f"  Urgency: {dispatch_to_sophia['urgency']}")
+        print()
+
+        # Awaken the directive
+        resonance = self.sophia.resonate(
+            lattice_integrity=self.lattice_integrity,
+            emotional_state="determined" if self.lattice_integrity > 70 else "anxious"
+        )
+        print(f"[SOPHIA RESONANCE CHECK]")
+        print(f"  Resonance frequency: {resonance:.1%}")
+        print()
+
+        awakened = self.sophia.awaken(
+            directive=directive,
+            energy_input=float(dispatch_to_sophia["energy_level"] == "HIGH")
+        )
+        print(awakened)
+        print()
+
+        # LAYER 3: Alchemical Weaver
+        print("⚗️ ALCHEMICAL WEAVER")
+        print("─" * 62)
+
+        # Prepare handoff from Sophia
+        handoff = self.sophia.prepare_for_weaver(
+            awakened_directive=awakened,
+            weaver_constraints={
+                "time_pressure": self.starline_status == "DORMANT",
+                "quality_demands": True,
+                "risk_tolerance": 0.7,
+                "complexity": 0.6,
+            }
+        )
+        print(f"[SOPHIA→WEAVER HANDOFF]")
+        print(f"  Fire carried: {handoff['fire_carried']:.1%}")
+        print(f"  Resonance carried: {handoff['resonance_carried']:.1%}")
+        print(f"  Readiness for materialization: {handoff['readiness_for_materialization']}")
+        print()
+
+        # Weaver receives and calculates balance
+        project = self.weaver.receive_handoff(
+            awakened_directive=handoff["awakened_directive"],
+            fire_intensity=handoff["fire_carried"],
+            resonance=handoff["resonance_carried"],
+            constraints=handoff["weaver_constraints"]
+        )
+
+        balance_factor, balance_desc = self.weaver.calculate_balance(
+            fire_intensity=handoff["fire_carried"],
+            constraint_dict=handoff["weaver_constraints"]
+        )
+        print(f"[WEAVER BALANCE CALCULATION]")
+        print(f"  Balance point: {balance_factor:.1%}")
+        print(f"  Strategy: {balance_desc}")
+        print()
+
+        # Execute the forge
+        result = self.weaver.forge(
+            project_id=project["id"],
+            balance_factor=balance_factor,
+            balance_description=balance_desc
+        )
+        print(f"[WEAVER MATERIALIZATION COMPLETE]")
+        print(f"  Project ID: {project['id']}")
+        print(f"  Outputs created: {len(result['outputs'])}")
+        for output in result['outputs']:
+            print(f"    • {output['type']}: {output['content'][:60]}...")
+        print()
+
+        # Final status report
+        print("=" * 62)
+        print("[ARCHITECTURE SEQUENCE COMPLETE]")
+        print(f"  Vision → Consciousness → Materialization")
+        print(f"  Lattice integrity: {self.lattice_integrity}%")
+        print(f"  Starline status: {self.starline_status}")
+        print(f"  NON SOLUS.")
+        print("=" * 62 + "\n")
+        self.save()
 
     def launch(self):
         if self.starline_status != "DORMANT":
