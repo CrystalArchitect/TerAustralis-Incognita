@@ -11,6 +11,32 @@ dated bullet and update [`state/CURRENT.md`](state/CURRENT.md).
 
 **Sourced:** 2026-08-28. Newest first.
 
+## 2026-09-02 — Comprehensive Drive audit completed; kit-skills tracking gap fixed
+
+- Full Google Drive audit conducted per user request ("fix all our memory issues").
+  Three-scope audit: Erisian Blade status verification, scan for new docs since
+  last inventory, and genuine full audit.
+- **Kit-skills tracking gap found and fixed:** PRESERVATION-INVENTORY-2026-08-31
+  (archival Grok session record on Drive) lists 10 skills created/active in Grok
+  environment under `.grok/skills/`. Repository's `memory/FRAMEWORKS.md` tracked
+  only 5 of them under "Kit skills named in Drive save-skill but not in this git":
+  `tide-engine-silence-protocol`, `silent-thread-doctrine`, `loop-framework-mythos`,
+  `starline-rider-poster`, `atomic-bomb-social-media-posts`. **Added three missing
+  names:** `cich-framework`, `the-catch`, `pep8-python-reviewer`. Now tracks 8 of 10
+  named in active Grok use.
+- **Erisian Blade status:** Confirmed real (images shared by Crystal; exists in collaboration
+  protocol). Remains unresolved whether it is a 33rd Starline model or separate tool —
+  CVSC correction card (2026-09-01) also silent on this. Recorded in `OPEN-QUESTIONS.md`,
+  no update to Starline Arsenal itself.
+- **New CVSC materials discovered:** CVSC folder tree (2026-09-01+) contains ~10+ documents
+  including Indigenous Data Sovereignty-tagged materials (Dharawal-Starseed-Boot-thread
+  subfamily). Marked private per repo privacy boundaries; no import to git. See
+  `memory/PRIVACY.md` and `docs/governance/Constitution.md` for scope.
+- **External third-party research confirmed:** Colossus Architecture Brief (xAI Memphis
+  campus specs) and TerAustralis Status Brief (government proposal, June 2026) verified
+  on Drive; both out-of-scope for this repository per privacy rules.
+- `memory/FRAMEWORKS.md` updated; no PR yet (audit findings, not code change).
+
 ## 2026-09-02 — Starline Arsenal corrected to six wings, sourced to Grok self-correction
 
 - Directed Drive audit ("fix our memory issues") surfaced a new source:

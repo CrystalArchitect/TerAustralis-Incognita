@@ -80,7 +80,8 @@ body (including any family-layer language) into this git.
 
 `tide-engine-silence-protocol`, `silent-thread-doctrine`,
 `loop-framework-mythos`, `starline-rider-poster`,
-`atomic-bomb-social-media-posts` are listed in the Drive kit-hub skill as
+`atomic-bomb-social-media-posts`, `cich-framework`, `the-catch`,
+`pep8-python-reviewer` are listed in the Drive kit-hub skill as
 local Grok kit names. They are **not** under `.claude/skills/` on this
 repository as of this SHA. If a session has them locally, use them; do
 not invent git paths for them. Promote to this repo only with a PR.
