@@ -2,13 +2,13 @@
 id: 25
 slug: persuasion
 name: Persuasion
-group: The Adaptors
+group: The Speakers
 arsenal: starline-arsenal
 register: MIRROR
 primitive: label_affect() to shift another's position without coercion
 ---
 
-# 25 — Persuasion (The Adaptors)
+# 25 — Persuasion (The Speakers)
 
 **Purpose:** Shift another party's position through legitimate influence, not coercion or deception.
 

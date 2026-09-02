@@ -2,13 +2,13 @@
 id: 31
 slug: philology
 name: Philology
-group: The Deconstructors
+group: The Readers
 arsenal: starline-arsenal
 register: ARCHIVE
 primitive: detect_gap() between the exact line and its later paraphrase
 ---
 
-# 31 — Philology (The Deconstructors)
+# 31 — Philology (The Readers)
 
 **Purpose:** Read the exact line slowly, before the surrounding myth or paraphrase built on top of it.
 

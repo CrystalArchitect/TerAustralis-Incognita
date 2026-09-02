@@ -2,13 +2,13 @@
 id: 26
 slug: heuristic
 name: Heuristic Thinking
-group: The Predictors
+group: The Readers
 arsenal: starline-arsenal
 register: MIRROR
 primitive: label_affect() on a fast judgment shortcut
 ---
 
-# 26 — Heuristic Thinking (The Predictors)
+# 26 — Heuristic Thinking (The Readers)
 
 **Purpose:** Name the good-enough shortcut a judgment is actually running on, and what it skipped to save time.
 

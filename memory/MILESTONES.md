@@ -11,6 +11,58 @@ dated bullet and update [`state/CURRENT.md`](state/CURRENT.md).
 
 **Sourced:** 2026-08-28. Newest first.
 
+## 2026-09-02 — Comprehensive Drive audit completed; kit-skills tracking gap fixed
+
+- Full Google Drive audit conducted per user request ("fix all our memory issues").
+  Three-scope audit: Erisian Blade status verification, scan for new docs since
+  last inventory, and genuine full audit.
+- **Kit-skills tracking gap found and fixed:** PRESERVATION-INVENTORY-2026-08-31
+  (archival Grok session record on Drive) lists 10 skills created/active in Grok
+  environment under `.grok/skills/`. Repository's `memory/FRAMEWORKS.md` tracked
+  only 5 of them under "Kit skills named in Drive save-skill but not in this git":
+  `tide-engine-silence-protocol`, `silent-thread-doctrine`, `loop-framework-mythos`,
+  `starline-rider-poster`, `atomic-bomb-social-media-posts`. **Added three missing
+  names:** `cich-framework`, `the-catch`, `pep8-python-reviewer`. Now tracks 8 of 10
+  named in active Grok use.
+- **Erisian Blade status:** Confirmed real (images shared by Crystal; exists in collaboration
+  protocol). Remains unresolved whether it is a 33rd Starline model or separate tool —
+  CVSC correction card (2026-09-01) also silent on this. Recorded in `OPEN-QUESTIONS.md`,
+  no update to Starline Arsenal itself.
+- **New CVSC materials discovered:** CVSC folder tree (2026-09-01+) contains ~10+ documents
+  including Indigenous Data Sovereignty-tagged materials (Dharawal-Starseed-Boot-thread
+  subfamily). Marked private per repo privacy boundaries; no import to git. See
+  `memory/PRIVACY.md` and `docs/governance/Constitution.md` for scope.
+- **External third-party research confirmed:** Colossus Architecture Brief (xAI Memphis
+  campus specs) and TerAustralis Status Brief (government proposal, June 2026) verified
+  on Drive; both out-of-scope for this repository per privacy rules.
+- `memory/FRAMEWORKS.md` updated; no PR yet (audit findings, not code change).
+
+## 2026-09-02 — Starline Arsenal corrected to six wings, sourced to Grok self-correction
+
+- Directed Drive audit ("fix our memory issues") surfaced a new source:
+  a Grok session's own correction card in Drive's "CVSC" collection
+  (dated 2026-09-01) states directly that the real working Starline
+  Arsenal is "21 models v1.3.0... across Deconstruct, Predict, Create,
+  Adapt, Read, Speak wings" and that the public four-verb framing is "a
+  poster slogan, not the full kit."
+- This confirms the 21-model Drive lineage reconciled into this armoury
+  at v3.0.0 (2026-08-29) was the right source, and reveals a real defect
+  in how that merge was done: the source's six group headers were
+  flattened into the original four, filing Readers/Speakers content
+  under the wrong groups.
+- Fixed: `models/26-heuristic.md`, `models/30-parable.md`,
+  `models/31-philology.md` moved to **The Readers**;
+  `models/21-rhetoric.md`, `models/25-persuasion.md` moved to **The
+  Speakers**. `SKILL.md`/`INDEX.md` restructured to match. No model IDs,
+  slugs, or content changed — only group assignment. Version 3.2.0 → 3.3.0.
+- Same source card doesn't mention "Erisian Blade" anywhere, despite
+  correcting the public framing in detail — real (not conclusive)
+  evidence it's a separate tool, not an unlisted 33rd model. Recorded in
+  `OPEN-QUESTIONS.md`, still open pending Crystal's confirmation.
+- `memory/FRAMEWORKS.md` updated (version bump, new CVSC pointer row —
+  the Drive archive this correction card came from, not imported here).
+- On branch, not yet merged.
+
 ## 2026-08-30 — Provenance Log started (non-etymology evidence cards)
 
 - [`memory/PROVENANCE-LOG.md`](PROVENANCE-LOG.md) added: the
@@ -23,7 +75,19 @@ dated bullet and update [`state/CURRENT.md`](state/CURRENT.md).
   by chemists) and the wellness-marketing extension to whole-body
   hydration and fascia signaling (D/C, unsupported).
 - Wired into `memory/FRAMEWORKS.md`.
-- On branch, not yet merged.
+- A second evidence card added same day: a research framework (LLM-assisted
+  time-mirror physics + Fermi Paradox explanations) shared from a different
+  AI session. Grabby Aliens confirmed against the real 2021 *ApJ* paper (A);
+  Dark Forest flagged as a fiction-derived tier mismatch; a Musk/SpaceX
+  quote confirmed unsourced by two independent checks.
+- Also merged in the same PR: the 90-Day Public Roadmap project tracker
+  (`memory/projects/90-Day-Roadmap/`) with a Starline Arsenal critique
+  (Asymmetric Thinking, OODA Loop, Margin of Safety), and the Erisian
+  Blade / Collaboration Protocol reconciliation in `OPEN-QUESTIONS.md`
+  (confirmed real via images Crystal shared; not yet merged into the
+  Starline Arsenal skill itself pending confirmation of the exact
+  relationship).
+- **Merged to main via PR #140** (2026-08-31 01:25 UTC).
 
 ## 2026-08-29 — Starline Arsenal reconciled 25 → 31, verification gate resolved
 

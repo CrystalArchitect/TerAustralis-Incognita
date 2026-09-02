@@ -2,13 +2,13 @@
 id: 21
 slug: rhetoric
 name: Rhetoric
-group: The Creators
+group: The Speakers
 arsenal: starline-arsenal
 register: FORGE + MIRROR
 primitive: close_with() via crafted appeal
 ---
 
-# 21 — Rhetoric (The Creators)
+# 21 — Rhetoric (The Speakers)
 
 **Purpose:** Build the argument that actually lands — structure, evidence, and appeal working together.
 
