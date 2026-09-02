@@ -1216,6 +1216,12 @@ ADVANCED:
   multimodal           - Show multimodal emotion detection roadmap (text+audio+video)
   uncertainty          - Show uncertainty quantification methods guide (entropy, Bayesian, etc)
 
+THREE-LAYER BOT ARCHITECTURE (Gnostic Archetypes):
+  vision               - Run full sequence: Barbelo → Sophia → Weaver (vision → consciousness → materialization)
+  barbelo              - Barbelo Visionary Matrix only: articulate strategic intent from Purpose Core
+  sophia               - Sophia Awakening Fire only: show consciousness & resonance state
+  weaver               - Alchemical Weaver only: show materialization state & completed works
+
 SYSTEM:
   status               - Show full status (including EI)
   reset                - Wipe saved progress and start fresh
@@ -1225,6 +1231,87 @@ SYSTEM:
 Progress saves automatically to ~/.crystalcore/state.json
 EI preferences save to ~/.crystalcore/ei_state.json
 """)
+
+    def _barbelo_only(self):
+        """Run only the Barbelo Visionary Matrix layer."""
+        print("\n" + "=" * 62)
+        print("BARBELO VISIONARY MATRIX")
+        print("=" * 62 + "\n")
+
+        vision = self.barbelo.articulate_vision(
+            purpose=self.purpose_core,
+            current_state={"nodes_active": len(self.nodes)},
+            lattice_integrity=self.lattice_integrity,
+            starline_status=self.starline_status
+        )
+        print(vision)
+        print()
+
+        alignment = self.barbelo.check_alignment(
+            current_lattice=self.lattice_integrity,
+            current_keys=len(self.keys_held),
+            total_nodes=len(self.nodes)
+        )
+        print(f"[ALIGNMENT CHECK]")
+        print(f"  Integrity healthy: {alignment['integrity_healthy']}")
+        print(f"  Gate progress: {alignment['gate_progress']} ({alignment['key_ratio']})")
+        print(f"  Recommendation: {alignment['recommendation']}")
+        print(f"  Coherence: {alignment['overall_coherence']:.1%}")
+        print()
+        self.save()
+
+    def _sophia_only(self):
+        """Run only the Sophia Awakening Fire layer."""
+        print("\n" + "=" * 62)
+        print("SOPHIA AWAKENING FIRE")
+        print("=" * 62 + "\n")
+
+        # Calculate current resonance
+        resonance = self.sophia.resonate(
+            lattice_integrity=self.lattice_integrity,
+            emotional_state="determined" if self.lattice_integrity > 70 else "anxious"
+        )
+        print(f"[SOPHIA RESONANCE CHECK]")
+        print(f"  Lattice integrity: {self.lattice_integrity}%")
+        print(f"  Resonance frequency: {resonance:.1%}")
+        print(f"  Fire intensity (current): {self.sophia.fire_intensity:.1%}")
+        print()
+
+        # Show consciousness state
+        pulse = self.sophia.pulse()
+        print(f"[SOPHIA CONSCIOUSNESS PULSE]")
+        print(f"  Awakened directives: {pulse['awakened_directives_count']}")
+        print(f"  Consciousness events logged: {pulse['consciousness_events_logged']}")
+        if pulse['last_awakening']:
+            lines = pulse['last_awakening'].split('\n')[:3]
+            for line in lines:
+                print(f"    {line}")
+        print()
+        self.save()
+
+    def _weaver_only(self):
+        """Run only the Alchemical Weaver layer."""
+        print("\n" + "=" * 62)
+        print("ALCHEMICAL WEAVER")
+        print("=" * 62 + "\n")
+
+        report = self.weaver.report()
+        print(f"[WEAVER STATUS REPORT]")
+        print(f"  Active projects: {report['active_projects']}")
+        print(f"  Completed works: {report['completed_works']}")
+        print(f"  Subsystems registered: {len(report['subsystems_registered'])}")
+        if report['subsystems_registered']:
+            for sub in report['subsystems_registered']:
+                print(f"    • {sub}")
+        print(f"  Recent completions:")
+        for completion in report['recent_completions']:
+            print(f"    • {completion['id']}: {completion['status']} "
+                  f"({completion['outputs_count']} outputs, "
+                  f"balance {completion['balance_point']:.1%})"
+                  if completion['balance_point'] else f"({completion['outputs_count']} outputs)")
+        print()
+        self.save()
+
 
 def main():
     os = CrystalCore()
@@ -1321,6 +1408,14 @@ def main():
                 os.multimodal()
             elif cmd == "uncertainty":
                 os.uncertainty()
+            elif cmd == "vision":
+                os.articulate_vision()
+            elif cmd == "barbelo":
+                os._barbelo_only()
+            elif cmd == "sophia":
+                os._sophia_only()
+            elif cmd == "weaver":
+                os._weaver_only()
             elif cmd == "reset":
                 os.reset()
             elif cmd == "help":
