@@ -23,7 +23,19 @@ dated bullet and update [`state/CURRENT.md`](state/CURRENT.md).
   by chemists) and the wellness-marketing extension to whole-body
   hydration and fascia signaling (D/C, unsupported).
 - Wired into `memory/FRAMEWORKS.md`.
-- On branch, not yet merged.
+- A second evidence card added same day: a research framework (LLM-assisted
+  time-mirror physics + Fermi Paradox explanations) shared from a different
+  AI session. Grabby Aliens confirmed against the real 2021 *ApJ* paper (A);
+  Dark Forest flagged as a fiction-derived tier mismatch; a Musk/SpaceX
+  quote confirmed unsourced by two independent checks.
+- Also merged in the same PR: the 90-Day Public Roadmap project tracker
+  (`memory/projects/90-Day-Roadmap/`) with a Starline Arsenal critique
+  (Asymmetric Thinking, OODA Loop, Margin of Safety), and the Erisian
+  Blade / Collaboration Protocol reconciliation in `OPEN-QUESTIONS.md`
+  (confirmed real via images Crystal shared; not yet merged into the
+  Starline Arsenal skill itself pending confirmation of the exact
+  relationship).
+- **Merged to main via PR #140** (2026-08-31 01:25 UTC).
 
 ## 2026-08-29 — Starline Arsenal reconciled 25 → 31, verification gate resolved
 

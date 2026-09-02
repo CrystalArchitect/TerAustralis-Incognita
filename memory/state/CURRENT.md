@@ -4,7 +4,7 @@ Working picture of **this** repository. Overwrite at each checkpoint.
 If this file disagrees with [`STATUS.md`](../../STATUS.md) or a newer
 canonical source, the canonical source wins — then fix this file.
 
-**As of:** 2026-08-30 (cross-repo memory model restructured and merged to main via PR #129; memory-state model design hypothesis merged to main via PR #131; Starline Arsenal expanded 13 → 25 via PR #130, then reconciled to 31, fully verified 1–31, and absorbed a concurrent session's Provenance Stack model as 32 — all merged to main via PR #137 at 03:01 UTC)
+**As of:** 2026-08-31 (cross-repo memory model restructured and merged to main via PR #129; memory-state model design hypothesis merged to main via PR #131; Starline Arsenal expanded 13 → 25 via PR #130, then reconciled to 31, fully verified 1–31, and absorbed a concurrent session's Provenance Stack model as 32 — all merged to main via PR #137 at 03:01 UTC; PROVENANCE-LOG.md started, 90-Day Roadmap tracker added, and the Erisian Blade/Starline Arsenal identity reconciled — merged to main via PR #140)
 **STATUS.md last updated:** 2026-08-20
 **This memory protocol landed on `main` at:** `3ba08fdcb4e88f5386949bc3cd35a28dcd597fab`
 (PR #123, merged with Crystal Arena-Turner's explicit authorization)
