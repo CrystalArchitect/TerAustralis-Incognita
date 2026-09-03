@@ -78,13 +78,19 @@ body (including any family-layer language) into this git.
 
 ## Kit skills named in Drive save-skill but not in this git
 
-`tide-engine-silence-protocol`, `silent-thread-doctrine`,
+**Original five (2026-08-29):** `tide-engine-silence-protocol`, `silent-thread-doctrine`,
 `loop-framework-mythos`, `starline-rider-poster`,
-`atomic-bomb-social-media-posts`, `cich-framework`, `the-catch`,
-`pep8-python-reviewer` are listed in the Drive kit-hub skill as
-local Grok kit names. They are **not** under `.claude/skills/` on this
-repository as of this SHA. If a session has them locally, use them; do
-not invent git paths for them. Promote to this repo only with a PR.
+`atomic-bomb-social-media-posts`.
+
+**Added three (2026-09-02):** `cich-framework`, `the-catch`,
+`pep8-python-reviewer` — identified during Drive audit.
+
+**Verification status (as of 2026-09-02):**
+- [x] `cich-framework` — Verified present and functional on disk
+- [ ] `the-catch` — Unconfirmed; pending validation in active Grok ecosystem
+- [ ] `pep8-python-reviewer` — Unconfirmed; pending validation in active Grok ecosystem
+
+All eight are listed in the Drive kit-hub skill as local Grok kit names. They are **not** under `.claude/skills/` on this repository as of this SHA. If a session has them locally, use them; do not invent git paths for them. Promote to this repo only with a PR.
 
 `loop-framework-mythos` is a kit name. The Loop Framework in `the-library`
 is a steward-authored paper. They are not assumed to be the same file.
