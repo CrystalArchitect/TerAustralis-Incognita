@@ -162,6 +162,9 @@ CC BY-NC-ND 4.0 — see `../content/LICENSE-CONTENT.md`.
 | `dwarf-smith-at-the-crystal-anvil.jpeg` | *AI-generated (tool unconfirmed — see provenance note below), received 2026-09-03* — A braided, goggled dwarf in geared armor hammers a glowing crystal lattice-form on a rune-carved anvil, small wireframe polyhedra drifting nearby, a red desert and twin moons through the cave mouth behind him |
 | `winged-figure-over-the-crystal-grid.jpeg` | *AI-generated (tool unconfirmed — see provenance note below), received 2026-09-03* — A white-winged, silver-armored figure with a starfield-patterned robe hovers over a glowing crystal-spire city laid out in a rune grid, one hand extended toward a beam of light striking the ground. No name for this figure exists in project canon |
 | `red-crystal-sentinel.jpeg` | *AI-generated (tool unconfirmed — see provenance note below), received 2026-09-03* — A crimson crystal-armored figure with glowing eyes stands in a red desert ruin between standing stones, one hand raised and bursting with light, twin moons overhead. No name for this figure exists in project canon |
+| `guardian-of-mythos-schnauzer-sentinel-card.webp` | *AI-generated (tool unconfirmed), received 2026-09-03* — **Third-party trade dress — see note below.** A mock Magic: The Gathering card, "Guardian of Mythos, Schnauzer Sentinel," rendered in a library setting with a schnauzer-wizard as a Legendary Creature; the card face prints "™ & © 2024 Wizards of the Coast" |
+| `lattice-cascade-card.webp` | *AI-generated (tool unconfirmed), received 2026-09-03* — **Third-party trade dress — see note below.** A mock Magic: The Gathering artifact card, "Lattice Cascade," depicting a steampunk rig raining crystal over a red desert with rockets launching; the card face prints "™ & © 2024 Wizards of the Coast" |
+| `teraustralis-skyport-card.webp` | *AI-generated (tool unconfirmed), received 2026-09-03* — **Third-party trade dress — see note below.** A mock Magic: The Gathering land card, "TerAustralis Skyport," depicting a rocket-launch gantry over a desert mesa marked with glowing eyes; same WotC card template as the two rows above, but the printed copyright line on this one instead reads "© 2024 TerAustralis" |
 
 **Truth label (Vision):** this art is the project's own mythic narrative. Where a
 real person's name or likeness appears — whether as a name, a silhouette, or a
@@ -177,6 +180,21 @@ art, never as a claim of partnership, integration, or provenance. All marks
 belong to their respective owners. This project has no affiliation with, and no
 endorsement from, any company named here, matching the standing disclaimer in
 [`STRATEGY.md`](../content/STRATEGY.md).
+
+**Third-party trade dress note (three rows, added 2026-09-03):**
+`guardian-of-mythos-schnauzer-sentinel-card.webp`, `lattice-cascade-card.webp`,
+and `teraustralis-skyport-card.webp` are formatted as Magic: The Gathering cards —
+Wizards of the Coast's card frame, mana symbols, and set/collector-number layout.
+Two print "™ & © 2024 Wizards of the Coast" directly on the card face; the third
+uses the identical template but prints "© 2024 TerAustralis" instead, which reads
+as a user-editable field in a fan card-making tool rather than an actual transfer
+of rights. **The CC BY-NC-ND 4.0 line at the top of this file does not apply to
+these three images' card frame, mana symbols, or typography** — this project has
+no rights to license in Wizards of the Coast's trade dress, and inclusion here is
+not a claim otherwise. They are filed per direct maintainer instruction, over this
+session's own recommendation not to. What is original to this project, if
+anything, is limited to the card names and illustration content depicted, subject
+to the same AI-authorship uncertainty as every other row in this file.
 
 **Licence label (Science):** the line at the top of this file says the content is
 licensed CC BY-NC-ND 4.0. For the images specifically, that is less settled than
@@ -237,16 +255,20 @@ encoder fingerprints cut across the marked/unmarked boundary rather than along i
 Recording the confirmed rows as though they were machine-verified would overstate
 the evidence in the very document that exists to prevent that.
 
-**Twelve more rows added 2026-09-03** (`the-13th-ancient.jpeg`,
+**Fifteen more rows added 2026-09-03** (`the-13th-ancient.jpeg`,
 `smiling-knight-of-the-golden-hall.jpeg`, `archive-of-drifting-scrolls.jpeg`,
 `crystal-dragon-over-the-ruins.jpeg`, `council-of-hooded-figures.jpeg`,
 `the-ninth-crystal-titan.jpeg`, `lattice-tower-of-galaxies.jpeg`,
 `starcharter-with-orrery.jpeg`, `coral-crowned-serpent-woman.jpeg`,
 `dwarf-smith-at-the-crystal-anvil.jpeg`, `winged-figure-over-the-crystal-grid.jpeg`,
-`red-crystal-sentinel.jpeg`) rest on a third kind of evidence: none carries an EXIF
-`Artist`/`Software` tag or a C2PA manifest naming a generating tool, but all twelve
-carry an XMP `iptcExt:DigitalSourceType` of
-`http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia` — the same
-IPTC code cited above as machine evidence of AI generation, checked directly against
-each file at the time of filing. That confirms AI-generated; it does not identify
-which tool. The table marks all twelve "tool unconfirmed" rather than guessing.
+`red-crystal-sentinel.jpeg`, `guardian-of-mythos-schnauzer-sentinel-card.webp`,
+`lattice-cascade-card.webp`, `teraustralis-skyport-card.webp`) rest on a third
+kind of evidence: none carries an EXIF `Artist`/`Software` tag or a C2PA manifest
+naming a generating tool, but all fifteen carry an XMP `iptcExt:DigitalSourceType`
+of `http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia` — the
+same IPTC code cited above as machine evidence of AI generation, checked directly
+against each file at the time of filing. That confirms AI-generated; it does not
+identify which tool. The table marks all fifteen "tool unconfirmed" rather than
+guessing. (The last three additionally carry Wizards of the Coast trade dress —
+see the dedicated note above, which the AI-generation finding here does not
+override or license.)
