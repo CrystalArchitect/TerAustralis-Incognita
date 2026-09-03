@@ -165,6 +165,10 @@ CC BY-NC-ND 4.0 — see `../content/LICENSE-CONTENT.md`.
 | `guardian-of-mythos-schnauzer-sentinel-card.webp` | *AI-generated (tool unconfirmed), received 2026-09-03* — **Third-party trade dress — see note below.** A mock Magic: The Gathering card, "Guardian of Mythos, Schnauzer Sentinel," rendered in a library setting with a schnauzer-wizard as a Legendary Creature; the card face prints "™ & © 2024 Wizards of the Coast" |
 | `lattice-cascade-card.webp` | *AI-generated (tool unconfirmed), received 2026-09-03* — **Third-party trade dress — see note below.** A mock Magic: The Gathering artifact card, "Lattice Cascade," depicting a steampunk rig raining crystal over a red desert with rockets launching; the card face prints "™ & © 2024 Wizards of the Coast" |
 | `teraustralis-skyport-card.webp` | *AI-generated (tool unconfirmed), received 2026-09-03* — **Third-party trade dress — see note below.** A mock Magic: The Gathering land card, "TerAustralis Skyport," depicting a rocket-launch gantry over a desert mesa marked with glowing eyes; same WotC card template as the two rows above, but the printed copyright line on this one instead reads "© 2024 TerAustralis" |
+| `crystalcore-lattice-gate-card.jpeg` | *AI-generated (tool unconfirmed), received 2026-09-03* — **Third-party trade dress — see note below.** A mock Magic: The Gathering card, "CrystalCore Lattice Gate," depicting a glowing crystal-and-brass gate; same WotC card template as the three rows above, printing "© 2025 Wizards of the Coast." Unlike the other three, the card's own title uses this project's name ("CrystalCore") |
+| `lemuria-the-seventh-shore.png` | *AI-generated (tool unconfirmed), received 2026-09-03* — Two figures annotate a hand-drawn map titled "Lemuria — The Seventh Shore," a child holding a small light and a distant walking figure shown above it, a lit city across water. Map text ("This land belongs to those who remember it," an "8th Tower" note about "a promise, a child") is content printed on the artwork itself; none of it is established project canon |
+| `starlines-southern-compass-diagram.jpeg` | *provenance undetermined — no XMP or EXIF present, unlike every other row on this page; not established as AI-generated or otherwise, received 2026-09-03* — An educational compass/navigation diagram, "Starlines = Compass / Map – Australia," explaining Southern Cross and Pointer-star navigation and the true-north/magnetic-north offset for Australia. Diagram content and layout, not narrative illustration |
+| `crystal-resonance-machine-diagram.jpeg` | *AI-generated (tool unconfirmed), received 2026-09-03* — A technical-style diagram, "Crystal Resonance Machine," pairing a "Starlines = Compass/Map" directional-reference panel with a "Dreamlines = Trail" spiral-energy panel around a faceted crystal figure. Diagram content, not narrative illustration; the Starlines/Dreamlines pairing is not confirmed elsewhere in project canon under these terms |
 
 **Truth label (Vision):** this art is the project's own mythic narrative. Where a
 real person's name or likeness appears — whether as a name, a silhouette, or a
@@ -181,15 +185,16 @@ belong to their respective owners. This project has no affiliation with, and no
 endorsement from, any company named here, matching the standing disclaimer in
 [`STRATEGY.md`](../content/STRATEGY.md).
 
-**Third-party trade dress note (three rows, added 2026-09-03):**
+**Third-party trade dress note (four rows, added 2026-09-03):**
 `guardian-of-mythos-schnauzer-sentinel-card.webp`, `lattice-cascade-card.webp`,
-and `teraustralis-skyport-card.webp` are formatted as Magic: The Gathering cards —
-Wizards of the Coast's card frame, mana symbols, and set/collector-number layout.
-Two print "™ & © 2024 Wizards of the Coast" directly on the card face; the third
-uses the identical template but prints "© 2024 TerAustralis" instead, which reads
-as a user-editable field in a fan card-making tool rather than an actual transfer
-of rights. **The CC BY-NC-ND 4.0 line at the top of this file does not apply to
-these three images' card frame, mana symbols, or typography** — this project has
+`teraustralis-skyport-card.webp`, and `crystalcore-lattice-gate-card.jpeg` are
+formatted as Magic: The Gathering cards — Wizards of the Coast's card frame, mana
+symbols, and set/collector-number layout. Three print "™ & © 202[4-5] Wizards of
+the Coast" directly on the card face; `teraustralis-skyport-card.webp` uses the
+identical template but prints "© 2024 TerAustralis" instead, which reads as a
+user-editable field in a fan card-making tool rather than an actual transfer of
+rights. **The CC BY-NC-ND 4.0 line at the top of this file does not apply to
+these four images' card frame, mana symbols, or typography** — this project has
 no rights to license in Wizards of the Coast's trade dress, and inclusion here is
 not a claim otherwise. They are filed per direct maintainer instruction, over this
 session's own recommendation not to. What is original to this project, if
@@ -255,20 +260,24 @@ encoder fingerprints cut across the marked/unmarked boundary rather than along i
 Recording the confirmed rows as though they were machine-verified would overstate
 the evidence in the very document that exists to prevent that.
 
-**Fifteen more rows added 2026-09-03** (`the-13th-ancient.jpeg`,
+**Nineteen more rows added 2026-09-03** (`the-13th-ancient.jpeg`,
 `smiling-knight-of-the-golden-hall.jpeg`, `archive-of-drifting-scrolls.jpeg`,
 `crystal-dragon-over-the-ruins.jpeg`, `council-of-hooded-figures.jpeg`,
 `the-ninth-crystal-titan.jpeg`, `lattice-tower-of-galaxies.jpeg`,
 `starcharter-with-orrery.jpeg`, `coral-crowned-serpent-woman.jpeg`,
 `dwarf-smith-at-the-crystal-anvil.jpeg`, `winged-figure-over-the-crystal-grid.jpeg`,
 `red-crystal-sentinel.jpeg`, `guardian-of-mythos-schnauzer-sentinel-card.webp`,
-`lattice-cascade-card.webp`, `teraustralis-skyport-card.webp`) rest on a third
-kind of evidence: none carries an EXIF `Artist`/`Software` tag or a C2PA manifest
-naming a generating tool, but all fifteen carry an XMP `iptcExt:DigitalSourceType`
-of `http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia` — the
+`lattice-cascade-card.webp`, `teraustralis-skyport-card.webp`,
+`crystalcore-lattice-gate-card.jpeg`, `lemuria-the-seventh-shore.png`,
+`crystal-resonance-machine-diagram.jpeg`) rest on a third kind of evidence: none
+carries an EXIF `Artist`/`Software` tag or a C2PA manifest naming a generating
+tool, but all eighteen of those listed carry an XMP `iptcExt:DigitalSourceType` of
+`http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia` — the
 same IPTC code cited above as machine evidence of AI generation, checked directly
 against each file at the time of filing. That confirms AI-generated; it does not
-identify which tool. The table marks all fifteen "tool unconfirmed" rather than
-guessing. (The last three additionally carry Wizards of the Coast trade dress —
-see the dedicated note above, which the AI-generation finding here does not
-override or license.)
+identify which tool. The table marks all eighteen "tool unconfirmed" rather than
+guessing. (Four of them additionally carry Wizards of the Coast trade dress — see
+the dedicated note above, which the AI-generation finding here does not override
+or license.) The nineteenth, `starlines-southern-compass-diagram.jpeg`, is the
+first row in this file with **no XMP or EXIF metadata at all** — its provenance is
+recorded as undetermined rather than assumed AI-generated.
