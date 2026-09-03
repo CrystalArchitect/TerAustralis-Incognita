@@ -1,14 +1,28 @@
 ---
 name: starline-arsenal
-display_name: Starline Arsenal — 32 Model Armoury
-description: Australian-built cognitive armoury of 32 mental models across six wings — deconstruction, prediction, creation, adaptation, reading, and speech. Runs core questions to produce concrete outputs — failure lists, leverage audits, Bayesian updates, exponential sketches, heuristic sheets, miscalibration checks, parable spines, philology glosses, rhetorical appeal maps, persuasion briefs, evidence-tier assignments — not just labels. Part of CrystalCore.OS / TerAustralis Incognita.
+display_name: Starline Arsenal — 42 Model Armoury
+description: Australian-built cognitive armoury of 42 mental models across seven wings — deconstruction, prediction, creation, adaptation, reading, speech, and operational execution. Runs core questions to produce concrete outputs — failure lists, leverage audits, Bayesian updates, exponential sketches, heuristic sheets, miscalibration checks, parable spines, philology glosses, rhetorical appeal maps, persuasion briefs, evidence-tier assignments, milestone sequences, risk registers — not just labels. Part of CrystalCore.OS / TerAustralis Incognita.
 aliases: [model-armory, model-armoury, cognitive-armory, thinking-armory]
-version: 3.3.0
+version: 4.0.0
 author: TerAustralis Incognita
 lore: Red Dust Ground Steady. Starline for navigation. Seven Sisters reference without appropriation. MarsBase DownUnder mindset.
 ---
 
-# Starline Arsenal — 32 Model Armoury
+# Starline Arsenal — 42 Model Armoury
+
+**4.0.0 — Infrastructure Engines.** Adds a 7th wing, 10 operational/
+execution models (33–42): Strategic Planning, Resource Orchestration,
+Dependency Mapping, Risk Orchestration, Change Management, Tempo & Flow
+State, Feedback Integration, Institutional Momentum, Legacy & Technical
+Debt, Collective Thinking. **Label: Vision/exploratory** — unlike every
+prior expansion of this armoury, these are not sourced to a canonical
+Drive document; they follow the established 6-part template but have
+not been checked against any external source text. A separate,
+unrelated "Infrastructure Expansion" block (models 44–53, IDs
+colliding with 33–42, content about software runtime engineering
+rather than cognitive/reasoning models) was removed from this PR
+before merge — it didn't fit this skill's domain and wasn't described
+in the PR that introduced it.
 
 **Formerly: model-armory / veil-breaker (parked)**
 
@@ -223,6 +237,48 @@ Concrete thinking tools. Each model runs core questions and produces a tangible 
 - Shift another's position through legitimate influence, not coercion — and know their honest no when you hear it.
 - Output: Current-position statement + Smallest-ask sequence + Honest no + Next smallest move
 
+## The Infrastructure Engines — Operational execution
+
+### 33. Strategic Planning
+- From insight to roadmap. What is the sequence? What moves now?
+- Output: Milestone sequence + Dependency graph + Critical path + Go/no-go criteria
+
+### 34. Resource Orchestration
+- Align people, time, budget, tools to execution. What is scarce?
+- Output: Resource map + Constraint list + Allocation strategy + Waste audit
+
+### 35. Dependency Mapping
+- What must happen before what? What is the critical path?
+- Output: Dependency diagram + Critical path + Bottleneck list + Reorder opportunities
+
+### 36. Risk Orchestration
+- Identify, rank, and structure responses to operational risks.
+- Output: Risk register + Response strategy per risk + Early warning indicators + Contingency triggers
+
+### 37. Change Management
+- Move an organization or system from state A to state B while keeping it functional.
+- Output: Stakeholder map + Transition plan + Resistance audit + Success story
+
+### 38. Tempo & Flow State
+- What rhythm allows sustainable high-quality output? Speed vs. quality trade-off.
+- Output: Tempo audit + Flow condition checklist + Quality-speed trade-off map + Sustainability map
+
+### 39. Feedback Integration
+- Gather signal, filter noise, update the plan. Close the learning loop.
+- Output: Feedback loop diagram + Signal/noise separation + Bias audit + Update trigger
+
+### 40. Institutional Momentum
+- What keeps moving when you stop pushing? What is the organization's inertia?
+- Output: Momentum audit + Sustaining structure map + Decay risk list + Anchor plan
+
+### 41. Legacy & Technical Debt
+- What are we carrying that slows us down? When to pay off vs. carry forward.
+- Output: Debt inventory + Interest cost audit + Payoff-vs-carry analysis + Payoff priority list
+
+### 42. Collective Thinking
+- How do groups of minds amplify or interfere with each other? Team cognition.
+- Output: Interaction pattern map + Amplification points + Interference audit + Voice map
+
 ## Governance (CrystalCore.OS)
 - Incognita Rule: Evidence > Assumption
 - Belt-Three Rule: Vision labelled as vision, not measured fact
@@ -236,7 +292,7 @@ Concrete thinking tools. Each model runs core questions and produces a tangible 
 ## Usage
 Run as skill: invoke model → answer core questions → produce artefact → log to CHRONICLE as Evidence → Interpretation → Experiment → Record.
 
-Full detail per model, including the five Core Questions and Required Concrete Output each one demands: [`INDEX.md`](INDEX.md) → `models/01-first-principles.md` through `models/32-provenance-stack.md`.
+Full detail per model, including the five Core Questions and Required Concrete Output each one demands: [`INDEX.md`](INDEX.md) → `models/01-first-principles.md` through `models/42-collective-thinking.md`.
 
 Implementation: CrystalCore.OS™️ | Language: CrystalCode™️ | TerAustralis Incognita™️ | Functional / simulated affect only
 

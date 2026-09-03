@@ -1,4 +1,4 @@
-# Starline Arsenal — Index of 32
+# Starline Arsenal — Index of 42
 
 ## The Deconstructors
 
@@ -49,5 +49,18 @@
 
 - [21 Rhetoric](models/21-rhetoric.md)
 - [25 Persuasion](models/25-persuasion.md)
+
+## The Infrastructure Engines — Operational/Execution (33–42)
+
+- [33 Strategic Planning](models/33-strategic-planning.md)
+- [34 Resource Orchestration](models/34-resource-orchestration.md)
+- [35 Dependency Mapping](models/35-dependency-mapping.md)
+- [36 Risk Orchestration](models/36-risk-orchestration.md)
+- [37 Change Management](models/37-change-management.md)
+- [38 Tempo & Flow State](models/38-tempo-flow.md)
+- [39 Feedback Integration](models/39-feedback-integration.md)
+- [40 Institutional Momentum](models/40-institutional-momentum.md)
+- [41 Legacy & Technical Debt](models/41-legacy-technical-debt.md)
+- [42 Collective Thinking](models/42-collective-thinking.md)
 
 **All rights reserved.** TerAustralis Incognita™️ — ABN 70 741 068 059
