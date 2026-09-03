@@ -11,11 +11,11 @@ Overwrite this file at each checkpoint; full plan detail lives in
 |---|---|---|---|
 | 1 | TerAustralis Industrial Sovereignty | Onshore Chain One-Pager | ✅ SHIPPED |
 | 2 | CrystalCore OS & Synthetic Affect | Consent Token Spec v0.1 | ✅ SHIPPED |
-| 3 | Red Dust → Rockets Pathway | Pathway Log #1 | 🔨 BUILDING |
-| 4 | Sovereign by Design | Operator Control Demo | Not started |
+| 3 | Red Dust → Rockets Pathway | Pathway Log #1 | ✅ SHIPPED |
+| 4 | Sovereign by Design | Operator Control Demo | ✅ SHIPPED |
 | 5 | First-Principles Systems Thinking | Plain English Explainer | ✅ SHIPPED |
 | 6 | Narrative & World-Building | Carrier Story | ✅ SHIPPED |
-| 7 | Engagement & Network Reality | Small Council | Not started |
+| 7 | Engagement & Network Reality | Small Council | 🔨 BUILDING |
 | 8 | Execution vs Ambition Gap | Shipping Ledger | ✅ SHIPPED |
 
 ## Deliverables Shipped
@@ -57,9 +57,19 @@ Overwrite this file at each checkpoint; full plan detail lives in
 - Success metric: 12 entries minimum in 90 days
 - Status: Ready for autonomous weekly updates; public posting mechanism TBD
 
+### #3: Pathway Log #1 (Warrant-labelling in outreach ✅)
+**Shipped:** 2026-09-03  
+**Files:** `specs/pathway-log-framework.md`, `specs/pathway-log-entry-1.md`  
+**Content:** Complete framework for documenting outreach engagements with warrant-labelling (Fact/Inference/Assumption/Vision). Seed entry demonstrates closed feedback loop: research question → engagement → learning → roadmap adjustment → next engagement (Small Council reframed as negotiation vs validation).  
+**Deliverable elements:**
+- Template structure for all future entries (≥3 required by week 12)
+- Entry 1 seed: Australian supply chain verification research (Aug 29–Sep 3)
+- Demonstrates covenant: transparent reasoning, no hidden assumptions, externally verifiable
+- Shows how learnings feed back into roadmap (Small Council reframing)
+
 ## Deliverables Building
 
-### #3: Pathway Log #1 (Warrant-labelling in outreach 🔨 BUILDING)
+### #7: Small Council (Stakeholder engagement + commitment conversation 🔨 BUILDING)
 **Started:** 2026-09-03  
 **Files:** `specs/pathway-log-framework.md`, `specs/pathway-log-entry-1.md`  
 **Content (framework):** Template for documenting outreach engagements with full warrant-labelling (Fact/Inference/Assumption/Vision). Demonstrates how Sovereign Lattice covenant works in practice: every claim labeled by epistemic source, closed feedback loops visible, externally verifiable.  
@@ -68,14 +78,34 @@ Overwrite this file at each checkpoint; full plan detail lives in
 - How learnings feed back to roadmap (Small Council reframed from validation to stakeholder negotiation)
 - Closed feedback loop visible (question → research → learning → roadmap adjustment → next question)
 - Externally verifiable (all sources documented, reasoning transparent)  
-**Next steps:** Entries 2+ will capture real outreach engagements with suppliers, Small Council participants, and AU builders (weeks 7-12).
+**Next steps:** Entries 2+ will capture real outreach engagements during Small Council negotiation (weeks 10-12).
+
+---
+
+**Started:** 2026-09-03  
+**Files:** `specs/small-council-planning.md`  
+**Content (framework):** Complete engagement strategy for negotiating formal ASA SoE participation with Lynas Rare Earths, Magellan Aerospace, and Equatorial Launch Australia. Reframes Small Council from "validation exercise" to "stakeholder negotiation + commitment conversation."  
+**Content (roadmap):**
+- Phase 1 (Week 7-9): Pre-engagement with ASA; prepare supplier briefings; secure contact info
+- Phase 2 (Week 10): Individual conversations with each supplier (Lynas, Magellan, ELA)
+- Phase 3 (Week 10-11): Joint Small Council call with all three suppliers
+- Phase 4 (Week 11-12): Negotiation, written commitments, ASA SoE proposal, engagement letter
+**Success metric:** ASA engagement letter sent by end of 90-day period (Nov 28, 2026) with ≥1 supplier commitment; conversation notes externally verifiable  
+**Next steps:** Week 7-9 autonomous execution of ASA pre-engagement and supplier briefing prep
 
 ## Critical Path Status
 
 ✅ **Week 1-2 complete:** Both #1 and #2 shipped. Roadmap dependencies unlocked.  
 ✅ **Week 3-6 complete:** Both #5 and #6 shipped. Narrative-technical bridge complete.  
 ✅ **Force multiplier deployed:** #8 (Shipping Ledger) shipped with Week 1 entry; weekly updates ready.  
-🔨 **Week 7-12 in progress:** #3 (Pathway Log) framework + seed entry complete; real engagements 2-3 pending.  
-📋 **Week 7-12 next:** #4 (Operator Demo) and #7 (Small Council) awaiting direction or autonomous execution.
+✅ **Week 7-12 proof phase:** #3 (Pathway Log) ✅ and #4 (Operator Demo) ✅ complete. Covenant demonstrated in warrant-labelling and cryptographic operations.  
+🔨 **Week 7-12 engagement phase:** #7 (Small Council) planning framework complete; autonomous execution weeks 7-12.
 
-**Keystone shift:** Critical path is now complete and locked. Week 7-12 work is exploratory (pathway learnings, operator control demo, stakeholder engagement) rather than foundational. Each week 7-12 deliverable now feeds learnings back into the Shipping Ledger for visible iteration.
+**Keystone shift:** Critical path is now complete and locked. Week 7-12 work is proof-of-covenant (warrant-labelling in pathway logs, kill/inspect/fork in operator demo) and stakeholder engagement (Small Council) rather than foundational. 
+
+**Proof phase narrative:**
+- #3 (Pathway Log #1) demonstrates covenant in outreach: research question → verifiable findings → roadmap adjustment
+- #4 (Operator Demo) demonstrates covenant in code: kill-switch, inspect, fork all auditable and reversible
+- #7 (Small Council) demonstrates covenant in negotiation: transparent conversation, explicit commitments, ASA verification
+
+**Real outreach entries (#2-3) and Small Council call execution weeks 10-12.**
