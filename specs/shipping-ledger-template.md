@@ -81,15 +81,32 @@
 
 ### ✅ Shipped
 
-(Entries will populate as work ships)
+1. **Small Council #7 — Week 7-9 Pre-Engagement Framework** (90-day #7, Phase 1)
+   - Complete 4-phase engagement strategy (weeks 7-12) with warrant-labelling throughout
+   - ASA pre-engagement brief (10 process + 5 scope questions, 3 exemplar pathways)
+   - Three personalized supplier briefings (Lynas, Magellan, ELA) with decision-maker targeting
+   - Phase 1 Execution Checklist with email templates ready for autonomous delivery
+   - Small Council Status & Execution Guide (master reference document)
+   - All materials validated (markdown linting passed), committed, and pushed
+   - Ready for user delivery of briefs and week 10 conversation scheduling (weeks 7-9)
+
+2. **Updated Shipping Ledger Week 1** (90-day #8)
+   - Documented all 7 shipped deliverables (#1-6 critical path + #3/#4 proof phase)
+   - Clarified Week 1 completions: 6 of 8 roadmap items shipped
+   - Identified roadmap reference table current status
 
 ### 🔨 Building
 
-(Entries will populate as work progresses)
+- **Small Council #7 — Phase 2-4 Execution** (weeks 10-12) — Individual supplier conversations, joint council call, negotiation & ASA lodgement
+- **Pathway Log entries #2-3** (real supplier engagement documentation, warrant-labelled) — scheduled for week 10 conversations
+- **Week 2 Shipping Ledger entry completion** (this entry) — documenting week 7-9 prep delivery
 
 ### 📋 Next
 
-(Entries will populate as priorities are determined)
+- **Small Council Phase 2** (week 10) — Individual supplier conversations (Lynas, Magellan, ELA), to be documented as Pathway Log entries #2-3
+- **Small Council Phase 3** (week 10-11) — Joint council call (all three suppliers)
+- **Small Council Phase 4** (week 11-12) — Negotiation, written commitments, ASA SoE proposal, engagement letter lodgement (by Nov 28)
+- **Week 3+ Shipping Ledger entries** (Sep 14 onward) — document execution results, learnings, and next phase progress
 
 ---
 
@@ -134,8 +151,8 @@
 
 ---
 
-**Last updated:** 2026-09-03 (Week 1 critical path complete; Small Council #7 Week 7-9 prep framework ready)  
-**Next update:** 2026-09-10 or after Phase 1 execution completes (Sep 7-13)  
+**Last updated:** 2026-09-03 (Week 2 entry: Small Council #7 week 7-9 preparation shipped; Phase 2-4 ready for execution)  
+**Next update:** 2026-09-10 or as Phase 2 execution results arrive (week 10 supplier conversations)  
 **Public URL:** (TBD — will be posted to public channel/thread for accountability tracking)
 
 ---
