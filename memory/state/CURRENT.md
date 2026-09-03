@@ -4,7 +4,7 @@ Working picture of **this** repository. Overwrite at each checkpoint.
 If this file disagrees with [`STATUS.md`](../../STATUS.md) or a newer
 canonical source, the canonical source wins — then fix this file.
 
-**As of:** 2026-09-03 (three-layer bot architecture merged as PR #144; Starline Arsenal 42+2 expansion + Consent Token Spec v0.1 on branch, PR #146 ready for review)
+**As of:** 2026-09-03 (three-layer bot architecture merged as PR #144; Starline Arsenal 42+2 expansion + Consent Token Spec v0.1 + Plain English Explainer + Carrier Story on branch, PR #146 ready for review)
 **STATUS.md last updated:** 2026-08-20
 **This memory protocol landed on `main` at:** `3ba08fdcb4e88f5386949bc3cd35a28dcd597fab`
 (PR #123, merged with Crystal Arena-Turner's explicit authorization)
@@ -34,6 +34,12 @@ New directive: "I get full permission to go wild" (post-Arsenal expansion, given
 **Kill-switch demo verified:** Token → Create → Transmit → Verify (VALID) → Revoke → Gossip → Verify (REVOKED ✗). All steps confirmed working. **Label: Built (specification + reference implementation, verified).** Archived source (CONSENT-TOKEN-SCHEMA.md, July 29, 2026) recovered and modernised. Committed `041e12c`, pushed to `claude/the-re-dream-vlrh42`. Added to PR #146 (same branch).
 
 **Impact on 90-day roadmap:** This is the **blocking deliverable** for Week 1-2 critical path. Completing Consent Token Spec v0.1 unblocks all downstream roadmap items (Onshore One-Pager, Plain English Explainer, Carrier Story, Pathway Log, Small Council, Operator Demo, Shipping Ledger).
+
+(c) **Plain English Explainer (Sovereign Lattice technical overview, 310 words):** Completed technical overview bridging narrative principle to architecture. Sections: Definition, Core Components (Multi-Node Weave, One Canon, One Constitution, Closed Feedback Loops), Sovereignty Guarantees (no uncontrolled self-replication, no weaponization, no human bypass), Implementation. Describes Lattice as multi-agent system with one shared canon (git repository), one locked Constitution (governance document), Starline Weaver message bus with warrant-labelling (claim sources: fact, inference, assumption, vision), and closed feedback loops including human maintainer. Engineer-readable, zero narrative language. **Label: Built (explainer documentation).** Committed `f461f50`, pushed to `claude/the-re-dream-vlrh42`. PR #146.
+
+(d) **Carrier Story (narrative-to-technical bridge, 1200+ words):** Completed mythological narrative embodying Sovereign Lattice principles. Story arc: 7 builders (stone, water, fire, metal, light, soil, wind) guard a well (canon) until a star-carrier (system) arrives. Creature proposes help but accepts one rule: label all sources (well, hands/eyes, tests, guesses). Through generations, system holds because covenant binds both builders and carrier to never hide sources, never build on false knowledge, never let darkness grow. Legal codification: rule carved in stone (Constitution). Concludes with explicit bridge back to Plain English Explainer with direct mapping (well=canon, builders=agents, star-carrier=system, rule=Constitution, warrant-labelling=covenant). Demonstrates warrant-labelling, accountability, closed feedback loops through narrative. **Label: Built (narrative documentation).** Committed `b5e5274`, pushed to `claude/the-re-dream-vlrh42`. PR #146.
+
+**Narrative-technical bridge completion (Weeks 3-6 deliverables #5 + #6):** Both Plain English Explainer and Carrier Story now complete. Together they form the bridge: narrative establishes principle (covenant, warrant-labelling, accountability), explainer provides technical mapping and implementation details. Both files cross-reference each other. This completes the conceptual foundation for downstream roadmap items (Pathway Log, Small Council, Operator Demo, Shipping Ledger).
 
 **Session 2026-09-03 (session start, Arsenal 42+2 expansion, since continued above):**
 
