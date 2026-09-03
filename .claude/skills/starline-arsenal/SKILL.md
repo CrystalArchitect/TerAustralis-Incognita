@@ -1,9 +1,9 @@
 ---
 name: starline-arsenal
-display_name: Starline Arsenal — 32 Model Armoury
-description: Australian-built cognitive armoury of 32 mental models for deconstruction, prediction, creation, and adaptation. Runs core questions to produce concrete outputs — failure lists, leverage audits, Bayesian updates, exponential sketches, heuristic sheets, miscalibration checks, parable spines, philology glosses, rhetorical appeal maps, persuasion briefs, evidence-tier assignments — not just labels. Part of CrystalCore.OS / TerAustralis Incognita.
+display_name: Starline Arsenal — 53 Models (42 Operational + 11 Original)
+description: Australian-built cognitive armoury of 53 mental models across two infrastructure tracks. 42 operational/execution models for strategic thinking (Deconstructors, Predictors, Creators, Adaptors, Readers, Speakers, Infrastructure Engines). 11 technical systems models (Telemetry, Vector Storage, Sandbox, Queueing, API Gateway, UX Rendering, Runtime, Testing, Database, Hardware, and legacy Technical Debt). Runs core questions to produce concrete outputs — failure lists, leverage audits, Bayesian updates, exponential sketches, heuristic sheets, miscalibration checks, parable spines, philology glosses, rhetorical appeal maps, persuasion briefs, evidence-tier assignments — not just labels. Part of CrystalCore.OS / TerAustralis Incognita.
 aliases: [model-armory, model-armoury, cognitive-armory, thinking-armory]
-version: 3.2.0
+version: 4.1.0
 author: TerAustralis Incognita
 lore: Red Dust Ground Steady. Starline for navigation. Seven Sisters reference without appropriation. MarsBase DownUnder mindset.
 ---
@@ -12,7 +12,9 @@ lore: Red Dust Ground Steady. Starline for navigation. Seven Sisters reference w
 
 **Formerly: model-armory / veil-breaker (parked)**
 
-**4.0.0 — Infrastructure Engines wing.** Added seven operational execution models (33–42): Strategic Planning, Resource Orchestration, Dependency Mapping, Risk Orchestration, Change Management, Tempo & Flow State, Feedback Integration, Institutional Momentum, Legacy & Technical Debt, Collective Thinking. Models 1–32 (Deconstructors, Predictors, Creators, Adaptors, Readers, Speakers) unchanged. New 7th wing: The Infrastructure Engines — thinking about operations, execution, and collective coordination. Two structural elements added: (1) Activation Tier System (foundation / build / operate sequencing), (2) Cross-Wing Bridge Map (explicit navigation across wings showing which models pair or follow each other). See [`../../../memory/OPEN-QUESTIONS.md`](../../../memory/OPEN-QUESTIONS.md) "Starline Arsenal 42 expansion" for development notes.
+**4.0.0 — Infrastructure Engines wing (operational, 33–42).** Added 10 operational execution models: Strategic Planning, Resource Orchestration, Dependency Mapping, Risk Orchestration, Change Management, Tempo & Flow State, Feedback Integration, Institutional Momentum, Legacy & Technical Debt, Collective Thinking. Models 1–32 (Deconstructors, Predictors, Creators, Adaptors, Readers, Speakers) unchanged. New 7th wing: The Infrastructure Engines — thinking about operations, execution, and collective coordination. Two structural elements added: (1) Activation Tier System (foundation / build / operate sequencing), (2) Cross-Wing Bridge Map (explicit navigation across wings showing which models pair or follow each other). **Total: 42 operational models + 2 structural elements** = the "42+2" expansion.
+
+**4.1.0 — Technical infrastructure expansion (44–53).** Separated concurrent technical infrastructure models (previously numbering 34–43, now 44–53) to eliminate collision with operational models 33–42. Technical track: Telemetry & Observability, Vector Storage, Sandbox Containment, Background Task Queueing, API Gateway, UX Rendering, Runtime Core, Stress Testing, Database Sharding, Hardware Abstraction. **Total: 53 models across two separate infrastructure tracks** — operational/execution (33–42) and technical systems (44–53).
 
 **3.0.0 — Reconciliation.** Models 14–25 (v2.0.0) were flagged on landing as
 drafted, not verified against a source text. That source has now been
