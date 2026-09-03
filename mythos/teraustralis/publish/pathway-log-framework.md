@@ -170,11 +170,10 @@ This section will be populated with individual entries as engagements occur.
 
 ## See Also
 
-- **Carrier Story** (`specs/carrier-story.md`) — narrative foundation for warrant-labelling covenant
-- **Plain English Explainer** (`specs/plain-english-explainer.md`) — technical explanation of Sovereign Lattice closed feedback loops
-- **Consent Token Spec** (`specs/consent-token-v0.1/`) — implementation of covenant in cryptographic token form
-- **Onshore Chain One-Pager** (`specs/onshore-chain-one-pager.md`) — first test case: supply chain outreach and learning
-- **Shipping Ledger** (`specs/shipping-ledger-template.md`) — weekly tracking that incorporates Pathway Log learnings
+- **Carrier Story** ([`carrier-story.md`](carrier-story.md)) — narrative foundation for warrant-labelling covenant
+- **Plain English Explainer** ([`plain-english-explainer.md`](plain-english-explainer.md)) — plain-language architecture explainer
+- **Consent Token Spec** ([`docs/architecture/crystal-core/CONSENT-TOKEN-SPEC-v0.1.md`](../../../docs/architecture/crystal-core/CONSENT-TOKEN-SPEC-v0.1.md)) — spec for covenant in token form (spec only; no runnable code lives in this repo)
+- **Onshore Chain One-Pager** ([`onshore-chain-one-pager.md`](onshore-chain-one-pager.md)) — first test case: supply chain sourcing and citation
 
 ---
 

@@ -39,6 +39,10 @@
     {
       "comment": "Australia's State of the Environment portal times out for CI runners (ESOCKETTIMEDOUT at 20s, CI run 30054270459, 2026-07-24) - referenced from research/seven-sisters/WATER-BRIEF.md. Reachable in a browser; the timeout is checker-vs-portal behaviour, not link death.",
       "pattern": "^https://soe\\.dcceew\\.gov\\.au"
+    },
+    {
+      "comment": "space.gov.au and industry.gov.au (Australian Space Agency / Dept of Industry) return Status: 0 - no response at all, not a real 4xx - to this checker specifically (CI run 33738677162, job 100595221917, 2026-09-03, all 4 links in mythos/teraustralis/publish/onshore-chain-one-pager.md). Same failure class as the SoE portal immediately above (unauthenticated/datacenter-IP automated request blocked or timed out, not link death): the exact same URLs were independently returned with correct page titles by a live web search the same session, and this repository's own sandboxed environment gets an explicit egress block (not a timeout or 404) trying to reach the same two domains - consistent with these being broadly restricted for non-browser traffic rather than actually dead.",
+      "pattern": "^https://(www\\.)?(space|industry)\\.gov\\.au"
     }
   ],
   "retryOn429": true,
