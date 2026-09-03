@@ -110,6 +110,30 @@
 
 ---
 
+## Week 3 (Sep 14-20, 2026)
+
+### ✅ Shipped
+
+1. **Small Council #7 — Phases 2-4 Execution Materials** (90-day #7, comprehensive preparation)
+   - Phase 2 (Week 10): Individual supplier conversations execution checklist with conversation briefs (Lynas, Magellan, ELA), scope templates, Pathway Log entry templates, success metrics
+   - Phase 3 (Weeks 10-11): Joint council call execution checklist with 2-3 hour agenda, pre-call preparation tasks, call facilitation guidance, warrant-labelled notes template
+   - Phase 4 (Weeks 11-12): Negotiation & closure execution checklist with follow-up conversation briefs, written statement templates (customized per supplier), ASA Statement of Engagement proposal template, engagement letter submission process
+   - All materials warrant-labelled (Fact/Inference/Assumption/Vision) and externally audit-ready
+   - Ready for user-led autonomous execution weeks 10-12
+
+### 🔨 Building
+
+- Small Council #7 — Phase 1 execution (weeks 7-9) — awaiting user delivery of ASA contact + supplier briefing emails
+
+### 📋 Next
+
+- Phase 2 execution (week 10) — individual supplier conversations, document with warrant-labelling
+- Phase 3 execution (weeks 10-11) — joint Small Council call, facilitate and document
+- Phase 4 execution (weeks 11-12) — secure written commitments, submit ASA SoE proposal, lodge engagement letter by Nov 28
+- Week 4 Shipping Ledger entry (Sep 21-27) — document Phase 1 execution results when completed
+
+---
+
 ## Template for future weeks
 
 ```
