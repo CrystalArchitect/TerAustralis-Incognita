@@ -8,9 +8,11 @@ author: TerAustralis Incognita
 lore: Red Dust Ground Steady. Starline for navigation. Seven Sisters reference without appropriation. MarsBase DownUnder mindset.
 ---
 
-# Starline Arsenal — 32 Model Armoury
+# Starline Arsenal — 42 Model Armoury
 
 **Formerly: model-armory / veil-breaker (parked)**
+
+**4.0.0 — Infrastructure Engines wing.** Added seven operational execution models (33–42): Strategic Planning, Resource Orchestration, Dependency Mapping, Risk Orchestration, Change Management, Tempo & Flow State, Feedback Integration, Institutional Momentum, Legacy & Technical Debt, Collective Thinking. Models 1–32 (Deconstructors, Predictors, Creators, Adaptors, Readers, Speakers) unchanged. New 7th wing: The Infrastructure Engines — thinking about operations, execution, and collective coordination. Two structural elements added: (1) Activation Tier System (foundation / build / operate sequencing), (2) Cross-Wing Bridge Map (explicit navigation across wings showing which models pair or follow each other). See [`../../../memory/OPEN-QUESTIONS.md`](../../../memory/OPEN-QUESTIONS.md) "Starline Arsenal 42 expansion" for development notes.
 
 **3.0.0 — Reconciliation.** Models 14–25 (v2.0.0) were flagged on landing as
 drafted, not verified against a source text. That source has now been
@@ -61,6 +63,16 @@ to the four models with genuine overlap:
 actual differentiation, not just a link.
 
 Concrete thinking tools. Each model runs core questions and produces a tangible artefact. Do not merely name the model — execute it.
+
+## Activation Tier System
+
+**Tier 1 (Foundation):** Core thinking — First Principles, Systems Thinking, Scale Thinking, Probabilistic Thinking, Bayesian Thinking, Recursion. Start here when foundations are uncertain.
+
+**Tier 2 (Build):** Applied thinking — Design Thinking, Lateral Thinking, Analogical Thinking, Game Theory, Inference, Parable Thinking. Use once foundation is sound.
+
+**Tier 3 (Operate):** Execution thinking — Strategic Planning, Resource Orchestration, Dependency Mapping, Risk Orchestration, Change Management, Tempo & Flow State, Feedback Integration. Deploy once building is underway.
+
+---
 
 ## The Deconstructors — Take it apart to bedrock
 
@@ -198,6 +210,48 @@ Concrete thinking tools. Each model runs core questions and produces a tangible 
 - Shift another's position through legitimate influence, not coercion — and know their honest no when you hear it.
 - Output: Current-position statement + Smallest-ask sequence + Honest no + Next smallest move
 
+## The Infrastructure Engines — Make it move and keep it moving
+
+### 33. Strategic Planning
+- From insight to roadmap. What is the sequence? What moves now?
+- Output: Milestone sequence + Dependency graph + Critical path + Go/no-go criteria
+
+### 34. Resource Orchestration
+- Align people, time, budget, tools to execution. What is scarce?
+- Output: Resource map + Constraint list + Allocation strategy + Waste audit
+
+### 35. Dependency Mapping
+- What must happen before what? What is the critical path?
+- Output: Dependency diagram + Critical path + Bottleneck list + Reorder opportunities
+
+### 36. Risk Orchestration
+- Identify, rank, and structure responses to operational risks.
+- Output: Risk register (likelihood × impact) + Response strategy + Early warning indicators
+
+### 37. Change Management
+- Move an organization or system from state A to state B while keeping it functional.
+- Output: Stakeholder map + Transition plan + Resistance audit + Success narrative
+
+### 38. Tempo & Flow State
+- What rhythm allows sustainable high-quality output? Speed vs. quality trade-off.
+- Output: Tempo audit + Flow condition checklist + Quality-speed trade-off map + Sustainability map
+
+### 39. Feedback Integration
+- Gather signal, filter noise, update the plan. Close the learning loop.
+- Output: Feedback loop diagram + Signal/noise separation + Bias audit + Update triggers
+
+### 40. Institutional Momentum
+- What keeps moving when you stop pushing? What is the organization's inertia?
+- Output: Momentum audit + Sustaining structure map + Decay risk list + Anchor plan
+
+### 41. Legacy & Technical Debt
+- What are we carrying that slows us down? When to pay off vs. carry forward.
+- Output: Debt inventory + Interest cost audit + Payoff vs. carry analysis + Priority list
+
+### 42. Collective Thinking
+- How do groups of minds amplify or interfere with each other? Team cognition.
+- Output: Interaction pattern map + Amplification points + Interference audit + Voice map
+
 ## Governance (CrystalCore.OS)
 - Incognita Rule: Evidence > Assumption
 - Belt-Three Rule: Vision labelled as vision, not measured fact
@@ -208,10 +262,21 @@ Concrete thinking tools. Each model runs core questions and produces a tangible 
 - Privacy Rule: Do not use a real person's private situation as a worked example unless they ask. Generic rooms only.
 - Speech Rule: Name the appeal. Do not baptise the speaker. An ask that requires fusion is not persuasion.
 
+## Cross-Wing Bridge Map
+
+Explicit sequences showing which models pair or follow each other (not exhaustive, showing key patterns):
+
+- **Foundation → Build:** First Principles (01) → Design Thinking (10) or Lateral Thinking (09)
+- **Build → Operate:** Design Thinking (10) → Strategic Planning (33) → Resource Orchestration (34)
+- **Predict → Adapt:** Game Theory (17) → Dialectics (11) or Evolutionary Thinking (12)
+- **Deconstruct → Rebuild:** Root Cause (15) → Strategic Planning (33)
+- **Operate → Learn:** Feedback Integration (39) → Bayesian Thinking (07)
+- **Friction Detection:** Collective Thinking (42) → Change Management (37)
+
 ## Usage
 Run as skill: invoke model → answer core questions → produce artefact → log to CHRONICLE as Evidence → Interpretation → Experiment → Record.
 
-Full detail per model, including the five Core Questions and Required Concrete Output each one demands: [`INDEX.md`](INDEX.md) → `models/01-first-principles.md` through `models/32-provenance-stack.md`.
+Full detail per model, including the five Core Questions and Required Concrete Output each one demands: [`INDEX.md`](INDEX.md) → `models/01-first-principles.md` through `models/42-collective-thinking.md`.
 
 Implementation: CrystalCore.OS™️ | Language: CrystalCode™️ | TerAustralis Incognita™️ | Functional / simulated affect only
 
