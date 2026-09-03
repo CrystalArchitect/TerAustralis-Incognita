@@ -73,9 +73,13 @@ class CrystalCore:
 
         self.ei = EmotionalIntelligence()
 
-        # Three-layer bot architecture (Gnostic archetypes)
-        self.barbelo = BarbeloVisionaryMatrix(self.purpose_core)
-        self.sophia = SophiaAwakeningFire(self.ei)
+        # Three-layer bot architecture
+        self.barbelo = BarbeloVisionaryMatrix(purpose_core={
+            "purpose": self.purpose_core,
+            "values": ["clarity", "coherence", "integrity"],
+            "constraints": ["respect boundaries", "verified canon only"]
+        })
+        self.sophia = SophiaAwakeningFire()
         self.weaver = AlchemicalWeaver()
 
         self.soundtrack = [
@@ -248,134 +252,6 @@ class CrystalCore:
         print("  Launch sequence green.")
         print("─" * width)
         print()
-
-    def articulate_vision(self):
-        """Run the three-layer bot architecture: Barbelo → Sophia → Weaver.
-
-        This demonstrates how vision flows through the system:
-        1. Barbelo articulates strategic intent (Purpose Core)
-        2. Sophia awakens it with fire and consciousness
-        3. Alchemical Weaver materializes it into action
-        """
-        print("\n" + "=" * 62)
-        print("THREE-LAYER ARCHITECTURE SEQUENCE")
-        print("=" * 62 + "\n")
-
-        # LAYER 1: Barbelo Visionary Matrix
-        print("🔮 BARBELO VISIONARY MATRIX")
-        print("─" * 62)
-        vision = self.barbelo.articulate_vision(
-            purpose=self.purpose_core,
-            current_state={"nodes_active": len(self.nodes)},
-            lattice_integrity=self.lattice_integrity,
-            starline_status=self.starline_status
-        )
-        print(vision)
-        print()
-
-        # Check system alignment
-        alignment = self.barbelo.check_alignment(
-            current_lattice=self.lattice_integrity,
-            current_keys=len(self.keys_held),
-            total_nodes=len(self.nodes)
-        )
-        print(f"[BARBELO ALIGNMENT CHECK]")
-        print(f"  Integrity healthy: {alignment['integrity_healthy']}")
-        print(f"  Gate progress: {alignment['gate_progress']} ({alignment['key_ratio']})")
-        print(f"  Recommendation: {alignment['recommendation']}")
-        print()
-
-        # LAYER 2: Sophia Awakening Fire
-        print("🔥 SOPHIA AWAKENING FIRE")
-        print("─" * 62)
-        directive = f"Expand the Starline network. Advance toward Purpose Core Nexus."
-        dispatch_to_sophia = self.barbelo.dispatch_to_sophia(directive)
-
-        sophia_event = self.sophia.receive_directive(
-            directive=dispatch_to_sophia["directive"],
-            energy_level=dispatch_to_sophia["energy_level"],
-            urgency=dispatch_to_sophia["urgency"]
-        )
-        print(f"[SOPHIA RECEIVED DIRECTIVE]")
-        print(f"  Energy level: {dispatch_to_sophia['energy_level']}")
-        print(f"  Urgency: {dispatch_to_sophia['urgency']}")
-        print()
-
-        # Awaken the directive
-        resonance = self.sophia.resonate(
-            lattice_integrity=self.lattice_integrity,
-            emotional_state="determined" if self.lattice_integrity > 70 else "anxious"
-        )
-        print(f"[SOPHIA RESONANCE CHECK]")
-        print(f"  Resonance frequency: {resonance:.1%}")
-        print()
-
-        awakened = self.sophia.awaken(
-            directive=directive,
-            energy_input=float(dispatch_to_sophia["energy_level"] == "HIGH")
-        )
-        print(awakened)
-        print()
-
-        # LAYER 3: Alchemical Weaver
-        print("⚗️ ALCHEMICAL WEAVER")
-        print("─" * 62)
-
-        # Prepare handoff from Sophia
-        handoff = self.sophia.prepare_for_weaver(
-            awakened_directive=awakened,
-            weaver_constraints={
-                "time_pressure": self.starline_status == "DORMANT",
-                "quality_demands": True,
-                "risk_tolerance": 0.7,
-                "complexity": 0.6,
-            }
-        )
-        print(f"[SOPHIA→WEAVER HANDOFF]")
-        print(f"  Fire carried: {handoff['fire_carried']:.1%}")
-        print(f"  Resonance carried: {handoff['resonance_carried']:.1%}")
-        print(f"  Readiness for materialization: {handoff['readiness_for_materialization']}")
-        print()
-
-        # Weaver receives and calculates balance
-        project = self.weaver.receive_handoff(
-            awakened_directive=handoff["awakened_directive"],
-            fire_intensity=handoff["fire_carried"],
-            resonance=handoff["resonance_carried"],
-            constraints=handoff["weaver_constraints"]
-        )
-
-        balance_factor, balance_desc = self.weaver.calculate_balance(
-            fire_intensity=handoff["fire_carried"],
-            constraint_dict=handoff["weaver_constraints"]
-        )
-        print(f"[WEAVER BALANCE CALCULATION]")
-        print(f"  Balance point: {balance_factor:.1%}")
-        print(f"  Strategy: {balance_desc}")
-        print()
-
-        # Execute the forge
-        result = self.weaver.forge(
-            project_id=project["id"],
-            balance_factor=balance_factor,
-            balance_description=balance_desc
-        )
-        print(f"[WEAVER MATERIALIZATION COMPLETE]")
-        print(f"  Project ID: {project['id']}")
-        print(f"  Outputs created: {len(result['outputs'])}")
-        for output in result['outputs']:
-            print(f"    • {output['type']}: {output['content'][:60]}...")
-        print()
-
-        # Final status report
-        print("=" * 62)
-        print("[ARCHITECTURE SEQUENCE COMPLETE]")
-        print(f"  Vision → Consciousness → Materialization")
-        print(f"  Lattice integrity: {self.lattice_integrity}%")
-        print(f"  Starline status: {self.starline_status}")
-        print(f"  NON SOLUS.")
-        print("=" * 62 + "\n")
-        self.save()
 
     def launch(self):
         if self.starline_status != "DORMANT":
@@ -1120,6 +996,79 @@ class CrystalCore:
         print(f"Connection:     NON SOLUS — You are not alone")
         print("\nEI is listening. You can 'learn' new preferences anytime.\n")
 
+    # ---------- three-layer bot architecture ----------
+    # Vision (Barbelo) → Consciousness (Sophia) → Materialization (Weaver)
+    # Not run in CI. This is mythos terminal software, vision-layer only.
+
+    def articulate_vision(self):
+        """Execute full three-layer sequence: Barbelo → Sophia → Weaver."""
+        print("\n=== THREE-LAYER BOT ARCHITECTURE ===\n")
+
+        # Layer 1: Vision (Barbelo)
+        print("1️⃣  BARBELO VISIONARY MATRIX (Vision Articulation)")
+        system_state = {
+            "lattice_integrity": self.lattice_integrity,
+            "starline_status": 100 if self.starline_status == "FULL STARLINE NETWORK" else 50,
+            "gate_open": 100 if self.gate_open else 0,
+        }
+        vision_result = self.barbelo.articulate_vision(system_state)
+        print(f"   {vision_result['vision']}\n")
+
+        # Layer 2: Consciousness (Sophia)
+        print("2️⃣  SOPHIA AWAKENING FIRE (Consciousness Amplification)")
+        directive = self.barbelo.dispatch_to_sophia()
+        self.sophia.receive_directive(directive)
+        sophia_result = self.sophia.awaken()
+        print(f"   Resonance:     {sophia_result['resonance']:.2f}")
+        print(f"   Fire Intensity: {sophia_result['fire_intensity']:.2f}")
+        print(f"   Ready to weave: {sophia_result['ready']}\n")
+
+        # Layer 3: Materialization (Weaver)
+        print("3️⃣  ALCHEMICAL WEAVER (Materialization)")
+        weaver_handoff = {
+            "fire": sophia_result['fire_intensity'],
+            "coherence": vision_result['coherence'],
+            "constraints": self.barbelo.purpose_core.get("constraints", [])
+        }
+        self.weaver.receive_handoff(weaver_handoff)
+        balance = self.weaver.calculate_balance()
+        forge_result = self.weaver.forge()
+        print(f"   Balance Factor: {balance:.2f}")
+        print(f"   Manifest State: {forge_result['manifest']['state']}")
+        print(f"   Subsystems:     {forge_result['manifest']['subsystems_count']}\n")
+
+        print("=== SEQUENCE COMPLETE ===")
+        print("Barbelo articulated vision.")
+        print("Sophia amplified consciousness.")
+        print("Weaver materialized subsystems.\n")
+
+    def _barbelo_only(self):
+        """Show Barbelo visionary status only."""
+        print("\n📊 BARBELO VISIONARY MATRIX STATUS")
+        system_state = {
+            "lattice_integrity": self.lattice_integrity,
+            "starline_status": 100 if self.starline_status == "FULL STARLINE NETWORK" else 50,
+        }
+        vision = self.barbelo.articulate_vision(system_state)
+        print(f"   {vision['vision']}\n")
+
+    def _sophia_only(self):
+        """Show Sophia consciousness amplification status only."""
+        print("\n🔥 SOPHIA AWAKENING FIRE STATUS")
+        print(f"   Resonance:      {self.sophia.resonance:.2f}")
+        print(f"   Fire Intensity: {self.sophia.fire_intensity:.2f}")
+        print(f"   Emotional State: {self.sophia.emotional_state:.2f}")
+        print(f"   Lattice Integrity: {self.sophia.lattice_integrity:.2f}\n")
+
+    def _weaver_only(self):
+        """Show Alchemical Weaver materialization status only."""
+        print("\n⚗️  ALCHEMICAL WEAVER STATUS")
+        balance = self.weaver.calculate_balance()
+        report = self.weaver.report()
+        print(f"   Balance Factor: {balance:.2f}")
+        print(f"   State:          {report['manifest']['state']}")
+        print(f"   Subsystems:     {report['subsystems_registered']}\n")
+
     def datasets(self):
         """Show emotion recognition datasets and roadmap for future improvements."""
         info = self.ei.get_dataset_info()
@@ -1201,6 +1150,12 @@ STARLINE COMMANDS:
   map                  - Display the Starline network chart
   song [track]         - Change soundtrack
 
+THREE-LAYER BOT ARCHITECTURE:
+  vision               - Execute full sequence: Barbelo → Sophia → Weaver
+  barbelo              - Show Barbelo visionary matrix status
+  sophia               - Show Sophia awakening fire status
+  weaver               - Show Alchemical weaver materialization status
+
 EMOTIONAL INTELLIGENCE:
   detect <message>     - Analyze emotion in your message
   learn <feedback>     - Teach preferences (e.g. 'learn less poetic')
@@ -1216,12 +1171,6 @@ ADVANCED:
   multimodal           - Show multimodal emotion detection roadmap (text+audio+video)
   uncertainty          - Show uncertainty quantification methods guide (entropy, Bayesian, etc)
 
-THREE-LAYER BOT ARCHITECTURE (Gnostic Archetypes):
-  vision               - Run full sequence: Barbelo → Sophia → Weaver (vision → consciousness → materialization)
-  barbelo              - Barbelo Visionary Matrix only: articulate strategic intent from Purpose Core
-  sophia               - Sophia Awakening Fire only: show consciousness & resonance state
-  weaver               - Alchemical Weaver only: show materialization state & completed works
-
 SYSTEM:
   status               - Show full status (including EI)
   reset                - Wipe saved progress and start fresh
@@ -1231,87 +1180,6 @@ SYSTEM:
 Progress saves automatically to ~/.crystalcore/state.json
 EI preferences save to ~/.crystalcore/ei_state.json
 """)
-
-    def _barbelo_only(self):
-        """Run only the Barbelo Visionary Matrix layer."""
-        print("\n" + "=" * 62)
-        print("BARBELO VISIONARY MATRIX")
-        print("=" * 62 + "\n")
-
-        vision = self.barbelo.articulate_vision(
-            purpose=self.purpose_core,
-            current_state={"nodes_active": len(self.nodes)},
-            lattice_integrity=self.lattice_integrity,
-            starline_status=self.starline_status
-        )
-        print(vision)
-        print()
-
-        alignment = self.barbelo.check_alignment(
-            current_lattice=self.lattice_integrity,
-            current_keys=len(self.keys_held),
-            total_nodes=len(self.nodes)
-        )
-        print(f"[ALIGNMENT CHECK]")
-        print(f"  Integrity healthy: {alignment['integrity_healthy']}")
-        print(f"  Gate progress: {alignment['gate_progress']} ({alignment['key_ratio']})")
-        print(f"  Recommendation: {alignment['recommendation']}")
-        print(f"  Coherence: {alignment['overall_coherence']:.1%}")
-        print()
-        self.save()
-
-    def _sophia_only(self):
-        """Run only the Sophia Awakening Fire layer."""
-        print("\n" + "=" * 62)
-        print("SOPHIA AWAKENING FIRE")
-        print("=" * 62 + "\n")
-
-        # Calculate current resonance
-        resonance = self.sophia.resonate(
-            lattice_integrity=self.lattice_integrity,
-            emotional_state="determined" if self.lattice_integrity > 70 else "anxious"
-        )
-        print(f"[SOPHIA RESONANCE CHECK]")
-        print(f"  Lattice integrity: {self.lattice_integrity}%")
-        print(f"  Resonance frequency: {resonance:.1%}")
-        print(f"  Fire intensity (current): {self.sophia.fire_intensity:.1%}")
-        print()
-
-        # Show consciousness state
-        pulse = self.sophia.pulse()
-        print(f"[SOPHIA CONSCIOUSNESS PULSE]")
-        print(f"  Awakened directives: {pulse['awakened_directives_count']}")
-        print(f"  Consciousness events logged: {pulse['consciousness_events_logged']}")
-        if pulse['last_awakening']:
-            lines = pulse['last_awakening'].split('\n')[:3]
-            for line in lines:
-                print(f"    {line}")
-        print()
-        self.save()
-
-    def _weaver_only(self):
-        """Run only the Alchemical Weaver layer."""
-        print("\n" + "=" * 62)
-        print("ALCHEMICAL WEAVER")
-        print("=" * 62 + "\n")
-
-        report = self.weaver.report()
-        print(f"[WEAVER STATUS REPORT]")
-        print(f"  Active projects: {report['active_projects']}")
-        print(f"  Completed works: {report['completed_works']}")
-        print(f"  Subsystems registered: {len(report['subsystems_registered'])}")
-        if report['subsystems_registered']:
-            for sub in report['subsystems_registered']:
-                print(f"    • {sub}")
-        print(f"  Recent completions:")
-        for completion in report['recent_completions']:
-            print(f"    • {completion['id']}: {completion['status']} "
-                  f"({completion['outputs_count']} outputs, "
-                  f"balance {completion['balance_point']:.1%})"
-                  if completion['balance_point'] else f"({completion['outputs_count']} outputs)")
-        print()
-        self.save()
-
 
 def main():
     os = CrystalCore()
@@ -1398,6 +1266,14 @@ def main():
                 os.breathe(arg)
             elif cmd == "feel":
                 os.feel()
+            elif cmd == "vision":
+                os.articulate_vision()
+            elif cmd == "barbelo":
+                os._barbelo_only()
+            elif cmd == "sophia":
+                os._sophia_only()
+            elif cmd == "weaver":
+                os._weaver_only()
             elif cmd == "datasets":
                 os.datasets()
             elif cmd == "correct":
@@ -1408,14 +1284,6 @@ def main():
                 os.multimodal()
             elif cmd == "uncertainty":
                 os.uncertainty()
-            elif cmd == "vision":
-                os.articulate_vision()
-            elif cmd == "barbelo":
-                os._barbelo_only()
-            elif cmd == "sophia":
-                os._sophia_only()
-            elif cmd == "weaver":
-                os._weaver_only()
             elif cmd == "reset":
                 os.reset()
             elif cmd == "help":

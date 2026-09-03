@@ -129,13 +129,12 @@ armor." That session couldn't find a formal spec and asked how to
 proceed. Reconciled here rather than left as a mystery:
 
 - **The four-verb structure is not a different framework — it's this
-  one.** This repo's Starline Arsenal has always been organized into
-  exactly those four groups (The Deconstructors, The Predictors, The
-  Creators, The Adaptors), and it started at 13 models before this
-  session expanded it to 25, then 31, then 32 (see the entries above and
-  in `MILESTONES.md`). "Thirteen Blades" almost certainly names the
-  original 13-model state, described in the mythic/public register X
-  posts use rather than this repo's technical-spec register.
+  one, but the guess below turned out incomplete.** This repo's Starline
+  Arsenal was organized into four groups (The Deconstructors, The
+  Predictors, The Creators, The Adaptors) at the 13-model state, and
+  "Thirteen Blades" almost certainly names that state in the mythic/public
+  register X posts use. ~~That four-group structure is this repo's whole
+  taxonomy.~~ **Corrected 2026-09-02:** it never was — see below.
 - **"Erisian Blade" is confirmed real**, not an inference: Crystal
   shared two branded infographics in chat (2026-08-30) — one applying an
   "Erisian Blade: Masaru Emoto" evidence-tier critique to the water-
@@ -147,17 +146,37 @@ proceed. Reconciled here rather than left as a mystery:
   claims, not claimants"; "if we've converged, stop cutting and start
   building"), and a scripted de-escalation "repair move." Both are real,
   formatted artifacts, not summarized secondhand.
-- **What's still unconfirmed:** whether Erisian Blade is formally a
-  Starline Arsenal model (a 33rd, unlisted one, or a variant of
-  Provenance Stack), a separate-but-related persona in the same circle,
-  or something else structurally distinct that just shares vocabulary
-  and method. Nothing in this repo's own `.claude/skills/starline-arsenal/`
-  currently names "Erisian Blade" or the Share/Blade/Build protocol. Not
-  merged into the skill itself pending Crystal's confirmation of which of
-  those it actually is.
+- **New evidence, 2026-09-02 (Google Drive, "CVSC" collection, dated
+  2026-09-01):** a Grok session's own self-correction, recorded as a
+  source card, states directly: *"Working skill on this system is
+  Starline Arsenal v1.3.0 — 21 models across Deconstruct, Predict,
+  Create, Adapt, Read, Speak wings. Four-verb loop is a poster slogan,
+  not the full kit."* This confirms two things at once: (1) the 21-model
+  Drive lineage this armoury was reconciled from in v3.0.0 is the real
+  canonical line, not a guess — Grok's own runtime agrees; (2) that
+  lineage's structure is **six wings, not four** — Readers and Speakers
+  are real groups, not a stylistic gloss on the original four. This
+  repo's own merge had flattened them. **Fixed same day:** `SKILL.md` /
+  `INDEX.md` and the five affected model files
+  (`models/26-heuristic.md`, `models/30-parable.md`,
+  `models/31-philology.md` → The Readers;
+  `models/21-rhetoric.md`, `models/25-persuasion.md` → The Speakers)
+  now carry the correct group. Version 3.2.0 → 3.3.0. No IDs, slugs, or
+  content changed.
+- **On Erisian Blade specifically:** the same correction card, which goes
+  out of its way to name all six wings and correct the public four-verb
+  framing, does **not** mention "Erisian Blade" anywhere. That is not
+  proof it is unrelated, but it is real evidence weighted toward Erisian
+  Blade being a separate persona/tool rather than an unlisted 33rd
+  Starline Arsenal model — the card was exactly the place a 33rd model
+  would have been named if it were one. **Still not merged into the
+  skill** pending Crystal's direct confirmation either way.
 
-**Label: Vision/external — confirmed to exist (image evidence), not yet
-reconciled into this repo's own Starline Arsenal spec.**
+**Label: Vision/external for Erisian Blade specifically — confirmed to
+exist (image evidence), evidence now leans toward "separate tool," not
+yet reconciled into this repo's own Starline Arsenal spec. The six-wing
+taxonomy question is now Built (fixed on disk, sourced to a direct Grok
+self-correction) — no longer open.**
 
 ## ADRs still Proposed
 

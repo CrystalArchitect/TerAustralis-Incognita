@@ -20,7 +20,7 @@ create a GitHub repository for a framework (ADR-0015).
 | CrystalCore Framework (companion package) | Built in the *code* tree, not this git | Travels with Clementine (`core/crystalcore/mind/` described; lives in `-Code`) | Extract it until Stage 3 gates fire |
 | one-but-many-field | Skill / book | `.claude/skills/one-but-many-field/` (not in this git yet; see "Kit skills" section below) | Collapse "one" and "many" into a single node |
 | field-test | Skill | `.claude/skills/field-test/` (not in this git yet; see "Kit skills" section below) | |
-| starline-arsenal | Skill, v3.2.0, 32 models (was 13), all 31 verified against a Drive source, 32nd (Provenance Stack) absorbed from a concurrent PR | [`.claude/skills/starline-arsenal/`](../.claude/skills/starline-arsenal/) | Use Songline as a component name |
+| starline-arsenal | Skill, v3.3.0, 32 models across 6 wings (Deconstructors/Predictors/Creators/Adaptors/Readers/Speakers) — confirmed against a Grok self-correction, not just a Claude-drafted merge | [`.claude/skills/starline-arsenal/`](../.claude/skills/starline-arsenal/) | Use Songline as a component name; file Reader/Speaker models under one of the original 4 groups |
 | teraustralis (Claude Code skill) | Skill | [`.claude/skills/teraustralis/`](../.claude/skills/teraustralis/) | |
 | Memory-state model (Fact/Interpretation/Inheritance/Revision/Vision/Unknown; Bridge/Carry/Rewrite operators) | Vision — design hypothesis, not implemented | [`MEMORY-STATE-MODEL.md`](MEMORY-STATE-MODEL.md) | Treat as schema or enforcement; it's neither yet |
 | Cross-AI memory architecture (Individual/Collective/Starline Arsenal/SAT four-layer sketch) | Vision — design hypothesis, not implemented | [`CROSS-AI-MEMORY-ARCHITECTURE.md`](CROSS-AI-MEMORY-ARCHITECTURE.md) | Confuse with this repo's own Claude Code memory protocol (`CLAUDE.md` + `memory/`) — they are different systems |
@@ -65,6 +65,7 @@ Do not copy these papers' worked examples or personal-layer objects into
 | Dual-clock sounding | Prototype of CICH dual-clock / Starline as method | [DUAL-CLOCK-SOUNDING.md](https://drive.google.com/file/d/1iCerrlD94_NEOivUuIkFLpY1HDlShITa/view) |
 | Loop Framework Drive copy | Preservation copy of `the-library` paper. Method, not law. | [LOOP-FRAMEWORK.md](https://drive.google.com/file/d/1wT8c5teyKGicHClDbjRU0IwY0ZZJOK7U/view) |
 | Stories, songs, workshop images (2026-08-31 save) | Process / archive. GitHub remains hashed canon for music. | [stories-and-songs](https://drive.google.com/drive/folders/1Hbq9ZccTCIXkrC1d5eftJPI-MFB-6p1m) · [workshop-images](https://drive.google.com/drive/folders/1yyNwc1csSPndv6GKmf75oiPTILRxbbzA) · [receipt](https://drive.google.com/file/d/18fjCx9pFY2d8ZSKIwWjG8GGdbUZea3vT/view) |
+| CVSC (Crystal Vision Source Collection) — Collection Mode preserve-first archive with epistemic-belt-tagged source cards, active from 2026-08-31 | Process. Personal-layer Drive archive, not this repo's canon. Card fields (Contribution/Epistemic belt/Status/Privacy) parallel but do not replace this repo's own Built/Vision/Unknown labels. | Folder `14_AI_INTERACTIONS` under primary root `1mc0RvTCg3d94WcYIot2pLKoiHQb8nBnX` (duplicate root `1EAaX0gWuzDGOwVCOeWLDaUUu0ISQ1hII` — do not merge) |
 
 **2026-08-31 prototypes (Drive only).** Collision Probe, Dual-clock sounding, and the Loop Drive copy are runnable field-manuals of frameworks already named above. They are not new named frameworks. Map: [FRAMEWORKS-PROTOTYPES.md](https://drive.google.com/file/d/1fGEBiE3tOLD7X48YwYUt7Yig5Q0VClsq/view).
 
@@ -77,12 +78,19 @@ body (including any family-layer language) into this git.
 
 ## Kit skills named in Drive save-skill but not in this git
 
-`tide-engine-silence-protocol`, `silent-thread-doctrine`,
+**Original five (2026-08-29):** `tide-engine-silence-protocol`, `silent-thread-doctrine`,
 `loop-framework-mythos`, `starline-rider-poster`,
-`atomic-bomb-social-media-posts` are listed in the Drive kit-hub skill as
-local Grok kit names. They are **not** under `.claude/skills/` on this
-repository as of this SHA. If a session has them locally, use them; do
-not invent git paths for them. Promote to this repo only with a PR.
+`atomic-bomb-social-media-posts`.
+
+**Added three (2026-09-02):** `cich-framework`, `the-catch`,
+`pep8-python-reviewer` — identified during Drive audit.
+
+**Verification status (as of 2026-09-02):**
+- [x] `cich-framework` — Verified present and functional on disk
+- [ ] `the-catch` — Unconfirmed; pending validation in active Grok ecosystem
+- [ ] `pep8-python-reviewer` — Unconfirmed; pending validation in active Grok ecosystem
+
+All eight are listed in the Drive kit-hub skill as local Grok kit names. They are **not** under `.claude/skills/` on this repository as of this SHA. If a session has them locally, use them; do not invent git paths for them. Promote to this repo only with a PR.
 
 `loop-framework-mythos` is a kit name. The Loop Framework in `the-library`
 is a steward-authored paper. They are not assumed to be the same file.
