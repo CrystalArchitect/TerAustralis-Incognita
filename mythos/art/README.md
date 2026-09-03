@@ -157,6 +157,11 @@ CC BY-NC-ND 4.0 — see `../content/LICENSE-CONTENT.md`.
 | `council-of-hooded-figures.jpeg` | *AI-generated (tool unconfirmed — see provenance note below), received 2026-09-03* — Pale, hooded figures seated in a ring around a glowing rune-circle and a small floating citadel, one dark-robed figure raised above the rest on a throne. No names or roles for these figures exist in project canon |
 | `the-ninth-crystal-titan.jpeg` | *AI-generated (tool unconfirmed — see provenance note below), received 2026-09-03* — A towering humanoid figure of scaffolded stone and bone shattering into blue crystal shards, a plate on its chest marked "IX," standing over a red desert ruin. The numeral is text printed on the artwork itself, not an established figure or rank in project canon |
 | `lattice-tower-of-galaxies.jpeg` | *AI-generated (tool unconfirmed — see provenance note below), received 2026-09-03* — A frost-covered lattice tower of interlocking rune-carved beams, each cell framing a distant galaxy or star field, rising from snow-bound ruins |
+| `starcharter-with-orrery.jpeg` | *AI-generated (tool unconfirmed — see provenance note below), received 2026-09-03* — A grinning, weathered cartographer in steampunk robes and gear-strewn gauntlets inks a glowing orrery projected from a handheld device, star-charts and constellation diagrams floating around him against a red nebula |
+| `coral-crowned-serpent-woman.jpeg` | *AI-generated (tool unconfirmed — see provenance note below), received 2026-09-03* — A serpent-tailed woman crowned in coral and crystal rests half-submerged in an underground pool beneath red desert rock, bioluminescent jellyfish and fish in the water around her. No name for this figure exists in project canon |
+| `dwarf-smith-at-the-crystal-anvil.jpeg` | *AI-generated (tool unconfirmed — see provenance note below), received 2026-09-03* — A braided, goggled dwarf in geared armor hammers a glowing crystal lattice-form on a rune-carved anvil, small wireframe polyhedra drifting nearby, a red desert and twin moons through the cave mouth behind him |
+| `winged-figure-over-the-crystal-grid.jpeg` | *AI-generated (tool unconfirmed — see provenance note below), received 2026-09-03* — A white-winged, silver-armored figure with a starfield-patterned robe hovers over a glowing crystal-spire city laid out in a rune grid, one hand extended toward a beam of light striking the ground. No name for this figure exists in project canon |
+| `red-crystal-sentinel.jpeg` | *AI-generated (tool unconfirmed — see provenance note below), received 2026-09-03* — A crimson crystal-armored figure with glowing eyes stands in a red desert ruin between standing stones, one hand raised and bursting with light, twin moons overhead. No name for this figure exists in project canon |
 
 **Truth label (Vision):** this art is the project's own mythic narrative. Where a
 real person's name or likeness appears — whether as a name, a silhouette, or a
@@ -232,13 +237,16 @@ encoder fingerprints cut across the marked/unmarked boundary rather than along i
 Recording the confirmed rows as though they were machine-verified would overstate
 the evidence in the very document that exists to prevent that.
 
-**Seven more rows added 2026-09-03** (`the-13th-ancient.jpeg`,
+**Twelve more rows added 2026-09-03** (`the-13th-ancient.jpeg`,
 `smiling-knight-of-the-golden-hall.jpeg`, `archive-of-drifting-scrolls.jpeg`,
 `crystal-dragon-over-the-ruins.jpeg`, `council-of-hooded-figures.jpeg`,
-`the-ninth-crystal-titan.jpeg`, `lattice-tower-of-galaxies.jpeg`) rest on a third
-kind of evidence: none carries an EXIF `Artist`/`Software` tag or a C2PA manifest
-naming a generating tool, but all seven carry an XMP `iptcExt:DigitalSourceType` of
+`the-ninth-crystal-titan.jpeg`, `lattice-tower-of-galaxies.jpeg`,
+`starcharter-with-orrery.jpeg`, `coral-crowned-serpent-woman.jpeg`,
+`dwarf-smith-at-the-crystal-anvil.jpeg`, `winged-figure-over-the-crystal-grid.jpeg`,
+`red-crystal-sentinel.jpeg`) rest on a third kind of evidence: none carries an EXIF
+`Artist`/`Software` tag or a C2PA manifest naming a generating tool, but all twelve
+carry an XMP `iptcExt:DigitalSourceType` of
 `http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia` — the same
 IPTC code cited above as machine evidence of AI generation, checked directly against
 each file at the time of filing. That confirms AI-generated; it does not identify
-which tool. The table marks all seven "tool unconfirmed" rather than guessing.
+which tool. The table marks all twelve "tool unconfirmed" rather than guessing.
