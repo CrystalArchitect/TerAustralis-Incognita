@@ -150,6 +150,28 @@ CC BY-NC-ND 4.0 — see `../content/LICENSE-CONTENT.md`.
 | `ring-city-of-the-desert.jpeg` | *AI-generated (Grok, received 2026-08-07)* — The great ring standing over the desert settlement, the violet tower at its axis, lights threading the dark country |
 | `starline-network-over-australia.jpeg` | *AI-generated (Grok, received 2026-08-07; carries the Grok Imagine EXIF Signature watermark)* — The continent in red, the crystal at its heart, dragons in attendance, the seven nodes pinned. The render's own legend text is AI-garbled ("Sunwash Atain" and similar) — the node list in [`../CRYSTALCORE-OS.md`](../CRYSTALCORE-OS.md) stays authoritative |
 | `helix-over-the-earth.jpeg` | *AI-generated (Grok, received 2026-08-07)* — Glittering helices over the Earth, lettered bases glowing against the nebula |
+| `the-13th-ancient.jpeg` | *AI-generated (tool unconfirmed — see provenance note below), received 2026-09-03* — A red, Mars-like planet bears a bearded face mossed into its terrain and a golden lattice/network pattern over a landmass on its lower hemisphere; ringed by a rune band reading "XIII · THE 13TH ANCIENT." That title is text printed on the artwork itself — it is not an established name or figure in this project's canon, and nothing on disk connects it to existing lore. Vision-layer, unverified |
+| `smiling-knight-of-the-golden-hall.jpeg` | *AI-generated (tool unconfirmed — see provenance note below), received 2026-09-03* — A bearded, armored figure in blue-and-gold plate stands smiling in a grand runed hall, banners bearing a shield-and-laurel emblem on either side, statues and braziers in the background. No name or role for this figure exists in project canon; purely descriptive filename, not a claim of identity |
+| `archive-of-drifting-scrolls.jpeg` | *AI-generated (tool unconfirmed — see provenance note below), received 2026-09-03* — A vast ruined library of towering bookshelves and blue crystal growths, rune-marked scrolls and star-charts drifting loose in the air, twin moons visible through a broken wall |
+| `crystal-dragon-over-the-ruins.jpeg` | *AI-generated (tool unconfirmed — see provenance note below), received 2026-09-03* — A dragon armored in red crystal plates and mechanical joints breathes fire over a burning tower complex, shard-like crystal debris scattered through the air around it |
+| `council-of-hooded-figures.jpeg` | *AI-generated (tool unconfirmed — see provenance note below), received 2026-09-03* — Pale, hooded figures seated in a ring around a glowing rune-circle and a small floating citadel, one dark-robed figure raised above the rest on a throne. No names or roles for these figures exist in project canon |
+| `the-ninth-crystal-titan.jpeg` | *AI-generated (tool unconfirmed — see provenance note below), received 2026-09-03* — A towering humanoid figure of scaffolded stone and bone shattering into blue crystal shards, a plate on its chest marked "IX," standing over a red desert ruin. The numeral is text printed on the artwork itself, not an established figure or rank in project canon |
+| `lattice-tower-of-galaxies.jpeg` | *AI-generated (tool unconfirmed — see provenance note below), received 2026-09-03* — A frost-covered lattice tower of interlocking rune-carved beams, each cell framing a distant galaxy or star field, rising from snow-bound ruins |
+| `starcharter-with-orrery.jpeg` | *AI-generated (tool unconfirmed — see provenance note below), received 2026-09-03* — A grinning, weathered cartographer in steampunk robes and gear-strewn gauntlets inks a glowing orrery projected from a handheld device, star-charts and constellation diagrams floating around him against a red nebula |
+| `coral-crowned-serpent-woman.jpeg` | *AI-generated (tool unconfirmed — see provenance note below), received 2026-09-03* — A serpent-tailed woman crowned in coral and crystal rests half-submerged in an underground pool beneath red desert rock, bioluminescent jellyfish and fish in the water around her. No name for this figure exists in project canon |
+| `dwarf-smith-at-the-crystal-anvil.jpeg` | *AI-generated (tool unconfirmed — see provenance note below), received 2026-09-03* — A braided, goggled dwarf in geared armor hammers a glowing crystal lattice-form on a rune-carved anvil, small wireframe polyhedra drifting nearby, a red desert and twin moons through the cave mouth behind him |
+| `winged-figure-over-the-crystal-grid.jpeg` | *AI-generated (tool unconfirmed — see provenance note below), received 2026-09-03* — A white-winged, silver-armored figure with a starfield-patterned robe hovers over a glowing crystal-spire city laid out in a rune grid, one hand extended toward a beam of light striking the ground. No name for this figure exists in project canon |
+| `red-crystal-sentinel.jpeg` | *AI-generated (tool unconfirmed — see provenance note below), received 2026-09-03* — A crimson crystal-armored figure with glowing eyes stands in a red desert ruin between standing stones, one hand raised and bursting with light, twin moons overhead. No name for this figure exists in project canon |
+| `guardian-of-mythos-schnauzer-sentinel-card.webp` | *AI-generated (tool unconfirmed), received 2026-09-03* — **Third-party trade dress — see note below.** A mock Magic: The Gathering card, "Guardian of Mythos, Schnauzer Sentinel," rendered in a library setting with a schnauzer-wizard as a Legendary Creature; the card face prints "™ & © 2024 Wizards of the Coast" |
+| `lattice-cascade-card.webp` | *AI-generated (tool unconfirmed), received 2026-09-03* — **Third-party trade dress — see note below.** A mock Magic: The Gathering artifact card, "Lattice Cascade," depicting a steampunk rig raining crystal over a red desert with rockets launching; the card face prints "™ & © 2024 Wizards of the Coast" |
+| `teraustralis-skyport-card.webp` | *AI-generated (tool unconfirmed), received 2026-09-03* — **Third-party trade dress — see note below.** A mock Magic: The Gathering land card, "TerAustralis Skyport," depicting a rocket-launch gantry over a desert mesa marked with glowing eyes; same WotC card template as the two rows above, but the printed copyright line on this one instead reads "© 2024 TerAustralis" |
+| `crystalcore-lattice-gate-card.jpeg` | *AI-generated (tool unconfirmed), received 2026-09-03* — **Third-party trade dress — see note below.** A mock Magic: The Gathering card, "CrystalCore Lattice Gate," depicting a glowing crystal-and-brass gate; same WotC card template as the three rows above, printing "© 2025 Wizards of the Coast." Unlike the other three, the card's own title uses this project's name ("CrystalCore") |
+| `lemuria-the-seventh-shore.png` | *AI-generated (tool unconfirmed), received 2026-09-03* — Two figures annotate a hand-drawn map titled "Lemuria — The Seventh Shore," a child holding a small light and a distant walking figure shown above it, a lit city across water. Map text ("This land belongs to those who remember it," an "8th Tower" note about "a promise, a child") is content printed on the artwork itself; none of it is established project canon |
+| `starlines-southern-compass-diagram.jpeg` | *provenance undetermined — no XMP or EXIF present, unlike every other row on this page; not established as AI-generated or otherwise, received 2026-09-03* — An educational compass/navigation diagram, "Starlines = Compass / Map – Australia," explaining Southern Cross and Pointer-star navigation and the true-north/magnetic-north offset for Australia. Diagram content and layout, not narrative illustration |
+| `crystal-resonance-machine-diagram.jpeg` | *AI-generated (tool unconfirmed), received 2026-09-03* — A technical-style diagram, "Crystal Resonance Machine," pairing a "Starlines = Compass/Map" directional-reference panel with a "Dreamlines = Trail" spiral-energy panel around a faceted crystal figure. Diagram content, not narrative illustration; the Starlines/Dreamlines pairing is not confirmed elsewhere in project canon under these terms |
+| `ahs-lemuria-mock-poster.jpeg` | *AI-generated (Grok Imagine — EXIF-confirmed, see below), received 2026-09-03* — **Fabricated claim about real, living people — see dedicated note below.** A mock theatrical poster for a nonexistent "American Horror Story: Lemuria," printing the real FX/Ryan Murphy Productions/20th Television franchise name and a full fake cast-and-crew block naming real, living actors and real production staff as though they made it |
+| `lemuria-and-mu-explainer-page-1.png` | *provenance undetermined — no XMP or EXIF present, received 2026-09-03* — Page 1 of a two-page educational comic on the real-world pseudohistory of "Lemuria," covering zoologist Philip Sclater's 1864 hypothesis, its obsolescence after plate tectonics, and Theosophy's (H. P. Blavatsky's) later occult reinterpretation. Reference/explainer content about real history, not TerAustralis narrative art — see note below |
+| `lemuria-and-mu-explainer-page-2.png` | *provenance undetermined — no XMP or EXIF present, received 2026-09-03* — Page 2 of the same comic, covering Augustus Le Plongeon and James Churchward's "Mu" claims, the unverified "Naacal tablets," and the modern merging of Lemuria/Mu into New Age crystal lore, framed throughout as "obsolete hypothesis" / "unverified" / "pseudohistory, not archaeology." Reference/explainer content about real history, not TerAustralis narrative art — see note below |
 
 **Truth label (Vision):** this art is the project's own mythic narrative. Where a
 real person's name or likeness appears — whether as a name, a silhouette, or a
@@ -165,6 +187,51 @@ art, never as a claim of partnership, integration, or provenance. All marks
 belong to their respective owners. This project has no affiliation with, and no
 endorsement from, any company named here, matching the standing disclaimer in
 [`STRATEGY.md`](../content/STRATEGY.md).
+
+**Third-party trade dress note (four rows, added 2026-09-03):**
+`guardian-of-mythos-schnauzer-sentinel-card.webp`, `lattice-cascade-card.webp`,
+`teraustralis-skyport-card.webp`, and `crystalcore-lattice-gate-card.jpeg` are
+formatted as Magic: The Gathering cards — Wizards of the Coast's card frame, mana
+symbols, and set/collector-number layout. Three print "™ & © 202[4-5] Wizards of
+the Coast" directly on the card face; `teraustralis-skyport-card.webp` uses the
+identical template but prints "© 2024 TerAustralis" instead, which reads as a
+user-editable field in a fan card-making tool rather than an actual transfer of
+rights. **The CC BY-NC-ND 4.0 line at the top of this file does not apply to
+these four images' card frame, mana symbols, or typography** — this project has
+no rights to license in Wizards of the Coast's trade dress, and inclusion here is
+not a claim otherwise. They are filed per direct maintainer instruction, over this
+session's own recommendation not to. What is original to this project, if
+anything, is limited to the card names and illustration content depicted, subject
+to the same AI-authorship uncertainty as every other row in this file.
+
+**Fabricated real-person claim note (`ahs-lemuria-mock-poster.jpeg`, added
+2026-09-03):** this row is categorically different from the "real person/company
+named in Vision-layer fan art" cases elsewhere in this file (e.g. "Breaker of the
+E," the company note above). Those put a real name or likeness *inside* an
+original fictional scene. This image instead fabricates a specific, plausible
+claim about identifiable living people's actual professional work — that named
+actors (Sarah Paulson, Evan Peters, Lily Rabe, Finn Wittrock, Denis O'Hare, Kathy
+Bates) and named crew (Ryan Murphy, Brad Falchuk, Tim Minear, and others) made a
+season of a real, trademarked FX franchise that does not exist. This session
+recommended against filing it for exactly that reason — a fabricated claim about
+real people's work is closer to misinformation risk than a trade-dress or
+licensing question — and filed it only on the maintainer's explicit instruction,
+overriding that recommendation. No endorsement, participation, or affiliation by
+any person or company named on the card is real or implied; the franchise name,
+network, and all cast/crew credits belong to their respective real owners and are
+reproduced here only because they are printed on the artwork itself, not asserted
+as fact.
+
+**Reference-content note (two `lemuria-and-mu-explainer-page-*.png` rows, added
+2026-09-03):** unlike every other row in this file, these two are not narrative
+illustration of the TerAustralis Incognita story world — they are an educational
+comic explaining the real-world history of the "Lemuria" and "Mu" pseudohistory
+concepts (Philip Sclater's 1864 hypothesis, Augustus Le Plongeon, James
+Churchward, H. P. Blavatsky's Theosophy), framed critically throughout as
+obsolete/unverified pseudohistory rather than fact. Filed here per maintainer
+instruction alongside the narrative art; treat them as reference material about
+a real-world myth this project may draw on, not as project canon in their own
+right.
 
 **Licence label (Science):** the line at the top of this file says the content is
 licensed CC BY-NC-ND 4.0. For the images specifically, that is less settled than
@@ -224,3 +291,33 @@ with no `Software`, `Creator` or `Artist` field; 21 have no EXIF at all; and JPE
 encoder fingerprints cut across the marked/unmarked boundary rather than along it.
 Recording the confirmed rows as though they were machine-verified would overstate
 the evidence in the very document that exists to prevent that.
+
+**Nineteen more rows added 2026-09-03** (`the-13th-ancient.jpeg`,
+`smiling-knight-of-the-golden-hall.jpeg`, `archive-of-drifting-scrolls.jpeg`,
+`crystal-dragon-over-the-ruins.jpeg`, `council-of-hooded-figures.jpeg`,
+`the-ninth-crystal-titan.jpeg`, `lattice-tower-of-galaxies.jpeg`,
+`starcharter-with-orrery.jpeg`, `coral-crowned-serpent-woman.jpeg`,
+`dwarf-smith-at-the-crystal-anvil.jpeg`, `winged-figure-over-the-crystal-grid.jpeg`,
+`red-crystal-sentinel.jpeg`, `guardian-of-mythos-schnauzer-sentinel-card.webp`,
+`lattice-cascade-card.webp`, `teraustralis-skyport-card.webp`,
+`crystalcore-lattice-gate-card.jpeg`, `lemuria-the-seventh-shore.png`,
+`crystal-resonance-machine-diagram.jpeg`) rest on a third kind of evidence: none
+carries an EXIF `Artist`/`Software` tag or a C2PA manifest naming a generating
+tool, but all eighteen of those listed carry an XMP `iptcExt:DigitalSourceType` of
+`http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia` — the
+same IPTC code cited above as machine evidence of AI generation, checked directly
+against each file at the time of filing. That confirms AI-generated; it does not
+identify which tool. The table marks all eighteen "tool unconfirmed" rather than
+guessing. (Four of them additionally carry Wizards of the Coast trade dress — see
+the dedicated note above, which the AI-generation finding here does not override
+or license.) The nineteenth, `starlines-southern-compass-diagram.jpeg`, is the
+first row in this file with **no XMP or EXIF metadata at all** — its provenance is
+recorded as undetermined rather than assumed AI-generated. Three more rows added
+the same day sit outside this batch's evidence: `ahs-lemuria-mock-poster.jpeg`
+carries the strongest provenance in the file — the full Grok Imagine EXIF pattern
+(`ImageDescription` "Signature: …" plus a matching `Artist` UUID, cross-referenced
+against `crystal-sanctum.jpeg`/`sanctum-gate-charged.jpeg` above) — but raises the
+fabricated real-person concern noted separately below; the two
+`lemuria-and-mu-explainer-page-*.png` rows carry no metadata at all, like
+`starlines-southern-compass-diagram.jpeg`, and are reference content rather than
+narrative art, per the note below.
