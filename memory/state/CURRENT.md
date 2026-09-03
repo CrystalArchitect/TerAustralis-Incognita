@@ -4,12 +4,38 @@ Working picture of **this** repository. Overwrite at each checkpoint.
 If this file disagrees with [`STATUS.md`](../../STATUS.md) or a newer
 canonical source, the canonical source wins — then fix this file.
 
-**As of:** 2026-09-03 (three-layer bot architecture merged as PR #144; Starline Arsenal 42+2 expansion in progress on branch, PR #146 draft)
+**As of:** 2026-09-03 (three-layer bot architecture merged as PR #144; Starline Arsenal 42+2 expansion + Consent Token Spec v0.1 on branch, PR #146 ready for review)
 **STATUS.md last updated:** 2026-08-20
 **This memory protocol landed on `main` at:** `3ba08fdcb4e88f5386949bc3cd35a28dcd597fab`
 (PR #123, merged with Crystal Arena-Turner's explicit authorization)
 
-**Session 2026-09-03 (this session, Arsenal 42+2 expansion):**
+**Session 2026-09-03 (this session, continued: Arsenal 42+2 + Consent Token Spec v0.1):**
+
+New directive: "I get full permission to go wild" (post-Arsenal expansion, given after PR #146 marked ready for review). Assessed 90-day roadmap critical path and pivoted to highest-leverage blocking work: Consent Token Specification v0.1 (Week 1-2 critical item that unlocks everything downstream).
+
+(b) **Consent Token Specification v0.1 (Starline Consent Transport Protocol):** Completed full specification for atomic permission model on TerAustralis infrastructure. **Three deliverables:**
+  1. **`specs/consent-token-v0.1/consent_token.json`** — Canonical schema (all field definitions, design rules, lifecycle, revocation mechanism); ready for reference implementations in multiple languages
+  2. **`specs/consent-token-v0.1/STATE-DIAGRAM.md`** — Full state machine (9 states: UNISSUED, CREATED, RECEIVED, VERIFIED/ACTIVE, REVOKED, EXPIRED, EXHAUSTED, CONSUMED, REJECTED), verification decision tree, revocation propagation flow, kill-switch demo flow
+  3. **`specs/consent-token-v0.1/consent_token_demo.py`** — Working reference implementation with kill-switch guarantee verified:
+     - Token creation, signing (Ed25519 or HMAC-SHA256 fallback)
+     - 6-point verification (structural, identity, time, signature, revocation, scope)
+     - Revocation signalling + gossip propagation
+     - **Guarantee verified:** After revocation, verification fails with no ambiguity (failing closed)
+  4. **`specs/consent-token-v0.1/README.md`** — Complete spec overview, design principles, tier 0 considerations, next steps
+  
+**Design principles:**
+  - **No ambient authority** — token grants permission only between named issuer and recipient
+  - **Purpose binding** — mandatory human-readable purpose, cryptographically signed
+  - **Instant revocation** — takes effect the moment known (no grace period, no extension)
+  - **Offline verifiable** — requires only issuer public key + local clock
+  - **Distributed revocation** — no centralised list; gossip-based propagation through consented channels
+  - **Failing closed** — when revoked, access is denied with clear reason; no ambiguity
+
+**Kill-switch demo verified:** Token → Create → Transmit → Verify (VALID) → Revoke → Gossip → Verify (REVOKED ✗). All steps confirmed working. **Label: Built (specification + reference implementation, verified).** Archived source (CONSENT-TOKEN-SCHEMA.md, July 29, 2026) recovered and modernised. Committed `041e12c`, pushed to `claude/the-re-dream-vlrh42`. Added to PR #146 (same branch).
+
+**Impact on 90-day roadmap:** This is the **blocking deliverable** for Week 1-2 critical path. Completing Consent Token Spec v0.1 unblocks all downstream roadmap items (Onshore One-Pager, Plain English Explainer, Carrier Story, Pathway Log, Small Council, Operator Demo, Shipping Ledger).
+
+**Session 2026-09-03 (session start, Arsenal 42+2 expansion, since continued above):**
 
 Directive: "Build 42+2" — expand Starline Arsenal to 42 models with 2 structural elements. Previous PR B deferred at 42 models pending seventh wing decision.
 
