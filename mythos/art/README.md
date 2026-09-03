@@ -152,6 +152,11 @@ CC BY-NC-ND 4.0 — see `../content/LICENSE-CONTENT.md`.
 | `helix-over-the-earth.jpeg` | *AI-generated (Grok, received 2026-08-07)* — Glittering helices over the Earth, lettered bases glowing against the nebula |
 | `the-13th-ancient.jpeg` | *AI-generated (tool unconfirmed — see provenance note below), received 2026-09-03* — A red, Mars-like planet bears a bearded face mossed into its terrain and a golden lattice/network pattern over a landmass on its lower hemisphere; ringed by a rune band reading "XIII · THE 13TH ANCIENT." That title is text printed on the artwork itself — it is not an established name or figure in this project's canon, and nothing on disk connects it to existing lore. Vision-layer, unverified |
 | `smiling-knight-of-the-golden-hall.jpeg` | *AI-generated (tool unconfirmed — see provenance note below), received 2026-09-03* — A bearded, armored figure in blue-and-gold plate stands smiling in a grand runed hall, banners bearing a shield-and-laurel emblem on either side, statues and braziers in the background. No name or role for this figure exists in project canon; purely descriptive filename, not a claim of identity |
+| `archive-of-drifting-scrolls.jpeg` | *AI-generated (tool unconfirmed — see provenance note below), received 2026-09-03* — A vast ruined library of towering bookshelves and blue crystal growths, rune-marked scrolls and star-charts drifting loose in the air, twin moons visible through a broken wall |
+| `crystal-dragon-over-the-ruins.jpeg` | *AI-generated (tool unconfirmed — see provenance note below), received 2026-09-03* — A dragon armored in red crystal plates and mechanical joints breathes fire over a burning tower complex, shard-like crystal debris scattered through the air around it |
+| `council-of-hooded-figures.jpeg` | *AI-generated (tool unconfirmed — see provenance note below), received 2026-09-03* — Pale, hooded figures seated in a ring around a glowing rune-circle and a small floating citadel, one dark-robed figure raised above the rest on a throne. No names or roles for these figures exist in project canon |
+| `the-ninth-crystal-titan.jpeg` | *AI-generated (tool unconfirmed — see provenance note below), received 2026-09-03* — A towering humanoid figure of scaffolded stone and bone shattering into blue crystal shards, a plate on its chest marked "IX," standing over a red desert ruin. The numeral is text printed on the artwork itself, not an established figure or rank in project canon |
+| `lattice-tower-of-galaxies.jpeg` | *AI-generated (tool unconfirmed — see provenance note below), received 2026-09-03* — A frost-covered lattice tower of interlocking rune-carved beams, each cell framing a distant galaxy or star field, rising from snow-bound ruins |
 
 **Truth label (Vision):** this art is the project's own mythic narrative. Where a
 real person's name or likeness appears — whether as a name, a silhouette, or a
@@ -227,11 +232,13 @@ encoder fingerprints cut across the marked/unmarked boundary rather than along i
 Recording the confirmed rows as though they were machine-verified would overstate
 the evidence in the very document that exists to prevent that.
 
-**Two more rows added 2026-09-03** (`the-13th-ancient.jpeg`,
-`smiling-knight-of-the-golden-hall.jpeg`) rest on a third kind of evidence: neither
-carries an EXIF `Artist`/`Software` tag or a C2PA manifest naming a generating tool,
-but both carry an XMP `iptcExt:DigitalSourceType` of
+**Seven more rows added 2026-09-03** (`the-13th-ancient.jpeg`,
+`smiling-knight-of-the-golden-hall.jpeg`, `archive-of-drifting-scrolls.jpeg`,
+`crystal-dragon-over-the-ruins.jpeg`, `council-of-hooded-figures.jpeg`,
+`the-ninth-crystal-titan.jpeg`, `lattice-tower-of-galaxies.jpeg`) rest on a third
+kind of evidence: none carries an EXIF `Artist`/`Software` tag or a C2PA manifest
+naming a generating tool, but all seven carry an XMP `iptcExt:DigitalSourceType` of
 `http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia` — the same
 IPTC code cited above as machine evidence of AI generation, checked directly against
-the files at the time of filing. That confirms AI-generated; it does not identify
-which tool. The table marks both "tool unconfirmed" rather than guessing.
+each file at the time of filing. That confirms AI-generated; it does not identify
+which tool. The table marks all seven "tool unconfirmed" rather than guessing.
