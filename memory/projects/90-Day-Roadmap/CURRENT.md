@@ -14,7 +14,7 @@ Overwrite this file at each checkpoint; full plan detail lives in
 |---|---|---|---|
 | 1 | TerAustralis Industrial Sovereignty | Onshore Chain One-Pager | **Drafted** — content sourced and cited; ASA lodgement ID not yet obtained (Crystal's action, see below) |
 | 2 | CrystalCore OS & Synthetic Affect | Consent Token Spec v0.1 | **Drafted** — schema + state diagram written; kill-switch demo/Loom not recorded (needs `-Code` repo, out of this session's scope) |
-| 3 | Red Dust → Rockets Pathway | Pathway Log #1 | Not started |
+| 3 | Red Dust → Rockets Pathway | Pathway Log #1 | Not started — empty tracker structure prepared, zero real entries |
 | 4 | Sovereign by Design | Operator Control Demo | Not started |
 | 5 | First-Principles Systems Thinking | Plain English Explainer | **Shipped** — merged via PR #148, meets its own success metric |
 | 6 | Narrative & World-Building | Carrier Story | **Drafted** — narrative landed (`mythos/teraustralis/publish/carrier-story.md`), not yet linked publicly to #5 |
@@ -49,6 +49,13 @@ Overwrite this file at each checkpoint; full plan detail lives in
 - `mythos/teraustralis/publish/carrier-story.md` — narrative piece for
   #6, kept from PR #146 after review found no accuracy issues in it
   (unlike most of that PR — see below).
+- [`mythos/teraustralis/publish/pathway-log-tracker.md`](../../../mythos/teraustralis/publish/pathway-log-tracker.md) —
+  empty index structure for #3 (who/date/ask/learned/warrant-tier
+  columns, zero rows). Explicitly instructs against adding a row until
+  the engagement it describes has actually happened, per the same
+  fabrication problem in "PR #146 reconciliation" below. Grok Build may
+  wire tracking/automation around this structure; content only gets
+  added once real outreach occurs.
 
 ## PR #146 reconciliation
 
