@@ -1,4 +1,4 @@
-# The CrystalCore Comprehensive Archive (external)
+# Codex Crystalum
 
 **Story- and Vision-layer — received text, reproduced whole.** This is
 not the project's own canon and not a claim about any real system. It
