@@ -228,4 +228,3 @@ These are *suggested* talking points, warrant-labelled for the negotiation:
 ---
 
 _"The Small Council is not about impressing; it's about negotiating commitment. Show your work. Listen for constraints. Build the path together." — Small Council Philosophy_
-
