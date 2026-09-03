@@ -83,15 +83,29 @@ Overwrite this file at each checkpoint; full plan detail lives in
 ---
 
 **Started:** 2026-09-03  
-**Files:** `specs/small-council-planning.md`  
-**Content (framework):** Complete engagement strategy for negotiating formal ASA SoE participation with Lynas Rare Earths, Magellan Aerospace, and Equatorial Launch Australia. Reframes Small Council from "validation exercise" to "stakeholder negotiation + commitment conversation."  
-**Content (roadmap):**
-- Phase 1 (Week 7-9): Pre-engagement with ASA; prepare supplier briefings; secure contact info
-- Phase 2 (Week 10): Individual conversations with each supplier (Lynas, Magellan, ELA)
-- Phase 3 (Week 10-11): Joint Small Council call with all three suppliers
+**Files:** 
+- `specs/small-council-planning.md` — Complete 4-phase engagement framework
+- `specs/small-council-asa-engagement-brief.md` — ASA pre-engagement questions, talking points, success criteria
+- `specs/small-council-supplier-briefing-lynas.md` — Lynas participation overview + FAQ
+- `specs/small-council-supplier-briefing-magellan.md` — Magellan participation overview + FAQ
+- `specs/small-council-supplier-briefing-ela.md` — ELA participation overview + FAQ
+
+**Content (framework):** Complete engagement strategy for negotiating formal ASA SoE participation with Lynas Rare Earths, Magellan Aerospace, and Equatorial Launch Australia. Reframes Small Council from "validation exercise" to "stakeholder negotiation + commitment conversation."
+
+**Content (week 7-9 preparation - COMPLETE):**
+- Phase 1 (Week 7-9): ✅ All ASA engagement materials ready, all supplier briefings prepared, contact info secured
+- ASA brief: 10 process questions, 5 scope questions, 3 exemplar pathways, talking points, success criteria
+- Supplier briefings: One-page personalized overview for each supplier (Lynas, Magellan, ELA) with their specific role, timeline, FAQs, and why participation matters
+- All materials warrant-labelled (distinguish fact from inference from assumption from vision)
+
+**Content (execution phases - ready for weeks 10-12):**
+- Phase 2 (Week 10): Individual conversations with each supplier (Lynas, Magellan, ELA) — to be documented as Pathway Log entries #2-3
+- Phase 3 (Week 10-11): Joint Small Council call with all three suppliers — to be documented in Pathway Log
 - Phase 4 (Week 11-12): Negotiation, written commitments, ASA SoE proposal, engagement letter
-**Success metric:** ASA engagement letter sent by end of 90-day period (Nov 28, 2026) with ≥1 supplier commitment; conversation notes externally verifiable  
-**Next steps:** Week 7-9 autonomous execution of ASA pre-engagement and supplier briefing prep
+
+**Success metric:** ASA engagement letter sent by end of 90-day period (Nov 28, 2026) with ≥1 supplier commitment; all conversations warrant-labelled and documented via Pathway Log entries
+
+**Status:** Week 7-9 prep materials 100% ready. Awaiting autonomous execution of ASA contact and briefing delivery.
 
 ## Critical Path Status
 
