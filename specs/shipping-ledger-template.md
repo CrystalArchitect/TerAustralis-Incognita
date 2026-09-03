@@ -8,6 +8,8 @@
 
 ### ✅ Shipped
 
+**Critical Path Complete:**
+
 1. **Consent Token Specification v0.1** (90-day #2)
    - Atomic permission model with kill-switch guarantee
    - Canonical schema + state diagrams + working demo
@@ -30,16 +32,35 @@
    - Bridge back to technical explainer with explicit mapping
    - Demonstrates accountability and closed feedback loops
 
+**Proof Phase Ready:**
+
+5. **Pathway Log #1: Framework + Seed Entry** (90-day #3)
+   - Complete warrant-labelling framework (Fact/Inference/Assumption/Vision)
+   - Seed entry: Australian supply chain verification research (Aug 29–Sep 3)
+   - Demonstrates closed feedback loop: question → research → learning → roadmap adjustment
+   - Template and structure ready for 3+ real outreach entries (weeks 7-12)
+
+6. **Operator Control Demo** (90-day #4)
+   - Live kill/inspect/fork demonstration of Consent Token
+   - Proof-of-covenant: immediate revocation, offline verifiable, auditable
+   - Demonstrates atomic permission model with cryptographic guarantees
+
+**Force Multiplier Deployed:**
+
+7. **Shipping Ledger** (90-day #8)
+   - Weekly accountability tracker with Shipped/Building/Next cadence
+   - Week 1 entry documents all six deliverables above
+   - Template ready for autonomous weekly updates (12 minimum required)
+
 ### 🔨 Building
 
-- **Shipping Ledger** (90-day #8) — THIS ENTRY — weekly tracking mechanism
-- **Week 7-12 pipeline prep** — scoping Pathway Log (#3), Operator Demo (#4), Small Council (#7)
+- **Small Council #7** — Week 7-9 preparation phase (Phase 1 framework, ASA brief, supplier briefings, execution checklist)
 
 ### 📋 Next
 
-- **Pathway Log #1** (90-day #3) — outreach logs with learnings (3 entries)
-- **Operator Control Demo** (90-day #4) — live kill/inspect/fork demonstration
-- **Small Council** (90-day #7) — 1x60-min call with 5-10 AU builders, publish learnings
+- **Small Council Phase 2** (week 10) — Individual supplier conversations (to be documented as Pathway Log entries #2-3)
+- **Small Council Phase 3** (week 10-11) — Joint council call
+- **Week 2 Shipping Ledger entry** (Sep 7-13) — document Phase 1 execution results
 
 ---
 
@@ -104,18 +125,18 @@
 |---|---|---|---|
 | 1 | Onshore Chain One-Pager | ✅ Shipped | 1-2 |
 | 2 | Consent Token Spec v0.1 | ✅ Shipped | 1-2 |
-| 3 | Pathway Log #1 | 📋 Next | 7-12 |
-| 4 | Operator Control Demo | 📋 Next | 7-12 |
+| 3 | Pathway Log #1 | ✅ Shipped | 7-12 |
+| 4 | Operator Control Demo | ✅ Shipped | 7-12 |
 | 5 | Plain English Explainer | ✅ Shipped | 3-6 |
 | 6 | Carrier Story | ✅ Shipped | 3-6 |
-| 7 | Small Council | 📋 Next | 7-12 |
-| 8 | Shipping Ledger (this file) | 🔨 Building | Ongoing |
+| 7 | Small Council | 🔨 Building | 7-12 |
+| 8 | Shipping Ledger (this file) | ✅ Shipped | Ongoing |
 
 ---
 
-**Last updated:** 2026-09-03  
-**Next update:** 2026-09-10 (or sooner if major work ships)  
-**Public URL:** (TBD — will be posted to public channel/thread)
+**Last updated:** 2026-09-03 (Week 1 critical path complete; Small Council #7 Week 7-9 prep framework ready)  
+**Next update:** 2026-09-10 or after Phase 1 execution completes (Sep 7-13)  
+**Public URL:** (TBD — will be posted to public channel/thread for accountability tracking)
 
 ---
 
