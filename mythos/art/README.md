@@ -150,6 +150,8 @@ CC BY-NC-ND 4.0 — see `../content/LICENSE-CONTENT.md`.
 | `ring-city-of-the-desert.jpeg` | *AI-generated (Grok, received 2026-08-07)* — The great ring standing over the desert settlement, the violet tower at its axis, lights threading the dark country |
 | `starline-network-over-australia.jpeg` | *AI-generated (Grok, received 2026-08-07; carries the Grok Imagine EXIF Signature watermark)* — The continent in red, the crystal at its heart, dragons in attendance, the seven nodes pinned. The render's own legend text is AI-garbled ("Sunwash Atain" and similar) — the node list in [`../CRYSTALCORE-OS.md`](../CRYSTALCORE-OS.md) stays authoritative |
 | `helix-over-the-earth.jpeg` | *AI-generated (Grok, received 2026-08-07)* — Glittering helices over the Earth, lettered bases glowing against the nebula |
+| `the-13th-ancient.jpeg` | *AI-generated (tool unconfirmed — see provenance note below), received 2026-09-03* — A red, Mars-like planet bears a bearded face mossed into its terrain and a golden lattice/network pattern over a landmass on its lower hemisphere; ringed by a rune band reading "XIII · THE 13TH ANCIENT." That title is text printed on the artwork itself — it is not an established name or figure in this project's canon, and nothing on disk connects it to existing lore. Vision-layer, unverified |
+| `smiling-knight-of-the-golden-hall.jpeg` | *AI-generated (tool unconfirmed — see provenance note below), received 2026-09-03* — A bearded, armored figure in blue-and-gold plate stands smiling in a grand runed hall, banners bearing a shield-and-laurel emblem on either side, statues and braziers in the background. No name or role for this figure exists in project canon; purely descriptive filename, not a claim of identity |
 
 **Truth label (Vision):** this art is the project's own mythic narrative. Where a
 real person's name or likeness appears — whether as a name, a silhouette, or a
@@ -224,3 +226,12 @@ with no `Software`, `Creator` or `Artist` field; 21 have no EXIF at all; and JPE
 encoder fingerprints cut across the marked/unmarked boundary rather than along it.
 Recording the confirmed rows as though they were machine-verified would overstate
 the evidence in the very document that exists to prevent that.
+
+**Two more rows added 2026-09-03** (`the-13th-ancient.jpeg`,
+`smiling-knight-of-the-golden-hall.jpeg`) rest on a third kind of evidence: neither
+carries an EXIF `Artist`/`Software` tag or a C2PA manifest naming a generating tool,
+but both carry an XMP `iptcExt:DigitalSourceType` of
+`http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia` — the same
+IPTC code cited above as machine evidence of AI generation, checked directly against
+the files at the time of filing. That confirms AI-generated; it does not identify
+which tool. The table marks both "tool unconfirmed" rather than guessing.
