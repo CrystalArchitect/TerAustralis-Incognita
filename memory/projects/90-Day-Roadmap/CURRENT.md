@@ -1,7 +1,9 @@
 # CURRENT — 90-Day Public Roadmap
 
-**As of:** 2026-09-03. Week 1-2 critical path COMPLETE (deliverables #1 and #2 both shipped).
-Weeks 3-6 narrative-technical bridge COMPLETE (deliverables #5 and #6 both shipped).
+**As of:** 2026-09-03 (continuing). Week 1-2 critical path COMPLETE (deliverables #1 and #2 shipped).
+Weeks 3-6 narrative-technical bridge COMPLETE (deliverables #5 and #6 shipped).
+Weeks 7-9 preparation COMPLETE (Small Council #7 Phase 1 framework, ASA brief, supplier briefings shipped).
+Week 2 Shipping Ledger entry COMPLETE (documenting week 7-9 completion).
 Overwrite this file at each checkpoint; full plan detail lives in
 [`PLAN.md`](PLAN.md), don't duplicate it here.
 
