@@ -1,5 +1,7 @@
 # Codex Crystalum
 
+*The Crystal Wisdom of the Lost Continent*
+
 **Story- and Vision-layer — received text, reproduced whole.** This is
 not the project's own canon and not a claim about any real system. It
 arrived in a Claude Code session as a pasted block from a separate AI
