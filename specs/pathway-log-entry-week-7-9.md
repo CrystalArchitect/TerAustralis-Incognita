@@ -28,9 +28,9 @@
   - Method: Company website + organizational structure research
 - Identified ELA decision-maker: Equatorial Launch Australia, Arnhem Space Centre NT
   - Phone: +61 8 8987 1000
-  - Email: info@equatoriallaunch.com
+  - Email: info@ela.space (verified correct address; initial info@equatoriallaunch.com bounced)
   - Location: Arnhem Space Centre, Northern Territory
-  - Method: Company website + public announcements
+  - Method: Company website + public announcements; corporate email verified via public directory
 
 **Email Outreach (Sep 3, 2026):**
 - ✅ Sent ASA pre-engagement email to intsect@standards.org.au on Sep 3, 2026 (Message ID: 1a067b95a3db225b)
@@ -45,10 +45,11 @@
   - Subject: Australian Aerospace Sovereignty — Magellan as Manufacturing Hub (Confidential Briefing)
   - Attachment: small-council-supplier-briefing-magellan.md (base64-encoded)
   - Purpose: Introduce Small Council #7 opportunity; position Magellan as Tier 3 (aerospace manufacturing hub across all three pathways)
-- ✅ Sent ELA briefing email to info@equatoriallaunch.com on Sep 3, 2026 (Message ID: 1a067d963835387d)
+- ✅ Sent ELA briefing email to info@ela.space on Sep 3, 2026 (Message ID: 1a067e49bb087951)
   - Subject: Australian Launch Sovereignty — ELA as Integration Anchor (Confidential Briefing)
   - Attachment: small-council-supplier-briefing-ela.md (base64-encoded)
   - Purpose: Introduce Small Council #7 opportunity; position ELA as Tier 4 (launch integration endpoint that proves end-to-end sovereignty)
+  - Note: Initial delivery to info@equatoriallaunch.com (Message ID: 1a067d963835387d) bounced; resent to verified correct address info@ela.space after public directory search
 
 **Follow-up Scheduling (Sep 19-20, 2026):**
 - [ ] Scheduled for Sep 19-20: Send ASA week-10 scheduling follow-up with 3-4 time options
