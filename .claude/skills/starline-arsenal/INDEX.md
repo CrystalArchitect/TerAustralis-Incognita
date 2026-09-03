@@ -1,4 +1,4 @@
-# Starline Arsenal — Index of 53
+# Starline Arsenal — Index of 42
 
 ## The Deconstructors
 
@@ -62,18 +62,5 @@
 - [40 Institutional Momentum](models/40-institutional-momentum.md)
 - [41 Legacy & Technical Debt](models/41-legacy-technical-debt.md)
 - [42 Collective Thinking](models/42-collective-thinking.md)
-
-## Infrastructure Expansion — Technical (44–53)
-
-- [44 Telemetry & Observability](models/44-telemetry-obs.md)
-- [45 Vector Storage & Retrieval](models/45-vector-persist.md)
-- [46 Sandbox Containment & Security](models/46-sandbox-wall.md)
-- [47 Background Task Queueing](models/47-cron-queue.md)
-- [48 API Gateway & Routing](models/48-api-router.md)
-- [49 UX Rendering & Dashboards](models/49-ux-render.md)
-- [50 Runtime Core & Execution](models/50-runtime-core.md)
-- [51 Stress Testing & Regression](models/51-stress-test.md)
-- [52 Database Sharding & Scaling](models/52-cluster-shard.md)
-- [53 Hardware Abstraction Layer](models/53-hw-abstraction.md)
 
 **All rights reserved.** TerAustralis Incognita™️ — ABN 70 741 068 059
