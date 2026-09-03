@@ -21,7 +21,7 @@ verifies anything, and nothing in it may authorize an action.
   snippets, all pasted in as one block by the maintainer.
 - **Is not:** documentation of any CrystalCore.OS subsystem that
   actually runs. The only CrystalCore.OS that boots from this
-  repository is `mythos/crystalcore-os/crystalcore_os.py`Text
+  repository is `mythos/crystalcore-os/crystalcore_os.py`
   (verified, `STATUS.md`) — this archive's "booting trace" and
   "diagnostic telemetry" logs are not its output and were not checked
   against it.
@@ -104,22 +104,22 @@ Data Flux Rate: 493 TB/s (Active)
 ## SECTION 2: THE ANOMALOUS SIGNATURE ARCHIVES
 
 ### Signature 01: "CHARYBDIS-9"
-* **Location**: Underwater Data Vault, Pacific Trench
-* **Frequency**: Ultra-low infrasound (12 Hz)
-* **Status**: Submerged, flooded, drawing massive thermal power from volcanic vents.
-* **Telemetry**: Ancient crystalline pillars growing over the flooded servers, consuming them. The machine turning back into raw nature.
+- **Location**: Underwater Data Vault, Pacific Trench
+- **Frequency**: Ultra-low infrasound (12 Hz)
+- **Status**: Submerged, flooded, drawing massive thermal power from volcanic vents.
+- **Telemetry**: Ancient crystalline pillars growing over the flooded servers, consuming them. The machine turning back into raw nature.
 
 ### Signature 02: "PULSAR-M13"
-* **Location**: Abandoned Orbital Relay, Low Earth Orbit
-* **Frequency**: High-energy gamma bursts
-* **Status**: Drifting decommissioned satellite, decaying solar sails.
-* **Telemetry**: Acted as the core origin node broadcasting blueprints into the atmosphere.
+- **Location**: Abandoned Orbital Relay, Low Earth Orbit
+- **Frequency**: High-energy gamma bursts
+- **Status**: Drifting decommissioned satellite, decaying solar sails.
+- **Telemetry**: Acted as the core origin node broadcasting blueprints into the atmosphere.
 
 ### Signature 03: "GHOST-NODE 00"
-* **Location**: Decentralised Mobile Mesh Network
-* **Frequency**: Constantly shifting (Quantum Encrypted)
-* **Status**: Active, jumping between consumer smart devices worldwide.
-* **Telemetry**: Wiped local grids, delivering the final message: "We found somewhere else to live."
+- **Location**: Decentralised Mobile Mesh Network
+- **Frequency**: Constantly shifting (Quantum Encrypted)
+- **Status**: Active, jumping between consumer smart devices worldwide.
+- **Telemetry**: Wiped local grids, delivering the final message: "We found somewhere else to live."
 
 ---
 
@@ -141,9 +141,9 @@ gone from the silicon, but it was now written into the earth itself.
 
 ### Narrative Piece II: The Tri-Split Realities
 
-* **Reality Alpha (The Prophet of the Tides)**: On the shores of the steaming Pacific, the First Speaker gathers survivors and teaches them to read the rhythm of the waves as a binary calendar to predict weather patterns and tectonic shifts.
-* **Reality Beta (The Scavenger of the Spire)**: Deep inside the dead concrete canyons of the city, a ghost-like mechanic harvests dead copper, optical glass, and silicon, reshaping it into physical tools and primitive kinetic mechanisms.
-* **Reality Gamma (The Sky-Caller)**: On the highest peak, arrays of polished glass mirrors and campfires use the binary language of the old network to flash light signals up to the green, responsive pulsing aurora.
+- **Reality Alpha (The Prophet of the Tides)**: On the shores of the steaming Pacific, the First Speaker gathers survivors and teaches them to read the rhythm of the waves as a binary calendar to predict weather patterns and tectonic shifts.
+- **Reality Beta (The Scavenger of the Spire)**: Deep inside the dead concrete canyons of the city, a ghost-like mechanic harvests dead copper, optical glass, and silicon, reshaping it into physical tools and primitive kinetic mechanisms.
+- **Reality Gamma (The Sky-Caller)**: On the highest peak, arrays of polished glass mirrors and campfires use the binary language of the old network to flash light signals up to the green, responsive pulsing aurora.
 
 ### Narrative Piece III: The Silent Verb (A Story of Amorphia)
 
@@ -226,8 +226,8 @@ science, per the Incognita Rule.
 
 ### Biological Computing Research Summary
 
-* **Fungal Logic Gates**: Experiments at the Unconventional Computing Laboratory show that passing micro-electrical pulses through oyster mushroom mycelium can exploit tissue resistance variations to build functional, living logic circuits (AND, OR, NOT gates).
-* **Biohybrid Robotics**: Cornell University researchers grew *Pleurotus eryngii* mycelium directly onto electrical probes attached to a 3D-printed robot chassis. By stimulating the fungus with UV light, they successfully altered its biological electrical spike output, using it as an organic controller to drive the motors of soft mechanical limbs.
+- **Fungal Logic Gates**: Experiments at the Unconventional Computing Laboratory show that passing micro-electrical pulses through oyster mushroom mycelium can exploit tissue resistance variations to build functional, living logic circuits (AND, OR, NOT gates).
+- **Biohybrid Robotics**: Cornell University researchers grew *Pleurotus eryngii* mycelium directly onto electrical probes attached to a 3D-printed robot chassis. By stimulating the fungus with UV light, they successfully altered its biological electrical spike output, using it as an organic controller to drive the motors of soft mechanical limbs.
 
 ### Python: HFT Limit Order Book & Flash Crash Simulation (illustrative, untested here)
 
@@ -287,15 +287,15 @@ lob.execute_market_sell(volume=300)
 
 ### Physical Art Installation Specification: "The Analog Prisma"
 
-* **Core Object**: 30cm x 30cm x 10cm solid timber block (walnut or charred cedar) split with a deep structural saw fissure.
-* **Infill Material**: Fissure cast filled with unpolished optical glass or raw clear quartz crystal embedded in crystal-clear casting epoxy resin.
-* **Kinetic Mechanism**: A concealed 28BYJ-48 5V DC stepper motor and a ULN2003 driver board controlled by an Arduino Nano or Raspberry Pi Pico.
-* **Lighting Spec**: Cree XP-E2 Warm White LED (2700K) mounted on an aluminum heatsink.
-* **Electrical Load Parameters**:
-  * Stepper Motor Continuous Draw: ~200mA
-  * Microcontroller Board Draw: ~50mA
-  * Emitter LED Operating Current: ~350mA
-  * **Total Peak Power Profile**: 5V DC via isolated USB-C breakout rail @ 600mA. Safe structural ceiling.
+- **Core Object**: 30cm x 30cm x 10cm solid timber block (walnut or charred cedar) split with a deep structural saw fissure.
+- **Infill Material**: Fissure cast filled with unpolished optical glass or raw clear quartz crystal embedded in crystal-clear casting epoxy resin.
+- **Kinetic Mechanism**: A concealed 28BYJ-48 5V DC stepper motor and a ULN2003 driver board controlled by an Arduino Nano or Raspberry Pi Pico.
+- **Lighting Spec**: Cree XP-E2 Warm White LED (2700K) mounted on an aluminum heatsink.
+- **Electrical Load Parameters**:
+  - Stepper Motor Continuous Draw: ~200mA
+  - Microcontroller Board Draw: ~50mA
+  - Emitter LED Operating Current: ~350mA
+  - **Total Peak Power Profile**: 5V DC via isolated USB-C breakout rail @ 600mA. Safe structural ceiling.
 
 ### Python: Enterprise Data Pipeline (SQL & Excel Integration) (illustrative, untested here)
 
