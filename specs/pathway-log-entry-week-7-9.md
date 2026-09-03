@@ -51,11 +51,19 @@
   - Purpose: Introduce Small Council #7 opportunity; position ELA as Tier 4 (launch integration endpoint that proves end-to-end sovereignty)
   - Note: Initial delivery to info@equatoriallaunch.com (Message ID: 1a067d963835387d) bounced; resent to verified correct address info@ela.space after public directory search
 
-**Follow-up Scheduling (Sep 19-20, 2026):**
-- [ ] Scheduled for Sep 19-20: Send ASA week-10 scheduling follow-up with 3-4 time options
-- [ ] Scheduled for Sep 19-20: Send Lynas week-10 scheduling follow-up with 3-4 time options
-- [ ] Scheduled for Sep 19-20: Send Magellan week-10 scheduling follow-up with 3-4 time options
-- [ ] Scheduled for Sep 19-20: Send ELA week-10 scheduling follow-up with 3-4 time options
+**Follow-up Scheduling (Sep 3, 2026 — Task 1.9):**
+- ✅ Sent ASA week-10 scheduling follow-up on Sep 3, 2026 (Message ID: 1a067e62bef1e6b0)
+  - Subject: RE: ASA Statement of Engagement Discussion — Scheduling Week 10 Call
+  - Options: Tue Oct 7 10:00 AM | Wed Oct 8 2:00 PM | Thu Oct 9 9:30 AM | Fri Oct 10 3:00 PM AEST
+- ✅ Sent Lynas week-10 scheduling follow-up on Sep 3, 2026 (Message ID: 1a067e6377844fc2)
+  - Subject: RE: Australian Industrial Sovereignty Verification — Week 10 Conversation
+  - Options: Tue Oct 7 10:00 AM | Wed Oct 8 2:00 PM | Thu Oct 9 9:30 AM | Fri Oct 10 3:00 PM AEST
+- ✅ Sent Magellan week-10 scheduling follow-up on Sep 3, 2026 (Message ID: 1a067e6476ca828d)
+  - Subject: RE: Australian Aerospace Sovereignty — Week 10 Conversation
+  - Options: Tue Oct 7 10:00 AM | Wed Oct 8 2:00 PM | Thu Oct 9 9:30 AM | Fri Oct 10 3:00 PM AEST
+- ✅ Sent ELA week-10 scheduling follow-up on Sep 3, 2026 (Message ID: 1a067e674440a33a)
+  - Subject: RE: Australian Launch Sovereignty — Week 10 Conversation
+  - Options: Tue Oct 7 10:00 AM | Wed Oct 8 2:00 PM | Thu Oct 9 9:30 AM | Fri Oct 10 3:00 PM AEST
 
 ---
 
@@ -103,8 +111,8 @@
 
 ---
 
-**Status:** IN PROGRESS (Email delivery complete; awaiting responses and week-10 scheduling)  
-**Last updated:** Sep 3, 2026 (Email phase)
+**Status:** COMPLETE (All Phase 1 tasks executed: contact research, initial briefing emails, week-10 scheduling follow-ups)  
+**Last updated:** Sep 3, 2026 (Task 1.9: Week-10 scheduling follow-ups sent)
 
 ---
 
