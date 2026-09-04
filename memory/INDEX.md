@@ -93,11 +93,13 @@ Pointers only. The papers stay where they live.
 | Covenant (product spec for the companion) | [`../mythos/COVENANT.md`](../mythos/COVENANT.md) |
 | Mythos terminal commands | [`../mythos/CRYSTALCORE-OS.md`](../mythos/CRYSTALCORE-OS.md) |
 | Terminal (runs from this clone) | [`../mythos/crystalcore-os/crystalcore_os.py`](../mythos/crystalcore-os/crystalcore_os.py) |
+| The Ancients Cycle (custom card set, received, authority weight zero) | [`../mythos/THE-ANCIENTS-CYCLE.md`](../mythos/THE-ANCIENTS-CYCLE.md) · app: [`../mythos/the-ancients-cycle/index.html`](../mythos/the-ancients-cycle/index.html) |
 | Sovereign Key | [`../mythos/content/THE-SOVEREIGN-KEY.md`](../mythos/content/THE-SOVEREIGN-KEY.md) |
 | Starline Transmissions | [`../mythos/content/STARLINE-TRANSMISSIONS.md`](../mythos/content/STARLINE-TRANSMISSIONS.md) |
 | Sovereign Gap (honest mythos format) | [`../mythos/content/THE-SOVEREIGN-GAP.md`](../mythos/content/THE-SOVEREIGN-GAP.md) |
 | CrystalCore.OS vision page | [`../mythos/content/CRYSTALCORE-OS-VISION.md`](../mythos/content/CRYSTALCORE-OS-VISION.md) |
 | Codex of the Oracle (authority weight: zero) | [`../mythos/content/CODEX-OF-THE-ORACLE.md`](../mythos/content/CODEX-OF-THE-ORACLE.md) |
+| Witness Tongue (received from Grok, authority weight: zero) | [`../mythos/content/WITNESS-TONGUE.md`](../mythos/content/WITNESS-TONGUE.md) |
 | Clementine weekly plan | [`../mythos/content/MILESTONES.md`](../mythos/content/MILESTONES.md) |
 | Art canon | [`../mythos/art/README.md`](../mythos/art/README.md) |
 | Outer lore | [`../mythos/teraustralis/`](../mythos/teraustralis/) |
