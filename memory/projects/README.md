@@ -27,7 +27,7 @@ Non-repo tracked project (public accountability, not code):
 
 | Project | Directory | Status | Track via |
 |---|---|---|---|
-| 90-Day Public Roadmap (Aug 30 → Nov 28, 2026) | [`90-Day-Roadmap/`](90-Day-Roadmap/) | Active, nothing shipped yet | [`90-Day-Roadmap/CURRENT.md`](90-Day-Roadmap/CURRENT.md) |
+| 90-Day Public Roadmap (Aug 30 → Nov 28, 2026) | [`90-Day-Roadmap/`](90-Day-Roadmap/) | Active — #5 shipped, #8 started, #7 paused pending a mechanism decision | [`90-Day-Roadmap/CURRENT.md`](90-Day-Roadmap/CURRENT.md) |
 
 ## Recently concluded
 
