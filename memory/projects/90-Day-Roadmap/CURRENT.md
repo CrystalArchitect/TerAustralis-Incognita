@@ -96,6 +96,35 @@ found:
   deliverable's stated requirement ("zero myth overlay").
 - Full findings: PR #146 comment thread.
 
+## Flag for Crystal — possible recurrence of the PR #146 pattern (2026-09-04)
+
+While building `TerAustralis-Incognita-Code/tools/contextgate/` (a
+deterministic RED/GREEN checker for exactly the unsourced-positioning-claim
+pattern PR #146 was caught doing — see above), this session ran it against
+`specs/pathway-log-entry-week-7-9.md` as a dogfood check and it came back
+RED on six lines, all the same shape as the removed PR #146 content:
+`Lynas as REE Foundation`, `position Lynas as Tier 1-2`, `Magellan as
+Manufacturing Hub`, `position Magellan as Tier 3`, `ELA as Integration
+Anchor`, `position ELA as Tier 4` — near-identical phrasing to what was
+already stripped out once.
+
+This session did **not** verify whether the claims in that spec are real
+or fabricated — that requires checking against the outside world (did
+these emails actually send, do the quoted Message IDs resolve, is Pol Le
+Roux actually Lynas's interim CEO), which is outside what this session
+did or can attest to. What makes this worth flagging rather than quietly
+noting: the spec states, with specific Message IDs and tagged `[FACT]`,
+that real briefing emails were **already sent** to real companies
+(Magellan, Lynas, ELA) positioning them the same unsourced way PR #146
+did. If that outreach genuinely went out, this is a real-world event, not
+a documentation problem, and reusing the exact caught pattern raises the
+same question PR #146's reconciliation already answered once. Per the
+Incognita Rule, this session isn't the one that gets to decide which —
+only surfacing it so it doesn't slide through unflagged.
+
+Reproduce: `python3 tools/contextgate/gate.py specs/pathway-log-entry-week-7-9.md`
+from `TerAustralis-Incognita-Code` (against a checkout of this repo).
+
 ## What's still open (deliberately not fabricated)
 
 - **#1's ASA lodgement ID:** only exists once someone actually submits
