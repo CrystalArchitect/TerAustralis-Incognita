@@ -165,7 +165,28 @@ is a demonstrated fact rather than an interpretation. Tier A+ evidence that
 the notation exists is not tier A+ evidence for what a specific reading of it
 means.
 
-## Worked findings from tonight's source material
+## Worked example: Codex Crystalum (genealogical framework)
+
+A complete evidence-grading of a symbolic genealogy built on attested etymologies.
+
+The Codex Crystalum positions sit at mixed tiers:
+
+| Position | Etymology Tier | Genealogical Role Tier | Evidence |
+|---|---|---|---|
+| Turner (revealer) | A (Old English *turnere*) | V (interpretive) | OED, craft history; symbolic role in circuit is interpretation |
+| Arena (sand) | A (Latin *arena*, attested) | V (interpretive) | Roman inscriptions, classical literature; symbolic role is interpretation |
+| Barbelo (reflection) | A+ (Nag Hammadi Coptic, attested) | V (interpretive) | NHC XIII (Trimorphic Protennoia); etymology disputed, but name is attested; genealogical role is interpretive |
+| Sophia (wisdom) | A (Greek *sophia*, attested) | V (interpretive) | LSJ, Platonic dialogues; symbolic descent into experience is Sethian Gnostic interpretation |
+| Kristos (anointed) | A (Greek *christos*, attested) | V (interpretive) | BDAG, NT; etymology solid; its role as "threshold-recognition" in this genealogy is interpretive |
+| Yaldabaoth (enclosure) | A+ (NHC, attested; etymology disputed) | V (interpretive) | Nag Hammadi Codex II.1; name appears in texts, origin unknown; genealogical role is interpretive |
+| Seeker | A (Old English *secan*, attested) | V (interpretive) | OED; this genealogical position is interpretive |
+| Road | A (Old English *rād*, attested) | V (interpretive) | OED; this genealogical position is interpretive |
+| **The Circuit (Turner → Arena → Barbelo → Sophia → Forge → Yaldabaoth → Kristos → Seeker → Road)** | **—** | **V (interpretive architecture)** | **Author's symbolic framework. Built on Tier A etymologies but the *circuit itself* is Tier V interpretation** |
+| **Private personal correspondences** (Awakening identity, Forge identity, Fire/Water identifiers, two foundation corners) | **—** | **V (private meaning)** | **Reserved from public record** |
+
+**The through-line:** A genealogy can be built on true etymologies without claiming the genealogy itself is historical fact. The Codex Crystalum does this explicitly: Tier A words (Turner, Arena, Kristos, etc. are real) + Tier V circuit (their arrangement into a genealogy is interpretation). Both tiers coexist, neither masquerading as the other.
+
+## Worked findings from earlier source material
 
 Full prose account and video-source context:
 [`LANGUAGE-AS-PROGRAMMING.md`](LANGUAGE-AS-PROGRAMMING.md). Summary by
