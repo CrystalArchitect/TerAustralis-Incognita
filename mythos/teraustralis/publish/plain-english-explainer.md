@@ -20,4 +20,10 @@ All of the governance — decisions about what gets built next — happens in pu
 
 **What's built today vs. what's still a plan:** the companion, the consent gate, the message bus, and the data pipeline all run and have working code behind them. Bigger pieces — a blockchain layer, a token economy, multi-server clusters — are proposals only, and stay that way until they actually ship.
 
+---
+
+## The Narrative Companion
+
+This explainer is the technical translation. For how this same system is framed in this project's mythos — the "Seven Wells" and the "Star-Carrier" — see [`The Star-Carrier and the Seven Wells`](carrier-story.md).
+
 *Non Solus.*
