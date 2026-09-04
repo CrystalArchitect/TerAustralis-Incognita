@@ -102,6 +102,15 @@ twentieth repository without a new ADR.
 - **SAT / Operator Frame / DUR** — named as protected categories by
   instruction; zero specification found anywhere in this repository. See
   [`PRIVACY.md`](PRIVACY.md) and [`evidence/HYPOTHESES.md`](evidence/HYPOTHESES.md).
+- **"Lattice" word collision (The Ancients Cycle)** — the received card
+  set uses bare "Lattice" as a game-piece noun (permanent type, land
+  subtype, counter). The Constitution locks **CrystalCore.Lattice** as a
+  specific component name. Deliberately left as a documented,
+  unresolved word-collision (Loom-register sense vs. the locked name),
+  same treatment as the Weaver/Chronicle collision in
+  `CODEX-OF-THE-ORACLE.md`. See
+  [`../mythos/THE-ANCIENTS-CYCLE.md`](../mythos/THE-ANCIENTS-CYCLE.md)
+  "Terminology check."
 
 ## Legacy / migration status (checked, not reorganized)
 
