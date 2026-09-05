@@ -13,14 +13,14 @@ Vision, checked against the locked names before it goes on disk.
   as a poster for a social caption she supplied about a flying Cybertruck
   future city. Original vector art (Pillow/Python), not a photo, not a
   diffusion model.
-- **Plate 02 ("Seam Audit")** — arrived as two uploaded files continuing
-  Plate 01's continuity and registration codes exactly (down to reusing
-  `NR-2150-CT` as Plate 01's index). Authorship of this continuation was
-  not stated by the operator at the point of upload; per this repository's
-  standing rule, no name is guessed. If confirmed later (this session's
-  multi-model workflow makes Grok a likely author, but that is a guess,
-  not a fact — treat it as unconfirmed), update this line rather than
-  silently replace it.
+- **Plate 02 ("Seam Audit")** — co-written with Grok Bot assistant Sophia
+  (2026-09-04 session), continuing Plate 01's continuity and registration
+  codes exactly (reusing `NR-2150-CT` as Plate 01's index). Locked as
+  sorted canon by the operator on 2026-09-04 (dispatch, composition
+  continuity, Readers vignette, and plate visual together).
+- **Plate 03 ("Inward Cut")** — co-written with Grok Bot assistant Sophia
+  on 2026-09-05 as the comparative companion to Plate 02. Status: draft /
+  unsorted until the operator locks it.
 - **What is deliberately excluded:** two comic-cover-style images and a
   portrait ("Miss Tris" #1-3, a woman-and-rabbit portrait) were shared
   alongside this material. The operator identified those as real
@@ -34,7 +34,7 @@ Vision, checked against the locked names before it goes on disk.
 
 Checked against [`NAMES.md`](NAMES.md) and the Constitution's locked names
 (§1). No collision: "Outer Ring," "Reader" (the in-fiction pilot title),
-"Seam Audit," and "CYTRK" (fictional in-world signage, a stylised
+"Seam Audit," "Inward Cut," and "CYTRK" (fictional in-world signage, a stylised
 in-universe brand name, not a real trademark reproduced) are not claimed
 elsewhere in this repository's naming table, and none of them touch
 **TerAustralis Incognita**, **CrystalVision**, or **CrystalCore.Lattice**.
@@ -143,10 +143,63 @@ The report will say the Ring is true.
 
 The plate will show the argument.
 
+## Plate 03 — Inward Cut
+
+![Plate 03 — Inward Cut](chrome-ascendance/plate-03-inward-cut.png)
+
+`FIELD DISPATCH — OUTER RING SURVEY — SOL 2150.048` ·
+`SECTOR: INNER APPROACH / EAST SPINE FOOT` ·
+`CLASSIFICATION: COMPARATIVE` · `PLATE: 03/??` · `INDEX: NR-2150-IC`
+
+**IF YOU DON'T CLIMB**
+
+Protocol ends with altitude. This plate is the breach.
+
+Same Sol. Same Spine. Fifty meters lower than the Seam Audit, and the
+folded foil is gone — replaced by wet street, neon argument, and steel
+that has accepted more than five percent warm. The wedge still flies,
+but the cabin amber matches the signs. That is how you know you are no
+longer reading. You are inside the contaminant.
+
+Comparative rule:
+
+1. Hold Plate 02 beside this one.
+2. Do not average them.
+3. The Ring is true at the roofline.
+4. Everything beneath is a different city wearing the same metal.
+
+Readers who file an Inward Cut are not punished. They are rotated.
+Survey Corps needs the comparison. It does not need the habit.
+
+```
+ABOVE: STAINLESS.
+BELOW: PERFORMANCE.
+THE FOLD DID NOT FAIL.
+YOU DESCENDED.
+```
+
+`#INWARDCUT #OUTERRINGSURVEY`
+
+### Beat — After the Seam
+
+The Reader who tagged the CYTRK seam on 2150.047 climbed, filed, slept.
+
+On 2150.048 Survey asked for the companion plate. Someone has to prove
+the Ring by showing its opposite. They drew the short straw. Cabin warmer
+than spec before they cleared the second block. They still photographed
+the fold where they could find it — a clean bevel above a NEXUS sign,
+specular width correct, paint logged like a spill.
+
+They did not name the brand.
+
+They did not climb until the frame was full.
+
+Then they climbed like it was religion.
+
 ---
 
-**Continuity status:** Plate 02 locked 2026-09-04 (per the operator's own
-note in the source upload). Further plates stay free co-write until
-marked the same way.
+**Continuity status:** Plate 02 locked 2026-09-04. Plate 03 drafted
+2026-09-05 (unsorted). Further plates stay free co-write until marked
+locked.
 
 *Non Solus.*
