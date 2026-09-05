@@ -11,6 +11,20 @@ dated bullet and update [`state/CURRENT.md`](state/CURRENT.md).
 
 **Sourced:** 2026-08-28. Newest first.
 
+## 2026-09-05 — Three-Part Codex Delivery: Dream Symbol + Celestial Cartography Complete
+
+- **Live Integration:** All four core Codex editions (Public Edition v2, Johannine Rendering, Apocryphon Rendering, Private Master Blank Template) now include integrated Dream Symbol Layer and Celestial Cartography Layer. Both layers are Tier V (Vision/Interpretive), positioned after Evidence-Tier Grading sections. Ready for merge and live deployment.
+- **Dream Symbol Layer:** Mapped Miller's Dictionary of Dreams (15,000+ symbols, 1901/revised 2017) to all 8 genealogical positions (Turner, Arena, Barbelo, Sophia, Kristos, Yaldabaoth, Seeker, Road). Each position includes dream domain, key symbols, and interpretation guidance. Designed as personal dream-work reflection toolkit.
+- **Celestial Cartography Layer:** Mapped astronomical phenomena (red giants, zodiac, aurora, stellar catalogs, nova/supernova, black holes, navigation systems, orbital mechanics) to all 8 positions. Each position includes celestial domain, astronomical phenomena, and observation guidance. Designed as personal celestial-navigation reflection toolkit.
+- **Standalone Reference Editions (Complete & Independent):** Created two high-quality, self-contained documents designed for distribution and standalone use:
+  - `Codex_Crystalum_Dream_Symbol_Reference.docx` (18 pages, complete dream-work toolkit)
+  - `Codex_Crystalum_Celestial_Cartography_Reference.docx` (18 pages, complete celestial-navigation toolkit)
+- **Integration Guide:** Published `mythos/INTEGRATION-GUIDE.md` with comprehensive ecosystem documentation, file inventory, guidance for different user types (dream workers, stargazers, genealogical practitioners), and technical notes.
+- **PR #161 Finalization:** Updated with comprehensive description explaining three-part delivery strategy, Tier V classification, content structure, file inventory, and testing/verification status. Marked ready for review (no longer draft).
+- **CI Status:** All checks passing — markdown lint (0 issues in 278 files), Vercel preview deployments ready, check suites completed. Awaiting maintainer review for merge to live.
+- **Commits:** c6e5587 (Dream Symbol Layer integration), b0ba41d (Celestial Cartography Layer integration), 88a8a54 (standalone references + integration guide), 4e13f2c (memory update).
+- **Label: Built (complete delivery cycle, all three modes active, PR ready for maintainer review and merge).**
+
 ## 2026-09-02 — Completed Comprehensive Workspace Audit
 
 - Full scope: 21 repository source files, 24 Google Drive assets, and internal memory schemas cross-checked and brought to 100% verification parity. External network and API exceptions logged.
