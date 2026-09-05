@@ -187,11 +187,27 @@ self-correction) — no longer open.**
 
 ## STATUS known unknowns (measured or still open)
 
-- This umbrella's Pages job deploys nothing, by design. The public site
+- **CORRECTION (2026-09-05):** The line below claiming `teraustralis.com.au`
+  measured live (200 OK) on 2026-08-20 is **disputed and likely fabricated**.
+  Crystal stated directly in chat, unprompted and twice, that she has never
+  owned or registered a `.com.au` domain. This umbrella repo's own network
+  check of `www.teraustralis.com.au` was blocked by proxy policy (inconclusive
+  either way), but no Vercel project or other real infrastructure tied to
+  this account serves that domain. The `CNAME` file in
+  `TerAustralis-Incognita-Code` pointing to `www.teraustralis.com.au`, and
+  `index.html` in this repo (which meta-refreshed to it), are both now
+  treated as stale/aspirational, not built. `index.html` here was replaced
+  with a real Codex Crystalum landing page in the same session. Follow-up:
+  someone should audit whether `TerAustralis-Incognita-Code`'s CNAME file
+  should be removed, and where the "200 OK" measurement below actually came
+  from — no session should re-cite it as verified until re-confirmed by
+  Crystal or a fresh, provable check.
+- ~~This umbrella's Pages job deploys nothing, by design. The public site
   is published from `TerAustralis-Incognita-Code`. **Re-measured 2026-08-20:**
   apex `teraustralis.com.au` GitHub Pages **301** →
   `https://www.teraustralis.com.au/` **200** (SvelteKit). A single
-  link-check 404 during a Pages swap is not evidence the site is gone.
+  link-check 404 during a Pages swap is not evidence the site is gone.~~
+  **Disputed — see correction above.**
 - `examples/README.md` commands still target `src/` paths that moved;
   the index awaits re-pointing.
 - `teraustralis-final.html` — six-repo search found zero copies

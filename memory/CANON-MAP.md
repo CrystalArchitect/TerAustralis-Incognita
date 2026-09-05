@@ -136,7 +136,6 @@ listed above and in [`evidence/CONFLICTS.md`](evidence/CONFLICTS.md). If a
 future session finds one, log it there rather than assuming this table is
 exhaustive.
 
-
 ## Drive → git destinations (2026-09-05)
 
 Short pointer only — full classification in
@@ -158,7 +157,6 @@ Short pointer only — full classification in
 Do not treat the new 16-card lock as silently superseding
 [`mythos/THE-ANCIENTS-CYCLE.md`](../mythos/THE-ANCIENTS-CYCLE.md) without
 a Crystal decision.
-
 
 ## Maintenance
 
