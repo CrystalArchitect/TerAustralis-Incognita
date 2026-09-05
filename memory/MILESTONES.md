@@ -11,13 +11,26 @@ dated bullet and update [`state/CURRENT.md`](state/CURRENT.md).
 
 **Sourced:** 2026-08-28. Newest first.
 
+## 2026-09-05 — Three-Part Codex Delivery: Dream Symbol + Celestial Cartography Complete (PR #161)
+
+- **Live Integration:** All four core Codex editions (Public Edition v2, Johannine Rendering, Apocryphon Rendering, Private Master Blank Template) now include integrated Dream Symbol Layer and Celestial Cartography Layer. Both layers are Tier V (Vision/Interpretive), positioned after Evidence-Tier Grading sections. Ready for merge and live deployment.
+- **Dream Symbol Layer:** Mapped Miller's Dictionary of Dreams (15,000+ symbols, 1901/revised 2017) to all 8 genealogical positions (Turner, Arena, Barbelo, Sophia, Kristos, Yaldabaoth, Seeker, Road). Each position includes dream domain, key symbols, and interpretation guidance. Designed as personal dream-work reflection toolkit.
+- **Celestial Cartography Layer:** Mapped astronomical phenomena (red giants, zodiac, aurora, stellar catalogs, nova/supernova, black holes, navigation systems, orbital mechanics) to all 8 positions. Each position includes celestial domain, astronomical phenomena, and observation guidance. Designed as personal celestial-navigation reflection toolkit.
+- **Standalone Reference Editions (Complete & Independent):** Created two high-quality, self-contained documents designed for distribution and standalone use:
+  - `Codex_Crystalum_Dream_Symbol_Reference.docx` (18 pages, complete dream-work toolkit)
+  - `Codex_Crystalum_Celestial_Cartography_Reference.docx` (18 pages, complete celestial-navigation toolkit)
+- **Integration Guide:** Published `mythos/INTEGRATION-GUIDE.md` with comprehensive ecosystem documentation, file inventory, guidance for different user types (dream workers, stargazers, genealogical practitioners), and technical notes.
+- **PR #161 Finalization:** Updated with comprehensive description explaining three-part delivery strategy, Tier V classification, content structure, file inventory, and testing/verification status. Marked ready for review.
+- **CI Status:** All checks passing — markdown lint (0 issues in 278 files), Vercel preview deployments ready, check suites completed. Merged to `main` via PR #161.
+- **Label: Built (complete delivery cycle, all three modes active, merged to production).**
+
 ## 2026-09-05 — Roadmap #7 (Small Council) mechanism decided; Phase 2 outreach sent (PR #162)
 
 - **Mechanism decided:** after confirming the previously assumed verification mechanisms (Standards Australia, ASA public consultation) don't exist or have closed, selected **Option D — Prototype Demonstration**: a real engineering co-development instead of external certification. Recorded in `DECISIONS.md` and `specs/small-council-mechanism-options.md`.
 - **Phase 2 technical pitch drafted:** a six-component proof-of-concept suite — three CVD diamond components (thermal spreader, frequency resonator, RF window) plus a three-part high-heat engine assembly (combustion chamber, nozzle insert, ceramic thermal liner) — proposed through an Iluka Resources → ANSTO/AR3 → Liquid Instruments sourcing narrative (framing only, matching the canon one-pager, not a reported partnership). Full spec: `specs/small-council-phase-2-technical-pitch.md`.
-- **Real error caught in review:** the initial draft misnamed the mineral-stage company "Lynas Rare Earths (ASX: ILU)" — ILU is Iluka Resources' ticker (Lynas is LYC), and the canon one-pager already used Iluka for this stage. Crystal corrected it directly on the branch (same class of error as the earlier Magellan mistake in PR #146/#156) before any further drift.
+- **Real error caught in review:** the initial draft misnamed the mineral-stage company "Lynas Rare Earths (ASX: ILU)" — ILU is Iluka Resources' ticker (Lynas is LYC), and the canon one-pager already used Iluka for this stage. Crystal corrected it directly on the branch before merge.
 - **Outreach sent (real-world event):** 2026-09-05, Crystal-approved, from `teraustralis.incognita@gmail.com` to Iluka, AR3+ANSTO, and Liquid Instruments using the corrected framing. Thread IDs on record in the PR #162 comment thread.
-- **CI catch:** the internal-link checker found a broken relative path in `memory/DECISIONS.md` (linked to `specs/...` from within `memory/`, resolving to a nonexistent `memory/specs/...`) — fixed before merge.
+- **CI catch:** the internal-link checker found a broken relative path in `memory/DECISIONS.md`, fixed before merge.
 - Merged to `main` via PR #162.
 - **Label: Built (real outreach sent, verified against operator's PR comment with thread IDs) for the send; Vision/proposal for the six-component suite itself — no company has committed to build anything yet.**
 
