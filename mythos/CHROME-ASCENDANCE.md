@@ -143,7 +143,6 @@ The report will say the Ring is true.
 
 The plate will show the argument.
 
-
 ## Plate 03 — Inward Cut
 
 ![Plate 03 — Inward Cut](chrome-ascendance/plate-03-inward-cut.png)
