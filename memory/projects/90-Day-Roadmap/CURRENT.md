@@ -1,25 +1,25 @@
 # CURRENT — 90-Day Public Roadmap
 
-**As of:** 2026-09-04, updated for #6 completion. Drafts landed for #1, #2, #5,
+**As of:** 2026-09-05, updated for #7 mechanism decision. Drafts landed for #1, #2, #5,
 and #6 — #5 ships in full; #6 now linked (narrative ↔ technical pairing complete).
 A separate session's PR (#146) claimed 7 of 8 items "shipped"; on review, most of
 that content was fabricated or duplicated/contradicted already-merged work and was
 removed before merge — see "PR #146 reconciliation" below. **#7's outreach shipped
 2026-09-03 with real errors, found and partly corrected 2026-09-04 — see "Flag
-resolved" below, which replaces the prior open flag.** Overwrite this file at each
+resolved" below. Mechanism decision made 2026-09-05: Option D (prototype demonstration).** Overwrite this file at each
 checkpoint; full plan detail lives in [`PLAN.md`](PLAN.md), don't duplicate it here.
 
 ## Status
 
 | # | Subject | Deliverable | Status |
 |---|---|---|---|
-| 1 | TerAustralis Industrial Sovereignty | Onshore Chain One-Pager | **Drafted** — content sourced and cited; ASA lodgement ID not yet obtained (Crystal's action, see below) |
+| 1 | TerAustralis Industrial Sovereignty | Onshore Chain One-Pager | **Submitted** — sent to ASA 2026-09-05; awaiting lodgement ID |
 | 2 | CrystalCore OS & Synthetic Affect | Consent Token Spec v0.1 | **Drafted** — schema + state diagram written; kill-switch demo/Loom not recorded (needs `-Code` repo, out of this session's scope) |
 | 3 | Red Dust → Rockets Pathway | Pathway Log #1 | Not started — empty tracker structure prepared, zero real *conversation* entries (Phase 1 outreach ≠ the conversations this metric counts) |
 | 4 | Sovereign by Design | Operator Control Demo | Not started |
 | 5 | First-Principles Systems Thinking | Plain English Explainer | **Shipped** — merged via PR #148, meets its own success metric |
 | 6 | Narrative & World-Building | Carrier Story | **Drafted, linked** — narrative landed (`mythos/teraustralis/publish/carrier-story.md`), now linked bidirectionally to #5 Explainer |
-| 7 | Engagement & Network Reality | Small Council | **Phase 1 sent, with errors — one corrected, one structural and unresolved. Phase 2 paused** (operator instruction, 2026-09-04). See "Flag resolved" below |
+| 7 | Engagement & Network Reality | Small Council | **Phase 1 sent, corrected; mechanism selected (Option D: prototype); Phase 2 scoping begins** (2026-09-05). See "Mechanism Decision" below |
 | 8 | Execution vs Ambition Gap | Shipping Ledger | **Started** — 1/12 entries. First entry is the #7 correction itself; see `mythos/teraustralis/publish/shipping-ledger.md` |
 
 ## What landed this session
@@ -196,11 +196,9 @@ Two gaps still require Crystal directly: lodge the real ASA submission
 (#1), and either build the kill-switch demo in `-Code` or hand that off
 (#2). Roadmap item #6 (Carrier Story ↔ Explainer bidirectional link) is now complete.
 
-**#7 needs a decision from Crystal, not more documentation:** either
-find a real mechanism for the supply-chain verification this item wants
-(Standards Australia has said they aren't it), or descope/redefine what
-"Small Council" actually delivers without one. Until that's decided,
-no further outreach should be sent and Phase 2 stays paused.
+**#7 mechanism decision made (2026-09-05): Option D, Prototype Demonstration.** The supply-chain verification mechanism will be a real engineering demonstration: Lynas → ANSTO processing → Liquid Instruments component → proof-of-concept result. This approach is honest (no false claims of external verification), aligns with the one-pager evidence of supply-chain existence, and produces a real artifact (working hardware) instead of documentation. Timeline shifts to 3–4 months for Phase 2 (technical scoping), Phase 3 (build), Phase 4 (documentation).
+
+**Phase 2 technical pitch drafted (2026-09-05):** scope expanded from a single nozzle insert to a **six-component proof-of-concept suite** — three CVD diamond parts (thermal spreader, frequency resonator, RF window) plus a complete three-part high-heat engine assembly (combustion chamber, nozzle insert, ceramic thermal liner). Full spec: [`specs/small-council-phase-2-technical-pitch.md`](../../../specs/small-council-phase-2-technical-pitch.md). Grok Bot execution briefing (customized per-company outreach): [`specs/grok-bot-small-council-phase-2-prompt.txt`](../../../specs/grok-bot-small-council-phase-2-prompt.txt). **This is a proposal draft, not yet sent** — none of the three companies have been contacted about this suite; sending is Crystal's action via Grok Bot.
 
 **#3 (Pathway Log) stays honestly empty** — its metric is 3 dated
 *conversation* entries, and no conversation has happened yet (Phase 1

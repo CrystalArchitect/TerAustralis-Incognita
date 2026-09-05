@@ -47,6 +47,14 @@ still wins for software names: **Songline is never a component name.**
 |---|---|---|---|
 | Loop Framework | Method, not law | Paper: `the-library` `frameworks/loop-framework.md` (private; path verified 2026-08-28). Pointer in this git: [`AI-Governance.md`](../docs/governance/AI-Governance.md) "Operational grounding". Entered the constellation 2026-08-04. | Promote it to law. Copy the twelve-layer paper into this git. Collapse it with the Grok kit name `loop-framework-mythos` without checking |
 
+## External references (web-hosted)
+
+Do not copy content from external works into `memory/`. Point, then open link.
+
+| Framework | Label | Location |
+|---|---|---|
+| **Hosting Protocol** (working draft) | Vision — pressure test of biological-host / resident-AI cohabitation governance; veto, Guardian, testimony mechanisms | online.fliphtml5.com. Unresolved: family/estate, child-of-two-intelligences status, RI migration without hostage-risk |
+
 ## On Google Drive (not this git)
 
 Do not copy these papers' worked examples or personal-layer objects into
