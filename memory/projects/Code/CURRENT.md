@@ -1,13 +1,15 @@
 # CURRENT — TerAustralis-Incognita-Code state snapshot
 
-**As of:** 2026-08-29  
-**Source:** Umbrella memory bootstrap complete; cross-repo memory model active
+**As of:** 2026-09-05  
+**Source:** Umbrella memory active; cross-repo sessions
 
-## What's running
+## What's running (production)
 
+- **Public site (www.teraustralis.com.au):** SvelteKit frontend serving mythos content to live domain. Status: 200 OK. GitHub Pages → Domain apex 301 → www.
 - **Clementine:** Companion AI (local-first, Ollama-backed). Code here; memory architecture in umbrella `mythos/content/MEMORY.md`.
 - **Starline Weaver:** Decision interface. Code here; specs in umbrella docs/architecture/.
 - **RDP kernel:** Record/Decide/Persist core. Documented in umbrella architecture.
+- **Vision Framework Site:** Small Council Phase 2 integration. ObservatoryMap navigation, TunnelingMonitor interactive component (Svelte 5.1.0), theme-aware CSS. Merged PR #134.
 
 ## What's Built, not currently exercised
 
