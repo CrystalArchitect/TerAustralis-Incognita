@@ -5,7 +5,7 @@ merge. Tags: **Canon** | **Working** | **Private** | **External** |
 **Skip** | **Hold**.
 
 Incognita Rule applied: do not invent canon; label Dreamed vs Built.
-No Wave 3 Hold bodies were uploaded.
+Wave 3 bodies included per Crystal 2026-09-05 direction (was Hold; now Included).
 
 ## Summary
 
@@ -14,7 +14,7 @@ No Wave 3 Hold bodies were uploaded.
 | 0 | This triage file |
 | 1 | Four card-art WebPs → `mythos/art/`; 16-card list export → `mythos/art/16-card-canon-list.md`; README rows |
 | 2 | Drive Canon Lore → `mythos/content/16-CARD-CANON-LORE.md` (new Vision-layer lock note); CVSC Dictionary plate/log/json → `research/cvsc/` with working banner. **Did not** rewrite `mythos/content/CODEX-CRYSTALUM.md` (Drive folder is not a duplicate of that file). |
-| 3 | Holds listed only — no file bodies |
+| 3 | **Included** — Erisian audits → `research/erisian-blade/`; Sam Maher + Colossus briefs → `memory/briefs/`; Continuum × SAT (joint with J) → `memory/collaboration/` with joint banner |
 | 4 | Branch `drive-merge-2026-09-05` + PR on `CrystalArchitect/TerAustralis-Incognita`. Site/-Code PR **skipped** (see below). |
 
 ## Today / recent inventory
@@ -46,15 +46,17 @@ Expected Drive-side duplicates of the plate/json under
 `13_RESEARCH_SOURCES` / related trees were **not** re-uploaded; triage
 lists the canonical IDs above once.
 
-## Wave 3 HOLDS — no content uploaded
+## Wave 3 — Included (was Hold; Crystal asked for ALL Wave 3)
 
-| Item | Tag | Reason |
-|------|-----|--------|
-| Continuum × SAT (working — joint with J) | Hold | Joint working; Continuum left alone per brief |
-| TerAustralis Status Brief for Sam Maher | Hold | External / private briefing |
-| Colossus Architecture Brief 2026-08-31 | Hold | Architecture brief held |
-| Erisian Blade audit docs | Hold | Audit / private |
-| PRESERVATION-INVENTORY and random screenshots (unless clearly public art) | Hold / Skip | Not clearly public gallery art |
+| Item | Tag | Destination |
+|------|-----|-------------|
+| `2026-09-03_Erisian-Blade_Grok-Truth-Level-Audit` | Working / audit | `research/erisian-blade/` |
+| `2026-09-03_Claude-Ingest-Prompt_Erisian-Blade-Audit` | Working / audit | `research/erisian-blade/` |
+| TerAustralis Status Brief for Sam Maher.docx (larger/newer; id `1ByoQs7…`) | Working / external brief | `memory/briefs/2026-06-19_TerAustralis-Status-Brief-Sam-Maher.md` (text extract; duplicates skipped) |
+| Colossus Architecture Brief 2026-08-31 | Working / architecture brief | `memory/briefs/2026-08-31_Colossus-Architecture-Brief.md` |
+| Continuum x SAT (working — joint with J) | Working / joint | `memory/collaboration/2026-09-02_Continuum-x-SAT-working-joint-with-J.md` **with joint banner** |
+| Older `Continuum x SAT` (no joint title) | Skip | Not Crystal’s sole ownership; skipped without banner twin |
+| PRESERVATION-INVENTORY / random screenshots / Untitled | Skip | Not public gallery art |
 
 ## Site / `-Code` PR decision
 
@@ -72,5 +74,9 @@ a figure with personal likeness cues; keep review in Incognita
 | All four WebPs | Downloaded OK (RIFF/WebP; XMP `trainedAlgorithmicMedia` only — tool unconfirmed) |
 | 16-card sheet | Exported OK as `text/csv` |
 | Dictionary / CVSC trio | Downloaded OK |
+| Erisian Blade pair | Downloaded OK (text/plain export) |
+| Colossus Architecture Brief | Downloaded OK |
+| Continuum × SAT (joint with J) | Downloaded OK (~78k chars); joint banner applied |
+| Sam Maher status brief | Downloaded OK (docx → markdown extract); duplicate smaller copies skipped |
 
 *Non Solus.*

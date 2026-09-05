@@ -149,7 +149,10 @@ Short pointer only — full classification in
 | `TerAustralis_Canon_Lore.md` Doc | [`mythos/content/16-CARD-CANON-LORE.md`](../mythos/content/16-CARD-CANON-LORE.md) | Vision lock note (Dreamed, not Built) |
 | Dictionary-of-Dreams CVSC plate / log / JSON | [`research/cvsc/`](../research/cvsc/) | External citation / working — **not** Canon |
 | Drive `CODEX_CRYSTALUM` folder | *No merge into* [`mythos/content/CODEX-CRYSTALUM.md`](../mythos/content/CODEX-CRYSTALUM.md) | Holding ≠ duplicate of git Codex |
-| Continuum × SAT, Sam Maher brief, Colossus brief, Erisian audits, PRESERVATION-INVENTORY | **Hold** — not in this merge | Private / working / external |
+| Erisian Blade audit docs (2026-09-03) | [`research/erisian-blade/`](../research/erisian-blade/) | Working / audit — **not** mythos canon |
+| Sam Maher status brief + Colossus Architecture Brief | [`memory/briefs/`](briefs/) | Working / external briefs |
+| Continuum × SAT (working — joint with J) | [`memory/collaboration/2026-09-02_Continuum-x-SAT-working-joint-with-J.md`](collaboration/2026-09-02_Continuum-x-SAT-working-joint-with-J.md) | Joint with J / Continuum (CMX); **not** Crystal sole ownership; joint banner required |
+| PRESERVATION-INVENTORY / Untitled / random screenshots | **Skip** | Not public gallery art |
 
 Do not treat the new 16-card lock as silently superseding
 [`mythos/THE-ANCIENTS-CYCLE.md`](../mythos/THE-ANCIENTS-CYCLE.md) without
