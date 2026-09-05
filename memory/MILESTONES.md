@@ -11,6 +11,16 @@ dated bullet and update [`state/CURRENT.md`](state/CURRENT.md).
 
 **Sourced:** 2026-08-28. Newest first.
 
+## 2026-09-05 — Roadmap #7 (Small Council) mechanism decided; Phase 2 outreach sent (PR #162)
+
+- **Mechanism decided:** after confirming the previously assumed verification mechanisms (Standards Australia, ASA public consultation) don't exist or have closed, selected **Option D — Prototype Demonstration**: a real engineering co-development instead of external certification. Recorded in `DECISIONS.md` and `specs/small-council-mechanism-options.md`.
+- **Phase 2 technical pitch drafted:** a six-component proof-of-concept suite — three CVD diamond components (thermal spreader, frequency resonator, RF window) plus a three-part high-heat engine assembly (combustion chamber, nozzle insert, ceramic thermal liner) — proposed through an Iluka Resources → ANSTO/AR3 → Liquid Instruments sourcing narrative (framing only, matching the canon one-pager, not a reported partnership). Full spec: `specs/small-council-phase-2-technical-pitch.md`.
+- **Real error caught in review:** the initial draft misnamed the mineral-stage company "Lynas Rare Earths (ASX: ILU)" — ILU is Iluka Resources' ticker (Lynas is LYC), and the canon one-pager already used Iluka for this stage. Crystal corrected it directly on the branch (same class of error as the earlier Magellan mistake in PR #146/#156) before any further drift.
+- **Outreach sent (real-world event):** 2026-09-05, Crystal-approved, from `teraustralis.incognita@gmail.com` to Iluka, AR3+ANSTO, and Liquid Instruments using the corrected framing. Thread IDs on record in the PR #162 comment thread.
+- **CI catch:** the internal-link checker found a broken relative path in `memory/DECISIONS.md` (linked to `specs/...` from within `memory/`, resolving to a nonexistent `memory/specs/...`) — fixed before merge.
+- Merged to `main` via PR #162.
+- **Label: Built (real outreach sent, verified against operator's PR comment with thread IDs) for the send; Vision/proposal for the six-component suite itself — no company has committed to build anything yet.**
+
 ## 2026-09-02 — Completed Comprehensive Workspace Audit
 
 - Full scope: 21 repository source files, 24 Google Drive assets, and internal memory schemas cross-checked and brought to 100% verification parity. External network and API exceptions logged.
