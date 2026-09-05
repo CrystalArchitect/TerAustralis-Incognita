@@ -11,6 +11,14 @@ dated bullet and update [`state/CURRENT.md`](state/CURRENT.md).
 
 **Sourced:** 2026-08-28. Newest first.
 
+## 2026-09-05 — Fixed live-site 404; disputed a stale domain claim; unblocked base CI (PR #166)
+
+- **Site fix:** `ter-australis-incognita.vercel.app` was 404ing because `index.html` was a meta-refresh redirect to `https://www.teraustralis.com.au/`. Replaced with a real landing page listing all six Codex Crystalum documents and the Integration Guide. Added `vercel.json` (project had no framework preset).
+- **Domain claim disputed:** Crystal stated directly, twice, she has never owned `.com.au`. This contradicted `memory/OPEN-QUESTIONS.md`'s claim of a "re-measured 2026-08-20: 200 OK." Marked disputed in place rather than deleted, per the Incognita Rule.
+- **Base CI unblocked:** PR #165's "Drive merge" had introduced markdown-lint violations across several unrelated files (confirmed failing on `main` before this PR's own diff touched anything). Fixed mechanically with `markdownlint-cli2 --fix` plus manual fixes for rules it doesn't auto-fix (hr-style, heading-style consistency, missing first-line H1). No prose content changed. Verified: 0/294 files, 1402/1402 internal links resolve.
+- Merged to `main` via PR #166.
+- **Label: Built (page live, conflict recorded on disk, base CI green for every future PR).**
+
 ## 2026-09-05 — Three-Part Codex Delivery: Dream Symbol + Celestial Cartography Complete (PR #161)
 
 - **Live Integration:** All four core Codex editions (Public Edition v2, Johannine Rendering, Apocryphon Rendering, Private Master Blank Template) now include integrated Dream Symbol Layer and Celestial Cartography Layer. Both layers are Tier V (Vision/Interpretive), positioned after Evidence-Tier Grading sections. Ready for merge and live deployment.
