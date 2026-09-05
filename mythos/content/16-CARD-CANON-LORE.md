@@ -32,9 +32,7 @@ Dream Seeds & Tokens
 * Martian Oath Seed Token
 * Magical Dream Seeds Collection
 
-
 All art in final purple/black for Crystal, gold mythic frames matching Ancients cycle. Gallery HTML included in folder.
-
 
 Created: 2026-09-05 Creator: Crystal ( @m13crystalat / teraustralis_incognita ) World: TerAustralis Incognita - Mars worldbuilding project
 

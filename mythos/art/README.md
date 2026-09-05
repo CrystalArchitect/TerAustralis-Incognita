@@ -177,7 +177,6 @@ CC BY-NC-ND 4.0 — see `../content/LICENSE-CONTENT.md`.
 | `lira-pearl-winged-guide.webp` | *AI-generated (tool unconfirmed — XMP `trainedAlgorithmicMedia` only), Drive ingest 2026-09-05* — Card II portrait art for "Lira, The Pearl-Winged Guide" (navigator / Ancient) |
 | `dwarven-artificer.webp` | *AI-generated (tool unconfirmed — XMP `trainedAlgorithmicMedia` only), Drive ingest 2026-09-05* — Card III portrait art for "The Dwarven Artificer" (Forge-Master / Ancient) |
 
-
 **Truth label (Vision):** this art is the project's own mythic narrative. Where a
 real person's name or likeness appears — whether as a name, a silhouette, or a
 photographic likeness (e.g. "the Breaker of the E") — it is Vision-layer
@@ -336,4 +335,3 @@ and no EXIF `Artist`/`Software` or C2PA `softwareAgent` naming a tool;
 table marks them "tool unconfirmed," same discipline as the 2026-09-03
 batch. See also [`16-card-canon-list.md`](16-card-canon-list.md) and
 [`../content/16-CARD-CANON-LORE.md`](../content/16-CARD-CANON-LORE.md).
-

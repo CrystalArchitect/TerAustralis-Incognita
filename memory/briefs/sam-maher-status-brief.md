@@ -6,7 +6,7 @@ source: Drive "TerAustralis Status Brief for Sam Maher.docx" (id 1ByoQs7ROWFgWv6
 privacy: Business/regulatory brief only; no family/medical/addresses. ABN is public company identifier.
 ---
 
-TerAustralis Incognita — Current Status Brief
+# TerAustralis Incognita — Current Status Brief
 
 For: Sam Maher, GovTechAu
 
