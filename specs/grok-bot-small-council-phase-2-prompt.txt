@@ -2,7 +2,7 @@ Grok Bot Briefing: Small Council Phase 2 Outreach
 =================================================
 
 OBJECTIVE
-Draft and send three personalized technical briefing emails inviting Lynas Rare Earths, Australian Rare Earths Ltd + ANSTO, and Liquid Instruments to co-develop a six-component proof-of-concept suite through an end-to-end Australian onshore supply chain. Components span advanced materials (CVD diamond thermal spreader, NV-center resonator, RF window) and a complete high-heat engine assembly (combustion chamber, nozzle, ceramic thermal liner). Timeline: 13 weeks, Sept–Dec 2026.
+Draft and send three personalized technical briefing emails inviting Iluka Resources, Australian Rare Earths Ltd + ANSTO, and Liquid Instruments to co-develop a six-component proof-of-concept suite through an end-to-end Australian onshore supply chain. Components span advanced materials (CVD diamond thermal spreader, NV-center resonator, RF window) and a complete high-heat engine assembly (combustion chamber, nozzle, ceramic thermal liner). Timeline: 13 weeks, Sept–Dec 2026.
 
 WHAT TO DO
 1. Read: specs/small-council-phase-2-technical-pitch.md (this is the master briefing)
@@ -25,7 +25,7 @@ WHAT TO DO
    - Use tone: professional, specific, collaborative, ambitious but achievable (not sales pitch)
 
 4. Send emails to:
-   - **Lynas Rare Earths**: inquiries@lynas.com (or primary contact if available)
+   - **Iluka Resources**: investor.relations@iluka.com (or primary contact if available)
    - **Australian Rare Earths Ltd + ANSTO**: contact@australianrareearths.com + ANSTO critical minerals contact
    - **Liquid Instruments**: partnerships@liquidinstruments.com (or CEO/BD contact)
 
@@ -34,11 +34,12 @@ WHAT TO DO
 CUSTOMIZATION GUIDANCE
 All three companies work on the same six-component suite, but different emphasis per company:
 
-**For Lynas:**
-- Emphasize: rare-earths supply across FOUR material domains (structural titanium, ceramics, CVD diamond, quantum materials); breakthrough downstream demand; onshore sourcing credibility
-- Their timeline: Weeks 1–2 (feedstock certified and on hand)
-- Their components: Ti-6Al-4V dopants (chamber + nozzle), CVD diamond precursor, CMC liner dopants
-- Benefit: First major downstream customer spanning traditional metallurgy AND emerging tech (quantum, RF, diamond, ceramics); blueprint for rare-earths contracts across the full materials spectrum
+**For Iluka:**
+- Emphasize: mineral-stage titanium feedstock role matching the onshore one-pager (not REE; not an existing partnership claim)
+- Their timeline: Weeks 1–2 (feedstock pathway scoped)
+- Their components: Ti pathway for chamber + nozzle (HEA-POC-04A/B) only
+- Benefit: Downstream demand signal + case study; co-development scoping call — no partnership / exclusivity language
+- DO NOT: attribute rare-earth dopants, CVD precursors, or CMC dopants to Iluka
 
 **For Australian Rare Earths + ANSTO:**
 - Emphasize: pilot-scale processing capability across THREE material classes (Ti alloying, rare-earth doped ceramics, CVD diamond/NV-center doping); validates June 2026 facility launch with multi-domain capability
@@ -71,7 +72,7 @@ CONTENT TO INCLUDE IN EACH EMAIL
 
 GROUNDING
 All three companies are real and publicly documented:
-- Lynas Rare Earths: ASX-listed (ILU), Australian operations, aerospace-grade feedstocks
+- Iluka Resources (ASX: ILU): Australian mineral-sands / titanium feedstock producer (canon one-pager mineral stage)
 - Australian Rare Earths Ltd (ASX: AR3) + ANSTO: June 2026 pilot-scale facility launch announced; AR3 already named as first partner
 - Liquid Instruments: $28.45M NRFC investment (Sept 2026 public announcement), explicitly cited by Australian Space Agency
 
@@ -103,5 +104,13 @@ QUESTIONS FOR GROK BOT
 If you need clarification on any company's role, timeline, components, or what to emphasize, ask before drafting. Otherwise, proceed with drafting all three emails and send when ready.
 
 ---
+
+
+
+ACCURACY OVERRIDE (Crystal 2026-09-05)
+- Mineral company is Iluka Resources (ASX: ILU), NOT Lynas. Match onshore-chain-one-pager.md.
+- Chain is a proposed sourcing narrative connecting independently real companies — not a reported partnership.
+- Draft emails for Crystal review only. Do not send until approved.
+- Do not invent Iluka rare-earth / CVD / CMC dopant supply.
 
 Ready when you are. Hand this briefing to Grok Bot and report back with send confirmations and any company responses.
