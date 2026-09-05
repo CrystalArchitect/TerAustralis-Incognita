@@ -172,6 +172,11 @@ CC BY-NC-ND 4.0 — see `../content/LICENSE-CONTENT.md`.
 | `ahs-lemuria-mock-poster.jpeg` | *AI-generated (Grok Imagine — EXIF-confirmed, see below), received 2026-09-03* — **Fabricated claim about real, living people — see dedicated note below.** A mock theatrical poster for a nonexistent "American Horror Story: Lemuria," printing the real FX/Ryan Murphy Productions/20th Television franchise name and a full fake cast-and-crew block naming real, living actors and real production staff as though they made it |
 | `lemuria-and-mu-explainer-page-1.png` | *provenance undetermined — no XMP or EXIF present, received 2026-09-03* — Page 1 of a two-page educational comic on the real-world pseudohistory of "Lemuria," covering zoologist Philip Sclater's 1864 hypothesis, its obsolescence after plate tectonics, and Theosophy's (H. P. Blavatsky's) later occult reinterpretation. Reference/explainer content about real history, not TerAustralis narrative art — see note below |
 | `lemuria-and-mu-explainer-page-2.png` | *provenance undetermined — no XMP or EXIF present, received 2026-09-03* — Page 2 of the same comic, covering Augustus Le Plongeon and James Churchward's "Mu" claims, the unverified "Naacal tablets," and the modern merging of Lemuria/Mu into New Age crystal lore, framed throughout as "obsolete hypothesis" / "unverified" / "pseudohistory, not archaeology." Reference/explainer content about real history, not TerAustralis narrative art — see note below |
+| `crystal-dragon-architect-final.webp` | *AI-generated (tool unconfirmed — XMP `trainedAlgorithmicMedia` only), Drive ingest 2026-09-05* — Card 0 portrait art for "Crystal, Dragon Architect of TerAustralis" (purple/black scheme). Companion list: [`16-card-canon-list.md`](16-card-canon-list.md) |
+| `monad-red-dust-avatar.webp` | *AI-generated (tool unconfirmed — XMP `trainedAlgorithmicMedia` only), Drive ingest 2026-09-05* — Card I portrait art for "Monad, The Red Dust Avatar" (first spark / Ancient) |
+| `lira-pearl-winged-guide.webp` | *AI-generated (tool unconfirmed — XMP `trainedAlgorithmicMedia` only), Drive ingest 2026-09-05* — Card II portrait art for "Lira, The Pearl-Winged Guide" (navigator / Ancient) |
+| `dwarven-artificer.webp` | *AI-generated (tool unconfirmed — XMP `trainedAlgorithmicMedia` only), Drive ingest 2026-09-05* — Card III portrait art for "The Dwarven Artificer" (Forge-Master / Ancient) |
+
 
 **Truth label (Vision):** this art is the project's own mythic narrative. Where a
 real person's name or likeness appears — whether as a name, a silhouette, or a
@@ -321,3 +326,14 @@ fabricated real-person concern noted separately below; the two
 `lemuria-and-mu-explainer-page-*.png` rows carry no metadata at all, like
 `starlines-southern-compass-diagram.jpeg`, and are reference content rather than
 narrative art, per the note below.
+
+**Four more rows added 2026-09-05** (`crystal-dragon-architect-final.webp`,
+`monad-red-dust-avatar.webp`, `lira-pearl-winged-guide.webp`,
+`dwarven-artificer.webp`) — Drive ingest from folder
+`TerAustralis_Complete_Canon`. Each carries XMP
+`iptcExt:DigitalSourceType` = `trainedAlgorithmicMedia` (AI-generated)
+and no EXIF `Artist`/`Software` or C2PA `softwareAgent` naming a tool;
+table marks them "tool unconfirmed," same discipline as the 2026-09-03
+batch. See also [`16-card-canon-list.md`](16-card-canon-list.md) and
+[`../content/16-CARD-CANON-LORE.md`](../content/16-CARD-CANON-LORE.md).
+

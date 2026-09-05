@@ -136,6 +136,26 @@ listed above and in [`evidence/CONFLICTS.md`](evidence/CONFLICTS.md). If a
 future session finds one, log it there rather than assuming this table is
 exhaustive.
 
+
+## Drive → git destinations (2026-09-05)
+
+Short pointer only — full classification in
+[`drive-merge-triage-2026-09-05.md`](drive-merge-triage-2026-09-05.md).
+
+| Drive / topic | Lands in git as | Layer |
+|---|---|---|
+| Card art 0–III (Crystal Dragon Architect, Monad, Lira, Dwarven Artificer) | [`mythos/art/*.webp`](../mythos/art/) + README rows | Vision art |
+| 16-card canon list (sheet) | [`mythos/art/16-card-canon-list.md`](../mythos/art/16-card-canon-list.md) | Vision list (Dreamed) |
+| `TerAustralis_Canon_Lore.md` Doc | [`mythos/content/16-CARD-CANON-LORE.md`](../mythos/content/16-CARD-CANON-LORE.md) | Vision lock note (Dreamed, not Built) |
+| Dictionary-of-Dreams CVSC plate / log / JSON | [`research/cvsc/`](../research/cvsc/) | External citation / working — **not** Canon |
+| Drive `CODEX_CRYSTALUM` folder | *No merge into* [`mythos/content/CODEX-CRYSTALUM.md`](../mythos/content/CODEX-CRYSTALUM.md) | Holding ≠ duplicate of git Codex |
+| Continuum × SAT, Sam Maher brief, Colossus brief, Erisian audits, PRESERVATION-INVENTORY | **Hold** — not in this merge | Private / working / external |
+
+Do not treat the new 16-card lock as silently superseding
+[`mythos/THE-ANCIENTS-CYCLE.md`](../mythos/THE-ANCIENTS-CYCLE.md) without
+a Crystal decision.
+
+
 ## Maintenance
 
 This map is manually curated and can drift. If you find a concept whose
