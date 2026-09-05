@@ -1,6 +1,6 @@
 # Small Council Phase 2: Technical Pitch for Prototype Co-Development
 
-**Status:** Ready for outreach  
+**Status:** Draft for review (Iluka restored 2026-09-05; not sent)  
 **Date prepared:** 2026-09-05  
 **Phase:** 2 (Technical scoping & partner engagement)  
 **Mechanism:** Option D — Prototype Demonstration  
@@ -109,11 +109,11 @@ The three companies and their roles are already real. This proposal connects the
 
 ## Why This Six-Part Suite
 
-- **Supply chain breadth:** Single pipeline (Lynas rare earths → ANSTO/AR3 processing → Liquid Instruments precision engineering) supports advanced materials (diamond), ceramics (thermal liner), and structural metals (chamber, nozzle) — proving supply chain flexibility across four distinct materials classes
+- **Supply chain breadth:** Proposed sourcing narrative (Iluka titanium feedstocks → ANSTO/AR3 processing → Liquid Instruments precision engineering) — framing only, not an existing partnership supports advanced materials (diamond), ceramics (thermal liner), and structural metals (chamber, nozzle) — proving supply chain flexibility across four distinct materials classes
 - **Technology spectrum:** Diamond components represent satellite/quantum/electronics; the three-part engine assembly represents complete propulsion hardware — together, they span "technology upgrades and propulsion" pathways end to end
 - **Real engineering challenges:** Each component requires all three companies to solve a distinct problem:
   - Diamond synthesis (ANSTO specialty)
-  - Quantum/RF materials (emerging Lynas application)
+  - Quantum/RF materials (downstream titanium / materials applications)
   - Ceramic matrix composite processing (ANSTO/AR3, thermal liner)
   - Pressure-vessel and precision thermal machining (Liquid Instruments core capability)
 - **Space relevance:** All six components have direct flight applications (not terrestrial or academic); the engine assembly is a genuine sub-scale system, not a single isolated part
@@ -125,12 +125,10 @@ The three companies and their roles are already real. This proposal connects the
 ## Supply Chain Mapping
 
 ```
-LYNAS RARE EARTHS (ASX: ILU)
-  ↓ Feedstock (rare-earth dopants + bulk materials)
-  │  ├─ Ti-6Al-4V ingot (chamber + nozzle)
-  │  ├─ CVD diamond precursor (spreader/resonator/window)
-  │  ├─ Rare-earth dopants for CMC thermal liner
-  │  └─ Quality-assured rare-earths for doping across all classes
+ILUKA RESOURCES (ASX: ILU)
+  ↓ Mineral / titanium feedstock pathway (one-pager framing)
+  │  ├─ Titanium mineral feedstocks supporting Ti-6Al-4V for chamber + nozzle
+  │  └─ (Rare-earth dopants / CVD precursors are NOT attributed to Iluka)
   │
 AUSTRALIAN RARE EARTHS LTD (ASX: AR3) + ANSTO CRITICAL MINERALS
   ↓ Material synthesis & processing (alloying, CVD growth, ceramic processing, doping, characterization)
@@ -160,11 +158,12 @@ DELIVERABLE: Three CVD diamond components + a complete three-part engine assembl
 
 ### What Each Company Provides
 
-#### Lynas Rare Earths
-- **Supply:** Rare-earth dopant feedstock (erbium, ytterbium, dysprosium as appropriate); certified bulk materials (Ti ingot for chamber + nozzle, CVD diamond precursor, CMC liner dopants)
-- **Contribution:** Demonstrates rare-earths supply reliability across four materials domains (structural metals, advanced ceramics, CVD diamond, quantum materials); validates onshore sourcing for emerging and traditional tech alike
-- **Timeline:** Weeks 1–2 (materials certified and on hand)
-- **Benefit:** Case study showing downstream demand for rare-earths in space-grade applications across electronics, quantum, ceramics, and propulsion; blueprint for future supply contracts in advanced materials
+#### Iluka Resources
+- **Supply:** Australian titanium mineral / feedstock pathway supporting Ti-6Al-4V stock for the combustion chamber and nozzle (HEA-POC-04A/B), consistent with the published onshore-chain one-pager framing
+- **Contribution:** Anchors the mineral stage of a Mineral → Processing → Component narrative already documented for public use; does **not** claim Iluka supplies rare-earth dopants or CVD precursors
+- **Timeline:** Weeks 1–2 (feedstock pathway scoped and documented)
+- **Benefit:** Downstream demand signal for aerospace-grade titanium into a time-limited co-development PoC; case study material without implying an existing three-party partnership
+- **Accuracy note (2026-09-05):** Restored from an erroneous Lynas/ILU mix in draft PR #162 so the pitch matches `mythos/teraustralis/publish/onshore-chain-one-pager.md`
 
 #### Australian Rare Earths Ltd + ANSTO Critical Minerals Facility
 - **Supply:** 
@@ -199,7 +198,7 @@ DELIVERABLE: Three CVD diamond components + a complete three-part engine assembl
 | Phase | Weeks | Milestone | Deliverables |
 |---|---|---|---|
 | **Scoping & LOI** | 1–2 | Partner commitment | Signed LOI from each company |
-| **Sourcing** | 1–3 | Materials qualified | Lynas feedstock (Ti ingot, CVD precursor, rare-earth dopants) received & documented |
+| **Sourcing** | 1–3 | Materials qualified | Iluka feedstock (Ti ingot, CVD precursor, rare-earth dopants) received & documented |
 | **Diamond Synthesis** | 3–6 | CVD growth complete | ANSTO/AR3: thermal spreader (DTS-POC-01), resonator (DFR-POC-02), RF window (DRF-POC-03) grown & characterized |
 | **Ti Alloying** | 2–5 | Alloying complete | ANSTO/AR3: Ti-6Al-4V rare-earth doped ingot, certified metallurgy |
 | **CMC Liner Processing** | 3–7 | Ceramic liner ready | ANSTO/AR3: rare-earth doped CMC liner (HEA-POC-04C), thermal gradient characterized |
@@ -269,7 +268,7 @@ DELIVERABLE: Three CVD diamond components + a complete three-part engine assembl
 
 ## Next Step
 
-Each company receives a personalized technical briefing (customized for Lynas, ANSTO/AR3, Liquid Instruments respectively) with:
+Each company receives a personalized technical briefing (customized for Iluka, ANSTO/AR3, Liquid Instruments respectively) with:
 - This six-component specification suite
 - Their specific role, contribution, and timeline
 - What they stand to gain (capability proof, case study, market signal, customer relationship)
@@ -282,7 +281,7 @@ Each company receives a personalized technical briefing (customized for Lynas, A
 
 All three companies are real, active, and have publicly stated interest in space/aerospace applications:
 
-- **Lynas Rare Earths** (ASX: ILU) — established ASX-listed producer with Australian operations; already supplies aerospace-grade titanium feedstocks
+- **Iluka Resources** (ASX: ILU) — established ASX-listed producer with Australian operations; already supplies aerospace-grade titanium feedstocks
 - **Australian Rare Earths Ltd** (ASX: AR3) — first industry partner named for ANSTO's critical minerals facility; pilot processing scheduled June 2026
 - **Liquid Instruments** — $28.45M NRFC investment (announced 2026) explicitly cited by Australian Space Agency as strengthening "Aussie space capability" in advanced manufacturing
 
@@ -292,6 +291,6 @@ All three companies are real, active, and have publicly stated interest in space
 
 **Draft prepared for:** Small Council Phase 2 outreach  
 **Prepared by:** Claude Code session (2026-09-05)  
-**Next action:** Grok Bot drafts and sends personalized briefings to each company; collects LOI responses; schedules kickoff calls
+**Next action:** Drafts for Crystal review only; send only after explicit approval. PR #162 still needs the same Iluka restore before merge.
 
 *Non Solus.*
