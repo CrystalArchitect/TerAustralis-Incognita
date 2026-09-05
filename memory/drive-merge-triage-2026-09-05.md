@@ -14,7 +14,7 @@ Wave 3 bodies included per Crystal 2026-09-05 direction (was Hold; now Included)
 | 0 | This triage file |
 | 1 | Four card-art WebPs → `mythos/art/`; 16-card list export → `mythos/art/16-card-canon-list.md`; README rows |
 | 2 | Drive Canon Lore → `mythos/content/16-CARD-CANON-LORE.md` (new Vision-layer lock note); CVSC Dictionary plate/log/json → `research/cvsc/` with working banner. **Did not** rewrite `mythos/content/CODEX-CRYSTALUM.md` (Drive folder is not a duplicate of that file). |
-| 3 | **Included** — Erisian audits → `research/erisian-blade/`; Sam Maher + Colossus briefs → `memory/briefs/`; Continuum × SAT (joint with J) → `memory/collaboration/` with joint banner |
+| 3 | **Included** — Erisian → `research/erisian-blade/`; `memory/briefs/sam-maher-status-brief.md` + `colossus-architecture-brief-2026-08-31.md`; Continuum × SAT → `memory/collaboration/continuum-x-sat-working.md` (joint banner) |
 | 4 | Branch `drive-merge-2026-09-05` + PR on `CrystalArchitect/TerAustralis-Incognita`. Site/-Code PR **skipped** (see below). |
 
 ## Today / recent inventory
@@ -52,9 +52,9 @@ lists the canonical IDs above once.
 |------|-----|-------------|
 | `2026-09-03_Erisian-Blade_Grok-Truth-Level-Audit` | Working / audit | `research/erisian-blade/` |
 | `2026-09-03_Claude-Ingest-Prompt_Erisian-Blade-Audit` | Working / audit | `research/erisian-blade/` |
-| TerAustralis Status Brief for Sam Maher.docx (larger/newer; id `1ByoQs7…`) | Working / external brief | `memory/briefs/2026-06-19_TerAustralis-Status-Brief-Sam-Maher.md` (text extract; duplicates skipped) |
-| Colossus Architecture Brief 2026-08-31 | Working / architecture brief | `memory/briefs/2026-08-31_Colossus-Architecture-Brief.md` |
-| Continuum x SAT (working — joint with J) | Working / joint | `memory/collaboration/2026-09-02_Continuum-x-SAT-working-joint-with-J.md` **with joint banner** |
+| TerAustralis Status Brief for Sam Maher.docx (larger/newer; id `1ByoQs7…`) | Working / external brief | `memory/briefs/sam-maher-status-brief.md` (text extract; duplicates skipped) |
+| Colossus Architecture Brief 2026-08-31 | Working / architecture brief | `memory/briefs/colossus-architecture-brief-2026-08-31.md` |
+| Continuum x SAT (working — joint with J) | Working / joint | `memory/collaboration/continuum-x-sat-working.md` **with joint banner** |
 | Older `Continuum x SAT` (no joint title) | Skip | Not Crystal’s sole ownership; skipped without banner twin |
 | PRESERVATION-INVENTORY / random screenshots / Untitled | Skip | Not public gallery art |
 

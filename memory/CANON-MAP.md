@@ -150,8 +150,9 @@ Short pointer only — full classification in
 | Dictionary-of-Dreams CVSC plate / log / JSON | [`research/cvsc/`](../research/cvsc/) | External citation / working — **not** Canon |
 | Drive `CODEX_CRYSTALUM` folder | *No merge into* [`mythos/content/CODEX-CRYSTALUM.md`](../mythos/content/CODEX-CRYSTALUM.md) | Holding ≠ duplicate of git Codex |
 | Erisian Blade audit docs (2026-09-03) | [`research/erisian-blade/`](../research/erisian-blade/) | Working / audit — **not** mythos canon |
-| Sam Maher status brief + Colossus Architecture Brief | [`memory/briefs/`](briefs/) | Working / external briefs |
-| Continuum × SAT (working — joint with J) | [`memory/collaboration/2026-09-02_Continuum-x-SAT-working-joint-with-J.md`](collaboration/2026-09-02_Continuum-x-SAT-working-joint-with-J.md) | Joint with J / Continuum (CMX); **not** Crystal sole ownership; joint banner required |
+| Sam Maher status brief | [`briefs/sam-maher-status-brief.md`](briefs/sam-maher-status-brief.md) | Working / external brief |
+| Colossus Architecture Brief 2026-08-31 | [`briefs/colossus-architecture-brief-2026-08-31.md`](briefs/colossus-architecture-brief-2026-08-31.md) | Working (public reconstruction) |
+| Continuum × SAT (working — joint with J) | [`collaboration/continuum-x-sat-working.md`](collaboration/continuum-x-sat-working.md) | Joint with J / Continuum (CMX); **not** Crystal sole ownership; joint banner required |
 | PRESERVATION-INVENTORY / Untitled / random screenshots | **Skip** | Not public gallery art |
 
 Do not treat the new 16-card lock as silently superseding
